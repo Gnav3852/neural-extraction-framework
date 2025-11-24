@@ -129,3 +129,4 @@ dmypy.json
 .pyre/
 
 # Large files
+GSoC25/NEF/Text2KGBench/Text2KGBench-main/tekgen.zip
