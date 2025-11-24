@@ -410,6 +410,9 @@ class EnhancedNEFPipeline:
       2) Redis entity linking (subject/object)  [REQUIRED]
       3) Predicate retrieval via precomputed embeddings (no synonyms)
       4) LLM disambiguation
+    
+    Optional: allowed_predicates can be used to filter predicates to a specific ontology.
+    This improves ontology conformance by only considering predicates that match the ontology.
     """
     def __init__(
         self,
@@ -422,6 +425,7 @@ class EnhancedNEFPipeline:
         redis_host: Optional[str] = None,
         redis_port: Optional[int] = None,
         redis_password: Optional[str] = None,
+        allowed_predicates: Optional[List[str]] = None,
         verbose: bool = True,
     ):
         self.redis_host = redis_host or os.getenv("NEF_REDIS_HOST")
@@ -439,6 +443,15 @@ class EnhancedNEFPipeline:
         self.verbose = verbose
         self.client = client  # for extractor too
         self.require_redis_grounding = True  # strict
+        
+        # Store allowed predicates (set of URIs for fast lookup)
+        # If provided, only predicates matching these URIs will be considered
+        self.allowed_predicates: Optional[set] = None
+        if allowed_predicates:
+            self.allowed_predicates = set(allowed_predicates)
+            if self.verbose:
+                _safe_print(f"✓ Ontology filtering enabled: {len(self.allowed_predicates)} allowed predicates")
+        
         self.redis_el = RedisEntityLinking(
             host=redis_host, port=int(redis_port), password=redis_password, verbose=verbose
         )
@@ -644,6 +657,17 @@ Text:
                 continue
 
             predicate_candidates = self.pred.get_top_k_predicates(p_text, top_k=10)
+            
+            # Filter by allowed predicates if ontology filtering is enabled
+            if self.allowed_predicates is not None:
+                original_count = len(predicate_candidates)
+                predicate_candidates = [
+                    (uri, score) for uri, score in predicate_candidates
+                    if uri in self.allowed_predicates
+                ]
+                if self.verbose and original_count > len(predicate_candidates):
+                    _safe_print(f"   [Filtered: {original_count} → {len(predicate_candidates)} predicates]")
+            
             if self.verbose:
                 _safe_print("   [Predicates:top5]", predicate_candidates[:5])
 

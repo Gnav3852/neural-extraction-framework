@@ -41,32 +41,118 @@ DBPEDIA_ONTOLOGIES = [
 ]
 
 
-def uri_to_text(uri: str) -> str:
-    """Convert URI to readable text (similar to Bench.py logic)."""
+def load_ontology_relations(ontology_path: Path) -> List[str]:
+    """
+    Load allowed relations from Text2KGBench ontology file.
+    Returns list of relation labels (e.g., ["academicStaffSize", "established", ...]).
+    """
+    with open(ontology_path, "r", encoding="utf-8") as f:
+        ontology = json.load(f)
+    relations = [rel["label"] for rel in ontology.get("relations", [])]
+    return relations
+
+
+def map_text2kg_relation_to_dbpedia_uri(relation_label: str) -> str:
+    """
+    Map Text2KGBench relation label to DBpedia predicate URI.
+    
+    Text2KGBench uses camelCase labels like "academicStaffSize"
+    DBpedia uses: http://dbpedia.org/ontology/academicStaffSize
+    
+    Args:
+        relation_label: Text2KGBench relation label (e.g., "academicStaffSize")
+    
+    Returns:
+        DBpedia predicate URI (e.g., "http://dbpedia.org/ontology/academicStaffSize")
+    """
+    # Most Text2KGBench relations map directly to DBpedia ontology predicates
+    return f"http://dbpedia.org/ontology/{relation_label}"
+
+
+def get_allowed_predicate_uris(ontology_path: Path) -> List[str]:
+    """
+    Load ontology and return list of DBpedia predicate URIs that are allowed.
+    
+    Args:
+        ontology_path: Path to Text2KGBench ontology JSON file
+    
+    Returns:
+        List of DBpedia predicate URIs (e.g., ["http://dbpedia.org/ontology/academicStaffSize", ...])
+    """
+    relations = load_ontology_relations(ontology_path)
+    uris = [map_text2kg_relation_to_dbpedia_uri(rel) for rel in relations]
+    return uris
+
+
+def uri_to_entity_text(uri: str) -> str:
+    """
+    Convert entity URI to text, preserving underscores and TitleCase.
+    Example: http://dbpedia.org/resource/AWH_Engineering_College → AWH_Engineering_College
+    """
     if not uri:
         return ""
     import re
     # Extract last segment after / or #
     parts = uri.replace("#", "/").split("/")
     last = parts[-1] if parts else ""
-    # Split camelCase and underscores
-    text = re.sub(r"[_\-\.]+", " ", last)
-    text = re.sub(r"(?<=[a-z0-9])([A-Z])", r" \1", text)
-    return re.sub(r"\s+", " ", text).strip()
+    # Preserve underscores and case for entities
+    return last.strip()
+
+
+def uri_to_predicate_text(uri: str) -> str:
+    """
+    Convert predicate URI to text, preserving camelCase.
+    Example: http://dbpedia.org/ontology/academicStaffSize → academicStaffSize
+    """
+    if not uri:
+        return ""
+    import re
+    # Extract last segment after / or #
+    parts = uri.replace("#", "/").split("/")
+    last = parts[-1] if parts else ""
+    # Preserve camelCase for predicates (no conversion)
+    return last.strip()
+
+
+def format_object_text(obj_text: str) -> str:
+    """
+    Format object text, handling quoting when needed.
+    Text2KGBench sometimes uses quoted strings for objects like "\"Kuttikkattoor\"".
+    We'll add quotes for string objects that aren't already quoted and aren't numbers/dates.
+    """
+    obj_text = obj_text.strip()
+    if not obj_text:
+        return obj_text
+    
+    # If already quoted, return as is
+    if obj_text.startswith('"') and obj_text.endswith('"'):
+        return obj_text
+    
+    # Check if it's a number or date (don't quote these)
+    import re
+    if re.match(r'^\d+$', obj_text):  # Pure number
+        return obj_text
+    if re.match(r'^\d{4}$', obj_text):  # Year
+        return obj_text
+    
+    # For string objects, add quotes to match Text2KGBench format
+    # But only if it looks like a proper noun or string value
+    if any(c.isalpha() for c in obj_text):
+        return f'"{obj_text}"'
+    
+    return obj_text
 
 
 def format_triple_for_text2kg(sub_text: str, pred_text: str, obj_text: str) -> List[str]:
     """
     Format triple as list [subject, predicate, object] for Text2KGBench.
-    Handles special cases like quoted strings in objects.
+    Preserves format: underscores for entities, camelCase for predicates, quotes for objects.
     """
     # Clean up the texts
     sub_text = sub_text.strip()
     pred_text = pred_text.strip()
-    obj_text = obj_text.strip()
+    obj_text = format_object_text(obj_text)
     
-    # Text2KGBench sometimes uses quoted strings for objects
-    # We'll keep it simple and just return the cleaned text
     return [sub_text, pred_text, obj_text]
 
 
@@ -135,6 +221,7 @@ def run_nef_on_text2kg(
     pipeline: EnhancedNEFPipeline,
     test_file: Path,
     output_file: Path,
+    ontology_path: Optional[Path] = None,
     verbose: bool = True,
     show_triples: bool = False
 ) -> Dict[str, Any]:
@@ -166,6 +253,25 @@ def run_nef_on_text2kg(
     # Print header
     onto_id = test_file.stem.replace("_test", "")
     print_progress_header(onto_id, total)
+    
+    # Reset pipeline's allowed predicates for this ontology
+    pipeline.allowed_predicates = None
+    
+    # Load ontology and get allowed predicates if ontology path is provided
+    allowed_predicates = None
+    if ontology_path and ontology_path.exists():
+        try:
+            allowed_predicates = get_allowed_predicate_uris(ontology_path)
+            if verbose:
+                print(f"   📚 Loaded ontology: {len(allowed_predicates)} allowed predicates")
+        except Exception as e:
+            if verbose:
+                print(f"   ⚠️  Warning: Could not load ontology: {e}")
+                print(f"   Continuing without ontology filtering...")
+    
+    # Update pipeline's allowed predicates if we have them
+    if allowed_predicates:
+        pipeline.allowed_predicates = set(allowed_predicates)
     
     results = []
     stats = {
@@ -202,10 +308,10 @@ def run_nef_on_text2kg(
             # Convert NEF output (URIs) to Text2KGBench format (text labels)
             triples = []
             for s_uri, p_uri, o_uri, meta in nef_triples:
-                # Convert URIs to text
-                sub_text = uri_to_text(s_uri)
-                pred_text = uri_to_text(p_uri) if p_uri else ""
-                obj_text = uri_to_text(o_uri)
+                # Convert URIs to text, preserving format
+                sub_text = uri_to_entity_text(s_uri)
+                pred_text = uri_to_predicate_text(p_uri) if p_uri else ""
+                obj_text = uri_to_entity_text(o_uri)
                 
                 if sub_text and pred_text and obj_text:
                     triples.append(format_triple_for_text2kg(sub_text, pred_text, obj_text))
@@ -383,6 +489,7 @@ Examples:
     
     for onto_id in args.ontologies:
         test_file = DBPEDIA_DATA / "test" / f"ont_{onto_id}_test.jsonl"
+        ontology_file = DBPEDIA_DATA / "ontologies" / f"{onto_id}_ontology.json"
         output_file = output_dir / f"ont_{onto_id}_nef_responses.jsonl"
         
         if not test_file.exists():
@@ -394,6 +501,7 @@ Examples:
             pipeline=pipeline,
             test_file=test_file,
             output_file=output_file,
+            ontology_path=ontology_file if ontology_file.exists() else None,
             verbose=not args.quiet,
             show_triples=args.show_triples
         )
