@@ -3,7 +3,7 @@
 # Usage examples are at the bottom of this file (or run with -h)
 
 import os, sys, json, re, time, argparse, textwrap
-from typing import List, Tuple, Sequence, Dict, Any, Optional
+from typing import List, Tuple, Sequence, Dict, Any, Optional, Set
 
 import numpy as np
 from urllib.parse import quote
@@ -70,17 +70,39 @@ class RedisEntityLinking:
         self.verbose = verbose
         try:
             import redis  # local import so script still loads without it
-            common = dict(host=host, port=port, password=password,
-                          socket_connect_timeout=connect_timeout, socket_timeout=2.0, decode_responses=True)
+            # Set timeouts to prevent hanging
+            # socket_connect_timeout: time to establish connection
+            # socket_timeout: time for each operation (read/write) - critical for preventing hangs
+            common = dict(
+                host=host, 
+                port=port, 
+                password=password,
+                socket_connect_timeout=connect_timeout, 
+                socket_timeout=3.0,  # 3 second timeout per operation (prevents 220s hangs)
+                socket_keepalive=True,  # Keep connection alive
+                decode_responses=True,
+                retry_on_timeout=True,  # Retry on timeout
+                health_check_interval=30,  # Health check every 30s
+            )
             self.redis_forms = redis.Redis(db=0, **common)
             self.redis_redir  = redis.Redis(db=1, **common)
-            self.available = bool(self.redis_forms.ping() and self.redis_redir.ping())
+            
+            # Test connection with timeout protection
+            try:
+                self.redis_forms.ping()
+                self.redis_redir.ping()
+                self.available = True
+            except Exception:
+                self.available = False
+            
             if self.verbose:
                 _safe_print("✓ Connected to Redis" if self.available else "✗ Redis ping failed")
         except Exception as e:
+            self.available = False
             _safe_print(f"✗ Redis connection error (pipeline will drop ungrounded triples): {e}")
 
     def _redirect(self, uri: str, max_hops: int = 10) -> str:
+        """Follow redirects in Redis db1 with timeout protection."""
         if not self.available:
             return uri
         seen = set()
@@ -89,41 +111,78 @@ class RedisEntityLinking:
             if cur in seen:
                 break
             seen.add(cur)
-            nxt = self.redis_redir.get(cur)
-            if not nxt:
+            try:
+                nxt = self.redis_redir.get(cur)
+                if not nxt:
+                    return cur
+                cur = nxt
+            except Exception:
+                # If redirect lookup fails, return current URI
                 return cur
-            cur = nxt
         return cur
 
     def lookup(self, surface_form: str, top_k: int = 5, thr: float = 0.01) -> List[Tuple[str, float]]:
         """
         Strict Redis grounding (no synonyms). Tries simple, non-semantic variants:
-        exact, lower, Title Case, underscores, Title+underscores.
+        exact, lower, Title Case, capitalize, underscores, etc.
         Aggregates counts across variants and follows redirects in db1.
+        Optimized with early exit and timeout protection.
         """
         if not self.available or not surface_form.strip():
             return []
 
+        # Generate more comprehensive case variants
         variants = [
-            surface_form,
-            surface_form.lower(),
-            surface_form.title(),
-            surface_form.replace(" ", "_"),
-            surface_form.title().replace(" ", "_"),
+            surface_form,                                    # Original
+            surface_form.lower(),                            # lowercase
+            surface_form.title(),                            # Title Case
+            surface_form.capitalize(),                       # First letter capitalized (e.g., "India")
+            surface_form.upper(),                           # UPPERCASE (for acronyms)
+            surface_form.replace(" ", "_"),                 # spaces to underscores
+            surface_form.title().replace(" ", "_"),         # Title Case with underscores
+            surface_form.capitalize().replace(" ", "_"),    # Capitalize with underscores
         ]
+        
+        # Remove duplicates while preserving order
+        seen_variants = set()
+        unique_variants = []
+        for v in variants:
+            if v not in seen_variants:
+                seen_variants.add(v)
+                unique_variants.append(v)
 
         counts: Dict[str, int] = {}
         seen_keys = set()
-        for key in variants:
+        found_any = False
+        
+        for key in unique_variants:
             if key in seen_keys:
                 continue
             seen_keys.add(key)
-            raw = self.redis_forms.hgetall(key)  # {uri: count}
-            if not raw:
+            
+            try:
+                # Try Redis lookup with timeout protection (socket_timeout should handle this)
+                raw = self.redis_forms.hgetall(key)  # {uri: count}
+                
+                if raw:
+                    found_any = True
+                    for uri, v in raw.items():
+                        try:
+                            canon = self._redirect(uri)  # db1 redirect if any
+                            counts[canon] = counts.get(canon, 0) + int(v)
+                        except Exception:
+                            # If redirect fails, use original URI
+                            counts[uri] = counts.get(uri, 0) + int(v)
+                    
+                    # Early exit: if we found results and have enough support, stop trying variants
+                    if counts:
+                        max_count = max(counts.values())
+                        if max_count >= 10:  # High confidence threshold for early exit
+                            break
+            except Exception as e:
+                # If Redis operation fails, continue to next variant
+                # Don't log every failure to avoid spam
                 continue
-            for uri, v in raw.items():
-                canon = self._redirect(uri)  # db1 redirect if any
-                counts[canon] = counts.get(canon, 0) + int(v)
 
         if not counts:
             return []
@@ -201,11 +260,44 @@ class PredicateEmbeddingRetriever:
         v = (v[0].values if v else resp.embedding.values)
         return _normalize(v)
 
-    def get_top_k_predicates(self, relation_text: str, top_k: int = 10) -> List[Tuple[str, float]]:
+    def get_top_k_predicates(self, relation_text: str, top_k: int = 10, allowed_predicates: Optional[Set[str]] = None) -> List[Tuple[str, float]]:
+        """
+        Retrieve top-K predicates via cosine similarity.
+        
+        Args:
+            relation_text: Natural language text describing the relation
+            top_k: Number of top predicates to return
+            allowed_predicates: Optional set of predicate URIs to filter to (pre-filters embeddings)
+        
+        Returns:
+            List of (predicate_uri, similarity_score) tuples
+        """
         q = self._embed_text(relation_text)      # (D,)
-        sims = self.E_norm @ q                   # (N,)
-        order = sims.argsort()[-top_k:][::-1]
-        return [(self.predicates[i], float(sims[i])) for i in order]
+        
+        # Pre-filter embeddings if allowed_predicates is provided
+        if allowed_predicates is not None:
+            # Find indices of predicates that are in the allowed set
+            allowed_indices = [i for i, pred in enumerate(self.predicates) if pred in allowed_predicates]
+            
+            if not allowed_indices:
+                # No allowed predicates found in embeddings
+                if self.verbose:
+                    _safe_print(f"   ⚠️  No allowed predicates found in embeddings (searched {len(allowed_predicates)} predicates)")
+                return []
+            
+            # Filter embeddings and similarities to only allowed predicates
+            E_filtered = self.E_norm[allowed_indices]  # (M, D) where M = len(allowed_indices)
+            sims_filtered = E_filtered @ q              # (M,)
+            predicates_filtered = [self.predicates[i] for i in allowed_indices]
+            
+            # Get top-k from filtered set
+            order = sims_filtered.argsort()[-top_k:][::-1]
+            return [(predicates_filtered[i], float(sims_filtered[i])) for i in order]
+        else:
+            # Original behavior: search all predicates
+            sims = self.E_norm @ q                   # (N,)
+            order = sims.argsort()[-top_k:][::-1]
+            return [(self.predicates[i], float(sims[i])) for i in order]
 
 # =============== LLM Disambiguator ===============
 
@@ -295,6 +387,7 @@ class LLMDisambiguator:
         subject_candidates: List[Tuple[str, float]],
         predicate_candidates: List[Tuple[str, float]],
         object_candidates: List[Tuple[str, float]],
+        predicate_metadata: Optional[Dict[str, Dict[str, str]]] = None,
     ):
         """
         Returns: (subject_uri, predicate_uri, object_uri, meta)
@@ -328,13 +421,35 @@ class LLMDisambiguator:
 
         # Prepare prompt pieces
         allowed = [u for (u, _s) in above]
-        pred_list_text = "\n".join([f'- "{u}"' for u in allowed])
+        
+        # Build predicate list with metadata if available
+        if predicate_metadata:
+            pred_lines = []
+            for uri in allowed:
+                meta = predicate_metadata.get(uri, {})
+                label = meta.get("label", uri.split("/")[-1] if "/" in uri else uri)
+                domain = meta.get("domain", "")
+                range_type = meta.get("range", "")
+                
+                # Build description line
+                desc_parts = [f'label: {label}']
+                if domain:
+                    desc_parts.append(f'domain: {domain}')
+                if range_type:
+                    desc_parts.append(f'range: {range_type}')
+                
+                desc = f" ({', '.join(desc_parts)})" if desc_parts else ""
+                pred_lines.append(f'- "{uri}"{desc}')
+            pred_list_text = "\n".join(pred_lines)
+        else:
+            pred_list_text = "\n".join([f'- "{u}"' for u in allowed])
+        
         subj_list_text = self._fmt_indexed(subject_candidates)
         obj_list_text  = self._fmt_indexed(object_candidates)
 
         prompt = f"""Pick the best RDF triple using ONLY these options.
 
-Allowed predicate URIs:
+Allowed predicate URIs (with semantic information):
 {pred_list_text}
 
 Subject candidates (choose by INDEX):
@@ -352,6 +467,8 @@ Rules:
 - "predicate" MUST be exactly one URI from Allowed predicate URIs.
 - "subject_index" MUST be an integer index from Subject candidates.
 - "object_index" MUST be an integer index from Object candidates.
+- Choose the predicate that best matches the semantic meaning in the context.
+- Consider the domain and range constraints when selecting.
 - Do not invent or modify URIs. Do not swap roles.
 """
 
@@ -452,6 +569,12 @@ class EnhancedNEFPipeline:
             if self.verbose:
                 _safe_print(f"✓ Ontology filtering enabled: {len(self.allowed_predicates)} allowed predicates")
         
+        # Store predicate metadata (label, domain, range) for better disambiguation
+        self.predicate_metadata: Optional[Dict[str, Dict[str, str]]] = None
+        
+        # Store ontology context for extraction phase
+        self.ontology_context: Optional[str] = None
+        
         self.redis_el = RedisEntityLinking(
             host=redis_host, port=int(redis_port), password=redis_password, verbose=verbose
         )
@@ -497,24 +620,31 @@ class EnhancedNEFPipeline:
             fixed.append((uri, score))
         return fixed
 
-    def _extract_triples(self, text: str, debug: bool = False) -> list[dict]:
+    def _extract_triples(self, text: str, ontology_context: Optional[str] = None, debug: bool = False) -> list[dict]:
         """
         Strict extractor:
         - forces lowercase S/P/O
         - enforces 1–3 word predicates
         - confidence ≥ 0.5
         - REQUIRES Redis grounding for subject and object
+        - Optionally uses ontology context to guide extraction
         """
+        # Build prompt with optional ontology context
+        ontology_section = ""
+        if ontology_context:
+            ontology_section = f"\n{ontology_context}\n"
+        
         prompt = f"""
 SYSTEM: Return ONLY a valid JSON array (no prose, no markdown fences).
 
-Task: Read the text and extract up to 5 RDF triples with confidence.
+Task: Read the text and extract up to 5 RDF triples with confidence.{ontology_section}
 You MUST:
 - Make subject, predicate, and object ALL lowercase.
 - Use the most complete, consistent entity names.
 - Resolve clear pronouns (he, she, it, they, this/that, here/there) to the correct entity; if unclear, do not guess.
 - Keep predicates extremely concise: 1–3 words max (e.g., "founded", "born in", "wrote").
 - Include only items with confidence ≥ 0.5.
+- If ontology context is provided, extract triples according to the ontology relations and concepts.
 
 Output schema:
 [
@@ -527,19 +657,58 @@ Text:
 """.strip()
 
         try:
+            # DIAGNOSTIC: Track timing at each step
+            if self.verbose:
+                _safe_print("[DIAG] Step 1: About to call generate_content...")
+                _safe_print(f"[DIAG] Prompt length: {len(prompt)} characters")
+            
+            step1_start = time.time()
             resp = self.client.models.generate_content(
                 model="gemini-2.5-flash",
                 contents=prompt,
                 config={"response_mime_type": "application/json"},
             )
+            step1_time = time.time() - step1_start
+            
+            if self.verbose:
+                _safe_print(f"[DIAG] Step 1: generate_content returned in {step1_time:.2f}s")
+            
+            # DIAGNOSTIC: Check resp.text access
+            if self.verbose:
+                _safe_print("[DIAG] Step 2: About to access resp.text...")
+            
+            step2_start = time.time()
+            response_text = resp.text or "[]"
+            step2_time = time.time() - step2_start
+            
+            if self.verbose:
+                _safe_print(f"[DIAG] Step 2: resp.text accessed in {step2_time:.2f}s")
+                _safe_print(f"[DIAG] Response length: {len(response_text)} characters")
+                if len(response_text) > 1000:
+                    _safe_print(f"[DIAG] Response preview (first 200 chars): {response_text[:200]}...")
+                else:
+                    _safe_print(f"[DIAG] Full response: {response_text}")
 
             if debug:
                 _safe_print("\n[DEBUG] Raw model response text:")
-                _safe_print((resp.text or "").strip() or "<EMPTY>")
+                _safe_print(response_text.strip() or "<EMPTY>")
 
+            # DIAGNOSTIC: Check JSON parsing
+            if self.verbose:
+                _safe_print("[DIAG] Step 3: About to parse JSON...")
+            
+            step3_start = time.time()
             try:
-                items = _json_from_model(resp.text or "[]")
+                items = _json_from_model(response_text)
+                step3_time = time.time() - step3_start
+                if self.verbose:
+                    _safe_print(f"[DIAG] Step 3: JSON parsed in {step3_time:.2f}s")
+                    _safe_print(f"[DIAG] Found {len(items)} items in JSON array")
             except Exception as e:
+                step3_time = time.time() - step3_start
+                if self.verbose:
+                    _safe_print(f"[DIAG] Step 3: JSON parse FAILED after {step3_time:.2f}s")
+                    _safe_print(f"[DIAG] Error: {e}")
                 if debug:
                     _safe_print(f"[DEBUG] JSON parse error: {e}")
                 return []
@@ -554,7 +723,13 @@ Text:
                 return []
 
             out, seen = [], set()
+            if self.verbose:
+                _safe_print(f"[DIAG] Step 4: Processing {len(items)} extracted items...")
+            
             for idx, it in enumerate(items, 1):
+                if self.verbose:
+                    _safe_print(f"[DIAG] Processing item {idx}/{len(items)}...")
+                
                 s_raw = (it.get("subject") or "").strip()
                 p_raw = (it.get("predicate") or "").strip()
                 o_raw = (it.get("object") or "").strip()
@@ -579,8 +754,36 @@ Text:
                 if conf_f < 0.5:
                     reasons.append(f"confidence < 0.5 (got {conf_f:.3f})")
 
-                sub_cands = self._resolve_entities(s_raw, k=5)
-                obj_cands = self._resolve_entities(o_raw, k=5)
+                # DIAGNOSTIC: Check Redis lookups
+                if self.verbose:
+                    _safe_print(f"[DIAG] Step 4.{idx}.1: About to resolve entities for subject: '{s_raw}'")
+                step4_sub_start = time.time()
+                try:
+                    sub_cands = self._resolve_entities(s_raw, k=5)
+                except Exception as e:
+                    if self.verbose:
+                        _safe_print(f"[DIAG] Step 4.{idx}.1: Subject resolution ERROR: {e}")
+                    sub_cands = []
+                step4_sub_time = time.time() - step4_sub_start
+                if self.verbose:
+                    _safe_print(f"[DIAG] Step 4.{idx}.1: Subject resolution took {step4_sub_time:.2f}s, found {len(sub_cands)} candidates")
+                    if step4_sub_time > 5.0:
+                        _safe_print(f"[DIAG] ⚠️ WARNING: Subject resolution took {step4_sub_time:.2f}s (>5s threshold)")
+                
+                if self.verbose:
+                    _safe_print(f"[DIAG] Step 4.{idx}.2: About to resolve entities for object: '{o_raw}'")
+                step4_obj_start = time.time()
+                try:
+                    obj_cands = self._resolve_entities(o_raw, k=5)
+                except Exception as e:
+                    if self.verbose:
+                        _safe_print(f"[DIAG] Step 4.{idx}.2: Object resolution ERROR: {e}")
+                    obj_cands = []
+                step4_obj_time = time.time() - step4_obj_start
+                if self.verbose:
+                    _safe_print(f"[DIAG] Step 4.{idx}.2: Object resolution took {step4_obj_time:.2f}s, found {len(obj_cands)} candidates")
+                    if step4_obj_time > 5.0:
+                        _safe_print(f"[DIAG] ⚠️ WARNING: Object resolution took {step4_obj_time:.2f}s (>5s threshold)")
                 if not sub_cands or not obj_cands:
                     reasons.append("no Redis grounding for subject/object (strict mode)")
 
@@ -609,12 +812,22 @@ Text:
 
             if debug and not out:
                 _safe_print("[DEBUG] Result: 0 triples kept after filtering.")
+            
+            if self.verbose:
+                total_time = time.time() - step1_start
+                _safe_print(f"[DIAG] Total extraction time: {total_time:.2f}s")
+                _safe_print(f"[DIAG] Breakdown: API={step1_time:.2f}s, text_access={step2_time:.2f}s, parse={step3_time:.2f}s, processing={total_time-step1_time-step2_time-step3_time:.2f}s")
+                _safe_print(f"[DIAG] Final result: {len(out)} triples kept")
 
             return out
 
         except Exception as e:
             if getattr(self, "verbose", True) or debug:
                 _safe_print(f"✗ Triple extraction error: {e}")
+                import traceback
+                if self.verbose:
+                    _safe_print("[DIAG] Full traceback:")
+                    traceback.print_exc()
             return []
 
     def run_pipeline(self, sentence: str, debug: bool = False) -> list[tuple[str, str, str, Dict[str, Any]]]:
@@ -625,7 +838,7 @@ Text:
         if self.verbose:
             _safe_print(f"\n📝 {sentence!r}")
 
-        raw_triples = self._extract_triples(sentence, debug=debug)
+        raw_triples = self._extract_triples(sentence, ontology_context=self.ontology_context, debug=debug)
         if not raw_triples:
             if self.verbose:
                 _safe_print("   ⚠ No triples extracted.")
@@ -656,23 +869,27 @@ Text:
                     _safe_print("   ⚠ Abandoning triple (no Redis candidates).")
                 continue
 
-            predicate_candidates = self.pred.get_top_k_predicates(p_text, top_k=10)
+            # Pre-filter embeddings to only search within allowed predicates
+            predicate_candidates = self.pred.get_top_k_predicates(
+                p_text, 
+                top_k=10, 
+                allowed_predicates=self.allowed_predicates
+            )
             
-            # Filter by allowed predicates if ontology filtering is enabled
-            if self.allowed_predicates is not None:
-                original_count = len(predicate_candidates)
-                predicate_candidates = [
-                    (uri, score) for uri, score in predicate_candidates
-                    if uri in self.allowed_predicates
-                ]
-                if self.verbose and original_count > len(predicate_candidates):
-                    _safe_print(f"   [Filtered: {original_count} → {len(predicate_candidates)} predicates]")
+            if self.verbose:
+                if self.allowed_predicates:
+                    _safe_print(f"   [Pre-filtered search: {len(self.allowed_predicates)} allowed predicates]")
+                if predicate_candidates:
+                    _safe_print(f"   [Found: {len(predicate_candidates)} predicate candidates]")
+                else:
+                    _safe_print(f"   ⚠️  No predicate candidates found (may need to increase top_k or check ontology mapping)")
             
             if self.verbose:
                 _safe_print("   [Predicates:top5]", predicate_candidates[:5])
 
             s_final, p_final, o_final, meta = self.llm.disambiguate_triple(
-                sentence, subject_candidates, predicate_candidates, object_candidates
+                sentence, subject_candidates, predicate_candidates, object_candidates,
+                predicate_metadata=self.predicate_metadata
             )
             results.append((s_final, p_final, o_final, meta or {}))
 

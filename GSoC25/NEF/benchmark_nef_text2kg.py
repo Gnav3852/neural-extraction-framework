@@ -84,6 +84,101 @@ def get_allowed_predicate_uris(ontology_path: Path) -> List[str]:
     return uris
 
 
+def load_ontology_metadata(ontology_path: Path) -> Dict[str, Dict[str, str]]:
+    """
+    Load ontology and return metadata for each predicate (label, domain, range).
+    
+    Args:
+        ontology_path: Path to Text2KGBench ontology JSON file
+    
+    Returns:
+        Dictionary mapping predicate URI to metadata:
+        {
+            "http://dbpedia.org/ontology/academicStaffSize": {
+                "label": "academicStaffSize",
+                "domain": "University",
+                "range": "number"
+            },
+            ...
+        }
+    """
+    with open(ontology_path, "r", encoding="utf-8") as f:
+        ontology = json.load(f)
+    
+    metadata = {}
+    for rel in ontology.get("relations", []):
+        label = rel.get("label", "")
+        if label:
+            uri = map_text2kg_relation_to_dbpedia_uri(label)
+            metadata[uri] = {
+                "label": label,
+                "domain": rel.get("domain", ""),
+                "range": rel.get("range", "")
+            }
+    
+    return metadata
+
+
+def get_concept_label(ontology: Dict[str, Any], concept_qid: str) -> str:
+    """
+    Get the label for an ontology concept by its QID.
+    
+    Args:
+        ontology: Ontology dictionary
+        concept_qid: Concept QID (e.g., "Artist", "University")
+    
+    Returns:
+        Concept label or empty string if not found
+    """
+    for concept in ontology.get("concepts", []):
+        if concept.get("qid") == concept_qid:
+            return concept.get("label", "")
+    return ""
+
+
+def format_ontology_for_extraction(ontology: Dict[str, Any]) -> str:
+    """
+    Format ontology for extraction prompt following Text2KGBench baseline pattern.
+    
+    Args:
+        ontology: Ontology dictionary from JSON file
+    
+    Returns:
+        Formatted string with concepts and relations for extraction prompt
+    """
+    # Get all concept labels (comma-separated)
+    concepts = [c.get("label", "") for c in ontology.get("concepts", [])]
+    concepts_str = ", ".join([c for c in concepts if c])
+    
+    # Get all relations in format: relation(domain, range)
+    relations = []
+    for rel in ontology.get("relations", []):
+        rel_label = rel.get("label", "")
+        if not rel_label:
+            continue
+        
+        domain_qid = rel.get("domain", "")
+        range_qid = rel.get("range", "")
+        
+        domain_label = get_concept_label(ontology, domain_qid) if domain_qid else ""
+        range_label = get_concept_label(ontology, range_qid) if range_qid else ""
+        
+        # Format: relation(domain, range)
+        if domain_label or range_label:
+            relations.append(f"{rel_label}({domain_label}, {range_label})")
+        else:
+            relations.append(rel_label)
+    
+    relations_str = ", ".join(relations)
+    
+    return f"""CONTEXT:
+
+Ontology Concepts: {concepts_str}
+Ontology Relations: {relations_str}
+
+Given the following ontology and sentence, please extract the triples from the sentence according to the relations in the ontology."""
+
+
 def uri_to_entity_text(uri: str) -> str:
     """
     Convert entity URI to text, preserving underscores and TitleCase.
@@ -254,24 +349,40 @@ def run_nef_on_text2kg(
     onto_id = test_file.stem.replace("_test", "")
     print_progress_header(onto_id, total)
     
-    # Reset pipeline's allowed predicates for this ontology
+    # Reset pipeline's allowed predicates, metadata, and context for this ontology
     pipeline.allowed_predicates = None
+    pipeline.predicate_metadata = None
+    pipeline.ontology_context = None
     
     # Load ontology and get allowed predicates if ontology path is provided
     allowed_predicates = None
+    predicate_metadata = None
+    ontology_context = None
     if ontology_path and ontology_path.exists():
         try:
+            with open(ontology_path, "r", encoding="utf-8") as f:
+                ontology = json.load(f)
+            
             allowed_predicates = get_allowed_predicate_uris(ontology_path)
+            predicate_metadata = load_ontology_metadata(ontology_path)
+            ontology_context = format_ontology_for_extraction(ontology)
+            
             if verbose:
                 print(f"   📚 Loaded ontology: {len(allowed_predicates)} allowed predicates")
+                print(f"   📖 Loaded predicate metadata: {len(predicate_metadata)} predicates with semantic info")
+                print(f"   📋 Loaded ontology context for extraction")
         except Exception as e:
             if verbose:
                 print(f"   ⚠️  Warning: Could not load ontology: {e}")
                 print(f"   Continuing without ontology filtering...")
     
-    # Update pipeline's allowed predicates if we have them
+    # Update pipeline's allowed predicates, metadata, and context if we have them
     if allowed_predicates:
         pipeline.allowed_predicates = set(allowed_predicates)
+    if predicate_metadata:
+        pipeline.predicate_metadata = predicate_metadata
+    if ontology_context:
+        pipeline.ontology_context = ontology_context
     
     results = []
     stats = {
@@ -282,6 +393,10 @@ def run_nef_on_text2kg(
         "total_time_ms": 0.0
     }
     
+    # Open output file for incremental writing
+    output_file.parent.mkdir(parents=True, exist_ok=True)
+    output_f = open(output_file, "w", encoding="utf-8")
+    
     # Process each sentence
     for idx, test_item in enumerate(test_items, 1):
         sent_id = test_item.get("id", f"unknown_{idx}")
@@ -290,11 +405,15 @@ def run_nef_on_text2kg(
         if not sentence:
             if verbose:
                 print(f"\n[{idx:3d}/{total}] ⚠️  Empty sentence for {sent_id}")
-            results.append({
+            result = {
                 "id": sent_id,
                 "sent": sentence,
                 "triples": []
-            })
+            }
+            # Write immediately
+            output_f.write(json.dumps(result, ensure_ascii=False) + "\n")
+            output_f.flush()
+            results.append(result)
             stats["failed"] += 1
             continue
         
@@ -325,11 +444,17 @@ def run_nef_on_text2kg(
                 if show_triples and triples:
                     print_triple_details(triples, verbose=True)
             
-            results.append({
+            result = {
                 "id": sent_id,
                 "sent": sentence,
                 "triples": triples
-            })
+            }
+            
+            # Write incrementally (immediately after processing)
+            output_f.write(json.dumps(result, ensure_ascii=False) + "\n")
+            output_f.flush()  # Ensure it's written to disk immediately
+            
+            results.append(result)
             
         except Exception as e:
             elapsed_ms = (time.perf_counter() - start_time) * 1000.0
@@ -341,28 +466,29 @@ def run_nef_on_text2kg(
                 print(f"   Error: {str(e)}")
                 print(f"   Sentence: {sentence[:80]}...")
             
-            results.append({
+            result = {
                 "id": sent_id,
                 "sent": sentence,
                 "triples": []
-            })
+            }
+            # Write immediately even on error
+            output_f.write(json.dumps(result, ensure_ascii=False) + "\n")
+            output_f.flush()
+            results.append(result)
+    
+    # Close output file
+    output_f.close()
     
     # Calculate final stats
     stats["avg_triples"] = stats["total_triples"] / stats["successful"] if stats["successful"] > 0 else 0.0
     stats["avg_time_ms"] = stats["total_time_ms"] / total if total > 0 else 0.0
     stats["total_time_s"] = stats["total_time_ms"] / 1000.0
     
-    # Save results
-    output_file.parent.mkdir(parents=True, exist_ok=True)
-    with open(output_file, "w", encoding="utf-8") as f:
-        for item in results:
-            f.write(json.dumps(item, ensure_ascii=False) + "\n")
-    
     # Print summary
     print_ontology_summary(onto_id, stats)
     
     if verbose:
-        print(f"💾 Saved {len(results)} results to {output_file}")
+        print(f"💾 Saved {len(results)} results incrementally to {output_file}")
     
     return stats
 
