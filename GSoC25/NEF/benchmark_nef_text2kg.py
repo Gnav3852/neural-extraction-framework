@@ -393,91 +393,137 @@ def run_nef_on_text2kg(
         "total_time_ms": 0.0
     }
     
-    # Open output file for incremental writing
+    # Open output file for incremental writing (using context manager for safety)
     output_file.parent.mkdir(parents=True, exist_ok=True)
-    output_f = open(output_file, "w", encoding="utf-8")
     
-    # Process each sentence
-    for idx, test_item in enumerate(test_items, 1):
-        sent_id = test_item.get("id", f"unknown_{idx}")
-        sentence = test_item.get("sent", "")
-        
-        if not sentence:
-            if verbose:
-                print(f"\n[{idx:3d}/{total}] ⚠️  Empty sentence for {sent_id}")
-            result = {
-                "id": sent_id,
-                "sent": sentence,
-                "triples": []
-            }
-            # Write immediately
-            output_f.write(json.dumps(result, ensure_ascii=False) + "\n")
-            output_f.flush()
-            results.append(result)
-            stats["failed"] += 1
-            continue
-        
-        # Run NEF pipeline with timing
-        start_time = time.perf_counter()
+    def safe_write_json(output_f, result_dict, sent_id, verbose_flag):
+        """Safely write JSON to file with validation and error handling."""
         try:
-            nef_triples = pipeline.run_pipeline(sentence, debug=False)
-            elapsed_ms = (time.perf_counter() - start_time) * 1000.0
-            stats["total_time_ms"] += elapsed_ms
-            
-            # Convert NEF output (URIs) to Text2KGBench format (text labels)
-            triples = []
-            for s_uri, p_uri, o_uri, meta in nef_triples:
-                # Convert URIs to text, preserving format
-                sub_text = uri_to_entity_text(s_uri)
-                pred_text = uri_to_predicate_text(p_uri) if p_uri else ""
-                obj_text = uri_to_entity_text(o_uri)
-                
-                if sub_text and pred_text and obj_text:
-                    triples.append(format_triple_for_text2kg(sub_text, pred_text, obj_text))
-            
-            stats["total_triples"] += len(triples)
-            stats["successful"] += 1
-            
-            # Print progress
-            if verbose:
-                print_sentence_progress(idx, total, sent_id, sentence, len(triples), elapsed_ms)
-                if show_triples and triples:
-                    print_triple_details(triples, verbose=True)
-            
-            result = {
-                "id": sent_id,
-                "sent": sentence,
-                "triples": triples
+            # Ensure all values are strings and serializable
+            safe_result = {
+                "id": str(result_dict.get("id", sent_id)),
+                "sent": str(result_dict.get("sent", "")),
+                "triples": [[str(t[0]), str(t[1]), str(t[2])] for t in result_dict.get("triples", [])]
             }
             
-            # Write incrementally (immediately after processing)
-            output_f.write(json.dumps(result, ensure_ascii=False) + "\n")
-            output_f.flush()  # Ensure it's written to disk immediately
+            # Serialize to JSON
+            json_str = json.dumps(safe_result, ensure_ascii=False)
             
-            results.append(result)
+            # Validate JSON string (check for null bytes or empty)
+            if not json_str or len(json_str) < 10:
+                if verbose_flag:
+                    print(f"   ⚠️ WARNING: Invalid JSON for {sent_id}, skipping write")
+                return False
             
-        except Exception as e:
-            elapsed_ms = (time.perf_counter() - start_time) * 1000.0
-            stats["total_time_ms"] += elapsed_ms
-            stats["failed"] += 1
+            if '\x00' in json_str:  # Check for null bytes
+                if verbose_flag:
+                    print(f"   ⚠️ WARNING: Null bytes detected in JSON for {sent_id}, skipping write")
+                return False
             
-            if verbose:
-                print(f"\n[{idx:3d}/{total}] ❌ ERROR processing {sent_id}")
-                print(f"   Error: {str(e)}")
-                print(f"   Sentence: {sentence[:80]}...")
-            
-            result = {
-                "id": sent_id,
-                "sent": sentence,
-                "triples": []
-            }
-            # Write immediately even on error
-            output_f.write(json.dumps(result, ensure_ascii=False) + "\n")
+            # Write to file
+            output_f.write(json_str + "\n")
             output_f.flush()
-            results.append(result)
+            return True
+            
+        except (UnicodeEncodeError, TypeError, ValueError) as e:
+            if verbose_flag:
+                print(f"   ⚠️ ERROR serializing JSON for {sent_id}: {e}")
+            # Write safe fallback
+            try:
+                safe_fallback = {
+                    "id": str(sent_id),
+                    "sent": str(result_dict.get("sent", "")),
+                    "triples": [],
+                    "_error": str(e)
+                }
+                output_f.write(json.dumps(safe_fallback, ensure_ascii=False) + "\n")
+                output_f.flush()
+                return True
+            except Exception as e2:
+                if verbose_flag:
+                    print(f"   ⚠️ CRITICAL: Could not write fallback JSON for {sent_id}: {e2}")
+                return False
     
-    # Close output file
-    output_f.close()
+    with open(output_file, "w", encoding="utf-8", newline='\n') as output_f:
+        # Process each sentence
+        for idx, test_item in enumerate(test_items, 1):
+            sent_id = test_item.get("id", f"unknown_{idx}")
+            sentence = test_item.get("sent", "")
+            
+            if not sentence:
+                if verbose:
+                    print(f"\n[{idx:3d}/{total}] ⚠️  Empty sentence for {sent_id}")
+                result = {
+                    "id": sent_id,
+                    "sent": sentence,
+                    "triples": []
+                }
+                # Write immediately with safe function
+                safe_write_json(output_f, result, sent_id, verbose)
+                results.append(result)
+                stats["failed"] += 1
+                continue
+            
+            # Run NEF pipeline with timing
+            start_time = time.perf_counter()
+            try:
+                nef_triples = pipeline.run_pipeline(sentence, debug=False)
+                elapsed_ms = (time.perf_counter() - start_time) * 1000.0
+                stats["total_time_ms"] += elapsed_ms
+                
+                # Convert NEF output (URIs) to Text2KGBench format (text labels)
+                triples = []
+                for s_uri, p_uri, o_uri, meta in nef_triples:
+                    # Ensure all are strings (handles literals and URIs)
+                    s_uri = str(s_uri) if s_uri is not None else ""
+                    p_uri = str(p_uri) if p_uri is not None else ""
+                    o_uri = str(o_uri) if o_uri is not None else ""
+                    
+                    # Convert URIs to text, preserving format
+                    sub_text = uri_to_entity_text(s_uri)
+                    pred_text = uri_to_predicate_text(p_uri) if p_uri else ""
+                    obj_text = uri_to_entity_text(o_uri)  # Works for literals too
+                    
+                    if sub_text and pred_text and obj_text:
+                        triples.append(format_triple_for_text2kg(sub_text, pred_text, obj_text))
+                
+                stats["total_triples"] += len(triples)
+                stats["successful"] += 1
+                
+                # Print progress
+                if verbose:
+                    print_sentence_progress(idx, total, sent_id, sentence, len(triples), elapsed_ms)
+                    if show_triples and triples:
+                        print_triple_details(triples, verbose=True)
+                
+                result = {
+                    "id": sent_id,
+                    "sent": sentence,
+                    "triples": triples
+                }
+                
+                # Write incrementally (immediately after processing) with safe function
+                safe_write_json(output_f, result, sent_id, verbose)
+                results.append(result)
+                
+            except Exception as e:
+                elapsed_ms = (time.perf_counter() - start_time) * 1000.0
+                stats["total_time_ms"] += elapsed_ms
+                stats["failed"] += 1
+                
+                if verbose:
+                    print(f"\n[{idx:3d}/{total}] ❌ ERROR processing {sent_id}")
+                    print(f"   Error: {str(e)}")
+                    print(f"   Sentence: {sentence[:80]}...")
+                
+                result = {
+                    "id": sent_id,
+                    "sent": sentence,
+                    "triples": []
+                }
+                # Write immediately even on error with safe function
+                safe_write_json(output_f, result, sent_id, verbose)
+                results.append(result)
     
     # Calculate final stats
     stats["avg_triples"] = stats["total_triples"] / stats["successful"] if stats["successful"] > 0 else 0.0
