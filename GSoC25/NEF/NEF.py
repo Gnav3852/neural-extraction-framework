@@ -620,13 +620,44 @@ class EnhancedNEFPipeline:
             fixed.append((uri, score))
         return fixed
 
+    def _is_likely_literal(self, text: str) -> bool:
+        """
+        Check if text looks like a number or date literal.
+        Returns True if it should skip Redis grounding.
+        """
+        if not text:
+            return False
+        
+        text = text.strip()
+        
+        # Check for numbers (integers, decimals, with commas)
+        # Remove commas and check if it's a number
+        text_no_commas = text.replace(',', '')
+        if text_no_commas.replace('.', '', 1).isdigit():  # Allow one decimal point
+            return True
+        
+        # Check for date patterns (YYYY-MM-DD, YYYY/MM/DD, etc.)
+        date_patterns = [
+            r'^\d{4}-\d{2}-\d{2}$',      # 1920-08-16
+            r'^\d{4}/\d{2}/\d{2}$',      # 1920/08/16
+            r'^\d{4}\.\d{2}\.\d{2}$',    # 1920.08.16
+            r'^\d{2}-\d{2}-\d{4}$',      # 08-16-1920
+            r'^\d{2}/\d{2}/\d{4}$',      # 08/16/1920
+        ]
+        for pattern in date_patterns:
+            if re.match(pattern, text):
+                return True
+        
+        return False
+
     def _extract_triples(self, text: str, ontology_context: Optional[str] = None, debug: bool = False) -> list[dict]:
         """
         Strict extractor:
         - forces lowercase S/P/O
         - enforces 1–3 word predicates
         - confidence ≥ 0.5
-        - REQUIRES Redis grounding for subject and object
+        - REQUIRES Redis grounding for subject
+        - Object can be entity (Redis grounding) or literal (numbers/dates)
         - Optionally uses ontology context to guide extraction
         """
         # Build prompt with optional ontology context
@@ -832,8 +863,11 @@ Text:
 
     def run_pipeline(self, sentence: str, debug: bool = False) -> list[tuple[str, str, str, Dict[str, Any]]]:
         """
-        End-to-end for one sentence, strict Redis grounding.
-        Returns list of (subjectURI, predicateURI, objectURI, meta)
+        End-to-end for one sentence.
+        - Subject: Redis grounding (required)
+        - Object: Redis grounding for entities, literal detection for numbers/dates
+        - Predicate: Embedding-based retrieval with LLM disambiguation
+        Returns list of (subjectURI, predicateURI, objectURI_or_literal, meta)
         """
         if self.verbose:
             _safe_print(f"\n📝 {sentence!r}")
@@ -858,15 +892,32 @@ Text:
                 _safe_print("   📍 Using entity candidates collected during extraction...")
 
             subject_candidates = t.get("_sub_cands") or self._resolve_entities(s_text, k=5)
-            object_candidates  = t.get("_obj_cands") or self._resolve_entities(o_text, k=5)
+            
+            # Check if object is a literal BEFORE grounding
+            if self._is_likely_literal(o_text):
+                # Skip Redis grounding for literals - use literal value directly
+                object_candidates = [(o_text, 1.0)]
+                if self.verbose:
+                    _safe_print("   [Object:literal]", o_text)
+            else:
+                # Normal Redis grounding for entities
+                object_candidates = t.get("_obj_cands") or self._resolve_entities(o_text, k=5)
 
             if self.verbose:
                 _safe_print("   [Redis:subject]", subject_candidates[:5] if subject_candidates else "NO CANDIDATES")
-                _safe_print("   [Redis:object]",  object_candidates[:5]  if object_candidates  else "NO CANDIDATES")
+                if not self._is_likely_literal(o_text):
+                    _safe_print("   [Redis:object]",  object_candidates[:5]  if object_candidates  else "NO CANDIDATES")
 
-            if not subject_candidates or not object_candidates:
+            # Only check subject grounding - object can be literal or entity
+            if not subject_candidates:
                 if self.verbose:
-                    _safe_print("   ⚠ Abandoning triple (no Redis candidates).")
+                    _safe_print("   ⚠ Abandoning triple (no Redis candidates for subject).")
+                continue
+
+            # Object can be empty only if it's not a literal
+            if not object_candidates and not self._is_likely_literal(o_text):
+                if self.verbose:
+                    _safe_print("   ⚠ Abandoning triple (no Redis candidates for object).")
                 continue
 
             # Pre-filter embeddings to only search within allowed predicates
