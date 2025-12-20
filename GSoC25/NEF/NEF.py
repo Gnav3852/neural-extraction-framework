@@ -628,15 +628,19 @@ class EnhancedNEFPipeline:
         if not text:
             return False
         
-        text = text.strip()
+        text = text.strip().lower()  # Normalize to lowercase for date detection
+        
+        # Remove all spaces for number checking
+        text_no_spaces = text.replace(' ', '')
         
         # Check for numbers (integers, decimals, with commas)
         # Remove commas and check if it's a number
-        text_no_commas = text.replace(',', '')
-        if text_no_commas.replace('.', '', 1).isdigit():  # Allow one decimal point
+        text_no_commas = text_no_spaces.replace(',', '')
+        # Check if it's all digits (possibly with one decimal point)
+        if text_no_commas.replace('.', '', 1).isdigit():
             return True
         
-        # Check for date patterns (YYYY-MM-DD, YYYY/MM/DD, etc.)
+        # Check for structured date patterns (YYYY-MM-DD, YYYY/MM/DD, etc.)
         date_patterns = [
             r'^\d{4}-\d{2}-\d{2}$',      # 1920-08-16
             r'^\d{4}/\d{2}/\d{2}$',      # 1920/08/16
@@ -647,6 +651,30 @@ class EnhancedNEFPipeline:
         for pattern in date_patterns:
             if re.match(pattern, text):
                 return True
+        
+        # Check for natural language dates (e.g., "august 16th, 1920", "january 1, 2000")
+        # Look for month names followed by optional day and year
+        month_names = [
+            'january', 'february', 'march', 'april', 'may', 'june',
+            'july', 'august', 'september', 'october', 'november', 'december',
+            'jan', 'feb', 'mar', 'apr', 'may', 'jun',
+            'jul', 'aug', 'sep', 'sept', 'oct', 'nov', 'dec'
+        ]
+        
+        # Check if text starts with a month name
+        for month in month_names:
+            if text.startswith(month):
+                # Check if it contains a 4-digit year
+                if re.search(r'\b\d{4}\b', text):
+                    return True
+        
+        # Check for patterns like "YYYY-MM-DD" with spaces: "1920 - 08 - 16"
+        if re.match(r'^\d{4}\s*[-/\.]\s*\d{1,2}\s*[-/\.]\s*\d{1,2}$', text):
+            return True
+        
+        # Check if text is just a 4-digit year
+        if re.match(r'^\d{4}$', text):
+            return True
         
         return False
 
@@ -676,10 +704,13 @@ You MUST:
 - Keep predicates extremely concise: 1–3 words max (e.g., "founded", "born in", "wrote").
 - Include only items with confidence ≥ 0.5.
 - If ontology context is provided, extract triples according to the ontology relations and concepts.
+- For DATE objects: Normalize to YYYY-MM-DD format (e.g., "Aug. 16, 1920" → "1920-08-16", "January 1, 2000" → "2000-01-01").
+- For NUMBER objects: Remove commas and use digits only (e.g., "15,100,000,000" → "15100000000", "5,594" → "5594").
+- Optionally include "object_type" field: "entity", "literal", "number", or "date" to help processing.
 
 Output schema:
 [
-  {{"subject":"...", "predicate":"...", "object":"...", "confidence":0.0}},
+  {{"subject":"...", "predicate":"...", "object":"...", "object_type":"entity|literal|number|date", "confidence":0.0}},
   ...
 ]
 
@@ -764,6 +795,7 @@ Text:
                 s_raw = (it.get("subject") or "").strip()
                 p_raw = (it.get("predicate") or "").strip()
                 o_raw = (it.get("object") or "").strip()
+                obj_type = (it.get("object_type") or "").strip().lower()  # Get object_type from LLM
                 conf  = it.get("confidence", None)
 
                 try:
@@ -801,22 +833,40 @@ Text:
                     if step4_sub_time > 5.0:
                         _safe_print(f"[DIAG] ⚠️ WARNING: Subject resolution took {step4_sub_time:.2f}s (>5s threshold)")
                 
-                if self.verbose:
-                    _safe_print(f"[DIAG] Step 4.{idx}.2: About to resolve entities for object: '{o_raw}'")
-                step4_obj_start = time.time()
-                try:
-                    obj_cands = self._resolve_entities(o_raw, k=5)
-                except Exception as e:
-                    if self.verbose:
-                        _safe_print(f"[DIAG] Step 4.{idx}.2: Object resolution ERROR: {e}")
+                # Check if object is a literal (use LLM's object_type if available, otherwise use function)
+                is_literal = False
+                if obj_type in ["literal", "number", "date"]:
+                    is_literal = True
+                elif not obj_type:  # If LLM didn't provide object_type, use function detection
+                    is_literal = self._is_likely_literal(o_raw)
+                
+                if is_literal:
+                    # Skip Redis grounding for literals
                     obj_cands = []
-                step4_obj_time = time.time() - step4_obj_start
-                if self.verbose:
-                    _safe_print(f"[DIAG] Step 4.{idx}.2: Object resolution took {step4_obj_time:.2f}s, found {len(obj_cands)} candidates")
-                    if step4_obj_time > 5.0:
-                        _safe_print(f"[DIAG] ⚠️ WARNING: Object resolution took {step4_obj_time:.2f}s (>5s threshold)")
-                if not sub_cands or not obj_cands:
-                    reasons.append("no Redis grounding for subject/object (strict mode)")
+                    if self.verbose:
+                        _safe_print(f"[DIAG] Step 4.{idx}.2: Object '{o_raw}' detected as literal (type: {obj_type or 'auto-detected'}), skipping Redis")
+                else:
+                    # Normal Redis grounding for entities
+                    if self.verbose:
+                        _safe_print(f"[DIAG] Step 4.{idx}.2: About to resolve entities for object: '{o_raw}'")
+                    step4_obj_start = time.time()
+                    try:
+                        obj_cands = self._resolve_entities(o_raw, k=5)
+                    except Exception as e:
+                        if self.verbose:
+                            _safe_print(f"[DIAG] Step 4.{idx}.2: Object resolution ERROR: {e}")
+                        obj_cands = []
+                    step4_obj_time = time.time() - step4_obj_start
+                    if self.verbose:
+                        _safe_print(f"[DIAG] Step 4.{idx}.2: Object resolution took {step4_obj_time:.2f}s, found {len(obj_cands)} candidates")
+                        if step4_obj_time > 5.0:
+                            _safe_print(f"[DIAG] ⚠️ WARNING: Object resolution took {step4_obj_time:.2f}s (>5s threshold)")
+                
+                # Only require Redis grounding for subject and non-literal objects
+                if not sub_cands:
+                    reasons.append("no Redis grounding for subject (required)")
+                if not is_literal and not obj_cands:
+                    reasons.append("no Redis grounding for object (entity required)")
 
                 if (s, p, o) in seen:
                     reasons.append("duplicate triple")
@@ -829,8 +879,15 @@ Text:
                     continue
 
                 seen.add((s, p, o))
-                kept = {"subject": s, "predicate": p, "object": o,
-                        "_sub_cands": sub_cands, "_obj_cands": obj_cands}
+                kept = {
+                    "subject": s, 
+                    "predicate": p, 
+                    "object": o,
+                    "_sub_cands": sub_cands, 
+                    "_obj_cands": obj_cands,
+                    "_is_literal": is_literal,  # Store literal flag for run_pipeline
+                    "_object_type": obj_type  # Store object_type from LLM
+                }
                 out.append(kept)
 
                 if debug:
@@ -893,19 +950,29 @@ Text:
 
             subject_candidates = t.get("_sub_cands") or self._resolve_entities(s_text, k=5)
             
-            # Check if object is a literal BEFORE grounding
-            if self._is_likely_literal(o_text):
+            # Check if object is a literal (use stored flag from extraction, or detect)
+            is_literal = t.get("_is_literal", False)
+            if not is_literal:
+                # Fallback: check if LLM marked it or use function detection
+                obj_type = t.get("_object_type", "").lower()
+                if obj_type in ["literal", "number", "date"]:
+                    is_literal = True
+                else:
+                    is_literal = self._is_likely_literal(o_text)
+            
+            if is_literal:
                 # Skip Redis grounding for literals - use literal value directly
                 object_candidates = [(o_text, 1.0)]
                 if self.verbose:
-                    _safe_print("   [Object:literal]", o_text)
+                    obj_type_str = t.get("_object_type", "auto-detected")
+                    _safe_print(f"   [Object:literal] {o_text} (type: {obj_type_str})")
             else:
                 # Normal Redis grounding for entities
                 object_candidates = t.get("_obj_cands") or self._resolve_entities(o_text, k=5)
 
             if self.verbose:
                 _safe_print("   [Redis:subject]", subject_candidates[:5] if subject_candidates else "NO CANDIDATES")
-                if not self._is_likely_literal(o_text):
+                if not is_literal:
                     _safe_print("   [Redis:object]",  object_candidates[:5]  if object_candidates  else "NO CANDIDATES")
 
             # Only check subject grounding - object can be literal or entity
@@ -915,7 +982,7 @@ Text:
                 continue
 
             # Object can be empty only if it's not a literal
-            if not object_candidates and not self._is_likely_literal(o_text):
+            if not object_candidates and not is_literal:
                 if self.verbose:
                     _safe_print("   ⚠ Abandoning triple (no Redis candidates for object).")
                 continue
