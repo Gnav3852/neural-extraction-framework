@@ -211,37 +211,19 @@ def uri_to_predicate_text(uri: str) -> str:
 
 def format_object_text(obj_text: str) -> str:
     """
-    Format object text, handling quoting when needed.
-    Text2KGBench sometimes uses quoted strings for objects like "\"Kuttikkattoor\"".
-    We'll add quotes for string objects that aren't already quoted and aren't numbers/dates.
+    Format object text for Text2KGBench output.
+    Returns the text as-is (no quotes added - evaluation script expects plain strings).
+    The evaluation script normalizes triples by removing spaces/underscores and lowercasing,
+    so the exact format doesn't matter as long as it's a plain string.
     """
-    obj_text = obj_text.strip()
-    if not obj_text:
-        return obj_text
-    
-    # If already quoted, return as is
-    if obj_text.startswith('"') and obj_text.endswith('"'):
-        return obj_text
-    
-    # Check if it's a number or date (don't quote these)
-    import re
-    if re.match(r'^\d+$', obj_text):  # Pure number
-        return obj_text
-    if re.match(r'^\d{4}$', obj_text):  # Year
-        return obj_text
-    
-    # For string objects, add quotes to match Text2KGBench format
-    # But only if it looks like a proper noun or string value
-    if any(c.isalpha() for c in obj_text):
-        return f'"{obj_text}"'
-    
-    return obj_text
+    return obj_text.strip()
 
 
 def format_triple_for_text2kg(sub_text: str, pred_text: str, obj_text: str) -> List[str]:
     """
     Format triple as list [subject, predicate, object] for Text2KGBench.
-    Preserves format: underscores for entities, camelCase for predicates, quotes for objects.
+    Preserves format: underscores for entities, camelCase for predicates.
+    Objects are plain strings (no quotes) as expected by the evaluation script.
     """
     # Clean up the texts
     sub_text = sub_text.strip()
