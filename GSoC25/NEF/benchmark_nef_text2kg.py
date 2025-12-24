@@ -14,6 +14,7 @@ import os
 import json
 import sys
 import time
+import statistics
 from pathlib import Path
 from typing import List, Dict, Any, Optional
 from datetime import datetime
@@ -280,6 +281,25 @@ def print_triple_details(triples: List[List[str]], verbose: bool = False):
                 print(f"  📋 ... and {len(triples) - 1} more")
 
 
+def calculate_latency_stats(latencies: List[float]) -> Dict[str, float]:
+    """Calculate latency statistics (min, max, mean, median, p95, p99)."""
+    if not latencies:
+        return {}
+    
+    sorted_latencies = sorted(latencies)
+    n = len(sorted_latencies)
+    
+    return {
+        "min_ms": min(latencies),
+        "max_ms": max(latencies),
+        "mean_ms": statistics.mean(latencies),
+        "median_ms": statistics.median(latencies),
+        "p95_ms": sorted_latencies[int(n * 0.95)] if n > 0 else 0.0,
+        "p99_ms": sorted_latencies[int(n * 0.99)] if n > 0 else 0.0,
+        "stddev_ms": statistics.stdev(latencies) if n > 1 else 0.0,
+    }
+
+
 def print_ontology_summary(onto_id: str, stats: Dict[str, Any]):
     """Print summary statistics for an ontology."""
     print("\n" + "-"*80)
@@ -291,6 +311,19 @@ def print_ontology_summary(onto_id: str, stats: Dict[str, Any]):
     print(f"   Avg triples/sentence: {stats['avg_triples']:.2f}")
     print(f"   Avg time/sentence: {stats['avg_time_ms']:.1f}ms")
     print(f"   Total time: {stats['total_time_s']:.1f}s")
+    
+    # Print latency statistics
+    if stats.get('latency_stats'):
+        ls = stats['latency_stats']
+        print(f"\n   ⏱️  Latency Statistics:")
+        print(f"      Min: {ls.get('min_ms', 0):.1f}ms")
+        print(f"      Max: {ls.get('max_ms', 0):.1f}ms")
+        print(f"      Mean: {ls.get('mean_ms', 0):.1f}ms")
+        print(f"      Median: {ls.get('median_ms', 0):.1f}ms")
+        print(f"      P95: {ls.get('p95_ms', 0):.1f}ms")
+        print(f"      P99: {ls.get('p99_ms', 0):.1f}ms")
+        print(f"      Std Dev: {ls.get('stddev_ms', 0):.1f}ms")
+    
     print("-"*80)
 
 
@@ -372,7 +405,8 @@ def run_nef_on_text2kg(
         "successful": 0,
         "failed": 0,
         "total_triples": 0,
-        "total_time_ms": 0.0
+        "total_time_ms": 0.0,
+        "latencies_ms": []  # Store all latencies for statistics
     }
     
     # Open output file for incremental writing (using context manager for safety)
@@ -452,6 +486,7 @@ def run_nef_on_text2kg(
                 nef_triples = pipeline.run_pipeline(sentence, debug=False)
                 elapsed_ms = (time.perf_counter() - start_time) * 1000.0
                 stats["total_time_ms"] += elapsed_ms
+                stats["latencies_ms"].append(elapsed_ms)  # Collect latency
                 
                 # Convert NEF output (URIs) to Text2KGBench format (text labels)
                 triples = []
@@ -491,6 +526,7 @@ def run_nef_on_text2kg(
             except Exception as e:
                 elapsed_ms = (time.perf_counter() - start_time) * 1000.0
                 stats["total_time_ms"] += elapsed_ms
+                stats["latencies_ms"].append(elapsed_ms)  # Collect latency even on error
                 stats["failed"] += 1
                 
                 if verbose:
@@ -512,6 +548,9 @@ def run_nef_on_text2kg(
     stats["avg_time_ms"] = stats["total_time_ms"] / total if total > 0 else 0.0
     stats["total_time_s"] = stats["total_time_ms"] / 1000.0
     
+    # Calculate latency statistics
+    stats["latency_stats"] = calculate_latency_stats(stats["latencies_ms"])
+    
     # Print summary
     print_ontology_summary(onto_id, stats)
     
@@ -519,6 +558,45 @@ def run_nef_on_text2kg(
         print(f"💾 Saved {len(results)} results incrementally to {output_file}")
     
     return stats
+
+
+def save_latency_metrics(all_stats: List[Dict[str, Any]], output_dir: Path) -> Path:
+    """Save detailed latency metrics to a JSON file."""
+    metrics_file = output_dir / "latency_metrics.json"
+    
+    metrics = {
+        "timestamp": datetime.now().isoformat(),
+        "ontologies": []
+    }
+    
+    for stats in all_stats:
+        onto_metrics = {
+            "ontology": stats.get("ontology", "unknown"),
+            "total_sentences": stats.get("total", 0),
+            "successful": stats.get("successful", 0),
+            "failed": stats.get("failed", 0),
+            "total_triples": stats.get("total_triples", 0),
+            "avg_triples_per_sentence": stats.get("avg_triples", 0.0),
+            "latency_stats": stats.get("latency_stats", {}),
+            "all_latencies_ms": stats.get("latencies_ms", [])
+        }
+        metrics["ontologies"].append(onto_metrics)
+    
+    # Calculate overall stats
+    all_latencies = []
+    for stats in all_stats:
+        all_latencies.extend(stats.get("latencies_ms", []))
+    
+    metrics["overall"] = {
+        "total_sentences": sum(s.get("total", 0) for s in all_stats),
+        "total_triples": sum(s.get("total_triples", 0) for s in all_stats),
+        "latency_stats": calculate_latency_stats(all_latencies)
+    }
+    
+    with open(metrics_file, "w", encoding="utf-8") as f:
+        json.dump(metrics, f, indent=2, ensure_ascii=False)
+    
+    return metrics_file
 
 
 def main():
@@ -687,6 +765,11 @@ Examples:
                   f"Time: {stats['total_time_s']:.1f}s")
     
     print(f"\n💾 All results saved to: {output_dir.absolute()}")
+    
+    # Save latency metrics
+    metrics_file = save_latency_metrics(all_stats, output_dir)
+    print(f"📊 Latency metrics saved to: {metrics_file}")
+    
     print(f"\n📝 Next step: Run Text2KGBench evaluation script:")
     print(f"   cd {TEXT2KG_ROOT / 'src' / 'evaluation'}")
     print(f"   python run_eval.py --eval_config_path ../../nef_text2kg_eval_config.json")
