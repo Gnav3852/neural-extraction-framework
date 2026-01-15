@@ -44,7 +44,7 @@ def make_label_text(uri: str, rdfs_label: str | None, rdfs_comment: str | None) 
 # === Load DBpedia ontology ===
 g = Graph()
 # dbpedia ontology (public URL)
-g.parse("http://dief.tools.dbpedia.org/server/ontology/dbpedia.owl")
+g.parse("dbpedia-20250806.owl.rdf")
 print(f"Total triples in graph: {len(g)}")
 
 # --- SPARQL: collect predicates with english labels/comments ---
