@@ -43,8 +43,11 @@ def make_label_text(uri: str, rdfs_label: str | None, rdfs_comment: str | None) 
 
 # === Load DBpedia ontology ===
 g = Graph()
-# dbpedia ontology (public URL)
-g.parse("dbpedia-20250806.owl.rdf")
+# dbpedia ontology (local file)
+ontology_path = os.path.join(os.path.dirname(__file__), "dbpedia-20250806.owl.rdf")
+if not os.path.exists(ontology_path):
+    raise FileNotFoundError(f"Could not find ontology file at: {ontology_path}")
+g.parse(ontology_path)
 print(f"Total triples in graph: {len(g)}")
 
 # --- SPARQL: collect predicates with english labels/comments ---
