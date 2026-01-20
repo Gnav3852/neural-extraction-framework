@@ -166,10 +166,10 @@ def find_semantic_match(triple_str: str, candidates: List[str], embeddings: Dict
 
 
 def generate_comparison_table(
-    gt_file: Path, pred_file: Path, output_csv: Path, output_html: Path,
-    max_rows: int = 100, use_semantic: bool = False, semantic_threshold: float = 0.94
-):
-    """Generate side-by-side comparison table (CSV and HTML) with optional semantic matching."""
+    gt_file: Path, pred_file: Path, output_csv: Path,
+    max_rows: Optional[int] = None, use_semantic: bool = False, semantic_threshold: float = 0.94
+) -> Dict[str, int]:
+    """Generate side-by-side comparison table (CSV only) with optional semantic matching. Returns match counts."""
     print(f"\n📊 Generating comparison table...")
     gt_triples = load_triples_from_jsonl(gt_file)
     pred_triples = load_triples_from_jsonl(pred_file)
@@ -192,7 +192,7 @@ def generate_comparison_table(
     row_count = 0
     
     for sent_id in all_sent_ids:
-        if row_count >= max_rows:
+        if max_rows is not None and row_count >= max_rows:
             break
         gt_list = gt_triples.get(sent_id, [])
         pred_list = pred_triples.get(sent_id, [])
@@ -217,7 +217,7 @@ def generate_comparison_table(
         
         # Add exact matches
         for norm_key in exact:
-            if row_count >= max_rows:
+            if max_rows is not None and row_count >= max_rows:
                 break
             gt_t, pred_t = gt_norm[norm_key], pred_norm[norm_key]
             comparison_rows.append(_make_row(sent_id, gt_t, pred_t, "EXACT", "1.00"))
@@ -226,7 +226,7 @@ def generate_comparison_table(
         
         # Add semantic matches
         for gt_n, (pred_n, sim) in semantic_matches.items():
-            if row_count >= max_rows:
+            if max_rows is not None and row_count >= max_rows:
                 break
             comparison_rows.append(_make_row(sent_id, gt_norm[gt_n], pred_norm[pred_n], "SEMANTIC", f"{sim:.2f}"))
             total_semantic += 1
@@ -236,7 +236,7 @@ def generate_comparison_table(
         
         # Add unmatched expected (false negatives)
         for gt_n in gt_unmatched:
-            if row_count >= max_rows:
+            if max_rows is not None and row_count >= max_rows:
                 break
             comparison_rows.append(_make_row(sent_id, gt_norm[gt_n], None, "MISSING", ""))
             total_mismatch += 1
@@ -244,26 +244,28 @@ def generate_comparison_table(
         
         # Add unmatched predicted (false positives)
         for pred_n in pred_unmatched:
-            if row_count >= max_rows:
+            if max_rows is not None and row_count >= max_rows:
                 break
             comparison_rows.append(_make_row(sent_id, None, pred_norm[pred_n], "EXTRA", ""))
             total_mismatch += 1
             row_count += 1
     
-    # Write files
+    # Write CSV
     output_csv.parent.mkdir(parents=True, exist_ok=True)
-    output_html.parent.mkdir(parents=True, exist_ok=True)
-    
     fieldnames = ["sent_id", "match_type", "similarity", "expected", "expected_sub", "expected_rel", 
                   "expected_obj", "predicted", "predicted_sub", "predicted_rel", "predicted_obj"]
     with open(output_csv, 'w', newline='', encoding='utf-8') as f:
         csv.DictWriter(f, fieldnames=fieldnames).writeheader()
         csv.DictWriter(f, fieldnames=fieldnames).writerows(comparison_rows)
     
-    with open(output_html, 'w', encoding='utf-8') as f:
-        f.write(generate_html_table(comparison_rows, total_exact, total_semantic, total_mismatch))
-    
     print(f"   ✅ Generated: {total_exact} exact, {total_semantic} semantic, {total_mismatch} mismatches")
+    
+    return {
+        "exact": total_exact,
+        "semantic": total_semantic,
+        "mismatch": total_mismatch,
+        "total": len(comparison_rows)
+    }
 
 
 def _make_row(sent_id: str, gt_t: Optional[Tuple], pred_t: Optional[Tuple], 
@@ -291,50 +293,48 @@ def _make_row(sent_id: str, gt_t: Optional[Tuple], pred_t: Optional[Tuple],
     return row
 
 
-def generate_html_table(rows: List[Dict], exact: int, semantic: int, mismatch: int) -> str:
-    """Generate HTML table with styling."""
-    return f"""<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Triple Comparison Table</title>
-    <style>
-        body {{ font-family: Arial, sans-serif; margin: 20px; }}
-        table {{ border-collapse: collapse; width: 100%; margin-top: 20px; }}
-        th, td {{ border: 1px solid #ddd; padding: 8px; text-align: left; }}
-        th {{ background-color: #4CAF50; color: white; }}
-        tr:nth-child(even) {{ background-color: #f2f2f2; }}
-        .EXACT {{ background-color: #d4edda; }}
-        .SEMANTIC {{ background-color: #fff3cd; }}
-        .MISSING, .EXTRA {{ background-color: #f8d7da; }}
-        .summary {{ margin: 20px 0; padding: 15px; background-color: #e7f3ff; border-radius: 5px; }}
-    </style>
-</head>
-<body>
-    <h1>Triple Comparison: Expected vs Predicted</h1>
-    <div class="summary">
-        <h2>Summary</h2>
-        <p><strong>Exact Matches:</strong> {exact}</p>
-        <p><strong>Semantic Matches:</strong> {semantic}</p>
-        <p><strong>Mismatches:</strong> {mismatch}</p>
-        <p><strong>Total Rows:</strong> {len(rows)}</p>
-    </div>
-    <table>
-        <thead><tr><th>Sentence ID</th><th>Match Type</th><th>Similarity</th><th>Expected Triple</th><th>Predicted Triple</th></tr></thead>
-        <tbody>
-{''.join(f'<tr class="{r["match_type"]}"><td>{r["sent_id"]}</td><td>{r["match_type"]}</td><td>{r["similarity"]}</td><td>{r["expected"] or "(missing)"}</td><td>{r["predicted"] or "(missing)"}</td></tr>' for r in rows)}
-        </tbody>
-    </table>
-</body>
-</html>"""
+def update_avg_eval_with_match_counts(avg_eval_file: Path, match_counts: Dict[str, Dict[str, int]]):
+    """Update avg_eval_results.jsonl with match counts from comparison tables."""
+    if not avg_eval_file.exists():
+        print(f"   ⚠️  avg_eval_results.jsonl not found: {avg_eval_file}")
+        return
+    
+    # Read existing entries
+    entries = []
+    with open(avg_eval_file, 'r', encoding='utf-8') as f:
+        for line in f:
+            if line.strip():
+                entries.append(json.loads(line.strip()))
+    
+    # Update entries with match counts
+    updated = False
+    for entry in entries:
+        onto_id = entry.get("onto", "")
+        if onto_id and onto_id in match_counts:
+            counts = match_counts[onto_id]
+            entry["exact_matches"] = counts.get("exact", 0)
+            entry["semantic_matches"] = counts.get("semantic", 0)
+            entry["mismatches"] = counts.get("mismatch", 0)
+            entry["total_comparison_rows"] = counts.get("total", 0)
+            updated = True
+    
+    # Write back if updated
+    if updated:
+        with open(avg_eval_file, 'w', encoding='utf-8') as f:
+            for entry in entries:
+                f.write(json.dumps(entry, ensure_ascii=False) + "\n")
+        print(f"   ✅ Updated {avg_eval_file} with match counts")
+    else:
+        print(f"   ⚠️  No matching ontology entries found in {avg_eval_file}")
 
 
 def generate_comparison_tables_for_ontologies(config_data: dict, base_dir: Path, 
-                                             use_eval_folder: bool, max_rows: int = 100,
-                                             use_semantic: bool = False, semantic_threshold: float = 0.94):
-    """Generate comparison tables for all ontologies in the config."""
+                                             use_eval_folder: bool, max_rows: Optional[int] = None,
+                                             use_semantic: bool = False, semantic_threshold: float = 0.94) -> Dict[str, Dict[str, int]]:
+    """Generate comparison tables for all ontologies in the config. Returns match counts."""
     onto_list = config_data.get("onto_list", [])
     path_patterns = config_data.get("path_patterns", {})
+    match_counts = {}
     
     for onto in onto_list:
         onto_id = onto if isinstance(onto, str) else onto.get("id", "")
@@ -352,12 +352,16 @@ def generate_comparison_tables_for_ontologies(config_data: dict, base_dir: Path,
             continue
         
         try:
-            generate_comparison_table(gt_file, pred_file, output_dir / f"triple_comparison_{onto_id}.csv",
-                                     output_dir / f"triple_comparison_{onto_id}.html", max_rows, use_semantic, semantic_threshold)
+            counts = generate_comparison_table(gt_file, pred_file, 
+                                             output_dir / f"triple_comparison_{onto_id}.csv",
+                                             max_rows, use_semantic, semantic_threshold)
+            match_counts[onto_id] = counts
         except Exception as e:
             print(f"   ⚠️  Error for {onto_id}: {e}")
             import traceback
             traceback.print_exc()
+    
+    return match_counts
 
 
 def main():
@@ -408,6 +412,12 @@ def main():
     print("="*80)
     print()
     
+    # Create output directories if they don't exist
+    if use_eval_folder:
+        (EVAL_FOLDER / "eval_metrics").mkdir(parents=True, exist_ok=True)
+    else:
+        (SCRIPT_DIR / "nef_text2kg_results" / "eval_metrics").mkdir(parents=True, exist_ok=True)
+    
     # Change to evaluation directory and run
     try:
         os.chdir(EVAL_DIR)
@@ -444,10 +454,19 @@ def main():
         with open(temp_config_path if use_eval_folder else CONFIG_FILE, 'r') as f:
             config_data = json.load(f)
         
-        generate_comparison_tables_for_ontologies(
-            config_data, SCRIPT_DIR, use_eval_folder, max_rows=100,
+        match_counts = generate_comparison_tables_for_ontologies(
+            config_data, SCRIPT_DIR, use_eval_folder, max_rows=None,
             use_semantic=use_semantic, semantic_threshold=0.94
         )
+        
+        # Update avg_eval_results.jsonl with match counts
+        if use_eval_folder:
+            avg_eval_file = EVAL_FOLDER / "eval_metrics" / "avg_eval_results.jsonl"
+        else:
+            avg_eval_file = SCRIPT_DIR / "nef_text2kg_results" / "eval_metrics" / "avg_eval_results.jsonl"
+        
+        if avg_eval_file.exists() and match_counts:
+            update_avg_eval_with_match_counts(avg_eval_file, match_counts)
         
         print("="*80)
         print("✅ Comparison tables generated successfully!")
