@@ -18,6 +18,16 @@ import tempfile
 from pathlib import Path
 from typing import List, Dict, Tuple, Optional
 
+# Optional semantic matching imports
+try:
+    from google import genai
+    from google.genai import types
+    import numpy as np
+    from sklearn.metrics.pairwise import cosine_similarity
+    SEMANTIC_AVAILABLE = True
+except ImportError:
+    SEMANTIC_AVAILABLE = False
+
 # Paths
 SCRIPT_DIR = Path(__file__).parent
 TEXT2KG_ROOT = SCRIPT_DIR / "Text2KGBench" / "Text2KGBench-main"
@@ -101,156 +111,189 @@ def load_triples_from_jsonl(file_path: Path) -> Dict[str, List[Tuple[str, str, s
     with open(file_path, 'r', encoding='utf-8') as f:
         for line in f:
             data = json.loads(line.strip())
+            if "triples" not in data:
+                continue
             sent_id = data.get("id", "")
-            
-            # Handle different formats
-            if "triples" in data:
-                triples = data["triples"]
-                formatted_triples = []
-                for t in triples:
-                    if isinstance(t, list) and len(t) == 3:
-                        # Format: ["subject", "predicate", "object"]
-                        formatted_triples.append((t[0], t[1], t[2]))
-                    elif isinstance(t, dict):
-                        # Format: {"sub": "...", "rel": "...", "obj": "..."}
-                        formatted_triples.append((t.get("sub", ""), t.get("rel", ""), t.get("obj", "")))
-                triples_dict[sent_id] = formatted_triples
+            triples = data["triples"]
+            formatted = []
+            for t in triples:
+                if isinstance(t, list) and len(t) == 3:
+                    formatted.append((t[0], t[1], t[2]))
+                elif isinstance(t, dict):
+                    formatted.append((t.get("sub", ""), t.get("rel", ""), t.get("obj", "")))
+            if formatted:
+                triples_dict[sent_id] = formatted
     return triples_dict
 
 
+def compute_triple_embeddings(triple_strings: List[str]) -> Dict[str, np.ndarray]:
+    """Embed all triple strings using Gemini (adapted from provided code)."""
+    if not SEMANTIC_AVAILABLE or not triple_strings:
+        return {}
+    try:
+        client = genai.Client()
+        embeddings = {}
+        print(f"   🔍 Computing embeddings for {len(triple_strings)} triples...")
+        for i, triple in enumerate(triple_strings):
+            if (i + 1) % 20 == 0:
+                print(f"      Embedded {i+1}/{len(triple_strings)}...")
+            resp = client.models.embed_content(
+                model="models/embedding-001",
+                contents=triple,
+                config=types.EmbedContentConfig(task_type="SEMANTIC_SIMILARITY")
+            )
+            emb = resp.embedding.values if hasattr(resp, 'embedding') else resp.embeddings[0].values
+            embeddings[triple] = np.array(emb)
+        return embeddings
+    except Exception as e:
+        print(f"   ⚠️  Error computing embeddings: {e}")
+        return {}
+
+
+def find_semantic_match(triple_str: str, candidates: List[str], embeddings: Dict[str, np.ndarray], 
+                       threshold: float = 0.94) -> Tuple[Optional[str], float]:
+    """Find semantically similar match (adapted from provided code)."""
+    if triple_str not in embeddings:
+        return None, 0.0
+    best_match, best_sim = None, 0.0
+    for candidate in candidates:
+        if candidate not in embeddings:
+            continue
+        sim = float(cosine_similarity([embeddings[triple_str]], [embeddings[candidate]])[0][0])
+        if sim >= threshold and sim > best_sim:
+            best_match, best_sim = candidate, sim
+    return best_match, best_sim
+
+
 def generate_comparison_table(
-    gt_file: Path,
-    pred_file: Path,
-    output_csv: Path,
-    output_html: Path,
-    max_rows: int = 100
+    gt_file: Path, pred_file: Path, output_csv: Path, output_html: Path,
+    max_rows: int = 100, use_semantic: bool = False, semantic_threshold: float = 0.94
 ):
-    """Generate side-by-side comparison table (CSV and HTML)."""
-    
+    """Generate side-by-side comparison table (CSV and HTML) with optional semantic matching."""
     print(f"\n📊 Generating comparison table...")
-    print(f"   Loading ground truth from: {gt_file}")
     gt_triples = load_triples_from_jsonl(gt_file)
-    
-    print(f"   Loading predictions from: {pred_file}")
     pred_triples = load_triples_from_jsonl(pred_file)
-    
-    # Collect all sentence IDs
     all_sent_ids = sorted(set(list(gt_triples.keys()) + list(pred_triples.keys())))
     
-    # Prepare comparison data
-    comparison_rows = []
-    total_exact_matches = 0
-    total_mismatches = 0
+    # Collect all unique triple strings for semantic matching
+    all_triple_strings = set()
+    if use_semantic:
+        for sent_id in all_sent_ids:
+            for t in gt_triples.get(sent_id, []):
+                all_triple_strings.add(format_triple(*t))
+            for t in pred_triples.get(sent_id, []):
+                all_triple_strings.add(format_triple(*t))
+        embeddings = compute_triple_embeddings(list(all_triple_strings))
+    else:
+        embeddings = {}
     
+    comparison_rows = []
+    total_exact, total_semantic, total_mismatch = 0, 0, 0
     row_count = 0
+    
     for sent_id in all_sent_ids:
         if row_count >= max_rows:
             break
-        
         gt_list = gt_triples.get(sent_id, [])
         pred_list = pred_triples.get(sent_id, [])
+        gt_norm = {normalize_triple(*t): t for t in gt_list}
+        pred_norm = {normalize_triple(*t): t for t in pred_list}
+        exact = set(gt_norm.keys()) & set(pred_norm.keys())
+        gt_unmatched = set(gt_norm.keys()) - exact
+        pred_unmatched = set(pred_norm.keys()) - exact
         
-        # Normalize for matching
-        gt_normalized = {normalize_triple(*t): t for t in gt_list}
-        pred_normalized = {normalize_triple(*t): t for t in pred_list}
-        
-        # Find exact matches
-        exact_matches = set(gt_normalized.keys()) & set(pred_normalized.keys())
-        
-        # Find unmatched
-        gt_unmatched = set(gt_normalized.keys()) - exact_matches
-        pred_unmatched = set(pred_normalized.keys()) - exact_matches
+        # Semantic matching for unmatched triples
+        semantic_matches = {}
+        if use_semantic and embeddings:
+            for gt_n in gt_unmatched:
+                gt_str = format_triple(*gt_norm[gt_n])
+                candidates = [format_triple(*pred_norm[p]) for p in pred_unmatched]
+                match, sim = find_semantic_match(gt_str, candidates, embeddings, semantic_threshold)
+                if match:
+                    for p_n in pred_unmatched:
+                        if format_triple(*pred_norm[p_n]) == match:
+                            semantic_matches[gt_n] = (p_n, sim)
+                            break
         
         # Add exact matches
-        for norm_key in exact_matches:
-            gt_t = gt_normalized[norm_key]
-            pred_t = pred_normalized[norm_key]
-            comparison_rows.append({
-                "sent_id": sent_id,
-                "expected": format_triple(*gt_t),
-                "predicted": format_triple(*pred_t),
-                "match_type": "EXACT",
-                "similarity": "1.00",
-                "expected_sub": strip_quotes(gt_t[0]),
-                "expected_rel": strip_quotes(gt_t[1]),
-                "expected_obj": strip_quotes(gt_t[2]),
-                "predicted_sub": strip_quotes(pred_t[0]),
-                "predicted_rel": strip_quotes(pred_t[1]),
-                "predicted_obj": strip_quotes(pred_t[2]),
-            })
-            total_exact_matches += 1
-            row_count += 1
+        for norm_key in exact:
             if row_count >= max_rows:
                 break
+            gt_t, pred_t = gt_norm[norm_key], pred_norm[norm_key]
+            comparison_rows.append(_make_row(sent_id, gt_t, pred_t, "EXACT", "1.00"))
+            total_exact += 1
+            row_count += 1
+        
+        # Add semantic matches
+        for gt_n, (pred_n, sim) in semantic_matches.items():
+            if row_count >= max_rows:
+                break
+            comparison_rows.append(_make_row(sent_id, gt_norm[gt_n], pred_norm[pred_n], "SEMANTIC", f"{sim:.2f}"))
+            total_semantic += 1
+            row_count += 1
+            gt_unmatched.discard(gt_n)
+            pred_unmatched.discard(pred_n)
         
         # Add unmatched expected (false negatives)
-        for gt_norm in gt_unmatched:
+        for gt_n in gt_unmatched:
             if row_count >= max_rows:
                 break
-            gt_t = gt_normalized[gt_norm]
-            comparison_rows.append({
-                "sent_id": sent_id,
-                "expected": format_triple(*gt_t),
-                "predicted": "",
-                "match_type": "MISSING",
-                "similarity": "",
-                "expected_sub": strip_quotes(gt_t[0]),
-                "expected_rel": strip_quotes(gt_t[1]),
-                "expected_obj": strip_quotes(gt_t[2]),
-                "predicted_sub": "",
-                "predicted_rel": "",
-                "predicted_obj": "",
-            })
-            total_mismatches += 1
+            comparison_rows.append(_make_row(sent_id, gt_norm[gt_n], None, "MISSING", ""))
+            total_mismatch += 1
             row_count += 1
         
         # Add unmatched predicted (false positives)
-        for pred_norm in pred_unmatched:
+        for pred_n in pred_unmatched:
             if row_count >= max_rows:
                 break
-            pred_t = pred_normalized[pred_norm]
-            comparison_rows.append({
-                "sent_id": sent_id,
-                "expected": "",
-                "predicted": format_triple(*pred_t),
-                "match_type": "EXTRA",
-                "similarity": "",
-                "expected_sub": "",
-                "expected_rel": "",
-                "expected_obj": "",
-                "predicted_sub": strip_quotes(pred_t[0]),
-                "predicted_rel": strip_quotes(pred_t[1]),
-                "predicted_obj": strip_quotes(pred_t[2]),
-            })
-            total_mismatches += 1
+            comparison_rows.append(_make_row(sent_id, None, pred_norm[pred_n], "EXTRA", ""))
+            total_mismatch += 1
             row_count += 1
     
-    # Write CSV
-    print(f"   Writing CSV to: {output_csv}")
+    # Write files
     output_csv.parent.mkdir(parents=True, exist_ok=True)
-    with open(output_csv, 'w', newline='', encoding='utf-8') as f:
-        fieldnames = [
-            "sent_id", "match_type", "similarity",
-            "expected", "expected_sub", "expected_rel", "expected_obj",
-            "predicted", "predicted_sub", "predicted_rel", "predicted_obj"
-        ]
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        writer.writeheader()
-        writer.writerows(comparison_rows)
-    
-    # Write HTML
-    print(f"   Writing HTML to: {output_html}")
     output_html.parent.mkdir(parents=True, exist_ok=True)
-    html_content = generate_html_table(comparison_rows, total_exact_matches, total_mismatches)
-    with open(output_html, 'w', encoding='utf-8') as f:
-        f.write(html_content)
     
-    print(f"   ✅ Comparison table generated: {total_exact_matches} exact matches, {total_mismatches} mismatches")
+    fieldnames = ["sent_id", "match_type", "similarity", "expected", "expected_sub", "expected_rel", 
+                  "expected_obj", "predicted", "predicted_sub", "predicted_rel", "predicted_obj"]
+    with open(output_csv, 'w', newline='', encoding='utf-8') as f:
+        csv.DictWriter(f, fieldnames=fieldnames).writeheader()
+        csv.DictWriter(f, fieldnames=fieldnames).writerows(comparison_rows)
+    
+    with open(output_html, 'w', encoding='utf-8') as f:
+        f.write(generate_html_table(comparison_rows, total_exact, total_semantic, total_mismatch))
+    
+    print(f"   ✅ Generated: {total_exact} exact, {total_semantic} semantic, {total_mismatch} mismatches")
 
 
-def generate_html_table(rows: List[Dict], exact: int, mismatch: int) -> str:
+def _make_row(sent_id: str, gt_t: Optional[Tuple], pred_t: Optional[Tuple], 
+              match_type: str, similarity: str) -> Dict:
+    """Helper to create a comparison row."""
+    row = {"sent_id": sent_id, "match_type": match_type, "similarity": similarity}
+    if gt_t:
+        row.update({
+            "expected": format_triple(*gt_t),
+            "expected_sub": strip_quotes(gt_t[0]),
+            "expected_rel": strip_quotes(gt_t[1]),
+            "expected_obj": strip_quotes(gt_t[2])
+        })
+    else:
+        row.update({"expected": "", "expected_sub": "", "expected_rel": "", "expected_obj": ""})
+    if pred_t:
+        row.update({
+            "predicted": format_triple(*pred_t),
+            "predicted_sub": strip_quotes(pred_t[0]),
+            "predicted_rel": strip_quotes(pred_t[1]),
+            "predicted_obj": strip_quotes(pred_t[2])
+        })
+    else:
+        row.update({"predicted": "", "predicted_sub": "", "predicted_rel": "", "predicted_obj": ""})
+    return row
+
+
+def generate_html_table(rows: List[Dict], exact: int, semantic: int, mismatch: int) -> str:
     """Generate HTML table with styling."""
-    html = f"""<!DOCTYPE html>
+    return f"""<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -262,8 +305,8 @@ def generate_html_table(rows: List[Dict], exact: int, mismatch: int) -> str:
         th {{ background-color: #4CAF50; color: white; }}
         tr:nth-child(even) {{ background-color: #f2f2f2; }}
         .EXACT {{ background-color: #d4edda; }}
-        .MISSING {{ background-color: #f8d7da; }}
-        .EXTRA {{ background-color: #f8d7da; }}
+        .SEMANTIC {{ background-color: #fff3cd; }}
+        .MISSING, .EXTRA {{ background-color: #f8d7da; }}
         .summary {{ margin: 20px 0; padding: 15px; background-color: #e7f3ff; border-radius: 5px; }}
     </style>
 </head>
@@ -272,82 +315,47 @@ def generate_html_table(rows: List[Dict], exact: int, mismatch: int) -> str:
     <div class="summary">
         <h2>Summary</h2>
         <p><strong>Exact Matches:</strong> {exact}</p>
+        <p><strong>Semantic Matches:</strong> {semantic}</p>
         <p><strong>Mismatches:</strong> {mismatch}</p>
         <p><strong>Total Rows:</strong> {len(rows)}</p>
     </div>
     <table>
-        <thead>
-            <tr>
-                <th>Sentence ID</th>
-                <th>Match Type</th>
-                <th>Similarity</th>
-                <th>Expected Triple</th>
-                <th>Predicted Triple</th>
-            </tr>
-        </thead>
+        <thead><tr><th>Sentence ID</th><th>Match Type</th><th>Similarity</th><th>Expected Triple</th><th>Predicted Triple</th></tr></thead>
         <tbody>
-"""
-    
-    for row in rows:
-        match_type = row["match_type"]
-        html += f"""
-            <tr class="{match_type}">
-                <td>{row['sent_id']}</td>
-                <td>{match_type}</td>
-                <td>{row['similarity']}</td>
-                <td>{row['expected'] or '(missing)'}</td>
-                <td>{row['predicted'] or '(missing)'}</td>
-            </tr>
-"""
-    
-    html += """
+{''.join(f'<tr class="{r["match_type"]}"><td>{r["sent_id"]}</td><td>{r["match_type"]}</td><td>{r["similarity"]}</td><td>{r["expected"] or "(missing)"}</td><td>{r["predicted"] or "(missing)"}</td></tr>' for r in rows)}
         </tbody>
     </table>
 </body>
-</html>
-"""
-    return html
+</html>"""
 
 
-def generate_comparison_tables_for_ontologies(config_data: dict, base_dir: Path, use_eval_folder: bool, max_rows: int = 100):
+def generate_comparison_tables_for_ontologies(config_data: dict, base_dir: Path, 
+                                             use_eval_folder: bool, max_rows: int = 100,
+                                             use_semantic: bool = False, semantic_threshold: float = 0.94):
     """Generate comparison tables for all ontologies in the config."""
     onto_list = config_data.get("onto_list", [])
     path_patterns = config_data.get("path_patterns", {})
     
     for onto in onto_list:
         onto_id = onto if isinstance(onto, str) else onto.get("id", "")
-        
-        # Determine file paths
         if use_eval_folder:
             gt_file = EVAL_FOLDER / f"ont_{onto_id}_ground_truth.jsonl"
             pred_file = EVAL_FOLDER / f"ont_{onto_id}_nef_responses.jsonl"
             output_dir = EVAL_FOLDER
         else:
-            # Paths in config are relative to EVAL_DIR
-            gt_pattern = path_patterns.get("gt", "").replace("$$onto$$", onto_id)
-            pred_pattern = path_patterns.get("sys", "").replace("$$onto$$", onto_id)
-            
-            # Resolve paths relative to EVAL_DIR
-            gt_file = (EVAL_DIR / gt_pattern).resolve()
-            pred_file = (EVAL_DIR / pred_pattern).resolve()
+            gt_file = (EVAL_DIR / path_patterns.get("gt", "").replace("$$onto$$", onto_id)).resolve()
+            pred_file = (EVAL_DIR / path_patterns.get("sys", "").replace("$$onto$$", onto_id)).resolve()
             output_dir = base_dir / "nef_text2kg_results"
         
-        # Check if files exist
-        if not gt_file.exists():
-            print(f"   ⚠️  Ground truth file not found: {gt_file}, skipping {onto_id}...")
+        if not gt_file.exists() or not pred_file.exists():
+            print(f"   ⚠️  Files not found for {onto_id}, skipping...")
             continue
-        if not pred_file.exists():
-            print(f"   ⚠️  Prediction file not found: {pred_file}, skipping {onto_id}...")
-            continue
-        
-        # Generate comparison table
-        output_csv = output_dir / f"triple_comparison_{onto_id}.csv"
-        output_html = output_dir / f"triple_comparison_{onto_id}.html"
         
         try:
-            generate_comparison_table(gt_file, pred_file, output_csv, output_html, max_rows)
+            generate_comparison_table(gt_file, pred_file, output_dir / f"triple_comparison_{onto_id}.csv",
+                                     output_dir / f"triple_comparison_{onto_id}.html", max_rows, use_semantic, semantic_threshold)
         except Exception as e:
-            print(f"   ⚠️  Error generating comparison table for {onto_id}: {e}")
+            print(f"   ⚠️  Error for {onto_id}: {e}")
             import traceback
             traceback.print_exc()
 
@@ -425,20 +433,20 @@ def main():
         print("📊 Generating Comparison Tables")
         print("="*80)
         
-        # Load config to get ontology list
-        if use_eval_folder:
-            with open(temp_config_path, 'r') as f:
-                config_data = json.load(f)
-        else:
-            with open(CONFIG_FILE, 'r') as f:
-                config_data = json.load(f)
+        use_semantic = os.getenv("USE_SEMANTIC_MATCHING", "false").lower() == "true"
+        if use_semantic and not SEMANTIC_AVAILABLE:
+            print("   ⚠️  Semantic matching requested but dependencies not available")
+            print("   Install: pip install google-genai numpy scikit-learn")
+            use_semantic = False
+        elif use_semantic:
+            print("   ✅ Semantic matching enabled (threshold: 0.94)")
         
-        # Generate comparison tables for each ontology
+        with open(temp_config_path if use_eval_folder else CONFIG_FILE, 'r') as f:
+            config_data = json.load(f)
+        
         generate_comparison_tables_for_ontologies(
-            config_data, 
-            SCRIPT_DIR, 
-            use_eval_folder,
-            max_rows=100
+            config_data, SCRIPT_DIR, use_eval_folder, max_rows=100,
+            use_semantic=use_semantic, semantic_threshold=0.94
         )
         
         print("="*80)
