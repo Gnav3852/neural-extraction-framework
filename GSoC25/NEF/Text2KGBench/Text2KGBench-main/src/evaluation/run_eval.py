@@ -106,6 +106,22 @@ def normalize_triple(sub_label: str, rel_label: str, obj_label: str) -> str:
     :param obj_label: object string
     :return: a normalized triple as a single concatenated string
     """
+    # Strip quotes (handles both escaped quotes like \"text\" and regular quotes like "text")
+    def strip_quotes(s: str) -> str:
+        s = s.strip()
+        # Remove escaped quotes at start/end
+        if s.startswith('\\"') and s.endswith('\\"'):
+            s = s[2:-2]
+        # Remove regular quotes at start/end
+        if (s.startswith('"') and s.endswith('"')) or (s.startswith("'") and s.endswith("'")):
+            s = s[1:-1]
+        return s.strip()
+    
+    # Strip quotes from all components
+    sub_label = strip_quotes(sub_label)
+    rel_label = strip_quotes(rel_label)
+    obj_label = strip_quotes(obj_label)
+    
     # remove spaces and underscores and make lower case
     sub_label = re.sub(r"(_|\s+)", '', sub_label).lower()
     rel_label = re.sub(r"(_|\s+)", '', rel_label).lower()
@@ -122,6 +138,14 @@ def clean_entity_string(ps, entity: str) -> str:
     :param entity: subject or object string
     :return: the cleaned and normalized string
     """
+    # Strip quotes (handles both escaped quotes like \"text\" and regular quotes like "text")
+    entity = entity.strip()
+    if entity.startswith('\\"') and entity.endswith('\\"'):
+        entity = entity[2:-2]
+    if (entity.startswith('"') and entity.endswith('"')) or (entity.startswith("'") and entity.endswith("'")):
+        entity = entity[1:-1]
+    entity = entity.strip()
+    
     # stem every word for better matches
     stemmed_entity = "".join([ps.stem(word) for word in word_tokenize(entity)])
     # normalizing the string by removing white spaces, underscores and then converting to lower case
