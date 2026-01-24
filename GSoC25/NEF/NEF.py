@@ -4,6 +4,7 @@
 
 import os, sys, json, re, time, argparse, textwrap
 from typing import List, Tuple, Sequence, Dict, Any, Optional, Set
+from collections import OrderedDict
 
 import numpy as np
 from urllib.parse import quote
@@ -63,11 +64,16 @@ class RedisEntityLinking:
         password: Optional[str],
         connect_timeout: float = 2.0,
         verbose: bool = True,
+        cache_size: int = 10000,  # Max cache entries
     ):
         self.available = False
         self.redis_forms = None
         self.redis_redir = None
         self.verbose = verbose
+        self.cache_size = cache_size
+        # In-memory cache: {cache_key: List[Tuple[str, float]]}
+        # Using OrderedDict for LRU eviction
+        self._lookup_cache: OrderedDict[str, List[Tuple[str, float]]] = OrderedDict()
         try:
             import redis  # local import so script still loads without it
             # Set timeouts to prevent hanging
@@ -126,10 +132,24 @@ class RedisEntityLinking:
         Strict Redis grounding (no synonyms). Tries simple, non-semantic variants:
         exact, lower, Title Case, capitalize, underscores, etc.
         Aggregates counts across variants and follows redirects in db1.
-        Optimized with early exit and timeout protection.
+        Optimized with early exit, timeout protection, and in-memory caching.
         """
         if not self.available or not surface_form.strip():
             return []
+
+        # Check cache first (fast path)
+        cache_key = f"{surface_form}|{top_k}|{thr}"
+        if cache_key in self._lookup_cache:
+            # Move to end (most recently used) for LRU
+            result = self._lookup_cache.pop(cache_key)
+            self._lookup_cache[cache_key] = result
+            if self.verbose:
+                _safe_print(f"[CACHE HIT] '{surface_form}'")
+            return result
+
+        # Cache miss - proceed with Redis lookup
+        if self.verbose:
+            _safe_print(f"[CACHE MISS] '{surface_form}' - querying Redis...")
 
         # Remove leading articles (the, a, an) for better matching
         def remove_articles(text: str) -> str:
@@ -204,12 +224,20 @@ class RedisEntityLinking:
                 continue
 
         if not counts:
-            return []
+            result = []
+        else:
+            max_support = max(counts.values()) or 1
+            items = [(uri, c / max_support) for uri, c in counts.items() if (c / max_support) >= thr]
+            items.sort(key=lambda x: x[1], reverse=True)
+            result = items[:top_k]
 
-        max_support = max(counts.values()) or 1
-        items = [(uri, c / max_support) for uri, c in counts.items() if (c / max_support) >= thr]
-        items.sort(key=lambda x: x[1], reverse=True)
-        return items[:top_k]
+        # Store in cache (with LRU eviction if needed)
+        if len(self._lookup_cache) >= self.cache_size:
+            # Remove least recently used (first item)
+            self._lookup_cache.popitem(last=False)
+        self._lookup_cache[cache_key] = result
+
+        return result
 
 # =============== Predicate Retriever (precomputed) ===============
 
