@@ -131,16 +131,35 @@ class RedisEntityLinking:
         if not self.available or not surface_form.strip():
             return []
 
-        # Generate more comprehensive case variants
+        # Remove leading articles (the, a, an) for better matching
+        def remove_articles(text: str) -> str:
+            text = text.strip()
+            articles = ["the ", "a ", "an "]
+            for article in articles:
+                if text.lower().startswith(article):
+                    text = text[len(article):].strip()
+                    break
+            return text
+
+        base_form = remove_articles(surface_form)
+        
+        # Generate more comprehensive case variants (with and without articles)
         variants = [
-            surface_form,                                    # Original
-            surface_form.lower(),                            # lowercase
-            surface_form.title(),                            # Title Case
-            surface_form.capitalize(),                       # First letter capitalized (e.g., "India")
-            surface_form.upper(),                           # UPPERCASE (for acronyms)
-            surface_form.replace(" ", "_"),                 # spaces to underscores
-            surface_form.title().replace(" ", "_"),         # Title Case with underscores
-            surface_form.capitalize().replace(" ", "_"),    # Capitalize with underscores
+            surface_form,                                    # Original (with article)
+            base_form,                                       # Without article
+            surface_form.lower(),                            # lowercase (with article)
+            base_form.lower(),                               # lowercase (without article)
+            surface_form.title(),                            # Title Case (with article)
+            base_form.title(),                               # Title Case (without article)
+            surface_form.capitalize(),                       # First letter capitalized (with article)
+            base_form.capitalize(),                         # First letter capitalized (without article)
+            surface_form.upper(),                           # UPPERCASE (for acronyms, with article)
+            base_form.upper(),                              # UPPERCASE (for acronyms, without article)
+            surface_form.replace(" ", "_"),                 # spaces to underscores (with article)
+            base_form.replace(" ", "_"),                    # spaces to underscores (without article)
+            surface_form.title().replace(" ", "_"),         # Title Case with underscores (with article)
+            base_form.title().replace(" ", "_"),           # Title Case with underscores (without article)
+            base_form.capitalize().replace(" ", "_"),      # Capitalize with underscores (without article)
         ]
         
         # Remove duplicates while preserving order
