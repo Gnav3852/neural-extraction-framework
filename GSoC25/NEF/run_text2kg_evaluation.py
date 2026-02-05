@@ -520,16 +520,20 @@ def main():
         elif use_semantic:
             print("   ✅ Semantic matching enabled (threshold: 0.94)")
         
-        with open(temp_config_path if use_eval_folder else CONFIG_FILE, 'r') as f:
+        config_path = temp_config_path if (use_eval_folder or custom_results_dir) else CONFIG_FILE
+        with open(config_path, 'r') as f:
             config_data = json.load(f)
         
         match_counts = generate_comparison_tables_for_ontologies(
             config_data, SCRIPT_DIR, use_eval_folder, max_rows=None,
-            use_semantic=use_semantic, semantic_threshold=0.94
+            use_semantic=use_semantic, semantic_threshold=0.94,
+            custom_results_dir=custom_results_dir
         )
         
         # Update avg_eval_results.jsonl with match counts
-        if use_eval_folder:
+        if custom_results_dir:
+            avg_eval_file = custom_results_dir / "eval_metrics" / "avg_eval_results.jsonl"
+        elif use_eval_folder:
             avg_eval_file = EVAL_FOLDER / "eval_metrics" / "avg_eval_results.jsonl"
         else:
             avg_eval_file = SCRIPT_DIR / "nef_text2kg_results" / "eval_metrics" / "avg_eval_results.jsonl"

@@ -1,12 +1,3 @@
-{"id": "ont_11_meanoftransportation_test_6", "sent": "AIDA Cruises (located in Germany) is the owner of the AIDAluna which is powered by Caterpillar Inc.", "triples": []}
-{"id": "ont_11_meanoftransportation_test_7", "sent": "AIDA Cruises, based in Germany, operates the ship AIDAstella which was built by Meyer Werft.", "triples": []}
-{"id": "ont_11_meanoftransportation_test_8", "sent": "Rostock based AIDA Cruises owns the AIDAluna which has a Caterpillar Inc engine.", "triples": []}
-{"id": "ont_11_meanoftransportation_test_9", "sent": "The AIDAstella, operated by Rostock's AIDA Cruises, is owned by Costa Crociere.", "triples": []}
-{"id": "ont_11_meanoftransportation_test_10", "sent": "The AIDAluna is 252 metres long and its christening date was 4 April 2009. AIDAluna service was started on the 22nd of March, 2009.", "triples": []}
-{"id": "ont_11_meanoftransportation_test_11", "sent": "The AIDAluna service began March 22, 2009. The AIDAluna is powered by Caterpillar Inc and has a length of 252000.0 millimetres.", "triples": []}
-{"id": "ont_11_meanoftransportation_test_12", "sent": "The AIDAluna, christened on April 4, 2004, is 252000.0 millimetres long and powered by the Caterpillar Inc. engine.", "triples": []}
-{"id": "ont_11_meanoftransportation_test_13", "sent": "The AIDAluna, with a 252000.0 mm length, was christened 4/4/2009 and had its maiden voyage 3/22/2009.", "triples": []}
-{"id": "ont_11_meanoftransportation_test_14", "sent": "The AIDAluna had its maiden voyage on the 22nd of March 2009. It is powered by a Caterpillar Inc. engine and is 252000.00 mm in length.", "triples": []}
 {"id": "ont_11_meanoftransportation_test_15", "sent": "With its premier trip on March 22, 2009, the AIDAluna is 252000.0 millimetres long and has a ship beam of 32.2 long.", "triples": []}
 {"id": "ont_11_meanoftransportation_test_16", "sent": "AIDA Cruises is the owner of the 252 metre long, AIDAluna, which was built by Meyer Werft.", "triples": []}
 {"id": "ont_11_meanoftransportation_test_17", "sent": "The AIDAluna has a length of 252000.0 millimetres and a its ship beam length is 32.2. AIDAluna service was started on the 22nd of March, 2009.", "triples": []}
@@ -14,30 +5,12 @@
 {"id": "ont_11_meanoftransportation_test_19", "sent": "The AIDAstella, christened 3/16/2013, began service 3/17/2013 and is 253260.0 mm long.", "triples": []}
 {"id": "ont_11_meanoftransportation_test_20", "sent": "The Aidastella is a 253.26m long Sphinx class cruise ship. She was named on 16th March 2013.", "triples": []}
 {"id": "ont_11_meanoftransportation_test_21", "sent": "Meyer Werft built the AIDAstella which is 253.26m long with a beam of 32.2m.", "triples": []}
-{"id": "ont_11_meanoftransportation_test_22", "sent": "The AIDAstella which is owned by Costa Crociere has a beam of 32.2 metres and is 253260.0 millimetres in length.", "triples": []}
-{"id": "ont_11_meanoftransportation_test_23", "sent": "The AIDAstella was christened on 16th of March 2013, had its maiden voyage on March 17 of that same year and is 253260.0 millimetres long.", "triples": []}
-{"id": "ont_11_meanoftransportation_test_24", "sent": "The AIDAstella is 253260.0mm long with a 32.2 length ship beam. Its maiden voyage was 3/17/2013.", "triples": []}
-{"id": "ont_11_meanoftransportation_test_25", "sent": "AIDAstella, which was built by Meyer Werft and is 253260.0 millimetres in length is operated by AIDA Cruises.", "triples": []}
-{"id": "ont_11_meanoftransportation_test_26", "sent": "The ship AIDAstella is operated by AIDA Cruises and was built by Meyer Werft located in Papenburg.", "triples": []}
-{"id": "ont_11_meanoftransportation_test_27", "sent": "The AIDAstella is operated by AIDA Cruises and owned by Costa Crociere, based in Italy.", "triples": []}
-{"id": "ont_15_sportsteam_test_1", "sent": "1 FC Magdeburg has 27250 members and played in the 3 Liga League in the 2014 season.", "triples": []}
-{"id": "ont_15_sportsteam_test_2", "sent": "1 FC Magdeburg has 27250 members and are in the 3 Liga league. During the 2014-2015 they played in the Regionalliga.", "triples": []}
-{"id": "ont_15_sportsteam_test_3", "sent": "The manager of FC Magdeburg is Jens Härtel who used to play for Berliner AK 07 and currently plays for 1. FC Lokomotive Leipzig.", "triples": []}
-{"id": "ont_15_sportsteam_test_4", "sent": "The first club Jens Härtel played for was FC Lokomotive Leipzig. He also played for RB Leipzig and was the manager of 1 FC Magdeburg.", "triples": []}
-{"id": "ont_15_sportsteam_test_5", "sent": "The manager of FC Magdeburg is Jens Härtel who also plays for 1. FC Lokomotive Leipzig and SV Babelsberg 03.", "triples": []}
-{"id": "ont_15_sportsteam_test_6", "sent": "Jens Hartel, who plays for SV Germania Schoneiche, is part of 1. FC Union Berlin and has been the manager of 1 FC Magdeburg.", "triples": []}
 {"id": "ont_15_sportsteam_test_7", "sent": "The manager of FC Magdeburg is Jens Härtel who played for Berliner AK 07 and belongs to the club 1. FC Union Berlin.", "triples": []}
 {"id": "ont_15_sportsteam_test_8", "sent": "Jens Härtel (Berliner AK 07) played for FC Sachsen Leipzig, has been the manager of 1 FC Magdeburg.", "triples": []}
 {"id": "ont_15_sportsteam_test_9", "sent": "Jens Härtel is part of the SV Babelsberg 03 club. He previously managed 1 FC Magdeburg and played for Berliner AK 07.", "triples": []}
 {"id": "ont_15_sportsteam_test_10", "sent": "Jens Härtel was previously the manager of 1 FC Magdeburg. He is in the RB Leipzig club and is part of the club 1. FC Union Berlin.", "triples": []}
 {"id": "ont_15_sportsteam_test_11", "sent": "Jens Härtel has played for SV Babelsberg 03 and 1. FC Union Berlin. He is manager of 1 FC Magdeburg.", "triples": []}
 {"id": "ont_15_sportsteam_test_12", "sent": "Jens Härtel is part of the SV Babelsberg 03 club. He has also been manager of 1 FC Magdeburg and represented FC Sachsen Leipzig.", "triples": []}
-{"id": "ont_15_sportsteam_test_13", "sent": "Associazione Calcio Lumezzane SpA is abbreviated to A.C. Lumezzane, they have 4150 members and play in the Lega Pro league.", "triples": []}
-{"id": "ont_1_university_test_10", "sent": "The Acharya Institute of Technology is located in Soldevanahalli, Acharya Dr. Sarvapalli Radhakrishnan Road, Hessarghatta Main Road, Bangalore - 560090. It is affiliated with the Visvesvaraya Technological University.", "triples": []}
-{"id": "ont_1_university_test_11", "sent": "The Acharya Institute of Technology is located in Soldevanahalli, at the address Acharya Dr. Sarvapalli Radhakrishnan Road, Hessarghatta Main Road, Bangalore – 560090. Its director is Dr. G. P. Prabhukumar.", "triples": []}
-{"id": "ont_1_university_test_12", "sent": "The Acharya Institute of Technology was established at Bangalore in 2000. It has 700 postgraduate students.", "triples": []}
-{"id": "ont_1_university_test_13", "sent": "The Acharya Institute of Technology is located at Soldevanahalli, Acharya Dr. Sarvapalli Radhakrishnan Road, Hessarghatta Main Road, Bangalore, 560090, India. It is affiliated with the Visvesvaraya Technological University.", "triples": []}
-{"id": "ont_1_university_test_14", "sent": "The Acharya Institute of Technology is in Soldevanahalli, India its address is Acharya Dr. Sarvapalli Radhakrishnan Road, Hessarghatta Main Road, Bangalore – 560090. It has 700 postgraduate students.", "triples": []}
 {"id": "ont_1_university_test_15", "sent": "The Acharya Institute of Technology is located in Karnataka, India and it was established in 2000.", "triples": []}
 {"id": "ont_1_university_test_16", "sent": "The Acharya Institute of technology is located in India and the offered sport is tennis. The governing tennis body is the International Tennis Federation.", "triples": []}
 {"id": "ont_1_university_test_17", "sent": "The Acharya Institute of Technology is located in Bangalore. It was given the \"Technical Campus\" status by the All India Council for Technical Education, which is located in Mumbai.", "triples": [["All_India_Council_for_Technical_Education", "headquarter", "Mumbai"]]}
