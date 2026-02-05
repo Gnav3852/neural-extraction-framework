@@ -6,8 +6,10 @@ This script runs the Text2KGBench evaluation script with the NEF config.
 It should be run after benchmark_nef_text2kg.py has generated the results.
 
 Supports easy testing with files in the Eval/ folder.
+Use --results-dir to evaluate files in another directory (e.g. GSoC25/resNEF) with benchmark ground truth.
 """
 
+import argparse
 import os
 import sys
 import subprocess
@@ -72,6 +74,36 @@ def create_eval_config():
     json.dump(config, temp_config, indent=2)
     temp_config.close()
     
+    return temp_config.name
+
+
+def create_custom_results_config(results_dir: Path) -> Optional[str]:
+    """Create a temporary config for a custom results directory (predictions only; uses benchmark ground truth)."""
+    results_dir = results_dir.resolve()
+    eval_files = list(results_dir.glob("ont_*_nef_responses.jsonl"))
+    if not eval_files:
+        return None
+    onto_list = []
+    for file in eval_files:
+        parts = file.stem.split("_")
+        if len(parts) >= 3 and parts[0] == "ont":
+            onto_id = "_".join(parts[1:-2])
+            onto_list.append(onto_id)
+    if not onto_list:
+        return None
+    config = {
+        "onto_list": sorted(set(onto_list)),
+        "path_patterns": {
+            "sys": os.path.relpath(results_dir / "ont_$$onto$$_nef_responses.jsonl", EVAL_DIR),
+            "gt": "../../data/dbpedia_webnlg/ground_truth/ont_$$onto$$_ground_truth.jsonl",
+            "onto": "../../data/dbpedia_webnlg/ontologies/$$onto$$_ontology.json",
+            "output": os.path.relpath(results_dir / "eval_metrics" / "ont_$$onto$$_eval_results.jsonl", EVAL_DIR)
+        },
+        "avg_out_file": os.path.relpath(results_dir / "eval_metrics" / "avg_eval_results.jsonl", EVAL_DIR)
+    }
+    temp_config = tempfile.NamedTemporaryFile(mode='w', suffix='.json', delete=False)
+    json.dump(config, temp_config, indent=2)
+    temp_config.close()
     return temp_config.name
 
 
@@ -328,9 +360,10 @@ def update_avg_eval_with_match_counts(avg_eval_file: Path, match_counts: Dict[st
         print(f"   ⚠️  No matching ontology entries found in {avg_eval_file}")
 
 
-def generate_comparison_tables_for_ontologies(config_data: dict, base_dir: Path, 
+def generate_comparison_tables_for_ontologies(config_data: dict, base_dir: Path,
                                              use_eval_folder: bool, max_rows: Optional[int] = None,
-                                             use_semantic: bool = False, semantic_threshold: float = 0.94) -> Dict[str, Dict[str, int]]:
+                                             use_semantic: bool = False, semantic_threshold: float = 0.94,
+                                             custom_results_dir: Optional[Path] = None) -> Dict[str, Dict[str, int]]:
     """Generate comparison tables for all ontologies in the config. Returns match counts."""
     onto_list = config_data.get("onto_list", [])
     path_patterns = config_data.get("path_patterns", {})
@@ -338,7 +371,11 @@ def generate_comparison_tables_for_ontologies(config_data: dict, base_dir: Path,
     
     for onto in onto_list:
         onto_id = onto if isinstance(onto, str) else onto.get("id", "")
-        if use_eval_folder:
+        if custom_results_dir is not None:
+            gt_file = (EVAL_DIR / path_patterns.get("gt", "").replace("$$onto$$", onto_id)).resolve()
+            pred_file = (EVAL_DIR / path_patterns.get("sys", "").replace("$$onto$$", onto_id)).resolve()
+            output_dir = custom_results_dir.resolve()
+        elif use_eval_folder:
             gt_file = EVAL_FOLDER / f"ont_{onto_id}_ground_truth.jsonl"
             pred_file = EVAL_FOLDER / f"ont_{onto_id}_nef_responses.jsonl"
             output_dir = EVAL_FOLDER
@@ -366,57 +403,87 @@ def generate_comparison_tables_for_ontologies(config_data: dict, base_dir: Path,
 
 def main():
     """Run the Text2KGBench evaluation."""
-    
+    parser = argparse.ArgumentParser(
+        description="Run Text2KGBench evaluation on NEF results.",
+        epilog="Example: python run_text2kg_evaluation.py --results-dir ../resNEF"
+    )
+    parser.add_argument(
+        "--results-dir",
+        type=str,
+        default=None,
+        metavar="PATH",
+        help="Directory containing ont_*_nef_responses.jsonl (uses benchmark ground truth; writes eval_metrics here)"
+    )
+    args = parser.parse_args()
+    custom_results_dir = Path(args.results_dir).resolve() if args.results_dir else None
+
     # Check if evaluation directory exists
     if not EVAL_DIR.exists():
         print(f"❌ ERROR: Text2KGBench evaluation directory not found: {EVAL_DIR}")
         print(f"   Please ensure Text2KGBench is located at: {TEXT2KG_ROOT}")
         return 1
-    
+
     # Check if run_eval.py exists
     eval_script = EVAL_DIR / "run_eval.py"
     if not eval_script.exists():
         print(f"❌ ERROR: Evaluation script not found: {eval_script}")
         return 1
-    
-    # Check if Eval folder exists and has files (for easy testing)
-    use_eval_folder = EVAL_FOLDER.exists() and any(EVAL_FOLDER.glob("ont_*_nef_responses.jsonl"))
-    
-    if use_eval_folder:
+
+    if custom_results_dir:
+        if not custom_results_dir.is_dir():
+            print(f"❌ ERROR: --results-dir is not a directory: {custom_results_dir}")
+            return 1
         print("="*80)
-        print("📁 Using Eval folder for easy testing")
+        print(f"📁 Using results directory: {custom_results_dir}")
         print("="*80)
-        temp_config_path = create_eval_config()
+        temp_config_path = create_custom_results_config(custom_results_dir)
         if not temp_config_path:
-            print(f"❌ ERROR: Could not create config from Eval folder")
+            print(f"❌ ERROR: No ont_*_nef_responses.jsonl found in {custom_results_dir}")
             return 1
         config_rel = os.path.relpath(temp_config_path, EVAL_DIR)
-        print(f"Created temporary config: {temp_config_path}")
+        use_eval_folder = False
+        (custom_results_dir / "eval_metrics").mkdir(parents=True, exist_ok=True)
     else:
-        # Use regular config file
-        if not CONFIG_FILE.exists():
-            print(f"❌ ERROR: Config file not found: {CONFIG_FILE}")
-            print(f"   Please ensure nef_text2kg_eval_config.json exists in: {SCRIPT_DIR}")
-            return 1
-        config_rel = os.path.relpath(CONFIG_FILE, EVAL_DIR)
-    
+        # Check if Eval folder exists and has files (for easy testing)
+        use_eval_folder = EVAL_FOLDER.exists() and any(EVAL_FOLDER.glob("ont_*_nef_responses.jsonl"))
+
+        if use_eval_folder:
+            print("="*80)
+            print("📁 Using Eval folder for easy testing")
+            print("="*80)
+            temp_config_path = create_eval_config()
+            if not temp_config_path:
+                print(f"❌ ERROR: Could not create config from Eval folder")
+                return 1
+            config_rel = os.path.relpath(temp_config_path, EVAL_DIR)
+            print(f"Created temporary config: {temp_config_path}")
+        else:
+            # Use regular config file
+            if not CONFIG_FILE.exists():
+                print(f"❌ ERROR: Config file not found: {CONFIG_FILE}")
+                print(f"   Please ensure nef_text2kg_eval_config.json exists in: {SCRIPT_DIR}")
+                return 1
+            config_rel = os.path.relpath(CONFIG_FILE, EVAL_DIR)
+
+        # Create output directories if they don't exist
+        if use_eval_folder:
+            (EVAL_FOLDER / "eval_metrics").mkdir(parents=True, exist_ok=True)
+        else:
+            (SCRIPT_DIR / "nef_text2kg_results" / "eval_metrics").mkdir(parents=True, exist_ok=True)
+
     print("="*80)
     print("🔍 Running Text2KGBench Evaluation on NEF Results")
     print("="*80)
     print(f"Evaluation directory: {EVAL_DIR}")
-    if use_eval_folder:
+    if custom_results_dir:
+        print(f"Config: Temporary config (from --results-dir)")
+    elif use_eval_folder:
         print(f"Config: Temporary config (from Eval folder)")
     else:
         print(f"Config file: {CONFIG_FILE}")
     print(f"Config (relative): {config_rel}")
     print("="*80)
     print()
-    
-    # Create output directories if they don't exist
-    if use_eval_folder:
-        (EVAL_FOLDER / "eval_metrics").mkdir(parents=True, exist_ok=True)
-    else:
-        (SCRIPT_DIR / "nef_text2kg_results" / "eval_metrics").mkdir(parents=True, exist_ok=True)
     
     # Change to evaluation directory and run
     try:
@@ -431,7 +498,9 @@ def main():
         print("="*80)
         print("✅ Evaluation completed successfully!")
         print("="*80)
-        if use_eval_folder:
+        if custom_results_dir:
+            print(f"Results saved to: {custom_results_dir / 'eval_metrics'}")
+        elif use_eval_folder:
             print(f"Results saved to: {SCRIPT_DIR / 'Eval' / 'eval_metrics'}")
         else:
             print(f"Results saved to: {SCRIPT_DIR / 'nef_text2kg_results' / 'eval_metrics'}")
@@ -473,7 +542,7 @@ def main():
         print("="*80)
         
         # Clean up temporary config if used
-        if use_eval_folder and 'temp_config_path' in locals():
+        if (use_eval_folder or custom_results_dir) and 'temp_config_path' in locals():
             try:
                 os.unlink(temp_config_path)
             except Exception:
