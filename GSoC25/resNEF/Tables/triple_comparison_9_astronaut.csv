@@ -1,0 +1,317 @@
+sent_id,match_type,similarity,expected,expected_sub,expected_rel,expected_obj,predicted,predicted_sub,predicted_rel,predicted_obj
+ont_9_astronaut_test_1,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_1,MISSING,,"(Alan_Shepard, dateOfRetirement, 1974-08-01)",Alan_Shepard,dateOfRetirement,1974-08-01,,,,
+ont_9_astronaut_test_1,MISSING,,"(Alan_Shepard, almaMater, NWC, M.A. 1957)",Alan_Shepard,almaMater,"NWC, M.A. 1957",,,,
+ont_9_astronaut_test_1,EXTRA,,,,,,"(Alan_Shepard, deathDate, 1974-08-01)",Alan_Shepard,deathDate,1974-08-01
+ont_9_astronaut_test_1,EXTRA,,,,,,"(Alan_Shepard, almaMater, NWC)",Alan_Shepard,almaMater,NWC
+ont_9_astronaut_test_10,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_10,MISSING,,"(Alan_Shepard, mission, Apollo_14)",Alan_Shepard,mission,Apollo_14,,,,
+ont_9_astronaut_test_10,MISSING,,"(Apollo_14, operator, NASA)",Apollo_14,operator,NASA,,,,
+ont_9_astronaut_test_11,EXACT,1.00,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California
+ont_9_astronaut_test_11,SEMANTIC,0.97,"(California, senators, Dianne_Feinstein)",California,senators,Dianne_Feinstein,"(California, representative, Dianne_Feinstein)",California,representative,Dianne_Feinstein
+ont_9_astronaut_test_11,MISSING,,"(California, gemstone, Benitoite)",California,gemstone,Benitoite,,,,
+ont_9_astronaut_test_12,EXACT,1.00,"(Elliot_See, birthPlace, Dallas)",Elliot_See,birthPlace,Dallas,"(Elliot_See, birthPlace, Dallas)",Elliot_See,birthPlace,Dallas
+ont_9_astronaut_test_12,MISSING,,"(Dallas, part, Collin_County,_Texas)",Dallas,part,"Collin_County,_Texas",,,,
+ont_9_astronaut_test_12,MISSING,,"(Dallas, partsType, List_of_counties_in_Texas)",Dallas,partsType,List_of_counties_in_Texas,,,,
+ont_9_astronaut_test_12,EXTRA,,,,,,"(Elliot_See, birthPlace, Texas_(steamboat))",Elliot_See,birthPlace,Texas_(steamboat)
+ont_9_astronaut_test_12,EXTRA,,,,,,"(Elliot_See, birthPlace, Collin_County,_Texas)",Elliot_See,birthPlace,"Collin_County,_Texas"
+ont_9_astronaut_test_13,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_13,SEMANTIC,0.99,"(Alan_Shepard, award, Distinguished_Service_Medal_(United_States_Navy))",Alan_Shepard,award,Distinguished_Service_Medal_(United_States_Navy),"(Alan_Shepard, award, Navy_Distinguished_Service_Medal)",Alan_Shepard,award,Navy_Distinguished_Service_Medal
+ont_9_astronaut_test_13,MISSING,,"(Distinguished_Service_Medal_(United_States_Navy), higher, Department_of_Commerce_Gold_Medal)",Distinguished_Service_Medal_(United_States_Navy),higher,Department_of_Commerce_Gold_Medal,,,,
+ont_9_astronaut_test_13,EXTRA,,,,,,"(Alan_Shepard, affiliation, United_States_Navy)",Alan_Shepard,affiliation,United_States_Navy
+ont_9_astronaut_test_14,EXACT,1.00,"(Elliot_See, deathDate, 1966-02-28)",Elliot_See,deathDate,1966-02-28,"(Elliot_See, deathDate, 1966-02-28)",Elliot_See,deathDate,1966-02-28
+ont_9_astronaut_test_14,EXACT,1.00,"(Elliot_See, deathPlace, St._Louis)",Elliot_See,deathPlace,St._Louis,"(Elliot_See, deathPlace, St._Louis)",Elliot_See,deathPlace,St._Louis
+ont_9_astronaut_test_14,MISSING,,"(Elliot_See, almaMater, University_of_Texas_at_Austin)",Elliot_See,almaMater,University_of_Texas_at_Austin,,,,
+ont_9_astronaut_test_15,EXACT,1.00,"(Elliot_See, occupation, Test_pilot)",Elliot_See,occupation,Test_pilot,"(Elliot_See, occupation, test pilot)",Elliot_See,occupation,test pilot
+ont_9_astronaut_test_15,MISSING,,"(Elliot_See, almaMater, University_of_Texas_at_Austin)",Elliot_See,almaMater,University_of_Texas_at_Austin,,,,
+ont_9_astronaut_test_15,MISSING,,"(Elliot_See, status, Deceased)",Elliot_See,status,Deceased,,,,
+ont_9_astronaut_test_16,MISSING,,"(Elliot_See, almaMater, University_of_Texas_at_Austin)",Elliot_See,almaMater,University_of_Texas_at_Austin,,,,
+ont_9_astronaut_test_16,MISSING,,"(University_of_Texas_at_Austin, president, Gregory_L._Fenves)",University_of_Texas_at_Austin,president,Gregory_L._Fenves,,,,
+ont_9_astronaut_test_16,MISSING,,"(University_of_Texas_at_Austin, affiliation, University_of_Texas_System)",University_of_Texas_at_Austin,affiliation,University_of_Texas_System,,,,
+ont_9_astronaut_test_17,MISSING,,"(Elliot_See, almaMater, University_of_Texas_at_Austin)",Elliot_See,almaMater,University_of_Texas_at_Austin,,,,
+ont_9_astronaut_test_17,MISSING,,"(University_of_Texas_at_Austin, competeIn, Big_12_Conference)",University_of_Texas_at_Austin,competeIn,Big_12_Conference,,,,
+ont_9_astronaut_test_17,MISSING,,"(University_of_Texas_at_Austin, affiliation, University_of_Texas_System)",University_of_Texas_at_Austin,affiliation,University_of_Texas_System,,,,
+ont_9_astronaut_test_18,EXACT,1.00,"(Elliot_See, birthPlace, Dallas)",Elliot_See,birthPlace,Dallas,"(Elliot_See, birthPlace, Dallas)",Elliot_See,birthPlace,Dallas
+ont_9_astronaut_test_18,MISSING,,"(Elliot_See, almaMater, University_of_Texas_at_Austin)",Elliot_See,almaMater,University_of_Texas_at_Austin,,,,
+ont_9_astronaut_test_18,MISSING,,"(University_of_Texas_at_Austin, mascot, Hook_'em_(mascot))",University_of_Texas_at_Austin,mascot,Hook_'em_(mascot),,,,
+ont_9_astronaut_test_19,EXACT,1.00,"(Elliot_See, birthPlace, Dallas)",Elliot_See,birthPlace,Dallas,"(Elliot_See, birthPlace, Dallas)",Elliot_See,birthPlace,Dallas
+ont_9_astronaut_test_19,EXACT,1.00,"(Elliot_See, occupation, Test_pilot)",Elliot_See,occupation,Test_pilot,"(Elliot_See, occupation, test pilot)",Elliot_See,occupation,test pilot
+ont_9_astronaut_test_19,MISSING,,"(Elliot_See, selectedByNasa, 1962)",Elliot_See,selectedByNasa,1962,,,,
+ont_9_astronaut_test_19,EXTRA,,,,,,"(Elliot_See, affiliation, NASA)",Elliot_See,affiliation,NASA
+ont_9_astronaut_test_2,EXACT,1.00,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California
+ont_9_astronaut_test_2,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_2,MISSING,,"(Alan_Shepard, almaMater, NWC, M.A. 1957)",Alan_Shepard,almaMater,"NWC, M.A. 1957",,,,
+ont_9_astronaut_test_2,EXTRA,,,,,,"(Alan_Shepard, almaMater, NWC)",Alan_Shepard,almaMater,NWC
+ont_9_astronaut_test_20,EXACT,1.00,"(Elliot_See, birthPlace, Dallas)",Elliot_See,birthPlace,Dallas,"(Elliot_See, birthPlace, Dallas)",Elliot_See,birthPlace,Dallas
+ont_9_astronaut_test_20,SEMANTIC,0.99,"(Dallas, part, Collin_County,_Texas)",Dallas,part,"Collin_County,_Texas","(Dallas, isPartOf, Collin_County,_Texas)",Dallas,isPartOf,"Collin_County,_Texas"
+ont_9_astronaut_test_20,MISSING,,"(Elliot_See, status, Deceased)",Elliot_See,status,Deceased,,,,
+ont_9_astronaut_test_20,EXTRA,,,,,,"(Collin_County,_Texas, isPartOf, Texas_(steamboat))","Collin_County,_Texas",isPartOf,Texas_(steamboat)
+ont_9_astronaut_test_21,EXACT,1.00,"(Elliot_See, deathPlace, St._Louis)",Elliot_See,deathPlace,St._Louis,"(Elliot_See, deathPlace, St._Louis)",Elliot_See,deathPlace,St._Louis
+ont_9_astronaut_test_21,EXACT,1.00,"(Elliot_See, birthDate, 1927-07-23)",Elliot_See,birthDate,1927-07-23,"(Elliot_See, birthDate, 1927-07-23)",Elliot_See,birthDate,1927-07-23
+ont_9_astronaut_test_21,EXACT,1.00,"(Elliot_See, occupation, Test_pilot)",Elliot_See,occupation,Test_pilot,"(Elliot_See, occupation, test pilot)",Elliot_See,occupation,test pilot
+ont_9_astronaut_test_22,EXACT,1.00,"(Elliot_See, deathPlace, St._Louis)",Elliot_See,deathPlace,St._Louis,"(Elliot_See, deathPlace, St._Louis)",Elliot_See,deathPlace,St._Louis
+ont_9_astronaut_test_22,EXACT,1.00,"(Elliot_See, birthPlace, Dallas)",Elliot_See,birthPlace,Dallas,"(Elliot_See, birthPlace, Dallas)",Elliot_See,birthPlace,Dallas
+ont_9_astronaut_test_22,EXACT,1.00,"(Elliot_See, nationality, United_States)",Elliot_See,nationality,United_States,"(Elliot_See, nationality, United_States)",Elliot_See,nationality,United_States
+ont_9_astronaut_test_23,EXACT,1.00,"(Elliot_See, birthPlace, Dallas)",Elliot_See,birthPlace,Dallas,"(Elliot_See, birthPlace, Dallas)",Elliot_See,birthPlace,Dallas
+ont_9_astronaut_test_23,EXACT,1.00,"(Elliot_See, occupation, Test_pilot)",Elliot_See,occupation,Test_pilot,"(Elliot_See, occupation, test pilot)",Elliot_See,occupation,test pilot
+ont_9_astronaut_test_23,MISSING,,"(Dallas, partsType, List_of_counties_in_Texas)",Dallas,partsType,List_of_counties_in_Texas,,,,
+ont_9_astronaut_test_24,EXACT,1.00,"(Elliot_See, deathPlace, St._Louis)",Elliot_See,deathPlace,St._Louis,"(Elliot_See, deathPlace, St._Louis)",Elliot_See,deathPlace,St._Louis
+ont_9_astronaut_test_24,MISSING,,"(St._Louis, leader, Francis_G._Slay)",St._Louis,leader,Francis_G._Slay,,,,
+ont_9_astronaut_test_24,MISSING,,"(St._Louis, isPartOf, Kingdom_of_France)",St._Louis,isPartOf,Kingdom_of_France,,,,
+ont_9_astronaut_test_25,EXACT,1.00,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California
+ont_9_astronaut_test_25,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_25,MISSING,,"(Alan_Shepard, award, Distinguished_Service_Medal_(United_States_Navy))",Alan_Shepard,award,Distinguished_Service_Medal_(United_States_Navy),,,,
+ont_9_astronaut_test_26,EXACT,1.00,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California
+ont_9_astronaut_test_26,EXACT,1.00,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18
+ont_9_astronaut_test_26,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_26,EXACT,1.00,"(Alan_Shepard, mission, Apollo_14)",Alan_Shepard,mission,Apollo_14,"(Alan_Shepard, mission, Apollo_14)",Alan_Shepard,mission,Apollo_14
+ont_9_astronaut_test_27,EXACT,1.00,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California
+ont_9_astronaut_test_27,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_27,EXACT,1.00,"(Alan_Shepard, mission, Apollo_14)",Alan_Shepard,mission,Apollo_14,"(Alan_Shepard, mission, Apollo_14)",Alan_Shepard,mission,Apollo_14
+ont_9_astronaut_test_28,EXACT,1.00,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California
+ont_9_astronaut_test_28,EXACT,1.00,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18
+ont_9_astronaut_test_28,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_28,MISSING,,"(Alan_Shepard, almaMater, NWC, M.A. 1957)",Alan_Shepard,almaMater,"NWC, M.A. 1957",,,,
+ont_9_astronaut_test_28,EXTRA,,,,,,"(Alan_Shepard, almaMater, NWC)",Alan_Shepard,almaMater,NWC
+ont_9_astronaut_test_29,EXACT,1.00,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California
+ont_9_astronaut_test_29,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_29,EXACT,1.00,"(Alan_Shepard, nationality, United_States)",Alan_Shepard,nationality,United_States,"(Alan_Shepard, nationality, United_States)",Alan_Shepard,nationality,United_States
+ont_9_astronaut_test_29,SEMANTIC,1.00,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18,"(Alan_Shepard, birthDate, 1923-01-01)",Alan_Shepard,birthDate,1923-01-01
+ont_9_astronaut_test_29,SEMANTIC,0.99,"(Alan_Shepard, award, Distinguished_Service_Medal_(United_States_Navy))",Alan_Shepard,award,Distinguished_Service_Medal_(United_States_Navy),"(Alan_Shepard, award, Navy_Distinguished_Service_Medal)",Alan_Shepard,award,Navy_Distinguished_Service_Medal
+ont_9_astronaut_test_3,EXACT,1.00,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California
+ont_9_astronaut_test_3,EXACT,1.00,"(Alan_Shepard, deathDate, 1998-07-21)",Alan_Shepard,deathDate,1998-07-21,"(Alan_Shepard, deathDate, 1998-07-21)",Alan_Shepard,deathDate,1998-07-21
+ont_9_astronaut_test_3,MISSING,,"(Alan_Shepard, almaMater, NWC, M.A. 1957)",Alan_Shepard,almaMater,"NWC, M.A. 1957",,,,
+ont_9_astronaut_test_3,EXTRA,,,,,,"(Alan_Shepard, almaMater, Northwest_Conference)",Alan_Shepard,almaMater,Northwest_Conference
+ont_9_astronaut_test_30,EXACT,1.00,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18
+ont_9_astronaut_test_30,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_30,SEMANTIC,0.95,"(Alan_Shepard, mission, Apollo_14)",Alan_Shepard,mission,Apollo_14,"(Alan_Shepard, part, Apollo_14)",Alan_Shepard,part,Apollo_14
+ont_9_astronaut_test_30,MISSING,,"(Alan_Shepard, almaMater, NWC, M.A. 1957)",Alan_Shepard,almaMater,"NWC, M.A. 1957",,,,
+ont_9_astronaut_test_30,EXTRA,,,,,,"(Alan_Shepard, almaMater, Northwest_Conference)",Alan_Shepard,almaMater,Northwest_Conference
+ont_9_astronaut_test_31,EXACT,1.00,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18
+ont_9_astronaut_test_31,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_31,SEMANTIC,0.97,"(Alan_Shepard, award, Distinguished_Service_Medal_(United_States_Navy))",Alan_Shepard,award,Distinguished_Service_Medal_(United_States_Navy),"(Alan_Shepard, award, Distinguished_Service_Medal_(U.S._Army))",Alan_Shepard,award,Distinguished_Service_Medal_(U.S._Army)
+ont_9_astronaut_test_31,SEMANTIC,1.00,"(Alan_Shepard, deathDate, 1998-07-21)",Alan_Shepard,deathDate,1998-07-21,"(Alan_Shepard, deathDate, 1998-07-12)",Alan_Shepard,deathDate,1998-07-12
+ont_9_astronaut_test_31,MISSING,,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,,,,
+ont_9_astronaut_test_31,MISSING,,"(Alan_Shepard, nationality, United_States)",Alan_Shepard,nationality,United_States,,,,
+ont_9_astronaut_test_31,EXTRA,,,,,,"(Alan_Shepard, affiliation, United_States_Navy)",Alan_Shepard,affiliation,United_States_Navy
+ont_9_astronaut_test_32,EXACT,1.00,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California
+ont_9_astronaut_test_32,EXACT,1.00,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18
+ont_9_astronaut_test_32,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_32,SEMANTIC,0.99,"(Alan_Shepard, award, Distinguished_Service_Medal_(United_States_Navy))",Alan_Shepard,award,Distinguished_Service_Medal_(United_States_Navy),"(Alan_Shepard, award, Navy_Distinguished_Service_Medal)",Alan_Shepard,award,Navy_Distinguished_Service_Medal
+ont_9_astronaut_test_32,MISSING,,"(Alan_Shepard, servedAsChiefOfTheAstronautOfficeIn, 1963)",Alan_Shepard,servedAsChiefOfTheAstronautOfficeIn,1963,,,,
+ont_9_astronaut_test_32,EXTRA,,,,,,"(Alan_Shepard, title, chief of the astronaut office)",Alan_Shepard,title,chief of the astronaut office
+ont_9_astronaut_test_33,EXACT,1.00,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California
+ont_9_astronaut_test_33,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_33,EXACT,1.00,"(Alan_Shepard, nationality, United_States)",Alan_Shepard,nationality,United_States,"(Alan_Shepard, nationality, United_States)",Alan_Shepard,nationality,United_States
+ont_9_astronaut_test_33,SEMANTIC,1.00,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18,"(Alan_Shepard, birthDate, 1923-01-01)",Alan_Shepard,birthDate,1923-01-01
+ont_9_astronaut_test_33,SEMANTIC,1.00,"(Alan_Shepard, deathDate, 1998-07-21)",Alan_Shepard,deathDate,1998-07-21,"(Alan_Shepard, deathDate, 1998-01-01)",Alan_Shepard,deathDate,1998-01-01
+ont_9_astronaut_test_34,EXACT,1.00,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California
+ont_9_astronaut_test_34,EXACT,1.00,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18
+ont_9_astronaut_test_34,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_34,SEMANTIC,0.99,"(Alan_Shepard, award, Distinguished_Service_Medal_(United_States_Navy))",Alan_Shepard,award,Distinguished_Service_Medal_(United_States_Navy),"(Alan_Shepard, award, Navy_Distinguished_Service_Medal)",Alan_Shepard,award,Navy_Distinguished_Service_Medal
+ont_9_astronaut_test_34,MISSING,,"(Alan_Shepard, nationality, United_States)",Alan_Shepard,nationality,United_States,,,,
+ont_9_astronaut_test_34,MISSING,,"(Alan_Shepard, selectedByNasa, 1959)",Alan_Shepard,selectedByNasa,1959,,,,
+ont_9_astronaut_test_34,EXTRA,,,,,,"(Alan_Shepard, timeInSpace, 1959)",Alan_Shepard,timeInSpace,1959
+ont_9_astronaut_test_35,EXACT,1.00,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California
+ont_9_astronaut_test_35,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_35,SEMANTIC,1.00,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18,"(Alan_Shepard, birthDate, 1923-11-01)",Alan_Shepard,birthDate,1923-11-01
+ont_9_astronaut_test_35,MISSING,,"(Alan_Shepard, occupation, Test_pilot)",Alan_Shepard,occupation,Test_pilot,,,,
+ont_9_astronaut_test_35,MISSING,,"(Alan_Shepard, nationality, United_States)",Alan_Shepard,nationality,United_States,,,,
+ont_9_astronaut_test_35,MISSING,,"(Alan_Shepard, selectedByNasa, 1959)",Alan_Shepard,selectedByNasa,1959,,,,
+ont_9_astronaut_test_35,EXTRA,,,,,,"(Alan_Shepard, affiliation, NASA)",Alan_Shepard,affiliation,NASA
+ont_9_astronaut_test_36,EXACT,1.00,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California
+ont_9_astronaut_test_36,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_36,SEMANTIC,0.97,"(California, senators, Dianne_Feinstein)",California,senators,Dianne_Feinstein,"(California, representative, Dianne_Feinstein)",California,representative,Dianne_Feinstein
+ont_9_astronaut_test_37,EXACT,1.00,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California
+ont_9_astronaut_test_37,EXACT,1.00,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18
+ont_9_astronaut_test_37,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_37,EXACT,1.00,"(Alan_Shepard, nationality, United_States)",Alan_Shepard,nationality,United_States,"(Alan_Shepard, nationality, United_States)",Alan_Shepard,nationality,United_States
+ont_9_astronaut_test_37,SEMANTIC,0.99,"(Alan_Shepard, award, Distinguished_Service_Medal_(United_States_Navy))",Alan_Shepard,award,Distinguished_Service_Medal_(United_States_Navy),"(Alan_Shepard, award, Navy_Distinguished_Service_Medal)",Alan_Shepard,award,Navy_Distinguished_Service_Medal
+ont_9_astronaut_test_37,MISSING,,"(Alan_Shepard, status, Deceased)",Alan_Shepard,status,Deceased,,,,
+ont_9_astronaut_test_37,MISSING,,"(Alan_Shepard, servedAsChiefOfTheAstronautOfficeIn, 1963)",Alan_Shepard,servedAsChiefOfTheAstronautOfficeIn,1963,,,,
+ont_9_astronaut_test_38,EXACT,1.00,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California
+ont_9_astronaut_test_38,EXACT,1.00,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18
+ont_9_astronaut_test_38,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_38,EXACT,1.00,"(Alan_Shepard, nationality, United_States)",Alan_Shepard,nationality,United_States,"(Alan_Shepard, nationality, United_States)",Alan_Shepard,nationality,United_States
+ont_9_astronaut_test_38,MISSING,,"(Alan_Shepard, servedAsChiefOfTheAstronautOfficeIn, 1963)",Alan_Shepard,servedAsChiefOfTheAstronautOfficeIn,1963,,,,
+ont_9_astronaut_test_38,MISSING,,"(Alan_Shepard, almaMater, NWC, M.A. 1957)",Alan_Shepard,almaMater,"NWC, M.A. 1957",,,,
+ont_9_astronaut_test_38,MISSING,,"(Alan_Shepard, selectedByNasa, 1959)",Alan_Shepard,selectedByNasa,1959,,,,
+ont_9_astronaut_test_38,EXTRA,,,,,,"(Alan_Shepard, almaMater, NWC)",Alan_Shepard,almaMater,NWC
+ont_9_astronaut_test_39,EXACT,1.00,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18
+ont_9_astronaut_test_39,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_39,EXACT,1.00,"(Alan_Shepard, nationality, United_States)",Alan_Shepard,nationality,United_States,"(Alan_Shepard, nationality, United_States)",Alan_Shepard,nationality,United_States
+ont_9_astronaut_test_39,SEMANTIC,0.99,"(Alan_Shepard, award, Distinguished_Service_Medal_(United_States_Navy))",Alan_Shepard,award,Distinguished_Service_Medal_(United_States_Navy),"(Alan_Shepard, award, Navy_Distinguished_Service_Medal)",Alan_Shepard,award,Navy_Distinguished_Service_Medal
+ont_9_astronaut_test_39,SEMANTIC,0.95,"(Alan_Shepard, mission, Apollo_14)",Alan_Shepard,mission,Apollo_14,"(Alan_Shepard, part, Apollo_14)",Alan_Shepard,part,Apollo_14
+ont_9_astronaut_test_39,MISSING,,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,,,,
+ont_9_astronaut_test_39,MISSING,,"(Alan_Shepard, servedAsChiefOfTheAstronautOfficeIn, 1963)",Alan_Shepard,servedAsChiefOfTheAstronautOfficeIn,1963,,,,
+ont_9_astronaut_test_4,EXACT,1.00,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18
+ont_9_astronaut_test_4,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_4,MISSING,,"(Alan_Shepard, selectedByNasa, 1959)",Alan_Shepard,selectedByNasa,1959,,,,
+ont_9_astronaut_test_4,EXTRA,,,,,,"(Alan_Shepard, timeInSpace, 1959)",Alan_Shepard,timeInSpace,1959
+ont_9_astronaut_test_40,EXACT,1.00,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California
+ont_9_astronaut_test_40,EXACT,1.00,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18
+ont_9_astronaut_test_40,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_40,EXACT,1.00,"(Alan_Shepard, nationality, United_States)",Alan_Shepard,nationality,United_States,"(Alan_Shepard, nationality, United_States)",Alan_Shepard,nationality,United_States
+ont_9_astronaut_test_40,MISSING,,"(Alan_Shepard, dateOfRetirement, 1974-08-01)",Alan_Shepard,dateOfRetirement,1974-08-01,,,,
+ont_9_astronaut_test_40,MISSING,,"(Alan_Shepard, almaMater, NWC, M.A. 1957)",Alan_Shepard,almaMater,"NWC, M.A. 1957",,,,
+ont_9_astronaut_test_40,EXTRA,,,,,,"(Alan_Shepard, almaMater, NWC)",Alan_Shepard,almaMater,NWC
+ont_9_astronaut_test_41,EXACT,1.00,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California
+ont_9_astronaut_test_41,EXACT,1.00,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18
+ont_9_astronaut_test_41,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_41,MISSING,,"(Alan_Shepard, dateOfRetirement, 1974-08-01)",Alan_Shepard,dateOfRetirement,1974-08-01,,,,
+ont_9_astronaut_test_41,EXTRA,,,,,,"(Alan_Shepard, deathDate, 1974-08-01)",Alan_Shepard,deathDate,1974-08-01
+ont_9_astronaut_test_42,EXACT,1.00,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California
+ont_9_astronaut_test_42,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_42,MISSING,,"(Alan_Shepard, occupation, Test_pilot)",Alan_Shepard,occupation,Test_pilot,,,,
+ont_9_astronaut_test_43,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_43,EXACT,1.00,"(Alan_Shepard, nationality, United_States)",Alan_Shepard,nationality,United_States,"(Alan_Shepard, nationality, United_States)",Alan_Shepard,nationality,United_States
+ont_9_astronaut_test_43,SEMANTIC,1.00,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18,"(Alan_Shepard, birthDate, 1923-11)",Alan_Shepard,birthDate,1923-11
+ont_9_astronaut_test_43,SEMANTIC,1.00,"(Alan_Shepard, deathDate, 1998-07-21)",Alan_Shepard,deathDate,1998-07-21,"(Alan_Shepard, deathDate, 1998-07)",Alan_Shepard,deathDate,1998-07
+ont_9_astronaut_test_43,MISSING,,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,,,,
+ont_9_astronaut_test_43,MISSING,,"(Alan_Shepard, almaMater, NWC, M.A. 1957)",Alan_Shepard,almaMater,"NWC, M.A. 1957",,,,
+ont_9_astronaut_test_43,EXTRA,,,,,,"(Alan_Shepard, almaMater, Northwest_Conference)",Alan_Shepard,almaMater,Northwest_Conference
+ont_9_astronaut_test_44,EXACT,1.00,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California
+ont_9_astronaut_test_44,EXACT,1.00,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18
+ont_9_astronaut_test_44,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_44,EXACT,1.00,"(Alan_Shepard, mission, Apollo_14)",Alan_Shepard,mission,Apollo_14,"(Alan_Shepard, mission, Apollo_14)",Alan_Shepard,mission,Apollo_14
+ont_9_astronaut_test_44,MISSING,,"(Alan_Shepard, servedAsChiefOfTheAstronautOfficeIn, 1963)",Alan_Shepard,servedAsChiefOfTheAstronautOfficeIn,1963,,,,
+ont_9_astronaut_test_44,EXTRA,,,,,,"(Alan_Shepard, title, chief of the astronaut office)",Alan_Shepard,title,chief of the astronaut office
+ont_9_astronaut_test_45,EXACT,1.00,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18
+ont_9_astronaut_test_45,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_45,EXACT,1.00,"(Alan_Shepard, nationality, United_States)",Alan_Shepard,nationality,United_States,"(Alan_Shepard, nationality, United_States)",Alan_Shepard,nationality,United_States
+ont_9_astronaut_test_45,SEMANTIC,0.99,"(Alan_Shepard, award, Distinguished_Service_Medal_(United_States_Navy))",Alan_Shepard,award,Distinguished_Service_Medal_(United_States_Navy),"(Alan_Shepard, award, Navy_Distinguished_Service_Medal)",Alan_Shepard,award,Navy_Distinguished_Service_Medal
+ont_9_astronaut_test_45,MISSING,,"(Alan_Shepard, almaMater, NWC, M.A. 1957)",Alan_Shepard,almaMater,"NWC, M.A. 1957",,,,
+ont_9_astronaut_test_45,EXTRA,,,,,,"(Alan_Shepard, affiliation, Northwest_Conference)",Alan_Shepard,affiliation,Northwest_Conference
+ont_9_astronaut_test_46,EXACT,1.00,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California
+ont_9_astronaut_test_46,EXACT,1.00,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18
+ont_9_astronaut_test_46,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_46,MISSING,,"(Alan_Shepard, almaMater, NWC, M.A. 1957)",Alan_Shepard,almaMater,"NWC, M.A. 1957",,,,
+ont_9_astronaut_test_46,MISSING,,"(Alan_Shepard, servedAsChiefOfTheAstronautOfficeIn, 1963)",Alan_Shepard,servedAsChiefOfTheAstronautOfficeIn,1963,,,,
+ont_9_astronaut_test_46,EXTRA,,,,,,"(Alan_Shepard, almaMater, Northwest_Conference)",Alan_Shepard,almaMater,Northwest_Conference
+ont_9_astronaut_test_47,EXACT,1.00,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California
+ont_9_astronaut_test_47,EXACT,1.00,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18
+ont_9_astronaut_test_47,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_47,EXACT,1.00,"(Alan_Shepard, nationality, United_States)",Alan_Shepard,nationality,United_States,"(Alan_Shepard, nationality, United_States)",Alan_Shepard,nationality,United_States
+ont_9_astronaut_test_47,MISSING,,"(Alan_Shepard, almaMater, NWC, M.A. 1957)",Alan_Shepard,almaMater,"NWC, M.A. 1957",,,,
+ont_9_astronaut_test_47,MISSING,,"(Alan_Shepard, servedAsChiefOfTheAstronautOfficeIn, 1963)",Alan_Shepard,servedAsChiefOfTheAstronautOfficeIn,1963,,,,
+ont_9_astronaut_test_47,EXTRA,,,,,,"(Alan_Shepard, almaMater, Northwest_Conference)",Alan_Shepard,almaMater,Northwest_Conference
+ont_9_astronaut_test_48,EXACT,1.00,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California
+ont_9_astronaut_test_48,EXACT,1.00,"(Alan_Shepard, nationality, United_States)",Alan_Shepard,nationality,United_States,"(Alan_Shepard, nationality, United_States)",Alan_Shepard,nationality,United_States
+ont_9_astronaut_test_48,EXACT,1.00,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18
+ont_9_astronaut_test_48,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_48,EXACT,1.00,"(Alan_Shepard, mission, Apollo_14)",Alan_Shepard,mission,Apollo_14,"(Alan_Shepard, mission, Apollo_14)",Alan_Shepard,mission,Apollo_14
+ont_9_astronaut_test_49,EXACT,1.00,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California
+ont_9_astronaut_test_49,EXACT,1.00,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18
+ont_9_astronaut_test_49,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_49,EXACT,1.00,"(Alan_Shepard, nationality, United_States)",Alan_Shepard,nationality,United_States,"(Alan_Shepard, nationality, United_States)",Alan_Shepard,nationality,United_States
+ont_9_astronaut_test_49,SEMANTIC,0.99,"(Alan_Shepard, award, Distinguished_Service_Medal_(United_States_Navy))",Alan_Shepard,award,Distinguished_Service_Medal_(United_States_Navy),"(Alan_Shepard, award, Navy_Distinguished_Service_Medal)",Alan_Shepard,award,Navy_Distinguished_Service_Medal
+ont_9_astronaut_test_49,MISSING,,"(Distinguished_Service_Medal_(United_States_Navy), higher, Department_of_Commerce_Gold_Medal)",Distinguished_Service_Medal_(United_States_Navy),higher,Department_of_Commerce_Gold_Medal,,,,
+ont_9_astronaut_test_49,MISSING,,"(Alan_Shepard, servedAsChiefOfTheAstronautOfficeIn, 1963)",Alan_Shepard,servedAsChiefOfTheAstronautOfficeIn,1963,,,,
+ont_9_astronaut_test_5,EXACT,1.00,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California
+ont_9_astronaut_test_5,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_5,MISSING,,"(Alan_Shepard, selectedByNasa, 1959)",Alan_Shepard,selectedByNasa,1959,,,,
+ont_9_astronaut_test_5,EXTRA,,,,,,"(Alan_Shepard, timeInSpace, 1959-01-01)",Alan_Shepard,timeInSpace,1959-01-01
+ont_9_astronaut_test_50,EXACT,1.00,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18
+ont_9_astronaut_test_50,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_50,EXACT,1.00,"(Alan_Shepard, nationality, United_States)",Alan_Shepard,nationality,United_States,"(Alan_Shepard, nationality, United_States)",Alan_Shepard,nationality,United_States
+ont_9_astronaut_test_50,SEMANTIC,0.99,"(Alan_Shepard, award, Distinguished_Service_Medal_(United_States_Navy))",Alan_Shepard,award,Distinguished_Service_Medal_(United_States_Navy),"(Alan_Shepard, award, Navy_Distinguished_Service_Medal)",Alan_Shepard,award,Navy_Distinguished_Service_Medal
+ont_9_astronaut_test_50,MISSING,,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,,,,
+ont_9_astronaut_test_50,MISSING,,"(Alan_Shepard, almaMater, NWC, M.A. 1957)",Alan_Shepard,almaMater,"NWC, M.A. 1957",,,,
+ont_9_astronaut_test_50,MISSING,,"(Alan_Shepard, servedAsChiefOfTheAstronautOfficeIn, 1963)",Alan_Shepard,servedAsChiefOfTheAstronautOfficeIn,1963,,,,
+ont_9_astronaut_test_50,EXTRA,,,,,,"(Alan_Shepard, almaMater, NWC)",Alan_Shepard,almaMater,NWC
+ont_9_astronaut_test_51,EXACT,1.00,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California
+ont_9_astronaut_test_51,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_51,MISSING,,"(Alan_Shepard, dateOfRetirement, 1974-08-01)",Alan_Shepard,dateOfRetirement,1974-08-01,,,,
+ont_9_astronaut_test_51,EXTRA,,,,,,"(Alan_Shepard, deathDate, 1974-08-01)",Alan_Shepard,deathDate,1974-08-01
+ont_9_astronaut_test_52,EXACT,1.00,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California
+ont_9_astronaut_test_52,EXACT,1.00,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18
+ont_9_astronaut_test_52,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_52,MISSING,,"(Alan_Shepard, selectedByNasa, 1959)",Alan_Shepard,selectedByNasa,1959,,,,
+ont_9_astronaut_test_52,EXTRA,,,,,,"(Alan_Shepard, timeInSpace, 1959)",Alan_Shepard,timeInSpace,1959
+ont_9_astronaut_test_53,EXACT,1.00,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California
+ont_9_astronaut_test_53,EXACT,1.00,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18
+ont_9_astronaut_test_53,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_53,EXACT,1.00,"(Alan_Shepard, occupation, Test_pilot)",Alan_Shepard,occupation,Test_pilot,"(Alan_Shepard, occupation, test pilot)",Alan_Shepard,occupation,test pilot
+ont_9_astronaut_test_54,EXACT,1.00,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California
+ont_9_astronaut_test_54,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_54,MISSING,,"(New_Hampshire, bird, Purple_finch)",New_Hampshire,bird,Purple_finch,,,,
+ont_9_astronaut_test_55,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_55,MISSING,,"(Alan_Shepard, almaMater, NWC, M.A. 1957)",Alan_Shepard,almaMater,"NWC, M.A. 1957",,,,
+ont_9_astronaut_test_55,EXTRA,,,,,,"(Alan_Shepard, almaMater, Northwest_Conference)",Alan_Shepard,almaMater,Northwest_Conference
+ont_9_astronaut_test_56,EXACT,1.00,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California
+ont_9_astronaut_test_56,EXACT,1.00,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18
+ont_9_astronaut_test_56,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_56,SEMANTIC,0.98,"(Alan_Shepard, nationality, United_States)",Alan_Shepard,nationality,United_States,"(Alan_Shepard, birthPlace, United_States)",Alan_Shepard,birthPlace,United_States
+ont_9_astronaut_test_57,EXACT,1.00,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California
+ont_9_astronaut_test_57,EXACT,1.00,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18
+ont_9_astronaut_test_57,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_58,EXACT,1.00,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18
+ont_9_astronaut_test_58,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_58,EXACT,1.00,"(Alan_Shepard, nationality, United_States)",Alan_Shepard,nationality,United_States,"(Alan_Shepard, nationality, United_States)",Alan_Shepard,nationality,United_States
+ont_9_astronaut_test_58,MISSING,,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,,,,
+ont_9_astronaut_test_58,MISSING,,"(Alan_Shepard, almaMater, NWC, M.A. 1957)",Alan_Shepard,almaMater,"NWC, M.A. 1957",,,,
+ont_9_astronaut_test_58,MISSING,,"(Alan_Shepard, status, Deceased)",Alan_Shepard,status,Deceased,,,,
+ont_9_astronaut_test_58,MISSING,,"(Alan_Shepard, servedAsChiefOfTheAstronautOfficeIn, 1963)",Alan_Shepard,servedAsChiefOfTheAstronautOfficeIn,1963,,,,
+ont_9_astronaut_test_58,EXTRA,,,,,,"(Alan_Shepard, almaMater, Northwest_Conference)",Alan_Shepard,almaMater,Northwest_Conference
+ont_9_astronaut_test_58,EXTRA,,,,,,"(Alan_Shepard, title, chief of the astronaut office)",Alan_Shepard,title,chief of the astronaut office
+ont_9_astronaut_test_59,EXACT,1.00,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California
+ont_9_astronaut_test_59,MISSING,,"(Alan_Shepard, almaMater, NWC, M.A. 1957)",Alan_Shepard,almaMater,"NWC, M.A. 1957",,,,
+ont_9_astronaut_test_59,EXTRA,,,,,,"(Alan_Shepard, almaMater, NWC)",Alan_Shepard,almaMater,NWC
+ont_9_astronaut_test_6,EXACT,1.00,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18
+ont_9_astronaut_test_6,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_6,MISSING,,"(Alan_Shepard, occupation, Test_pilot)",Alan_Shepard,occupation,Test_pilot,,,,
+ont_9_astronaut_test_60,EXACT,1.00,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18
+ont_9_astronaut_test_60,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_60,EXACT,1.00,"(Alan_Shepard, nationality, United_States)",Alan_Shepard,nationality,United_States,"(Alan_Shepard, nationality, United_States)",Alan_Shepard,nationality,United_States
+ont_9_astronaut_test_60,SEMANTIC,0.99,"(Alan_Shepard, award, Distinguished_Service_Medal_(United_States_Navy))",Alan_Shepard,award,Distinguished_Service_Medal_(United_States_Navy),"(Alan_Shepard, award, Navy_Distinguished_Service_Medal)",Alan_Shepard,award,Navy_Distinguished_Service_Medal
+ont_9_astronaut_test_60,MISSING,,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,,,,
+ont_9_astronaut_test_60,MISSING,,"(Alan_Shepard, servedAsChiefOfTheAstronautOfficeIn, 1963)",Alan_Shepard,servedAsChiefOfTheAstronautOfficeIn,1963,,,,
+ont_9_astronaut_test_60,MISSING,,"(Alan_Shepard, selectedByNasa, 1959)",Alan_Shepard,selectedByNasa,1959,,,,
+ont_9_astronaut_test_60,EXTRA,,,,,,"(Alan_Shepard, affiliation, NASA)",Alan_Shepard,affiliation,NASA
+ont_9_astronaut_test_61,EXACT,1.00,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California
+ont_9_astronaut_test_61,EXACT,1.00,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18
+ont_9_astronaut_test_61,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_61,EXACT,1.00,"(Alan_Shepard, nationality, United_States)",Alan_Shepard,nationality,United_States,"(Alan_Shepard, nationality, United_States)",Alan_Shepard,nationality,United_States
+ont_9_astronaut_test_61,SEMANTIC,0.99,"(Alan_Shepard, award, Distinguished_Service_Medal_(United_States_Navy))",Alan_Shepard,award,Distinguished_Service_Medal_(United_States_Navy),"(Alan_Shepard, award, Navy_Distinguished_Service_Medal)",Alan_Shepard,award,Navy_Distinguished_Service_Medal
+ont_9_astronaut_test_61,MISSING,,"(New_Hampshire, bird, Purple_finch)",New_Hampshire,bird,Purple_finch,,,,
+ont_9_astronaut_test_62,EXACT,1.00,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California
+ont_9_astronaut_test_62,EXACT,1.00,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18
+ont_9_astronaut_test_62,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_62,SEMANTIC,0.99,"(Alan_Shepard, award, Distinguished_Service_Medal_(United_States_Navy))",Alan_Shepard,award,Distinguished_Service_Medal_(United_States_Navy),"(Alan_Shepard, award, Navy_Distinguished_Service_Medal)",Alan_Shepard,award,Navy_Distinguished_Service_Medal
+ont_9_astronaut_test_63,EXACT,1.00,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California
+ont_9_astronaut_test_63,EXACT,1.00,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18
+ont_9_astronaut_test_63,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_63,EXACT,1.00,"(Alan_Shepard, nationality, United_States)",Alan_Shepard,nationality,United_States,"(Alan_Shepard, nationality, United_States)",Alan_Shepard,nationality,United_States
+ont_9_astronaut_test_63,MISSING,,"(Alan_Shepard, status, Deceased)",Alan_Shepard,status,Deceased,,,,
+ont_9_astronaut_test_64,EXACT,1.00,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California
+ont_9_astronaut_test_64,EXACT,1.00,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18,"(Alan_Shepard, birthDate, 1923-11-18)",Alan_Shepard,birthDate,1923-11-18
+ont_9_astronaut_test_64,EXACT,1.00,"(Alan_Shepard, occupation, Test_pilot)",Alan_Shepard,occupation,Test_pilot,"(Alan_Shepard, occupation, test pilot)",Alan_Shepard,occupation,test pilot
+ont_9_astronaut_test_64,SEMANTIC,0.99,"(Alan_Shepard, award, Distinguished_Service_Medal_(United_States_Navy))",Alan_Shepard,award,Distinguished_Service_Medal_(United_States_Navy),"(Alan_Shepard, award, Navy_Distinguished_Service_Medal)",Alan_Shepard,award,Navy_Distinguished_Service_Medal
+ont_9_astronaut_test_64,MISSING,,"(Alan_Shepard, nationality, United_States)",Alan_Shepard,nationality,United_States,,,,
+ont_9_astronaut_test_64,MISSING,,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,,,,
+ont_9_astronaut_test_64,MISSING,,"(Alan_Shepard, servedAsChiefOfTheAstronautOfficeIn, 1963)",Alan_Shepard,servedAsChiefOfTheAstronautOfficeIn,1963,,,,
+ont_9_astronaut_test_64,EXTRA,,,,,,"(Alan_Shepard, timeInSpace, 1963)",Alan_Shepard,timeInSpace,1963
+ont_9_astronaut_test_65,EXACT,1.00,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California
+ont_9_astronaut_test_65,EXACT,1.00,"(Alan_Shepard, deathDate, 1998-07-21)",Alan_Shepard,deathDate,1998-07-21,"(Alan_Shepard, deathDate, 1998-07-21)",Alan_Shepard,deathDate,1998-07-21
+ont_9_astronaut_test_65,MISSING,,"(California, senators, Dianne_Feinstein)",California,senators,Dianne_Feinstein,,,,
+ont_9_astronaut_test_65,EXTRA,,,,,,"(California, president, Dianne_Feinstein)",California,president,Dianne_Feinstein
+ont_9_astronaut_test_66,EXACT,1.00,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California,"(Alan_Shepard, deathPlace, California)",Alan_Shepard,deathPlace,California
+ont_9_astronaut_test_66,MISSING,,"(Alan_Shepard, award, Distinguished_Service_Medal_(United_States_Navy))",Alan_Shepard,award,Distinguished_Service_Medal_(United_States_Navy),,,,
+ont_9_astronaut_test_66,MISSING,,"(California, fossil, Smilodon)",California,fossil,Smilodon,,,,
+ont_9_astronaut_test_67,EXACT,1.00,"(Elliot_See, deathDate, 1966-02-28)",Elliot_See,deathDate,1966-02-28,"(Elliot_See, deathDate, 1966-02-28)",Elliot_See,deathDate,1966-02-28
+ont_9_astronaut_test_67,EXACT,1.00,"(Elliot_See, deathPlace, St._Louis)",Elliot_See,deathPlace,St._Louis,"(Elliot_See, deathPlace, St._Louis)",Elliot_See,deathPlace,St._Louis
+ont_9_astronaut_test_67,MISSING,,"(Elliot_See, selectedByNasa, 1962)",Elliot_See,selectedByNasa,1962,,,,
+ont_9_astronaut_test_67,EXTRA,,,,,,"(Elliot_See, affiliation, NASA)",Elliot_See,affiliation,NASA
+ont_9_astronaut_test_68,EXACT,1.00,"(Elliot_See, birthDate, 1927-07-23)",Elliot_See,birthDate,1927-07-23,"(Elliot_See, birthDate, 1927-07-23)",Elliot_See,birthDate,1927-07-23
+ont_9_astronaut_test_68,EXACT,1.00,"(Elliot_See, birthPlace, Dallas)",Elliot_See,birthPlace,Dallas,"(Elliot_See, birthPlace, Dallas)",Elliot_See,birthPlace,Dallas
+ont_9_astronaut_test_68,MISSING,,"(Elliot_See, status, Deceased)",Elliot_See,status,Deceased,,,,
+ont_9_astronaut_test_7,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_7,MISSING,,"(Alan_Shepard, ribbonAward, American Defense Service ribbon.svg)",Alan_Shepard,ribbonAward,American Defense Service ribbon.svg,,,,
+ont_9_astronaut_test_7,MISSING,,"(Alan_Shepard, servedAsChiefOfTheAstronautOfficeIn, 1963)",Alan_Shepard,servedAsChiefOfTheAstronautOfficeIn,1963,,,,
+ont_9_astronaut_test_8,EXACT,1.00,"(Alan_Shepard, occupation, Test_pilot)",Alan_Shepard,occupation,Test_pilot,"(Alan_Shepard, occupation, test pilot)",Alan_Shepard,occupation,test pilot
+ont_9_astronaut_test_8,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_8,MISSING,,"(Alan_Shepard, status, Deceased)",Alan_Shepard,status,Deceased,,,,
+ont_9_astronaut_test_9,EXACT,1.00,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire,"(Alan_Shepard, birthPlace, New_Hampshire)",Alan_Shepard,birthPlace,New_Hampshire
+ont_9_astronaut_test_9,EXACT,1.00,"(Alan_Shepard, mission, Apollo_14)",Alan_Shepard,mission,Apollo_14,"(Alan_Shepard, mission, Apollo_14)",Alan_Shepard,mission,Apollo_14
+ont_9_astronaut_test_9,MISSING,,"(Alan_Shepard, timeInSpace, ""13017.0""(minutes))",Alan_Shepard,timeInSpace,"""13017.0""(minutes)",,,,
+ont_9_astronaut_test_9,EXTRA,,,,,,"(Alan_Shepard, timeInSpace, 13017)",Alan_Shepard,timeInSpace,13017

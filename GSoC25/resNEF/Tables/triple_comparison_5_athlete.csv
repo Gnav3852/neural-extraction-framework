@@ -1,0 +1,316 @@
+sent_id,match_type,similarity,expected,expected_sub,expected_rel,expected_obj,predicted,predicted_sub,predicted_rel,predicted_obj
+ont_5_athlete_test_1,SEMANTIC,0.98,"(Aaron_Hunt, club, Germany_national_under-21_football_team)",Aaron_Hunt,club,Germany_national_under-21_football_team,"(Aaron_Hunt, isPartOf, Germany_national_under-21_football_team)",Aaron_Hunt,isPartOf,Germany_national_under-21_football_team
+ont_5_athlete_test_1,MISSING,,"(Aaron_Hunt, youthclub, Goslarer_SC_08)",Aaron_Hunt,youthclub,Goslarer_SC_08,,,,
+ont_5_athlete_test_1,MISSING,,"(Aaron_Hunt, club, SV_Werder_Bremen)",Aaron_Hunt,club,SV_Werder_Bremen,,,,
+ont_5_athlete_test_10,EXACT,1.00,"(Aaron_Hunt, club, VfL_Wolfsburg)",Aaron_Hunt,club,VfL_Wolfsburg,"(Aaron_Hunt, club, VfL_Wolfsburg)",Aaron_Hunt,club,VfL_Wolfsburg
+ont_5_athlete_test_10,MISSING,,"(Aaron_Hunt, youthclub, SV_Werder_Bremen)",Aaron_Hunt,youthclub,SV_Werder_Bremen,,,,
+ont_5_athlete_test_10,MISSING,,"(Aaron_Hunt, club, SV_Werder_Bremen_II)",Aaron_Hunt,club,SV_Werder_Bremen_II,,,,
+ont_5_athlete_test_100,EXACT,1.00,"(Akeem_Ayers, formerTeam, Tennessee_Titans)",Akeem_Ayers,formerTeam,Tennessee_Titans,"(Akeem_Ayers, formerTeam, Tennessee_Titans)",Akeem_Ayers,formerTeam,Tennessee_Titans
+ont_5_athlete_test_100,EXACT,1.00,"(Akeem_Ayers, draftRound, 2)",Akeem_Ayers,draftRound,2,"(Akeem_Ayers, draftRound, 2)",Akeem_Ayers,draftRound,2
+ont_5_athlete_test_100,EXACT,1.00,"(Akeem_Ayers, draftPick, 39)",Akeem_Ayers,draftPick,39,"(Akeem_Ayers, draftPick, 39)",Akeem_Ayers,draftPick,39
+ont_5_athlete_test_101,EXACT,1.00,"(Akeem_Ayers, formerTeam, St._Louis_Rams)",Akeem_Ayers,formerTeam,St._Louis_Rams,"(Akeem_Ayers, formerTeam, St._Louis_Rams)",Akeem_Ayers,formerTeam,St._Louis_Rams
+ont_5_athlete_test_101,EXACT,1.00,"(Akeem_Ayers, draftRound, 2)",Akeem_Ayers,draftRound,2,"(Akeem_Ayers, draftRound, 2)",Akeem_Ayers,draftRound,2
+ont_5_athlete_test_101,EXACT,1.00,"(Akeem_Ayers, draftPick, 39)",Akeem_Ayers,draftPick,39,"(Akeem_Ayers, draftPick, 39)",Akeem_Ayers,draftPick,39
+ont_5_athlete_test_102,SEMANTIC,0.95,"(St._Louis_Rams, city, St._Louis)",St._Louis_Rams,city,St._Louis,"(St._Louis_Rams, ground, St._Louis)",St._Louis_Rams,ground,St._Louis
+ont_5_athlete_test_102,MISSING,,"(Akeem_Ayers, formerTeam, St._Louis_Rams)",Akeem_Ayers,formerTeam,St._Louis_Rams,,,,
+ont_5_athlete_test_102,MISSING,,"(Akeem_Ayers, debutTeam, Tennessee_Titans)",Akeem_Ayers,debutTeam,Tennessee_Titans,,,,
+ont_5_athlete_test_103,SEMANTIC,0.99,"(Alan_Martin_(footballer), birthDate, 1989-01-01)",Alan_Martin_(footballer),birthDate,1989-01-01,"(Alan_Martin_(footballer,_born_1989), birthDate, 1989-01-01)","Alan_Martin_(footballer,_born_1989)",birthDate,1989-01-01
+ont_5_athlete_test_103,SEMANTIC,0.98,"(Alan_Martin_(footballer), club, Aldershot_Town_F.C.)",Alan_Martin_(footballer),club,Aldershot_Town_F.C.,"(Alan_Martin_(footballer,_born_1989), club, Aldershot_Town_F.C.)","Alan_Martin_(footballer,_born_1989)",club,Aldershot_Town_F.C.
+ont_5_athlete_test_103,MISSING,,"(Alan_Martin_(footballer), club, Crewe_Alexandra_F.C.)",Alan_Martin_(footballer),club,Crewe_Alexandra_F.C.,,,,
+ont_5_athlete_test_104,SEMANTIC,0.99,"(Alan_Martin_(footballer), birthDate, 1989-01-01)",Alan_Martin_(footballer),birthDate,1989-01-01,"(Alan_Martin_(footballer,_born_1989), birthDate, 1989-01-01)","Alan_Martin_(footballer,_born_1989)",birthDate,1989-01-01
+ont_5_athlete_test_104,MISSING,,"(Alan_Martin_(footballer), club, Crewe_Alexandra_F.C.)",Alan_Martin_(footballer),club,Crewe_Alexandra_F.C.,,,,
+ont_5_athlete_test_104,MISSING,,"(Alan_Martin_(footballer), club, Hamilton_Academical_F.C.)",Alan_Martin_(footballer),club,Hamilton_Academical_F.C.,,,,
+ont_5_athlete_test_105,EXACT,1.00,"(Olympique_Lyonnais, ground, Parc_Olympique_Lyonnais)",Olympique_Lyonnais,ground,Parc_Olympique_Lyonnais,"(Olympique_Lyonnais, ground, Parc_Olympique_Lyonnais)",Olympique_Lyonnais,ground,Parc_Olympique_Lyonnais
+ont_5_athlete_test_105,EXACT,1.00,"(Aleksandre_Guruli, club, Olympique_Lyonnais)",Aleksandre_Guruli,club,Olympique_Lyonnais,"(Aleksandre_Guruli, club, Olympique_Lyonnais)",Aleksandre_Guruli,club,Olympique_Lyonnais
+ont_5_athlete_test_105,MISSING,,"(Aleksandre_Guruli, club, AZAL_PFK)",Aleksandre_Guruli,club,AZAL_PFK,,,,
+ont_5_athlete_test_105,EXTRA,,,,,,"(Aleksandre_Guruli, club, Shuvalan_FK)",Aleksandre_Guruli,club,Shuvalan_FK
+ont_5_athlete_test_106,EXACT,1.00,"(Alex_Plante, birthPlace, Manitoba)",Alex_Plante,birthPlace,Manitoba,"(Alex_Plante, birthPlace, Manitoba)",Alex_Plante,birthPlace,Manitoba
+ont_5_athlete_test_106,EXACT,1.00,"(Alex_Plante, birthYear, 1989)",Alex_Plante,birthYear,1989,"(Alex_Plante, birthYear, 1989)",Alex_Plante,birthYear,1989
+ont_5_athlete_test_106,SEMANTIC,0.96,"(Alex_Plante, club, Anyang_Halla)",Alex_Plante,club,Anyang_Halla,"(Alex_Plante, club, HL_Anyang)",Alex_Plante,club,HL_Anyang
+ont_5_athlete_test_107,EXACT,1.00,"(Alex_Plante, birthPlace, Canada)",Alex_Plante,birthPlace,Canada,"(Alex_Plante, birthPlace, Canada)",Alex_Plante,birthPlace,Canada
+ont_5_athlete_test_107,MISSING,,"(Canada, anthem, O_Canada)",Canada,anthem,O_Canada,,,,
+ont_5_athlete_test_107,MISSING,,"(Canada, leader, Elizabeth_II)",Canada,leader,Elizabeth_II,,,,
+ont_5_athlete_test_11,EXACT,1.00,"(Aaron_Hunt, club, VfL_Wolfsburg)",Aaron_Hunt,club,VfL_Wolfsburg,"(Aaron_Hunt, club, VfL_Wolfsburg)",Aaron_Hunt,club,VfL_Wolfsburg
+ont_5_athlete_test_11,MISSING,,"(Aaron_Hunt, club, Hamburger_SV)",Aaron_Hunt,club,Hamburger_SV,,,,
+ont_5_athlete_test_11,MISSING,,"(Aaron_Hunt, youthclub, Goslarer_SC_08)",Aaron_Hunt,youthclub,Goslarer_SC_08,,,,
+ont_5_athlete_test_12,EXACT,1.00,"(Aaron_Hunt, club, VfL_Wolfsburg)",Aaron_Hunt,club,VfL_Wolfsburg,"(Aaron_Hunt, club, VfL_Wolfsburg)",Aaron_Hunt,club,VfL_Wolfsburg
+ont_5_athlete_test_12,EXACT,1.00,"(VfL_Wolfsburg, manager, Dieter_Hecking)",VfL_Wolfsburg,manager,Dieter_Hecking,"(VfL_Wolfsburg, manager, Dieter_Hecking)",VfL_Wolfsburg,manager,Dieter_Hecking
+ont_5_athlete_test_12,MISSING,,"(Aaron_Hunt, club, Hamburger_SV)",Aaron_Hunt,club,Hamburger_SV,,,,
+ont_5_athlete_test_13,MISSING,,"(Ahmad_Kadhim_Assad, club, Al-Naft)",Ahmad_Kadhim_Assad,club,Al-Naft,,,,
+ont_5_athlete_test_13,MISSING,,"(Ahmad_Kadhim_Assad, club, Al-Jaish_SC_(Syria))",Ahmad_Kadhim_Assad,club,Al-Jaish_SC_(Syria),,,,
+ont_5_athlete_test_13,MISSING,,"(Ahmad_Kadhim_Assad, birthDate, 1976-07-01)",Ahmad_Kadhim_Assad,birthDate,1976-07-01,,,,
+ont_5_athlete_test_13,EXTRA,,,,,,"(Ahmed_Kadhim, birthDate, 1976-07-01)",Ahmed_Kadhim,birthDate,1976-07-01
+ont_5_athlete_test_14,EXACT,1.00,"(Esteghlal_Ahvaz_F.C., manager, Adnan_Hamad)",Esteghlal_Ahvaz_F.C.,manager,Adnan_Hamad,"(Esteghlal_Ahvaz_F.C., manager, Adnan_Hamad)",Esteghlal_Ahvaz_F.C.,manager,Adnan_Hamad
+ont_5_athlete_test_14,MISSING,,"(Ahmad_Kadhim_Assad, club, Al-Quwa_Al-Jawiya)",Ahmad_Kadhim_Assad,club,Al-Quwa_Al-Jawiya,,,,
+ont_5_athlete_test_14,MISSING,,"(Ahmad_Kadhim_Assad, club, Esteghlal_Ahvaz_F.C.)",Ahmad_Kadhim_Assad,club,Esteghlal_Ahvaz_F.C.,,,,
+ont_5_athlete_test_14,EXTRA,,,,,,"(Ahmed_Kadhim, formerTeam, Esteghlal_Ahvaz_F.C.)",Ahmed_Kadhim,formerTeam,Esteghlal_Ahvaz_F.C.
+ont_5_athlete_test_14,EXTRA,,,,,,"(Ahmed_Kadhim, club, Al-Quwa_Al-Jawiya)",Ahmed_Kadhim,club,Al-Quwa_Al-Jawiya
+ont_5_athlete_test_15,MISSING,,"(Al-Zawra'a_SC, manager, Basim_Qasim)",Al-Zawra'a_SC,manager,Basim_Qasim,,,,
+ont_5_athlete_test_15,MISSING,,"(Ahmad_Kadhim_Assad, club, Al-Zawra'a_SC)",Ahmad_Kadhim_Assad,club,Al-Zawra'a_SC,,,,
+ont_5_athlete_test_15,MISSING,,"(Ahmad_Kadhim_Assad, club, Esteghlal_Ahvaz_F.C.)",Ahmad_Kadhim_Assad,club,Esteghlal_Ahvaz_F.C.,,,,
+ont_5_athlete_test_16,EXACT,1.00,"(Esteghlal_Ahvaz_F.C., manager, Adnan_Hamad)",Esteghlal_Ahvaz_F.C.,manager,Adnan_Hamad,"(Esteghlal_Ahvaz_F.C., manager, Adnan_Hamad)",Esteghlal_Ahvaz_F.C.,manager,Adnan_Hamad
+ont_5_athlete_test_16,MISSING,,"(Ahmad_Kadhim_Assad, club, Al_Shorta_SC)",Ahmad_Kadhim_Assad,club,Al_Shorta_SC,,,,
+ont_5_athlete_test_16,MISSING,,"(Ahmad_Kadhim_Assad, club, Esteghlal_Ahvaz_F.C.)",Ahmad_Kadhim_Assad,club,Esteghlal_Ahvaz_F.C.,,,,
+ont_5_athlete_test_16,EXTRA,,,,,,"(Ahmed_Kadhim, formerTeam, Esteghlal_Ahvaz_F.C.)",Ahmed_Kadhim,formerTeam,Esteghlal_Ahvaz_F.C.
+ont_5_athlete_test_17,EXACT,1.00,"(Esteghlal_Ahvaz_F.C., manager, Adnan_Hamad)",Esteghlal_Ahvaz_F.C.,manager,Adnan_Hamad,"(Esteghlal_Ahvaz_F.C., manager, Adnan_Hamad)",Esteghlal_Ahvaz_F.C.,manager,Adnan_Hamad
+ont_5_athlete_test_17,MISSING,,"(Ahmad_Kadhim_Assad, club, Al-Zawra'a_SC)",Ahmad_Kadhim_Assad,club,Al-Zawra'a_SC,,,,
+ont_5_athlete_test_17,MISSING,,"(Ahmad_Kadhim_Assad, club, Esteghlal_Ahvaz_F.C.)",Ahmad_Kadhim_Assad,club,Esteghlal_Ahvaz_F.C.,,,,
+ont_5_athlete_test_17,EXTRA,,,,,,"(Ahmed_Kadhim, formerTeam, Esteghlal_Ahvaz_F.C.)",Ahmed_Kadhim,formerTeam,Esteghlal_Ahvaz_F.C.
+ont_5_athlete_test_18,EXACT,1.00,"(Esteghlal_Ahvaz_F.C., manager, Adnan_Hamad)",Esteghlal_Ahvaz_F.C.,manager,Adnan_Hamad,"(Esteghlal_Ahvaz_F.C., manager, Adnan_Hamad)",Esteghlal_Ahvaz_F.C.,manager,Adnan_Hamad
+ont_5_athlete_test_18,MISSING,,"(Ahmad_Kadhim_Assad, club, PAS_Tehran_F.C.)",Ahmad_Kadhim_Assad,club,PAS_Tehran_F.C.,,,,
+ont_5_athlete_test_18,MISSING,,"(Ahmad_Kadhim_Assad, club, Esteghlal_Ahvaz_F.C.)",Ahmad_Kadhim_Assad,club,Esteghlal_Ahvaz_F.C.,,,,
+ont_5_athlete_test_18,EXTRA,,,,,,"(Ahmed_Kadhim, formerTeam, PAS_Tehran_F.C.)",Ahmed_Kadhim,formerTeam,PAS_Tehran_F.C.
+ont_5_athlete_test_18,EXTRA,,,,,,"(Ahmed_Kadhim, isPartOf, Esteghlal_Ahvaz_F.C.)",Ahmed_Kadhim,isPartOf,Esteghlal_Ahvaz_F.C.
+ont_5_athlete_test_19,MISSING,,"(Ahmad_Kadhim_Assad, club, Al-Jaish_SC_(Syria))",Ahmad_Kadhim_Assad,club,Al-Jaish_SC_(Syria),,,,
+ont_5_athlete_test_19,MISSING,,"(Ahmad_Kadhim_Assad, club, Steel_Azin_F.C.)",Ahmad_Kadhim_Assad,club,Steel_Azin_F.C.,,,,
+ont_5_athlete_test_19,MISSING,,"(Ahmad_Kadhim_Assad, birthDate, 1976-07-01)",Ahmad_Kadhim_Assad,birthDate,1976-07-01,,,,
+ont_5_athlete_test_19,EXTRA,,,,,,"(Ahmed_Kadhim, birthDate, 1976-01-07)",Ahmed_Kadhim,birthDate,1976-01-07
+ont_5_athlete_test_2,SEMANTIC,0.97,"(Aaron_Hunt, club, Germany_national_youth_football_team)",Aaron_Hunt,club,Germany_national_youth_football_team,"(Aaron_Hunt, isPartOf, Germany_national_youth_football_team)",Aaron_Hunt,isPartOf,Germany_national_youth_football_team
+ont_5_athlete_test_2,MISSING,,"(Aaron_Hunt, club, Hamburger_SV)",Aaron_Hunt,club,Hamburger_SV,,,,
+ont_5_athlete_test_2,MISSING,,"(Aaron_Hunt, youthclub, SV_Werder_Bremen)",Aaron_Hunt,youthclub,SV_Werder_Bremen,,,,
+ont_5_athlete_test_20,SEMANTIC,0.94,"(Ahmad_Kadhim_Assad, club, Steel_Azin_F.C.)",Ahmad_Kadhim_Assad,club,Steel_Azin_F.C.,"(Ahmed_Kadhim, club, Steel_Azin_F.C.)",Ahmed_Kadhim,club,Steel_Azin_F.C.
+ont_5_athlete_test_20,MISSING,,"(Ahmad_Kadhim_Assad, club, Al-Naft)",Ahmad_Kadhim_Assad,club,Al-Naft,,,,
+ont_5_athlete_test_20,MISSING,,"(Ahmad_Kadhim_Assad, birthDate, 1976-07-01)",Ahmad_Kadhim_Assad,birthDate,1976-07-01,,,,
+ont_5_athlete_test_20,EXTRA,,,,,,"(Ahmed_Kadhim, birthDate, 1976-07-01)",Ahmed_Kadhim,birthDate,1976-07-01
+ont_5_athlete_test_20,EXTRA,,,,,,"(Ahmed_Kadhim, club, Al-Naft_SC)",Ahmed_Kadhim,club,Al-Naft_SC
+ont_5_athlete_test_21,MISSING,,"(Ahmad_Kadhim_Assad, club, Steel_Azin_F.C.)",Ahmad_Kadhim_Assad,club,Steel_Azin_F.C.,,,,
+ont_5_athlete_test_21,MISSING,,"(Ahmad_Kadhim_Assad, club, Esteghlal_Ahvaz_F.C.)",Ahmad_Kadhim_Assad,club,Esteghlal_Ahvaz_F.C.,,,,
+ont_5_athlete_test_21,MISSING,,"(Esteghlal_Ahvaz_F.C., manager, Adnan_Hamad)",Esteghlal_Ahvaz_F.C.,manager,Adnan_Hamad,,,,
+ont_5_athlete_test_22,EXACT,1.00,"(Akeem_Ayers, formerTeam, New_England_Patriots)",Akeem_Ayers,formerTeam,New_England_Patriots,"(Akeem_Ayers, formerTeam, New_England_Patriots)",Akeem_Ayers,formerTeam,New_England_Patriots
+ont_5_athlete_test_22,EXACT,1.00,"(Akeem_Ayers, draftRound, 2)",Akeem_Ayers,draftRound,2,"(Akeem_Ayers, draftRound, 2)",Akeem_Ayers,draftRound,2
+ont_5_athlete_test_22,EXACT,1.00,"(Akeem_Ayers, draftPick, 39)",Akeem_Ayers,draftPick,39,"(Akeem_Ayers, draftPick, 39)",Akeem_Ayers,draftPick,39
+ont_5_athlete_test_23,EXACT,1.00,"(Akeem_Ayers, birthDate, 1989-07-10)",Akeem_Ayers,birthDate,1989-07-10,"(Akeem_Ayers, birthDate, 1989-07-10)",Akeem_Ayers,birthDate,1989-07-10
+ont_5_athlete_test_23,EXACT,1.00,"(Akeem_Ayers, debutTeam, Tennessee_Titans)",Akeem_Ayers,debutTeam,Tennessee_Titans,"(Akeem_Ayers, debutTeam, Tennessee_Titans)",Akeem_Ayers,debutTeam,Tennessee_Titans
+ont_5_athlete_test_23,EXACT,1.00,"(Akeem_Ayers, formerTeam, Los_Angeles_Rams)",Akeem_Ayers,formerTeam,Los_Angeles_Rams,"(Akeem_Ayers, formerTeam, Los_Angeles_Rams)",Akeem_Ayers,formerTeam,Los_Angeles_Rams
+ont_5_athlete_test_24,EXACT,1.00,"(Akeem_Ayers, formerTeam, Los_Angeles_Rams)",Akeem_Ayers,formerTeam,Los_Angeles_Rams,"(Akeem_Ayers, formerTeam, Los_Angeles_Rams)",Akeem_Ayers,formerTeam,Los_Angeles_Rams
+ont_5_athlete_test_24,EXACT,1.00,"(Akeem_Ayers, draftPick, 39)",Akeem_Ayers,draftPick,39,"(Akeem_Ayers, draftPick, 39)",Akeem_Ayers,draftPick,39
+ont_5_athlete_test_24,MISSING,,"(Akeem_Ayers, currentteam, Los Angeles Rams)",Akeem_Ayers,currentteam,Los Angeles Rams,,,,
+ont_5_athlete_test_25,EXACT,1.00,"(Akeem_Ayers, birthYear, 1989)",Akeem_Ayers,birthYear,1989,"(Akeem_Ayers, birthYear, 1989)",Akeem_Ayers,birthYear,1989
+ont_5_athlete_test_25,EXACT,1.00,"(Akeem_Ayers, debutTeam, Tennessee_Titans)",Akeem_Ayers,debutTeam,Tennessee_Titans,"(Akeem_Ayers, debutTeam, Tennessee_Titans)",Akeem_Ayers,debutTeam,Tennessee_Titans
+ont_5_athlete_test_25,EXACT,1.00,"(Akeem_Ayers, formerTeam, Los_Angeles_Rams)",Akeem_Ayers,formerTeam,Los_Angeles_Rams,"(Akeem_Ayers, formerTeam, Los_Angeles_Rams)",Akeem_Ayers,formerTeam,Los_Angeles_Rams
+ont_5_athlete_test_26,EXACT,1.00,"(Akeem_Ayers, debutTeam, Tennessee_Titans)",Akeem_Ayers,debutTeam,Tennessee_Titans,"(Akeem_Ayers, debutTeam, Tennessee_Titans)",Akeem_Ayers,debutTeam,Tennessee_Titans
+ont_5_athlete_test_26,EXACT,1.00,"(Akeem_Ayers, formerTeam, Los_Angeles_Rams)",Akeem_Ayers,formerTeam,Los_Angeles_Rams,"(Akeem_Ayers, formerTeam, Los_Angeles_Rams)",Akeem_Ayers,formerTeam,Los_Angeles_Rams
+ont_5_athlete_test_26,SEMANTIC,0.97,"(Los_Angeles_Rams, city, Los_Angeles_Memorial_Coliseum)",Los_Angeles_Rams,city,Los_Angeles_Memorial_Coliseum,"(Los_Angeles_Rams, ground, Los_Angeles_Memorial_Coliseum)",Los_Angeles_Rams,ground,Los_Angeles_Memorial_Coliseum
+ont_5_athlete_test_27,EXACT,1.00,"(Akeem_Ayers, formerTeam, New_England_Patriots)",Akeem_Ayers,formerTeam,New_England_Patriots,"(Akeem_Ayers, formerTeam, New_England_Patriots)",Akeem_Ayers,formerTeam,New_England_Patriots
+ont_5_athlete_test_27,EXACT,1.00,"(Akeem_Ayers, birthDate, 1989-07-10)",Akeem_Ayers,birthDate,1989-07-10,"(Akeem_Ayers, birthDate, 1989-07-10)",Akeem_Ayers,birthDate,1989-07-10
+ont_5_athlete_test_27,EXACT,1.00,"(Akeem_Ayers, debutTeam, Tennessee_Titans)",Akeem_Ayers,debutTeam,Tennessee_Titans,"(Akeem_Ayers, debutTeam, Tennessee_Titans)",Akeem_Ayers,debutTeam,Tennessee_Titans
+ont_5_athlete_test_28,EXACT,1.00,"(Akeem_Ayers, formerTeam, New_England_Patriots)",Akeem_Ayers,formerTeam,New_England_Patriots,"(Akeem_Ayers, formerTeam, New_England_Patriots)",Akeem_Ayers,formerTeam,New_England_Patriots
+ont_5_athlete_test_28,EXACT,1.00,"(Akeem_Ayers, draftPick, 39)",Akeem_Ayers,draftPick,39,"(Akeem_Ayers, draftPick, 39)",Akeem_Ayers,draftPick,39
+ont_5_athlete_test_28,SEMANTIC,0.94,"(Akeem_Ayers, currentteam, Los Angeles Rams)",Akeem_Ayers,currentteam,Los Angeles Rams,"(Akeem_Ayers, isPartOf, Los_Angeles_Rams)",Akeem_Ayers,isPartOf,Los_Angeles_Rams
+ont_5_athlete_test_29,EXACT,1.00,"(Akeem_Ayers, birthYear, 1989)",Akeem_Ayers,birthYear,1989,"(Akeem_Ayers, birthYear, 1989)",Akeem_Ayers,birthYear,1989
+ont_5_athlete_test_29,EXACT,1.00,"(Akeem_Ayers, formerTeam, New_England_Patriots)",Akeem_Ayers,formerTeam,New_England_Patriots,"(Akeem_Ayers, formerTeam, New_England_Patriots)",Akeem_Ayers,formerTeam,New_England_Patriots
+ont_5_athlete_test_29,EXACT,1.00,"(Akeem_Ayers, debutTeam, Tennessee_Titans)",Akeem_Ayers,debutTeam,Tennessee_Titans,"(Akeem_Ayers, debutTeam, Tennessee_Titans)",Akeem_Ayers,debutTeam,Tennessee_Titans
+ont_5_athlete_test_3,MISSING,,"(Aaron_Hunt, club, Goslarer_SC_08)",Aaron_Hunt,club,Goslarer_SC_08,,,,
+ont_5_athlete_test_3,MISSING,,"(Aaron_Hunt, youthclub, SV_Werder_Bremen)",Aaron_Hunt,youthclub,SV_Werder_Bremen,,,,
+ont_5_athlete_test_3,MISSING,,"(Aaron_Hunt, club, Hamburger_SV)",Aaron_Hunt,club,Hamburger_SV,,,,
+ont_5_athlete_test_30,EXACT,1.00,"(Akeem_Ayers, formerTeam, St._Louis_Rams)",Akeem_Ayers,formerTeam,St._Louis_Rams,"(Akeem_Ayers, formerTeam, St._Louis_Rams)",Akeem_Ayers,formerTeam,St._Louis_Rams
+ont_5_athlete_test_30,EXACT,1.00,"(Akeem_Ayers, birthDate, 1989-07-10)",Akeem_Ayers,birthDate,1989-07-10,"(Akeem_Ayers, birthDate, 1989-07-10)",Akeem_Ayers,birthDate,1989-07-10
+ont_5_athlete_test_30,MISSING,,"(Akeem_Ayers, birthYear, 1989)",Akeem_Ayers,birthYear,1989,,,,
+ont_5_athlete_test_31,EXACT,1.00,"(Akeem_Ayers, formerTeam, St._Louis_Rams)",Akeem_Ayers,formerTeam,St._Louis_Rams,"(Akeem_Ayers, formerTeam, St._Louis_Rams)",Akeem_Ayers,formerTeam,St._Louis_Rams
+ont_5_athlete_test_31,EXACT,1.00,"(Akeem_Ayers, birthDate, 1989-07-10)",Akeem_Ayers,birthDate,1989-07-10,"(Akeem_Ayers, birthDate, 1989-07-10)",Akeem_Ayers,birthDate,1989-07-10
+ont_5_athlete_test_31,EXACT,1.00,"(Akeem_Ayers, debutTeam, Tennessee_Titans)",Akeem_Ayers,debutTeam,Tennessee_Titans,"(Akeem_Ayers, debutTeam, Tennessee_Titans)",Akeem_Ayers,debutTeam,Tennessee_Titans
+ont_5_athlete_test_32,EXACT,1.00,"(Akeem_Ayers, formerTeam, St._Louis_Rams)",Akeem_Ayers,formerTeam,St._Louis_Rams,"(Akeem_Ayers, formerTeam, St._Louis_Rams)",Akeem_Ayers,formerTeam,St._Louis_Rams
+ont_5_athlete_test_32,EXACT,1.00,"(Akeem_Ayers, draftPick, 39)",Akeem_Ayers,draftPick,39,"(Akeem_Ayers, draftPick, 39)",Akeem_Ayers,draftPick,39
+ont_5_athlete_test_32,SEMANTIC,0.94,"(Akeem_Ayers, currentteam, Los Angeles Rams)",Akeem_Ayers,currentteam,Los Angeles Rams,"(Akeem_Ayers, isPartOf, Los_Angeles_Rams)",Akeem_Ayers,isPartOf,Los_Angeles_Rams
+ont_5_athlete_test_33,EXACT,1.00,"(Akeem_Ayers, birthYear, 1989)",Akeem_Ayers,birthYear,1989,"(Akeem_Ayers, birthYear, 1989)",Akeem_Ayers,birthYear,1989
+ont_5_athlete_test_33,EXACT,1.00,"(Akeem_Ayers, formerTeam, St._Louis_Rams)",Akeem_Ayers,formerTeam,St._Louis_Rams,"(Akeem_Ayers, formerTeam, St._Louis_Rams)",Akeem_Ayers,formerTeam,St._Louis_Rams
+ont_5_athlete_test_33,EXACT,1.00,"(Akeem_Ayers, debutTeam, Tennessee_Titans)",Akeem_Ayers,debutTeam,Tennessee_Titans,"(Akeem_Ayers, debutTeam, Tennessee_Titans)",Akeem_Ayers,debutTeam,Tennessee_Titans
+ont_5_athlete_test_34,EXACT,1.00,"(Akeem_Ayers, formerTeam, St._Louis_Rams)",Akeem_Ayers,formerTeam,St._Louis_Rams,"(Akeem_Ayers, formerTeam, St._Louis_Rams)",Akeem_Ayers,formerTeam,St._Louis_Rams
+ont_5_athlete_test_34,EXACT,1.00,"(Akeem_Ayers, debutTeam, Tennessee_Titans)",Akeem_Ayers,debutTeam,Tennessee_Titans,"(Akeem_Ayers, debutTeam, Tennessee_Titans)",Akeem_Ayers,debutTeam,Tennessee_Titans
+ont_5_athlete_test_34,MISSING,,"(Tennessee_Titans, city, Nashville,_Tennessee)",Tennessee_Titans,city,"Nashville,_Tennessee",,,,
+ont_5_athlete_test_35,MISSING,,"(Alan_Martin_(footballer), club, Accrington_Stanley_F.C.)",Alan_Martin_(footballer),club,Accrington_Stanley_F.C.,,,,
+ont_5_athlete_test_35,MISSING,,"(Accrington_Stanley_F.C., ground, Accrington)",Accrington_Stanley_F.C.,ground,Accrington,,,,
+ont_5_athlete_test_35,MISSING,,"(Alan_Martin_(footballer), club, Aldershot_Town_F.C.)",Alan_Martin_(footballer),club,Aldershot_Town_F.C.,,,,
+ont_5_athlete_test_36,EXACT,1.00,"(Accrington_Stanley_F.C., ground, Accrington)",Accrington_Stanley_F.C.,ground,Accrington,"(Accrington_Stanley_F.C., ground, Accrington)",Accrington_Stanley_F.C.,ground,Accrington
+ont_5_athlete_test_36,SEMANTIC,0.97,"(Alan_Martin_(footballer), club, Accrington_Stanley_F.C.)",Alan_Martin_(footballer),club,Accrington_Stanley_F.C.,"(Alan_Martin_(footballer,_born_1989), formerTeam, Accrington_Stanley_F.C.)","Alan_Martin_(footballer,_born_1989)",formerTeam,Accrington_Stanley_F.C.
+ont_5_athlete_test_36,SEMANTIC,0.98,"(Alan_Martin_(footballer), club, Clyde_F.C.)",Alan_Martin_(footballer),club,Clyde_F.C.,"(Alan_Martin_(footballer,_born_1989), club, Clyde_F.C.)","Alan_Martin_(footballer,_born_1989)",club,Clyde_F.C.
+ont_5_athlete_test_37,EXACT,1.00,"(Accrington_Stanley_F.C., ground, Accrington)",Accrington_Stanley_F.C.,ground,Accrington,"(Accrington_Stanley_F.C., ground, Accrington)",Accrington_Stanley_F.C.,ground,Accrington
+ont_5_athlete_test_37,SEMANTIC,0.98,"(Alan_Martin_(footballer), club, Accrington_Stanley_F.C.)",Alan_Martin_(footballer),club,Accrington_Stanley_F.C.,"(Alan_Martin_(footballer,_born_1989), club, Accrington_Stanley_F.C.)","Alan_Martin_(footballer,_born_1989)",club,Accrington_Stanley_F.C.
+ont_5_athlete_test_37,SEMANTIC,0.98,"(Alan_Martin_(footballer), club, Hamilton_Academical_F.C.)",Alan_Martin_(footballer),club,Hamilton_Academical_F.C.,"(Alan_Martin_(footballer,_born_1989), club, Hamilton_Academical_F.C.)","Alan_Martin_(footballer,_born_1989)",club,Hamilton_Academical_F.C.
+ont_5_athlete_test_38,SEMANTIC,0.99,"(Alan_Martin_(footballer), birthDate, 1989-01-01)",Alan_Martin_(footballer),birthDate,1989-01-01,"(Alan_Martin_(footballer,_born_1989), birthDate, 1989-01-01)","Alan_Martin_(footballer,_born_1989)",birthDate,1989-01-01
+ont_5_athlete_test_38,MISSING,,"(Alan_Martin_(footballer), club, Accrington_Stanley_F.C.)",Alan_Martin_(footballer),club,Accrington_Stanley_F.C.,,,,
+ont_5_athlete_test_38,MISSING,,"(Alan_Martin_(footballer), club, Ayr_United_F.C.)",Alan_Martin_(footballer),club,Ayr_United_F.C.,,,,
+ont_5_athlete_test_39,SEMANTIC,0.99,"(Alan_Martin_(footballer), birthDate, 1989-01-01)",Alan_Martin_(footballer),birthDate,1989-01-01,"(Alan_Martin_(footballer,_born_1989), birthDate, 1989-01-01)","Alan_Martin_(footballer,_born_1989)",birthDate,1989-01-01
+ont_5_athlete_test_39,MISSING,,"(Alan_Martin_(footballer), club, Accrington_Stanley_F.C.)",Alan_Martin_(footballer),club,Accrington_Stanley_F.C.,,,,
+ont_5_athlete_test_39,MISSING,,"(Alan_Martin_(footballer), club, Clyde_F.C.)",Alan_Martin_(footballer),club,Clyde_F.C.,,,,
+ont_5_athlete_test_4,MISSING,,"(Aaron_Hunt, club, Hamburger_SV)",Aaron_Hunt,club,Hamburger_SV,,,,
+ont_5_athlete_test_4,MISSING,,"(Aaron_Hunt, club, SV_Werder_Bremen_II)",Aaron_Hunt,club,SV_Werder_Bremen_II,,,,
+ont_5_athlete_test_4,MISSING,,"(Aaron_Hunt, youthclub, Goslarer_SC_08)",Aaron_Hunt,youthclub,Goslarer_SC_08,,,,
+ont_5_athlete_test_40,SEMANTIC,0.98,"(Alan_Martin_(footballer), club, Accrington_Stanley_F.C.)",Alan_Martin_(footballer),club,Accrington_Stanley_F.C.,"(Alan_Martin_(footballer,_born_1989), club, Accrington_Stanley_F.C.)","Alan_Martin_(footballer,_born_1989)",club,Accrington_Stanley_F.C.
+ont_5_athlete_test_40,SEMANTIC,0.99,"(Alan_Martin_(footballer), birthDate, 1989-01-01)",Alan_Martin_(footballer),birthDate,1989-01-01,"(Alan_Martin_(footballer,_born_1989), birthDate, 1989-01-01)","Alan_Martin_(footballer,_born_1989)",birthDate,1989-01-01
+ont_5_athlete_test_40,SEMANTIC,0.98,"(Alan_Martin_(footballer), club, Crewe_Alexandra_F.C.)",Alan_Martin_(footballer),club,Crewe_Alexandra_F.C.,"(Alan_Martin_(footballer,_born_1989), club, Crewe_Alexandra_F.C.)","Alan_Martin_(footballer,_born_1989)",club,Crewe_Alexandra_F.C.
+ont_5_athlete_test_41,SEMANTIC,0.99,"(Alan_Martin_(footballer), birthDate, 1989-01-01)",Alan_Martin_(footballer),birthDate,1989-01-01,"(Alan_Martin_(footballer,_born_1989), birthDate, 1989-01-01)","Alan_Martin_(footballer,_born_1989)",birthDate,1989-01-01
+ont_5_athlete_test_41,MISSING,,"(Alan_Martin_(footballer), club, Accrington_Stanley_F.C.)",Alan_Martin_(footballer),club,Accrington_Stanley_F.C.,,,,
+ont_5_athlete_test_41,MISSING,,"(Alan_Martin_(footballer), club, Hamilton_Academical_F.C.)",Alan_Martin_(footballer),club,Hamilton_Academical_F.C.,,,,
+ont_5_athlete_test_42,MISSING,,"(Alan_Martin_(footballer), club, Accrington_Stanley_F.C.)",Alan_Martin_(footballer),club,Accrington_Stanley_F.C.,,,,
+ont_5_athlete_test_42,MISSING,,"(Hamilton_Academical_F.C., ground, Hamilton,_South_Lanarkshire)",Hamilton_Academical_F.C.,ground,"Hamilton,_South_Lanarkshire",,,,
+ont_5_athlete_test_42,MISSING,,"(Alan_Martin_(footballer), club, Hamilton_Academical_F.C.)",Alan_Martin_(footballer),club,Hamilton_Academical_F.C.,,,,
+ont_5_athlete_test_43,SEMANTIC,0.97,"(Alan_Martin_(footballer), club, Hamilton_Academical_F.C.)",Alan_Martin_(footballer),club,Hamilton_Academical_F.C.,"(Alan_Martin_(footballer,_born_1989), formerTeam, Hamilton_Academical_F.C.)","Alan_Martin_(footballer,_born_1989)",formerTeam,Hamilton_Academical_F.C.
+ont_5_athlete_test_43,SEMANTIC,0.98,"(Alan_Martin_(footballer), club, Ayr_United_F.C.)",Alan_Martin_(footballer),club,Ayr_United_F.C.,"(Alan_Martin_(footballer,_born_1989), club, Ayr_United_F.C.)","Alan_Martin_(footballer,_born_1989)",club,Ayr_United_F.C.
+ont_5_athlete_test_43,SEMANTIC,0.99,"(Alan_Martin_(footballer), birthDate, 1989-01-01)",Alan_Martin_(footballer),birthDate,1989-01-01,"(Alan_Martin_(footballer,_born_1989), birthDate, 1989-01-01)","Alan_Martin_(footballer,_born_1989)",birthDate,1989-01-01
+ont_5_athlete_test_44,MISSING,,"(Alan_Martin_(footballer), club, Hamilton_Academical_F.C.)",Alan_Martin_(footballer),club,Hamilton_Academical_F.C.,,,,
+ont_5_athlete_test_44,MISSING,,"(Hamilton_Academical_F.C., ground, New_Douglas_Park)",Hamilton_Academical_F.C.,ground,New_Douglas_Park,,,,
+ont_5_athlete_test_44,MISSING,,"(Alan_Martin_(footballer), club, Aldershot_Town_F.C.)",Alan_Martin_(footballer),club,Aldershot_Town_F.C.,,,,
+ont_5_athlete_test_45,MISSING,,"(Alan_Martin_(footballer), club, Hamilton_Academical_F.C.)",Alan_Martin_(footballer),club,Hamilton_Academical_F.C.,,,,
+ont_5_athlete_test_45,MISSING,,"(Hamilton_Academical_F.C., ground, New_Douglas_Park)",Hamilton_Academical_F.C.,ground,New_Douglas_Park,,,,
+ont_5_athlete_test_45,MISSING,,"(Alan_Martin_(footballer), club, Clyde_F.C.)",Alan_Martin_(footballer),club,Clyde_F.C.,,,,
+ont_5_athlete_test_46,MISSING,,"(Motherwell_F.C., ground, Fir_Park)",Motherwell_F.C.,ground,Fir_Park,,,,
+ont_5_athlete_test_46,MISSING,,"(Alan_Martin_(footballer), club, Accrington_Stanley_F.C.)",Alan_Martin_(footballer),club,Accrington_Stanley_F.C.,,,,
+ont_5_athlete_test_46,MISSING,,"(Alan_Martin_(footballer), club, Motherwell_F.C.)",Alan_Martin_(footballer),club,Motherwell_F.C.,,,,
+ont_5_athlete_test_47,MISSING,,"(Motherwell_F.C., ground, Fir_Park)",Motherwell_F.C.,ground,Fir_Park,,,,
+ont_5_athlete_test_47,MISSING,,"(Alan_Martin_(footballer), club, Scotland_national_under-21_football_team)",Alan_Martin_(footballer),club,Scotland_national_under-21_football_team,,,,
+ont_5_athlete_test_47,MISSING,,"(Alan_Martin_(footballer), club, Motherwell_F.C.)",Alan_Martin_(footballer),club,Motherwell_F.C.,,,,
+ont_5_athlete_test_48,SEMANTIC,0.98,"(Alan_Martin_(footballer), club, Scotland_national_under-19_football_team)",Alan_Martin_(footballer),club,Scotland_national_under-19_football_team,"(Alan_Martin_(footballer,_born_1989), isPartOf, Scotland_national_under-19_football_team)","Alan_Martin_(footballer,_born_1989)",isPartOf,Scotland_national_under-19_football_team
+ont_5_athlete_test_48,MISSING,,"(Clyde_F.C., ground, Broadwood_Stadium)",Clyde_F.C.,ground,Broadwood_Stadium,,,,
+ont_5_athlete_test_48,MISSING,,"(Alan_Martin_(footballer), club, Clyde_F.C.)",Alan_Martin_(footballer),club,Clyde_F.C.,,,,
+ont_5_athlete_test_49,EXACT,1.00,"(Olympique_Lyonnais, ground, Parc_Olympique_Lyonnais)",Olympique_Lyonnais,ground,Parc_Olympique_Lyonnais,"(Olympique_Lyonnais, ground, Parc_Olympique_Lyonnais)",Olympique_Lyonnais,ground,Parc_Olympique_Lyonnais
+ont_5_athlete_test_49,SEMANTIC,0.96,"(Aleksandre_Guruli, club, Olympique_Lyonnais)",Aleksandre_Guruli,club,Olympique_Lyonnais,"(Aleksandre_Guruli, formerTeam, Olympique_Lyonnais)",Aleksandre_Guruli,formerTeam,Olympique_Lyonnais
+ont_5_athlete_test_49,MISSING,,"(Aleksandre_Guruli, club, FC_Karpaty_Lviv)",Aleksandre_Guruli,club,FC_Karpaty_Lviv,,,,
+ont_5_athlete_test_5,MISSING,,"(Aaron_Hunt, club, Hamburger_SV)",Aaron_Hunt,club,Hamburger_SV,,,,
+ont_5_athlete_test_5,MISSING,,"(SV_Werder_Bremen_II, manager, Alexander_Nouri)",SV_Werder_Bremen_II,manager,Alexander_Nouri,,,,
+ont_5_athlete_test_5,MISSING,,"(Aaron_Hunt, club, SV_Werder_Bremen_II)",Aaron_Hunt,club,SV_Werder_Bremen_II,,,,
+ont_5_athlete_test_50,SEMANTIC,0.98,"(Aleksandre_Guruli, height, 178.0 (centimetres))",Aleksandre_Guruli,height,178.0 (centimetres),"(Aleksandre_Guruli, height, 178.0)",Aleksandre_Guruli,height,178.0
+ont_5_athlete_test_50,MISSING,,"(Aleksandre_Guruli, club, FC_Karpaty_Lviv)",Aleksandre_Guruli,club,FC_Karpaty_Lviv,,,,
+ont_5_athlete_test_50,MISSING,,"(Aleksandre_Guruli, club, AS_Lyon-Duchère)",Aleksandre_Guruli,club,AS_Lyon-Duchère,,,,
+ont_5_athlete_test_51,SEMANTIC,0.98,"(Aleksandre_Guruli, height, 178.0 (centimetres))",Aleksandre_Guruli,height,178.0 (centimetres),"(Aleksandre_Guruli, height, 178.0)",Aleksandre_Guruli,height,178.0
+ont_5_athlete_test_51,MISSING,,"(Aleksandre_Guruli, club, AZAL_PFK)",Aleksandre_Guruli,club,AZAL_PFK,,,,
+ont_5_athlete_test_51,MISSING,,"(Aleksandre_Guruli, club, FC_Karpaty_Lviv)",Aleksandre_Guruli,club,FC_Karpaty_Lviv,,,,
+ont_5_athlete_test_51,EXTRA,,,,,,"(Aleksandre_Guruli, formerTeam, Shuvalan_FK)",Aleksandre_Guruli,formerTeam,Shuvalan_FK
+ont_5_athlete_test_52,SEMANTIC,0.98,"(Aleksandre_Guruli, height, 178.0 (centimetres))",Aleksandre_Guruli,height,178.0 (centimetres),"(Aleksandre_Guruli, height, 178.0)",Aleksandre_Guruli,height,178.0
+ont_5_athlete_test_52,MISSING,,"(Aleksandre_Guruli, club, FC_Karpaty_Lviv)",Aleksandre_Guruli,club,FC_Karpaty_Lviv,,,,
+ont_5_athlete_test_52,MISSING,,"(Aleksandre_Guruli, club, FC_Dinamo_Batumi)",Aleksandre_Guruli,club,FC_Dinamo_Batumi,,,,
+ont_5_athlete_test_53,SEMANTIC,0.98,"(Aleksandre_Guruli, height, 178.0 (centimetres))",Aleksandre_Guruli,height,178.0 (centimetres),"(Aleksandre_Guruli, height, 178.0)",Aleksandre_Guruli,height,178.0
+ont_5_athlete_test_53,SEMANTIC,0.96,"(Aleksandre_Guruli, club, Georgia_national_football_team)",Aleksandre_Guruli,club,Georgia_national_football_team,"(Aleksandre_Guruli, isPartOf, Georgia_national_football_team)",Aleksandre_Guruli,isPartOf,Georgia_national_football_team
+ont_5_athlete_test_53,MISSING,,"(Aleksandre_Guruli, club, FC_Karpaty_Lviv)",Aleksandre_Guruli,club,FC_Karpaty_Lviv,,,,
+ont_5_athlete_test_54,MISSING,,"(FC_Samtredia, ground, Erosi_Manjgaladze_Stadium)",FC_Samtredia,ground,Erosi_Manjgaladze_Stadium,,,,
+ont_5_athlete_test_54,MISSING,,"(Aleksandre_Guruli, club, FC_Karpaty_Lviv)",Aleksandre_Guruli,club,FC_Karpaty_Lviv,,,,
+ont_5_athlete_test_54,MISSING,,"(Aleksandre_Guruli, club, FC_Samtredia)",Aleksandre_Guruli,club,FC_Samtredia,,,,
+ont_5_athlete_test_55,EXACT,1.00,"(Olympique_Lyonnais, ground, Parc_Olympique_Lyonnais)",Olympique_Lyonnais,ground,Parc_Olympique_Lyonnais,"(Olympique_Lyonnais, ground, Parc_Olympique_Lyonnais)",Olympique_Lyonnais,ground,Parc_Olympique_Lyonnais
+ont_5_athlete_test_55,SEMANTIC,0.96,"(Aleksandre_Guruli, club, Olympique_Lyonnais)",Aleksandre_Guruli,club,Olympique_Lyonnais,"(Aleksandre_Guruli, formerTeam, Olympique_Lyonnais)",Aleksandre_Guruli,formerTeam,Olympique_Lyonnais
+ont_5_athlete_test_55,MISSING,,"(Aleksandre_Guruli, club, FC_Samtredia)",Aleksandre_Guruli,club,FC_Samtredia,,,,
+ont_5_athlete_test_56,EXACT,1.00,"(Olympique_Lyonnais, ground, Parc_Olympique_Lyonnais)",Olympique_Lyonnais,ground,Parc_Olympique_Lyonnais,"(Olympique_Lyonnais, ground, Parc_Olympique_Lyonnais)",Olympique_Lyonnais,ground,Parc_Olympique_Lyonnais
+ont_5_athlete_test_56,EXACT,1.00,"(Aleksandre_Guruli, club, Olympique_Lyonnais)",Aleksandre_Guruli,club,Olympique_Lyonnais,"(Aleksandre_Guruli, club, Olympique_Lyonnais)",Aleksandre_Guruli,club,Olympique_Lyonnais
+ont_5_athlete_test_56,MISSING,,"(Aleksandre_Guruli, club, FC_Dila_Gori)",Aleksandre_Guruli,club,FC_Dila_Gori,,,,
+ont_5_athlete_test_57,EXACT,1.00,"(Olympique_Lyonnais, ground, Parc_Olympique_Lyonnais)",Olympique_Lyonnais,ground,Parc_Olympique_Lyonnais,"(Olympique_Lyonnais, ground, Parc_Olympique_Lyonnais)",Olympique_Lyonnais,ground,Parc_Olympique_Lyonnais
+ont_5_athlete_test_57,EXACT,1.00,"(Aleksandre_Guruli, club, Olympique_Lyonnais)",Aleksandre_Guruli,club,Olympique_Lyonnais,"(Aleksandre_Guruli, club, Olympique_Lyonnais)",Aleksandre_Guruli,club,Olympique_Lyonnais
+ont_5_athlete_test_57,MISSING,,"(Aleksandre_Guruli, club, FC_Dinamo_Batumi)",Aleksandre_Guruli,club,FC_Dinamo_Batumi,,,,
+ont_5_athlete_test_58,EXACT,1.00,"(Olympique_Lyonnais, ground, Parc_Olympique_Lyonnais)",Olympique_Lyonnais,ground,Parc_Olympique_Lyonnais,"(Olympique_Lyonnais, ground, Parc_Olympique_Lyonnais)",Olympique_Lyonnais,ground,Parc_Olympique_Lyonnais
+ont_5_athlete_test_58,SEMANTIC,0.96,"(Aleksandre_Guruli, club, Olympique_Lyonnais)",Aleksandre_Guruli,club,Olympique_Lyonnais,"(Aleksandre_Guruli, formerTeam, Olympique_Lyonnais)",Aleksandre_Guruli,formerTeam,Olympique_Lyonnais
+ont_5_athlete_test_58,MISSING,,"(Aleksandre_Guruli, club, FC_Zestafoni)",Aleksandre_Guruli,club,FC_Zestafoni,,,,
+ont_5_athlete_test_59,EXACT,1.00,"(Olympique_Lyonnais, ground, Parc_Olympique_Lyonnais)",Olympique_Lyonnais,ground,Parc_Olympique_Lyonnais,"(Olympique_Lyonnais, ground, Parc_Olympique_Lyonnais)",Olympique_Lyonnais,ground,Parc_Olympique_Lyonnais
+ont_5_athlete_test_59,EXACT,1.00,"(Aleksandre_Guruli, club, Olympique_Lyonnais)",Aleksandre_Guruli,club,Olympique_Lyonnais,"(Aleksandre_Guruli, club, Olympique_Lyonnais)",Aleksandre_Guruli,club,Olympique_Lyonnais
+ont_5_athlete_test_59,MISSING,,"(Aleksandre_Guruli, club, US_Boulogne)",Aleksandre_Guruli,club,US_Boulogne,,,,
+ont_5_athlete_test_6,MISSING,,"(Aaron_Hunt, club, Hamburger_SV)",Aaron_Hunt,club,Hamburger_SV,,,,
+ont_5_athlete_test_6,MISSING,,"(SV_Werder_Bremen, manager, Viktor_Skrypnyk)",SV_Werder_Bremen,manager,Viktor_Skrypnyk,,,,
+ont_5_athlete_test_6,MISSING,,"(Aaron_Hunt, club, SV_Werder_Bremen)",Aaron_Hunt,club,SV_Werder_Bremen,,,,
+ont_5_athlete_test_60,EXACT,1.00,"(Alex_Plante, birthPlace, Brandon,_Manitoba)",Alex_Plante,birthPlace,"Brandon,_Manitoba","(Alex_Plante, birthPlace, Brandon,_Manitoba)",Alex_Plante,birthPlace,"Brandon,_Manitoba"
+ont_5_athlete_test_60,EXACT,1.00,"(Alex_Plante, birthYear, 1989)",Alex_Plante,birthYear,1989,"(Alex_Plante, birthYear, 1989)",Alex_Plante,birthYear,1989
+ont_5_athlete_test_60,SEMANTIC,0.96,"(Alex_Plante, club, Anyang_Halla)",Alex_Plante,club,Anyang_Halla,"(Alex_Plante, club, HL_Anyang)",Alex_Plante,club,HL_Anyang
+ont_5_athlete_test_61,EXACT,1.00,"(Alex_Plante, birthPlace, Canada)",Alex_Plante,birthPlace,Canada,"(Alex_Plante, birthPlace, Canada)",Alex_Plante,birthPlace,Canada
+ont_5_athlete_test_61,EXACT,1.00,"(Alex_Plante, birthYear, 1989)",Alex_Plante,birthYear,1989,"(Alex_Plante, birthYear, 1989)",Alex_Plante,birthYear,1989
+ont_5_athlete_test_61,SEMANTIC,0.96,"(Alex_Plante, club, Anyang_Halla)",Alex_Plante,club,Anyang_Halla,"(Alex_Plante, club, HL_Anyang)",Alex_Plante,club,HL_Anyang
+ont_5_athlete_test_62,EXACT,1.00,"(Alex_Plante, birthPlace, Manitoba)",Alex_Plante,birthPlace,Manitoba,"(Alex_Plante, birthPlace, Manitoba)",Alex_Plante,birthPlace,Manitoba
+ont_5_athlete_test_62,EXACT,1.00,"(Alex_Plante, height, 1.9304)",Alex_Plante,height,1.9304,"(Alex_Plante, height, 1.9304)",Alex_Plante,height,1.9304
+ont_5_athlete_test_62,SEMANTIC,0.96,"(Alex_Plante, club, Anyang_Halla)",Alex_Plante,club,Anyang_Halla,"(Alex_Plante, club, HL_Anyang)",Alex_Plante,club,HL_Anyang
+ont_5_athlete_test_63,MISSING,,"(FC_Samtredia, ground, Erosi_Manjgaladze_Stadium)",FC_Samtredia,ground,Erosi_Manjgaladze_Stadium,,,,
+ont_5_athlete_test_63,MISSING,,"(Aleksandre_Guruli, club, FC_Samtredia)",Aleksandre_Guruli,club,FC_Samtredia,,,,
+ont_5_athlete_test_63,MISSING,,"(Aleksandre_Guruli, club, FC_Dinamo_Batumi)",Aleksandre_Guruli,club,FC_Dinamo_Batumi,,,,
+ont_5_athlete_test_64,EXACT,1.00,"(Akeem_Ayers, debutTeam, Tennessee_Titans)",Akeem_Ayers,debutTeam,Tennessee_Titans,"(Akeem_Ayers, debutTeam, Tennessee_Titans)",Akeem_Ayers,debutTeam,Tennessee_Titans
+ont_5_athlete_test_64,EXACT,1.00,"(Akeem_Ayers, formerTeam, Los_Angeles_Rams)",Akeem_Ayers,formerTeam,Los_Angeles_Rams,"(Akeem_Ayers, formerTeam, Los_Angeles_Rams)",Akeem_Ayers,formerTeam,Los_Angeles_Rams
+ont_5_athlete_test_64,SEMANTIC,0.94,"(Los_Angeles_Rams, city, Los_Angeles)",Los_Angeles_Rams,city,Los_Angeles,"(Los_Angeles_Rams, ground, Los_Angeles)",Los_Angeles_Rams,ground,Los_Angeles
+ont_5_athlete_test_65,EXACT,1.00,"(Akeem_Ayers, formerTeam, Los_Angeles_Rams)",Akeem_Ayers,formerTeam,Los_Angeles_Rams,"(Akeem_Ayers, formerTeam, Los_Angeles_Rams)",Akeem_Ayers,formerTeam,Los_Angeles_Rams
+ont_5_athlete_test_65,SEMANTIC,0.97,"(Los_Angeles_Rams, city, Los_Angeles_Memorial_Coliseum)",Los_Angeles_Rams,city,Los_Angeles_Memorial_Coliseum,"(Los_Angeles_Rams, ground, Los_Angeles_Memorial_Coliseum)",Los_Angeles_Rams,ground,Los_Angeles_Memorial_Coliseum
+ont_5_athlete_test_65,MISSING,,"(Los_Angeles_Rams, city, Los_Angeles)",Los_Angeles_Rams,city,Los_Angeles,,,,
+ont_5_athlete_test_66,MISSING,,"(Aaron_Hunt, club, Goslarer_SC_08)",Aaron_Hunt,club,Goslarer_SC_08,,,,
+ont_5_athlete_test_66,MISSING,,"(SV_Werder_Bremen_II, manager, Alexander_Nouri)",SV_Werder_Bremen_II,manager,Alexander_Nouri,,,,
+ont_5_athlete_test_66,MISSING,,"(Aaron_Hunt, club, SV_Werder_Bremen_II)",Aaron_Hunt,club,SV_Werder_Bremen_II,,,,
+ont_5_athlete_test_67,EXACT,1.00,"(Akeem_Ayers, debutTeam, Tennessee_Titans)",Akeem_Ayers,debutTeam,Tennessee_Titans,"(Akeem_Ayers, debutTeam, Tennessee_Titans)",Akeem_Ayers,debutTeam,Tennessee_Titans
+ont_5_athlete_test_67,EXACT,1.00,"(Akeem_Ayers, formerTeam, Los_Angeles_Rams)",Akeem_Ayers,formerTeam,Los_Angeles_Rams,"(Akeem_Ayers, formerTeam, Los_Angeles_Rams)",Akeem_Ayers,formerTeam,Los_Angeles_Rams
+ont_5_athlete_test_67,SEMANTIC,0.95,"(Tennessee_Titans, city, Nashville,_Tennessee)",Tennessee_Titans,city,"Nashville,_Tennessee","(Tennessee_Titans, ground, Nashville,_Tennessee)",Tennessee_Titans,ground,"Nashville,_Tennessee"
+ont_5_athlete_test_68,EXACT,1.00,"(Aaron_Hunt, club, VfL_Wolfsburg)",Aaron_Hunt,club,VfL_Wolfsburg,"(Aaron_Hunt, club, VfL_Wolfsburg)",Aaron_Hunt,club,VfL_Wolfsburg
+ont_5_athlete_test_68,EXACT,1.00,"(VfL_Wolfsburg, manager, Dieter_Hecking)",VfL_Wolfsburg,manager,Dieter_Hecking,"(VfL_Wolfsburg, manager, Dieter_Hecking)",VfL_Wolfsburg,manager,Dieter_Hecking
+ont_5_athlete_test_68,MISSING,,"(Aaron_Hunt, club, SV_Werder_Bremen)",Aaron_Hunt,club,SV_Werder_Bremen,,,,
+ont_5_athlete_test_69,EXACT,1.00,"(Aaron_Hunt, club, VfL_Wolfsburg)",Aaron_Hunt,club,VfL_Wolfsburg,"(Aaron_Hunt, club, VfL_Wolfsburg)",Aaron_Hunt,club,VfL_Wolfsburg
+ont_5_athlete_test_69,EXACT,1.00,"(VfL_Wolfsburg, manager, Dieter_Hecking)",VfL_Wolfsburg,manager,Dieter_Hecking,"(VfL_Wolfsburg, manager, Dieter_Hecking)",VfL_Wolfsburg,manager,Dieter_Hecking
+ont_5_athlete_test_69,MISSING,,"(Aaron_Hunt, club, Goslarer_SC_08)",Aaron_Hunt,club,Goslarer_SC_08,,,,
+ont_5_athlete_test_7,MISSING,,"(Aaron_Hunt, club, Goslarer_SC_08)",Aaron_Hunt,club,Goslarer_SC_08,,,,
+ont_5_athlete_test_7,MISSING,,"(Aaron_Hunt, youthclub, SV_Werder_Bremen)",Aaron_Hunt,youthclub,SV_Werder_Bremen,,,,
+ont_5_athlete_test_7,MISSING,,"(Aaron_Hunt, club, SV_Werder_Bremen_II)",Aaron_Hunt,club,SV_Werder_Bremen_II,,,,
+ont_5_athlete_test_70,EXACT,1.00,"(Piotr_Hallmann, birthDate, 1987-08-25)",Piotr_Hallmann,birthDate,1987-08-25,"(Piotr_Hallmann, birthDate, 1987-08-25)",Piotr_Hallmann,birthDate,1987-08-25
+ont_5_athlete_test_71,MISSING,,"(Gdynia,_Poland, utcOffset, +2)","Gdynia,_Poland",utcOffset,+2,,,,
+ont_5_athlete_test_72,MISSING,,"(Gdynia,_Poland, timeZone, Central_European_Summer_Time)","Gdynia,_Poland",timeZone,Central_European_Summer_Time,,,,
+ont_5_athlete_test_73,SEMANTIC,0.98,"(Gdynia,_Poland, leaderTitle, Mayor)","Gdynia,_Poland",leaderTitle,Mayor,"(Gdynia, leaderTitle, mayor)",Gdynia,leaderTitle,mayor
+ont_5_athlete_test_74,EXACT,1.00,"(Akeem_Ayers, birthYear, 1989)",Akeem_Ayers,birthYear,1989,"(Akeem_Ayers, birthYear, 1989)",Akeem_Ayers,birthYear,1989
+ont_5_athlete_test_74,EXACT,1.00,"(Akeem_Ayers, debutTeam, Tennessee_Titans)",Akeem_Ayers,debutTeam,Tennessee_Titans,"(Akeem_Ayers, debutTeam, Tennessee_Titans)",Akeem_Ayers,debutTeam,Tennessee_Titans
+ont_5_athlete_test_75,EXACT,1.00,"(Piotr_Hallmann, weight, 70.308)",Piotr_Hallmann,weight,70.308,"(Piotr_Hallmann, weight, 70.308)",Piotr_Hallmann,weight,70.308
+ont_5_athlete_test_75,EXACT,1.00,"(Piotr_Hallmann, height, 175.26)",Piotr_Hallmann,height,175.26,"(Piotr_Hallmann, height, 175.26)",Piotr_Hallmann,height,175.26
+ont_5_athlete_test_75,SEMANTIC,0.96,"(Piotr_Hallmann, birthPlace, Gdynia,_Poland)",Piotr_Hallmann,birthPlace,"Gdynia,_Poland","(Piotr_Hallmann, birthPlace, Gdynia)",Piotr_Hallmann,birthPlace,Gdynia
+ont_5_athlete_test_76,EXACT,1.00,"(Piotr_Hallmann, birthDate, 1987-08-25)",Piotr_Hallmann,birthDate,1987-08-25,"(Piotr_Hallmann, birthDate, 1987-08-25)",Piotr_Hallmann,birthDate,1987-08-25
+ont_5_athlete_test_76,EXACT,1.00,"(Piotr_Hallmann, height, 175.26)",Piotr_Hallmann,height,175.26,"(Piotr_Hallmann, height, 175.26)",Piotr_Hallmann,height,175.26
+ont_5_athlete_test_76,EXACT,1.00,"(Piotr_Hallmann, weight, 70.308)",Piotr_Hallmann,weight,70.308,"(Piotr_Hallmann, weight, 70.308)",Piotr_Hallmann,weight,70.308
+ont_5_athlete_test_76,SEMANTIC,0.96,"(Piotr_Hallmann, birthPlace, Gdynia,_Poland)",Piotr_Hallmann,birthPlace,"Gdynia,_Poland","(Piotr_Hallmann, birthPlace, Gdynia)",Piotr_Hallmann,birthPlace,Gdynia
+ont_5_athlete_test_77,EXACT,1.00,"(Piotr_Hallmann, weight, 70.308)",Piotr_Hallmann,weight,70.308,"(Piotr_Hallmann, weight, 70.308)",Piotr_Hallmann,weight,70.308
+ont_5_athlete_test_77,SEMANTIC,0.96,"(Piotr_Hallmann, birthPlace, Gdynia,_Poland)",Piotr_Hallmann,birthPlace,"Gdynia,_Poland","(Piotr_Hallmann, birthPlace, Gdynia)",Piotr_Hallmann,birthPlace,Gdynia
+ont_5_athlete_test_77,MISSING,,"(Gdynia,_Poland, timeZone, Central_European_Time)","Gdynia,_Poland",timeZone,Central_European_Time,,,,
+ont_5_athlete_test_78,EXACT,1.00,"(Piotr_Hallmann, height, 175.26)",Piotr_Hallmann,height,175.26,"(Piotr_Hallmann, height, 175.26)",Piotr_Hallmann,height,175.26
+ont_5_athlete_test_78,EXACT,1.00,"(Piotr_Hallmann, weight, 70.308)",Piotr_Hallmann,weight,70.308,"(Piotr_Hallmann, weight, 70.308)",Piotr_Hallmann,weight,70.308
+ont_5_athlete_test_79,SEMANTIC,0.96,"(Piotr_Hallmann, birthPlace, Gdynia,_Poland)",Piotr_Hallmann,birthPlace,"Gdynia,_Poland","(Piotr_Hallmann, birthPlace, Gdynia)",Piotr_Hallmann,birthPlace,Gdynia
+ont_5_athlete_test_79,SEMANTIC,0.99,"(Piotr_Hallmann, height, 175.26)",Piotr_Hallmann,height,175.26,"(Piotr_Hallmann, height, 175.26 cm)",Piotr_Hallmann,height,175.26 cm
+ont_5_athlete_test_8,EXACT,1.00,"(Aaron_Hunt, club, VfL_Wolfsburg)",Aaron_Hunt,club,VfL_Wolfsburg,"(Aaron_Hunt, club, VfL_Wolfsburg)",Aaron_Hunt,club,VfL_Wolfsburg
+ont_5_athlete_test_8,MISSING,,"(Aaron_Hunt, club, Goslarer_SC_08)",Aaron_Hunt,club,Goslarer_SC_08,,,,
+ont_5_athlete_test_8,MISSING,,"(Aaron_Hunt, youthclub, SV_Werder_Bremen)",Aaron_Hunt,youthclub,SV_Werder_Bremen,,,,
+ont_5_athlete_test_80,EXACT,1.00,"(Piotr_Hallmann, weight, 70.308)",Piotr_Hallmann,weight,70.308,"(Piotr_Hallmann, weight, 70.308)",Piotr_Hallmann,weight,70.308
+ont_5_athlete_test_80,SEMANTIC,0.96,"(Piotr_Hallmann, birthPlace, Gdynia,_Poland)",Piotr_Hallmann,birthPlace,"Gdynia,_Poland","(Piotr_Hallmann, birthPlace, Gdynia)",Piotr_Hallmann,birthPlace,Gdynia
+ont_5_athlete_test_81,MISSING,,"(Gdynia,_Poland, timeZone, Central_European_Time)","Gdynia,_Poland",timeZone,Central_European_Time,,,,
+ont_5_athlete_test_82,EXACT,1.00,"(Piotr_Hallmann, birthDate, 1987-08-25)",Piotr_Hallmann,birthDate,1987-08-25,"(Piotr_Hallmann, birthDate, 1987-08-25)",Piotr_Hallmann,birthDate,1987-08-25
+ont_5_athlete_test_82,EXACT,1.00,"(Piotr_Hallmann, weight, 70.308)",Piotr_Hallmann,weight,70.308,"(Piotr_Hallmann, weight, 70.308)",Piotr_Hallmann,weight,70.308
+ont_5_athlete_test_83,EXACT,1.00,"(Piotr_Hallmann, weight, 70.308)",Piotr_Hallmann,weight,70.308,"(Piotr_Hallmann, weight, 70.308)",Piotr_Hallmann,weight,70.308
+ont_5_athlete_test_84,EXACT,1.00,"(Piotr_Hallmann, birthDate, 1987-08-25)",Piotr_Hallmann,birthDate,1987-08-25,"(Piotr_Hallmann, birthDate, 1987-08-25)",Piotr_Hallmann,birthDate,1987-08-25
+ont_5_athlete_test_84,EXACT,1.00,"(Piotr_Hallmann, height, 175.26)",Piotr_Hallmann,height,175.26,"(Piotr_Hallmann, height, 175.26)",Piotr_Hallmann,height,175.26
+ont_5_athlete_test_85,EXACT,1.00,"(Piotr_Hallmann, birthDate, 1987-08-25)",Piotr_Hallmann,birthDate,1987-08-25,"(Piotr_Hallmann, birthDate, 1987-08-25)",Piotr_Hallmann,birthDate,1987-08-25
+ont_5_athlete_test_85,EXACT,1.00,"(Piotr_Hallmann, weight, 70.308)",Piotr_Hallmann,weight,70.308,"(Piotr_Hallmann, weight, 70.308)",Piotr_Hallmann,weight,70.308
+ont_5_athlete_test_85,SEMANTIC,0.96,"(Piotr_Hallmann, birthPlace, Gdynia,_Poland)",Piotr_Hallmann,birthPlace,"Gdynia,_Poland","(Piotr_Hallmann, birthPlace, Gdynia)",Piotr_Hallmann,birthPlace,Gdynia
+ont_5_athlete_test_85,MISSING,,"(Gdynia,_Poland, areaTotal, 135000000.0)","Gdynia,_Poland",areaTotal,135000000.0,,,,
+ont_5_athlete_test_85,MISSING,,"(Gdynia,_Poland, foundingDate, 1926-02-10)","Gdynia,_Poland",foundingDate,1926-02-10,,,,
+ont_5_athlete_test_86,EXACT,1.00,"(Piotr_Hallmann, birthDate, 1987-08-25)",Piotr_Hallmann,birthDate,1987-08-25,"(Piotr_Hallmann, birthDate, 1987-08-25)",Piotr_Hallmann,birthDate,1987-08-25
+ont_5_athlete_test_86,EXACT,1.00,"(Piotr_Hallmann, height, 175.26)",Piotr_Hallmann,height,175.26,"(Piotr_Hallmann, height, 175.26)",Piotr_Hallmann,height,175.26
+ont_5_athlete_test_86,SEMANTIC,0.96,"(Piotr_Hallmann, birthPlace, Gdynia,_Poland)",Piotr_Hallmann,birthPlace,"Gdynia,_Poland","(Piotr_Hallmann, birthPlace, Gdynia)",Piotr_Hallmann,birthPlace,Gdynia
+ont_5_athlete_test_87,EXACT,1.00,"(Akeem_Ayers, activeYearsStartYear, 2011)",Akeem_Ayers,activeYearsStartYear,2011,"(Akeem_Ayers, activeYearsStartYear, 2011)",Akeem_Ayers,activeYearsStartYear,2011
+ont_5_athlete_test_87,EXACT,1.00,"(Akeem_Ayers, debutTeam, Tennessee_Titans)",Akeem_Ayers,debutTeam,Tennessee_Titans,"(Akeem_Ayers, debutTeam, Tennessee_Titans)",Akeem_Ayers,debutTeam,Tennessee_Titans
+ont_5_athlete_test_88,EXACT,1.00,"(Piotr_Hallmann, birthDate, 1987-08-25)",Piotr_Hallmann,birthDate,1987-08-25,"(Piotr_Hallmann, birthDate, 1987-08-25)",Piotr_Hallmann,birthDate,1987-08-25
+ont_5_athlete_test_88,EXACT,1.00,"(Piotr_Hallmann, weight, 70.308)",Piotr_Hallmann,weight,70.308,"(Piotr_Hallmann, weight, 70.308)",Piotr_Hallmann,weight,70.308
+ont_5_athlete_test_88,EXACT,1.00,"(Piotr_Hallmann, height, 175.26)",Piotr_Hallmann,height,175.26,"(Piotr_Hallmann, height, 175.26)",Piotr_Hallmann,height,175.26
+ont_5_athlete_test_89,EXACT,1.00,"(Akeem_Ayers, birthDate, 1989-07-10)",Akeem_Ayers,birthDate,1989-07-10,"(Akeem_Ayers, birthDate, 1989-07-10)",Akeem_Ayers,birthDate,1989-07-10
+ont_5_athlete_test_89,EXACT,1.00,"(Akeem_Ayers, debutTeam, Tennessee_Titans)",Akeem_Ayers,debutTeam,Tennessee_Titans,"(Akeem_Ayers, debutTeam, Tennessee_Titans)",Akeem_Ayers,debutTeam,Tennessee_Titans
+ont_5_athlete_test_9,EXACT,1.00,"(Aaron_Hunt, club, VfL_Wolfsburg)",Aaron_Hunt,club,VfL_Wolfsburg,"(Aaron_Hunt, club, VfL_Wolfsburg)",Aaron_Hunt,club,VfL_Wolfsburg
+ont_5_athlete_test_9,MISSING,,"(Aaron_Hunt, club, Hamburger_SV)",Aaron_Hunt,club,Hamburger_SV,,,,
+ont_5_athlete_test_9,MISSING,,"(Aaron_Hunt, youthclub, SV_Werder_Bremen)",Aaron_Hunt,youthclub,SV_Werder_Bremen,,,,
+ont_5_athlete_test_90,EXACT,1.00,"(Piotr_Hallmann, height, 175.26)",Piotr_Hallmann,height,175.26,"(Piotr_Hallmann, height, 175.26)",Piotr_Hallmann,height,175.26
+ont_5_athlete_test_90,SEMANTIC,0.96,"(Piotr_Hallmann, birthPlace, Gdynia,_Poland)",Piotr_Hallmann,birthPlace,"Gdynia,_Poland","(Piotr_Hallmann, birthPlace, Gdynia)",Piotr_Hallmann,birthPlace,Gdynia
+ont_5_athlete_test_90,MISSING,,"(Gdynia,_Poland, timeZone, Central_European_Time)","Gdynia,_Poland",timeZone,Central_European_Time,,,,
+ont_5_athlete_test_90,MISSING,,"(Gdynia,_Poland, timeZone, Central_European_Summer_Time)","Gdynia,_Poland",timeZone,Central_European_Summer_Time,,,,
+ont_5_athlete_test_90,EXTRA,,,,,,"(Piotr_Hallmann, timeZone, Central_European_Summer_Time)",Piotr_Hallmann,timeZone,Central_European_Summer_Time
+ont_5_athlete_test_91,EXACT,1.00,"(Piotr_Hallmann, birthDate, 1987-08-25)",Piotr_Hallmann,birthDate,1987-08-25,"(Piotr_Hallmann, birthDate, 1987-08-25)",Piotr_Hallmann,birthDate,1987-08-25
+ont_5_athlete_test_91,SEMANTIC,0.96,"(Piotr_Hallmann, birthPlace, Gdynia,_Poland)",Piotr_Hallmann,birthPlace,"Gdynia,_Poland","(Piotr_Hallmann, birthPlace, Gdynia)",Piotr_Hallmann,birthPlace,Gdynia
+ont_5_athlete_test_92,SEMANTIC,0.96,"(Piotr_Hallmann, birthPlace, Gdynia,_Poland)",Piotr_Hallmann,birthPlace,"Gdynia,_Poland","(Piotr_Hallmann, birthPlace, Gdynia)",Piotr_Hallmann,birthPlace,Gdynia
+ont_5_athlete_test_92,MISSING,,"(Gdynia,_Poland, leaderTitle, Mayor)","Gdynia,_Poland",leaderTitle,Mayor,,,,
+ont_5_athlete_test_93,MISSING,,"(Gdynia,_Poland, areaTotal, 135000000.0)","Gdynia,_Poland",areaTotal,135000000.0,,,,
+ont_5_athlete_test_94,EXACT,1.00,"(Akeem_Ayers, draftRound, 2)",Akeem_Ayers,draftRound,2,"(Akeem_Ayers, draftRound, 2)",Akeem_Ayers,draftRound,2
+ont_5_athlete_test_94,EXACT,1.00,"(Akeem_Ayers, debutTeam, Tennessee_Titans)",Akeem_Ayers,debutTeam,Tennessee_Titans,"(Akeem_Ayers, debutTeam, Tennessee_Titans)",Akeem_Ayers,debutTeam,Tennessee_Titans
+ont_5_athlete_test_95,EXACT,1.00,"(Piotr_Hallmann, weight, 70.308)",Piotr_Hallmann,weight,70.308,"(Piotr_Hallmann, weight, 70.308)",Piotr_Hallmann,weight,70.308
+ont_5_athlete_test_95,SEMANTIC,0.96,"(Piotr_Hallmann, birthPlace, Gdynia,_Poland)",Piotr_Hallmann,birthPlace,"Gdynia,_Poland","(Piotr_Hallmann, birthPlace, Gdynia)",Piotr_Hallmann,birthPlace,Gdynia
+ont_5_athlete_test_95,MISSING,,"(Gdynia,_Poland, timeZone, Central_European_Time)","Gdynia,_Poland",timeZone,Central_European_Time,,,,
+ont_5_athlete_test_95,MISSING,,"(Gdynia,_Poland, timeZone, Central_European_Summer_Time)","Gdynia,_Poland",timeZone,Central_European_Summer_Time,,,,
+ont_5_athlete_test_95,EXTRA,,,,,,"(Piotr_Hallmann, timeZone, Central_European_Summer_Time)",Piotr_Hallmann,timeZone,Central_European_Summer_Time
+ont_5_athlete_test_96,EXACT,1.00,"(Piotr_Hallmann, height, 175.26)",Piotr_Hallmann,height,175.26,"(Piotr_Hallmann, height, 175.26)",Piotr_Hallmann,height,175.26
+ont_5_athlete_test_97,EXACT,1.00,"(Aaron_Hunt, club, VfL_Wolfsburg)",Aaron_Hunt,club,VfL_Wolfsburg,"(Aaron_Hunt, club, VfL_Wolfsburg)",Aaron_Hunt,club,VfL_Wolfsburg
+ont_5_athlete_test_97,MISSING,,"(Aaron_Hunt, club, SV_Werder_Bremen_II)",Aaron_Hunt,club,SV_Werder_Bremen_II,,,,
+ont_5_athlete_test_97,MISSING,,"(Aaron_Hunt, youthclub, Goslarer_SC_08)",Aaron_Hunt,youthclub,Goslarer_SC_08,,,,
+ont_5_athlete_test_98,EXACT,1.00,"(Aaron_Hunt, club, VfL_Wolfsburg)",Aaron_Hunt,club,VfL_Wolfsburg,"(Aaron_Hunt, club, VfL_Wolfsburg)",Aaron_Hunt,club,VfL_Wolfsburg
+ont_5_athlete_test_98,MISSING,,"(Aaron_Hunt, youthclub, Goslarer_SC_08)",Aaron_Hunt,youthclub,Goslarer_SC_08,,,,
+ont_5_athlete_test_98,MISSING,,"(Aaron_Hunt, club, SV_Werder_Bremen)",Aaron_Hunt,club,SV_Werder_Bremen,,,,
+ont_5_athlete_test_99,MISSING,,"(Ahmad_Kadhim_Assad, club, Iraq_national_football_team)",Ahmad_Kadhim_Assad,club,Iraq_national_football_team,,,,
+ont_5_athlete_test_99,MISSING,,"(Ahmad_Kadhim_Assad, club, Esteghlal_Ahvaz_F.C.)",Ahmad_Kadhim_Assad,club,Esteghlal_Ahvaz_F.C.,,,,
+ont_5_athlete_test_99,MISSING,,"(Esteghlal_Ahvaz_F.C., manager, Adnan_Hamad)",Esteghlal_Ahvaz_F.C.,manager,Adnan_Hamad,,,,
+ont_5_athlete_test_99,EXTRA,,,,,,"(Iraq_national_football_team, manager, Adnan_Hamad)",Iraq_national_football_team,manager,Adnan_Hamad
+ont_5_athlete_test_99,EXTRA,,,,,,"(Ahmed_Kadhim, isPartOf, Iraq_national_football_team)",Ahmed_Kadhim,isPartOf,Iraq_national_football_team

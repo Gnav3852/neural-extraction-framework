@@ -1,0 +1,57 @@
+sent_id,match_type,similarity,expected,expected_sub,expected_rel,expected_obj,predicted,predicted_sub,predicted_rel,predicted_obj
+ont_12_monument_test_1,MISSING,,"(14th_New_Jersey_Volunteer_Infantry_Monument, district, Monocacy_National_Battlefield)",14th_New_Jersey_Volunteer_Infantry_Monument,district,Monocacy_National_Battlefield,,,,
+ont_12_monument_test_1,MISSING,,"(14th_New_Jersey_Volunteer_Infantry_Monument, established, 1907-07-11)",14th_New_Jersey_Volunteer_Infantry_Monument,established,1907-07-11,,,,
+ont_12_monument_test_1,MISSING,,"(14th_New_Jersey_Volunteer_Infantry_Monument, category, Historic_districts_in_the_United_States)",14th_New_Jersey_Volunteer_Infantry_Monument,category,Historic_districts_in_the_United_States,,,,
+ont_12_monument_test_10,MISSING,,"(Baku_Turkish_Martyrs'_Memorial, nativeName, Türk Şehitleri Anıtı)",Baku_Turkish_Martyrs'_Memorial,nativeName,Türk Şehitleri Anıtı,,,,
+ont_12_monument_test_10,MISSING,,"(Baku_Turkish_Martyrs'_Memorial, location, Azerbaijan)",Baku_Turkish_Martyrs'_Memorial,location,Azerbaijan,,,,
+ont_12_monument_test_10,MISSING,,"(Baku_Turkish_Martyrs'_Memorial, material, Red granite and white marble)",Baku_Turkish_Martyrs'_Memorial,material,Red granite and white marble,,,,
+ont_12_monument_test_11,MISSING,,"(Baku_Turkish_Martyrs'_Memorial, nativeName, Türk Şehitleri Anıtı)",Baku_Turkish_Martyrs'_Memorial,nativeName,Türk Şehitleri Anıtı,,,,
+ont_12_monument_test_11,MISSING,,"(Baku_Turkish_Martyrs'_Memorial, material, Red granite and white marble)",Baku_Turkish_Martyrs'_Memorial,material,Red granite and white marble,,,,
+ont_12_monument_test_11,MISSING,,"(Baku_Turkish_Martyrs'_Memorial, designer, Hüseyin Bütüner and Hilmi Güner)",Baku_Turkish_Martyrs'_Memorial,designer,Hüseyin Bütüner and Hilmi Güner,,,,
+ont_12_monument_test_12,EXACT,1.00,"(Monocacy_National_Battlefield, location, Frederick_County,_Maryland)",Monocacy_National_Battlefield,location,"Frederick_County,_Maryland","(Monocacy_National_Battlefield, location, Frederick_County,_Maryland)",Monocacy_National_Battlefield,location,"Frederick_County,_Maryland"
+ont_12_monument_test_12,MISSING,,"(14th_New_Jersey_Volunteer_Infantry_Monument, district, Monocacy_National_Battlefield)",14th_New_Jersey_Volunteer_Infantry_Monument,district,Monocacy_National_Battlefield,,,,
+ont_12_monument_test_12,MISSING,,"(14th_New_Jersey_Volunteer_Infantry_Monument, category, Historic_districts_in_the_United_States)",14th_New_Jersey_Volunteer_Infantry_Monument,category,Historic_districts_in_the_United_States,,,,
+ont_12_monument_test_13,MISSING,,"(Monocacy_National_Battlefield, nearestCity, Frederick,_Maryland)",Monocacy_National_Battlefield,nearestCity,"Frederick,_Maryland",,,,
+ont_12_monument_test_13,MISSING,,"(Monocacy_National_Battlefield, location, Frederick_County,_Maryland)",Monocacy_National_Battlefield,location,"Frederick_County,_Maryland",,,,
+ont_12_monument_test_13,MISSING,,"(14th_New_Jersey_Volunteer_Infantry_Monument, district, Monocacy_National_Battlefield)",14th_New_Jersey_Volunteer_Infantry_Monument,district,Monocacy_National_Battlefield,,,,
+ont_12_monument_test_14,SEMANTIC,0.99,"(Baku_Turkish_Martyrs'_Memorial, location, Azerbaijan)",Baku_Turkish_Martyrs'_Memorial,location,Azerbaijan,"(Baku_Turkish_Martyrs'_Memorial, country, Azerbaijan)",Baku_Turkish_Martyrs'_Memorial,country,Azerbaijan
+ont_12_monument_test_14,SEMANTIC,0.96,"(Baku_Turkish_Martyrs'_Memorial, nativeName, Türk Şehitleri Anıtı)",Baku_Turkish_Martyrs'_Memorial,nativeName,Türk Şehitleri Anıtı,"(Baku_Turkish_Martyrs'_Memorial, established, türk sehitleri aniti)",Baku_Turkish_Martyrs'_Memorial,established,türk sehitleri aniti
+ont_12_monument_test_15,MISSING,,"(Baku_Turkish_Martyrs'_Memorial, dedicatedTo, Ottoman Army soldiers killed in the Battle of Baku)",Baku_Turkish_Martyrs'_Memorial,dedicatedTo,Ottoman Army soldiers killed in the Battle of Baku,,,,
+ont_12_monument_test_15,MISSING,,"(Baku_Turkish_Martyrs'_Memorial, designer, Hüseyin Bütüner and Hilmi Güner)",Baku_Turkish_Martyrs'_Memorial,designer,Hüseyin Bütüner and Hilmi Güner,,,,
+ont_12_monument_test_16,EXACT,1.00,"(Azerbaijan, leader, Artur_Rasizade)",Azerbaijan,leader,Artur_Rasizade,"(Azerbaijan, leader, Artur_Rasizade)",Azerbaijan,leader,Artur_Rasizade
+ont_12_monument_test_16,SEMANTIC,0.99,"(Baku_Turkish_Martyrs'_Memorial, location, Azerbaijan)",Baku_Turkish_Martyrs'_Memorial,location,Azerbaijan,"(Baku_Turkish_Martyrs'_Memorial, country, Azerbaijan)",Baku_Turkish_Martyrs'_Memorial,country,Azerbaijan
+ont_12_monument_test_16,MISSING,,"(Baku_Turkish_Martyrs'_Memorial, dedicatedTo, Ottoman Army soldiers killed in the Battle of Baku)",Baku_Turkish_Martyrs'_Memorial,dedicatedTo,Ottoman Army soldiers killed in the Battle of Baku,,,,
+ont_12_monument_test_17,MISSING,,"(Baku_Turkish_Martyrs'_Memorial, dedicatedTo, Ottoman Army soldiers killed in the Battle of Baku)",Baku_Turkish_Martyrs'_Memorial,dedicatedTo,Ottoman Army soldiers killed in the Battle of Baku,,,,
+ont_12_monument_test_17,MISSING,,"(Baku_Turkish_Martyrs'_Memorial, location, Azerbaijan)",Baku_Turkish_Martyrs'_Memorial,location,Azerbaijan,,,,
+ont_12_monument_test_17,MISSING,,"(Baku_Turkish_Martyrs'_Memorial, designer, Hüseyin Bütüner and Hilmi Güner)",Baku_Turkish_Martyrs'_Memorial,designer,Hüseyin Bütüner and Hilmi Güner,,,,
+ont_12_monument_test_18,EXACT,1.00,"(Azerbaijan, leader, Artur_Rasizade)",Azerbaijan,leader,Artur_Rasizade,"(Azerbaijan, leader, Artur_Rasizade)",Azerbaijan,leader,Artur_Rasizade
+ont_12_monument_test_18,MISSING,,"(Baku_Turkish_Martyrs'_Memorial, location, Azerbaijan)",Baku_Turkish_Martyrs'_Memorial,location,Azerbaijan,,,,
+ont_12_monument_test_18,MISSING,,"(Baku_Turkish_Martyrs'_Memorial, designer, Hüseyin Bütüner and Hilmi Güner)",Baku_Turkish_Martyrs'_Memorial,designer,Hüseyin Bütüner and Hilmi Güner,,,,
+ont_12_monument_test_19,SEMANTIC,0.99,"(Baku_Turkish_Martyrs'_Memorial, location, Azerbaijan)",Baku_Turkish_Martyrs'_Memorial,location,Azerbaijan,"(Baku_Turkish_Martyrs'_Memorial, country, Azerbaijan)",Baku_Turkish_Martyrs'_Memorial,country,Azerbaijan
+ont_12_monument_test_19,MISSING,,"(Baku_Turkish_Martyrs'_Memorial, nativeName, Türk Şehitleri Anıtı)",Baku_Turkish_Martyrs'_Memorial,nativeName,Türk Şehitleri Anıtı,,,,
+ont_12_monument_test_19,MISSING,,"(Baku_Turkish_Martyrs'_Memorial, designer, Hüseyin Bütüner and Hilmi Güner)",Baku_Turkish_Martyrs'_Memorial,designer,Hüseyin Bütüner and Hilmi Güner,,,,
+ont_12_monument_test_19,EXTRA,,,,,,"(Baku_Turkish_Martyrs'_Memorial, language, turk sehitleri aniti)",Baku_Turkish_Martyrs'_Memorial,language,turk sehitleri aniti
+ont_12_monument_test_2,EXACT,1.00,"(Monocacy_National_Battlefield, nearestCity, Frederick,_Maryland)",Monocacy_National_Battlefield,nearestCity,"Frederick,_Maryland","(Monocacy_National_Battlefield, nearestCity, Frederick,_Maryland)",Monocacy_National_Battlefield,nearestCity,"Frederick,_Maryland"
+ont_12_monument_test_2,MISSING,,"(14th_New_Jersey_Volunteer_Infantry_Monument, district, Monocacy_National_Battlefield)",14th_New_Jersey_Volunteer_Infantry_Monument,district,Monocacy_National_Battlefield,,,,
+ont_12_monument_test_2,MISSING,,"(14th_New_Jersey_Volunteer_Infantry_Monument, category, Historic_districts_in_the_United_States)",14th_New_Jersey_Volunteer_Infantry_Monument,category,Historic_districts_in_the_United_States,,,,
+ont_12_monument_test_3,MISSING,,"(14th_New_Jersey_Volunteer_Infantry_Monument, owningOrganisation, National_Park_Service)",14th_New_Jersey_Volunteer_Infantry_Monument,owningOrganisation,National_Park_Service,,,,
+ont_12_monument_test_3,MISSING,,"(14th_New_Jersey_Volunteer_Infantry_Monument, established, 1907-07-11)",14th_New_Jersey_Volunteer_Infantry_Monument,established,1907-07-11,,,,
+ont_12_monument_test_3,MISSING,,"(14th_New_Jersey_Volunteer_Infantry_Monument, category, Historic_districts_in_the_United_States)",14th_New_Jersey_Volunteer_Infantry_Monument,category,Historic_districts_in_the_United_States,,,,
+ont_12_monument_test_4,MISSING,,"(14th_New_Jersey_Volunteer_Infantry_Monument, country, United States)",14th_New_Jersey_Volunteer_Infantry_Monument,country,United States,,,,
+ont_12_monument_test_4,MISSING,,"(14th_New_Jersey_Volunteer_Infantry_Monument, established, 1907-07-11)",14th_New_Jersey_Volunteer_Infantry_Monument,established,1907-07-11,,,,
+ont_12_monument_test_4,MISSING,,"(14th_New_Jersey_Volunteer_Infantry_Monument, category, Historic_districts_in_the_United_States)",14th_New_Jersey_Volunteer_Infantry_Monument,category,Historic_districts_in_the_United_States,,,,
+ont_12_monument_test_5,MISSING,,"(14th_New_Jersey_Volunteer_Infantry_Monument, established, 1907-07-11)",14th_New_Jersey_Volunteer_Infantry_Monument,established,1907-07-11,,,,
+ont_12_monument_test_5,MISSING,,"(Monocacy_National_Battlefield, nearestCity, Frederick,_Maryland)",Monocacy_National_Battlefield,nearestCity,"Frederick,_Maryland",,,,
+ont_12_monument_test_5,MISSING,,"(14th_New_Jersey_Volunteer_Infantry_Monument, district, Monocacy_National_Battlefield)",14th_New_Jersey_Volunteer_Infantry_Monument,district,Monocacy_National_Battlefield,,,,
+ont_12_monument_test_6,EXACT,1.00,"(Azerbaijan, capital, Baku)",Azerbaijan,capital,Baku,"(Azerbaijan, capital, Baku)",Azerbaijan,capital,Baku
+ont_12_monument_test_6,EXACT,1.00,"(Azerbaijan, leader, Artur_Rasizade)",Azerbaijan,leader,Artur_Rasizade,"(Azerbaijan, leader, Artur_Rasizade)",Azerbaijan,leader,Artur_Rasizade
+ont_12_monument_test_6,SEMANTIC,0.97,"(Baku_Turkish_Martyrs'_Memorial, location, Azerbaijan)",Baku_Turkish_Martyrs'_Memorial,location,Azerbaijan,"(Baku_Turkish_Martyrs'_Memorial, location, Baku)",Baku_Turkish_Martyrs'_Memorial,location,Baku
+ont_12_monument_test_7,EXACT,1.00,"(Azerbaijan, leader, Artur_Rasizade)",Azerbaijan,leader,Artur_Rasizade,"(Azerbaijan, leader, Artur_Rasizade)",Azerbaijan,leader,Artur_Rasizade
+ont_12_monument_test_7,MISSING,,"(Baku_Turkish_Martyrs'_Memorial, location, Azerbaijan)",Baku_Turkish_Martyrs'_Memorial,location,Azerbaijan,,,,
+ont_12_monument_test_7,MISSING,,"(Azerbaijan, leaderTitle, Prime_Minister_of_Azerbaijan)",Azerbaijan,leaderTitle,Prime_Minister_of_Azerbaijan,,,,
+ont_12_monument_test_8,EXACT,1.00,"(Azerbaijan, leaderTitle, Prime_Minister_of_Azerbaijan)",Azerbaijan,leaderTitle,Prime_Minister_of_Azerbaijan,"(Azerbaijan, leaderTitle, prime minister of azerbaijan)",Azerbaijan,leaderTitle,prime minister of azerbaijan
+ont_12_monument_test_8,MISSING,,"(Baku_Turkish_Martyrs'_Memorial, location, Azerbaijan)",Baku_Turkish_Martyrs'_Memorial,location,Azerbaijan,,,,
+ont_12_monument_test_8,MISSING,,"(Baku_Turkish_Martyrs'_Memorial, designer, Hüseyin Bütüner and Hilmi Güner)",Baku_Turkish_Martyrs'_Memorial,designer,Hüseyin Bütüner and Hilmi Güner,,,,
+ont_12_monument_test_9,MISSING,,"(Baku_Turkish_Martyrs'_Memorial, designer, Hüseyin Bütüner and Hilmi Güner)",Baku_Turkish_Martyrs'_Memorial,designer,Hüseyin Bütüner and Hilmi Güner,,,,
+ont_12_monument_test_9,MISSING,,"(Baku_Turkish_Martyrs'_Memorial, dedicatedTo, Ottoman Army soldiers killed in the Battle of Baku)",Baku_Turkish_Martyrs'_Memorial,dedicatedTo,Ottoman Army soldiers killed in the Battle of Baku,,,,
+ont_12_monument_test_9,MISSING,,"(Baku_Turkish_Martyrs'_Memorial, material, Red granite and white marble)",Baku_Turkish_Martyrs'_Memorial,material,Red granite and white marble,,,,

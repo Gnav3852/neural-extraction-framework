@@ -1,0 +1,458 @@
+sent_id,match_type,similarity,expected,expected_sub,expected_rel,expected_obj,predicted,predicted_sub,predicted_rel,predicted_obj
+ont_15_sportsteam_test_1,MISSING,,"(1._FC_Magdeburg, numberOfMembers, 27250)",1._FC_Magdeburg,numberOfMembers,27250,,,,
+ont_15_sportsteam_test_1,MISSING,,"(1._FC_Magdeburg, season, 2014)",1._FC_Magdeburg,season,2014,,,,
+ont_15_sportsteam_test_1,MISSING,,"(1._FC_Magdeburg, league, 3._Liga)",1._FC_Magdeburg,league,3._Liga,,,,
+ont_15_sportsteam_test_10,MISSING,,"(Jens_Härtel, club, RB_Leipzig)",Jens_Härtel,club,RB_Leipzig,,,,
+ont_15_sportsteam_test_10,MISSING,,"(1._FC_Magdeburg, manager, Jens_Härtel)",1._FC_Magdeburg,manager,Jens_Härtel,,,,
+ont_15_sportsteam_test_10,MISSING,,"(Jens_Härtel, club, 1._FC_Union_Berlin)",Jens_Härtel,club,1._FC_Union_Berlin,,,,
+ont_15_sportsteam_test_100,MISSING,,"(Agremiação_Sportiva_Arapiraquense, season, 2015)",Agremiação_Sportiva_Arapiraquense,season,2015,,,,
+ont_15_sportsteam_test_100,MISSING,,"(Agremiação_Sportiva_Arapiraquense, ground, Estádio_Municipal_Coaracy_da_Mata_Fonseca)",Agremiação_Sportiva_Arapiraquense,ground,Estádio_Municipal_Coaracy_da_Mata_Fonseca,,,,
+ont_15_sportsteam_test_100,MISSING,,"(Estádio_Municipal_Coaracy_da_Mata_Fonseca, location, Arapiraca)",Estádio_Municipal_Coaracy_da_Mata_Fonseca,location,Arapiraca,,,,
+ont_15_sportsteam_test_100,MISSING,,"(Campeonato_Brasileiro_Série_C, country, Brazil)",Campeonato_Brasileiro_Série_C,country,Brazil,,,,
+ont_15_sportsteam_test_100,MISSING,,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,,,,
+ont_15_sportsteam_test_101,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_101,SEMANTIC,0.95,"(Agremiação_Sportiva_Arapiraquense, fullName, Agremiação Sportiva Arapiraquense)",Agremiação_Sportiva_Arapiraquense,fullName,Agremiação Sportiva Arapiraquense,"(Agremiação_Sportiva_Arapiraquense, location, Brazil)",Agremiação_Sportiva_Arapiraquense,location,Brazil
+ont_15_sportsteam_test_101,MISSING,,"(Estádio_Municipal_Coaracy_da_Mata_Fonseca, location, Arapiraca)",Estádio_Municipal_Coaracy_da_Mata_Fonseca,location,Arapiraca,,,,
+ont_15_sportsteam_test_101,MISSING,,"(Campeonato_Brasileiro_Série_C, country, Brazil)",Campeonato_Brasileiro_Série_C,country,Brazil,,,,
+ont_15_sportsteam_test_101,MISSING,,"(Agremiação_Sportiva_Arapiraquense, ground, Estádio_Municipal_Coaracy_da_Mata_Fonseca)",Agremiação_Sportiva_Arapiraquense,ground,Estádio_Municipal_Coaracy_da_Mata_Fonseca,,,,
+ont_15_sportsteam_test_101,EXTRA,,,,,,"(Arapiraca, country, Brazil)",Arapiraca,country,Brazil
+ont_15_sportsteam_test_101,EXTRA,,,,,,"(Agremiação_Sportiva_Arapiraquense, city, Arapiraca)",Agremiação_Sportiva_Arapiraquense,city,Arapiraca
+ont_15_sportsteam_test_102,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, season, 2015)",Agremiação_Sportiva_Arapiraquense,season,2015,"(Agremiação_Sportiva_Arapiraquense, season, 2015)",Agremiação_Sportiva_Arapiraquense,season,2015
+ont_15_sportsteam_test_102,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_103,MISSING,,"(A.C._Lumezzane, numberOfMembers, 4150)",A.C._Lumezzane,numberOfMembers,4150,,,,
+ont_15_sportsteam_test_103,MISSING,,"(A.C._Lumezzane, season, 2014)",A.C._Lumezzane,season,2014,,,,
+ont_15_sportsteam_test_103,MISSING,,"(A.C._Lumezzane, league, Lega Pro/A)",A.C._Lumezzane,league,Lega Pro/A,,,,
+ont_15_sportsteam_test_104,MISSING,,"(A.F.C._Fylde, numberOfMembers, 3180)",A.F.C._Fylde,numberOfMembers,3180,,,,
+ont_15_sportsteam_test_104,MISSING,,"(A.F.C._Fylde, ground, Warton,_Fylde)",A.F.C._Fylde,ground,"Warton,_Fylde",,,,
+ont_15_sportsteam_test_104,MISSING,,"(A.F.C._Fylde, fullName, Association Football Club Fylde)",A.F.C._Fylde,fullName,Association Football Club Fylde,,,,
+ont_15_sportsteam_test_105,EXACT,1.00,"(A.S._Roma, numberOfMembers, 70634)",A.S._Roma,numberOfMembers,70634,"(A.S._Roma, numberOfMembers, 70634)",A.S._Roma,numberOfMembers,70634
+ont_15_sportsteam_test_105,MISSING,,"(A.S._Roma, fullName, Associazione Sportiva Roma S.p.A.)",A.S._Roma,fullName,Associazione Sportiva Roma S.p.A.,,,,
+ont_15_sportsteam_test_105,MISSING,,"(A.S._Roma, ground, Rome, Italy)",A.S._Roma,ground,"Rome, Italy",,,,
+ont_15_sportsteam_test_105,EXTRA,,,,,,"(A.S._Roma, location, Rome)",A.S._Roma,location,Rome
+ont_15_sportsteam_test_105,EXTRA,,,,,,"(Rome, isPartOf, Italy)",Rome,isPartOf,Italy
+ont_15_sportsteam_test_106,MISSING,,"(AEK_Athens_F.C., numberOfMembers, 69618)",AEK_Athens_F.C.,numberOfMembers,69618,,,,
+ont_15_sportsteam_test_106,MISSING,,"(AEK_Athens_F.C., league, Superleague_Greece)",AEK_Athens_F.C.,league,Superleague_Greece,,,,
+ont_15_sportsteam_test_106,MISSING,,"(AEK_Athens_F.C., ground, Athens)",AEK_Athens_F.C.,ground,Athens,,,,
+ont_15_sportsteam_test_107,MISSING,,"(AFC_Ajax_(amateurs), season, 2014)",AFC_Ajax_(amateurs),season,2014,,,,
+ont_15_sportsteam_test_107,MISSING,,"(AFC_Ajax_(amateurs), numberOfMembers, 5000)",AFC_Ajax_(amateurs),numberOfMembers,5000,,,,
+ont_15_sportsteam_test_107,MISSING,,"(AFC_Ajax_(amateurs), league, Hoofdklasse)",AFC_Ajax_(amateurs),league,Hoofdklasse,,,,
+ont_15_sportsteam_test_108,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_108,SEMANTIC,0.96,"(Campeonato_Brasileiro_Série_C, champions, Vila_Nova_Futebol_Clube)",Campeonato_Brasileiro_Série_C,champions,Vila_Nova_Futebol_Clube,"(Campeonato_Brasileiro_Série_C, league, Vila_Nova_Futebol_Clube)",Campeonato_Brasileiro_Série_C,league,Vila_Nova_Futebol_Clube
+ont_15_sportsteam_test_108,MISSING,,"(Agremiação_Sportiva_Arapiraquense, ground, Estádio_Municipal_Coaracy_da_Mata_Fonseca)",Agremiação_Sportiva_Arapiraquense,ground,Estádio_Municipal_Coaracy_da_Mata_Fonseca,,,,
+ont_15_sportsteam_test_109,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_109,SEMANTIC,0.96,"(Campeonato_Brasileiro_Série_C, champions, Vila_Nova_Futebol_Clube)",Campeonato_Brasileiro_Série_C,champions,Vila_Nova_Futebol_Clube,"(Campeonato_Brasileiro_Série_C, league, Vila_Nova_Futebol_Clube)",Campeonato_Brasileiro_Série_C,league,Vila_Nova_Futebol_Clube
+ont_15_sportsteam_test_109,MISSING,,"(Campeonato_Brasileiro_Série_C, country, Brazil)",Campeonato_Brasileiro_Série_C,country,Brazil,,,,
+ont_15_sportsteam_test_109,EXTRA,,,,,,"(Agremiação_Sportiva_Arapiraquense, location, Brazil)",Agremiação_Sportiva_Arapiraquense,location,Brazil
+ont_15_sportsteam_test_11,MISSING,,"(1._FC_Magdeburg, manager, Jens_Härtel)",1._FC_Magdeburg,manager,Jens_Härtel,,,,
+ont_15_sportsteam_test_11,MISSING,,"(Jens_Härtel, club, SV_Babelsberg_03)",Jens_Härtel,club,SV_Babelsberg_03,,,,
+ont_15_sportsteam_test_11,MISSING,,"(Jens_Härtel, club, 1._FC_Union_Berlin)",Jens_Härtel,club,1._FC_Union_Berlin,,,,
+ont_15_sportsteam_test_110,EXACT,1.00,"(Athens, mayor, Giorgos_Kaminis)",Athens,mayor,Giorgos_Kaminis,"(Athens, mayor, Giorgos_Kaminis)",Athens,mayor,Giorgos_Kaminis
+ont_15_sportsteam_test_110,EXACT,1.00,"(Olympic_Stadium_(Athens), location, Athens)",Olympic_Stadium_(Athens),location,Athens,"(Olympic_Stadium_(Athens), location, Athens)",Olympic_Stadium_(Athens),location,Athens
+ont_15_sportsteam_test_110,MISSING,,"(AEK_Athens_F.C., ground, Olympic_Stadium_(Athens))",AEK_Athens_F.C.,ground,Olympic_Stadium_(Athens),,,,
+ont_15_sportsteam_test_12,MISSING,,"(Jens_Härtel, club, SV_Babelsberg_03)",Jens_Härtel,club,SV_Babelsberg_03,,,,
+ont_15_sportsteam_test_12,MISSING,,"(Jens_Härtel, club, FC_Sachsen_Leipzig)",Jens_Härtel,club,FC_Sachsen_Leipzig,,,,
+ont_15_sportsteam_test_12,MISSING,,"(1._FC_Magdeburg, manager, Jens_Härtel)",1._FC_Magdeburg,manager,Jens_Härtel,,,,
+ont_15_sportsteam_test_13,MISSING,,"(A.C._Lumezzane, numberOfMembers, 4150)",A.C._Lumezzane,numberOfMembers,4150,,,,
+ont_15_sportsteam_test_13,MISSING,,"(A.C._Lumezzane, league, Lega_Pro)",A.C._Lumezzane,league,Lega_Pro,,,,
+ont_15_sportsteam_test_13,MISSING,,"(A.C._Lumezzane, fullName, Associazione Calcio Lumezzane SpA)",A.C._Lumezzane,fullName,Associazione Calcio Lumezzane SpA,,,,
+ont_15_sportsteam_test_14,MISSING,,"(A.C._Lumezzane, numberOfMembers, 4150)",A.C._Lumezzane,numberOfMembers,4150,,,,
+ont_15_sportsteam_test_14,MISSING,,"(A.C._Lumezzane, league, Lega Pro/A)",A.C._Lumezzane,league,Lega Pro/A,,,,
+ont_15_sportsteam_test_14,MISSING,,"(A.C._Lumezzane, season, 2014–15_Lega_Pro)",A.C._Lumezzane,season,2014–15_Lega_Pro,,,,
+ont_15_sportsteam_test_14,EXTRA,,,,,,"(F.C._Lumezzane_V.G.Z._A.S.D., league, Serie_C)",F.C._Lumezzane_V.G.Z._A.S.D.,league,Serie_C
+ont_15_sportsteam_test_14,EXTRA,,,,,,"(F.C._Lumezzane_V.G.Z._A.S.D., season, 2014–15_PBA_season)",F.C._Lumezzane_V.G.Z._A.S.D.,season,2014–15_PBA_season
+ont_15_sportsteam_test_14,EXTRA,,,,,,"(F.C._Lumezzane_V.G.Z._A.S.D., numberOfMembers, 4150)",F.C._Lumezzane_V.G.Z._A.S.D.,numberOfMembers,4150
+ont_15_sportsteam_test_15,MISSING,,"(A.C._Lumezzane, numberOfMembers, 4150)",A.C._Lumezzane,numberOfMembers,4150,,,,
+ont_15_sportsteam_test_15,MISSING,,"(A.C._Lumezzane, league, Lega_Pro)",A.C._Lumezzane,league,Lega_Pro,,,,
+ont_15_sportsteam_test_15,MISSING,,"(A.C._Lumezzane, season, 2014–15_Lega_Pro)",A.C._Lumezzane,season,2014–15_Lega_Pro,,,,
+ont_15_sportsteam_test_15,EXTRA,,,,,,"(F.C._Lumezzane_V.G.Z._A.S.D., league, Serie_C)",F.C._Lumezzane_V.G.Z._A.S.D.,league,Serie_C
+ont_15_sportsteam_test_15,EXTRA,,,,,,"(F.C._Lumezzane_V.G.Z._A.S.D., season, 2014–15_Israel_State_Cup)",F.C._Lumezzane_V.G.Z._A.S.D.,season,2014–15_Israel_State_Cup
+ont_15_sportsteam_test_15,EXTRA,,,,,,"(F.C._Lumezzane_V.G.Z._A.S.D., numberOfMembers, 4150)",F.C._Lumezzane_V.G.Z._A.S.D.,numberOfMembers,4150
+ont_15_sportsteam_test_16,EXACT,1.00,"(Michele_Marcolini, club, A.C._Chievo_Verona)",Michele_Marcolini,club,A.C._Chievo_Verona,"(Michele_Marcolini, club, A.C._ChievoVerona)",Michele_Marcolini,club,A.C._ChievoVerona
+ont_15_sportsteam_test_16,MISSING,,"(A.C._Lumezzane, manager, Michele_Marcolini)",A.C._Lumezzane,manager,Michele_Marcolini,,,,
+ont_15_sportsteam_test_16,MISSING,,"(Michele_Marcolini, club, F.C._Bari_1908)",Michele_Marcolini,club,F.C._Bari_1908,,,,
+ont_15_sportsteam_test_16,EXTRA,,,,,,"(F.C._Lumezzane_V.G.Z._A.S.D., manager, Michele_Marcolini)",F.C._Lumezzane_V.G.Z._A.S.D.,manager,Michele_Marcolini
+ont_15_sportsteam_test_17,EXACT,1.00,"(Michele_Marcolini, club, Torino_F.C.)",Michele_Marcolini,club,Torino_F.C.,"(Michele_Marcolini, club, Torino_F.C.)",Michele_Marcolini,club,Torino_F.C.
+ont_15_sportsteam_test_17,EXACT,1.00,"(Michele_Marcolini, club, A.C._Chievo_Verona)",Michele_Marcolini,club,A.C._Chievo_Verona,"(Michele_Marcolini, club, A.C._ChievoVerona)",Michele_Marcolini,club,A.C._ChievoVerona
+ont_15_sportsteam_test_17,MISSING,,"(A.C._Lumezzane, manager, Michele_Marcolini)",A.C._Lumezzane,manager,Michele_Marcolini,,,,
+ont_15_sportsteam_test_17,EXTRA,,,,,,"(F.C._Lumezzane_V.G.Z._A.S.D., manager, Michele_Marcolini)",F.C._Lumezzane_V.G.Z._A.S.D.,manager,Michele_Marcolini
+ont_15_sportsteam_test_18,EXACT,1.00,"(Michele_Marcolini, club, A.C._Chievo_Verona)",Michele_Marcolini,club,A.C._Chievo_Verona,"(Michele_Marcolini, club, A.C._ChievoVerona)",Michele_Marcolini,club,A.C._ChievoVerona
+ont_15_sportsteam_test_18,MISSING,,"(Michele_Marcolini, club, Vicenza_Calcio)",Michele_Marcolini,club,Vicenza_Calcio,,,,
+ont_15_sportsteam_test_18,MISSING,,"(A.C._Lumezzane, manager, Michele_Marcolini)",A.C._Lumezzane,manager,Michele_Marcolini,,,,
+ont_15_sportsteam_test_18,EXTRA,,,,,,"(Michele_Marcolini, club, L.R._Vicenza)",Michele_Marcolini,club,L.R._Vicenza
+ont_15_sportsteam_test_19,EXACT,1.00,"(Michele_Marcolini, club, Atalanta_B.C.)",Michele_Marcolini,club,Atalanta_B.C.,"(Michele_Marcolini, club, Atalanta_B.C.)",Michele_Marcolini,club,Atalanta_B.C.
+ont_15_sportsteam_test_19,EXACT,1.00,"(Michele_Marcolini, club, A.C._Chievo_Verona)",Michele_Marcolini,club,A.C._Chievo_Verona,"(Michele_Marcolini, club, A.C._ChievoVerona)",Michele_Marcolini,club,A.C._ChievoVerona
+ont_15_sportsteam_test_19,MISSING,,"(A.C._Lumezzane, manager, Michele_Marcolini)",A.C._Lumezzane,manager,Michele_Marcolini,,,,
+ont_15_sportsteam_test_19,EXTRA,,,,,,"(Michele_Marcolini, club, F.C._Lumezzane_V.G.Z._A.S.D.)",Michele_Marcolini,club,F.C._Lumezzane_V.G.Z._A.S.D.
+ont_15_sportsteam_test_2,MISSING,,"(1._FC_Magdeburg, numberOfMembers, 27250)",1._FC_Magdeburg,numberOfMembers,27250,,,,
+ont_15_sportsteam_test_2,MISSING,,"(1._FC_Magdeburg, league, 3._Liga)",1._FC_Magdeburg,league,3._Liga,,,,
+ont_15_sportsteam_test_2,MISSING,,"(1._FC_Magdeburg, season, 2014–15_Regionalliga)",1._FC_Magdeburg,season,2014–15_Regionalliga,,,,
+ont_15_sportsteam_test_20,SEMANTIC,0.94,"(Michele_Marcolini, club, F.C._Bari_1908)",Michele_Marcolini,club,F.C._Bari_1908,"(Michele_Marcolini, club, S.S.C._Bari)",Michele_Marcolini,club,S.S.C._Bari
+ont_15_sportsteam_test_20,MISSING,,"(Michele_Marcolini, club, Vicenza_Calcio)",Michele_Marcolini,club,Vicenza_Calcio,,,,
+ont_15_sportsteam_test_20,MISSING,,"(A.C._Lumezzane, manager, Michele_Marcolini)",A.C._Lumezzane,manager,Michele_Marcolini,,,,
+ont_15_sportsteam_test_20,EXTRA,,,,,,"(F.C._Lumezzane_V.G.Z._A.S.D., manager, Michele_Marcolini)",F.C._Lumezzane_V.G.Z._A.S.D.,manager,Michele_Marcolini
+ont_15_sportsteam_test_20,EXTRA,,,,,,"(Michele_Marcolini, club, L.R._Vicenza)",Michele_Marcolini,club,L.R._Vicenza
+ont_15_sportsteam_test_21,MISSING,,"(Michele_Marcolini, club, Atalanta_B.C.)",Michele_Marcolini,club,Atalanta_B.C.,,,,
+ont_15_sportsteam_test_21,MISSING,,"(Michele_Marcolini, club, Torino_F.C.)",Michele_Marcolini,club,Torino_F.C.,,,,
+ont_15_sportsteam_test_21,MISSING,,"(A.C._Lumezzane, manager, Michele_Marcolini)",A.C._Lumezzane,manager,Michele_Marcolini,,,,
+ont_15_sportsteam_test_22,EXACT,1.00,"(Michele_Marcolini, club, Torino_F.C.)",Michele_Marcolini,club,Torino_F.C.,"(Michele_Marcolini, club, Torino_F.C.)",Michele_Marcolini,club,Torino_F.C.
+ont_15_sportsteam_test_22,SEMANTIC,0.94,"(Michele_Marcolini, club, F.C._Bari_1908)",Michele_Marcolini,club,F.C._Bari_1908,"(Michele_Marcolini, club, S.S.C._Bari)",Michele_Marcolini,club,S.S.C._Bari
+ont_15_sportsteam_test_22,MISSING,,"(A.C._Lumezzane, manager, Michele_Marcolini)",A.C._Lumezzane,manager,Michele_Marcolini,,,,
+ont_15_sportsteam_test_22,EXTRA,,,,,,"(F.C._Lumezzane_V.G.Z._A.S.D., manager, Michele_Marcolini)",F.C._Lumezzane_V.G.Z._A.S.D.,manager,Michele_Marcolini
+ont_15_sportsteam_test_23,EXACT,1.00,"(Michele_Marcolini, club, Torino_F.C.)",Michele_Marcolini,club,Torino_F.C.,"(Michele_Marcolini, club, Torino_F.C.)",Michele_Marcolini,club,Torino_F.C.
+ont_15_sportsteam_test_23,MISSING,,"(Michele_Marcolini, club, Vicenza_Calcio)",Michele_Marcolini,club,Vicenza_Calcio,,,,
+ont_15_sportsteam_test_23,MISSING,,"(A.C._Lumezzane, manager, Michele_Marcolini)",A.C._Lumezzane,manager,Michele_Marcolini,,,,
+ont_15_sportsteam_test_23,EXTRA,,,,,,"(Michele_Marcolini, club, L.R._Vicenza)",Michele_Marcolini,club,L.R._Vicenza
+ont_15_sportsteam_test_23,EXTRA,,,,,,"(Michele_Marcolini, manager, F.C._Lumezzane_V.G.Z._A.S.D.)",Michele_Marcolini,manager,F.C._Lumezzane_V.G.Z._A.S.D.
+ont_15_sportsteam_test_24,MISSING,,"(A.C._Lumezzane, numberOfMembers, 4150)",A.C._Lumezzane,numberOfMembers,4150,,,,
+ont_15_sportsteam_test_24,MISSING,,"(A.C._Lumezzane, season, 2014)",A.C._Lumezzane,season,2014,,,,
+ont_15_sportsteam_test_24,MISSING,,"(A.C._Lumezzane, league, Lega_Pro)",A.C._Lumezzane,league,Lega_Pro,,,,
+ont_15_sportsteam_test_24,EXTRA,,,,,,"(F.C._Lumezzane_V.G.Z._A.S.D., season, 2014)",F.C._Lumezzane_V.G.Z._A.S.D.,season,2014
+ont_15_sportsteam_test_24,EXTRA,,,,,,"(F.C._Lumezzane_V.G.Z._A.S.D., numberOfMembers, 4150)",F.C._Lumezzane_V.G.Z._A.S.D.,numberOfMembers,4150
+ont_15_sportsteam_test_25,SEMANTIC,0.99,"(A.F.C._Fylde, numberOfMembers, 3180)",A.F.C._Fylde,numberOfMembers,3180,"(AFC_Fylde, numberOfMembers, 3180)",AFC_Fylde,numberOfMembers,3180
+ont_15_sportsteam_test_25,MISSING,,"(A.F.C._Fylde, ground, Kellamergh Park)",A.F.C._Fylde,ground,Kellamergh Park,,,,
+ont_15_sportsteam_test_25,MISSING,,"(A.F.C._Fylde, fullName, Association Football Club Fylde)",A.F.C._Fylde,fullName,Association Football Club Fylde,,,,
+ont_15_sportsteam_test_25,EXTRA,,,,,,"(AFC_Fylde, tenant, AFC_Fylde)",AFC_Fylde,tenant,AFC_Fylde
+ont_15_sportsteam_test_26,MISSING,,"(A.F.C._Fylde, numberOfMembers, 3180)",A.F.C._Fylde,numberOfMembers,3180,,,,
+ont_15_sportsteam_test_26,MISSING,,"(A.F.C._Fylde, fullName, Association Football Club Fylde)",A.F.C._Fylde,fullName,Association Football Club Fylde,,,,
+ont_15_sportsteam_test_26,MISSING,,"(A.F.C._Fylde, ground, Warton, Fylde, Lancashire)",A.F.C._Fylde,ground,"Warton, Fylde, Lancashire",,,,
+ont_15_sportsteam_test_27,MISSING,,"(A.F.C._Fylde, numberOfMembers, 3180)",A.F.C._Fylde,numberOfMembers,3180,,,,
+ont_15_sportsteam_test_27,MISSING,,"(A.F.C._Fylde, ground, The_Fylde)",A.F.C._Fylde,ground,The_Fylde,,,,
+ont_15_sportsteam_test_27,MISSING,,"(A.F.C._Fylde, fullName, Association Football Club Fylde)",A.F.C._Fylde,fullName,Association Football Club Fylde,,,,
+ont_15_sportsteam_test_28,EXACT,1.00,"(Dave_Challinor, club, Colwyn_Bay_F.C.)",Dave_Challinor,club,Colwyn_Bay_F.C.,"(Dave_Challinor, club, Colwyn_Bay_F.C.)",Dave_Challinor,club,Colwyn_Bay_F.C.
+ont_15_sportsteam_test_28,MISSING,,"(A.F.C._Fylde, manager, Dave_Challinor)",A.F.C._Fylde,manager,Dave_Challinor,,,,
+ont_15_sportsteam_test_28,MISSING,,"(Dave_Challinor, club, Tranmere_Rovers_F.C.)",Dave_Challinor,club,Tranmere_Rovers_F.C.,,,,
+ont_15_sportsteam_test_29,SEMANTIC,0.99,"(A.F.C._Fylde, numberOfMembers, 3180)",A.F.C._Fylde,numberOfMembers,3180,"(AFC_Fylde, numberOfMembers, 3180)",AFC_Fylde,numberOfMembers,3180
+ont_15_sportsteam_test_29,MISSING,,"(A.F.C._Fylde, fullName, Association Football Club Fylde)",A.F.C._Fylde,fullName,Association Football Club Fylde,,,,
+ont_15_sportsteam_test_29,MISSING,,"(A.F.C._Fylde, ground, Bryning Lane)",A.F.C._Fylde,ground,Bryning Lane,,,,
+ont_15_sportsteam_test_3,MISSING,,"(Jens_Härtel, club, Berliner_AK_07)",Jens_Härtel,club,Berliner_AK_07,,,,
+ont_15_sportsteam_test_3,MISSING,,"(Jens_Härtel, club, 1._FC_Lokomotive_Leipzig)",Jens_Härtel,club,1._FC_Lokomotive_Leipzig,,,,
+ont_15_sportsteam_test_3,MISSING,,"(1._FC_Magdeburg, manager, Jens_Härtel)",1._FC_Magdeburg,manager,Jens_Härtel,,,,
+ont_15_sportsteam_test_30,MISSING,,"(A.F.C._Fylde, numberOfMembers, 3180)",A.F.C._Fylde,numberOfMembers,3180,,,,
+ont_15_sportsteam_test_30,MISSING,,"(A.F.C._Fylde, fullName, Association Football Club Fylde)",A.F.C._Fylde,fullName,Association Football Club Fylde,,,,
+ont_15_sportsteam_test_30,MISSING,,"(A.F.C._Fylde, ground, Lancashire)",A.F.C._Fylde,ground,Lancashire,,,,
+ont_15_sportsteam_test_31,EXACT,1.00,"(A.S._Roma, numberOfMembers, 70634)",A.S._Roma,numberOfMembers,70634,"(A.S._Roma, numberOfMembers, 70634)",A.S._Roma,numberOfMembers,70634
+ont_15_sportsteam_test_31,SEMANTIC,0.94,"(A.S._Roma, ground, Rome)",A.S._Roma,ground,Rome,"(A.S._Roma, city, Rome)",A.S._Roma,city,Rome
+ont_15_sportsteam_test_31,MISSING,,"(A.S._Roma, fullName, Associazione Sportiva Roma S.p.A.)",A.S._Roma,fullName,Associazione Sportiva Roma S.p.A.,,,,
+ont_15_sportsteam_test_32,EXACT,1.00,"(A.S._Roma, numberOfMembers, 70634)",A.S._Roma,numberOfMembers,70634,"(A.S._Roma, numberOfMembers, 70634)",A.S._Roma,numberOfMembers,70634
+ont_15_sportsteam_test_32,EXACT,1.00,"(A.S._Roma, ground, Stadio_Olimpico)",A.S._Roma,ground,Stadio_Olimpico,"(A.S._Roma, ground, Stadio_Olimpico)",A.S._Roma,ground,Stadio_Olimpico
+ont_15_sportsteam_test_32,MISSING,,"(A.S._Roma, fullName, Associazione Sportiva Roma S.p.A.)",A.S._Roma,fullName,Associazione Sportiva Roma S.p.A.,,,,
+ont_15_sportsteam_test_32,EXTRA,,,,,,"(A.S._Roma, chairmanTitle, associazione sportiva roma s.p.a.)",A.S._Roma,chairmanTitle,associazione sportiva roma s.p.a.
+ont_15_sportsteam_test_33,SEMANTIC,0.95,"(Superleague_Greece, champions, Olympiacos_F.C.)",Superleague_Greece,champions,Olympiacos_F.C.,"(Super_League_Greece, league, Olympiacos_F.C.)",Super_League_Greece,league,Olympiacos_F.C.
+ont_15_sportsteam_test_33,MISSING,,"(AEK_Athens_F.C., league, Superleague_Greece)",AEK_Athens_F.C.,league,Superleague_Greece,,,,
+ont_15_sportsteam_test_33,MISSING,,"(AEK_Athens_F.C., ground, Athens)",AEK_Athens_F.C.,ground,Athens,,,,
+ont_15_sportsteam_test_34,MISSING,,"(Superleague_Greece, champions, Olympiacos_F.C.)",Superleague_Greece,champions,Olympiacos_F.C.,,,,
+ont_15_sportsteam_test_34,MISSING,,"(AEK_Athens_F.C., ground, Olympic_Stadium_(Athens))",AEK_Athens_F.C.,ground,Olympic_Stadium_(Athens),,,,
+ont_15_sportsteam_test_34,MISSING,,"(AEK_Athens_F.C., league, Superleague_Greece)",AEK_Athens_F.C.,league,Superleague_Greece,,,,
+ont_15_sportsteam_test_35,MISSING,,"(AEK_Athens_F.C., numberOfMembers, 69618)",AEK_Athens_F.C.,numberOfMembers,69618,,,,
+ont_15_sportsteam_test_35,MISSING,,"(AEK_Athens_F.C., ground, Greece)",AEK_Athens_F.C.,ground,Greece,,,,
+ont_15_sportsteam_test_35,MISSING,,"(AEK_Athens_F.C., league, Superleague_Greece)",AEK_Athens_F.C.,league,Superleague_Greece,,,,
+ont_15_sportsteam_test_36,MISSING,,"(AEK_Athens_F.C., numberOfMembers, 69618)",AEK_Athens_F.C.,numberOfMembers,69618,,,,
+ont_15_sportsteam_test_36,MISSING,,"(AEK_Athens_F.C., ground, Olympic_Stadium_(Athens))",AEK_Athens_F.C.,ground,Olympic_Stadium_(Athens),,,,
+ont_15_sportsteam_test_36,MISSING,,"(AEK_Athens_F.C., league, Superleague_Greece)",AEK_Athens_F.C.,league,Superleague_Greece,,,,
+ont_15_sportsteam_test_37,SEMANTIC,0.94,"(AFC_Ajax_(amateurs), ground, Sportpark_De_Toekomst)",AFC_Ajax_(amateurs),ground,Sportpark_De_Toekomst,"(Ajax_Youth_Academy, ground, Sportpark_De_Toekomst)",Ajax_Youth_Academy,ground,Sportpark_De_Toekomst
+ont_15_sportsteam_test_37,MISSING,,"(Sportpark_De_Toekomst, operator, AFC_Ajax)",Sportpark_De_Toekomst,operator,AFC_Ajax,,,,
+ont_15_sportsteam_test_37,MISSING,,"(Sportpark_De_Toekomst, tenant, Ajax_Youth_Academy)",Sportpark_De_Toekomst,tenant,Ajax_Youth_Academy,,,,
+ont_15_sportsteam_test_38,MISSING,,"(AFC_Ajax_(amateurs), ground, Sportpark_De_Toekomst)",AFC_Ajax_(amateurs),ground,Sportpark_De_Toekomst,,,,
+ont_15_sportsteam_test_38,MISSING,,"(Sportpark_De_Toekomst, operator, AFC_Ajax)",Sportpark_De_Toekomst,operator,AFC_Ajax,,,,
+ont_15_sportsteam_test_38,MISSING,,"(Sportpark_De_Toekomst, tenant, Jong_Ajax)",Sportpark_De_Toekomst,tenant,Jong_Ajax,,,,
+ont_15_sportsteam_test_39,SEMANTIC,0.94,"(AFC_Ajax_(amateurs), ground, Sportpark_De_Toekomst)",AFC_Ajax_(amateurs),ground,Sportpark_De_Toekomst,"(Jong_Ajax, ground, Sportpark_De_Toekomst)",Jong_Ajax,ground,Sportpark_De_Toekomst
+ont_15_sportsteam_test_39,MISSING,,"(Sportpark_De_Toekomst, owner, AFC_Ajax_N.V.)",Sportpark_De_Toekomst,owner,AFC_Ajax_N.V.,,,,
+ont_15_sportsteam_test_39,MISSING,,"(Sportpark_De_Toekomst, tenant, Jong_Ajax)",Sportpark_De_Toekomst,tenant,Jong_Ajax,,,,
+ont_15_sportsteam_test_4,MISSING,,"(Jens_Härtel, club, RB_Leipzig)",Jens_Härtel,club,RB_Leipzig,,,,
+ont_15_sportsteam_test_4,MISSING,,"(Jens_Härtel, club, 1._FC_Lokomotive_Leipzig)",Jens_Härtel,club,1._FC_Lokomotive_Leipzig,,,,
+ont_15_sportsteam_test_4,MISSING,,"(1._FC_Magdeburg, manager, Jens_Härtel)",1._FC_Magdeburg,manager,Jens_Härtel,,,,
+ont_15_sportsteam_test_40,SEMANTIC,0.94,"(AFC_Ajax_(amateurs), ground, Sportpark_De_Toekomst)",AFC_Ajax_(amateurs),ground,Sportpark_De_Toekomst,"(Ajax_Youth_Academy, ground, Sportpark_De_Toekomst)",Ajax_Youth_Academy,ground,Sportpark_De_Toekomst
+ont_15_sportsteam_test_40,MISSING,,"(Sportpark_De_Toekomst, tenant, Ajax_Youth_Academy)",Sportpark_De_Toekomst,tenant,Ajax_Youth_Academy,,,,
+ont_15_sportsteam_test_40,MISSING,,"(Sportpark_De_Toekomst, owner, AFC_Ajax_N.V.)",Sportpark_De_Toekomst,owner,AFC_Ajax_N.V.,,,,
+ont_15_sportsteam_test_41,SEMANTIC,0.94,"(AFC_Ajax_(amateurs), ground, Sportpark_De_Toekomst)",AFC_Ajax_(amateurs),ground,Sportpark_De_Toekomst,"(Jong_Ajax, ground, Sportpark_De_Toekomst)",Jong_Ajax,ground,Sportpark_De_Toekomst
+ont_15_sportsteam_test_41,SEMANTIC,0.99,"(Sportpark_De_Toekomst, tenant, Ajax_Youth_Academy)",Sportpark_De_Toekomst,tenant,Ajax_Youth_Academy,"(Ajax_Youth_Academy, tenant, Sportpark_De_Toekomst)",Ajax_Youth_Academy,tenant,Sportpark_De_Toekomst
+ont_15_sportsteam_test_41,SEMANTIC,0.94,"(Sportpark_De_Toekomst, tenant, Jong_Ajax)",Sportpark_De_Toekomst,tenant,Jong_Ajax,"(Ajax_Youth_Academy, tenant, Sportpark_De_Toekomst)",Ajax_Youth_Academy,tenant,Sportpark_De_Toekomst
+ont_15_sportsteam_test_42,MISSING,,"(AFC_Ajax_(amateurs), season, 2014–15_Topklasse)",AFC_Ajax_(amateurs),season,2014–15_Topklasse,,,,
+ont_15_sportsteam_test_42,MISSING,,"(AFC_Ajax_(amateurs), fullName, Amsterdamsche Football Club Ajax Amateurs)",AFC_Ajax_(amateurs),fullName,Amsterdamsche Football Club Ajax Amateurs,,,,
+ont_15_sportsteam_test_42,MISSING,,"(AFC_Ajax_(amateurs), numberOfMembers, 5000)",AFC_Ajax_(amateurs),numberOfMembers,5000,,,,
+ont_15_sportsteam_test_43,MISSING,,"(AFC_Ajax_(amateurs), fullName, Amsterdamsche Football Club Ajax Amateurs)",AFC_Ajax_(amateurs),fullName,Amsterdamsche Football Club Ajax Amateurs,,,,
+ont_15_sportsteam_test_43,MISSING,,"(AFC_Ajax_(amateurs), season, 2014)",AFC_Ajax_(amateurs),season,2014,,,,
+ont_15_sportsteam_test_43,MISSING,,"(AFC_Ajax_(amateurs), numberOfMembers, 5000)",AFC_Ajax_(amateurs),numberOfMembers,5000,,,,
+ont_15_sportsteam_test_44,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_44,SEMANTIC,0.95,"(Agremiação_Sportiva_Arapiraquense, fullName, Agremiação Sportiva Arapiraquense)",Agremiação_Sportiva_Arapiraquense,fullName,Agremiação Sportiva Arapiraquense,"(Agremiação_Sportiva_Arapiraquense, location, Brazil)",Agremiação_Sportiva_Arapiraquense,location,Brazil
+ont_15_sportsteam_test_44,MISSING,,"(Campeonato_Brasileiro_Série_C, country, Brazil)",Campeonato_Brasileiro_Série_C,country,Brazil,,,,
+ont_15_sportsteam_test_45,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_45,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, manager, Vica)",Agremiação_Sportiva_Arapiraquense,manager,Vica,"(Agremiação_Sportiva_Arapiraquense, manager, Vica)",Agremiação_Sportiva_Arapiraquense,manager,Vica
+ont_15_sportsteam_test_45,MISSING,,"(Campeonato_Brasileiro_Série_C, country, Brazil)",Campeonato_Brasileiro_Série_C,country,Brazil,,,,
+ont_15_sportsteam_test_45,EXTRA,,,,,,"(Agremiação_Sportiva_Arapiraquense, location, Brazil)",Agremiação_Sportiva_Arapiraquense,location,Brazil
+ont_15_sportsteam_test_46,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_46,MISSING,,"(Campeonato_Brasileiro_Série_C, country, Brazil)",Campeonato_Brasileiro_Série_C,country,Brazil,,,,
+ont_15_sportsteam_test_46,MISSING,,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000,,,,
+ont_15_sportsteam_test_46,EXTRA,,,,,,"(Agremiação_Sportiva_Arapiraquense, location, Brazil)",Agremiação_Sportiva_Arapiraquense,location,Brazil
+ont_15_sportsteam_test_47,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, season, 2015)",Agremiação_Sportiva_Arapiraquense,season,2015,"(Agremiação_Sportiva_Arapiraquense, season, 2015)",Agremiação_Sportiva_Arapiraquense,season,2015
+ont_15_sportsteam_test_47,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_47,MISSING,,"(Campeonato_Brasileiro_Série_C, country, Brazil)",Campeonato_Brasileiro_Série_C,country,Brazil,,,,
+ont_15_sportsteam_test_47,EXTRA,,,,,,"(Agremiação_Sportiva_Arapiraquense, location, Brazil)",Agremiação_Sportiva_Arapiraquense,location,Brazil
+ont_15_sportsteam_test_48,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_48,SEMANTIC,0.96,"(Agremiação_Sportiva_Arapiraquense, season, 2015_Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,season,2015_Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, season, 2015)",Agremiação_Sportiva_Arapiraquense,season,2015
+ont_15_sportsteam_test_48,MISSING,,"(Campeonato_Brasileiro_Série_C, country, Brazil)",Campeonato_Brasileiro_Série_C,country,Brazil,,,,
+ont_15_sportsteam_test_49,MISSING,,"(Agremiação_Sportiva_Arapiraquense, season, 2015)",Agremiação_Sportiva_Arapiraquense,season,2015,,,,
+ont_15_sportsteam_test_49,MISSING,,"(Agremiação_Sportiva_Arapiraquense, nickname, ''Alvinegro)",Agremiação_Sportiva_Arapiraquense,nickname,''Alvinegro,,,,
+ont_15_sportsteam_test_49,MISSING,,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000,,,,
+ont_15_sportsteam_test_5,MISSING,,"(Jens_Härtel, club, SV_Babelsberg_03)",Jens_Härtel,club,SV_Babelsberg_03,,,,
+ont_15_sportsteam_test_5,MISSING,,"(Jens_Härtel, club, 1._FC_Lokomotive_Leipzig)",Jens_Härtel,club,1._FC_Lokomotive_Leipzig,,,,
+ont_15_sportsteam_test_5,MISSING,,"(1._FC_Magdeburg, manager, Jens_Härtel)",1._FC_Magdeburg,manager,Jens_Härtel,,,,
+ont_15_sportsteam_test_50,SEMANTIC,0.97,"(Agremiação_Sportiva_Arapiraquense, nickname, ''Alvinegro)",Agremiação_Sportiva_Arapiraquense,nickname,''Alvinegro,"(Agremiação_Sportiva_Arapiraquense, demonym, alvinegro)",Agremiação_Sportiva_Arapiraquense,demonym,alvinegro
+ont_15_sportsteam_test_50,SEMANTIC,0.96,"(Agremiação_Sportiva_Arapiraquense, season, 2015_Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,season,2015_Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, season, 2015)",Agremiação_Sportiva_Arapiraquense,season,2015
+ont_15_sportsteam_test_50,MISSING,,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000,,,,
+ont_15_sportsteam_test_50,EXTRA,,,,,,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_51,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, season, 2015)",Agremiação_Sportiva_Arapiraquense,season,2015,"(Agremiação_Sportiva_Arapiraquense, season, 2015)",Agremiação_Sportiva_Arapiraquense,season,2015
+ont_15_sportsteam_test_51,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000
+ont_15_sportsteam_test_51,MISSING,,"(Agremiação_Sportiva_Arapiraquense, nickname, Asa Gigante '')",Agremiação_Sportiva_Arapiraquense,nickname,Asa Gigante '',,,,
+ont_15_sportsteam_test_52,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000
+ont_15_sportsteam_test_52,SEMANTIC,0.96,"(Agremiação_Sportiva_Arapiraquense, season, 2015_Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,season,2015_Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, season, 2015)",Agremiação_Sportiva_Arapiraquense,season,2015
+ont_15_sportsteam_test_52,MISSING,,"(Agremiação_Sportiva_Arapiraquense, fullName, Agremiação Sportiva Arapiraquense)",Agremiação_Sportiva_Arapiraquense,fullName,Agremiação Sportiva Arapiraquense,,,,
+ont_15_sportsteam_test_52,EXTRA,,,,,,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_53,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000
+ont_15_sportsteam_test_53,MISSING,,"(Agremiação_Sportiva_Arapiraquense, fullName, Agremiação Sportiva Arapiraquense)",Agremiação_Sportiva_Arapiraquense,fullName,Agremiação Sportiva Arapiraquense,,,,
+ont_15_sportsteam_test_53,MISSING,,"(Agremiação_Sportiva_Arapiraquense, season, 2015)",Agremiação_Sportiva_Arapiraquense,season,2015,,,,
+ont_15_sportsteam_test_53,EXTRA,,,,,,"(Agremiação_Sportiva_Arapiraquense, season, 2015_NFL_season)",Agremiação_Sportiva_Arapiraquense,season,2015_NFL_season
+ont_15_sportsteam_test_54,EXACT,1.00,"(Luciano_Spalletti, club, Virtus_Entella)",Luciano_Spalletti,club,Virtus_Entella,"(Luciano_Spalletti, club, Virtus_Entella)",Luciano_Spalletti,club,Virtus_Entella
+ont_15_sportsteam_test_54,EXACT,1.00,"(Luciano_Spalletti, club, Empoli_F.C.)",Luciano_Spalletti,club,Empoli_F.C.,"(Luciano_Spalletti, club, Empoli_F.C.)",Luciano_Spalletti,club,Empoli_F.C.
+ont_15_sportsteam_test_54,MISSING,,"(A.S._Roma, manager, Luciano_Spalletti)",A.S._Roma,manager,Luciano_Spalletti,,,,
+ont_15_sportsteam_test_54,EXTRA,,,,,,"(As_Roma_SPA, manager, Luciano_Spalletti)",As_Roma_SPA,manager,Luciano_Spalletti
+ont_15_sportsteam_test_55,EXACT,1.00,"(Luciano_Spalletti, club, Udinese_Calcio)",Luciano_Spalletti,club,Udinese_Calcio,"(Luciano_Spalletti, club, Udinese_Calcio)",Luciano_Spalletti,club,Udinese_Calcio
+ont_15_sportsteam_test_55,EXACT,1.00,"(Luciano_Spalletti, club, Virtus_Entella)",Luciano_Spalletti,club,Virtus_Entella,"(Luciano_Spalletti, club, Virtus_Entella)",Luciano_Spalletti,club,Virtus_Entella
+ont_15_sportsteam_test_55,MISSING,,"(A.S._Roma, manager, Luciano_Spalletti)",A.S._Roma,manager,Luciano_Spalletti,,,,
+ont_15_sportsteam_test_55,EXTRA,,,,,,"(As_Roma_SPA, manager, Luciano_Spalletti)",As_Roma_SPA,manager,Luciano_Spalletti
+ont_15_sportsteam_test_56,EXACT,1.00,"(A.S._Roma, league, Serie_A)",A.S._Roma,league,Serie_A,"(A.S._Roma, league, Serie_A)",A.S._Roma,league,Serie_A
+ont_15_sportsteam_test_56,SEMANTIC,0.96,"(Serie_A, champions, Juventus_F.C.)",Serie_A,champions,Juventus_F.C.,"(Serie_A, league, Juventus_F.C.)",Serie_A,league,Juventus_F.C.
+ont_15_sportsteam_test_56,MISSING,,"(A.S._Roma, ground, Rome, Italy)",A.S._Roma,ground,"Rome, Italy",,,,
+ont_15_sportsteam_test_56,EXTRA,,,,,,"(Rome, country, Italy)",Rome,country,Italy
+ont_15_sportsteam_test_56,EXTRA,,,,,,"(A.S._Roma, city, Rome)",A.S._Roma,city,Rome
+ont_15_sportsteam_test_57,SEMANTIC,0.97,"(A.S._Roma, league, Serie_A)",A.S._Roma,league,Serie_A,"(As_Roma_SPA, league, Serie_A)",As_Roma_SPA,league,Serie_A
+ont_15_sportsteam_test_57,MISSING,,"(Serie_A, champions, Juventus_F.C.)",Serie_A,champions,Juventus_F.C.,,,,
+ont_15_sportsteam_test_57,MISSING,,"(A.S._Roma, ground, Rome)",A.S._Roma,ground,Rome,,,,
+ont_15_sportsteam_test_57,EXTRA,,,,,,"(As_Roma_SPA, city, Rome)",As_Roma_SPA,city,Rome
+ont_15_sportsteam_test_58,SEMANTIC,0.96,"(A.S._Roma, ground, Stadio_Olimpico)",A.S._Roma,ground,Stadio_Olimpico,"(As_Roma_SPA, ground, Stadio_Olimpico)",As_Roma_SPA,ground,Stadio_Olimpico
+ont_15_sportsteam_test_58,MISSING,,"(Serie_A, champions, Juventus_F.C.)",Serie_A,champions,Juventus_F.C.,,,,
+ont_15_sportsteam_test_58,MISSING,,"(A.S._Roma, league, Serie_A)",A.S._Roma,league,Serie_A,,,,
+ont_15_sportsteam_test_58,EXTRA,,,,,,"(As_Roma_(women), league, Italian_Women's_Volleyball_League)",As_Roma_(women),league,Italian_Women's_Volleyball_League
+ont_15_sportsteam_test_59,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_59,MISSING,,"(Agremiação_Sportiva_Arapiraquense, ground, Estádio_Municipal_Coaracy_da_Mata_Fonseca)",Agremiação_Sportiva_Arapiraquense,ground,Estádio_Municipal_Coaracy_da_Mata_Fonseca,,,,
+ont_15_sportsteam_test_59,MISSING,,"(Estádio_Municipal_Coaracy_da_Mata_Fonseca, location, Arapiraca)",Estádio_Municipal_Coaracy_da_Mata_Fonseca,location,Arapiraca,,,,
+ont_15_sportsteam_test_59,MISSING,,"(Campeonato_Brasileiro_Série_C, country, Brazil)",Campeonato_Brasileiro_Série_C,country,Brazil,,,,
+ont_15_sportsteam_test_59,MISSING,,"(Agremiação_Sportiva_Arapiraquense, nickname, ''Alvinegro)",Agremiação_Sportiva_Arapiraquense,nickname,''Alvinegro,,,,
+ont_15_sportsteam_test_59,EXTRA,,,,,,"(Agremiação_Sportiva_Arapiraquense, city, Arapiraca)",Agremiação_Sportiva_Arapiraquense,city,Arapiraca
+ont_15_sportsteam_test_6,MISSING,,"(1._FC_Magdeburg, manager, Jens_Härtel)",1._FC_Magdeburg,manager,Jens_Härtel,,,,
+ont_15_sportsteam_test_6,MISSING,,"(Jens_Härtel, club, SV_Germania_Schöneiche)",Jens_Härtel,club,SV_Germania_Schöneiche,,,,
+ont_15_sportsteam_test_6,MISSING,,"(Jens_Härtel, club, 1._FC_Union_Berlin)",Jens_Härtel,club,1._FC_Union_Berlin,,,,
+ont_15_sportsteam_test_60,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_60,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000
+ont_15_sportsteam_test_60,SEMANTIC,0.96,"(Campeonato_Brasileiro_Série_C, champions, Vila_Nova_Futebol_Clube)",Campeonato_Brasileiro_Série_C,champions,Vila_Nova_Futebol_Clube,"(Campeonato_Brasileiro_Série_C, league, Vila_Nova_Futebol_Clube)",Campeonato_Brasileiro_Série_C,league,Vila_Nova_Futebol_Clube
+ont_15_sportsteam_test_60,MISSING,,"(Agremiação_Sportiva_Arapiraquense, fullName, Agremiação Sportiva Arapiraquense)",Agremiação_Sportiva_Arapiraquense,fullName,Agremiação Sportiva Arapiraquense,,,,
+ont_15_sportsteam_test_61,SEMANTIC,0.96,"(Campeonato_Brasileiro_Série_C, champions, Vila_Nova_Futebol_Clube)",Campeonato_Brasileiro_Série_C,champions,Vila_Nova_Futebol_Clube,"(Campeonato_Brasileiro_Série_C, league, Vila_Nova_Futebol_Clube)",Campeonato_Brasileiro_Série_C,league,Vila_Nova_Futebol_Clube
+ont_15_sportsteam_test_61,MISSING,,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,,,,
+ont_15_sportsteam_test_61,MISSING,,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000,,,,
+ont_15_sportsteam_test_62,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_62,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000
+ont_15_sportsteam_test_62,MISSING,,"(Agremiação_Sportiva_Arapiraquense, ground, Estádio_Municipal_Coaracy_da_Mata_Fonseca)",Agremiação_Sportiva_Arapiraquense,ground,Estádio_Municipal_Coaracy_da_Mata_Fonseca,,,,
+ont_15_sportsteam_test_62,MISSING,,"(Agremiação_Sportiva_Arapiraquense, season, 2015)",Agremiação_Sportiva_Arapiraquense,season,2015,,,,
+ont_15_sportsteam_test_62,MISSING,,"(Campeonato_Brasileiro_Série_C, country, Brazil)",Campeonato_Brasileiro_Série_C,country,Brazil,,,,
+ont_15_sportsteam_test_62,MISSING,,"(Estádio_Municipal_Coaracy_da_Mata_Fonseca, location, Arapiraca)",Estádio_Municipal_Coaracy_da_Mata_Fonseca,location,Arapiraca,,,,
+ont_15_sportsteam_test_62,EXTRA,,,,,,"(Agremiação_Sportiva_Arapiraquense, location, Brazil)",Agremiação_Sportiva_Arapiraquense,location,Brazil
+ont_15_sportsteam_test_62,EXTRA,,,,,,"(Agremiação_Sportiva_Arapiraquense, city, Arapiraca)",Agremiação_Sportiva_Arapiraquense,city,Arapiraca
+ont_15_sportsteam_test_63,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_63,SEMANTIC,0.96,"(Campeonato_Brasileiro_Série_C, champions, Vila_Nova_Futebol_Clube)",Campeonato_Brasileiro_Série_C,champions,Vila_Nova_Futebol_Clube,"(Campeonato_Brasileiro_Série_C, league, Vila_Nova_Futebol_Clube)",Campeonato_Brasileiro_Série_C,league,Vila_Nova_Futebol_Clube
+ont_15_sportsteam_test_63,SEMANTIC,0.96,"(Agremiação_Sportiva_Arapiraquense, season, 2015_Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,season,2015_Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, season, 2015)",Agremiação_Sportiva_Arapiraquense,season,2015
+ont_15_sportsteam_test_64,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_64,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000
+ont_15_sportsteam_test_64,MISSING,,"(Agremiação_Sportiva_Arapiraquense, fullName, Agremiação Sportiva Arapiraquense)",Agremiação_Sportiva_Arapiraquense,fullName,Agremiação Sportiva Arapiraquense,,,,
+ont_15_sportsteam_test_64,MISSING,,"(Estádio_Municipal_Coaracy_da_Mata_Fonseca, location, Arapiraca)",Estádio_Municipal_Coaracy_da_Mata_Fonseca,location,Arapiraca,,,,
+ont_15_sportsteam_test_64,MISSING,,"(Agremiação_Sportiva_Arapiraquense, ground, Estádio_Municipal_Coaracy_da_Mata_Fonseca)",Agremiação_Sportiva_Arapiraquense,ground,Estádio_Municipal_Coaracy_da_Mata_Fonseca,,,,
+ont_15_sportsteam_test_64,EXTRA,,,,,,"(Agremiação_Sportiva_Arapiraquense, city, Arapiraca)",Agremiação_Sportiva_Arapiraquense,city,Arapiraca
+ont_15_sportsteam_test_65,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, season, 2015)",Agremiação_Sportiva_Arapiraquense,season,2015,"(Agremiação_Sportiva_Arapiraquense, season, 2015)",Agremiação_Sportiva_Arapiraquense,season,2015
+ont_15_sportsteam_test_65,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_65,SEMANTIC,0.96,"(Campeonato_Brasileiro_Série_C, champions, Vila_Nova_Futebol_Clube)",Campeonato_Brasileiro_Série_C,champions,Vila_Nova_Futebol_Clube,"(Campeonato_Brasileiro_Série_C, league, Vila_Nova_Futebol_Clube)",Campeonato_Brasileiro_Série_C,league,Vila_Nova_Futebol_Clube
+ont_15_sportsteam_test_65,MISSING,,"(Estádio_Municipal_Coaracy_da_Mata_Fonseca, location, Arapiraca)",Estádio_Municipal_Coaracy_da_Mata_Fonseca,location,Arapiraca,,,,
+ont_15_sportsteam_test_65,MISSING,,"(Campeonato_Brasileiro_Série_C, country, Brazil)",Campeonato_Brasileiro_Série_C,country,Brazil,,,,
+ont_15_sportsteam_test_65,MISSING,,"(Agremiação_Sportiva_Arapiraquense, ground, Estádio_Municipal_Coaracy_da_Mata_Fonseca)",Agremiação_Sportiva_Arapiraquense,ground,Estádio_Municipal_Coaracy_da_Mata_Fonseca,,,,
+ont_15_sportsteam_test_66,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_66,MISSING,,"(Campeonato_Brasileiro_Série_C, country, Brazil)",Campeonato_Brasileiro_Série_C,country,Brazil,,,,
+ont_15_sportsteam_test_66,MISSING,,"(Agremiação_Sportiva_Arapiraquense, nickname, ''Alvinegro)",Agremiação_Sportiva_Arapiraquense,nickname,''Alvinegro,,,,
+ont_15_sportsteam_test_67,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_67,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000
+ont_15_sportsteam_test_67,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, season, 2015_Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,season,2015_Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, season, 2015_Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,season,2015_Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_67,MISSING,,"(Campeonato_Brasileiro_Série_C, country, Brazil)",Campeonato_Brasileiro_Série_C,country,Brazil,,,,
+ont_15_sportsteam_test_67,EXTRA,,,,,,"(Agremiação_Sportiva_Arapiraquense, location, Brazil)",Agremiação_Sportiva_Arapiraquense,location,Brazil
+ont_15_sportsteam_test_68,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_68,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000
+ont_15_sportsteam_test_68,SEMANTIC,0.96,"(Campeonato_Brasileiro_Série_C, champions, Vila_Nova_Futebol_Clube)",Campeonato_Brasileiro_Série_C,champions,Vila_Nova_Futebol_Clube,"(Campeonato_Brasileiro_Série_C, league, Vila_Nova_Futebol_Clube)",Campeonato_Brasileiro_Série_C,league,Vila_Nova_Futebol_Clube
+ont_15_sportsteam_test_68,SEMANTIC,0.96,"(Agremiação_Sportiva_Arapiraquense, season, 2015_Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,season,2015_Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, season, 2015)",Agremiação_Sportiva_Arapiraquense,season,2015
+ont_15_sportsteam_test_68,MISSING,,"(Estádio_Municipal_Coaracy_da_Mata_Fonseca, location, Arapiraca)",Estádio_Municipal_Coaracy_da_Mata_Fonseca,location,Arapiraca,,,,
+ont_15_sportsteam_test_68,MISSING,,"(Agremiação_Sportiva_Arapiraquense, ground, Estádio_Municipal_Coaracy_da_Mata_Fonseca)",Agremiação_Sportiva_Arapiraquense,ground,Estádio_Municipal_Coaracy_da_Mata_Fonseca,,,,
+ont_15_sportsteam_test_69,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_69,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000
+ont_15_sportsteam_test_69,SEMANTIC,0.96,"(Campeonato_Brasileiro_Série_C, champions, Vila_Nova_Futebol_Clube)",Campeonato_Brasileiro_Série_C,champions,Vila_Nova_Futebol_Clube,"(Campeonato_Brasileiro_Série_C, league, Vila_Nova_Futebol_Clube)",Campeonato_Brasileiro_Série_C,league,Vila_Nova_Futebol_Clube
+ont_15_sportsteam_test_69,MISSING,,"(Campeonato_Brasileiro_Série_C, country, Brazil)",Campeonato_Brasileiro_Série_C,country,Brazil,,,,
+ont_15_sportsteam_test_69,MISSING,,"(Agremiação_Sportiva_Arapiraquense, ground, Estádio_Municipal_Coaracy_da_Mata_Fonseca)",Agremiação_Sportiva_Arapiraquense,ground,Estádio_Municipal_Coaracy_da_Mata_Fonseca,,,,
+ont_15_sportsteam_test_69,MISSING,,"(Estádio_Municipal_Coaracy_da_Mata_Fonseca, location, Arapiraca)",Estádio_Municipal_Coaracy_da_Mata_Fonseca,location,Arapiraca,,,,
+ont_15_sportsteam_test_69,MISSING,,"(Agremiação_Sportiva_Arapiraquense, nickname, Asa Gigante '')",Agremiação_Sportiva_Arapiraquense,nickname,Asa Gigante '',,,,
+ont_15_sportsteam_test_69,EXTRA,,,,,,"(Agremiação_Sportiva_Arapiraquense, city, Arapiraca)",Agremiação_Sportiva_Arapiraquense,city,Arapiraca
+ont_15_sportsteam_test_7,MISSING,,"(Jens_Härtel, club, Berliner_AK_07)",Jens_Härtel,club,Berliner_AK_07,,,,
+ont_15_sportsteam_test_7,MISSING,,"(1._FC_Magdeburg, manager, Jens_Härtel)",1._FC_Magdeburg,manager,Jens_Härtel,,,,
+ont_15_sportsteam_test_7,MISSING,,"(Jens_Härtel, club, 1._FC_Union_Berlin)",Jens_Härtel,club,1._FC_Union_Berlin,,,,
+ont_15_sportsteam_test_70,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_70,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000
+ont_15_sportsteam_test_71,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, manager, Vica)",Agremiação_Sportiva_Arapiraquense,manager,Vica,"(Agremiação_Sportiva_Arapiraquense, manager, Vica)",Agremiação_Sportiva_Arapiraquense,manager,Vica
+ont_15_sportsteam_test_71,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_71,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000
+ont_15_sportsteam_test_71,SEMANTIC,0.96,"(Campeonato_Brasileiro_Série_C, champions, Vila_Nova_Futebol_Clube)",Campeonato_Brasileiro_Série_C,champions,Vila_Nova_Futebol_Clube,"(Campeonato_Brasileiro_Série_C, league, Vila_Nova_Futebol_Clube)",Campeonato_Brasileiro_Série_C,league,Vila_Nova_Futebol_Clube
+ont_15_sportsteam_test_71,MISSING,,"(Estádio_Municipal_Coaracy_da_Mata_Fonseca, location, Arapiraca)",Estádio_Municipal_Coaracy_da_Mata_Fonseca,location,Arapiraca,,,,
+ont_15_sportsteam_test_71,MISSING,,"(Campeonato_Brasileiro_Série_C, country, Brazil)",Campeonato_Brasileiro_Série_C,country,Brazil,,,,
+ont_15_sportsteam_test_71,MISSING,,"(Agremiação_Sportiva_Arapiraquense, ground, Estádio_Municipal_Coaracy_da_Mata_Fonseca)",Agremiação_Sportiva_Arapiraquense,ground,Estádio_Municipal_Coaracy_da_Mata_Fonseca,,,,
+ont_15_sportsteam_test_72,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, season, 2015)",Agremiação_Sportiva_Arapiraquense,season,2015,"(Agremiação_Sportiva_Arapiraquense, season, 2015)",Agremiação_Sportiva_Arapiraquense,season,2015
+ont_15_sportsteam_test_72,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_72,SEMANTIC,0.96,"(Campeonato_Brasileiro_Série_C, champions, Vila_Nova_Futebol_Clube)",Campeonato_Brasileiro_Série_C,champions,Vila_Nova_Futebol_Clube,"(Campeonato_Brasileiro_Série_C, league, Vila_Nova_Futebol_Clube)",Campeonato_Brasileiro_Série_C,league,Vila_Nova_Futebol_Clube
+ont_15_sportsteam_test_73,MISSING,,"(Agremiação_Sportiva_Arapiraquense, season, 2015)",Agremiação_Sportiva_Arapiraquense,season,2015,,,,
+ont_15_sportsteam_test_73,MISSING,,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,,,,
+ont_15_sportsteam_test_73,MISSING,,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000,,,,
+ont_15_sportsteam_test_74,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_74,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000
+ont_15_sportsteam_test_74,SEMANTIC,0.96,"(Agremiação_Sportiva_Arapiraquense, season, 2015_Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,season,2015_Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, season, 2015)",Agremiação_Sportiva_Arapiraquense,season,2015
+ont_15_sportsteam_test_74,MISSING,,"(Agremiação_Sportiva_Arapiraquense, ground, Estádio_Municipal_Coaracy_da_Mata_Fonseca)",Agremiação_Sportiva_Arapiraquense,ground,Estádio_Municipal_Coaracy_da_Mata_Fonseca,,,,
+ont_15_sportsteam_test_74,MISSING,,"(Estádio_Municipal_Coaracy_da_Mata_Fonseca, location, Arapiraca)",Estádio_Municipal_Coaracy_da_Mata_Fonseca,location,Arapiraca,,,,
+ont_15_sportsteam_test_74,MISSING,,"(Campeonato_Brasileiro_Série_C, country, Brazil)",Campeonato_Brasileiro_Série_C,country,Brazil,,,,
+ont_15_sportsteam_test_75,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_75,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, season, 2015_Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,season,2015_Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, season, 2015_Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,season,2015_Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_76,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_76,SEMANTIC,0.96,"(Campeonato_Brasileiro_Série_C, champions, Vila_Nova_Futebol_Clube)",Campeonato_Brasileiro_Série_C,champions,Vila_Nova_Futebol_Clube,"(Campeonato_Brasileiro_Série_C, league, Vila_Nova_Futebol_Clube)",Campeonato_Brasileiro_Série_C,league,Vila_Nova_Futebol_Clube
+ont_15_sportsteam_test_76,MISSING,,"(Agremiação_Sportiva_Arapiraquense, fullName, Agremiação Sportiva Arapiraquense)",Agremiação_Sportiva_Arapiraquense,fullName,Agremiação Sportiva Arapiraquense,,,,
+ont_15_sportsteam_test_77,MISSING,,"(Agremiação_Sportiva_Arapiraquense, ground, Estádio_Municipal_Coaracy_da_Mata_Fonseca)",Agremiação_Sportiva_Arapiraquense,ground,Estádio_Municipal_Coaracy_da_Mata_Fonseca,,,,
+ont_15_sportsteam_test_77,MISSING,,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,,,,
+ont_15_sportsteam_test_78,EXACT,1.00,"(Campeonato_Brasileiro_Série_C, country, Brazil)",Campeonato_Brasileiro_Série_C,country,Brazil,"(Campeonato_Brasileiro_Série_C, country, Brazil)",Campeonato_Brasileiro_Série_C,country,Brazil
+ont_15_sportsteam_test_78,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_78,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000
+ont_15_sportsteam_test_78,MISSING,,"(Agremiação_Sportiva_Arapiraquense, season, 2015)",Agremiação_Sportiva_Arapiraquense,season,2015,,,,
+ont_15_sportsteam_test_78,EXTRA,,,,,,"(Agremiação_Sportiva_Arapiraquense, season, 2015_NFL_season)",Agremiação_Sportiva_Arapiraquense,season,2015_NFL_season
+ont_15_sportsteam_test_79,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, season, 2015)",Agremiação_Sportiva_Arapiraquense,season,2015,"(Agremiação_Sportiva_Arapiraquense, season, 2015)",Agremiação_Sportiva_Arapiraquense,season,2015
+ont_15_sportsteam_test_79,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_79,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000
+ont_15_sportsteam_test_79,MISSING,,"(Agremiação_Sportiva_Arapiraquense, fullName, Agremiação Sportiva Arapiraquense)",Agremiação_Sportiva_Arapiraquense,fullName,Agremiação Sportiva Arapiraquense,,,,
+ont_15_sportsteam_test_79,MISSING,,"(Estádio_Municipal_Coaracy_da_Mata_Fonseca, location, Arapiraca)",Estádio_Municipal_Coaracy_da_Mata_Fonseca,location,Arapiraca,,,,
+ont_15_sportsteam_test_79,MISSING,,"(Campeonato_Brasileiro_Série_C, country, Brazil)",Campeonato_Brasileiro_Série_C,country,Brazil,,,,
+ont_15_sportsteam_test_79,MISSING,,"(Agremiação_Sportiva_Arapiraquense, ground, Estádio_Municipal_Coaracy_da_Mata_Fonseca)",Agremiação_Sportiva_Arapiraquense,ground,Estádio_Municipal_Coaracy_da_Mata_Fonseca,,,,
+ont_15_sportsteam_test_79,EXTRA,,,,,,"(Agremiação_Sportiva_Arapiraquense, location, Arapiraca)",Agremiação_Sportiva_Arapiraquense,location,Arapiraca
+ont_15_sportsteam_test_8,MISSING,,"(Jens_Härtel, club, Berliner_AK_07)",Jens_Härtel,club,Berliner_AK_07,,,,
+ont_15_sportsteam_test_8,MISSING,,"(Jens_Härtel, club, FC_Sachsen_Leipzig)",Jens_Härtel,club,FC_Sachsen_Leipzig,,,,
+ont_15_sportsteam_test_8,MISSING,,"(1._FC_Magdeburg, manager, Jens_Härtel)",1._FC_Magdeburg,manager,Jens_Härtel,,,,
+ont_15_sportsteam_test_80,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_80,SEMANTIC,0.96,"(Agremiação_Sportiva_Arapiraquense, season, 2015_Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,season,2015_Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, season, 2015)",Agremiação_Sportiva_Arapiraquense,season,2015
+ont_15_sportsteam_test_80,SEMANTIC,0.96,"(Campeonato_Brasileiro_Série_C, champions, Vila_Nova_Futebol_Clube)",Campeonato_Brasileiro_Série_C,champions,Vila_Nova_Futebol_Clube,"(Campeonato_Brasileiro_Série_C, league, Vila_Nova_Futebol_Clube)",Campeonato_Brasileiro_Série_C,league,Vila_Nova_Futebol_Clube
+ont_15_sportsteam_test_80,SEMANTIC,0.95,"(Agremiação_Sportiva_Arapiraquense, fullName, Agremiação Sportiva Arapiraquense)",Agremiação_Sportiva_Arapiraquense,fullName,Agremiação Sportiva Arapiraquense,"(Agremiação_Sportiva_Arapiraquense, location, Brazil)",Agremiação_Sportiva_Arapiraquense,location,Brazil
+ont_15_sportsteam_test_80,MISSING,,"(Campeonato_Brasileiro_Série_C, country, Brazil)",Campeonato_Brasileiro_Série_C,country,Brazil,,,,
+ont_15_sportsteam_test_80,MISSING,,"(Agremiação_Sportiva_Arapiraquense, ground, Estádio_Municipal_Coaracy_da_Mata_Fonseca)",Agremiação_Sportiva_Arapiraquense,ground,Estádio_Municipal_Coaracy_da_Mata_Fonseca,,,,
+ont_15_sportsteam_test_80,MISSING,,"(Estádio_Municipal_Coaracy_da_Mata_Fonseca, location, Arapiraca)",Estádio_Municipal_Coaracy_da_Mata_Fonseca,location,Arapiraca,,,,
+ont_15_sportsteam_test_81,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_81,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000
+ont_15_sportsteam_test_81,SEMANTIC,0.96,"(Campeonato_Brasileiro_Série_C, champions, Vila_Nova_Futebol_Clube)",Campeonato_Brasileiro_Série_C,champions,Vila_Nova_Futebol_Clube,"(Campeonato_Brasileiro_Série_C, league, Vila_Nova_Futebol_Clube)",Campeonato_Brasileiro_Série_C,league,Vila_Nova_Futebol_Clube
+ont_15_sportsteam_test_81,MISSING,,"(Agremiação_Sportiva_Arapiraquense, season, 2015)",Agremiação_Sportiva_Arapiraquense,season,2015,,,,
+ont_15_sportsteam_test_81,MISSING,,"(Estádio_Municipal_Coaracy_da_Mata_Fonseca, location, Arapiraca)",Estádio_Municipal_Coaracy_da_Mata_Fonseca,location,Arapiraca,,,,
+ont_15_sportsteam_test_81,MISSING,,"(Agremiação_Sportiva_Arapiraquense, ground, Estádio_Municipal_Coaracy_da_Mata_Fonseca)",Agremiação_Sportiva_Arapiraquense,ground,Estádio_Municipal_Coaracy_da_Mata_Fonseca,,,,
+ont_15_sportsteam_test_81,EXTRA,,,,,,"(Arapiraca, country, Brazil)",Arapiraca,country,Brazil
+ont_15_sportsteam_test_82,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_82,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000
+ont_15_sportsteam_test_82,MISSING,,"(Campeonato_Brasileiro_Série_C, country, Brazil)",Campeonato_Brasileiro_Série_C,country,Brazil,,,,
+ont_15_sportsteam_test_82,MISSING,,"(Agremiação_Sportiva_Arapiraquense, nickname, ''Alvinegro)",Agremiação_Sportiva_Arapiraquense,nickname,''Alvinegro,,,,
+ont_15_sportsteam_test_82,EXTRA,,,,,,"(Agremiação_Sportiva_Arapiraquense, location, Brazil)",Agremiação_Sportiva_Arapiraquense,location,Brazil
+ont_15_sportsteam_test_83,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_83,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000
+ont_15_sportsteam_test_83,SEMANTIC,0.96,"(Campeonato_Brasileiro_Série_C, champions, Vila_Nova_Futebol_Clube)",Campeonato_Brasileiro_Série_C,champions,Vila_Nova_Futebol_Clube,"(Campeonato_Brasileiro_Série_C, league, Vila_Nova_Futebol_Clube)",Campeonato_Brasileiro_Série_C,league,Vila_Nova_Futebol_Clube
+ont_15_sportsteam_test_83,MISSING,,"(Campeonato_Brasileiro_Série_C, country, Brazil)",Campeonato_Brasileiro_Série_C,country,Brazil,,,,
+ont_15_sportsteam_test_83,MISSING,,"(Agremiação_Sportiva_Arapiraquense, fullName, Agremiação Sportiva Arapiraquense)",Agremiação_Sportiva_Arapiraquense,fullName,Agremiação Sportiva Arapiraquense,,,,
+ont_15_sportsteam_test_83,MISSING,,"(Agremiação_Sportiva_Arapiraquense, ground, Estádio_Municipal_Coaracy_da_Mata_Fonseca)",Agremiação_Sportiva_Arapiraquense,ground,Estádio_Municipal_Coaracy_da_Mata_Fonseca,,,,
+ont_15_sportsteam_test_83,MISSING,,"(Estádio_Municipal_Coaracy_da_Mata_Fonseca, location, Arapiraca)",Estádio_Municipal_Coaracy_da_Mata_Fonseca,location,Arapiraca,,,,
+ont_15_sportsteam_test_83,EXTRA,,,,,,"(Agremiação_Sportiva_Arapiraquense, city, Arapiraca)",Agremiação_Sportiva_Arapiraquense,city,Arapiraca
+ont_15_sportsteam_test_84,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_84,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000
+ont_15_sportsteam_test_84,SEMANTIC,0.96,"(Campeonato_Brasileiro_Série_C, champions, Vila_Nova_Futebol_Clube)",Campeonato_Brasileiro_Série_C,champions,Vila_Nova_Futebol_Clube,"(Campeonato_Brasileiro_Série_C, league, Vila_Nova_Futebol_Clube)",Campeonato_Brasileiro_Série_C,league,Vila_Nova_Futebol_Clube
+ont_15_sportsteam_test_84,MISSING,,"(Estádio_Municipal_Coaracy_da_Mata_Fonseca, location, Arapiraca)",Estádio_Municipal_Coaracy_da_Mata_Fonseca,location,Arapiraca,,,,
+ont_15_sportsteam_test_84,MISSING,,"(Agremiação_Sportiva_Arapiraquense, ground, Estádio_Municipal_Coaracy_da_Mata_Fonseca)",Agremiação_Sportiva_Arapiraquense,ground,Estádio_Municipal_Coaracy_da_Mata_Fonseca,,,,
+ont_15_sportsteam_test_84,MISSING,,"(Agremiação_Sportiva_Arapiraquense, fullName, Agremiação Sportiva Arapiraquense)",Agremiação_Sportiva_Arapiraquense,fullName,Agremiação Sportiva Arapiraquense,,,,
+ont_15_sportsteam_test_85,MISSING,,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,,,,
+ont_15_sportsteam_test_85,MISSING,,"(Agremiação_Sportiva_Arapiraquense, nickname, ''Alvinegro)",Agremiação_Sportiva_Arapiraquense,nickname,''Alvinegro,,,,
+ont_15_sportsteam_test_85,MISSING,,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000,,,,
+ont_15_sportsteam_test_86,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_86,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000
+ont_15_sportsteam_test_86,SEMANTIC,0.96,"(Agremiação_Sportiva_Arapiraquense, season, 2015_Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,season,2015_Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, season, 2015)",Agremiação_Sportiva_Arapiraquense,season,2015
+ont_15_sportsteam_test_87,SEMANTIC,0.96,"(Campeonato_Brasileiro_Série_C, champions, Vila_Nova_Futebol_Clube)",Campeonato_Brasileiro_Série_C,champions,Vila_Nova_Futebol_Clube,"(Campeonato_Brasileiro_Série_C, league, Vila_Nova_Futebol_Clube)",Campeonato_Brasileiro_Série_C,league,Vila_Nova_Futebol_Clube
+ont_15_sportsteam_test_87,MISSING,,"(Agremiação_Sportiva_Arapiraquense, ground, Estádio_Municipal_Coaracy_da_Mata_Fonseca)",Agremiação_Sportiva_Arapiraquense,ground,Estádio_Municipal_Coaracy_da_Mata_Fonseca,,,,
+ont_15_sportsteam_test_87,MISSING,,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,,,,
+ont_15_sportsteam_test_87,MISSING,,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000,,,,
+ont_15_sportsteam_test_87,MISSING,,"(Estádio_Municipal_Coaracy_da_Mata_Fonseca, location, Arapiraca)",Estádio_Municipal_Coaracy_da_Mata_Fonseca,location,Arapiraca,,,,
+ont_15_sportsteam_test_87,MISSING,,"(Campeonato_Brasileiro_Série_C, country, Brazil)",Campeonato_Brasileiro_Série_C,country,Brazil,,,,
+ont_15_sportsteam_test_87,MISSING,,"(Agremiação_Sportiva_Arapiraquense, chairmanTitle, President)",Agremiação_Sportiva_Arapiraquense,chairmanTitle,President,,,,
+ont_15_sportsteam_test_88,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_88,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000
+ont_15_sportsteam_test_88,MISSING,,"(Agremiação_Sportiva_Arapiraquense, fullName, Agremiação Sportiva Arapiraquense)",Agremiação_Sportiva_Arapiraquense,fullName,Agremiação Sportiva Arapiraquense,,,,
+ont_15_sportsteam_test_88,MISSING,,"(Campeonato_Brasileiro_Série_C, country, Brazil)",Campeonato_Brasileiro_Série_C,country,Brazil,,,,
+ont_15_sportsteam_test_89,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_89,SEMANTIC,0.96,"(Agremiação_Sportiva_Arapiraquense, season, 2015_Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,season,2015_Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, season, 2015)",Agremiação_Sportiva_Arapiraquense,season,2015
+ont_15_sportsteam_test_89,MISSING,,"(Agremiação_Sportiva_Arapiraquense, ground, Estádio_Municipal_Coaracy_da_Mata_Fonseca)",Agremiação_Sportiva_Arapiraquense,ground,Estádio_Municipal_Coaracy_da_Mata_Fonseca,,,,
+ont_15_sportsteam_test_89,MISSING,,"(Estádio_Municipal_Coaracy_da_Mata_Fonseca, location, Arapiraca)",Estádio_Municipal_Coaracy_da_Mata_Fonseca,location,Arapiraca,,,,
+ont_15_sportsteam_test_89,MISSING,,"(Campeonato_Brasileiro_Série_C, country, Brazil)",Campeonato_Brasileiro_Série_C,country,Brazil,,,,
+ont_15_sportsteam_test_89,EXTRA,,,,,,"(Agremiação_Sportiva_Arapiraquense, location, Arapiraca)",Agremiação_Sportiva_Arapiraquense,location,Arapiraca
+ont_15_sportsteam_test_9,MISSING,,"(Jens_Härtel, club, Berliner_AK_07)",Jens_Härtel,club,Berliner_AK_07,,,,
+ont_15_sportsteam_test_9,MISSING,,"(Jens_Härtel, club, SV_Babelsberg_03)",Jens_Härtel,club,SV_Babelsberg_03,,,,
+ont_15_sportsteam_test_9,MISSING,,"(1._FC_Magdeburg, manager, Jens_Härtel)",1._FC_Magdeburg,manager,Jens_Härtel,,,,
+ont_15_sportsteam_test_90,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_90,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000
+ont_15_sportsteam_test_90,SEMANTIC,0.96,"(Campeonato_Brasileiro_Série_C, champions, Vila_Nova_Futebol_Clube)",Campeonato_Brasileiro_Série_C,champions,Vila_Nova_Futebol_Clube,"(Campeonato_Brasileiro_Série_C, league, Vila_Nova_Futebol_Clube)",Campeonato_Brasileiro_Série_C,league,Vila_Nova_Futebol_Clube
+ont_15_sportsteam_test_90,MISSING,,"(Agremiação_Sportiva_Arapiraquense, ground, Estádio_Municipal_Coaracy_da_Mata_Fonseca)",Agremiação_Sportiva_Arapiraquense,ground,Estádio_Municipal_Coaracy_da_Mata_Fonseca,,,,
+ont_15_sportsteam_test_91,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_91,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000
+ont_15_sportsteam_test_91,SEMANTIC,0.96,"(Agremiação_Sportiva_Arapiraquense, season, 2015_Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,season,2015_Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, season, 2015)",Agremiação_Sportiva_Arapiraquense,season,2015
+ont_15_sportsteam_test_91,MISSING,,"(Agremiação_Sportiva_Arapiraquense, ground, Estádio_Municipal_Coaracy_da_Mata_Fonseca)",Agremiação_Sportiva_Arapiraquense,ground,Estádio_Municipal_Coaracy_da_Mata_Fonseca,,,,
+ont_15_sportsteam_test_91,MISSING,,"(Estádio_Municipal_Coaracy_da_Mata_Fonseca, location, Arapiraca)",Estádio_Municipal_Coaracy_da_Mata_Fonseca,location,Arapiraca,,,,
+ont_15_sportsteam_test_91,EXTRA,,,,,,"(Agremiação_Sportiva_Arapiraquense, city, Arapiraca)",Agremiação_Sportiva_Arapiraquense,city,Arapiraca
+ont_15_sportsteam_test_92,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_92,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000
+ont_15_sportsteam_test_92,MISSING,,"(Agremiação_Sportiva_Arapiraquense, ground, Estádio_Municipal_Coaracy_da_Mata_Fonseca)",Agremiação_Sportiva_Arapiraquense,ground,Estádio_Municipal_Coaracy_da_Mata_Fonseca,,,,
+ont_15_sportsteam_test_92,MISSING,,"(Campeonato_Brasileiro_Série_C, country, Brazil)",Campeonato_Brasileiro_Série_C,country,Brazil,,,,
+ont_15_sportsteam_test_93,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_93,MISSING,,"(Agremiação_Sportiva_Arapiraquense, nickname, ''Alvinegro)",Agremiação_Sportiva_Arapiraquense,nickname,''Alvinegro,,,,
+ont_15_sportsteam_test_94,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_94,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000
+ont_15_sportsteam_test_94,MISSING,,"(Agremiação_Sportiva_Arapiraquense, fullName, Agremiação Sportiva Arapiraquense)",Agremiação_Sportiva_Arapiraquense,fullName,Agremiação Sportiva Arapiraquense,,,,
+ont_15_sportsteam_test_94,MISSING,,"(Estádio_Municipal_Coaracy_da_Mata_Fonseca, location, Arapiraca)",Estádio_Municipal_Coaracy_da_Mata_Fonseca,location,Arapiraca,,,,
+ont_15_sportsteam_test_94,MISSING,,"(Campeonato_Brasileiro_Série_C, country, Brazil)",Campeonato_Brasileiro_Série_C,country,Brazil,,,,
+ont_15_sportsteam_test_94,MISSING,,"(Agremiação_Sportiva_Arapiraquense, ground, Estádio_Municipal_Coaracy_da_Mata_Fonseca)",Agremiação_Sportiva_Arapiraquense,ground,Estádio_Municipal_Coaracy_da_Mata_Fonseca,,,,
+ont_15_sportsteam_test_94,EXTRA,,,,,,"(Agremiação_Sportiva_Arapiraquense, city, Arapiraca)",Agremiação_Sportiva_Arapiraquense,city,Arapiraca
+ont_15_sportsteam_test_94,EXTRA,,,,,,"(Arapiraca, isPartOf, Brazil)",Arapiraca,isPartOf,Brazil
+ont_15_sportsteam_test_95,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_95,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000
+ont_15_sportsteam_test_95,MISSING,,"(Agremiação_Sportiva_Arapiraquense, ground, Estádio_Municipal_Coaracy_da_Mata_Fonseca)",Agremiação_Sportiva_Arapiraquense,ground,Estádio_Municipal_Coaracy_da_Mata_Fonseca,,,,
+ont_15_sportsteam_test_95,MISSING,,"(Estádio_Municipal_Coaracy_da_Mata_Fonseca, location, Arapiraca)",Estádio_Municipal_Coaracy_da_Mata_Fonseca,location,Arapiraca,,,,
+ont_15_sportsteam_test_95,MISSING,,"(Campeonato_Brasileiro_Série_C, country, Brazil)",Campeonato_Brasileiro_Série_C,country,Brazil,,,,
+ont_15_sportsteam_test_95,MISSING,,"(Agremiação_Sportiva_Arapiraquense, nickname, ''Alvinegro)",Agremiação_Sportiva_Arapiraquense,nickname,''Alvinegro,,,,
+ont_15_sportsteam_test_95,EXTRA,,,,,,"(Arapiraca, country, Brazil)",Arapiraca,country,Brazil
+ont_15_sportsteam_test_95,EXTRA,,,,,,"(Agremiação_Sportiva_Arapiraquense, location, Arapiraca)",Agremiação_Sportiva_Arapiraquense,location,Arapiraca
+ont_15_sportsteam_test_96,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000
+ont_15_sportsteam_test_96,MISSING,,"(Agremiação_Sportiva_Arapiraquense, ground, Estádio_Municipal_Coaracy_da_Mata_Fonseca)",Agremiação_Sportiva_Arapiraquense,ground,Estádio_Municipal_Coaracy_da_Mata_Fonseca,,,,
+ont_15_sportsteam_test_96,MISSING,,"(Estádio_Municipal_Coaracy_da_Mata_Fonseca, location, Arapiraca)",Estádio_Municipal_Coaracy_da_Mata_Fonseca,location,Arapiraca,,,,
+ont_15_sportsteam_test_96,MISSING,,"(Campeonato_Brasileiro_Série_C, country, Brazil)",Campeonato_Brasileiro_Série_C,country,Brazil,,,,
+ont_15_sportsteam_test_96,MISSING,,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,,,,
+ont_15_sportsteam_test_96,EXTRA,,,,,,"(Agremiação_Sportiva_Arapiraquense, city, Arapiraca)",Agremiação_Sportiva_Arapiraquense,city,Arapiraca
+ont_15_sportsteam_test_97,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, season, 2015)",Agremiação_Sportiva_Arapiraquense,season,2015,"(Agremiação_Sportiva_Arapiraquense, season, 2015)",Agremiação_Sportiva_Arapiraquense,season,2015
+ont_15_sportsteam_test_97,MISSING,,"(Agremiação_Sportiva_Arapiraquense, numberOfMembers, 17000)",Agremiação_Sportiva_Arapiraquense,numberOfMembers,17000,,,,
+ont_15_sportsteam_test_97,MISSING,,"(Campeonato_Brasileiro_Série_C, champions, Vila_Nova_Futebol_Clube)",Campeonato_Brasileiro_Série_C,champions,Vila_Nova_Futebol_Clube,,,,
+ont_15_sportsteam_test_97,MISSING,,"(Agremiação_Sportiva_Arapiraquense, fullName, Agremiação Sportiva Arapiraquense)",Agremiação_Sportiva_Arapiraquense,fullName,Agremiação Sportiva Arapiraquense,,,,
+ont_15_sportsteam_test_97,MISSING,,"(Agremiação_Sportiva_Arapiraquense, ground, Estádio_Municipal_Coaracy_da_Mata_Fonseca)",Agremiação_Sportiva_Arapiraquense,ground,Estádio_Municipal_Coaracy_da_Mata_Fonseca,,,,
+ont_15_sportsteam_test_97,MISSING,,"(Estádio_Municipal_Coaracy_da_Mata_Fonseca, location, Arapiraca)",Estádio_Municipal_Coaracy_da_Mata_Fonseca,location,Arapiraca,,,,
+ont_15_sportsteam_test_97,MISSING,,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,,,,
+ont_15_sportsteam_test_98,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_98,MISSING,,"(Agremiação_Sportiva_Arapiraquense, nickname, Asa Gigante '')",Agremiação_Sportiva_Arapiraquense,nickname,Asa Gigante '',,,,
+ont_15_sportsteam_test_99,EXACT,1.00,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C,"(Agremiação_Sportiva_Arapiraquense, league, Campeonato_Brasileiro_Série_C)",Agremiação_Sportiva_Arapiraquense,league,Campeonato_Brasileiro_Série_C
+ont_15_sportsteam_test_99,SEMANTIC,0.96,"(Campeonato_Brasileiro_Série_C, champions, Vila_Nova_Futebol_Clube)",Campeonato_Brasileiro_Série_C,champions,Vila_Nova_Futebol_Clube,"(Campeonato_Brasileiro_Série_C, league, Vila_Nova_Futebol_Clube)",Campeonato_Brasileiro_Série_C,league,Vila_Nova_Futebol_Clube
+ont_15_sportsteam_test_99,MISSING,,"(Campeonato_Brasileiro_Série_C, country, Brazil)",Campeonato_Brasileiro_Série_C,country,Brazil,,,,
+ont_15_sportsteam_test_99,MISSING,,"(Agremiação_Sportiva_Arapiraquense, fullName, Agremiação Sportiva Arapiraquense)",Agremiação_Sportiva_Arapiraquense,fullName,Agremiação Sportiva Arapiraquense,,,,
+ont_15_sportsteam_test_99,MISSING,,"(Agremiação_Sportiva_Arapiraquense, season, 2015)",Agremiação_Sportiva_Arapiraquense,season,2015,,,,
+ont_15_sportsteam_test_99,MISSING,,"(Agremiação_Sportiva_Arapiraquense, ground, Estádio_Municipal_Coaracy_da_Mata_Fonseca)",Agremiação_Sportiva_Arapiraquense,ground,Estádio_Municipal_Coaracy_da_Mata_Fonseca,,,,
+ont_15_sportsteam_test_99,MISSING,,"(Estádio_Municipal_Coaracy_da_Mata_Fonseca, location, Arapiraca)",Estádio_Municipal_Coaracy_da_Mata_Fonseca,location,Arapiraca,,,,
+ont_15_sportsteam_test_99,EXTRA,,,,,,"(Agremiação_Sportiva_Arapiraquense, city, Arapiraca)",Agremiação_Sportiva_Arapiraquense,city,Arapiraca
+ont_15_sportsteam_test_99,EXTRA,,,,,,"(Agremiação_Sportiva_Arapiraquense, season, 2015_NFL_season)",Agremiação_Sportiva_Arapiraquense,season,2015_NFL_season

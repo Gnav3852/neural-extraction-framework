@@ -1,0 +1,364 @@
+sent_id,match_type,similarity,expected,expected_sub,expected_rel,expected_obj,predicted,predicted_sub,predicted_rel,predicted_obj
+ont_4_building_test_1,EXACT,1.00,"(108_St_Georges_Terrace, floorCount, 50)",108_St_Georges_Terrace,floorCount,50,"(108_St_Georges_Terrace, floorCount, 50)",108_St_Georges_Terrace,floorCount,50
+ont_4_building_test_1,SEMANTIC,0.99,"(108_St_Georges_Terrace, completionDate, 1988)",108_St_Georges_Terrace,completionDate,1988,"(108_St_Georges_Terrace, completionDate, 1988-01-01)",108_St_Georges_Terrace,completionDate,1988-01-01
+ont_4_building_test_1,MISSING,,"(108_St_Georges_Terrace, cost, 120 million (Australian dollars))",108_St_Georges_Terrace,cost,120 million (Australian dollars),,,,
+ont_4_building_test_1,EXTRA,,,,,,"(108_St_Georges_Terrace, cost, 120000000)",108_St_Georges_Terrace,cost,120000000
+ont_4_building_test_10,SEMANTIC,0.98,"(11_Diagonal_Street, location, South_Africa)",11_Diagonal_Street,location,South_Africa,"(11_Diagonal_Street, country, South_Africa)",11_Diagonal_Street,country,South_Africa
+ont_4_building_test_10,MISSING,,"(South_Africa, leader, Cyril_Ramaphosa)",South_Africa,leader,Cyril_Ramaphosa,,,,
+ont_4_building_test_10,MISSING,,"(South_Africa, ethnicGroup, White_South_African)",South_Africa,ethnicGroup,White_South_African,,,,
+ont_4_building_test_100,EXACT,1.00,"(Ampara_Hospital, bedCount, 476)",Ampara_Hospital,bedCount,476,"(Ampara_Hospital, bedCount, 476)",Ampara_Hospital,bedCount,476
+ont_4_building_test_100,EXACT,1.00,"(Ampara_Hospital, country, Sri_Lanka)",Ampara_Hospital,country,Sri_Lanka,"(Ampara_Hospital, country, Sri_Lanka)",Ampara_Hospital,country,Sri_Lanka
+ont_4_building_test_100,SEMANTIC,0.99,"(Ampara_Hospital, region, Ampara_District)",Ampara_Hospital,region,Ampara_District,"(Ampara_Hospital, location, Ampara_District)",Ampara_Hospital,location,Ampara_District
+ont_4_building_test_101,EXACT,1.00,"(Ampara_Hospital, country, Sri_Lanka)",Ampara_Hospital,country,Sri_Lanka,"(Ampara_Hospital, country, Sri_Lanka)",Ampara_Hospital,country,Sri_Lanka
+ont_4_building_test_101,SEMANTIC,1.00,"(Ampara_Hospital, state, Eastern_Province,_Sri_Lanka)",Ampara_Hospital,state,"Eastern_Province,_Sri_Lanka","(Ampara_Hospital, region, Eastern_Province,_Sri_Lanka)",Ampara_Hospital,region,"Eastern_Province,_Sri_Lanka"
+ont_4_building_test_101,MISSING,,"(Sri_Lanka, leader, Ranil_Wickremesinghe)",Sri_Lanka,leader,Ranil_Wickremesinghe,,,,
+ont_4_building_test_101,EXTRA,,,,,,"(Ampara_Hospital, leader, Ranil_Wickremesinghe)",Ampara_Hospital,leader,Ranil_Wickremesinghe
+ont_4_building_test_102,EXACT,1.00,"(Asilomar_Conference_Grounds, location, Pacific_Grove,_California)",Asilomar_Conference_Grounds,location,"Pacific_Grove,_California","(Asilomar_Conference_Grounds, location, Pacific_Grove,_California)",Asilomar_Conference_Grounds,location,"Pacific_Grove,_California"
+ont_4_building_test_102,MISSING,,"(Asilomar_Conference_Grounds, NationalRegisterOfHistoricPlacesReferenceNumber, 87000823)",Asilomar_Conference_Grounds,NationalRegisterOfHistoricPlacesReferenceNumber,87000823,,,,
+ont_4_building_test_102,MISSING,,"(Asilomar_Conference_Grounds, addedToTheNationalRegisterOfHistoricPlaces, 1987-02-27)",Asilomar_Conference_Grounds,addedToTheNationalRegisterOfHistoricPlaces,1987-02-27,,,,
+ont_4_building_test_102,EXTRA,,,,,,"(Asilomar_Conference_Grounds, location, United_States)",Asilomar_Conference_Grounds,location,United_States
+ont_4_building_test_102,EXTRA,,,,,,"(Asilomar_Conference_Grounds, address, 87000823)",Asilomar_Conference_Grounds,address,87000823
+ont_4_building_test_102,EXTRA,,,,,,"(Asilomar_Conference_Grounds, completionDate, 1987-02-27)",Asilomar_Conference_Grounds,completionDate,1987-02-27
+ont_4_building_test_102,EXTRA,,,,,,"(Asilomar_Conference_Grounds, state, California)",Asilomar_Conference_Grounds,state,California
+ont_4_building_test_103,MISSING,,"(India, leader, Sumitra_Mahajan)",India,leader,Sumitra_Mahajan,,,,
+ont_4_building_test_103,MISSING,,"(India, leader, T._S._Thakur)",India,leader,T._S._Thakur,,,,
+ont_4_building_test_103,MISSING,,"(Amdavad_ni_Gufa, country, India)",Amdavad_ni_Gufa,country,India,,,,
+ont_4_building_test_11,SEMANTIC,0.98,"(11_Diagonal_Street, location, South_Africa)",11_Diagonal_Street,location,South_Africa,"(11_Diagonal_Street, country, South_Africa)",11_Diagonal_Street,country,South_Africa
+ont_4_building_test_11,MISSING,,"(South_Africa, leader, Jacob_Zuma)",South_Africa,leader,Jacob_Zuma,,,,
+ont_4_building_test_11,MISSING,,"(South_Africa, leader, Cyril_Ramaphosa)",South_Africa,leader,Cyril_Ramaphosa,,,,
+ont_4_building_test_12,SEMANTIC,0.98,"(11_Diagonal_Street, location, South_Africa)",11_Diagonal_Street,location,South_Africa,"(11_Diagonal_Street, country, South_Africa)",11_Diagonal_Street,country,South_Africa
+ont_4_building_test_12,MISSING,,"(South_Africa, leader, Jacob_Zuma)",South_Africa,leader,Jacob_Zuma,,,,
+ont_4_building_test_12,MISSING,,"(South_Africa, ethnicGroup, Asian_South_Africans)",South_Africa,ethnicGroup,Asian_South_Africans,,,,
+ont_4_building_test_13,MISSING,,"(250_Delaware_Avenue, floorCount, 12)",250_Delaware_Avenue,floorCount,12,,,,
+ont_4_building_test_13,MISSING,,"(250_Delaware_Avenue, floorArea, 30843.8 (square metres))",250_Delaware_Avenue,floorArea,30843.8 (square metres),,,,
+ont_4_building_test_13,MISSING,,"(250_Delaware_Avenue, buildingStartDate, January, 2014)",250_Delaware_Avenue,buildingStartDate,"January, 2014",,,,
+ont_4_building_test_14,MISSING,,"(250_Delaware_Avenue, floorCount, 12)",250_Delaware_Avenue,floorCount,12,,,,
+ont_4_building_test_14,MISSING,,"(250_Delaware_Avenue, cost, 110 million (dollars))",250_Delaware_Avenue,cost,110 million (dollars),,,,
+ont_4_building_test_14,MISSING,,"(250_Delaware_Avenue, floorArea, 30843.8 (square metres))",250_Delaware_Avenue,floorArea,30843.8 (square metres),,,,
+ont_4_building_test_15,MISSING,,"(250_Delaware_Avenue, location, Buffalo,_New_York)",250_Delaware_Avenue,location,"Buffalo,_New_York",,,,
+ont_4_building_test_15,MISSING,,"(250_Delaware_Avenue, floorCount, 12)",250_Delaware_Avenue,floorCount,12,,,,
+ont_4_building_test_15,MISSING,,"(250_Delaware_Avenue, buildingStartDate, January, 2014)",250_Delaware_Avenue,buildingStartDate,"January, 2014",,,,
+ont_4_building_test_16,MISSING,,"(250_Delaware_Avenue, location, Buffalo,_New_York)",250_Delaware_Avenue,location,"Buffalo,_New_York",,,,
+ont_4_building_test_16,MISSING,,"(250_Delaware_Avenue, floorCount, 12)",250_Delaware_Avenue,floorCount,12,,,,
+ont_4_building_test_16,MISSING,,"(250_Delaware_Avenue, floorArea, 30843.8 (square metres))",250_Delaware_Avenue,floorArea,30843.8 (square metres),,,,
+ont_4_building_test_17,MISSING,,"(250_Delaware_Avenue, location, Buffalo,_New_York)",250_Delaware_Avenue,location,"Buffalo,_New_York",,,,
+ont_4_building_test_17,MISSING,,"(Buffalo,_New_York, isPartOf, Erie_County,_New_York)","Buffalo,_New_York",isPartOf,"Erie_County,_New_York",,,,
+ont_4_building_test_17,MISSING,,"(Buffalo,_New_York, leader, Byron_Brown)","Buffalo,_New_York",leader,Byron_Brown,,,,
+ont_4_building_test_17,EXTRA,,,,,,"(American_bison, region, Erie_County,_New_York)",American_bison,region,"Erie_County,_New_York"
+ont_4_building_test_17,EXTRA,,,,,,"(American_bison, leader, Byron_Brown)",American_bison,leader,Byron_Brown
+ont_4_building_test_18,MISSING,,"(250_Delaware_Avenue, location, Buffalo,_New_York)",250_Delaware_Avenue,location,"Buffalo,_New_York",,,,
+ont_4_building_test_18,MISSING,,"(Buffalo,_New_York, isPartOf, New_York)","Buffalo,_New_York",isPartOf,New_York,,,,
+ont_4_building_test_18,MISSING,,"(Buffalo,_New_York, leader, Byron_Brown)","Buffalo,_New_York",leader,Byron_Brown,,,,
+ont_4_building_test_19,EXACT,1.00,"(320_South_Boston_Building, architect, George_Winkler)",320_South_Boston_Building,architect,George_Winkler,"(320_South_Boston_Building, architect, George_Winkler)",320_South_Boston_Building,architect,George_Winkler
+ont_4_building_test_19,SEMANTIC,1.00,"(320_South_Boston_Building, buildingStartDate, 1910)",320_South_Boston_Building,buildingStartDate,1910,"(320_South_Boston_Building, buildingStartDate, 1910-01-01)",320_South_Boston_Building,buildingStartDate,1910-01-01
+ont_4_building_test_19,MISSING,,"(George_Winkler, country, United_States)",George_Winkler,country,United_States,,,,
+ont_4_building_test_2,EXACT,1.00,"(108_St_Georges_Terrace, location, Perth)",108_St_Georges_Terrace,location,Perth,"(108_St_Georges_Terrace, location, Perth)",108_St_Georges_Terrace,location,Perth
+ont_4_building_test_2,SEMANTIC,1.00,"(108_St_Georges_Terrace, buildingStartDate, 1981)",108_St_Georges_Terrace,buildingStartDate,1981,"(108_St_Georges_Terrace, buildingStartDate, 1981-01-01)",108_St_Georges_Terrace,buildingStartDate,1981-01-01
+ont_4_building_test_2,MISSING,,"(Perth, country, Australia)",Perth,country,Australia,,,,
+ont_4_building_test_2,EXTRA,,,,,,"(108_St_Georges_Terrace, country, Australia)",108_St_Georges_Terrace,country,Australia
+ont_4_building_test_20,EXACT,1.00,"(320_South_Boston_Building, architect, George_Winkler)",320_South_Boston_Building,architect,George_Winkler,"(320_South_Boston_Building, architect, George_Winkler)",320_South_Boston_Building,architect,George_Winkler
+ont_4_building_test_20,SEMANTIC,0.99,"(320_South_Boston_Building, completionDate, 1929)",320_South_Boston_Building,completionDate,1929,"(320_South_Boston_Building, completionDate, 1929-01-01)",320_South_Boston_Building,completionDate,1929-01-01
+ont_4_building_test_20,MISSING,,"(George_Winkler, country, United_States)",George_Winkler,country,United_States,,,,
+ont_4_building_test_21,EXACT,1.00,"(320_South_Boston_Building, floorCount, 22)",320_South_Boston_Building,floorCount,22,"(320_South_Boston_Building, floorCount, 22)",320_South_Boston_Building,floorCount,22
+ont_4_building_test_21,SEMANTIC,0.97,"(320_South_Boston_Building, height, 121.92 (metres))",320_South_Boston_Building,height,121.92 (metres),"(320_South_Boston_Building, height, 121.92)",320_South_Boston_Building,height,121.92
+ont_4_building_test_21,SEMANTIC,0.99,"(320_South_Boston_Building, completionDate, 1929)",320_South_Boston_Building,completionDate,1929,"(320_South_Boston_Building, completionDate, 1929-01-01)",320_South_Boston_Building,completionDate,1929-01-01
+ont_4_building_test_22,EXACT,1.00,"(3Arena, architect, Populous_(company))",3Arena,architect,Populous_(company),"(3Arena, architect, Populous_(company))",3Arena,architect,Populous_(company)
+ont_4_building_test_22,EXACT,1.00,"(3Arena, location, North_Wall,_Dublin)",3Arena,location,"North_Wall,_Dublin","(3Arena, location, North_Wall,_Dublin)",3Arena,location,"North_Wall,_Dublin"
+ont_4_building_test_22,SEMANTIC,0.98,"(3Arena, completionDate, December 2008)",3Arena,completionDate,December 2008,"(3Arena, completionDate, 2008-12-01)",3Arena,completionDate,2008-12-01
+ont_4_building_test_23,EXACT,1.00,"(3Arena, architect, HOK SVE)",3Arena,architect,HOK SVE,"(3Arena, architect, Hok_Sve)",3Arena,architect,Hok_Sve
+ont_4_building_test_23,SEMANTIC,0.98,"(3Arena, completionDate, December 2008)",3Arena,completionDate,December 2008,"(3Arena, completionDate, 2008-12-01)",3Arena,completionDate,2008-12-01
+ont_4_building_test_23,MISSING,,"(3Arena, location, East Link Bridge)",3Arena,location,East Link Bridge,,,,
+ont_4_building_test_23,EXTRA,,,,,,"(3Arena, location, East-Link_(Dublin))",3Arena,location,East-Link_(Dublin)
+ont_4_building_test_24,SEMANTIC,0.98,"(3Arena, completionDate, December 2008)",3Arena,completionDate,December 2008,"(3Arena, completionDate, 2008-12-01)",3Arena,completionDate,2008-12-01
+ont_4_building_test_24,MISSING,,"(3Arena, architect, Populous_(company))",3Arena,architect,Populous_(company),,,,
+ont_4_building_test_24,MISSING,,"(3Arena, location, East Link Bridge)",3Arena,location,East Link Bridge,,,,
+ont_4_building_test_24,EXTRA,,,,,,"(3Arena, location, East-Link_(Dublin))",3Arena,location,East-Link_(Dublin)
+ont_4_building_test_25,SEMANTIC,0.98,"(3Arena, completionDate, December 2008)",3Arena,completionDate,December 2008,"(3Arena, completionDate, 2008-12-01)",3Arena,completionDate,2008-12-01
+ont_4_building_test_25,MISSING,,"(3Arena, architect, Populous_(company))",3Arena,architect,Populous_(company),,,,
+ont_4_building_test_25,MISSING,,"(3Arena, location, North Wall Quay)",3Arena,location,North Wall Quay,,,,
+ont_4_building_test_25,EXTRA,,,,,,"(3Arena, location, North_Wall,_Dublin)",3Arena,location,"North_Wall,_Dublin"
+ont_4_building_test_26,EXACT,1.00,"(3Arena, architect, HOK SVE)",3Arena,architect,HOK SVE,"(3Arena, architect, Hok_Sve)",3Arena,architect,Hok_Sve
+ont_4_building_test_26,EXACT,1.00,"(3Arena, location, North_Wall,_Dublin)",3Arena,location,"North_Wall,_Dublin","(3Arena, location, North_Wall,_Dublin)",3Arena,location,"North_Wall,_Dublin"
+ont_4_building_test_26,SEMANTIC,0.98,"(3Arena, completionDate, December 2008)",3Arena,completionDate,December 2008,"(3Arena, completionDate, 2008-12-01)",3Arena,completionDate,2008-12-01
+ont_4_building_test_27,EXACT,1.00,"(3Arena, location, Dublin)",3Arena,location,Dublin,"(3Arena, location, Dublin)",3Arena,location,Dublin
+ont_4_building_test_27,MISSING,,"(Dublin, isPartOf, Leinster)",Dublin,isPartOf,Leinster,,,,
+ont_4_building_test_27,MISSING,,"(3Arena, owner, Live_Nation_Entertainment)",3Arena,owner,Live_Nation_Entertainment,,,,
+ont_4_building_test_27,EXTRA,,,,,,"(3Arena, region, Leinster)",3Arena,region,Leinster
+ont_4_building_test_27,EXTRA,,,,,,"(3Arena, governingBody, Live_Nation_Entertainment)",3Arena,governingBody,Live_Nation_Entertainment
+ont_4_building_test_28,EXACT,1.00,"(3Arena, location, Dublin)",3Arena,location,Dublin,"(3Arena, location, Dublin)",3Arena,location,Dublin
+ont_4_building_test_28,MISSING,,"(3Arena, owner, Live_Nation_Entertainment)",3Arena,owner,Live_Nation_Entertainment,,,,
+ont_4_building_test_28,MISSING,,"(Dublin, leaderTitle, European_Parliament)",Dublin,leaderTitle,European_Parliament,,,,
+ont_4_building_test_28,EXTRA,,,,,,"(3Arena, governingBody, Live_Nation_Entertainment)",3Arena,governingBody,Live_Nation_Entertainment
+ont_4_building_test_29,EXACT,1.00,"(3Arena, location, Dublin)",3Arena,location,Dublin,"(3Arena, location, Dublin)",3Arena,location,Dublin
+ont_4_building_test_29,MISSING,,"(Dublin, isPartOf, Republic_of_Ireland)",Dublin,isPartOf,Republic_of_Ireland,,,,
+ont_4_building_test_29,MISSING,,"(3Arena, owner, Live_Nation_Entertainment)",3Arena,owner,Live_Nation_Entertainment,,,,
+ont_4_building_test_29,EXTRA,,,,,,"(3Arena, country, Republic_of_Ireland_national_football_team)",3Arena,country,Republic_of_Ireland_national_football_team
+ont_4_building_test_3,MISSING,,"(Perth, country, Australia)",Perth,country,Australia,,,,
+ont_4_building_test_3,MISSING,,"(108_St_Georges_Terrace, completionDate, 1988)",108_St_Georges_Terrace,completionDate,1988,,,,
+ont_4_building_test_3,MISSING,,"(108_St_Georges_Terrace, location, Perth)",108_St_Georges_Terrace,location,Perth,,,,
+ont_4_building_test_30,EXACT,1.00,"(3Arena, location, Dublin)",3Arena,location,Dublin,"(3Arena, location, Dublin)",3Arena,location,Dublin
+ont_4_building_test_30,MISSING,,"(Dublin, leader, Críona_Ní_Dhálaigh)",Dublin,leader,Críona_Ní_Dhálaigh,,,,
+ont_4_building_test_30,MISSING,,"(3Arena, owner, Live_Nation_Entertainment)",3Arena,owner,Live_Nation_Entertainment,,,,
+ont_4_building_test_30,EXTRA,,,,,,"(Críona_Ní_Dhálaigh, leaderTitle, lord mayor)",Críona_Ní_Dhálaigh,leaderTitle,lord mayor
+ont_4_building_test_31,EXACT,1.00,"(3Arena, location, Dublin)",3Arena,location,Dublin,"(3Arena, location, Dublin)",3Arena,location,Dublin
+ont_4_building_test_31,MISSING,,"(Dublin, leaderTitle, Dáil_Éireann)",Dublin,leaderTitle,Dáil_Éireann,,,,
+ont_4_building_test_31,MISSING,,"(3Arena, owner, Live_Nation_Entertainment)",3Arena,owner,Live_Nation_Entertainment,,,,
+ont_4_building_test_31,EXTRA,,,,,,"(Dáil_Éireann, location, Dublin)",Dáil_Éireann,location,Dublin
+ont_4_building_test_32,EXACT,1.00,"(Addis_Ababa_City_Hall, location, Addis_Ababa)",Addis_Ababa_City_Hall,location,Addis_Ababa,"(Addis_Ababa_City_Hall, location, Addis_Ababa)",Addis_Ababa_City_Hall,location,Addis_Ababa
+ont_4_building_test_32,EXACT,1.00,"(Addis_Ababa_City_Hall, country, Ethiopia)",Addis_Ababa_City_Hall,country,Ethiopia,"(Addis_Ababa_City_Hall, country, Ethiopia)",Addis_Ababa_City_Hall,country,Ethiopia
+ont_4_building_test_32,MISSING,,"(Addis_Ababa, isPartOf, Addis_Ababa_Stadium)",Addis_Ababa,isPartOf,Addis_Ababa_Stadium,,,,
+ont_4_building_test_32,EXTRA,,,,,,"(Addis_Ababa_Stadium, location, Addis_Ababa)",Addis_Ababa_Stadium,location,Addis_Ababa
+ont_4_building_test_32,EXTRA,,,,,,"(Addis_Ababa_Stadium, country, Ethiopia)",Addis_Ababa_Stadium,country,Ethiopia
+ont_4_building_test_33,EXACT,1.00,"(Addis_Ababa_City_Hall, location, Addis_Ababa)",Addis_Ababa_City_Hall,location,Addis_Ababa,"(Addis_Ababa_City_Hall, location, Addis_Ababa)",Addis_Ababa_City_Hall,location,Addis_Ababa
+ont_4_building_test_33,MISSING,,"(Addis_Ababa, isPartOf, Addis_Ababa_Stadium)",Addis_Ababa,isPartOf,Addis_Ababa_Stadium,,,,
+ont_4_building_test_33,MISSING,,"(Addis_Ababa, country, Ethiopia)",Addis_Ababa,country,Ethiopia,,,,
+ont_4_building_test_33,EXTRA,,,,,,"(Addis_Ababa_Stadium, location, Addis_Ababa)",Addis_Ababa_Stadium,location,Addis_Ababa
+ont_4_building_test_33,EXTRA,,,,,,"(Addis_Ababa_City_Hall, country, Ethiopia)",Addis_Ababa_City_Hall,country,Ethiopia
+ont_4_building_test_33,EXTRA,,,,,,"(Addis_Ababa_Stadium, country, Ethiopia)",Addis_Ababa_Stadium,country,Ethiopia
+ont_4_building_test_34,SEMANTIC,1.00,"(Addis_Ababa_City_Hall, completionDate, 1964)",Addis_Ababa_City_Hall,completionDate,1964,"(Addis_Ababa_City_Hall, completionDate, 1964-01-01)",Addis_Ababa_City_Hall,completionDate,1964-01-01
+ont_4_building_test_34,SEMANTIC,1.00,"(Addis_Ababa_City_Hall, buildingStartDate, 1961)",Addis_Ababa_City_Hall,buildingStartDate,1961,"(Addis_Ababa_City_Hall, buildingStartDate, 1961-01-01)",Addis_Ababa_City_Hall,buildingStartDate,1961-01-01
+ont_4_building_test_34,SEMANTIC,0.98,"(Addis_Ababa_City_Hall, floorArea, 140000.0 (square metres))",Addis_Ababa_City_Hall,floorArea,140000.0 (square metres),"(Addis_Ababa_City_Hall, floorArea, 140000.0)",Addis_Ababa_City_Hall,floorArea,140000.0
+ont_4_building_test_35,EXACT,1.00,"(Addis_Ababa_City_Hall, completionDate, 1964)",Addis_Ababa_City_Hall,completionDate,1964,"(Addis_Ababa_City_Hall, completionDate, 1964)",Addis_Ababa_City_Hall,completionDate,1964
+ont_4_building_test_35,SEMANTIC,0.98,"(Addis_Ababa_City_Hall, height, 42 m)",Addis_Ababa_City_Hall,height,42 m,"(Addis_Ababa_City_Hall, height, 42)",Addis_Ababa_City_Hall,height,42
+ont_4_building_test_35,SEMANTIC,0.98,"(Addis_Ababa_City_Hall, floorArea, 140000.0 (square metres))",Addis_Ababa_City_Hall,floorArea,140000.0 (square metres),"(Addis_Ababa_City_Hall, floorArea, 140000)",Addis_Ababa_City_Hall,floorArea,140000
+ont_4_building_test_36,EXACT,1.00,"(Adisham_Hall, location, Haputale)",Adisham_Hall,location,Haputale,"(Adisham_Hall, location, Haputale)",Adisham_Hall,location,Haputale
+ont_4_building_test_36,SEMANTIC,0.99,"(Adisham_Hall, buildingStartDate, 1927)",Adisham_Hall,buildingStartDate,1927,"(Adisham_Hall, buildingStartDate, 1927-01-01)",Adisham_Hall,buildingStartDate,1927-01-01
+ont_4_building_test_36,MISSING,,"(Adisham_Hall, architecturalStyle, Tudor and Jacabian)",Adisham_Hall,architecturalStyle,Tudor and Jacabian,,,,
+ont_4_building_test_37,SEMANTIC,0.98,"(Adisham_Hall, location, Haputale, Sri Lanka)",Adisham_Hall,location,"Haputale, Sri Lanka","(Adisham_Hall, location, Haputale)",Adisham_Hall,location,Haputale
+ont_4_building_test_37,SEMANTIC,0.99,"(Adisham_Hall, completionDate, 1931)",Adisham_Hall,completionDate,1931,"(Adisham_Hall, completionDate, 1931-01-01)",Adisham_Hall,completionDate,1931-01-01
+ont_4_building_test_37,MISSING,,"(Adisham_Hall, architecturalStyle, Tudor and Jacabian)",Adisham_Hall,architecturalStyle,Tudor and Jacabian,,,,
+ont_4_building_test_37,EXTRA,,,,,,"(Adisham_Hall, country, Sri_Lanka)",Adisham_Hall,country,Sri_Lanka
+ont_4_building_test_38,EXACT,1.00,"(Adisham_Hall, architecturalStyle, Tudor_Revival_architecture)",Adisham_Hall,architecturalStyle,Tudor_Revival_architecture,"(Adisham_Hall, architecturalStyle, Tudor_Revival_architecture)",Adisham_Hall,architecturalStyle,Tudor_Revival_architecture
+ont_4_building_test_38,EXACT,1.00,"(Adisham_Hall, location, Haputale)",Adisham_Hall,location,Haputale,"(Adisham_Hall, location, Haputale)",Adisham_Hall,location,Haputale
+ont_4_building_test_38,SEMANTIC,0.99,"(Adisham_Hall, completionDate, 1931)",Adisham_Hall,completionDate,1931,"(Adisham_Hall, completionDate, 1931-01-01)",Adisham_Hall,completionDate,1931-01-01
+ont_4_building_test_39,EXACT,1.00,"(Adisham_Hall, country, Sri_Lanka)",Adisham_Hall,country,Sri_Lanka,"(Adisham_Hall, country, Sri_Lanka)",Adisham_Hall,country,Sri_Lanka
+ont_4_building_test_39,SEMANTIC,0.98,"(Adisham_Hall, location, Haputale, Sri Lanka)",Adisham_Hall,location,"Haputale, Sri Lanka","(Adisham_Hall, location, Haputale)",Adisham_Hall,location,Haputale
+ont_4_building_test_39,MISSING,,"(Sri_Lanka, capital, Sri_Jayawardenepura_Kotte)",Sri_Lanka,capital,Sri_Jayawardenepura_Kotte,,,,
+ont_4_building_test_4,EXACT,1.00,"(108_St_Georges_Terrace, location, Perth)",108_St_Georges_Terrace,location,Perth,"(108_St_Georges_Terrace, location, Perth)",108_St_Georges_Terrace,location,Perth
+ont_4_building_test_4,SEMANTIC,0.97,"(108_St_Georges_Terrace, floorArea, 39500.0 (square metres))",108_St_Georges_Terrace,floorArea,39500.0 (square metres),"(108_St_Georges_Terrace, floorArea, 39500.0)",108_St_Georges_Terrace,floorArea,39500.0
+ont_4_building_test_4,MISSING,,"(Perth, country, Australia)",Perth,country,Australia,,,,
+ont_4_building_test_4,EXTRA,,,,,,"(108_St_Georges_Terrace, country, Australia)",108_St_Georges_Terrace,country,Australia
+ont_4_building_test_40,EXACT,1.00,"(Sri_Lanka, leader, Ranil_Wickremesinghe)",Sri_Lanka,leader,Ranil_Wickremesinghe,"(Sri_Lanka, leader, Ranil_Wickremesinghe)",Sri_Lanka,leader,Ranil_Wickremesinghe
+ont_4_building_test_40,EXACT,1.00,"(Adisham_Hall, country, Sri_Lanka)",Adisham_Hall,country,Sri_Lanka,"(Adisham_Hall, country, Sri_Lanka)",Adisham_Hall,country,Sri_Lanka
+ont_4_building_test_40,SEMANTIC,0.98,"(Adisham_Hall, location, Haputale, Sri Lanka)",Adisham_Hall,location,"Haputale, Sri Lanka","(Adisham_Hall, location, Haputale)",Adisham_Hall,location,Haputale
+ont_4_building_test_41,EXACT,1.00,"(Adisham_Hall, location, Haputale)",Adisham_Hall,location,Haputale,"(Adisham_Hall, location, Haputale)",Adisham_Hall,location,Haputale
+ont_4_building_test_41,EXACT,1.00,"(Adisham_Hall, country, Sri_Lanka)",Adisham_Hall,country,Sri_Lanka,"(Adisham_Hall, country, Sri_Lanka)",Adisham_Hall,country,Sri_Lanka
+ont_4_building_test_41,MISSING,,"(Sri_Lanka, capital, Sri_Jayawardenepura_Kotte)",Sri_Lanka,capital,Sri_Jayawardenepura_Kotte,,,,
+ont_4_building_test_42,EXACT,1.00,"(Adisham_Hall, country, Sri_Lanka)",Adisham_Hall,country,Sri_Lanka,"(Adisham_Hall, country, Sri_Lanka)",Adisham_Hall,country,Sri_Lanka
+ont_4_building_test_42,MISSING,,"(Sri_Lanka, capital, Sri_Jayawardenepura_Kotte)",Sri_Lanka,capital,Sri_Jayawardenepura_Kotte,,,,
+ont_4_building_test_42,MISSING,,"(Sri_Lanka, language, Tamil_language)",Sri_Lanka,language,Tamil_language,,,,
+ont_4_building_test_42,EXTRA,,,,,,"(Adisham_Hall, language, Tamil_language)",Adisham_Hall,language,Tamil_language
+ont_4_building_test_42,EXTRA,,,,,,"(Adisham_Hall, location, Sri_Jayawardenepura_Kotte)",Adisham_Hall,location,Sri_Jayawardenepura_Kotte
+ont_4_building_test_43,EXACT,1.00,"(Adisham_Hall, country, Sri_Lanka)",Adisham_Hall,country,Sri_Lanka,"(Adisham_Hall, country, Sri_Lanka)",Adisham_Hall,country,Sri_Lanka
+ont_4_building_test_43,MISSING,,"(Sri_Lanka, capital, Sri_Jayawardenepura_Kotte)",Sri_Lanka,capital,Sri_Jayawardenepura_Kotte,,,,
+ont_4_building_test_43,MISSING,,"(Sri_Lanka, leader, Ranil_Wickremesinghe)",Sri_Lanka,leader,Ranil_Wickremesinghe,,,,
+ont_4_building_test_44,EXACT,1.00,"(Adisham_Hall, country, Sri_Lanka)",Adisham_Hall,country,Sri_Lanka,"(Adisham_Hall, country, Sri_Lanka)",Adisham_Hall,country,Sri_Lanka
+ont_4_building_test_44,MISSING,,"(Sri_Lanka, leader, Ranil_Wickremesinghe)",Sri_Lanka,leader,Ranil_Wickremesinghe,,,,
+ont_4_building_test_44,MISSING,,"(Sri_Lanka, currency, Sri_Lankan_rupee)",Sri_Lanka,currency,Sri_Lankan_rupee,,,,
+ont_4_building_test_44,EXTRA,,,,,,"(Adisham_Hall, leader, Ranil_Wickremesinghe)",Adisham_Hall,leader,Ranil_Wickremesinghe
+ont_4_building_test_44,EXTRA,,,,,,"(Adisham_Hall, currency, Sri_Lankan_rupee)",Adisham_Hall,currency,Sri_Lankan_rupee
+ont_4_building_test_45,EXACT,1.00,"(Adisham_Hall, country, Sri_Lanka)",Adisham_Hall,country,Sri_Lanka,"(Adisham_Hall, country, Sri_Lanka)",Adisham_Hall,country,Sri_Lanka
+ont_4_building_test_45,MISSING,,"(Sri_Lanka, leader, Ranil_Wickremesinghe)",Sri_Lanka,leader,Ranil_Wickremesinghe,,,,
+ont_4_building_test_45,MISSING,,"(Sri_Lanka, language, Tamil_language)",Sri_Lanka,language,Tamil_language,,,,
+ont_4_building_test_46,EXACT,1.00,"(Adisham_Hall, architecturalStyle, Tudor_Revival_architecture)",Adisham_Hall,architecturalStyle,Tudor_Revival_architecture,"(Adisham_Hall, architecturalStyle, Tudor_Revival_architecture)",Adisham_Hall,architecturalStyle,Tudor_Revival_architecture
+ont_4_building_test_46,EXACT,1.00,"(Adisham_Hall, completionDate, 1931)",Adisham_Hall,completionDate,1931,"(Adisham_Hall, completionDate, 1931)",Adisham_Hall,completionDate,1931
+ont_4_building_test_46,SEMANTIC,0.98,"(Adisham_Hall, location, Haputale, Sri Lanka)",Adisham_Hall,location,"Haputale, Sri Lanka","(Adisham_Hall, location, Haputale)",Adisham_Hall,location,Haputale
+ont_4_building_test_46,EXTRA,,,,,,"(Adisham_Hall, country, Sri_Lanka)",Adisham_Hall,country,Sri_Lanka
+ont_4_building_test_47,MISSING,,"(Amdavad_ni_Gufa, address, Lalbhai Dalpatbhai Campus, near CEPT University, opp. Gujarat University, University Road)",Amdavad_ni_Gufa,address,"Lalbhai Dalpatbhai Campus, near CEPT University, opp. Gujarat University, University Road",,,,
+ont_4_building_test_47,MISSING,,"(Amdavad_ni_Gufa, location, Ahmedabad)",Amdavad_ni_Gufa,location,Ahmedabad,,,,
+ont_4_building_test_47,MISSING,,"(Amdavad_ni_Gufa, country, India)",Amdavad_ni_Gufa,country,India,,,,
+ont_4_building_test_48,MISSING,,"(India, leader, Sumitra_Mahajan)",India,leader,Sumitra_Mahajan,,,,
+ont_4_building_test_48,MISSING,,"(Amdavad_ni_Gufa, country, India)",Amdavad_ni_Gufa,country,India,,,,
+ont_4_building_test_48,MISSING,,"(India, leader, Narendra_Modi)",India,leader,Narendra_Modi,,,,
+ont_4_building_test_49,MISSING,,"(Amdavad_ni_Gufa, location, Ahmedabad)",Amdavad_ni_Gufa,location,Ahmedabad,,,,
+ont_4_building_test_49,MISSING,,"(Amdavad_ni_Gufa, country, India)",Amdavad_ni_Gufa,country,India,,,,
+ont_4_building_test_49,MISSING,,"(Amdavad_ni_Gufa, completionDate, 1995)",Amdavad_ni_Gufa,completionDate,1995,,,,
+ont_4_building_test_5,MISSING,,"(108_St_Georges_Terrace, floorCount, 50)",108_St_Georges_Terrace,floorCount,50,,,,
+ont_4_building_test_5,MISSING,,"(Perth, country, Australia)",Perth,country,Australia,,,,
+ont_4_building_test_5,MISSING,,"(108_St_Georges_Terrace, location, Perth)",108_St_Georges_Terrace,location,Perth,,,,
+ont_4_building_test_50,MISSING,,"(Amdavad_ni_Gufa, location, Ahmedabad)",Amdavad_ni_Gufa,location,Ahmedabad,,,,
+ont_4_building_test_50,MISSING,,"(Amdavad_ni_Gufa, country, India)",Amdavad_ni_Gufa,country,India,,,,
+ont_4_building_test_50,MISSING,,"(India, leader, Narendra_Modi)",India,leader,Narendra_Modi,,,,
+ont_4_building_test_51,MISSING,,"(India, leader, Sumitra_Mahajan)",India,leader,Sumitra_Mahajan,,,,
+ont_4_building_test_51,MISSING,,"(Amdavad_ni_Gufa, location, Ahmedabad)",Amdavad_ni_Gufa,location,Ahmedabad,,,,
+ont_4_building_test_51,MISSING,,"(Amdavad_ni_Gufa, country, India)",Amdavad_ni_Gufa,country,India,,,,
+ont_4_building_test_52,MISSING,,"(Amdavad_ni_Gufa, address, Lalbhai Dalpatbhai Campus, near CEPT University, opp. Gujarat University, University Road)",Amdavad_ni_Gufa,address,"Lalbhai Dalpatbhai Campus, near CEPT University, opp. Gujarat University, University Road",,,,
+ont_4_building_test_52,MISSING,,"(Amdavad_ni_Gufa, location, Gujarat)",Amdavad_ni_Gufa,location,Gujarat,,,,
+ont_4_building_test_52,MISSING,,"(Amdavad_ni_Gufa, country, India)",Amdavad_ni_Gufa,country,India,,,,
+ont_4_building_test_53,MISSING,,"(Amdavad_ni_Gufa, location, Gujarat)",Amdavad_ni_Gufa,location,Gujarat,,,,
+ont_4_building_test_53,MISSING,,"(Amdavad_ni_Gufa, country, India)",Amdavad_ni_Gufa,country,India,,,,
+ont_4_building_test_53,MISSING,,"(Amdavad_ni_Gufa, completionDate, 1995)",Amdavad_ni_Gufa,completionDate,1995,,,,
+ont_4_building_test_54,MISSING,,"(Amdavad_ni_Gufa, location, Gujarat)",Amdavad_ni_Gufa,location,Gujarat,,,,
+ont_4_building_test_54,MISSING,,"(Amdavad_ni_Gufa, country, India)",Amdavad_ni_Gufa,country,India,,,,
+ont_4_building_test_54,MISSING,,"(India, leader, Narendra_Modi)",India,leader,Narendra_Modi,,,,
+ont_4_building_test_55,MISSING,,"(India, leader, Sumitra_Mahajan)",India,leader,Sumitra_Mahajan,,,,
+ont_4_building_test_55,MISSING,,"(Amdavad_ni_Gufa, location, Gujarat)",Amdavad_ni_Gufa,location,Gujarat,,,,
+ont_4_building_test_55,MISSING,,"(Amdavad_ni_Gufa, country, India)",Amdavad_ni_Gufa,country,India,,,,
+ont_4_building_test_56,MISSING,,"(Amdavad_ni_Gufa, location, Gujarat)",Amdavad_ni_Gufa,location,Gujarat,,,,
+ont_4_building_test_56,MISSING,,"(Amdavad_ni_Gufa, country, India)",Amdavad_ni_Gufa,country,India,,,,
+ont_4_building_test_56,MISSING,,"(Amdavad_ni_Gufa, location, Ahmedabad)",Amdavad_ni_Gufa,location,Ahmedabad,,,,
+ont_4_building_test_57,EXACT,1.00,"(Ampara_Hospital, country, Sri_Lanka)",Ampara_Hospital,country,Sri_Lanka,"(Ampara_Hospital, country, Sri_Lanka)",Ampara_Hospital,country,Sri_Lanka
+ont_4_building_test_57,SEMANTIC,0.99,"(Ampara_Hospital, region, Ampara_District)",Ampara_Hospital,region,Ampara_District,"(Ampara_Hospital, location, Ampara_District)",Ampara_Hospital,location,Ampara_District
+ont_4_building_test_57,MISSING,,"(Sri_Lanka, leader, Ranil_Wickremesinghe)",Sri_Lanka,leader,Ranil_Wickremesinghe,,,,
+ont_4_building_test_58,EXACT,1.00,"(Ampara_Hospital, country, Sri_Lanka)",Ampara_Hospital,country,Sri_Lanka,"(Ampara_Hospital, country, Sri_Lanka)",Ampara_Hospital,country,Sri_Lanka
+ont_4_building_test_58,MISSING,,"(Sri_Lanka, capital, Sri_Jayawardenepura_Kotte)",Sri_Lanka,capital,Sri_Jayawardenepura_Kotte,,,,
+ont_4_building_test_58,MISSING,,"(Sri_Lanka, leader, Ranil_Wickremesinghe)",Sri_Lanka,leader,Ranil_Wickremesinghe,,,,
+ont_4_building_test_59,EXACT,1.00,"(Asilomar_Conference_Grounds, architect, Julia_Morgan)",Asilomar_Conference_Grounds,architect,Julia_Morgan,"(Asilomar_Conference_Grounds, architect, Julia_Morgan)",Asilomar_Conference_Grounds,architect,Julia_Morgan
+ont_4_building_test_59,MISSING,,"(Julia_Morgan, birthPlace, California)",Julia_Morgan,birthPlace,California,,,,
+ont_4_building_test_59,MISSING,,"(Julia_Morgan, significantBuilding, Asilomar_State_Beach)",Julia_Morgan,significantBuilding,Asilomar_State_Beach,,,,
+ont_4_building_test_59,EXTRA,,,,,,"(Asilomar_State_Beach, architect, Julia_Morgan)",Asilomar_State_Beach,architect,Julia_Morgan
+ont_4_building_test_6,EXACT,1.00,"(11_Diagonal_Street, floorCount, 20)",11_Diagonal_Street,floorCount,20,"(11_Diagonal_Street, floorCount, 20)",11_Diagonal_Street,floorCount,20
+ont_4_building_test_6,EXACT,1.00,"(11_Diagonal_Street, architect, Helmut_Jahn)",11_Diagonal_Street,architect,Helmut_Jahn,"(11_Diagonal_Street, architect, Helmut_Jahn)",11_Diagonal_Street,architect,Helmut_Jahn
+ont_4_building_test_6,SEMANTIC,0.99,"(11_Diagonal_Street, completionDate, 1983)",11_Diagonal_Street,completionDate,1983,"(11_Diagonal_Street, completionDate, 1983-01-01)",11_Diagonal_Street,completionDate,1983-01-01
+ont_4_building_test_60,EXACT,1.00,"(Asilomar_Conference_Grounds, architect, Julia_Morgan)",Asilomar_Conference_Grounds,architect,Julia_Morgan,"(Asilomar_Conference_Grounds, architect, Julia_Morgan)",Asilomar_Conference_Grounds,architect,Julia_Morgan
+ont_4_building_test_60,EXACT,1.00,"(Julia_Morgan, birthPlace, San_Francisco)",Julia_Morgan,birthPlace,San_Francisco,"(Julia_Morgan, birthPlace, San_Francisco)",Julia_Morgan,birthPlace,San_Francisco
+ont_4_building_test_60,MISSING,,"(Julia_Morgan, significantBuilding, Asilomar_State_Beach)",Julia_Morgan,significantBuilding,Asilomar_State_Beach,,,,
+ont_4_building_test_60,EXTRA,,,,,,"(Asilomar_State_Beach, architect, Julia_Morgan)",Asilomar_State_Beach,architect,Julia_Morgan
+ont_4_building_test_61,EXACT,1.00,"(Asilomar_Conference_Grounds, architect, Julia_Morgan)",Asilomar_Conference_Grounds,architect,Julia_Morgan,"(Asilomar_Conference_Grounds, architect, Julia_Morgan)",Asilomar_Conference_Grounds,architect,Julia_Morgan
+ont_4_building_test_61,MISSING,,"(Julia_Morgan, significantBuilding, Chinatown,_San_Francisco)",Julia_Morgan,significantBuilding,"Chinatown,_San_Francisco",,,,
+ont_4_building_test_61,MISSING,,"(Julia_Morgan, birthPlace, San_Francisco)",Julia_Morgan,birthPlace,San_Francisco,,,,
+ont_4_building_test_62,EXACT,1.00,"(Asilomar_Conference_Grounds, architect, Julia_Morgan)",Asilomar_Conference_Grounds,architect,Julia_Morgan,"(Asilomar_Conference_Grounds, architect, Julia_Morgan)",Asilomar_Conference_Grounds,architect,Julia_Morgan
+ont_4_building_test_62,MISSING,,"(Julia_Morgan, birthPlace, San_Francisco)",Julia_Morgan,birthPlace,San_Francisco,,,,
+ont_4_building_test_62,MISSING,,"(Julia_Morgan, significantBuilding, Los_Angeles_Herald-Examiner)",Julia_Morgan,significantBuilding,Los_Angeles_Herald-Examiner,,,,
+ont_4_building_test_63,MISSING,,"(Asilomar_Conference_Grounds, architect, Julia_Morgan)",Asilomar_Conference_Grounds,architect,Julia_Morgan,,,,
+ont_4_building_test_63,MISSING,,"(Julia_Morgan, birthPlace, California)",Julia_Morgan,birthPlace,California,,,,
+ont_4_building_test_63,MISSING,,"(Julia_Morgan, significantBuilding, Los_Angeles_Herald-Examiner)",Julia_Morgan,significantBuilding,Los_Angeles_Herald-Examiner,,,,
+ont_4_building_test_64,EXACT,1.00,"(Asilomar_Conference_Grounds, architect, Julia_Morgan)",Asilomar_Conference_Grounds,architect,Julia_Morgan,"(Asilomar_Conference_Grounds, architect, Julia_Morgan)",Asilomar_Conference_Grounds,architect,Julia_Morgan
+ont_4_building_test_64,MISSING,,"(Julia_Morgan, significantBuilding, Los_Angeles_Herald-Examiner)",Julia_Morgan,significantBuilding,Los_Angeles_Herald-Examiner,,,,
+ont_4_building_test_64,MISSING,,"(Julia_Morgan, significantBuilding, Riverside_Art_Museum)",Julia_Morgan,significantBuilding,Riverside_Art_Museum,,,,
+ont_4_building_test_64,EXTRA,,,,,,"(Riverside_Art_Museum, architect, Julia_Morgan)",Riverside_Art_Museum,architect,Julia_Morgan
+ont_4_building_test_65,EXACT,1.00,"(Asilomar_Conference_Grounds, architect, Julia_Morgan)",Asilomar_Conference_Grounds,architect,Julia_Morgan,"(Asilomar_Conference_Grounds, architect, Julia_Morgan)",Asilomar_Conference_Grounds,architect,Julia_Morgan
+ont_4_building_test_65,MISSING,,"(Julia_Morgan, birthPlace, California)",Julia_Morgan,birthPlace,California,,,,
+ont_4_building_test_65,MISSING,,"(Julia_Morgan, significantBuilding, Riverside_Art_Museum)",Julia_Morgan,significantBuilding,Riverside_Art_Museum,,,,
+ont_4_building_test_65,EXTRA,,,,,,"(Riverside_Art_Museum, state, California)",Riverside_Art_Museum,state,California
+ont_4_building_test_66,EXACT,1.00,"(Asilomar_Conference_Grounds, architect, Julia_Morgan)",Asilomar_Conference_Grounds,architect,Julia_Morgan,"(Asilomar_Conference_Grounds, architect, Julia_Morgan)",Asilomar_Conference_Grounds,architect,Julia_Morgan
+ont_4_building_test_66,MISSING,,"(Julia_Morgan, significantBuilding, Riverside_Art_Museum)",Julia_Morgan,significantBuilding,Riverside_Art_Museum,,,,
+ont_4_building_test_66,MISSING,,"(Julia_Morgan, significantBuilding, Asilomar_State_Beach)",Julia_Morgan,significantBuilding,Asilomar_State_Beach,,,,
+ont_4_building_test_66,EXTRA,,,,,,"(Riverside_Art_Museum, architect, Julia_Morgan)",Riverside_Art_Museum,architect,Julia_Morgan
+ont_4_building_test_66,EXTRA,,,,,,"(Asilomar_State_Beach, architect, Julia_Morgan)",Asilomar_State_Beach,architect,Julia_Morgan
+ont_4_building_test_67,EXACT,1.00,"(Asilomar_Conference_Grounds, yearOfConstruction, 1913)",Asilomar_Conference_Grounds,yearOfConstruction,1913,"(Asilomar_Conference_Grounds, yearOfConstruction, 1913)",Asilomar_Conference_Grounds,yearOfConstruction,1913
+ont_4_building_test_67,SEMANTIC,0.97,"(Asilomar_Conference_Grounds, location, Asilomar Blvd., Pacific Grove, California)",Asilomar_Conference_Grounds,location,"Asilomar Blvd., Pacific Grove, California","(Asilomar_Conference_Grounds, location, Pacific_Grove,_California)",Asilomar_Conference_Grounds,location,"Pacific_Grove,_California"
+ont_4_building_test_67,MISSING,,"(Asilomar_Conference_Grounds, NationalRegisterOfHistoricPlacesReferenceNumber, 87000823)",Asilomar_Conference_Grounds,NationalRegisterOfHistoricPlacesReferenceNumber,87000823,,,,
+ont_4_building_test_67,EXTRA,,,,,,"(Asilomar_Conference_Grounds, address, asilomar blvd, pacific grove, california)",Asilomar_Conference_Grounds,address,"asilomar blvd, pacific grove, california"
+ont_4_building_test_67,EXTRA,,,,,,"(Asilomar_Conference_Grounds, address, 87000823)",Asilomar_Conference_Grounds,address,87000823
+ont_4_building_test_67,EXTRA,,,,,,"(Asilomar_Conference_Grounds, state, California)",Asilomar_Conference_Grounds,state,California
+ont_4_building_test_68,EXACT,1.00,"(Asilomar_Conference_Grounds, yearOfConstruction, 1913)",Asilomar_Conference_Grounds,yearOfConstruction,1913,"(Asilomar_Conference_Grounds, yearOfConstruction, 1913)",Asilomar_Conference_Grounds,yearOfConstruction,1913
+ont_4_building_test_68,SEMANTIC,0.97,"(Asilomar_Conference_Grounds, location, Asilomar Blvd., Pacific Grove, California)",Asilomar_Conference_Grounds,location,"Asilomar Blvd., Pacific Grove, California","(Asilomar_Conference_Grounds, location, Pacific_Grove,_California)",Asilomar_Conference_Grounds,location,"Pacific_Grove,_California"
+ont_4_building_test_68,MISSING,,"(Asilomar_Conference_Grounds, addedToTheNationalRegisterOfHistoricPlaces, 1987-02-27)",Asilomar_Conference_Grounds,addedToTheNationalRegisterOfHistoricPlaces,1987-02-27,,,,
+ont_4_building_test_68,EXTRA,,,,,,"(Asilomar_Conference_Grounds, address, asilomar blvd, pacific grove california)",Asilomar_Conference_Grounds,address,"asilomar blvd, pacific grove california"
+ont_4_building_test_68,EXTRA,,,,,,"(Asilomar_Conference_Grounds, state, California)",Asilomar_Conference_Grounds,state,California
+ont_4_building_test_69,SEMANTIC,0.98,"(Asilomar_Conference_Grounds, yearOfConstruction, 1913)",Asilomar_Conference_Grounds,yearOfConstruction,1913,"(Asilomar_Conference_Grounds, yearOfConstruction, 1923)",Asilomar_Conference_Grounds,yearOfConstruction,1923
+ont_4_building_test_69,SEMANTIC,0.97,"(Asilomar_Conference_Grounds, location, Asilomar Blvd., Pacific Grove, California)",Asilomar_Conference_Grounds,location,"Asilomar Blvd., Pacific Grove, California","(Asilomar_Conference_Grounds, location, Pacific_Grove,_California)",Asilomar_Conference_Grounds,location,"Pacific_Grove,_California"
+ont_4_building_test_69,MISSING,,"(Asilomar_Conference_Grounds, architecture, Arts and Crafts Movement and American craftsman Bungalows)",Asilomar_Conference_Grounds,architecture,Arts and Crafts Movement and American craftsman Bungalows,,,,
+ont_4_building_test_69,EXTRA,,,,,,"(Asilomar_Conference_Grounds, address, asilomar blvd in pacific grove, california)",Asilomar_Conference_Grounds,address,"asilomar blvd in pacific grove, california"
+ont_4_building_test_7,EXACT,1.00,"(11_Diagonal_Street, floorCount, 20)",11_Diagonal_Street,floorCount,20,"(11_Diagonal_Street, floorCount, 20)",11_Diagonal_Street,floorCount,20
+ont_4_building_test_7,EXACT,1.00,"(11_Diagonal_Street, architect, Helmut_Jahn)",11_Diagonal_Street,architect,Helmut_Jahn,"(11_Diagonal_Street, architect, Helmut_Jahn)",11_Diagonal_Street,architect,Helmut_Jahn
+ont_4_building_test_7,MISSING,,"(11_Diagonal_Street, owner, Redefine_Properties_Limited)",11_Diagonal_Street,owner,Redefine_Properties_Limited,,,,
+ont_4_building_test_70,EXACT,1.00,"(Asilomar_Conference_Grounds, yearOfConstruction, 1913)",Asilomar_Conference_Grounds,yearOfConstruction,1913,"(Asilomar_Conference_Grounds, yearOfConstruction, 1913)",Asilomar_Conference_Grounds,yearOfConstruction,1913
+ont_4_building_test_70,EXACT,1.00,"(Asilomar_Conference_Grounds, location, Pacific_Grove,_California)",Asilomar_Conference_Grounds,location,"Pacific_Grove,_California","(Asilomar_Conference_Grounds, location, Pacific_Grove,_California)",Asilomar_Conference_Grounds,location,"Pacific_Grove,_California"
+ont_4_building_test_70,MISSING,,"(Asilomar_Conference_Grounds, NationalRegisterOfHistoricPlacesReferenceNumber, 87000823)",Asilomar_Conference_Grounds,NationalRegisterOfHistoricPlacesReferenceNumber,87000823,,,,
+ont_4_building_test_70,EXTRA,,,,,,"(Asilomar_Conference_Grounds, address, 87000823)",Asilomar_Conference_Grounds,address,87000823
+ont_4_building_test_70,EXTRA,,,,,,"(Asilomar_Conference_Grounds, state, California)",Asilomar_Conference_Grounds,state,California
+ont_4_building_test_71,EXACT,1.00,"(Asilomar_Conference_Grounds, yearOfConstruction, 1913)",Asilomar_Conference_Grounds,yearOfConstruction,1913,"(Asilomar_Conference_Grounds, yearOfConstruction, 1913)",Asilomar_Conference_Grounds,yearOfConstruction,1913
+ont_4_building_test_71,EXACT,1.00,"(Asilomar_Conference_Grounds, location, Pacific_Grove,_California)",Asilomar_Conference_Grounds,location,"Pacific_Grove,_California","(Asilomar_Conference_Grounds, location, Pacific_Grove,_California)",Asilomar_Conference_Grounds,location,"Pacific_Grove,_California"
+ont_4_building_test_71,MISSING,,"(Asilomar_Conference_Grounds, addedToTheNationalRegisterOfHistoricPlaces, 1987-02-27)",Asilomar_Conference_Grounds,addedToTheNationalRegisterOfHistoricPlaces,1987-02-27,,,,
+ont_4_building_test_72,EXACT,1.00,"(Asilomar_Conference_Grounds, yearOfConstruction, 1913)",Asilomar_Conference_Grounds,yearOfConstruction,1913,"(Asilomar_Conference_Grounds, yearOfConstruction, 1913)",Asilomar_Conference_Grounds,yearOfConstruction,1913
+ont_4_building_test_72,SEMANTIC,0.97,"(Asilomar_Conference_Grounds, location, Pacific_Grove,_California)",Asilomar_Conference_Grounds,location,"Pacific_Grove,_California","(Asilomar_Conference_Grounds, foundationPlace, Pacific_Grove,_California)",Asilomar_Conference_Grounds,foundationPlace,"Pacific_Grove,_California"
+ont_4_building_test_72,MISSING,,"(Asilomar_Conference_Grounds, architecture, Arts and Crafts Movement and American craftsman Bungalows)",Asilomar_Conference_Grounds,architecture,Arts and Crafts Movement and American craftsman Bungalows,,,,
+ont_4_building_test_73,EXACT,1.00,"(3Arena, location, Dublin)",3Arena,location,Dublin,"(3Arena, location, Dublin)",3Arena,location,Dublin
+ont_4_building_test_73,MISSING,,"(Dublin, country, Republic_of_Ireland)",Dublin,country,Republic_of_Ireland,,,,
+ont_4_building_test_73,MISSING,,"(Dublin, isPartOf, Leinster)",Dublin,isPartOf,Leinster,,,,
+ont_4_building_test_73,EXTRA,,,,,,"(3Arena, country, Republic_of_Ireland_national_football_team)",3Arena,country,Republic_of_Ireland_national_football_team
+ont_4_building_test_73,EXTRA,,,,,,"(3Arena, region, Leinster)",3Arena,region,Leinster
+ont_4_building_test_74,EXACT,1.00,"(Addis_Ababa_City_Hall, location, Addis_Ababa)",Addis_Ababa_City_Hall,location,Addis_Ababa,"(Addis_Ababa_City_Hall, location, Addis_Ababa)",Addis_Ababa_City_Hall,location,Addis_Ababa
+ont_4_building_test_74,MISSING,,"(Ethiopia, leader, Hailemariam_Desalegn)",Ethiopia,leader,Hailemariam_Desalegn,,,,
+ont_4_building_test_74,MISSING,,"(Addis_Ababa_City_Hall, country, Ethiopia)",Addis_Ababa_City_Hall,country,Ethiopia,,,,
+ont_4_building_test_75,EXACT,1.00,"(Addis_Ababa_City_Hall, country, Ethiopia)",Addis_Ababa_City_Hall,country,Ethiopia,"(Addis_Ababa_City_Hall, country, Ethiopia)",Addis_Ababa_City_Hall,country,Ethiopia
+ont_4_building_test_75,MISSING,,"(Ethiopia, leader, Mulatu_Teshome)",Ethiopia,leader,Mulatu_Teshome,,,,
+ont_4_building_test_75,MISSING,,"(Addis_Ababa_City_Hall, location, Addis_Ababa)",Addis_Ababa_City_Hall,location,Addis_Ababa,,,,
+ont_4_building_test_75,EXTRA,,,,,,"(Mulatu_Teshome, leaderTitle, leader)",Mulatu_Teshome,leaderTitle,leader
+ont_4_building_test_76,EXACT,1.00,"(Addis_Ababa_City_Hall, location, Addis_Ababa)",Addis_Ababa_City_Hall,location,Addis_Ababa,"(Addis_Ababa_City_Hall, location, Addis_Ababa)",Addis_Ababa_City_Hall,location,Addis_Ababa
+ont_4_building_test_76,MISSING,,"(Ethiopia, leader, Mulatu_Teshome)",Ethiopia,leader,Mulatu_Teshome,,,,
+ont_4_building_test_76,MISSING,,"(Addis_Ababa, country, Ethiopia)",Addis_Ababa,country,Ethiopia,,,,
+ont_4_building_test_76,EXTRA,,,,,,"(Addis_Ababa_City_Hall, country, Ethiopia)",Addis_Ababa_City_Hall,country,Ethiopia
+ont_4_building_test_77,MISSING,,"(Amdavad_ni_Gufa, location, Gujarat)",Amdavad_ni_Gufa,location,Gujarat,,,,
+ont_4_building_test_77,MISSING,,"(Amdavad_ni_Gufa, country, India)",Amdavad_ni_Gufa,country,India,,,,
+ont_4_building_test_77,MISSING,,"(Gujarat, leader, Anandiben_Patel)",Gujarat,leader,Anandiben_Patel,,,,
+ont_4_building_test_78,EXACT,1.00,"(India, demonym, Indian_people)",India,demonym,Indian_people,"(India, demonym, Indian_people)",India,demonym,Indian_people
+ont_4_building_test_78,MISSING,,"(India, leader, Sumitra_Mahajan)",India,leader,Sumitra_Mahajan,,,,
+ont_4_building_test_78,MISSING,,"(Amdavad_ni_Gufa, country, India)",Amdavad_ni_Gufa,country,India,,,,
+ont_4_building_test_79,MISSING,,"(India, leader, T._S._Thakur)",India,leader,T._S._Thakur,,,,
+ont_4_building_test_79,MISSING,,"(Amdavad_ni_Gufa, country, India)",Amdavad_ni_Gufa,country,India,,,,
+ont_4_building_test_79,MISSING,,"(India, leader, Narendra_Modi)",India,leader,Narendra_Modi,,,,
+ont_4_building_test_8,SEMANTIC,0.98,"(11_Diagonal_Street, location, South_Africa)",11_Diagonal_Street,location,South_Africa,"(11_Diagonal_Street, country, South_Africa)",11_Diagonal_Street,country,South_Africa
+ont_4_building_test_8,MISSING,,"(South_Africa, capital, Cape_Town)",South_Africa,capital,Cape_Town,,,,
+ont_4_building_test_8,MISSING,,"(South_Africa, leader, Jacob_Zuma)",South_Africa,leader,Jacob_Zuma,,,,
+ont_4_building_test_80,MISSING,,"(India, leader, T._S._Thakur)",India,leader,T._S._Thakur,,,,
+ont_4_building_test_80,MISSING,,"(Amdavad_ni_Gufa, location, Ahmedabad)",Amdavad_ni_Gufa,location,Ahmedabad,,,,
+ont_4_building_test_80,MISSING,,"(Amdavad_ni_Gufa, country, India)",Amdavad_ni_Gufa,country,India,,,,
+ont_4_building_test_81,MISSING,,"(India, leader, T._S._Thakur)",India,leader,T._S._Thakur,,,,
+ont_4_building_test_81,MISSING,,"(Amdavad_ni_Gufa, location, Gujarat)",Amdavad_ni_Gufa,location,Gujarat,,,,
+ont_4_building_test_81,MISSING,,"(Amdavad_ni_Gufa, country, India)",Amdavad_ni_Gufa,country,India,,,,
+ont_4_building_test_82,MISSING,,"(India, leader, T._S._Thakur)",India,leader,T._S._Thakur,,,,
+ont_4_building_test_82,MISSING,,"(India, demonym, Indian_people)",India,demonym,Indian_people,,,,
+ont_4_building_test_82,MISSING,,"(Amdavad_ni_Gufa, country, India)",Amdavad_ni_Gufa,country,India,,,,
+ont_4_building_test_83,MISSING,,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.",,,,
+ont_4_building_test_83,MISSING,,"(250_Delaware_Avenue, location, United_States)",250_Delaware_Avenue,location,United_States,,,,
+ont_4_building_test_83,MISSING,,"(United_States, leader, John_Roberts)",United_States,leader,John_Roberts,,,,
+ont_4_building_test_84,SEMANTIC,0.95,"(United_States, leader, Paul_Ryan)",United_States,leader,Paul_Ryan,"(Paul_Ryan, leaderTitle, leader of the united states)",Paul_Ryan,leaderTitle,leader of the united states
+ont_4_building_test_84,MISSING,,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.",,,,
+ont_4_building_test_84,MISSING,,"(250_Delaware_Avenue, location, United_States)",250_Delaware_Avenue,location,United_States,,,,
+ont_4_building_test_85,EXACT,1.00,"(United_States, leader, Joe_Biden)",United_States,leader,Joe_Biden,"(United_States, leader, Joe_Biden)",United_States,leader,Joe_Biden
+ont_4_building_test_85,EXACT,1.00,"(United_States, language, English_language)",United_States,language,English_language,"(United_States, language, English_language)",United_States,language,English_language
+ont_4_building_test_85,MISSING,,"(250_Delaware_Avenue, location, United_States)",250_Delaware_Avenue,location,United_States,,,,
+ont_4_building_test_86,MISSING,,"(United_States, leader, Paul_Ryan)",United_States,leader,Paul_Ryan,,,,
+ont_4_building_test_86,MISSING,,"(250_Delaware_Avenue, location, United_States)",250_Delaware_Avenue,location,United_States,,,,
+ont_4_building_test_86,MISSING,,"(United_States, language, English_language)",United_States,language,English_language,,,,
+ont_4_building_test_87,MISSING,,"(United_States, leaderTitle, President_of_the_United_States)",United_States,leaderTitle,President_of_the_United_States,,,,
+ont_4_building_test_87,MISSING,,"(250_Delaware_Avenue, location, United_States)",250_Delaware_Avenue,location,United_States,,,,
+ont_4_building_test_87,MISSING,,"(United_States, leader, Barack_Obama)",United_States,leader,Barack_Obama,,,,
+ont_4_building_test_87,EXTRA,,,,,,"(Barack_Obama, leaderTitle, president)",Barack_Obama,leaderTitle,president
+ont_4_building_test_88,MISSING,,"(United_States, leader, Joe_Biden)",United_States,leader,Joe_Biden,,,,
+ont_4_building_test_88,MISSING,,"(United_States, leaderTitle, President_of_the_United_States)",United_States,leaderTitle,President_of_the_United_States,,,,
+ont_4_building_test_88,MISSING,,"(250_Delaware_Avenue, location, United_States)",250_Delaware_Avenue,location,United_States,,,,
+ont_4_building_test_89,MISSING,,"(United_States, leaderTitle, President_of_the_United_States)",United_States,leaderTitle,President_of_the_United_States,,,,
+ont_4_building_test_89,MISSING,,"(250_Delaware_Avenue, location, United_States)",250_Delaware_Avenue,location,United_States,,,,
+ont_4_building_test_89,MISSING,,"(United_States, leader, John_Roberts)",United_States,leader,John_Roberts,,,,
+ont_4_building_test_89,EXTRA,,,,,,"(John_Roberts, leaderTitle, president)",John_Roberts,leaderTitle,president
+ont_4_building_test_9,SEMANTIC,0.98,"(11_Diagonal_Street, location, South_Africa)",11_Diagonal_Street,location,South_Africa,"(11_Diagonal_Street, country, South_Africa)",11_Diagonal_Street,country,South_Africa
+ont_4_building_test_9,MISSING,,"(South_Africa, ethnicGroup, Asian_South_Africans)",South_Africa,ethnicGroup,Asian_South_Africans,,,,
+ont_4_building_test_9,MISSING,,"(South_Africa, leader, Cyril_Ramaphosa)",South_Africa,leader,Cyril_Ramaphosa,,,,
+ont_4_building_test_9,EXTRA,,,,,,"(11_Diagonal_Street, ethnicGroup, Indian_South_Africans)",11_Diagonal_Street,ethnicGroup,Indian_South_Africans
+ont_4_building_test_90,MISSING,,"(United_States, leaderTitle, President_of_the_United_States)",United_States,leaderTitle,President_of_the_United_States,,,,
+ont_4_building_test_90,MISSING,,"(250_Delaware_Avenue, location, United_States)",250_Delaware_Avenue,location,United_States,,,,
+ont_4_building_test_90,MISSING,,"(United_States, leader, Paul_Ryan)",United_States,leader,Paul_Ryan,,,,
+ont_4_building_test_90,EXTRA,,,,,,"(Paul_Ryan, leaderTitle, president of the united states)",Paul_Ryan,leaderTitle,president of the united states
+ont_4_building_test_91,EXACT,1.00,"(South_Africa, capital, Cape_Town)",South_Africa,capital,Cape_Town,"(South_Africa, capital, Cape_Town)",South_Africa,capital,Cape_Town
+ont_4_building_test_91,EXACT,1.00,"(South_Africa, leader, Cyril_Ramaphosa)",South_Africa,leader,Cyril_Ramaphosa,"(South_Africa, leader, Cyril_Ramaphosa)",South_Africa,leader,Cyril_Ramaphosa
+ont_4_building_test_91,SEMANTIC,0.98,"(11_Diagonal_Street, location, South_Africa)",11_Diagonal_Street,location,South_Africa,"(11_Diagonal_Street, country, South_Africa)",11_Diagonal_Street,country,South_Africa
+ont_4_building_test_92,SEMANTIC,0.98,"(11_Diagonal_Street, location, South_Africa)",11_Diagonal_Street,location,South_Africa,"(11_Diagonal_Street, country, South_Africa)",11_Diagonal_Street,country,South_Africa
+ont_4_building_test_92,MISSING,,"(South_Africa, leader, Jacob_Zuma)",South_Africa,leader,Jacob_Zuma,,,,
+ont_4_building_test_92,MISSING,,"(South_Africa, ethnicGroup, Coloured)",South_Africa,ethnicGroup,Coloured,,,,
+ont_4_building_test_93,SEMANTIC,0.98,"(11_Diagonal_Street, location, South_Africa)",11_Diagonal_Street,location,South_Africa,"(11_Diagonal_Street, country, South_Africa)",11_Diagonal_Street,country,South_Africa
+ont_4_building_test_93,MISSING,,"(South_Africa, leader, Jacob_Zuma)",South_Africa,leader,Jacob_Zuma,,,,
+ont_4_building_test_93,MISSING,,"(South_Africa, ethnicGroup, White_South_African)",South_Africa,ethnicGroup,White_South_African,,,,
+ont_4_building_test_94,MISSING,,"(250_Delaware_Avenue, location, Buffalo,_New_York)",250_Delaware_Avenue,location,"Buffalo,_New_York",,,,
+ont_4_building_test_94,MISSING,,"(Buffalo,_New_York, isPartOf, Erie_County,_New_York)","Buffalo,_New_York",isPartOf,"Erie_County,_New_York",,,,
+ont_4_building_test_94,MISSING,,"(Buffalo,_New_York, isPartOf, New_York)","Buffalo,_New_York",isPartOf,New_York,,,,
+ont_4_building_test_95,EXACT,1.00,"(3Arena, location, Dublin)",3Arena,location,Dublin,"(3Arena, location, Dublin)",3Arena,location,Dublin
+ont_4_building_test_95,SEMANTIC,0.98,"(3Arena, completionDate, December 2008)",3Arena,completionDate,December 2008,"(3Arena, completionDate, 2008-12-01)",3Arena,completionDate,2008-12-01
+ont_4_building_test_95,MISSING,,"(3Arena, architect, HOK SVE)",3Arena,architect,HOK SVE,,,,
+ont_4_building_test_96,EXACT,1.00,"(3Arena, architect, Populous_(company))",3Arena,architect,Populous_(company),"(3Arena, architect, Populous_(company))",3Arena,architect,Populous_(company)
+ont_4_building_test_96,EXACT,1.00,"(3Arena, location, Dublin)",3Arena,location,Dublin,"(3Arena, location, Dublin)",3Arena,location,Dublin
+ont_4_building_test_96,SEMANTIC,0.98,"(3Arena, completionDate, December 2008)",3Arena,completionDate,December 2008,"(3Arena, completionDate, 2008-12-01)",3Arena,completionDate,2008-12-01
+ont_4_building_test_97,EXACT,1.00,"(3Arena, owner, Live_Nation_Entertainment)",3Arena,owner,Live_Nation_Entertainment,"(3Arena, owner, Live_Nation_Entertainment)",3Arena,owner,Live_Nation_Entertainment
+ont_4_building_test_97,MISSING,,"(3Arena, location, Dublin)",3Arena,location,Dublin,,,,
+ont_4_building_test_97,MISSING,,"(Dublin, country, Republic_of_Ireland)",Dublin,country,Republic_of_Ireland,,,,
+ont_4_building_test_97,EXTRA,,,,,,"(Live_Nation_Entertainment, location, Dublin)",Live_Nation_Entertainment,location,Dublin
+ont_4_building_test_97,EXTRA,,,,,,"(Live_Nation_Entertainment, country, Ireland)",Live_Nation_Entertainment,country,Ireland
+ont_4_building_test_98,SEMANTIC,0.98,"(Addis_Ababa_City_Hall, height, 42 m)",Addis_Ababa_City_Hall,height,42 m,"(Addis_Ababa_City_Hall, height, 42)",Addis_Ababa_City_Hall,height,42
+ont_4_building_test_98,SEMANTIC,0.98,"(Addis_Ababa_City_Hall, floorArea, 140000.0 (square metres))",Addis_Ababa_City_Hall,floorArea,140000.0 (square metres),"(Addis_Ababa_City_Hall, floorArea, 140000)",Addis_Ababa_City_Hall,floorArea,140000
+ont_4_building_test_98,MISSING,,"(Addis_Ababa_City_Hall, currentTenants, Government of Addis Ababa)",Addis_Ababa_City_Hall,currentTenants,Government of Addis Ababa,,,,
+ont_4_building_test_99,EXACT,1.00,"(Adisham_Hall, architecturalStyle, Tudor_Revival_architecture)",Adisham_Hall,architecturalStyle,Tudor_Revival_architecture,"(Adisham_Hall, architecturalStyle, Tudor_Revival_architecture)",Adisham_Hall,architecturalStyle,Tudor_Revival_architecture
+ont_4_building_test_99,SEMANTIC,0.96,"(Adisham_Hall, location, Sri_Lanka)",Adisham_Hall,location,Sri_Lanka,"(Adisham_Hall, country, Sri_Lanka)",Adisham_Hall,country,Sri_Lanka
+ont_4_building_test_99,SEMANTIC,0.99,"(Adisham_Hall, completionDate, 1931)",Adisham_Hall,completionDate,1931,"(Adisham_Hall, completionDate, 1931-01-01)",Adisham_Hall,completionDate,1931-01-01

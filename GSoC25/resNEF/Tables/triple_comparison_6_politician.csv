@@ -1,0 +1,494 @@
+sent_id,match_type,similarity,expected,expected_sub,expected_rel,expected_obj,predicted,predicted_sub,predicted_rel,predicted_obj
+ont_6_politician_test_1,EXACT,1.00,"(Ab_Klink, almaMater, Erasmus_University_Rotterdam)",Ab_Klink,almaMater,Erasmus_University_Rotterdam,"(Ab_Klink, almaMater, Erasmus_University_Rotterdam)",Ab_Klink,almaMater,Erasmus_University_Rotterdam
+ont_6_politician_test_1,EXACT,1.00,"(Ab_Klink, party, Christian_Democratic_Appeal)",Ab_Klink,party,Christian_Democratic_Appeal,"(Ab_Klink, party, Christian_Democratic_Appeal)",Ab_Klink,party,Christian_Democratic_Appeal
+ont_6_politician_test_1,EXACT,1.00,"(Ab_Klink, birthPlace, Stellendam)",Ab_Klink,birthPlace,Stellendam,"(Ab_Klink, birthPlace, Stellendam)",Ab_Klink,birthPlace,Stellendam
+ont_6_politician_test_10,EXACT,1.00,"(Ab_Klink, almaMater, Leiden_University)",Ab_Klink,almaMater,Leiden_University,"(Ab_Klink, almaMater, Leiden_University)",Ab_Klink,almaMater,Leiden_University
+ont_6_politician_test_10,EXACT,1.00,"(Ab_Klink, party, Christian_Democratic_Appeal)",Ab_Klink,party,Christian_Democratic_Appeal,"(Ab_Klink, party, Christian_Democratic_Appeal)",Ab_Klink,party,Christian_Democratic_Appeal
+ont_6_politician_test_10,EXACT,1.00,"(Ab_Klink, birthPlace, Netherlands)",Ab_Klink,birthPlace,Netherlands,"(Ab_Klink, birthPlace, Netherlands)",Ab_Klink,birthPlace,Netherlands
+ont_6_politician_test_100,SEMANTIC,0.99,"(Abraham_A._Ribicoff, birthPlace, Connecticut)",Abraham_A._Ribicoff,birthPlace,Connecticut,"(Abraham_Ribicoff, birthPlace, Connecticut)",Abraham_Ribicoff,birthPlace,Connecticut
+ont_6_politician_test_100,SEMANTIC,0.98,"(Abraham_A._Ribicoff, nationality, American)",Abraham_A._Ribicoff,nationality,American,"(Abraham_Ribicoff, nationality, United_States)",Abraham_Ribicoff,nationality,United_States
+ont_6_politician_test_100,MISSING,,"(Abraham_A._Ribicoff, spouse, Ruth Ribicoff)",Abraham_A._Ribicoff,spouse,Ruth Ribicoff,,,,
+ont_6_politician_test_100,MISSING,,"(Abraham_A._Ribicoff, deathPlace, United_States)",Abraham_A._Ribicoff,deathPlace,United_States,,,,
+ont_6_politician_test_100,MISSING,,"(Abraham_A._Ribicoff, inOfficeWhilePresident, John_F._Kennedy)",Abraham_A._Ribicoff,inOfficeWhilePresident,John_F._Kennedy,,,,
+ont_6_politician_test_100,EXTRA,,,,,,"(Abraham_Ribicoff, successor, John_F._Kennedy)",Abraham_Ribicoff,successor,John_F._Kennedy
+ont_6_politician_test_100,EXTRA,,,,,,"(Abraham_Ribicoff, country, United_States)",Abraham_Ribicoff,country,United_States
+ont_6_politician_test_101,SEMANTIC,0.99,"(Abraham_A._Ribicoff, spouse, Casey_Ribicoff)",Abraham_A._Ribicoff,spouse,Casey_Ribicoff,"(Abraham_Ribicoff, spouse, Casey_Ribicoff)",Abraham_Ribicoff,spouse,Casey_Ribicoff
+ont_6_politician_test_101,SEMANTIC,0.98,"(Abraham_A._Ribicoff, nationality, American)",Abraham_A._Ribicoff,nationality,American,"(Abraham_Ribicoff, nationality, United_States)",Abraham_Ribicoff,nationality,United_States
+ont_6_politician_test_101,SEMANTIC,0.97,"(Abraham_A._Ribicoff, birthPlace, United_States)",Abraham_A._Ribicoff,birthPlace,United_States,"(Abraham_Ribicoff, nationality, United_States)",Abraham_Ribicoff,nationality,United_States
+ont_6_politician_test_102,SEMANTIC,0.99,"(Abraham_A._Ribicoff, birthPlace, United_States)",Abraham_A._Ribicoff,birthPlace,United_States,"(Abraham_Ribicoff, birthPlace, United_States)",Abraham_Ribicoff,birthPlace,United_States
+ont_6_politician_test_102,SEMANTIC,0.98,"(Abraham_A._Ribicoff, successor, Anthony_J._Celebrezze)",Abraham_A._Ribicoff,successor,Anthony_J._Celebrezze,"(Abraham_Ribicoff, predecessor, Anthony_J._Celebrezze)",Abraham_Ribicoff,predecessor,Anthony_J._Celebrezze
+ont_6_politician_test_102,MISSING,,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,,,,
+ont_6_politician_test_102,MISSING,,"(Abraham_A._Ribicoff, spouse, Ruth Ribicoff)",Abraham_A._Ribicoff,spouse,Ruth Ribicoff,,,,
+ont_6_politician_test_103,SEMANTIC,0.99,"(Abraham_A._Ribicoff, spouse, Casey_Ribicoff)",Abraham_A._Ribicoff,spouse,Casey_Ribicoff,"(Abraham_Ribicoff, spouse, Casey_Ribicoff)",Abraham_Ribicoff,spouse,Casey_Ribicoff
+ont_6_politician_test_103,SEMANTIC,0.97,"(Abraham_A._Ribicoff, birthPlace, United_States)",Abraham_A._Ribicoff,birthPlace,United_States,"(Abraham_Ribicoff, birthPlace, Usa,_Ōita)",Abraham_Ribicoff,birthPlace,"Usa,_Ōita"
+ont_6_politician_test_103,SEMANTIC,0.99,"(Abraham_A._Ribicoff, successor, John_N._Dempsey)",Abraham_A._Ribicoff,successor,John_N._Dempsey,"(Abraham_Ribicoff, successor, John_N._Dempsey)",Abraham_Ribicoff,successor,John_N._Dempsey
+ont_6_politician_test_104,SEMANTIC,0.97,"(Abraham_A._Ribicoff, deathPlace, New_York)",Abraham_A._Ribicoff,deathPlace,New_York,"(Abraham_Ribicoff, deathPlace, New_York_(state))",Abraham_Ribicoff,deathPlace,New_York_(state)
+ont_6_politician_test_104,SEMANTIC,0.97,"(Abraham_A._Ribicoff, birthPlace, United_States)",Abraham_A._Ribicoff,birthPlace,United_States,"(Abraham_Ribicoff, birthPlace, Usa,_Ōita)",Abraham_Ribicoff,birthPlace,"Usa,_Ōita"
+ont_6_politician_test_104,MISSING,,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,,,,
+ont_6_politician_test_104,MISSING,,"(Abraham_A._Ribicoff, spouse, Ruth Ribicoff)",Abraham_A._Ribicoff,spouse,Ruth Ribicoff,,,,
+ont_6_politician_test_105,SEMANTIC,0.95,"(Abraham_A._Ribicoff, spouse, Casey_Ribicoff)",Abraham_A._Ribicoff,spouse,Casey_Ribicoff,"(Casey_Ribicoff, spouse, Abraham_Ribicoff)",Casey_Ribicoff,spouse,Abraham_Ribicoff
+ont_6_politician_test_105,MISSING,,"(Abraham_A._Ribicoff, office, United States Secretary of Health, Education, and Welfare)",Abraham_A._Ribicoff,office,"United States Secretary of Health, Education, and Welfare",,,,
+ont_6_politician_test_106,MISSING,,"(Abraham_A._Ribicoff, birthPlace, United_States)",Abraham_A._Ribicoff,birthPlace,United_States,,,,
+ont_6_politician_test_106,MISSING,,"(Abraham_A._Ribicoff, nationality, United_States)",Abraham_A._Ribicoff,nationality,United_States,,,,
+ont_6_politician_test_106,EXTRA,,,,,,"(Abraham_Ribicoff, birthPlace, Us_(2019_film))",Abraham_Ribicoff,birthPlace,Us_(2019_film)
+ont_6_politician_test_106,EXTRA,,,,,,"(Abraham_Ribicoff, nationality, Us_(2019_film))",Abraham_Ribicoff,nationality,Us_(2019_film)
+ont_6_politician_test_107,SEMANTIC,0.99,"(Abraham_A._Ribicoff, birthPlace, United_States)",Abraham_A._Ribicoff,birthPlace,United_States,"(Abraham_Ribicoff, birthPlace, United_States)",Abraham_Ribicoff,birthPlace,United_States
+ont_6_politician_test_107,SEMANTIC,0.99,"(Abraham_A._Ribicoff, party, Democratic_Party_(United_States))",Abraham_A._Ribicoff,party,Democratic_Party_(United_States),"(Abraham_Ribicoff, party, Democratic_Party_(United_States))",Abraham_Ribicoff,party,Democratic_Party_(United_States)
+ont_6_politician_test_107,MISSING,,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,,,,
+ont_6_politician_test_107,MISSING,,"(Abraham_A._Ribicoff, spouse, Ruth Ribicoff)",Abraham_A._Ribicoff,spouse,Ruth Ribicoff,,,,
+ont_6_politician_test_108,SEMANTIC,0.99,"(Abraham_A._Ribicoff, spouse, Casey_Ribicoff)",Abraham_A._Ribicoff,spouse,Casey_Ribicoff,"(Abraham_Ribicoff, spouse, Casey_Ribicoff)",Abraham_Ribicoff,spouse,Casey_Ribicoff
+ont_6_politician_test_108,SEMANTIC,0.99,"(Abraham_A._Ribicoff, birthPlace, United_States)",Abraham_A._Ribicoff,birthPlace,United_States,"(Abraham_Ribicoff, birthPlace, United_States)",Abraham_Ribicoff,birthPlace,United_States
+ont_6_politician_test_108,SEMANTIC,0.97,"(Abraham_A._Ribicoff, nationality, United_States)",Abraham_A._Ribicoff,nationality,United_States,"(Abraham_Ribicoff, birthPlace, United_States)",Abraham_Ribicoff,birthPlace,United_States
+ont_6_politician_test_109,SEMANTIC,0.98,"(Abraham_A._Ribicoff, nationality, American)",Abraham_A._Ribicoff,nationality,American,"(Abraham_Ribicoff, nationality, United_States)",Abraham_Ribicoff,nationality,United_States
+ont_6_politician_test_109,SEMANTIC,0.97,"(Abraham_A._Ribicoff, birthPlace, United_States)",Abraham_A._Ribicoff,birthPlace,United_States,"(Abraham_Ribicoff, nationality, United_States)",Abraham_Ribicoff,nationality,United_States
+ont_6_politician_test_109,SEMANTIC,0.99,"(Abraham_A._Ribicoff, party, Democratic_Party_(United_States))",Abraham_A._Ribicoff,party,Democratic_Party_(United_States),"(Abraham_Ribicoff, party, Democratic_Party_(United_States))",Abraham_Ribicoff,party,Democratic_Party_(United_States)
+ont_6_politician_test_109,MISSING,,"(Abraham_A._Ribicoff, spouse, Ruth Ribicoff)",Abraham_A._Ribicoff,spouse,Ruth Ribicoff,,,,
+ont_6_politician_test_109,MISSING,,"(Abraham_A._Ribicoff, inOfficeWhilePresident, John_F._Kennedy)",Abraham_A._Ribicoff,inOfficeWhilePresident,John_F._Kennedy,,,,
+ont_6_politician_test_109,EXTRA,,,,,,"(Abraham_Ribicoff, successor, John_F._Kennedy)",Abraham_Ribicoff,successor,John_F._Kennedy
+ont_6_politician_test_11,EXACT,1.00,"(Ab_Klink, nationality, Netherlands)",Ab_Klink,nationality,Netherlands,"(Ab_Klink, nationality, Netherlands)",Ab_Klink,nationality,Netherlands
+ont_6_politician_test_11,EXACT,1.00,"(Ab_Klink, birthPlace, Stellendam)",Ab_Klink,birthPlace,Stellendam,"(Ab_Klink, birthPlace, Stellendam)",Ab_Klink,birthPlace,Stellendam
+ont_6_politician_test_11,MISSING,,"(Netherlands, leader, Mark_Rutte)",Netherlands,leader,Mark_Rutte,,,,
+ont_6_politician_test_110,SEMANTIC,0.97,"(Abraham_A._Ribicoff, birthPlace, United_States)",Abraham_A._Ribicoff,birthPlace,United_States,"(Abraham_Ribicoff, birthPlace, Usa,_Ōita)",Abraham_Ribicoff,birthPlace,"Usa,_Ōita"
+ont_6_politician_test_110,MISSING,,"(Abraham_A._Ribicoff, deathPlace, United_States)",Abraham_A._Ribicoff,deathPlace,United_States,,,,
+ont_6_politician_test_110,MISSING,,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,,,,
+ont_6_politician_test_110,MISSING,,"(Abraham_A._Ribicoff, spouse, Ruth Ribicoff)",Abraham_A._Ribicoff,spouse,Ruth Ribicoff,,,,
+ont_6_politician_test_111,MISSING,,"(Abraham_A._Ribicoff, nationality, American)",Abraham_A._Ribicoff,nationality,American,,,,
+ont_6_politician_test_111,MISSING,,"(Abraham_A._Ribicoff, birthPlace, United_States)",Abraham_A._Ribicoff,birthPlace,United_States,,,,
+ont_6_politician_test_111,MISSING,,"(Abraham_A._Ribicoff, spouse, Ruth Ribicoff)",Abraham_A._Ribicoff,spouse,Ruth Ribicoff,,,,
+ont_6_politician_test_111,MISSING,,"(Abraham_A._Ribicoff, inOfficeWhilePresident, John_F._Kennedy)",Abraham_A._Ribicoff,inOfficeWhilePresident,John_F._Kennedy,,,,
+ont_6_politician_test_111,MISSING,,"(Abraham_A._Ribicoff, successor, John_N._Dempsey)",Abraham_A._Ribicoff,successor,John_N._Dempsey,,,,
+ont_6_politician_test_112,SEMANTIC,0.99,"(Abraham_A._Ribicoff, spouse, Casey_Ribicoff)",Abraham_A._Ribicoff,spouse,Casey_Ribicoff,"(Abraham_Ribicoff, spouse, Casey_Ribicoff)",Abraham_Ribicoff,spouse,Casey_Ribicoff
+ont_6_politician_test_112,SEMANTIC,0.97,"(Abraham_A._Ribicoff, birthPlace, United_States)",Abraham_A._Ribicoff,birthPlace,United_States,"(Abraham_Ribicoff, birthPlace, Usa,_Ōita)",Abraham_Ribicoff,birthPlace,"Usa,_Ōita"
+ont_6_politician_test_112,SEMANTIC,0.98,"(Abraham_A._Ribicoff, deathPlace, New_York_City)",Abraham_A._Ribicoff,deathPlace,New_York_City,"(Abraham_Ribicoff, deathPlace, New_York_City)",Abraham_Ribicoff,deathPlace,New_York_City
+ont_6_politician_test_113,SEMANTIC,0.97,"(Abraham_A._Ribicoff, birthPlace, United_States)",Abraham_A._Ribicoff,birthPlace,United_States,"(Abraham_Ribicoff, birthPlace, Usa,_Ōita)",Abraham_Ribicoff,birthPlace,"Usa,_Ōita"
+ont_6_politician_test_113,MISSING,,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,,,,
+ont_6_politician_test_113,MISSING,,"(Abraham_A._Ribicoff, spouse, Ruth Ribicoff)",Abraham_A._Ribicoff,spouse,Ruth Ribicoff,,,,
+ont_6_politician_test_113,MISSING,,"(Abraham_A._Ribicoff, office, United States Secretary of Health, Education, and Welfare)",Abraham_A._Ribicoff,office,"United States Secretary of Health, Education, and Welfare",,,,
+ont_6_politician_test_114,SEMANTIC,0.98,"(Abraham_A._Ribicoff, nationality, American)",Abraham_A._Ribicoff,nationality,American,"(Abraham_Ribicoff, nationality, United_States)",Abraham_Ribicoff,nationality,United_States
+ont_6_politician_test_114,SEMANTIC,0.97,"(Abraham_A._Ribicoff, spouse, Ruth Ribicoff)",Abraham_A._Ribicoff,spouse,Ruth Ribicoff,"(Abraham_Ribicoff, spouse, ruth ribicoff)",Abraham_Ribicoff,spouse,ruth ribicoff
+ont_6_politician_test_114,MISSING,,"(Abraham_A._Ribicoff, office, United States Secretary of Health, Education, and Welfare)",Abraham_A._Ribicoff,office,"United States Secretary of Health, Education, and Welfare",,,,
+ont_6_politician_test_114,MISSING,,"(Abraham_A._Ribicoff, inOfficeWhilePresident, John_F._Kennedy)",Abraham_A._Ribicoff,inOfficeWhilePresident,John_F._Kennedy,,,,
+ont_6_politician_test_114,MISSING,,"(Abraham_A._Ribicoff, successor, John_N._Dempsey)",Abraham_A._Ribicoff,successor,John_N._Dempsey,,,,
+ont_6_politician_test_114,EXTRA,,,,,,"(Abraham_Ribicoff, successor, John_F._Kennedy)",Abraham_Ribicoff,successor,John_F._Kennedy
+ont_6_politician_test_115,SEMANTIC,0.99,"(Abraham_A._Ribicoff, birthPlace, Connecticut)",Abraham_A._Ribicoff,birthPlace,Connecticut,"(Abraham_Ribicoff, birthPlace, Connecticut)",Abraham_Ribicoff,birthPlace,Connecticut
+ont_6_politician_test_115,SEMANTIC,0.99,"(Abraham_A._Ribicoff, spouse, Casey_Ribicoff)",Abraham_A._Ribicoff,spouse,Casey_Ribicoff,"(Abraham_Ribicoff, spouse, Casey_Ribicoff)",Abraham_Ribicoff,spouse,Casey_Ribicoff
+ont_6_politician_test_115,SEMANTIC,0.99,"(Abraham_A._Ribicoff, nationality, United_States)",Abraham_A._Ribicoff,nationality,United_States,"(Abraham_Ribicoff, nationality, United_States)",Abraham_Ribicoff,nationality,United_States
+ont_6_politician_test_116,SEMANTIC,0.98,"(Abraham_A._Ribicoff, nationality, American)",Abraham_A._Ribicoff,nationality,American,"(Abraham_Ribicoff, nationality, United_States)",Abraham_Ribicoff,nationality,United_States
+ont_6_politician_test_116,MISSING,,"(Abraham_A._Ribicoff, spouse, Ruth Ribicoff)",Abraham_A._Ribicoff,spouse,Ruth Ribicoff,,,,
+ont_6_politician_test_116,MISSING,,"(Abraham_A._Ribicoff, office, United States Secretary of Health, Education, and Welfare)",Abraham_A._Ribicoff,office,"United States Secretary of Health, Education, and Welfare",,,,
+ont_6_politician_test_116,MISSING,,"(Abraham_A._Ribicoff, deathPlace, United_States)",Abraham_A._Ribicoff,deathPlace,United_States,,,,
+ont_6_politician_test_116,MISSING,,"(Abraham_A._Ribicoff, inOfficeWhilePresident, John_F._Kennedy)",Abraham_A._Ribicoff,inOfficeWhilePresident,John_F._Kennedy,,,,
+ont_6_politician_test_116,EXTRA,,,,,,"(Abraham_Ribicoff, country, United_States)",Abraham_Ribicoff,country,United_States
+ont_6_politician_test_116,EXTRA,,,,,,"(Abraham_Ribicoff, successor, John_F._Kennedy)",Abraham_Ribicoff,successor,John_F._Kennedy
+ont_6_politician_test_117,MISSING,,"(Abraham_A._Ribicoff, spouse, Casey_Ribicoff)",Abraham_A._Ribicoff,spouse,Casey_Ribicoff,,,,
+ont_6_politician_test_117,MISSING,,"(Abraham_A._Ribicoff, nationality, United_States)",Abraham_A._Ribicoff,nationality,United_States,,,,
+ont_6_politician_test_118,SEMANTIC,0.97,"(Abraham_A._Ribicoff, birthPlace, United_States)",Abraham_A._Ribicoff,birthPlace,United_States,"(Abraham_Ribicoff, birthPlace, Usa,_Ōita)",Abraham_Ribicoff,birthPlace,"Usa,_Ōita"
+ont_6_politician_test_118,MISSING,,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,,,,
+ont_6_politician_test_118,MISSING,,"(Abraham_A._Ribicoff, spouse, Ruth Ribicoff)",Abraham_A._Ribicoff,spouse,Ruth Ribicoff,,,,
+ont_6_politician_test_118,MISSING,,"(Abraham_A._Ribicoff, office, Governor of Connecticut)",Abraham_A._Ribicoff,office,Governor of Connecticut,,,,
+ont_6_politician_test_118,EXTRA,,,,,,"(Abraham_Ribicoff, office, Governor)",Abraham_Ribicoff,office,Governor
+ont_6_politician_test_118,EXTRA,,,,,,"(Abraham_Ribicoff, state, Connecticut)",Abraham_Ribicoff,state,Connecticut
+ont_6_politician_test_119,SEMANTIC,0.97,"(Abraham_A._Ribicoff, birthPlace, United_States)",Abraham_A._Ribicoff,birthPlace,United_States,"(Abraham_Ribicoff, birthPlace, Usa,_Ōita)",Abraham_Ribicoff,birthPlace,"Usa,_Ōita"
+ont_6_politician_test_119,SEMANTIC,0.95,"(Abraham_A._Ribicoff, nationality, American)",Abraham_A._Ribicoff,nationality,American,"(Abraham_Ribicoff, birthPlace, Usa,_Ōita)",Abraham_Ribicoff,birthPlace,"Usa,_Ōita"
+ont_6_politician_test_119,MISSING,,"(Abraham_A._Ribicoff, spouse, Ruth Ribicoff)",Abraham_A._Ribicoff,spouse,Ruth Ribicoff,,,,
+ont_6_politician_test_119,MISSING,,"(Abraham_A._Ribicoff, office, United States Secretary of Health, Education, and Welfare)",Abraham_A._Ribicoff,office,"United States Secretary of Health, Education, and Welfare",,,,
+ont_6_politician_test_12,EXACT,1.00,"(Ab_Klink, almaMater, Leiden_University)",Ab_Klink,almaMater,Leiden_University,"(Ab_Klink, almaMater, Leiden_University)",Ab_Klink,almaMater,Leiden_University
+ont_6_politician_test_12,EXACT,1.00,"(Ab_Klink, party, Christian_Democratic_Appeal)",Ab_Klink,party,Christian_Democratic_Appeal,"(Ab_Klink, party, Christian_Democratic_Appeal)",Ab_Klink,party,Christian_Democratic_Appeal
+ont_6_politician_test_12,EXACT,1.00,"(Ab_Klink, birthPlace, Stellendam)",Ab_Klink,birthPlace,Stellendam,"(Ab_Klink, birthPlace, Stellendam)",Ab_Klink,birthPlace,Stellendam
+ont_6_politician_test_120,SEMANTIC,0.98,"(Abraham_A._Ribicoff, nationality, American)",Abraham_A._Ribicoff,nationality,American,"(Abraham_Ribicoff, nationality, United_States)",Abraham_Ribicoff,nationality,United_States
+ont_6_politician_test_120,SEMANTIC,0.97,"(Abraham_A._Ribicoff, birthPlace, United_States)",Abraham_A._Ribicoff,birthPlace,United_States,"(Abraham_Ribicoff, nationality, United_States)",Abraham_Ribicoff,nationality,United_States
+ont_6_politician_test_120,MISSING,,"(Abraham_A._Ribicoff, spouse, Ruth Ribicoff)",Abraham_A._Ribicoff,spouse,Ruth Ribicoff,,,,
+ont_6_politician_test_120,MISSING,,"(Abraham_A._Ribicoff, deathPlace, United_States)",Abraham_A._Ribicoff,deathPlace,United_States,,,,
+ont_6_politician_test_120,MISSING,,"(Abraham_A._Ribicoff, inOfficeWhilePresident, John_F._Kennedy)",Abraham_A._Ribicoff,inOfficeWhilePresident,John_F._Kennedy,,,,
+ont_6_politician_test_120,EXTRA,,,,,,"(Abraham_Ribicoff, country, United_States)",Abraham_Ribicoff,country,United_States
+ont_6_politician_test_120,EXTRA,,,,,,"(Abraham_Ribicoff, commander, John_F._Kennedy)",Abraham_Ribicoff,commander,John_F._Kennedy
+ont_6_politician_test_121,SEMANTIC,0.98,"(Aaron_S._Daggett, award, Purple_Heart)",Aaron_S._Daggett,award,Purple_Heart,"(Aaron_Daggett, award, Purple_Heart)",Aaron_Daggett,award,Purple_Heart
+ont_6_politician_test_121,SEMANTIC,0.98,"(Aaron_S._Daggett, birthPlace, Maine)",Aaron_S._Daggett,birthPlace,Maine,"(Aaron_Daggett, birthPlace, Maine)",Aaron_Daggett,birthPlace,Maine
+ont_6_politician_test_121,MISSING,,"(Aaron_S._Daggett, battle, Battle_of_Fredericksburg)",Aaron_S._Daggett,battle,Battle_of_Fredericksburg,,,,
+ont_6_politician_test_122,EXACT,1.00,"(Ab_Klink, almaMater, Erasmus_University_Rotterdam)",Ab_Klink,almaMater,Erasmus_University_Rotterdam,"(Ab_Klink, almaMater, Erasmus_University_Rotterdam)",Ab_Klink,almaMater,Erasmus_University_Rotterdam
+ont_6_politician_test_122,EXACT,1.00,"(Ab_Klink, party, Christian_Democratic_Appeal)",Ab_Klink,party,Christian_Democratic_Appeal,"(Ab_Klink, party, Christian_Democratic_Appeal)",Ab_Klink,party,Christian_Democratic_Appeal
+ont_6_politician_test_122,EXACT,1.00,"(Ab_Klink, birthPlace, Netherlands)",Ab_Klink,birthPlace,Netherlands,"(Ab_Klink, birthPlace, Netherlands)",Ab_Klink,birthPlace,Netherlands
+ont_6_politician_test_123,EXACT,1.00,"(Abner_W._Sibal, militaryBranch, United_States_Army)",Abner_W._Sibal,militaryBranch,United_States_Army,"(Abner_W._Sibal, militaryBranch, United_States_Army)",Abner_W._Sibal,militaryBranch,United_States_Army
+ont_6_politician_test_123,EXACT,1.00,"(Abner_W._Sibal, battle, World_War_II)",Abner_W._Sibal,battle,World_War_II,"(Abner_W._Sibal, battle, World_War_II)",Abner_W._Sibal,battle,World_War_II
+ont_6_politician_test_123,SEMANTIC,0.99,"(World_War_II, commander, Chiang_Kai-shek)",World_War_II,commander,Chiang_Kai-shek,"(Chiang_Kai-shek, commander, World_War_II)",Chiang_Kai-shek,commander,World_War_II
+ont_6_politician_test_123,EXTRA,,,,,,"(Chiang_Kai-shek, office, Commander)",Chiang_Kai-shek,office,Commander
+ont_6_politician_test_123,EXTRA,,,,,,"(Abner_W._Sibal, profession, Soldier)",Abner_W._Sibal,profession,Soldier
+ont_6_politician_test_124,SEMANTIC,0.99,"(Abraham_A._Ribicoff, spouse, Casey_Ribicoff)",Abraham_A._Ribicoff,spouse,Casey_Ribicoff,"(Abraham_Ribicoff, spouse, Casey_Ribicoff)",Abraham_Ribicoff,spouse,Casey_Ribicoff
+ont_6_politician_test_124,MISSING,,"(Casey_Ribicoff, birthPlace, Chicago)",Casey_Ribicoff,birthPlace,Chicago,,,,
+ont_6_politician_test_124,MISSING,,"(Abraham_A._Ribicoff, office, United States Secretary of Health, Education, and Welfare)",Abraham_A._Ribicoff,office,"United States Secretary of Health, Education, and Welfare",,,,
+ont_6_politician_test_125,EXACT,1.00,"(Adam_Holloway, almaMater, Magdalene_College,_Cambridge)",Adam_Holloway,almaMater,"Magdalene_College,_Cambridge","(Adam_Holloway, almaMater, Magdalene_College,_Cambridge)",Adam_Holloway,almaMater,"Magdalene_College,_Cambridge"
+ont_6_politician_test_125,EXACT,1.00,"(Adam_Holloway, birthPlace, Kent)",Adam_Holloway,birthPlace,Kent,"(Adam_Holloway, birthPlace, Kent)",Adam_Holloway,birthPlace,Kent
+ont_6_politician_test_125,MISSING,,"(Adam_Holloway, party, Conservative_Party_(UK))",Adam_Holloway,party,Conservative_Party_(UK),,,,
+ont_6_politician_test_126,EXACT,1.00,"(Agnes_Kant, almaMater, Radboud_University_Nijmegen)",Agnes_Kant,almaMater,Radboud_University_Nijmegen,"(Agnes_Kant, almaMater, Radboud_University_Nijmegen)",Agnes_Kant,almaMater,Radboud_University_Nijmegen
+ont_6_politician_test_126,EXACT,1.00,"(Agnes_Kant, birthPlace, West_Germany)",Agnes_Kant,birthPlace,West_Germany,"(Agnes_Kant, birthPlace, West_Germany)",Agnes_Kant,birthPlace,West_Germany
+ont_6_politician_test_126,MISSING,,"(Agnes_Kant, office, Socialist_Party_(Netherlands))",Agnes_Kant,office,Socialist_Party_(Netherlands),,,,
+ont_6_politician_test_126,EXTRA,,,,,,"(Agnes_Kant, party, Socialist_Party)",Agnes_Kant,party,Socialist_Party
+ont_6_politician_test_127,EXACT,1.00,"(Agnes_Kant, almaMater, Radboud_University_Nijmegen)",Agnes_Kant,almaMater,Radboud_University_Nijmegen,"(Agnes_Kant, almaMater, Radboud_University_Nijmegen)",Agnes_Kant,almaMater,Radboud_University_Nijmegen
+ont_6_politician_test_127,EXACT,1.00,"(Agnes_Kant, birthPlace, Hessisch_Oldendorf)",Agnes_Kant,birthPlace,Hessisch_Oldendorf,"(Agnes_Kant, birthPlace, Hessisch_Oldendorf)",Agnes_Kant,birthPlace,Hessisch_Oldendorf
+ont_6_politician_test_127,SEMANTIC,0.95,"(Agnes_Kant, office, House_of_Representatives_(Netherlands))",Agnes_Kant,office,House_of_Representatives_(Netherlands),"(Agnes_Kant, affiliation, House_of_Representatives_(Netherlands))",Agnes_Kant,affiliation,House_of_Representatives_(Netherlands)
+ont_6_politician_test_128,EXACT,1.00,"(Agnes_Kant, nationality, Netherlands)",Agnes_Kant,nationality,Netherlands,"(Agnes_Kant, nationality, Netherlands)",Agnes_Kant,nationality,Netherlands
+ont_6_politician_test_128,SEMANTIC,0.95,"(Agnes_Kant, office, House_of_Representatives_(Netherlands))",Agnes_Kant,office,House_of_Representatives_(Netherlands),"(Agnes_Kant, affiliation, House_of_Representatives_(Netherlands))",Agnes_Kant,affiliation,House_of_Representatives_(Netherlands)
+ont_6_politician_test_128,MISSING,,"(Netherlands, leader, Mark_Rutte)",Netherlands,leader,Mark_Rutte,,,,
+ont_6_politician_test_128,EXTRA,,,,,,"(Mark_Rutte, leader, Leadership)",Mark_Rutte,leader,Leadership
+ont_6_politician_test_128,EXTRA,,,,,,"(Mark_Rutte, nationality, Netherlands)",Mark_Rutte,nationality,Netherlands
+ont_6_politician_test_129,EXACT,1.00,"(Airey_Neave, award, Order_of_the_British_Empire)",Airey_Neave,award,Order_of_the_British_Empire,"(Airey_Neave, award, Order_of_the_British_Empire)",Airey_Neave,award,Order_of_the_British_Empire
+ont_6_politician_test_129,EXACT,1.00,"(Airey_Neave, activeYearsEndDate, 1979-03-30)",Airey_Neave,activeYearsEndDate,1979-03-30,"(Airey_Neave, activeYearsEndDate, 1979-03-30)",Airey_Neave,activeYearsEndDate,1979-03-30
+ont_6_politician_test_129,MISSING,,"(Airey_Neave, battle, Battle_of_France)",Airey_Neave,battle,Battle_of_France,,,,
+ont_6_politician_test_13,MISSING,,"(World_War_II, commander, Franklin_D._Roosevelt)",World_War_II,commander,Franklin_D._Roosevelt,,,,
+ont_6_politician_test_13,MISSING,,"(Abner_W._Sibal, militaryBranch, United_States_Army)",Abner_W._Sibal,militaryBranch,United_States_Army,,,,
+ont_6_politician_test_13,MISSING,,"(Abner_W._Sibal, battle, World_War_II)",Abner_W._Sibal,battle,World_War_II,,,,
+ont_6_politician_test_13,EXTRA,,,,,,"(Franklin_D._Roosevelt, office, Commander)",Franklin_D._Roosevelt,office,Commander
+ont_6_politician_test_130,EXACT,1.00,"(Airey_Neave, activeYearsEndDate, 1979-03-30)",Airey_Neave,activeYearsEndDate,1979-03-30,"(Airey_Neave, activeYearsEndDate, 1979-03-30)",Airey_Neave,activeYearsEndDate,1979-03-30
+ont_6_politician_test_130,EXACT,1.00,"(Airey_Neave, activeYearsStartDate, 1974-03-04)",Airey_Neave,activeYearsStartDate,1974-03-04,"(Airey_Neave, activeYearsStartDate, 1974-03-04)",Airey_Neave,activeYearsStartDate,1974-03-04
+ont_6_politician_test_130,MISSING,,"(Airey_Neave, battle, Battle_of_France)",Airey_Neave,battle,Battle_of_France,,,,
+ont_6_politician_test_131,EXACT,1.00,"(Airey_Neave, award, Military_Cross)",Airey_Neave,award,Military_Cross,"(Airey_Neave, award, Military_Cross)",Airey_Neave,award,Military_Cross
+ont_6_politician_test_131,EXACT,1.00,"(Airey_Neave, battle, World_War_II)",Airey_Neave,battle,World_War_II,"(Airey_Neave, battle, World_War_II)",Airey_Neave,battle,World_War_II
+ont_6_politician_test_131,EXACT,1.00,"(Airey_Neave, activeYearsEndDate, 1979-03-30)",Airey_Neave,activeYearsEndDate,1979-03-30,"(Airey_Neave, activeYearsEndDate, 1979-03-30)",Airey_Neave,activeYearsEndDate,1979-03-30
+ont_6_politician_test_132,EXACT,1.00,"(Albert_Jennings_Fountain, deathPlace, New_Mexico_Territory)",Albert_Jennings_Fountain,deathPlace,New_Mexico_Territory,"(Albert_Jennings_Fountain, deathPlace, New_Mexico_Territory)",Albert_Jennings_Fountain,deathPlace,New_Mexico_Territory
+ont_6_politician_test_132,EXACT,1.00,"(Albert_Jennings_Fountain, birthPlace, Staten_Island)",Albert_Jennings_Fountain,birthPlace,Staten_Island,"(Albert_Jennings_Fountain, birthPlace, Staten_Island)",Albert_Jennings_Fountain,birthPlace,Staten_Island
+ont_6_politician_test_132,EXACT,1.00,"(Albert_Jennings_Fountain, birthPlace, United_States)",Albert_Jennings_Fountain,birthPlace,United_States,"(Albert_Jennings_Fountain, birthPlace, United_States)",Albert_Jennings_Fountain,birthPlace,United_States
+ont_6_politician_test_133,EXACT,1.00,"(Allan_Shivers, party, Democratic_Party_(United_States))",Allan_Shivers,party,Democratic_Party_(United_States),"(Allan_Shivers, party, Democratic_Party_(United_States))",Allan_Shivers,party,Democratic_Party_(United_States)
+ont_6_politician_test_133,EXACT,1.00,"(Allan_Shivers, successor, Price_Daniel)",Allan_Shivers,successor,Price_Daniel,"(Allan_Shivers, successor, Price_Daniel)",Allan_Shivers,successor,Price_Daniel
+ont_6_politician_test_133,MISSING,,"(Allan_Shivers, office, Member of the Texas State Senate from District 4 (Port Arthur))",Allan_Shivers,office,Member of the Texas State Senate from District 4 (Port Arthur),,,,
+ont_6_politician_test_133,EXTRA,,,,,,"(Allan_Shivers, country, Us_(2019_film))",Allan_Shivers,country,Us_(2019_film)
+ont_6_politician_test_134,MISSING,,"(Battle_of_Fredericksburg, isPartOfMilitaryConflict, American_Civil_War)",Battle_of_Fredericksburg,isPartOfMilitaryConflict,American_Civil_War,,,,
+ont_6_politician_test_134,MISSING,,"(Alfred_Moore_Scales, battle, Battle_of_Fredericksburg)",Alfred_Moore_Scales,battle,Battle_of_Fredericksburg,,,,
+ont_6_politician_test_134,MISSING,,"(American_Civil_War, commander, Abraham_Lincoln)",American_Civil_War,commander,Abraham_Lincoln,,,,
+ont_6_politician_test_134,EXTRA,,,,,,"(Abraham_Lincoln, office, Commander)",Abraham_Lincoln,office,Commander
+ont_6_politician_test_135,MISSING,,"(Aaron_S._Daggett, battle, Battle_of_Cold_Harbor)",Aaron_S._Daggett,battle,Battle_of_Cold_Harbor,,,,
+ont_6_politician_test_135,MISSING,,"(Battle_of_Cold_Harbor, isPartOfMilitaryConflict, American_Civil_War)",Battle_of_Cold_Harbor,isPartOfMilitaryConflict,American_Civil_War,,,,
+ont_6_politician_test_135,MISSING,,"(American_Civil_War, commander, Robert_E._Lee)",American_Civil_War,commander,Robert_E._Lee,,,,
+ont_6_politician_test_135,EXTRA,,,,,,"(Robert_E._Lee, profession, Commander)",Robert_E._Lee,profession,Commander
+ont_6_politician_test_14,EXACT,1.00,"(Abner_W._Sibal, birthPlace, Ridgewood,_Queens)",Abner_W._Sibal,birthPlace,"Ridgewood,_Queens","(Abner_W._Sibal, birthPlace, Ridgewood,_Queens)",Abner_W._Sibal,birthPlace,"Ridgewood,_Queens"
+ont_6_politician_test_14,EXACT,1.00,"(Abner_W._Sibal, deathPlace, Alexandria,_Virginia)",Abner_W._Sibal,deathPlace,"Alexandria,_Virginia","(Abner_W._Sibal, deathPlace, Alexandria,_Virginia)",Abner_W._Sibal,deathPlace,"Alexandria,_Virginia"
+ont_6_politician_test_14,SEMANTIC,0.98,"(Abner_W._Sibal, office, Member of the Connecticut Senate from the 26th District)",Abner_W._Sibal,office,Member of the Connecticut Senate from the 26th District,"(Abner_W._Sibal, office, Connecticut_State_Senate)",Abner_W._Sibal,office,Connecticut_State_Senate
+ont_6_politician_test_15,SEMANTIC,0.98,"(Abner_W._Sibal, successor, Donald_J._Irwin)",Abner_W._Sibal,successor,Donald_J._Irwin,"(Abner_W._Sibal, predecessor, Donald_J._Irwin)",Abner_W._Sibal,predecessor,Donald_J._Irwin
+ont_6_politician_test_15,SEMANTIC,0.97,"(Abner_W._Sibal, party, Republican_Party_(United_States))",Abner_W._Sibal,party,Republican_Party_(United_States),"(Abner_W._Sibal, party, Republicanism)",Abner_W._Sibal,party,Republicanism
+ont_6_politician_test_15,SEMANTIC,0.98,"(Abner_W._Sibal, office, Member of the Connecticut Senate from the 26th District)",Abner_W._Sibal,office,Member of the Connecticut Senate from the 26th District,"(Abner_W._Sibal, office, Connecticut_State_Senate)",Abner_W._Sibal,office,Connecticut_State_Senate
+ont_6_politician_test_16,EXACT,1.00,"(Abner_W._Sibal, successor, Marjorie_Farmer)",Abner_W._Sibal,successor,Marjorie_Farmer,"(Abner_W._Sibal, successor, Marjorie_Farmer)",Abner_W._Sibal,successor,Marjorie_Farmer
+ont_6_politician_test_16,SEMANTIC,0.98,"(Abner_W._Sibal, office, Member of the Connecticut Senate from the 26th District)",Abner_W._Sibal,office,Member of the Connecticut Senate from the 26th District,"(Abner_W._Sibal, office, Connecticut_State_Senate)",Abner_W._Sibal,office,Connecticut_State_Senate
+ont_6_politician_test_16,MISSING,,"(Abner_W._Sibal, party, Republican_Party_(United_States))",Abner_W._Sibal,party,Republican_Party_(United_States),,,,
+ont_6_politician_test_17,EXACT,1.00,"(Abner_W._Sibal, birthPlace, Ridgewood,_Queens)",Abner_W._Sibal,birthPlace,"Ridgewood,_Queens","(Abner_W._Sibal, birthPlace, Ridgewood,_Queens)",Abner_W._Sibal,birthPlace,"Ridgewood,_Queens"
+ont_6_politician_test_17,EXACT,1.00,"(Abner_W._Sibal, successor, Donald_J._Irwin)",Abner_W._Sibal,successor,Donald_J._Irwin,"(Abner_W._Sibal, successor, Donald_J._Irwin)",Abner_W._Sibal,successor,Donald_J._Irwin
+ont_6_politician_test_17,SEMANTIC,0.98,"(Abner_W._Sibal, office, Member of the Connecticut Senate from the 26th District)",Abner_W._Sibal,office,Member of the Connecticut Senate from the 26th District,"(Abner_W._Sibal, office, Connecticut_State_Senate)",Abner_W._Sibal,office,Connecticut_State_Senate
+ont_6_politician_test_18,EXACT,1.00,"(Abner_W._Sibal, birthPlace, Ridgewood,_Queens)",Abner_W._Sibal,birthPlace,"Ridgewood,_Queens","(Abner_W._Sibal, birthPlace, ridgewood, queens)",Abner_W._Sibal,birthPlace,"ridgewood, queens"
+ont_6_politician_test_18,EXACT,1.00,"(Abner_W._Sibal, successor, Marjorie_Farmer)",Abner_W._Sibal,successor,Marjorie_Farmer,"(Abner_W._Sibal, successor, Marjorie_Farmer)",Abner_W._Sibal,successor,Marjorie_Farmer
+ont_6_politician_test_18,MISSING,,"(Abner_W._Sibal, office, Member of the Connecticut Senate from the 26th District)",Abner_W._Sibal,office,Member of the Connecticut Senate from the 26th District,,,,
+ont_6_politician_test_18,EXTRA,,,,,,"(Abner_W._Sibal, affiliation, Connecticut_State_Senate)",Abner_W._Sibal,affiliation,Connecticut_State_Senate
+ont_6_politician_test_19,MISSING,,"(Adam_Holloway, militaryBranch, Grenadier_Guards)",Adam_Holloway,militaryBranch,Grenadier_Guards,,,,
+ont_6_politician_test_19,MISSING,,"(Gulf_War, commander, John_Major)",Gulf_War,commander,John_Major,,,,
+ont_6_politician_test_19,MISSING,,"(Adam_Holloway, battle, Gulf_War)",Adam_Holloway,battle,Gulf_War,,,,
+ont_6_politician_test_19,EXTRA,,,,,,"(Adam_Holloway, affiliation, Grenadier_Guards)",Adam_Holloway,affiliation,Grenadier_Guards
+ont_6_politician_test_2,EXACT,1.00,"(Ab_Klink, almaMater, Erasmus_University_Rotterdam)",Ab_Klink,almaMater,Erasmus_University_Rotterdam,"(Ab_Klink, almaMater, Erasmus_University_Rotterdam)",Ab_Klink,almaMater,Erasmus_University_Rotterdam
+ont_6_politician_test_2,EXACT,1.00,"(Ab_Klink, birthPlace, Netherlands)",Ab_Klink,birthPlace,Netherlands,"(Ab_Klink, birthPlace, Netherlands)",Ab_Klink,birthPlace,Netherlands
+ont_6_politician_test_2,MISSING,,"(Erasmus_University_Rotterdam, affiliation, Association_of_MBAs)",Erasmus_University_Rotterdam,affiliation,Association_of_MBAs,,,,
+ont_6_politician_test_20,EXACT,1.00,"(Adam_Holloway, militaryBranch, Grenadier_Guards)",Adam_Holloway,militaryBranch,Grenadier_Guards,"(Adam_Holloway, militaryBranch, Grenadier_Guards)",Adam_Holloway,militaryBranch,Grenadier_Guards
+ont_6_politician_test_20,EXACT,1.00,"(Adam_Holloway, battle, Gulf_War)",Adam_Holloway,battle,Gulf_War,"(Adam_Holloway, battle, Gulf_War)",Adam_Holloway,battle,Gulf_War
+ont_6_politician_test_20,MISSING,,"(Gulf_War, commander, Colin_Powell)",Gulf_War,commander,Colin_Powell,,,,
+ont_6_politician_test_20,EXTRA,,,,,,"(Colin_Powell, office, Commander)",Colin_Powell,office,Commander
+ont_6_politician_test_21,EXACT,1.00,"(Adam_Holloway, almaMater, Magdalene_College,_Cambridge)",Adam_Holloway,almaMater,"Magdalene_College,_Cambridge","(Adam_Holloway, almaMater, Magdalene_College,_Cambridge)",Adam_Holloway,almaMater,"Magdalene_College,_Cambridge"
+ont_6_politician_test_21,EXACT,1.00,"(Adam_Holloway, militaryBranch, Grenadier_Guards)",Adam_Holloway,militaryBranch,Grenadier_Guards,"(Adam_Holloway, militaryBranch, Grenadier_Guards)",Adam_Holloway,militaryBranch,Grenadier_Guards
+ont_6_politician_test_21,SEMANTIC,0.98,"(Adam_Holloway, birthPlace, Faversham, Kent, England)",Adam_Holloway,birthPlace,"Faversham, Kent, England","(Adam_Holloway, birthPlace, Faversham)",Adam_Holloway,birthPlace,Faversham
+ont_6_politician_test_21,EXTRA,,,,,,"(Adam_Holloway, region, Kent)",Adam_Holloway,region,Kent
+ont_6_politician_test_21,EXTRA,,,,,,"(Adam_Holloway, birthPlace, England)",Adam_Holloway,birthPlace,England
+ont_6_politician_test_22,EXACT,1.00,"(Adam_Holloway, almaMater, Magdalene_College,_Cambridge)",Adam_Holloway,almaMater,"Magdalene_College,_Cambridge","(Adam_Holloway, almaMater, Magdalene_College,_Cambridge)",Adam_Holloway,almaMater,"Magdalene_College,_Cambridge"
+ont_6_politician_test_22,EXACT,1.00,"(Adam_Holloway, birthPlace, Faversham)",Adam_Holloway,birthPlace,Faversham,"(Adam_Holloway, birthPlace, Faversham)",Adam_Holloway,birthPlace,Faversham
+ont_6_politician_test_22,EXACT,1.00,"(Adam_Holloway, militaryBranch, Grenadier_Guards)",Adam_Holloway,militaryBranch,Grenadier_Guards,"(Adam_Holloway, militaryBranch, Grenadier_Guards)",Adam_Holloway,militaryBranch,Grenadier_Guards
+ont_6_politician_test_23,EXACT,1.00,"(Adam_Holloway, militaryBranch, Grenadier_Guards)",Adam_Holloway,militaryBranch,Grenadier_Guards,"(Adam_Holloway, militaryBranch, Grenadier_Guards)",Adam_Holloway,militaryBranch,Grenadier_Guards
+ont_6_politician_test_23,EXACT,1.00,"(Adam_Holloway, birthPlace, Kent)",Adam_Holloway,birthPlace,Kent,"(Adam_Holloway, birthPlace, Kent)",Adam_Holloway,birthPlace,Kent
+ont_6_politician_test_23,MISSING,,"(Adam_Holloway, almaMater, Magdalene_College,_Cambridge)",Adam_Holloway,almaMater,"Magdalene_College,_Cambridge",,,,
+ont_6_politician_test_24,EXACT,1.00,"(Adam_Holloway, activeYearsStartDate, 2005-05-05)",Adam_Holloway,activeYearsStartDate,2005-05-05,"(Adam_Holloway, activeYearsStartDate, 2005-05-05)",Adam_Holloway,activeYearsStartDate,2005-05-05
+ont_6_politician_test_24,SEMANTIC,0.95,"(Adam_Holloway, party, Conservative_Party_(UK))",Adam_Holloway,party,Conservative_Party_(UK),"(Adam_Holloway, party, Tory)",Adam_Holloway,party,Tory
+ont_6_politician_test_24,SEMANTIC,0.97,"(Adam_Holloway, nationality, United_Kingdom)",Adam_Holloway,nationality,United_Kingdom,"(Adam_Holloway, birthPlace, United_Kingdom)",Adam_Holloway,birthPlace,United_Kingdom
+ont_6_politician_test_25,EXACT,1.00,"(Adam_Holloway, almaMater, Magdalene_College,_Cambridge)",Adam_Holloway,almaMater,"Magdalene_College,_Cambridge","(Adam_Holloway, almaMater, Magdalene_College,_Cambridge)",Adam_Holloway,almaMater,"Magdalene_College,_Cambridge"
+ont_6_politician_test_25,EXACT,1.00,"(Adam_Holloway, party, Conservative_Party_(UK))",Adam_Holloway,party,Conservative_Party_(UK),"(Adam_Holloway, party, Conservative_Party_(UK))",Adam_Holloway,party,Conservative_Party_(UK)
+ont_6_politician_test_25,EXACT,1.00,"(Adam_Holloway, birthPlace, Faversham, Kent, England)",Adam_Holloway,birthPlace,"Faversham, Kent, England","(Adam_Holloway, birthPlace, faversham, kent, england)",Adam_Holloway,birthPlace,"faversham, kent, england"
+ont_6_politician_test_26,EXACT,1.00,"(Adam_Holloway, nationality, United_Kingdom)",Adam_Holloway,nationality,United_Kingdom,"(Adam_Holloway, nationality, United_Kingdom)",Adam_Holloway,nationality,United_Kingdom
+ont_6_politician_test_26,SEMANTIC,0.95,"(Adam_Holloway, party, Conservative_Party_(UK))",Adam_Holloway,party,Conservative_Party_(UK),"(Adam_Holloway, party, Tory)",Adam_Holloway,party,Tory
+ont_6_politician_test_26,SEMANTIC,0.98,"(Adam_Holloway, birthPlace, Faversham, Kent, England)",Adam_Holloway,birthPlace,"Faversham, Kent, England","(Adam_Holloway, birthPlace, Faversham)",Adam_Holloway,birthPlace,Faversham
+ont_6_politician_test_27,EXACT,1.00,"(Adam_Holloway, birthPlace, Faversham)",Adam_Holloway,birthPlace,Faversham,"(Adam_Holloway, birthPlace, Faversham)",Adam_Holloway,birthPlace,Faversham
+ont_6_politician_test_27,EXACT,1.00,"(Adam_Holloway, party, Conservative_Party_(UK))",Adam_Holloway,party,Conservative_Party_(UK),"(Adam_Holloway, party, Conservative_Party_(UK))",Adam_Holloway,party,Conservative_Party_(UK)
+ont_6_politician_test_27,SEMANTIC,0.97,"(Adam_Holloway, nationality, United_Kingdom)",Adam_Holloway,nationality,United_Kingdom,"(Adam_Holloway, birthPlace, United_Kingdom)",Adam_Holloway,birthPlace,United_Kingdom
+ont_6_politician_test_28,EXACT,1.00,"(Adam_Holloway, birthPlace, Kent)",Adam_Holloway,birthPlace,Kent,"(Adam_Holloway, birthPlace, Kent)",Adam_Holloway,birthPlace,Kent
+ont_6_politician_test_28,EXACT,1.00,"(Adam_Holloway, nationality, United_Kingdom)",Adam_Holloway,nationality,United_Kingdom,"(Adam_Holloway, nationality, United_Kingdom)",Adam_Holloway,nationality,United_Kingdom
+ont_6_politician_test_28,MISSING,,"(Adam_Holloway, party, Conservative_Party_(UK))",Adam_Holloway,party,Conservative_Party_(UK),,,,
+ont_6_politician_test_29,EXACT,1.00,"(Agnes_Kant, almaMater, Radboud_University_Nijmegen)",Agnes_Kant,almaMater,Radboud_University_Nijmegen,"(Agnes_Kant, almaMater, Radboud_University_Nijmegen)",Agnes_Kant,almaMater,Radboud_University_Nijmegen
+ont_6_politician_test_29,EXACT,1.00,"(Agnes_Kant, birthPlace, Hessisch_Oldendorf)",Agnes_Kant,birthPlace,Hessisch_Oldendorf,"(Agnes_Kant, birthPlace, Hessisch_Oldendorf)",Agnes_Kant,birthPlace,Hessisch_Oldendorf
+ont_6_politician_test_29,SEMANTIC,0.96,"(Agnes_Kant, office, Parliamentary_group_leader)",Agnes_Kant,office,Parliamentary_group_leader,"(Agnes_Kant, office, Parliamentary_leader)",Agnes_Kant,office,Parliamentary_leader
+ont_6_politician_test_3,EXACT,1.00,"(Ab_Klink, almaMater, Erasmus_University_Rotterdam)",Ab_Klink,almaMater,Erasmus_University_Rotterdam,"(Ab_Klink, almaMater, Erasmus_University_Rotterdam)",Ab_Klink,almaMater,Erasmus_University_Rotterdam
+ont_6_politician_test_3,EXACT,1.00,"(Ab_Klink, birthPlace, Stellendam)",Ab_Klink,birthPlace,Stellendam,"(Ab_Klink, birthPlace, Stellendam)",Ab_Klink,birthPlace,Stellendam
+ont_6_politician_test_3,MISSING,,"(Erasmus_University_Rotterdam, affiliation, Association_of_MBAs)",Erasmus_University_Rotterdam,affiliation,Association_of_MBAs,,,,
+ont_6_politician_test_30,EXACT,1.00,"(Agnes_Kant, almaMater, Radboud_University_Nijmegen)",Agnes_Kant,almaMater,Radboud_University_Nijmegen,"(Agnes_Kant, almaMater, Radboud_University_Nijmegen)",Agnes_Kant,almaMater,Radboud_University_Nijmegen
+ont_6_politician_test_30,EXACT,1.00,"(Agnes_Kant, birthPlace, Hessisch_Oldendorf)",Agnes_Kant,birthPlace,Hessisch_Oldendorf,"(Agnes_Kant, birthPlace, Hessisch_Oldendorf)",Agnes_Kant,birthPlace,Hessisch_Oldendorf
+ont_6_politician_test_30,MISSING,,"(Agnes_Kant, office, Socialist_Party_(Netherlands))",Agnes_Kant,office,Socialist_Party_(Netherlands),,,,
+ont_6_politician_test_30,EXTRA,,,,,,"(Agnes_Kant, party, Socialist_Party)",Agnes_Kant,party,Socialist_Party
+ont_6_politician_test_31,EXACT,1.00,"(Agnes_Kant, almaMater, Radboud_University_Nijmegen)",Agnes_Kant,almaMater,Radboud_University_Nijmegen,"(Agnes_Kant, almaMater, Radboud_University_Nijmegen)",Agnes_Kant,almaMater,Radboud_University_Nijmegen
+ont_6_politician_test_31,EXACT,1.00,"(Agnes_Kant, birthPlace, Hessisch_Oldendorf)",Agnes_Kant,birthPlace,Hessisch_Oldendorf,"(Agnes_Kant, birthPlace, Hessisch_Oldendorf)",Agnes_Kant,birthPlace,Hessisch_Oldendorf
+ont_6_politician_test_31,MISSING,,"(Agnes_Kant, office, Member of the House of Representatives)",Agnes_Kant,office,Member of the House of Representatives,,,,
+ont_6_politician_test_32,EXACT,1.00,"(Agnes_Kant, almaMater, Radboud_University_Nijmegen)",Agnes_Kant,almaMater,Radboud_University_Nijmegen,"(Agnes_Kant, almaMater, Radboud_University_Nijmegen)",Agnes_Kant,almaMater,Radboud_University_Nijmegen
+ont_6_politician_test_32,EXACT,1.00,"(Agnes_Kant, birthPlace, West_Germany)",Agnes_Kant,birthPlace,West_Germany,"(Agnes_Kant, birthPlace, West_Germany)",Agnes_Kant,birthPlace,West_Germany
+ont_6_politician_test_32,EXACT,1.00,"(Agnes_Kant, office, Parliamentary_group_leader)",Agnes_Kant,office,Parliamentary_group_leader,"(Agnes_Kant, office, parliamentary group leader)",Agnes_Kant,office,parliamentary group leader
+ont_6_politician_test_33,EXACT,1.00,"(Agnes_Kant, nationality, Netherlands)",Agnes_Kant,nationality,Netherlands,"(Agnes_Kant, nationality, Netherlands)",Agnes_Kant,nationality,Netherlands
+ont_6_politician_test_33,MISSING,,"(House_of_Representatives_(Netherlands), leader, Khadija_Arib)",House_of_Representatives_(Netherlands),leader,Khadija_Arib,,,,
+ont_6_politician_test_33,MISSING,,"(Agnes_Kant, office, House_of_Representatives_(Netherlands))",Agnes_Kant,office,House_of_Representatives_(Netherlands),,,,
+ont_6_politician_test_34,EXACT,1.00,"(Agnes_Kant, nationality, Netherlands)",Agnes_Kant,nationality,Netherlands,"(Agnes_Kant, nationality, Netherlands)",Agnes_Kant,nationality,Netherlands
+ont_6_politician_test_34,SEMANTIC,0.95,"(Socialist_Party_(Netherlands), leader, Emile_Roemer)",Socialist_Party_(Netherlands),leader,Emile_Roemer,"(Socialist_Party, leader, Emile_Roemer)",Socialist_Party,leader,Emile_Roemer
+ont_6_politician_test_34,MISSING,,"(Agnes_Kant, office, Socialist_Party_(Netherlands))",Agnes_Kant,office,Socialist_Party_(Netherlands),,,,
+ont_6_politician_test_34,EXTRA,,,,,,"(Agnes_Kant, party, Socialist_Party)",Agnes_Kant,party,Socialist_Party
+ont_6_politician_test_35,EXACT,1.00,"(Agnes_Kant, nationality, Netherlands)",Agnes_Kant,nationality,Netherlands,"(Agnes_Kant, nationality, Netherlands)",Agnes_Kant,nationality,Netherlands
+ont_6_politician_test_35,SEMANTIC,0.96,"(Agnes_Kant, office, Member of the House of Representatives)",Agnes_Kant,office,Member of the House of Representatives,"(Agnes_Kant, office, House_of_Representatives)",Agnes_Kant,office,House_of_Representatives
+ont_6_politician_test_35,MISSING,,"(Netherlands, leader, Mark_Rutte)",Netherlands,leader,Mark_Rutte,,,,
+ont_6_politician_test_35,EXTRA,,,,,,"(Mark_Rutte, country, Netherlands)",Mark_Rutte,country,Netherlands
+ont_6_politician_test_36,EXACT,1.00,"(Agnes_Kant, nationality, Netherlands)",Agnes_Kant,nationality,Netherlands,"(Agnes_Kant, nationality, Netherlands)",Agnes_Kant,nationality,Netherlands
+ont_6_politician_test_36,MISSING,,"(Netherlands, leader, Mark_Rutte)",Netherlands,leader,Mark_Rutte,,,,
+ont_6_politician_test_36,MISSING,,"(Agnes_Kant, office, Socialist_Party_(Netherlands))",Agnes_Kant,office,Socialist_Party_(Netherlands),,,,
+ont_6_politician_test_36,EXTRA,,,,,,"(Mark_Rutte, country, Netherlands)",Mark_Rutte,country,Netherlands
+ont_6_politician_test_37,EXACT,1.00,"(Agnes_Kant, nationality, Netherlands)",Agnes_Kant,nationality,Netherlands,"(Agnes_Kant, nationality, Netherlands)",Agnes_Kant,nationality,Netherlands
+ont_6_politician_test_37,SEMANTIC,0.95,"(Agnes_Kant, party, Socialist_Party_(Netherlands))",Agnes_Kant,party,Socialist_Party_(Netherlands),"(Agnes_Kant, party, Socialist_Party)",Agnes_Kant,party,Socialist_Party
+ont_6_politician_test_37,MISSING,,"(Netherlands, leader, Mark_Rutte)",Netherlands,leader,Mark_Rutte,,,,
+ont_6_politician_test_38,EXACT,1.00,"(Agnes_Kant, nationality, Netherlands)",Agnes_Kant,nationality,Netherlands,"(Agnes_Kant, nationality, Netherlands)",Agnes_Kant,nationality,Netherlands
+ont_6_politician_test_38,MISSING,,"(Agnes_Kant, party, Socialist_Party_(Netherlands))",Agnes_Kant,party,Socialist_Party_(Netherlands),,,,
+ont_6_politician_test_38,MISSING,,"(Socialist_Party_(Netherlands), leader, Emile_Roemer)",Socialist_Party_(Netherlands),leader,Emile_Roemer,,,,
+ont_6_politician_test_39,EXACT,1.00,"(Agnes_Kant, almaMater, Radboud_University_Nijmegen)",Agnes_Kant,almaMater,Radboud_University_Nijmegen,"(Agnes_Kant, almaMater, Radboud_University_Nijmegen)",Agnes_Kant,almaMater,Radboud_University_Nijmegen
+ont_6_politician_test_39,EXACT,1.00,"(Agnes_Kant, birthPlace, West_Germany)",Agnes_Kant,birthPlace,West_Germany,"(Agnes_Kant, birthPlace, West_Germany)",Agnes_Kant,birthPlace,West_Germany
+ont_6_politician_test_39,SEMANTIC,0.96,"(Agnes_Kant, office, Member of the House of Representatives)",Agnes_Kant,office,Member of the House of Representatives,"(Agnes_Kant, office, House_of_Representatives)",Agnes_Kant,office,House_of_Representatives
+ont_6_politician_test_4,EXACT,1.00,"(Ab_Klink, almaMater, Erasmus_University_Rotterdam)",Ab_Klink,almaMater,Erasmus_University_Rotterdam,"(Ab_Klink, almaMater, Erasmus_University_Rotterdam)",Ab_Klink,almaMater,Erasmus_University_Rotterdam
+ont_6_politician_test_4,MISSING,,"(Erasmus_University_Rotterdam, affiliation, Association_of_MBAs)",Erasmus_University_Rotterdam,affiliation,Association_of_MBAs,,,,
+ont_6_politician_test_4,MISSING,,"(Ab_Klink, office, Member of the House of Representatives)",Ab_Klink,office,Member of the House of Representatives,,,,
+ont_6_politician_test_40,EXACT,1.00,"(Albert_Jennings_Fountain, battle, American_Civil_War)",Albert_Jennings_Fountain,battle,American_Civil_War,"(Albert_Jennings_Fountain, battle, American_Civil_War)",Albert_Jennings_Fountain,battle,American_Civil_War
+ont_6_politician_test_40,EXACT,1.00,"(Albert_Jennings_Fountain, birthPlace, United_States)",Albert_Jennings_Fountain,birthPlace,United_States,"(Albert_Jennings_Fountain, birthPlace, United_States)",Albert_Jennings_Fountain,birthPlace,United_States
+ont_6_politician_test_40,SEMANTIC,0.98,"(American_Civil_War, commander, Jefferson_Davis)",American_Civil_War,commander,Jefferson_Davis,"(Jefferson_Davis, commander, American_Civil_War)",Jefferson_Davis,commander,American_Civil_War
+ont_6_politician_test_40,EXTRA,,,,,,"(Jefferson_Davis, profession, commander)",Jefferson_Davis,profession,commander
+ont_6_politician_test_41,EXACT,1.00,"(Albert_Jennings_Fountain, battle, American_Civil_War)",Albert_Jennings_Fountain,battle,American_Civil_War,"(Albert_Jennings_Fountain, battle, American_Civil_War)",Albert_Jennings_Fountain,battle,American_Civil_War
+ont_6_politician_test_41,SEMANTIC,0.99,"(Albert_Jennings_Fountain, birthPlace, New_York)",Albert_Jennings_Fountain,birthPlace,New_York,"(Albert_Jennings_Fountain, birthPlace, New_York_(state))",Albert_Jennings_Fountain,birthPlace,New_York_(state)
+ont_6_politician_test_41,MISSING,,"(American_Civil_War, commander, Jefferson_Davis)",American_Civil_War,commander,Jefferson_Davis,,,,
+ont_6_politician_test_41,EXTRA,,,,,,"(Jefferson_Davis, office, Commander)",Jefferson_Davis,office,Commander
+ont_6_politician_test_42,EXACT,1.00,"(Albert_Jennings_Fountain, deathPlace, United_States)",Albert_Jennings_Fountain,deathPlace,United_States,"(Albert_Jennings_Fountain, deathPlace, United_States)",Albert_Jennings_Fountain,deathPlace,United_States
+ont_6_politician_test_42,SEMANTIC,0.99,"(Albert_Jennings_Fountain, birthPlace, New_York)",Albert_Jennings_Fountain,birthPlace,New_York,"(Albert_Jennings_Fountain, birthPlace, New_York_(state))",Albert_Jennings_Fountain,birthPlace,New_York_(state)
+ont_6_politician_test_42,MISSING,,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,,,,
+ont_6_politician_test_43,EXACT,1.00,"(Albert_Jennings_Fountain, battle, American_Civil_War)",Albert_Jennings_Fountain,battle,American_Civil_War,"(Albert_Jennings_Fountain, battle, American_Civil_War)",Albert_Jennings_Fountain,battle,American_Civil_War
+ont_6_politician_test_43,SEMANTIC,0.99,"(Albert_Jennings_Fountain, birthPlace, New_York)",Albert_Jennings_Fountain,birthPlace,New_York,"(Albert_Jennings_Fountain, birthPlace, New_York_(state))",Albert_Jennings_Fountain,birthPlace,New_York_(state)
+ont_6_politician_test_43,MISSING,,"(American_Civil_War, commander, Abraham_Lincoln)",American_Civil_War,commander,Abraham_Lincoln,,,,
+ont_6_politician_test_43,EXTRA,,,,,,"(Abraham_Lincoln, commander, Commander)",Abraham_Lincoln,commander,Commander
+ont_6_politician_test_44,EXACT,1.00,"(Albert_Jennings_Fountain, deathPlace, United_States)",Albert_Jennings_Fountain,deathPlace,United_States,"(Albert_Jennings_Fountain, deathPlace, United_States)",Albert_Jennings_Fountain,deathPlace,United_States
+ont_6_politician_test_44,EXACT,1.00,"(Albert_Jennings_Fountain, birthPlace, Staten_Island)",Albert_Jennings_Fountain,birthPlace,Staten_Island,"(Albert_Jennings_Fountain, birthPlace, Staten_Island)",Albert_Jennings_Fountain,birthPlace,Staten_Island
+ont_6_politician_test_44,MISSING,,"(Albert_Jennings_Fountain, birthPlace, New_York_City)",Albert_Jennings_Fountain,birthPlace,New_York_City,,,,
+ont_6_politician_test_45,EXACT,1.00,"(Albert_Jennings_Fountain, birthPlace, New_York_City)",Albert_Jennings_Fountain,birthPlace,New_York_City,"(Albert_Jennings_Fountain, birthPlace, New_York_City)",Albert_Jennings_Fountain,birthPlace,New_York_City
+ont_6_politician_test_45,EXACT,1.00,"(Albert_Jennings_Fountain, deathPlace, United_States)",Albert_Jennings_Fountain,deathPlace,United_States,"(Albert_Jennings_Fountain, deathPlace, United_States)",Albert_Jennings_Fountain,deathPlace,United_States
+ont_6_politician_test_45,MISSING,,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,,,,
+ont_6_politician_test_46,EXACT,1.00,"(Albert_Jennings_Fountain, birthPlace, New_York_City)",Albert_Jennings_Fountain,birthPlace,New_York_City,"(Albert_Jennings_Fountain, birthPlace, New_York_City)",Albert_Jennings_Fountain,birthPlace,New_York_City
+ont_6_politician_test_46,EXACT,1.00,"(Albert_Jennings_Fountain, battle, American_Civil_War)",Albert_Jennings_Fountain,battle,American_Civil_War,"(Albert_Jennings_Fountain, battle, American_Civil_War)",Albert_Jennings_Fountain,battle,American_Civil_War
+ont_6_politician_test_46,SEMANTIC,0.98,"(American_Civil_War, commander, Abraham_Lincoln)",American_Civil_War,commander,Abraham_Lincoln,"(Abraham_Lincoln, commander, American_Civil_War)",Abraham_Lincoln,commander,American_Civil_War
+ont_6_politician_test_46,EXTRA,,,,,,"(Abraham_Lincoln, office, Commander)",Abraham_Lincoln,office,Commander
+ont_6_politician_test_47,EXACT,1.00,"(Albert_Jennings_Fountain, birthPlace, Staten_Island)",Albert_Jennings_Fountain,birthPlace,Staten_Island,"(Albert_Jennings_Fountain, birthPlace, Staten_Island)",Albert_Jennings_Fountain,birthPlace,Staten_Island
+ont_6_politician_test_47,MISSING,,"(Albert_Jennings_Fountain, deathPlace, United_States)",Albert_Jennings_Fountain,deathPlace,United_States,,,,
+ont_6_politician_test_47,MISSING,,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,,,,
+ont_6_politician_test_47,EXTRA,,,,,,"(Albert_Jennings_Fountain, deathPlace, Us_(2019_film))",Albert_Jennings_Fountain,deathPlace,Us_(2019_film)
+ont_6_politician_test_48,EXACT,1.00,"(Albert_Jennings_Fountain, deathPlace, Doña_Ana_County,_New_Mexico)",Albert_Jennings_Fountain,deathPlace,"Doña_Ana_County,_New_Mexico","(Albert_Jennings_Fountain, deathPlace, Doña_Ana_County,_New_Mexico)",Albert_Jennings_Fountain,deathPlace,"Doña_Ana_County,_New_Mexico"
+ont_6_politician_test_48,EXACT,1.00,"(Albert_Jennings_Fountain, birthPlace, Staten_Island)",Albert_Jennings_Fountain,birthPlace,Staten_Island,"(Albert_Jennings_Fountain, birthPlace, Staten_Island)",Albert_Jennings_Fountain,birthPlace,Staten_Island
+ont_6_politician_test_48,SEMANTIC,0.95,"(Albert_Jennings_Fountain, birthPlace, New_York)",Albert_Jennings_Fountain,birthPlace,New_York,"(Albert_Jennings_Fountain, state, New_York_(state))",Albert_Jennings_Fountain,state,New_York_(state)
+ont_6_politician_test_48,EXTRA,,,,,,"(Albert_Jennings_Fountain, state, New_Mexico)",Albert_Jennings_Fountain,state,New_Mexico
+ont_6_politician_test_49,EXACT,1.00,"(Albert_Jennings_Fountain, deathPlace, Doña_Ana_County,_New_Mexico)",Albert_Jennings_Fountain,deathPlace,"Doña_Ana_County,_New_Mexico","(Albert_Jennings_Fountain, deathPlace, Doña_Ana_County,_New_Mexico)",Albert_Jennings_Fountain,deathPlace,"Doña_Ana_County,_New_Mexico"
+ont_6_politician_test_49,EXACT,1.00,"(Albert_Jennings_Fountain, birthPlace, Staten_Island)",Albert_Jennings_Fountain,birthPlace,Staten_Island,"(Albert_Jennings_Fountain, birthPlace, Staten_Island)",Albert_Jennings_Fountain,birthPlace,Staten_Island
+ont_6_politician_test_49,MISSING,,"(Albert_Jennings_Fountain, birthPlace, New_York_City)",Albert_Jennings_Fountain,birthPlace,New_York_City,,,,
+ont_6_politician_test_5,EXACT,1.00,"(Ab_Klink, almaMater, Erasmus_University_Rotterdam)",Ab_Klink,almaMater,Erasmus_University_Rotterdam,"(Ab_Klink, almaMater, Erasmus_University_Rotterdam)",Ab_Klink,almaMater,Erasmus_University_Rotterdam
+ont_6_politician_test_5,MISSING,,"(Erasmus_University_Rotterdam, affiliation, Association_of_MBAs)",Erasmus_University_Rotterdam,affiliation,Association_of_MBAs,,,,
+ont_6_politician_test_5,MISSING,,"(Ab_Klink, office, Member of the Senate)",Ab_Klink,office,Member of the Senate,,,,
+ont_6_politician_test_5,EXTRA,,,,,,"(Ab_Klink, affiliation, Roman_Senate)",Ab_Klink,affiliation,Roman_Senate
+ont_6_politician_test_50,EXACT,1.00,"(Albert_Jennings_Fountain, deathPlace, Doña_Ana_County,_New_Mexico)",Albert_Jennings_Fountain,deathPlace,"Doña_Ana_County,_New_Mexico","(Albert_Jennings_Fountain, deathPlace, Doña_Ana_County,_New_Mexico)",Albert_Jennings_Fountain,deathPlace,"Doña_Ana_County,_New_Mexico"
+ont_6_politician_test_50,EXACT,1.00,"(Albert_Jennings_Fountain, birthPlace, Staten_Island)",Albert_Jennings_Fountain,birthPlace,Staten_Island,"(Albert_Jennings_Fountain, birthPlace, Staten_Island)",Albert_Jennings_Fountain,birthPlace,Staten_Island
+ont_6_politician_test_50,SEMANTIC,0.98,"(Albert_Jennings_Fountain, birthPlace, United_States)",Albert_Jennings_Fountain,birthPlace,United_States,"(Albert_Jennings_Fountain, nationality, United_States)",Albert_Jennings_Fountain,nationality,United_States
+ont_6_politician_test_51,EXACT,1.00,"(Albert_Jennings_Fountain, birthPlace, United_States)",Albert_Jennings_Fountain,birthPlace,United_States,"(Albert_Jennings_Fountain, birthPlace, United_States)",Albert_Jennings_Fountain,birthPlace,United_States
+ont_6_politician_test_51,SEMANTIC,0.98,"(Albert_Jennings_Fountain, deathPlace, Doña_Ana_County,_New_Mexico)",Albert_Jennings_Fountain,deathPlace,"Doña_Ana_County,_New_Mexico","(Albert_Jennings_Fountain, deathPlace, dona ana county, new mexico)",Albert_Jennings_Fountain,deathPlace,"dona ana county, new mexico"
+ont_6_politician_test_51,MISSING,,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,,,,
+ont_6_politician_test_52,EXACT,1.00,"(Albert_Jennings_Fountain, deathPlace, New_Mexico_Territory)",Albert_Jennings_Fountain,deathPlace,New_Mexico_Territory,"(Albert_Jennings_Fountain, deathPlace, New_Mexico_Territory)",Albert_Jennings_Fountain,deathPlace,New_Mexico_Territory
+ont_6_politician_test_52,EXACT,1.00,"(Albert_Jennings_Fountain, birthPlace, Staten_Island)",Albert_Jennings_Fountain,birthPlace,Staten_Island,"(Albert_Jennings_Fountain, birthPlace, Staten_Island)",Albert_Jennings_Fountain,birthPlace,Staten_Island
+ont_6_politician_test_52,MISSING,,"(Albert_Jennings_Fountain, birthPlace, New_York)",Albert_Jennings_Fountain,birthPlace,New_York,,,,
+ont_6_politician_test_53,EXACT,1.00,"(Albert_Jennings_Fountain, birthPlace, New_York_City)",Albert_Jennings_Fountain,birthPlace,New_York_City,"(Albert_Jennings_Fountain, birthPlace, New_York_City)",Albert_Jennings_Fountain,birthPlace,New_York_City
+ont_6_politician_test_53,EXACT,1.00,"(Albert_Jennings_Fountain, deathPlace, New_Mexico_Territory)",Albert_Jennings_Fountain,deathPlace,New_Mexico_Territory,"(Albert_Jennings_Fountain, deathPlace, New_Mexico_Territory)",Albert_Jennings_Fountain,deathPlace,New_Mexico_Territory
+ont_6_politician_test_53,MISSING,,"(Albert_Jennings_Fountain, birthPlace, Staten_Island)",Albert_Jennings_Fountain,birthPlace,Staten_Island,,,,
+ont_6_politician_test_54,EXACT,1.00,"(Albert_Jennings_Fountain, deathPlace, New_Mexico_Territory)",Albert_Jennings_Fountain,deathPlace,New_Mexico_Territory,"(Albert_Jennings_Fountain, deathPlace, New_Mexico_Territory)",Albert_Jennings_Fountain,deathPlace,New_Mexico_Territory
+ont_6_politician_test_54,EXACT,1.00,"(Albert_Jennings_Fountain, birthPlace, United_States)",Albert_Jennings_Fountain,birthPlace,United_States,"(Albert_Jennings_Fountain, birthPlace, United_States)",Albert_Jennings_Fountain,birthPlace,United_States
+ont_6_politician_test_54,MISSING,,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,,,,
+ont_6_politician_test_55,EXACT,1.00,"(Albert_Jennings_Fountain, deathPlace, United_States)",Albert_Jennings_Fountain,deathPlace,United_States,"(Albert_Jennings_Fountain, deathPlace, United_States)",Albert_Jennings_Fountain,deathPlace,United_States
+ont_6_politician_test_55,EXACT,1.00,"(Albert_Jennings_Fountain, birthPlace, Staten_Island)",Albert_Jennings_Fountain,birthPlace,Staten_Island,"(Albert_Jennings_Fountain, birthPlace, Staten_Island)",Albert_Jennings_Fountain,birthPlace,Staten_Island
+ont_6_politician_test_55,SEMANTIC,0.95,"(Albert_Jennings_Fountain, birthPlace, New_York)",Albert_Jennings_Fountain,birthPlace,New_York,"(Albert_Jennings_Fountain, state, New_York_(state))",Albert_Jennings_Fountain,state,New_York_(state)
+ont_6_politician_test_56,MISSING,,"(American_Civil_War, commander, Abraham_Lincoln)",American_Civil_War,commander,Abraham_Lincoln,,,,
+ont_6_politician_test_56,MISSING,,"(Albert_Jennings_Fountain, militaryBranch, 1st_Regiment_New_Mexico_Volunteer_Cavalry)",Albert_Jennings_Fountain,militaryBranch,1st_Regiment_New_Mexico_Volunteer_Cavalry,,,,
+ont_6_politician_test_56,MISSING,,"(Albert_Jennings_Fountain, battle, American_Civil_War)",Albert_Jennings_Fountain,battle,American_Civil_War,,,,
+ont_6_politician_test_57,EXACT,1.00,"(Albert_Jennings_Fountain, militaryBranch, Union_Army)",Albert_Jennings_Fountain,militaryBranch,Union_Army,"(Albert_Jennings_Fountain, militaryBranch, Union_Army)",Albert_Jennings_Fountain,militaryBranch,Union_Army
+ont_6_politician_test_57,EXACT,1.00,"(Albert_Jennings_Fountain, battle, American_Civil_War)",Albert_Jennings_Fountain,battle,American_Civil_War,"(Albert_Jennings_Fountain, battle, American_Civil_War)",Albert_Jennings_Fountain,battle,American_Civil_War
+ont_6_politician_test_57,MISSING,,"(American_Civil_War, commander, Jefferson_Davis)",American_Civil_War,commander,Jefferson_Davis,,,,
+ont_6_politician_test_58,EXACT,1.00,"(Albert_Jennings_Fountain, militaryBranch, Union_Army)",Albert_Jennings_Fountain,militaryBranch,Union_Army,"(Albert_Jennings_Fountain, militaryBranch, Union_Army)",Albert_Jennings_Fountain,militaryBranch,Union_Army
+ont_6_politician_test_58,EXACT,1.00,"(Albert_Jennings_Fountain, battle, American_Civil_War)",Albert_Jennings_Fountain,battle,American_Civil_War,"(Albert_Jennings_Fountain, battle, American_Civil_War)",Albert_Jennings_Fountain,battle,American_Civil_War
+ont_6_politician_test_58,MISSING,,"(American_Civil_War, commander, Abraham_Lincoln)",American_Civil_War,commander,Abraham_Lincoln,,,,
+ont_6_politician_test_58,EXTRA,,,,,,"(Abraham_Lincoln, commander, Commander)",Abraham_Lincoln,commander,Commander
+ont_6_politician_test_59,EXACT,1.00,"(Albert_Jennings_Fountain, birthPlace, New_York_City)",Albert_Jennings_Fountain,birthPlace,New_York_City,"(Albert_Jennings_Fountain, birthPlace, New_York_City)",Albert_Jennings_Fountain,birthPlace,New_York_City
+ont_6_politician_test_59,EXACT,1.00,"(Albert_Jennings_Fountain, party, Republican_Party_(United_States))",Albert_Jennings_Fountain,party,Republican_Party_(United_States),"(Albert_Jennings_Fountain, party, Republican_Party_(United_States))",Albert_Jennings_Fountain,party,Republican_Party_(United_States)
+ont_6_politician_test_59,MISSING,,"(Albert_Jennings_Fountain, office, President_pro_tempore_of_the_Texas_Senate)",Albert_Jennings_Fountain,office,President_pro_tempore_of_the_Texas_Senate,,,,
+ont_6_politician_test_59,EXTRA,,,,,,"(Albert_Jennings_Fountain, nationality, United_States)",Albert_Jennings_Fountain,nationality,United_States
+ont_6_politician_test_6,EXACT,1.00,"(Ab_Klink, office, House_of_Representatives_(Netherlands))",Ab_Klink,office,House_of_Representatives_(Netherlands),"(Ab_Klink, office, House_of_Representatives_(Netherlands))",Ab_Klink,office,House_of_Representatives_(Netherlands)
+ont_6_politician_test_6,EXACT,1.00,"(Ab_Klink, almaMater, Erasmus_University_Rotterdam)",Ab_Klink,almaMater,Erasmus_University_Rotterdam,"(Ab_Klink, almaMater, Erasmus_University_Rotterdam)",Ab_Klink,almaMater,Erasmus_University_Rotterdam
+ont_6_politician_test_6,MISSING,,"(Erasmus_University_Rotterdam, affiliation, Association_of_MBAs)",Erasmus_University_Rotterdam,affiliation,Association_of_MBAs,,,,
+ont_6_politician_test_6,EXTRA,,,,,,"(Ab_Klink, country, Netherlands)",Ab_Klink,country,Netherlands
+ont_6_politician_test_60,EXACT,1.00,"(Allan_Shivers, militaryBranch, United_States_Army)",Allan_Shivers,militaryBranch,United_States_Army,"(Allan_Shivers, militaryBranch, United_States_Army)",Allan_Shivers,militaryBranch,United_States_Army
+ont_6_politician_test_60,EXACT,1.00,"(Allan_Shivers, battle, World_War_II)",Allan_Shivers,battle,World_War_II,"(Allan_Shivers, battle, World_War_II)",Allan_Shivers,battle,World_War_II
+ont_6_politician_test_60,MISSING,,"(World_War_II, commander, Joseph_Stalin)",World_War_II,commander,Joseph_Stalin,,,,
+ont_6_politician_test_60,EXTRA,,,,,,"(Joseph_Stalin, battle, World_War_II)",Joseph_Stalin,battle,World_War_II
+ont_6_politician_test_60,EXTRA,,,,,,"(Joseph_Stalin, office, Commander)",Joseph_Stalin,office,Commander
+ont_6_politician_test_61,EXACT,1.00,"(Allan_Shivers, party, Democratic_Party_(United_States))",Allan_Shivers,party,Democratic_Party_(United_States),"(Allan_Shivers, party, Democratic_Party_(United_States))",Allan_Shivers,party,Democratic_Party_(United_States)
+ont_6_politician_test_61,SEMANTIC,0.96,"(Allan_Shivers, successor, Ben_Ramsey)",Allan_Shivers,successor,Ben_Ramsey,"(Allan_Shivers, successor, Ben_Ramsey_(politician))",Allan_Shivers,successor,Ben_Ramsey_(politician)
+ont_6_politician_test_61,MISSING,,"(Allan_Shivers, office, Member of the Texas State Senate from District 4 (Port Arthur))",Allan_Shivers,office,Member of the Texas State Senate from District 4 (Port Arthur),,,,
+ont_6_politician_test_61,EXTRA,,,,,,"(Allan_Shivers, affiliation, Texas_Senate)",Allan_Shivers,affiliation,Texas_Senate
+ont_6_politician_test_62,EXACT,1.00,"(Allan_Shivers, party, Democratic_Party_(United_States))",Allan_Shivers,party,Democratic_Party_(United_States),"(Allan_Shivers, party, Democratic_Party_(United_States))",Allan_Shivers,party,Democratic_Party_(United_States)
+ont_6_politician_test_62,SEMANTIC,0.95,"(Allan_Shivers, office, Member of the Texas State Senate from District 4 (Port Arthur))",Allan_Shivers,office,Member of the Texas State Senate from District 4 (Port Arthur),"(Allan_Shivers, office, Texas_Senate)",Allan_Shivers,office,Texas_Senate
+ont_6_politician_test_62,MISSING,,"(Allan_Shivers, successor, Wilfred_R._Cousins,_Jr.)",Allan_Shivers,successor,"Wilfred_R._Cousins,_Jr.",,,,
+ont_6_politician_test_63,EXACT,1.00,"(Allan_Shivers, party, Democratic_Party_(United_States))",Allan_Shivers,party,Democratic_Party_(United_States),"(Allan_Shivers, party, Democratic_Party_(United_States))",Allan_Shivers,party,Democratic_Party_(United_States)
+ont_6_politician_test_63,SEMANTIC,0.99,"(Allan_Shivers, successor, Price_Daniel)",Allan_Shivers,successor,Price_Daniel,"(Price_Daniel, successor, Allan_Shivers)",Price_Daniel,successor,Allan_Shivers
+ont_6_politician_test_63,MISSING,,"(Allan_Shivers, office, Lieutenant Governor of Texas)",Allan_Shivers,office,Lieutenant Governor of Texas,,,,
+ont_6_politician_test_64,EXACT,1.00,"(Albert_Jennings_Fountain, birthPlace, United_States)",Albert_Jennings_Fountain,birthPlace,United_States,"(Albert_Jennings_Fountain, birthPlace, United_States)",Albert_Jennings_Fountain,birthPlace,United_States
+ont_6_politician_test_64,EXACT,1.00,"(Albert_Jennings_Fountain, battle, American_Civil_War)",Albert_Jennings_Fountain,battle,American_Civil_War,"(Albert_Jennings_Fountain, battle, American_Civil_War)",Albert_Jennings_Fountain,battle,American_Civil_War
+ont_6_politician_test_64,MISSING,,"(American_Civil_War, commander, Abraham_Lincoln)",American_Civil_War,commander,Abraham_Lincoln,,,,
+ont_6_politician_test_64,EXTRA,,,,,,"(Abraham_Lincoln, office, Commander)",Abraham_Lincoln,office,Commander
+ont_6_politician_test_65,MISSING,,"(American_Civil_War, commander, Abraham_Lincoln)",American_Civil_War,commander,Abraham_Lincoln,,,,
+ont_6_politician_test_65,MISSING,,"(Alfred_Moore_Scales, battle, Battle_of_Gettysburg)",Alfred_Moore_Scales,battle,Battle_of_Gettysburg,,,,
+ont_6_politician_test_65,MISSING,,"(Battle_of_Gettysburg, isPartOfMilitaryConflict, American_Civil_War)",Battle_of_Gettysburg,isPartOfMilitaryConflict,American_Civil_War,,,,
+ont_6_politician_test_65,EXTRA,,,,,,"(Abraham_Lincoln, office, President_of_the_United_States)",Abraham_Lincoln,office,President_of_the_United_States
+ont_6_politician_test_66,MISSING,,"(American_Civil_War, commander, Abraham_Lincoln)",American_Civil_War,commander,Abraham_Lincoln,,,,
+ont_6_politician_test_66,MISSING,,"(Alfred_Moore_Scales, battle, Siege_of_Petersburg)",Alfred_Moore_Scales,battle,Siege_of_Petersburg,,,,
+ont_6_politician_test_66,MISSING,,"(Siege_of_Petersburg, isPartOfMilitaryConflict, American_Civil_War)",Siege_of_Petersburg,isPartOfMilitaryConflict,American_Civil_War,,,,
+ont_6_politician_test_66,EXTRA,,,,,,"(Abraham_Lincoln, office, Commander)",Abraham_Lincoln,office,Commander
+ont_6_politician_test_67,SEMANTIC,0.99,"(Aaron_S._Daggett, battle, Battle_of_Antietam)",Aaron_S._Daggett,battle,Battle_of_Antietam,"(Aaron_Daggett, battle, Battle_of_Antietam)",Aaron_Daggett,battle,Battle_of_Antietam
+ont_6_politician_test_67,MISSING,,"(Battle_of_Antietam, isPartOfMilitaryConflict, American_Civil_War)",Battle_of_Antietam,isPartOfMilitaryConflict,American_Civil_War,,,,
+ont_6_politician_test_67,MISSING,,"(American_Civil_War, commander, Abraham_Lincoln)",American_Civil_War,commander,Abraham_Lincoln,,,,
+ont_6_politician_test_68,MISSING,,"(Aaron_S._Daggett, battle, Battle_of_Salem_Church)",Aaron_S._Daggett,battle,Battle_of_Salem_Church,,,,
+ont_6_politician_test_68,MISSING,,"(Battle_of_Salem_Church, isPartOfMilitaryConflict, American_Civil_War)",Battle_of_Salem_Church,isPartOfMilitaryConflict,American_Civil_War,,,,
+ont_6_politician_test_68,MISSING,,"(American_Civil_War, commander, Abraham_Lincoln)",American_Civil_War,commander,Abraham_Lincoln,,,,
+ont_6_politician_test_68,EXTRA,,,,,,"(Abraham_Lincoln, office, Commander)",Abraham_Lincoln,office,Commander
+ont_6_politician_test_69,MISSING,,"(American_Civil_War, commander, Jefferson_Davis)",American_Civil_War,commander,Jefferson_Davis,,,,
+ont_6_politician_test_69,MISSING,,"(Alfred_Moore_Scales, battle, Battle_of_Fredericksburg)",Alfred_Moore_Scales,battle,Battle_of_Fredericksburg,,,,
+ont_6_politician_test_69,MISSING,,"(Battle_of_Fredericksburg, isPartOfMilitaryConflict, American_Civil_War)",Battle_of_Fredericksburg,isPartOfMilitaryConflict,American_Civil_War,,,,
+ont_6_politician_test_69,EXTRA,,,,,,"(Jefferson_Davis, profession, commander)",Jefferson_Davis,profession,commander
+ont_6_politician_test_7,EXACT,1.00,"(Ab_Klink, almaMater, Erasmus_University_Rotterdam)",Ab_Klink,almaMater,Erasmus_University_Rotterdam,"(Ab_Klink, almaMater, Erasmus_University_Rotterdam)",Ab_Klink,almaMater,Erasmus_University_Rotterdam
+ont_6_politician_test_7,MISSING,,"(Ab_Klink, office, Ministry_of_Health,_Welfare_and_Sport_(Netherlands))",Ab_Klink,office,"Ministry_of_Health,_Welfare_and_Sport_(Netherlands)",,,,
+ont_6_politician_test_7,MISSING,,"(Erasmus_University_Rotterdam, affiliation, Association_of_MBAs)",Erasmus_University_Rotterdam,affiliation,Association_of_MBAs,,,,
+ont_6_politician_test_7,EXTRA,,,,,,"(Ab_Klink, country, Netherlands)",Ab_Klink,country,Netherlands
+ont_6_politician_test_70,MISSING,,"(American_Civil_War, commander, Jefferson_Davis)",American_Civil_War,commander,Jefferson_Davis,,,,
+ont_6_politician_test_70,MISSING,,"(Alfred_Moore_Scales, battle, Siege_of_Petersburg)",Alfred_Moore_Scales,battle,Siege_of_Petersburg,,,,
+ont_6_politician_test_70,MISSING,,"(Siege_of_Petersburg, isPartOfMilitaryConflict, American_Civil_War)",Siege_of_Petersburg,isPartOfMilitaryConflict,American_Civil_War,,,,
+ont_6_politician_test_70,EXTRA,,,,,,"(Jefferson_Davis, commander, Commander)",Jefferson_Davis,commander,Commander
+ont_6_politician_test_71,SEMANTIC,0.99,"(Aaron_S._Daggett, battle, Battle_of_Antietam)",Aaron_S._Daggett,battle,Battle_of_Antietam,"(Aaron_Daggett, battle, Battle_of_Antietam)",Aaron_Daggett,battle,Battle_of_Antietam
+ont_6_politician_test_71,MISSING,,"(American_Civil_War, commander, Jefferson_Davis)",American_Civil_War,commander,Jefferson_Davis,,,,
+ont_6_politician_test_71,MISSING,,"(Battle_of_Antietam, isPartOfMilitaryConflict, American_Civil_War)",Battle_of_Antietam,isPartOfMilitaryConflict,American_Civil_War,,,,
+ont_6_politician_test_71,EXTRA,,,,,,"(Jefferson_Davis, office, Commander)",Jefferson_Davis,office,Commander
+ont_6_politician_test_72,MISSING,,"(American_Civil_War, commander, Jefferson_Davis)",American_Civil_War,commander,Jefferson_Davis,,,,
+ont_6_politician_test_72,MISSING,,"(Aaron_S._Daggett, battle, Battle_of_Salem_Church)",Aaron_S._Daggett,battle,Battle_of_Salem_Church,,,,
+ont_6_politician_test_72,MISSING,,"(Battle_of_Salem_Church, isPartOfMilitaryConflict, American_Civil_War)",Battle_of_Salem_Church,isPartOfMilitaryConflict,American_Civil_War,,,,
+ont_6_politician_test_72,EXTRA,,,,,,"(Jefferson_Davis, office, Commander)",Jefferson_Davis,office,Commander
+ont_6_politician_test_73,EXACT,1.00,"(Battle_of_Antietam, isPartOfMilitaryConflict, American_Civil_War)",Battle_of_Antietam,isPartOfMilitaryConflict,American_Civil_War,"(Battle_of_Antietam, isPartOfMilitaryConflict, American_Civil_War)",Battle_of_Antietam,isPartOfMilitaryConflict,American_Civil_War
+ont_6_politician_test_73,SEMANTIC,0.99,"(Aaron_S._Daggett, battle, Battle_of_Antietam)",Aaron_S._Daggett,battle,Battle_of_Antietam,"(Aaron_Daggett, battle, Battle_of_Antietam)",Aaron_Daggett,battle,Battle_of_Antietam
+ont_6_politician_test_73,MISSING,,"(American_Civil_War, commander, Robert_E._Lee)",American_Civil_War,commander,Robert_E._Lee,,,,
+ont_6_politician_test_73,EXTRA,,,,,,"(Robert_E._Lee, profession, Commander)",Robert_E._Lee,profession,Commander
+ont_6_politician_test_74,MISSING,,"(American_Civil_War, commander, Robert_E._Lee)",American_Civil_War,commander,Robert_E._Lee,,,,
+ont_6_politician_test_74,MISSING,,"(Aaron_S._Daggett, battle, Battle_of_Salem_Church)",Aaron_S._Daggett,battle,Battle_of_Salem_Church,,,,
+ont_6_politician_test_74,MISSING,,"(Battle_of_Salem_Church, isPartOfMilitaryConflict, American_Civil_War)",Battle_of_Salem_Church,isPartOfMilitaryConflict,American_Civil_War,,,,
+ont_6_politician_test_74,EXTRA,,,,,,"(Robert_E._Lee, commander, Commander)",Robert_E._Lee,commander,Commander
+ont_6_politician_test_75,MISSING,,"(Battle_of_Chancellorsville, isPartOfMilitaryConflict, American_Civil_War)",Battle_of_Chancellorsville,isPartOfMilitaryConflict,American_Civil_War,,,,
+ont_6_politician_test_75,MISSING,,"(Alfred_Moore_Scales, battle, Battle_of_Chancellorsville)",Alfred_Moore_Scales,battle,Battle_of_Chancellorsville,,,,
+ont_6_politician_test_75,MISSING,,"(American_Civil_War, commander, Abraham_Lincoln)",American_Civil_War,commander,Abraham_Lincoln,,,,
+ont_6_politician_test_75,EXTRA,,,,,,"(Abraham_Lincoln, profession, Commander)",Abraham_Lincoln,profession,Commander
+ont_6_politician_test_76,MISSING,,"(American_Civil_War, commander, Jefferson_Davis)",American_Civil_War,commander,Jefferson_Davis,,,,
+ont_6_politician_test_76,MISSING,,"(Battle_of_Chancellorsville, isPartOfMilitaryConflict, American_Civil_War)",Battle_of_Chancellorsville,isPartOfMilitaryConflict,American_Civil_War,,,,
+ont_6_politician_test_76,MISSING,,"(Alfred_Moore_Scales, battle, Battle_of_Chancellorsville)",Alfred_Moore_Scales,battle,Battle_of_Chancellorsville,,,,
+ont_6_politician_test_76,EXTRA,,,,,,"(Jefferson_Davis, profession, Commander)",Jefferson_Davis,profession,Commander
+ont_6_politician_test_77,MISSING,,"(Aaron_S._Daggett, battle, Battle_of_Cold_Harbor)",Aaron_S._Daggett,battle,Battle_of_Cold_Harbor,,,,
+ont_6_politician_test_77,MISSING,,"(Battle_of_Cold_Harbor, isPartOfMilitaryConflict, American_Civil_War)",Battle_of_Cold_Harbor,isPartOfMilitaryConflict,American_Civil_War,,,,
+ont_6_politician_test_77,MISSING,,"(American_Civil_War, commander, Abraham_Lincoln)",American_Civil_War,commander,Abraham_Lincoln,,,,
+ont_6_politician_test_77,EXTRA,,,,,,"(Abraham_Lincoln, commander, Commander)",Abraham_Lincoln,commander,Commander
+ont_6_politician_test_78,MISSING,,"(American_Civil_War, commander, Jefferson_Davis)",American_Civil_War,commander,Jefferson_Davis,,,,
+ont_6_politician_test_78,MISSING,,"(Aaron_S._Daggett, battle, Battle_of_Cold_Harbor)",Aaron_S._Daggett,battle,Battle_of_Cold_Harbor,,,,
+ont_6_politician_test_78,MISSING,,"(Battle_of_Cold_Harbor, isPartOfMilitaryConflict, American_Civil_War)",Battle_of_Cold_Harbor,isPartOfMilitaryConflict,American_Civil_War,,,,
+ont_6_politician_test_79,MISSING,,"(Battle_of_Fredericksburg, isPartOfMilitaryConflict, American_Civil_War)",Battle_of_Fredericksburg,isPartOfMilitaryConflict,American_Civil_War,,,,
+ont_6_politician_test_79,MISSING,,"(Aaron_S._Daggett, battle, Battle_of_Fredericksburg)",Aaron_S._Daggett,battle,Battle_of_Fredericksburg,,,,
+ont_6_politician_test_79,MISSING,,"(American_Civil_War, commander, Abraham_Lincoln)",American_Civil_War,commander,Abraham_Lincoln,,,,
+ont_6_politician_test_79,EXTRA,,,,,,"(Abraham_Lincoln, commander, Commander)",Abraham_Lincoln,commander,Commander
+ont_6_politician_test_8,MISSING,,"(Erasmus_University_Rotterdam, affiliation, Association_of_MBAs)",Erasmus_University_Rotterdam,affiliation,Association_of_MBAs,,,,
+ont_6_politician_test_8,MISSING,,"(Ab_Klink, almaMater, Erasmus_University_Rotterdam)",Ab_Klink,almaMater,Erasmus_University_Rotterdam,,,,
+ont_6_politician_test_8,MISSING,,"(Ab_Klink, office, Senate_(Netherlands))",Ab_Klink,office,Senate_(Netherlands),,,,
+ont_6_politician_test_8,EXTRA,,,,,,"(Ab_Klink, office, Roman_Senate)",Ab_Klink,office,Roman_Senate
+ont_6_politician_test_8,EXTRA,,,,,,"(Ab_Klink, birthPlace, Netherlands)",Ab_Klink,birthPlace,Netherlands
+ont_6_politician_test_80,MISSING,,"(Battle_of_Fredericksburg, isPartOfMilitaryConflict, American_Civil_War)",Battle_of_Fredericksburg,isPartOfMilitaryConflict,American_Civil_War,,,,
+ont_6_politician_test_80,MISSING,,"(Aaron_S._Daggett, battle, Battle_of_Fredericksburg)",Aaron_S._Daggett,battle,Battle_of_Fredericksburg,,,,
+ont_6_politician_test_80,MISSING,,"(American_Civil_War, commander, Jefferson_Davis)",American_Civil_War,commander,Jefferson_Davis,,,,
+ont_6_politician_test_81,MISSING,,"(Aaron_S._Daggett, battle, Battle_of_Gettysburg)",Aaron_S._Daggett,battle,Battle_of_Gettysburg,,,,
+ont_6_politician_test_81,MISSING,,"(Battle_of_Gettysburg, isPartOfMilitaryConflict, American_Civil_War)",Battle_of_Gettysburg,isPartOfMilitaryConflict,American_Civil_War,,,,
+ont_6_politician_test_81,MISSING,,"(American_Civil_War, commander, Abraham_Lincoln)",American_Civil_War,commander,Abraham_Lincoln,,,,
+ont_6_politician_test_82,MISSING,,"(American_Civil_War, commander, Jefferson_Davis)",American_Civil_War,commander,Jefferson_Davis,,,,
+ont_6_politician_test_82,MISSING,,"(Aaron_S._Daggett, battle, Battle_of_Gettysburg)",Aaron_S._Daggett,battle,Battle_of_Gettysburg,,,,
+ont_6_politician_test_82,MISSING,,"(Battle_of_Gettysburg, isPartOfMilitaryConflict, American_Civil_War)",Battle_of_Gettysburg,isPartOfMilitaryConflict,American_Civil_War,,,,
+ont_6_politician_test_82,EXTRA,,,,,,"(Jefferson_Davis, office, Commander)",Jefferson_Davis,office,Commander
+ont_6_politician_test_83,MISSING,,"(American_Civil_War, commander, Robert_E._Lee)",American_Civil_War,commander,Robert_E._Lee,,,,
+ont_6_politician_test_83,MISSING,,"(Aaron_S._Daggett, battle, Battle_of_Gettysburg)",Aaron_S._Daggett,battle,Battle_of_Gettysburg,,,,
+ont_6_politician_test_83,MISSING,,"(Battle_of_Gettysburg, isPartOfMilitaryConflict, American_Civil_War)",Battle_of_Gettysburg,isPartOfMilitaryConflict,American_Civil_War,,,,
+ont_6_politician_test_84,MISSING,,"(Aaron_S._Daggett, battle, Battle_of_Salem_Church)",Aaron_S._Daggett,battle,Battle_of_Salem_Church,,,,
+ont_6_politician_test_84,MISSING,,"(Battle_of_Salem_Church, isPartOfMilitaryConflict, American_Civil_War)",Battle_of_Salem_Church,isPartOfMilitaryConflict,American_Civil_War,,,,
+ont_6_politician_test_84,MISSING,,"(Battle_of_Salem_Church, commander, Robert_E._Lee)",Battle_of_Salem_Church,commander,Robert_E._Lee,,,,
+ont_6_politician_test_84,EXTRA,,,,,,"(Robert_E._Lee, profession, Commander)",Robert_E._Lee,profession,Commander
+ont_6_politician_test_85,EXACT,1.00,"(Netherlands, currency, Euro)",Netherlands,currency,Euro,"(Netherlands, currency, Euro)",Netherlands,currency,Euro
+ont_6_politician_test_85,EXACT,1.00,"(Ab_Klink, nationality, Netherlands)",Ab_Klink,nationality,Netherlands,"(Ab_Klink, nationality, Netherlands)",Ab_Klink,nationality,Netherlands
+ont_6_politician_test_85,MISSING,,"(Netherlands, leader, Mark_Rutte)",Netherlands,leader,Mark_Rutte,,,,
+ont_6_politician_test_86,EXACT,1.00,"(Netherlands, currency, Euro)",Netherlands,currency,Euro,"(Netherlands, currency, Euro)",Netherlands,currency,Euro
+ont_6_politician_test_86,EXACT,1.00,"(Ab_Klink, birthPlace, Netherlands)",Ab_Klink,birthPlace,Netherlands,"(Ab_Klink, birthPlace, Netherlands)",Ab_Klink,birthPlace,Netherlands
+ont_6_politician_test_86,MISSING,,"(Netherlands, leader, Mark_Rutte)",Netherlands,leader,Mark_Rutte,,,,
+ont_6_politician_test_87,MISSING,,"(Abraham_A._Ribicoff, birthPlace, Connecticut)",Abraham_A._Ribicoff,birthPlace,Connecticut,,,,
+ont_6_politician_test_87,MISSING,,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,,,,
+ont_6_politician_test_87,MISSING,,"(Abraham_A._Ribicoff, nationality, United_States)",Abraham_A._Ribicoff,nationality,United_States,,,,
+ont_6_politician_test_88,MISSING,,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,,,,
+ont_6_politician_test_88,MISSING,,"(Abraham_A._Ribicoff, birthPlace, New_Britain,_Connecticut)",Abraham_A._Ribicoff,birthPlace,"New_Britain,_Connecticut",,,,
+ont_6_politician_test_88,MISSING,,"(Abraham_A._Ribicoff, nationality, United_States)",Abraham_A._Ribicoff,nationality,United_States,,,,
+ont_6_politician_test_89,SEMANTIC,0.99,"(Abraham_A._Ribicoff, birthPlace, United_States)",Abraham_A._Ribicoff,birthPlace,United_States,"(Abraham_Ribicoff, birthPlace, United_States)",Abraham_Ribicoff,birthPlace,United_States
+ont_6_politician_test_89,MISSING,,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,,,,
+ont_6_politician_test_89,MISSING,,"(Abraham_A._Ribicoff, spouse, Ruth Ribicoff)",Abraham_A._Ribicoff,spouse,Ruth Ribicoff,,,,
+ont_6_politician_test_9,EXACT,1.00,"(Ab_Klink, almaMater, Erasmus_University_Rotterdam)",Ab_Klink,almaMater,Erasmus_University_Rotterdam,"(Ab_Klink, almaMater, Erasmus_University_Rotterdam)",Ab_Klink,almaMater,Erasmus_University_Rotterdam
+ont_6_politician_test_9,EXACT,1.00,"(Ab_Klink, party, Christian_Democratic_Appeal)",Ab_Klink,party,Christian_Democratic_Appeal,"(Ab_Klink, party, Christian_Democratic_Appeal)",Ab_Klink,party,Christian_Democratic_Appeal
+ont_6_politician_test_9,MISSING,,"(Erasmus_University_Rotterdam, affiliation, Association_of_MBAs)",Erasmus_University_Rotterdam,affiliation,Association_of_MBAs,,,,
+ont_6_politician_test_90,MISSING,,"(Abraham_A._Ribicoff, nationality, American)",Abraham_A._Ribicoff,nationality,American,,,,
+ont_6_politician_test_90,MISSING,,"(Abraham_A._Ribicoff, birthPlace, United_States)",Abraham_A._Ribicoff,birthPlace,United_States,,,,
+ont_6_politician_test_90,MISSING,,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,,,,
+ont_6_politician_test_91,EXACT,1.00,"(Airey_Neave, battle, World_War_II)",Airey_Neave,battle,World_War_II,"(Airey_Neave, battle, World_War_II)",Airey_Neave,battle,World_War_II
+ont_6_politician_test_91,MISSING,,"(World_War_II, place, East_African_Campaign_(World_War_II))",World_War_II,place,East_African_Campaign_(World_War_II),,,,
+ont_6_politician_test_91,MISSING,,"(World_War_II, commander, Benito_Mussolini)",World_War_II,commander,Benito_Mussolini,,,,
+ont_6_politician_test_91,EXTRA,,,,,,"(East_African_campaign_(World_War_II), isPartOfMilitaryConflict, World_War_II)",East_African_campaign_(World_War_II),isPartOfMilitaryConflict,World_War_II
+ont_6_politician_test_91,EXTRA,,,,,,"(Airey_Neave, commander, Benito_Mussolini)",Airey_Neave,commander,Benito_Mussolini
+ont_6_politician_test_92,EXACT,1.00,"(Airey_Neave, battle, World_War_II)",Airey_Neave,battle,World_War_II,"(Airey_Neave, battle, World_War_II)",Airey_Neave,battle,World_War_II
+ont_6_politician_test_92,MISSING,,"(World_War_II, place, South-East_Asian_theatre_of_World_War_II)",World_War_II,place,South-East_Asian_theatre_of_World_War_II,,,,
+ont_6_politician_test_92,MISSING,,"(World_War_II, commander, Benito_Mussolini)",World_War_II,commander,Benito_Mussolini,,,,
+ont_6_politician_test_93,MISSING,,"(World_War_II, place, South-East_Asian_theatre_of_World_War_II)",World_War_II,place,South-East_Asian_theatre_of_World_War_II,,,,
+ont_6_politician_test_93,MISSING,,"(Airey_Neave, battle, World_War_II)",Airey_Neave,battle,World_War_II,,,,
+ont_6_politician_test_93,MISSING,,"(World_War_II, commander, Franklin_D._Roosevelt)",World_War_II,commander,Franklin_D._Roosevelt,,,,
+ont_6_politician_test_93,EXTRA,,,,,,"(Franklin_D._Roosevelt, profession, Commander)",Franklin_D._Roosevelt,profession,Commander
+ont_6_politician_test_94,SEMANTIC,0.97,"(Abraham_A._Ribicoff, birthPlace, United_States)",Abraham_A._Ribicoff,birthPlace,United_States,"(Abraham_Ribicoff, nationality, United_States)",Abraham_Ribicoff,nationality,United_States
+ont_6_politician_test_94,MISSING,,"(Abraham_A._Ribicoff, deathPlace, United_States)",Abraham_A._Ribicoff,deathPlace,United_States,,,,
+ont_6_politician_test_94,MISSING,,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,,,,
+ont_6_politician_test_94,EXTRA,,,,,,"(Abraham_Ribicoff, country, United_States)",Abraham_Ribicoff,country,United_States
+ont_6_politician_test_95,SEMANTIC,0.99,"(Abraham_A._Ribicoff, deathPlace, United_States)",Abraham_A._Ribicoff,deathPlace,United_States,"(Abraham_Ribicoff, deathPlace, United_States)",Abraham_Ribicoff,deathPlace,United_States
+ont_6_politician_test_95,SEMANTIC,0.99,"(Abraham_A._Ribicoff, spouse, Casey_Ribicoff)",Abraham_A._Ribicoff,spouse,Casey_Ribicoff,"(Abraham_Ribicoff, spouse, Casey_Ribicoff)",Abraham_Ribicoff,spouse,Casey_Ribicoff
+ont_6_politician_test_95,MISSING,,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,,,,
+ont_6_politician_test_96,SEMANTIC,0.98,"(Abraham_A._Ribicoff, nationality, American)",Abraham_A._Ribicoff,nationality,American,"(Abraham_Ribicoff, nationality, United_States)",Abraham_Ribicoff,nationality,United_States
+ont_6_politician_test_96,SEMANTIC,0.95,"(Abraham_A._Ribicoff, spouse, Casey_Ribicoff)",Abraham_A._Ribicoff,spouse,Casey_Ribicoff,"(Casey_Ribicoff, spouse, Abraham_Ribicoff)",Casey_Ribicoff,spouse,Abraham_Ribicoff
+ont_6_politician_test_97,SEMANTIC,0.99,"(Abraham_A._Ribicoff, birthPlace, Connecticut)",Abraham_A._Ribicoff,birthPlace,Connecticut,"(Abraham_Ribicoff, birthPlace, Connecticut)",Abraham_Ribicoff,birthPlace,Connecticut
+ont_6_politician_test_97,SEMANTIC,0.98,"(Abraham_A._Ribicoff, nationality, American)",Abraham_A._Ribicoff,nationality,American,"(Abraham_Ribicoff, nationality, United_States)",Abraham_Ribicoff,nationality,United_States
+ont_6_politician_test_97,SEMANTIC,0.99,"(Abraham_A._Ribicoff, party, Democratic_Party_(United_States))",Abraham_A._Ribicoff,party,Democratic_Party_(United_States),"(Abraham_Ribicoff, party, Democratic_Party_(United_States))",Abraham_Ribicoff,party,Democratic_Party_(United_States)
+ont_6_politician_test_97,MISSING,,"(Abraham_A._Ribicoff, spouse, Ruth Ribicoff)",Abraham_A._Ribicoff,spouse,Ruth Ribicoff,,,,
+ont_6_politician_test_97,MISSING,,"(Abraham_A._Ribicoff, inOfficeWhilePresident, John_F._Kennedy)",Abraham_A._Ribicoff,inOfficeWhilePresident,John_F._Kennedy,,,,
+ont_6_politician_test_97,EXTRA,,,,,,"(Abraham_Ribicoff, commander, John_F._Kennedy)",Abraham_Ribicoff,commander,John_F._Kennedy
+ont_6_politician_test_98,SEMANTIC,0.99,"(Abraham_A._Ribicoff, birthPlace, Connecticut)",Abraham_A._Ribicoff,birthPlace,Connecticut,"(Abraham_Ribicoff, birthPlace, Connecticut)",Abraham_Ribicoff,birthPlace,Connecticut
+ont_6_politician_test_98,SEMANTIC,0.98,"(Abraham_A._Ribicoff, nationality, American)",Abraham_A._Ribicoff,nationality,American,"(Abraham_Ribicoff, nationality, United_States)",Abraham_Ribicoff,nationality,United_States
+ont_6_politician_test_98,SEMANTIC,0.98,"(Abraham_A._Ribicoff, successor, John_N._Dempsey)",Abraham_A._Ribicoff,successor,John_N._Dempsey,"(John_N._Dempsey, successor, Abraham_Ribicoff)",John_N._Dempsey,successor,Abraham_Ribicoff
+ont_6_politician_test_98,MISSING,,"(Abraham_A._Ribicoff, spouse, Ruth Ribicoff)",Abraham_A._Ribicoff,spouse,Ruth Ribicoff,,,,
+ont_6_politician_test_98,MISSING,,"(Abraham_A._Ribicoff, inOfficeWhilePresident, John_F._Kennedy)",Abraham_A._Ribicoff,inOfficeWhilePresident,John_F._Kennedy,,,,
+ont_6_politician_test_98,EXTRA,,,,,,"(Abraham_Ribicoff, commander, John_F._Kennedy)",Abraham_Ribicoff,commander,John_F._Kennedy
+ont_6_politician_test_99,SEMANTIC,0.95,"(Abraham_A._Ribicoff, deathPlace, United_States)",Abraham_A._Ribicoff,deathPlace,United_States,"(Abraham_Ribicoff, birthPlace, United_States)",Abraham_Ribicoff,birthPlace,United_States
+ont_6_politician_test_99,SEMANTIC,0.99,"(Abraham_A._Ribicoff, spouse, Casey_Ribicoff)",Abraham_A._Ribicoff,spouse,Casey_Ribicoff,"(Abraham_Ribicoff, spouse, Casey_Ribicoff)",Abraham_Ribicoff,spouse,Casey_Ribicoff
+ont_6_politician_test_99,SEMANTIC,0.99,"(Abraham_A._Ribicoff, birthPlace, United_States)",Abraham_A._Ribicoff,birthPlace,United_States,"(Abraham_Ribicoff, birthPlace, United_States)",Abraham_Ribicoff,birthPlace,United_States
+ont_6_politician_test_99,EXTRA,,,,,,"(Abraham_Ribicoff, country, United_States)",Abraham_Ribicoff,country,United_States

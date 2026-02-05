@@ -1,0 +1,460 @@
+sent_id,match_type,similarity,expected,expected_sub,expected_rel,expected_obj,predicted,predicted_sub,predicted_rel,predicted_obj
+ont_18_scientist_test_1,EXACT,1.00,"(Darlington, areaCode, 01325)",Darlington,areaCode,01325,"(Darlington, areaCode, 01325)",Darlington,areaCode,01325
+ont_18_scientist_test_10,EXACT,1.00,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington
+ont_18_scientist_test_10,EXACT,1.00,"(Lady_Anne_Monson, deathDate, 1776-02-18)",Lady_Anne_Monson,deathDate,1776-02-18,"(Lady_Anne_Monson, deathDate, 1776-02-18)",Lady_Anne_Monson,deathDate,1776-02-18
+ont_18_scientist_test_100,EXACT,1.00,"(Lady_Anne_Monson, residence, India)",Lady_Anne_Monson,residence,India,"(Lady_Anne_Monson, residence, India)",Lady_Anne_Monson,residence,India
+ont_18_scientist_test_100,EXACT,1.00,"(Lady_Anne_Monson, deathDate, 1776-02-18)",Lady_Anne_Monson,deathDate,1776-02-18,"(Lady_Anne_Monson, deathDate, 1776-02-18)",Lady_Anne_Monson,deathDate,1776-02-18
+ont_18_scientist_test_100,MISSING,,"(Lady_Anne_Monson, nationality, Kingdom_of_England)",Lady_Anne_Monson,nationality,Kingdom_of_England,,,,
+ont_18_scientist_test_101,SEMANTIC,0.98,"(Brandon_Carter, doctoralAdvisor, Dennis_William_Sciama)",Brandon_Carter,doctoralAdvisor,Dennis_William_Sciama,"(Dennis_W._Sciama, doctoralAdvisor, Brandon_Carter)",Dennis_W._Sciama,doctoralAdvisor,Brandon_Carter
+ont_18_scientist_test_101,MISSING,,"(Brandon_Carter, knownFor, Carter_constant)",Brandon_Carter,knownFor,Carter_constant,,,,
+ont_18_scientist_test_101,EXTRA,,,,,,"(Brandon_Carter, knownFor, the carter constant)",Brandon_Carter,knownFor,the carter constant
+ont_18_scientist_test_102,EXACT,1.00,"(Darinka_Dentcheva, citizenship, United_States)",Darinka_Dentcheva,citizenship,United_States,"(Darinka_Dentcheva, citizenship, United_States)",Darinka_Dentcheva,citizenship,United_States
+ont_18_scientist_test_102,EXACT,1.00,"(Darinka_Dentcheva, birthDate, 1958-01-01)",Darinka_Dentcheva,birthDate,1958-01-01,"(Darinka_Dentcheva, birthDate, 1958-01-01)",Darinka_Dentcheva,birthDate,1958-01-01
+ont_18_scientist_test_102,SEMANTIC,0.96,"(Darinka_Dentcheva, professionalField, Mathematical_optimization)",Darinka_Dentcheva,professionalField,Mathematical_optimization,"(Darinka_Dentcheva, type, Mathematical_optimization)",Darinka_Dentcheva,type,Mathematical_optimization
+ont_18_scientist_test_103,EXACT,1.00,"(Darinka_Dentcheva, citizenship, United_States)",Darinka_Dentcheva,citizenship,United_States,"(Darinka_Dentcheva, citizenship, United_States)",Darinka_Dentcheva,citizenship,United_States
+ont_18_scientist_test_103,SEMANTIC,0.96,"(Darinka_Dentcheva, professionalField, Mathematical_optimization)",Darinka_Dentcheva,professionalField,Mathematical_optimization,"(Darinka_Dentcheva, type, Mathematical_optimization)",Darinka_Dentcheva,type,Mathematical_optimization
+ont_18_scientist_test_103,SEMANTIC,0.97,"(Darinka_Dentcheva, birthDate, 1958-01-01)",Darinka_Dentcheva,birthDate,1958-01-01,"(Darinka_Dentcheva, birthDate, 1989-01-01)",Darinka_Dentcheva,birthDate,1989-01-01
+ont_18_scientist_test_103,MISSING,,"(Darinka_Dentcheva, influencedBy, Andrzej_Piotr_Ruszczyński)",Darinka_Dentcheva,influencedBy,Andrzej_Piotr_Ruszczyński,,,,
+ont_18_scientist_test_104,EXACT,1.00,"(Brandon_Carter, birthPlace, England)",Brandon_Carter,birthPlace,England,"(Brandon_Carter, birthPlace, England)",Brandon_Carter,birthPlace,England
+ont_18_scientist_test_104,MISSING,,"(University_of_Cambridge, viceChancellor, Leszek_Borysiewicz)",University_of_Cambridge,viceChancellor,Leszek_Borysiewicz,,,,
+ont_18_scientist_test_104,MISSING,,"(University_of_Cambridge, chancellor, David_Sainsbury,_Baron_Sainsbury_of_Turville)",University_of_Cambridge,chancellor,"David_Sainsbury,_Baron_Sainsbury_of_Turville",,,,
+ont_18_scientist_test_104,MISSING,,"(Brandon_Carter, almaMater, University_of_Cambridge)",Brandon_Carter,almaMater,University_of_Cambridge,,,,
+ont_18_scientist_test_105,EXACT,1.00,"(Brandon_Carter, birthPlace, England)",Brandon_Carter,birthPlace,England,"(Brandon_Carter, birthPlace, England)",Brandon_Carter,birthPlace,England
+ont_18_scientist_test_105,EXACT,1.00,"(Brandon_Carter, knownFor, Doomsday_argument)",Brandon_Carter,knownFor,Doomsday_argument,"(Brandon_Carter, knownFor, doomsday argument)",Brandon_Carter,knownFor,doomsday argument
+ont_18_scientist_test_105,EXACT,1.00,"(Brandon_Carter, birthDate, 1942-01-01)",Brandon_Carter,birthDate,1942-01-01,"(Brandon_Carter, birthDate, 1942-01-01)",Brandon_Carter,birthDate,1942-01-01
+ont_18_scientist_test_105,SEMANTIC,0.99,"(Brandon_Carter, doctoralAdvisor, Dennis_William_Sciama)",Brandon_Carter,doctoralAdvisor,Dennis_William_Sciama,"(Brandon_Carter, doctoralAdvisor, Dennis_W._Sciama)",Brandon_Carter,doctoralAdvisor,Dennis_W._Sciama
+ont_18_scientist_test_105,MISSING,,"(Brandon_Carter, almaMater, University_of_Cambridge)",Brandon_Carter,almaMater,University_of_Cambridge,,,,
+ont_18_scientist_test_106,EXACT,1.00,"(Brandon_Carter, birthPlace, England)",Brandon_Carter,birthPlace,England,"(Brandon_Carter, birthPlace, England)",Brandon_Carter,birthPlace,England
+ont_18_scientist_test_106,EXACT,1.00,"(Brandon_Carter, birthDate, 1942-01-01)",Brandon_Carter,birthDate,1942-01-01,"(Brandon_Carter, birthDate, 1942-01-01)",Brandon_Carter,birthDate,1942-01-01
+ont_18_scientist_test_106,SEMANTIC,0.96,"(Brandon_Carter, knownFor, No-hair_theorem)",Brandon_Carter,knownFor,No-hair_theorem,"(Brandon_Carter, knownFor, contributions to the no-hair theorem)",Brandon_Carter,knownFor,contributions to the no-hair theorem
+ont_18_scientist_test_107,EXACT,1.00,"(Brandon_Carter, birthDate, 1942-01-01)",Brandon_Carter,birthDate,1942-01-01,"(Brandon_Carter, birthDate, 1942-01-01)",Brandon_Carter,birthDate,1942-01-01
+ont_18_scientist_test_107,MISSING,,"(Brandon_Carter, almaMater, University_of_Cambridge)",Brandon_Carter,almaMater,University_of_Cambridge,,,,
+ont_18_scientist_test_108,EXACT,1.00,"(Brandon_Carter, birthPlace, England)",Brandon_Carter,birthPlace,England,"(Brandon_Carter, birthPlace, England)",Brandon_Carter,birthPlace,England
+ont_18_scientist_test_108,EXACT,1.00,"(Brandon_Carter, knownFor, No-hair_theorem)",Brandon_Carter,knownFor,No-hair_theorem,"(Brandon_Carter, knownFor, no-hair theorem)",Brandon_Carter,knownFor,no-hair theorem
+ont_18_scientist_test_108,EXACT,1.00,"(Brandon_Carter, knownFor, Carter_constant)",Brandon_Carter,knownFor,Carter_constant,"(Brandon_Carter, knownFor, carter constant)",Brandon_Carter,knownFor,carter constant
+ont_18_scientist_test_108,SEMANTIC,0.98,"(Brandon_Carter, doctoralAdvisor, Dennis_William_Sciama)",Brandon_Carter,doctoralAdvisor,Dennis_William_Sciama,"(Dennis_W._Sciama, doctoralAdvisor, Brandon_Carter)",Dennis_W._Sciama,doctoralAdvisor,Brandon_Carter
+ont_18_scientist_test_108,MISSING,,"(Brandon_Carter, professionalField, General_relativity)",Brandon_Carter,professionalField,General_relativity,,,,
+ont_18_scientist_test_108,EXTRA,,,,,,"(Brandon_Carter, type, General_relativity)",Brandon_Carter,type,General_relativity
+ont_18_scientist_test_109,SEMANTIC,0.94,"(Lady_Anne_Monson, professionalField, Botany)",Lady_Anne_Monson,professionalField,Botany,"(Lady_Anne_Monson, type, Botany)",Lady_Anne_Monson,type,Botany
+ont_18_scientist_test_11,EXACT,1.00,"(Lady_Anne_Monson, residence, India)",Lady_Anne_Monson,residence,India,"(Lady_Anne_Monson, residence, India)",Lady_Anne_Monson,residence,India
+ont_18_scientist_test_11,EXACT,1.00,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington
+ont_18_scientist_test_11,EXACT,1.00,"(India, foundingDate, 1950-01-26)",India,foundingDate,1950-01-26,"(India, foundingDate, 1950-01-26)",India,foundingDate,1950-01-26
+ont_18_scientist_test_11,EXACT,1.00,"(India, leaderTitle, President)",India,leaderTitle,President,"(India, leaderTitle, president)",India,leaderTitle,president
+ont_18_scientist_test_110,EXACT,1.00,"(Darinka_Dentcheva, knownFor, Stochastic_programming)",Darinka_Dentcheva,knownFor,Stochastic_programming,"(Darinka_Dentcheva, knownFor, stochastic programming)",Darinka_Dentcheva,knownFor,stochastic programming
+ont_18_scientist_test_110,EXACT,1.00,"(Darinka_Dentcheva, birthDate, 1958-01-01)",Darinka_Dentcheva,birthDate,1958-01-01,"(Darinka_Dentcheva, birthDate, 1958-01-01)",Darinka_Dentcheva,birthDate,1958-01-01
+ont_18_scientist_test_110,SEMANTIC,0.95,"(Darinka_Dentcheva, professionalField, Mathematical_optimization)",Darinka_Dentcheva,professionalField,Mathematical_optimization,"(Darinka_Dentcheva, type, mathematical optimization)",Darinka_Dentcheva,type,mathematical optimization
+ont_18_scientist_test_110,MISSING,,"(Darinka_Dentcheva, almaMater, Humboldt_University)",Darinka_Dentcheva,almaMater,Humboldt_University,,,,
+ont_18_scientist_test_110,EXTRA,,,,,,"(Darinka_Dentcheva, affiliation, Humboldt_University_of_Berlin)",Darinka_Dentcheva,affiliation,Humboldt_University_of_Berlin
+ont_18_scientist_test_111,MISSING,,"(United_States, motto, In God we trust)",United_States,motto,In God we trust,,,,
+ont_18_scientist_test_112,EXACT,1.00,"(Darinka_Dentcheva, birthDate, 1958-01-01)",Darinka_Dentcheva,birthDate,1958-01-01,"(Darinka_Dentcheva, birthDate, 1958-01-01)",Darinka_Dentcheva,birthDate,1958-01-01
+ont_18_scientist_test_113,EXACT,1.00,"(Darinka_Dentcheva, citizenship, United_States)",Darinka_Dentcheva,citizenship,United_States,"(Darinka_Dentcheva, citizenship, United_States)",Darinka_Dentcheva,citizenship,United_States
+ont_18_scientist_test_113,EXACT,1.00,"(Darinka_Dentcheva, birthDate, 1958-01-01)",Darinka_Dentcheva,birthDate,1958-01-01,"(Darinka_Dentcheva, birthDate, 1958-01-01)",Darinka_Dentcheva,birthDate,1958-01-01
+ont_18_scientist_test_113,MISSING,,"(United_States, areaTotal, 9833520000000.0)",United_States,areaTotal,9833520000000.0,,,,
+ont_18_scientist_test_113,MISSING,,"(Darinka_Dentcheva, influencedBy, Andrzej_Piotr_Ruszczyński)",Darinka_Dentcheva,influencedBy,Andrzej_Piotr_Ruszczyński,,,,
+ont_18_scientist_test_114,SEMANTIC,0.99,"(Darinka_Dentcheva, almaMater, Humboldt_University)",Darinka_Dentcheva,almaMater,Humboldt_University,"(Darinka_Dentcheva, almaMater, Humboldt_University_of_Berlin)",Darinka_Dentcheva,almaMater,Humboldt_University_of_Berlin
+ont_18_scientist_test_115,EXACT,1.00,"(Darinka_Dentcheva, residence, New_Jersey)",Darinka_Dentcheva,residence,New_Jersey,"(Darinka_Dentcheva, residence, New_Jersey)",Darinka_Dentcheva,residence,New_Jersey
+ont_18_scientist_test_115,SEMANTIC,0.99,"(Darinka_Dentcheva, almaMater, Humboldt_University)",Darinka_Dentcheva,almaMater,Humboldt_University,"(Darinka_Dentcheva, almaMater, Humboldt_University_of_Berlin)",Darinka_Dentcheva,almaMater,Humboldt_University_of_Berlin
+ont_18_scientist_test_115,MISSING,,"(Darinka_Dentcheva, residence, United_States)",Darinka_Dentcheva,residence,United_States,,,,
+ont_18_scientist_test_116,EXACT,1.00,"(Darinka_Dentcheva, influencedBy, Andrzej_Piotr_Ruszczyński)",Darinka_Dentcheva,influencedBy,Andrzej_Piotr_Ruszczyński,"(Darinka_Dentcheva, influencedBy, Andrzej_Piotr_Ruszczyński)",Darinka_Dentcheva,influencedBy,Andrzej_Piotr_Ruszczyński
+ont_18_scientist_test_116,SEMANTIC,0.96,"(Darinka_Dentcheva, professionalField, Mathematical_optimization)",Darinka_Dentcheva,professionalField,Mathematical_optimization,"(Darinka_Dentcheva, type, Mathematical_optimization)",Darinka_Dentcheva,type,Mathematical_optimization
+ont_18_scientist_test_117,MISSING,,"(India, longName, Republic of India)",India,longName,Republic of India,,,,
+ont_18_scientist_test_118,EXACT,1.00,"(Darinka_Dentcheva, residence, New_Jersey)",Darinka_Dentcheva,residence,New_Jersey,"(Darinka_Dentcheva, residence, New_Jersey)",Darinka_Dentcheva,residence,New_Jersey
+ont_18_scientist_test_118,EXACT,1.00,"(Darinka_Dentcheva, knownFor, Stochastic_programming)",Darinka_Dentcheva,knownFor,Stochastic_programming,"(Darinka_Dentcheva, knownFor, Stochastic_programming)",Darinka_Dentcheva,knownFor,Stochastic_programming
+ont_18_scientist_test_118,SEMANTIC,0.99,"(Darinka_Dentcheva, almaMater, Humboldt_University)",Darinka_Dentcheva,almaMater,Humboldt_University,"(Darinka_Dentcheva, almaMater, Humboldt_University_of_Berlin)",Darinka_Dentcheva,almaMater,Humboldt_University_of_Berlin
+ont_18_scientist_test_118,SEMANTIC,0.95,"(Darinka_Dentcheva, residence, United_States)",Darinka_Dentcheva,residence,United_States,"(Darinka_Dentcheva, birthPlace, Usa,_Ōita)",Darinka_Dentcheva,birthPlace,"Usa,_Ōita"
+ont_18_scientist_test_118,MISSING,,"(Darinka_Dentcheva, influencedBy, Andrzej_Piotr_Ruszczyński)",Darinka_Dentcheva,influencedBy,Andrzej_Piotr_Ruszczyński,,,,
+ont_18_scientist_test_119,SEMANTIC,0.96,"(Darinka_Dentcheva, professionalField, Mathematical_optimization)",Darinka_Dentcheva,professionalField,Mathematical_optimization,"(Darinka_Dentcheva, type, Mathematical_optimization)",Darinka_Dentcheva,type,Mathematical_optimization
+ont_18_scientist_test_119,MISSING,,"(Darinka_Dentcheva, knownFor, Stochastic_programming)",Darinka_Dentcheva,knownFor,Stochastic_programming,,,,
+ont_18_scientist_test_12,EXACT,1.00,"(Darinka_Dentcheva, residence, New_Jersey)",Darinka_Dentcheva,residence,New_Jersey,"(Darinka_Dentcheva, residence, New_Jersey)",Darinka_Dentcheva,residence,New_Jersey
+ont_18_scientist_test_12,EXACT,1.00,"(Darinka_Dentcheva, citizenship, United_States)",Darinka_Dentcheva,citizenship,United_States,"(Darinka_Dentcheva, citizenship, United_States)",Darinka_Dentcheva,citizenship,United_States
+ont_18_scientist_test_12,MISSING,,"(New_Jersey, areaOfWater, 3544040000.0)",New_Jersey,areaOfWater,3544040000.0,,,,
+ont_18_scientist_test_12,MISSING,,"(United_States, motto, In God we trust)",United_States,motto,In God we trust,,,,
+ont_18_scientist_test_12,MISSING,,"(Darinka_Dentcheva, residence, United_States)",Darinka_Dentcheva,residence,United_States,,,,
+ont_18_scientist_test_12,EXTRA,,,,,,"(New_Jersey, percentageOfAreaWater, 3544.04)",New_Jersey,percentageOfAreaWater,3544.04
+ont_18_scientist_test_120,EXACT,1.00,"(Lady_Anne_Monson, deathDate, 1776-02-18)",Lady_Anne_Monson,deathDate,1776-02-18,"(Lady_Anne_Monson, deathDate, 1776-02-18)",Lady_Anne_Monson,deathDate,1776-02-18
+ont_18_scientist_test_121,EXACT,1.00,"(Darinka_Dentcheva, citizenship, United_States)",Darinka_Dentcheva,citizenship,United_States,"(Darinka_Dentcheva, citizenship, United_States)",Darinka_Dentcheva,citizenship,United_States
+ont_18_scientist_test_121,EXACT,1.00,"(Darinka_Dentcheva, birthDate, 1958-01-01)",Darinka_Dentcheva,birthDate,1958-01-01,"(Darinka_Dentcheva, birthDate, 1958-01-01)",Darinka_Dentcheva,birthDate,1958-01-01
+ont_18_scientist_test_122,EXACT,1.00,"(Lady_Anne_Monson, residence, India)",Lady_Anne_Monson,residence,India,"(Lady_Anne_Monson, residence, India)",Lady_Anne_Monson,residence,India
+ont_18_scientist_test_122,EXACT,1.00,"(Lady_Anne_Monson, deathDate, 1776-02-18)",Lady_Anne_Monson,deathDate,1776-02-18,"(Lady_Anne_Monson, deathDate, 1776-02-18)",Lady_Anne_Monson,deathDate,1776-02-18
+ont_18_scientist_test_122,SEMANTIC,0.96,"(Lady_Anne_Monson, spouse, George_Monson)",Lady_Anne_Monson,spouse,George_Monson,"(Lady_Anne_Monson, spouse, George_Monson_(1730-1776))",Lady_Anne_Monson,spouse,George_Monson_(1730-1776)
+ont_18_scientist_test_123,EXACT,1.00,"(Brandon_Carter, birthDate, 1942-01-01)",Brandon_Carter,birthDate,1942-01-01,"(Brandon_Carter, birthDate, 1942-01-01)",Brandon_Carter,birthDate,1942-01-01
+ont_18_scientist_test_123,SEMANTIC,0.99,"(Brandon_Carter, doctoralAdvisor, Dennis_William_Sciama)",Brandon_Carter,doctoralAdvisor,Dennis_William_Sciama,"(Brandon_Carter, doctoralAdvisor, Dennis_W._Sciama)",Brandon_Carter,doctoralAdvisor,Dennis_W._Sciama
+ont_18_scientist_test_123,MISSING,,"(Brandon_Carter, professionalField, General_relativity)",Brandon_Carter,professionalField,General_relativity,,,,
+ont_18_scientist_test_123,EXTRA,,,,,,"(Brandon_Carter, type, Physicist)",Brandon_Carter,type,Physicist
+ont_18_scientist_test_123,EXTRA,,,,,,"(Brandon_Carter, type, General_relativity)",Brandon_Carter,type,General_relativity
+ont_18_scientist_test_124,MISSING,,"(University_of_Cambridge, chancellor, David_Sainsbury,_Baron_Sainsbury_of_Turville)",University_of_Cambridge,chancellor,"David_Sainsbury,_Baron_Sainsbury_of_Turville",,,,
+ont_18_scientist_test_125,EXACT,1.00,"(Darinka_Dentcheva, influencedBy, Andrzej_Piotr_Ruszczyński)",Darinka_Dentcheva,influencedBy,Andrzej_Piotr_Ruszczyński,"(Darinka_Dentcheva, influencedBy, Andrzej_Piotr_Ruszczyński)",Darinka_Dentcheva,influencedBy,Andrzej_Piotr_Ruszczyński
+ont_18_scientist_test_125,EXACT,1.00,"(Darinka_Dentcheva, citizenship, United_States)",Darinka_Dentcheva,citizenship,United_States,"(Darinka_Dentcheva, citizenship, United_States)",Darinka_Dentcheva,citizenship,United_States
+ont_18_scientist_test_125,EXACT,1.00,"(Darinka_Dentcheva, knownFor, Stochastic_programming)",Darinka_Dentcheva,knownFor,Stochastic_programming,"(Darinka_Dentcheva, knownFor, Stochastic_programming)",Darinka_Dentcheva,knownFor,Stochastic_programming
+ont_18_scientist_test_125,EXACT,1.00,"(Darinka_Dentcheva, birthDate, 1958-01-01)",Darinka_Dentcheva,birthDate,1958-01-01,"(Darinka_Dentcheva, birthDate, 1958-01-01)",Darinka_Dentcheva,birthDate,1958-01-01
+ont_18_scientist_test_125,SEMANTIC,0.96,"(Darinka_Dentcheva, professionalField, Mathematical_optimization)",Darinka_Dentcheva,professionalField,Mathematical_optimization,"(Darinka_Dentcheva, type, Mathematical_optimization)",Darinka_Dentcheva,type,Mathematical_optimization
+ont_18_scientist_test_125,MISSING,,"(Darinka_Dentcheva, almaMater, Humboldt_University)",Darinka_Dentcheva,almaMater,Humboldt_University,,,,
+ont_18_scientist_test_126,EXACT,1.00,"(Brandon_Carter, birthPlace, England)",Brandon_Carter,birthPlace,England,"(Brandon_Carter, birthPlace, England)",Brandon_Carter,birthPlace,England
+ont_18_scientist_test_126,EXACT,1.00,"(Brandon_Carter, birthDate, 1942-01-01)",Brandon_Carter,birthDate,1942-01-01,"(Brandon_Carter, birthDate, 1942-01-01)",Brandon_Carter,birthDate,1942-01-01
+ont_18_scientist_test_126,SEMANTIC,0.99,"(Brandon_Carter, doctoralAdvisor, Dennis_William_Sciama)",Brandon_Carter,doctoralAdvisor,Dennis_William_Sciama,"(Brandon_Carter, doctoralAdvisor, Dennis_W._Sciama)",Brandon_Carter,doctoralAdvisor,Dennis_W._Sciama
+ont_18_scientist_test_126,MISSING,,"(Brandon_Carter, knownFor, No-hair_theorem)",Brandon_Carter,knownFor,No-hair_theorem,,,,
+ont_18_scientist_test_126,MISSING,,"(Brandon_Carter, professionalField, General_relativity)",Brandon_Carter,professionalField,General_relativity,,,,
+ont_18_scientist_test_126,MISSING,,"(Brandon_Carter, knownFor, Carter_constant)",Brandon_Carter,knownFor,Carter_constant,,,,
+ont_18_scientist_test_126,EXTRA,,,,,,"(Brandon_Carter, type, physicist)",Brandon_Carter,type,physicist
+ont_18_scientist_test_126,EXTRA,,,,,,"(Brandon_Carter, type, General_relativity)",Brandon_Carter,type,General_relativity
+ont_18_scientist_test_127,EXACT,1.00,"(United_States, leader, Joe_Biden)",United_States,leader,Joe_Biden,"(United_States, leader, Joe_Biden)",United_States,leader,Joe_Biden
+ont_18_scientist_test_127,EXACT,1.00,"(Darinka_Dentcheva, residence, New_Jersey)",Darinka_Dentcheva,residence,New_Jersey,"(Darinka_Dentcheva, residence, New_Jersey)",Darinka_Dentcheva,residence,New_Jersey
+ont_18_scientist_test_127,EXACT,1.00,"(United_States, leader, John_Roberts)",United_States,leader,John_Roberts,"(United_States, leader, John_Roberts)",United_States,leader,John_Roberts
+ont_18_scientist_test_127,MISSING,,"(Darinka_Dentcheva, residence, United_States)",Darinka_Dentcheva,residence,United_States,,,,
+ont_18_scientist_test_128,EXACT,1.00,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington
+ont_18_scientist_test_128,EXACT,1.00,"(Lady_Anne_Monson, birthDate, 1726-01-01)",Lady_Anne_Monson,birthDate,1726-01-01,"(Lady_Anne_Monson, birthDate, 1726-01-01)",Lady_Anne_Monson,birthDate,1726-01-01
+ont_18_scientist_test_128,MISSING,,"(Lady_Anne_Monson, birthPlace, Kingdom_of_England)",Lady_Anne_Monson,birthPlace,Kingdom_of_England,,,,
+ont_18_scientist_test_129,SEMANTIC,0.99,"(Lady_Anne_Monson, nationality, Kingdom_of_England)",Lady_Anne_Monson,nationality,Kingdom_of_England,"(Lady_Anne_Monson, nationality, United_Kingdom)",Lady_Anne_Monson,nationality,United_Kingdom
+ont_18_scientist_test_129,MISSING,,"(Kingdom_of_England, capital, Winchester)",Kingdom_of_England,capital,Winchester,,,,
+ont_18_scientist_test_13,EXACT,1.00,"(Lady_Anne_Monson, residence, India)",Lady_Anne_Monson,residence,India,"(Lady_Anne_Monson, residence, India)",Lady_Anne_Monson,residence,India
+ont_18_scientist_test_13,EXACT,1.00,"(Lady_Anne_Monson, deathDate, 1776-02-18)",Lady_Anne_Monson,deathDate,1776-02-18,"(Lady_Anne_Monson, deathDate, 1776-02-18)",Lady_Anne_Monson,deathDate,1776-02-18
+ont_18_scientist_test_13,SEMANTIC,0.98,"(Lady_Anne_Monson, nationality, Kingdom_of_England)",Lady_Anne_Monson,nationality,Kingdom_of_England,"(Lady_Anne_Monson, nationality, England)",Lady_Anne_Monson,nationality,England
+ont_18_scientist_test_13,SEMANTIC,0.94,"(Lady_Anne_Monson, professionalField, Botany)",Lady_Anne_Monson,professionalField,Botany,"(Lady_Anne_Monson, type, Botany)",Lady_Anne_Monson,type,Botany
+ont_18_scientist_test_13,MISSING,,"(Lady_Anne_Monson, spouse, George_Monson)",Lady_Anne_Monson,spouse,George_Monson,,,,
+ont_18_scientist_test_13,EXTRA,,,,,,"(Lady_Anne_Monson, spouse, George_Monson_(cricketer))",Lady_Anne_Monson,spouse,George_Monson_(cricketer)
+ont_18_scientist_test_130,MISSING,,"(New_Jersey, areaTotal, 22591.38)",New_Jersey,areaTotal,22591.38,,,,
+ont_18_scientist_test_131,EXACT,1.00,"(Lady_Anne_Monson, deathDate, 1776-02-18)",Lady_Anne_Monson,deathDate,1776-02-18,"(Lady_Anne_Monson, deathDate, 1776-02-18)",Lady_Anne_Monson,deathDate,1776-02-18
+ont_18_scientist_test_131,SEMANTIC,0.96,"(Lady_Anne_Monson, spouse, George_Monson)",Lady_Anne_Monson,spouse,George_Monson,"(Lady_Anne_Monson, spouse, George_Monson_(1730-1776))",Lady_Anne_Monson,spouse,George_Monson_(1730-1776)
+ont_18_scientist_test_131,SEMANTIC,0.98,"(Lady_Anne_Monson, birthPlace, Kingdom_of_England)",Lady_Anne_Monson,birthPlace,Kingdom_of_England,"(Lady_Anne_Monson, birthPlace, England)",Lady_Anne_Monson,birthPlace,England
+ont_18_scientist_test_131,MISSING,,"(Lady_Anne_Monson, professionalField, Botany)",Lady_Anne_Monson,professionalField,Botany,,,,
+ont_18_scientist_test_131,EXTRA,,,,,,"(Lady_Anne_Monson, type, botanist)",Lady_Anne_Monson,type,botanist
+ont_18_scientist_test_132,EXACT,1.00,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington
+ont_18_scientist_test_132,MISSING,,"(Lady_Anne_Monson, birthPlace, Kingdom_of_England)",Lady_Anne_Monson,birthPlace,Kingdom_of_England,,,,
+ont_18_scientist_test_133,EXACT,1.00,"(Darinka_Dentcheva, residence, New_Jersey)",Darinka_Dentcheva,residence,New_Jersey,"(Darinka_Dentcheva, residence, New_Jersey)",Darinka_Dentcheva,residence,New_Jersey
+ont_18_scientist_test_133,SEMANTIC,0.96,"(United_States, language, English_language)",United_States,language,English_language,"(United_States, officialLanguage, English_language)",United_States,officialLanguage,English_language
+ont_18_scientist_test_133,MISSING,,"(Darinka_Dentcheva, residence, United_States)",Darinka_Dentcheva,residence,United_States,,,,
+ont_18_scientist_test_133,EXTRA,,,,,,"(New_Jersey, isPartOf, United_States)",New_Jersey,isPartOf,United_States
+ont_18_scientist_test_134,EXACT,1.00,"(Andrzej_Piotr_Ruszczyński, knownFor, Stochastic_programming)",Andrzej_Piotr_Ruszczyński,knownFor,Stochastic_programming,"(Andrzej_Piotr_Ruszczyński, knownFor, stochastic programming)",Andrzej_Piotr_Ruszczyński,knownFor,stochastic programming
+ont_18_scientist_test_135,EXACT,1.00,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington
+ont_18_scientist_test_135,EXACT,1.00,"(Lady_Anne_Monson, birthDate, 1726-01-01)",Lady_Anne_Monson,birthDate,1726-01-01,"(Lady_Anne_Monson, birthDate, 1726-01-01)",Lady_Anne_Monson,birthDate,1726-01-01
+ont_18_scientist_test_135,EXACT,1.00,"(Lady_Anne_Monson, deathDate, 1776-02-18)",Lady_Anne_Monson,deathDate,1776-02-18,"(Lady_Anne_Monson, deathDate, 1776-02-18)",Lady_Anne_Monson,deathDate,1776-02-18
+ont_18_scientist_test_135,MISSING,,"(Lady_Anne_Monson, birthPlace, Kingdom_of_England)",Lady_Anne_Monson,birthPlace,Kingdom_of_England,,,,
+ont_18_scientist_test_136,EXACT,1.00,"(Darinka_Dentcheva, citizenship, United_States)",Darinka_Dentcheva,citizenship,United_States,"(Darinka_Dentcheva, citizenship, United_States)",Darinka_Dentcheva,citizenship,United_States
+ont_18_scientist_test_136,MISSING,,"(United_States, leaderTitle, Vice President)",United_States,leaderTitle,Vice President,,,,
+ont_18_scientist_test_137,EXACT,1.00,"(Brandon_Carter, birthPlace, England)",Brandon_Carter,birthPlace,England,"(Brandon_Carter, birthPlace, England)",Brandon_Carter,birthPlace,England
+ont_18_scientist_test_137,EXACT,1.00,"(Brandon_Carter, knownFor, Doomsday_argument)",Brandon_Carter,knownFor,Doomsday_argument,"(Brandon_Carter, knownFor, doomsday argument)",Brandon_Carter,knownFor,doomsday argument
+ont_18_scientist_test_137,EXACT,1.00,"(Brandon_Carter, birthDate, 1942-01-01)",Brandon_Carter,birthDate,1942-01-01,"(Brandon_Carter, birthDate, 1942-01-01)",Brandon_Carter,birthDate,1942-01-01
+ont_18_scientist_test_137,SEMANTIC,0.99,"(Brandon_Carter, doctoralAdvisor, Dennis_William_Sciama)",Brandon_Carter,doctoralAdvisor,Dennis_William_Sciama,"(Brandon_Carter, doctoralAdvisor, Dennis_W._Sciama)",Brandon_Carter,doctoralAdvisor,Dennis_W._Sciama
+ont_18_scientist_test_137,MISSING,,"(Brandon_Carter, almaMater, University_of_Cambridge)",Brandon_Carter,almaMater,University_of_Cambridge,,,,
+ont_18_scientist_test_137,MISSING,,"(Brandon_Carter, knownFor, Anthropic_principle)",Brandon_Carter,knownFor,Anthropic_principle,,,,
+ont_18_scientist_test_138,EXACT,1.00,"(Lady_Anne_Monson, birthDate, 1726-01-01)",Lady_Anne_Monson,birthDate,1726-01-01,"(Lady_Anne_Monson, birthDate, 1726-01-01)",Lady_Anne_Monson,birthDate,1726-01-01
+ont_18_scientist_test_139,MISSING,,"(New_Jersey, areaOfWater, 3544040000.0)",New_Jersey,areaOfWater,3544040000.0,,,,
+ont_18_scientist_test_139,EXTRA,,,,,,"(New_Jersey, percentageOfAreaWater, 3544)",New_Jersey,percentageOfAreaWater,3544
+ont_18_scientist_test_14,EXACT,1.00,"(Darinka_Dentcheva, citizenship, United_States)",Darinka_Dentcheva,citizenship,United_States,"(Darinka_Dentcheva, citizenship, United_States)",Darinka_Dentcheva,citizenship,United_States
+ont_18_scientist_test_14,EXACT,1.00,"(Darinka_Dentcheva, knownFor, Stochastic_programming)",Darinka_Dentcheva,knownFor,Stochastic_programming,"(Darinka_Dentcheva, knownFor, Stochastic_programming)",Darinka_Dentcheva,knownFor,Stochastic_programming
+ont_18_scientist_test_14,EXACT,1.00,"(Darinka_Dentcheva, birthDate, 1958-01-01)",Darinka_Dentcheva,birthDate,1958-01-01,"(Darinka_Dentcheva, birthDate, 1958-01-01)",Darinka_Dentcheva,birthDate,1958-01-01
+ont_18_scientist_test_14,SEMANTIC,0.96,"(Darinka_Dentcheva, professionalField, Mathematical_optimization)",Darinka_Dentcheva,professionalField,Mathematical_optimization,"(Darinka_Dentcheva, type, Mathematical_optimization)",Darinka_Dentcheva,type,Mathematical_optimization
+ont_18_scientist_test_14,MISSING,,"(Darinka_Dentcheva, influencedBy, Andrzej_Piotr_Ruszczyński)",Darinka_Dentcheva,influencedBy,Andrzej_Piotr_Ruszczyński,,,,
+ont_18_scientist_test_140,EXACT,1.00,"(Brandon_Carter, birthDate, 1942-01-01)",Brandon_Carter,birthDate,1942-01-01,"(Brandon_Carter, birthDate, 1942-01-01)",Brandon_Carter,birthDate,1942-01-01
+ont_18_scientist_test_140,SEMANTIC,0.98,"(Brandon_Carter, doctoralAdvisor, Dennis_William_Sciama)",Brandon_Carter,doctoralAdvisor,Dennis_William_Sciama,"(Dennis_W._Sciama, doctoralAdvisor, Brandon_Carter)",Dennis_W._Sciama,doctoralAdvisor,Brandon_Carter
+ont_18_scientist_test_140,MISSING,,"(Brandon_Carter, almaMater, University_of_Cambridge)",Brandon_Carter,almaMater,University_of_Cambridge,,,,
+ont_18_scientist_test_140,MISSING,,"(University_of_Cambridge, chancellor, David_Sainsbury,_Baron_Sainsbury_of_Turville)",University_of_Cambridge,chancellor,"David_Sainsbury,_Baron_Sainsbury_of_Turville",,,,
+ont_18_scientist_test_141,EXACT,1.00,"(Darlington, populationTotal, 106000)",Darlington,populationTotal,106000,"(Darlington, populationTotal, 106000)",Darlington,populationTotal,106000
+ont_18_scientist_test_142,EXACT,1.00,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington
+ont_18_scientist_test_142,EXACT,1.00,"(Lady_Anne_Monson, birthDate, 1726-01-01)",Lady_Anne_Monson,birthDate,1726-01-01,"(Lady_Anne_Monson, birthDate, 1726-01-01)",Lady_Anne_Monson,birthDate,1726-01-01
+ont_18_scientist_test_142,EXACT,1.00,"(Lady_Anne_Monson, deathDate, 1776-02-18)",Lady_Anne_Monson,deathDate,1776-02-18,"(Lady_Anne_Monson, deathDate, 1776-02-18)",Lady_Anne_Monson,deathDate,1776-02-18
+ont_18_scientist_test_142,SEMANTIC,0.99,"(Lady_Anne_Monson, nationality, Kingdom_of_England)",Lady_Anne_Monson,nationality,Kingdom_of_England,"(Lady_Anne_Monson, nationality, United_Kingdom)",Lady_Anne_Monson,nationality,United_Kingdom
+ont_18_scientist_test_142,EXTRA,,,,,,"(Darlington, isPartOf, England)",Darlington,isPartOf,England
+ont_18_scientist_test_143,EXACT,1.00,"(Brandon_Carter, birthPlace, England)",Brandon_Carter,birthPlace,England,"(Brandon_Carter, birthPlace, England)",Brandon_Carter,birthPlace,England
+ont_18_scientist_test_143,MISSING,,"(University_of_Cambridge, viceChancellor, Leszek_Borysiewicz)",University_of_Cambridge,viceChancellor,Leszek_Borysiewicz,,,,
+ont_18_scientist_test_143,MISSING,,"(Brandon_Carter, almaMater, University_of_Cambridge)",Brandon_Carter,almaMater,University_of_Cambridge,,,,
+ont_18_scientist_test_144,EXACT,1.00,"(Darinka_Dentcheva, knownFor, Stochastic_programming)",Darinka_Dentcheva,knownFor,Stochastic_programming,"(Darinka_Dentcheva, knownFor, stochastic programming)",Darinka_Dentcheva,knownFor,stochastic programming
+ont_18_scientist_test_144,MISSING,,"(Darinka_Dentcheva, influencedBy, Andrzej_Piotr_Ruszczyński)",Darinka_Dentcheva,influencedBy,Andrzej_Piotr_Ruszczyński,,,,
+ont_18_scientist_test_145,MISSING,,"(Lady_Anne_Monson, nationality, Kingdom_of_England)",Lady_Anne_Monson,nationality,Kingdom_of_England,,,,
+ont_18_scientist_test_145,MISSING,,"(Kingdom_of_England, governmentType, Unitary_state)",Kingdom_of_England,governmentType,Unitary_state,,,,
+ont_18_scientist_test_146,MISSING,,"(India, areaTotal, 3287590000000.0)",India,areaTotal,3287590000000.0,,,,
+ont_18_scientist_test_147,MISSING,,"(University_of_Cambridge, type, Research_university)",University_of_Cambridge,type,Research_university,,,,
+ont_18_scientist_test_148,EXACT,1.00,"(Darinka_Dentcheva, citizenship, United_States)",Darinka_Dentcheva,citizenship,United_States,"(Darinka_Dentcheva, citizenship, United_States)",Darinka_Dentcheva,citizenship,United_States
+ont_18_scientist_test_148,EXACT,1.00,"(Darinka_Dentcheva, birthDate, 1958-01-01)",Darinka_Dentcheva,birthDate,1958-01-01,"(Darinka_Dentcheva, birthDate, 1958-01-01)",Darinka_Dentcheva,birthDate,1958-01-01
+ont_18_scientist_test_148,SEMANTIC,0.99,"(Darinka_Dentcheva, almaMater, Humboldt_University)",Darinka_Dentcheva,almaMater,Humboldt_University,"(Darinka_Dentcheva, almaMater, Humboldt_University_of_Berlin)",Darinka_Dentcheva,almaMater,Humboldt_University_of_Berlin
+ont_18_scientist_test_148,SEMANTIC,0.96,"(Darinka_Dentcheva, professionalField, Mathematical_optimization)",Darinka_Dentcheva,professionalField,Mathematical_optimization,"(Darinka_Dentcheva, type, Mathematical_optimization)",Darinka_Dentcheva,type,Mathematical_optimization
+ont_18_scientist_test_148,MISSING,,"(Darinka_Dentcheva, knownFor, Stochastic_programming)",Darinka_Dentcheva,knownFor,Stochastic_programming,,,,
+ont_18_scientist_test_148,MISSING,,"(Darinka_Dentcheva, residence, New_Jersey)",Darinka_Dentcheva,residence,New_Jersey,,,,
+ont_18_scientist_test_148,MISSING,,"(Darinka_Dentcheva, influencedBy, Andrzej_Piotr_Ruszczyński)",Darinka_Dentcheva,influencedBy,Andrzej_Piotr_Ruszczyński,,,,
+ont_18_scientist_test_149,EXACT,1.00,"(Darinka_Dentcheva, citizenship, United_States)",Darinka_Dentcheva,citizenship,United_States,"(Darinka_Dentcheva, citizenship, United_States)",Darinka_Dentcheva,citizenship,United_States
+ont_18_scientist_test_149,SEMANTIC,0.96,"(Darinka_Dentcheva, professionalField, Mathematical_optimization)",Darinka_Dentcheva,professionalField,Mathematical_optimization,"(Darinka_Dentcheva, type, Mathematical_optimization)",Darinka_Dentcheva,type,Mathematical_optimization
+ont_18_scientist_test_15,EXACT,1.00,"(Darinka_Dentcheva, residence, New_Jersey)",Darinka_Dentcheva,residence,New_Jersey,"(Darinka_Dentcheva, residence, New_Jersey)",Darinka_Dentcheva,residence,New_Jersey
+ont_18_scientist_test_15,EXACT,1.00,"(United_States, governmentType, Federalism)",United_States,governmentType,Federalism,"(United_States, governmentType, federalism)",United_States,governmentType,federalism
+ont_18_scientist_test_15,MISSING,,"(Darinka_Dentcheva, residence, United_States)",Darinka_Dentcheva,residence,United_States,,,,
+ont_18_scientist_test_16,EXACT,1.00,"(Darinka_Dentcheva, citizenship, United_States)",Darinka_Dentcheva,citizenship,United_States,"(Darinka_Dentcheva, citizenship, United_States)",Darinka_Dentcheva,citizenship,United_States
+ont_18_scientist_test_16,EXACT,1.00,"(Darinka_Dentcheva, influencedBy, Andrzej_Piotr_Ruszczyński)",Darinka_Dentcheva,influencedBy,Andrzej_Piotr_Ruszczyński,"(Darinka_Dentcheva, influencedBy, Andrzej_Piotr_Ruszczyński)",Darinka_Dentcheva,influencedBy,Andrzej_Piotr_Ruszczyński
+ont_18_scientist_test_16,MISSING,,"(United_States, motto, In God we trust)",United_States,motto,In God we trust,,,,
+ont_18_scientist_test_16,MISSING,,"(Andrzej_Piotr_Ruszczyński, professionalField, Mathematical_optimization)",Andrzej_Piotr_Ruszczyński,professionalField,Mathematical_optimization,,,,
+ont_18_scientist_test_16,EXTRA,,,,,,"(Darinka_Dentcheva, type, Mathematical_optimization)",Darinka_Dentcheva,type,Mathematical_optimization
+ont_18_scientist_test_17,EXACT,1.00,"(Darinka_Dentcheva, citizenship, United_States)",Darinka_Dentcheva,citizenship,United_States,"(Darinka_Dentcheva, citizenship, United_States)",Darinka_Dentcheva,citizenship,United_States
+ont_18_scientist_test_18,EXACT,1.00,"(Darinka_Dentcheva, residence, New_Jersey)",Darinka_Dentcheva,residence,New_Jersey,"(Darinka_Dentcheva, residence, New_Jersey)",Darinka_Dentcheva,residence,New_Jersey
+ont_18_scientist_test_18,EXACT,1.00,"(Darinka_Dentcheva, knownFor, Stochastic_programming)",Darinka_Dentcheva,knownFor,Stochastic_programming,"(Darinka_Dentcheva, knownFor, stochastic programming)",Darinka_Dentcheva,knownFor,stochastic programming
+ont_18_scientist_test_18,SEMANTIC,0.99,"(Darinka_Dentcheva, almaMater, Humboldt_University)",Darinka_Dentcheva,almaMater,Humboldt_University,"(Darinka_Dentcheva, almaMater, Humboldt_University_of_Berlin)",Darinka_Dentcheva,almaMater,Humboldt_University_of_Berlin
+ont_18_scientist_test_19,EXACT,1.00,"(Darinka_Dentcheva, citizenship, United_States)",Darinka_Dentcheva,citizenship,United_States,"(Darinka_Dentcheva, citizenship, United_States)",Darinka_Dentcheva,citizenship,United_States
+ont_18_scientist_test_19,EXACT,1.00,"(Darinka_Dentcheva, influencedBy, Andrzej_Piotr_Ruszczyński)",Darinka_Dentcheva,influencedBy,Andrzej_Piotr_Ruszczyński,"(Darinka_Dentcheva, influencedBy, Andrzej_Piotr_Ruszczyński)",Darinka_Dentcheva,influencedBy,Andrzej_Piotr_Ruszczyński
+ont_18_scientist_test_19,EXACT,1.00,"(Darinka_Dentcheva, birthDate, 1958-01-01)",Darinka_Dentcheva,birthDate,1958-01-01,"(Darinka_Dentcheva, birthDate, 1958-01-01)",Darinka_Dentcheva,birthDate,1958-01-01
+ont_18_scientist_test_19,SEMANTIC,0.99,"(Darinka_Dentcheva, almaMater, Humboldt_University)",Darinka_Dentcheva,almaMater,Humboldt_University,"(Darinka_Dentcheva, almaMater, Humboldt_University_of_Berlin)",Darinka_Dentcheva,almaMater,Humboldt_University_of_Berlin
+ont_18_scientist_test_2,EXACT,1.00,"(Lady_Anne_Monson, deathDate, 1776-02-18)",Lady_Anne_Monson,deathDate,1776-02-18,"(Lady_Anne_Monson, deathDate, 1776-02-18)",Lady_Anne_Monson,deathDate,1776-02-18
+ont_18_scientist_test_2,SEMANTIC,0.94,"(Lady_Anne_Monson, professionalField, Botany)",Lady_Anne_Monson,professionalField,Botany,"(Lady_Anne_Monson, type, Botany)",Lady_Anne_Monson,type,Botany
+ont_18_scientist_test_2,MISSING,,"(Lady_Anne_Monson, spouse, George_Monson)",Lady_Anne_Monson,spouse,George_Monson,,,,
+ont_18_scientist_test_2,EXTRA,,,,,,"(George_Monson_(cricketer), spouse, Lady_Anne_Monson)",George_Monson_(cricketer),spouse,Lady_Anne_Monson
+ont_18_scientist_test_20,EXACT,1.00,"(Lady_Anne_Monson, birthDate, 1726-01-01)",Lady_Anne_Monson,birthDate,1726-01-01,"(Lady_Anne_Monson, birthDate, 1726-01-01)",Lady_Anne_Monson,birthDate,1726-01-01
+ont_18_scientist_test_20,SEMANTIC,0.94,"(Lady_Anne_Monson, professionalField, Botany)",Lady_Anne_Monson,professionalField,Botany,"(Lady_Anne_Monson, type, Botany)",Lady_Anne_Monson,type,Botany
+ont_18_scientist_test_20,MISSING,,"(Lady_Anne_Monson, nationality, Kingdom_of_England)",Lady_Anne_Monson,nationality,Kingdom_of_England,,,,
+ont_18_scientist_test_21,EXACT,1.00,"(Brandon_Carter, knownFor, No-hair_theorem)",Brandon_Carter,knownFor,No-hair_theorem,"(Brandon_Carter, knownFor, no-hair theorem)",Brandon_Carter,knownFor,no-hair theorem
+ont_18_scientist_test_21,EXACT,1.00,"(Brandon_Carter, knownFor, Carter_constant)",Brandon_Carter,knownFor,Carter_constant,"(Brandon_Carter, knownFor, carter constant)",Brandon_Carter,knownFor,carter constant
+ont_18_scientist_test_21,EXACT,1.00,"(Brandon_Carter, birthPlace, England)",Brandon_Carter,birthPlace,England,"(Brandon_Carter, birthPlace, England)",Brandon_Carter,birthPlace,England
+ont_18_scientist_test_21,SEMANTIC,0.99,"(Brandon_Carter, doctoralAdvisor, Dennis_William_Sciama)",Brandon_Carter,doctoralAdvisor,Dennis_William_Sciama,"(Brandon_Carter, doctoralAdvisor, Dennis_W._Sciama)",Brandon_Carter,doctoralAdvisor,Dennis_W._Sciama
+ont_18_scientist_test_22,EXACT,1.00,"(Brandon_Carter, knownFor, No-hair_theorem)",Brandon_Carter,knownFor,No-hair_theorem,"(Brandon_Carter, knownFor, no-hair theorem)",Brandon_Carter,knownFor,no-hair theorem
+ont_18_scientist_test_22,EXACT,1.00,"(Brandon_Carter, knownFor, Carter_constant)",Brandon_Carter,knownFor,Carter_constant,"(Brandon_Carter, knownFor, carter constant)",Brandon_Carter,knownFor,carter constant
+ont_18_scientist_test_22,EXACT,1.00,"(Brandon_Carter, birthPlace, England)",Brandon_Carter,birthPlace,England,"(Brandon_Carter, birthPlace, England)",Brandon_Carter,birthPlace,England
+ont_18_scientist_test_22,MISSING,,"(Brandon_Carter, professionalField, General_relativity)",Brandon_Carter,professionalField,General_relativity,,,,
+ont_18_scientist_test_22,EXTRA,,,,,,"(Brandon_Carter, type, General_relativity)",Brandon_Carter,type,General_relativity
+ont_18_scientist_test_23,MISSING,,"(Kingdom_of_England, foundingYear, 0927)",Kingdom_of_England,foundingYear,0927,,,,
+ont_18_scientist_test_24,EXACT,1.00,"(India, leaderTitle, Chief Justice)",India,leaderTitle,Chief Justice,"(India, leaderTitle, chief justice)",India,leaderTitle,chief justice
+ont_18_scientist_test_24,EXACT,1.00,"(Lady_Anne_Monson, residence, India)",Lady_Anne_Monson,residence,India,"(Lady_Anne_Monson, residence, India)",Lady_Anne_Monson,residence,India
+ont_18_scientist_test_24,MISSING,,"(India, areaTotal, 3287590000000.0)",India,areaTotal,3287590000000.0,,,,
+ont_18_scientist_test_24,MISSING,,"(Lady_Anne_Monson, nationality, Kingdom_of_England)",Lady_Anne_Monson,nationality,Kingdom_of_England,,,,
+ont_18_scientist_test_24,EXTRA,,,,,,"(Lady_Anne_Monson, demonym, english)",Lady_Anne_Monson,demonym,english
+ont_18_scientist_test_25,EXACT,1.00,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington
+ont_18_scientist_test_25,EXACT,1.00,"(Lady_Anne_Monson, residence, India)",Lady_Anne_Monson,residence,India,"(Lady_Anne_Monson, residence, India)",Lady_Anne_Monson,residence,India
+ont_18_scientist_test_25,EXACT,1.00,"(Lady_Anne_Monson, deathDate, 1776-02-18)",Lady_Anne_Monson,deathDate,1776-02-18,"(Lady_Anne_Monson, deathDate, 1776-02-18)",Lady_Anne_Monson,deathDate,1776-02-18
+ont_18_scientist_test_25,EXACT,1.00,"(Lady_Anne_Monson, birthDate, 1726-01-01)",Lady_Anne_Monson,birthDate,1726-01-01,"(Lady_Anne_Monson, birthDate, 1726-01-01)",Lady_Anne_Monson,birthDate,1726-01-01
+ont_18_scientist_test_25,MISSING,,"(Lady_Anne_Monson, birthPlace, Kingdom_of_England)",Lady_Anne_Monson,birthPlace,Kingdom_of_England,,,,
+ont_18_scientist_test_26,EXACT,1.00,"(Darinka_Dentcheva, residence, New_Jersey)",Darinka_Dentcheva,residence,New_Jersey,"(Darinka_Dentcheva, residence, New_Jersey)",Darinka_Dentcheva,residence,New_Jersey
+ont_18_scientist_test_27,SEMANTIC,0.98,"(Darinka_Dentcheva, residence, New_Jersey)",Darinka_Dentcheva,residence,New_Jersey,"(Darinka_Dentcheva, birthPlace, New_Jersey)",Darinka_Dentcheva,birthPlace,New_Jersey
+ont_18_scientist_test_27,MISSING,,"(New_Jersey, areaTotal, 22591.38)",New_Jersey,areaTotal,22591.38,,,,
+ont_18_scientist_test_28,EXACT,1.00,"(Darinka_Dentcheva, birthDate, 1958-01-01)",Darinka_Dentcheva,birthDate,1958-01-01,"(Darinka_Dentcheva, birthDate, 1958-01-01)",Darinka_Dentcheva,birthDate,1958-01-01
+ont_18_scientist_test_28,MISSING,,"(Darinka_Dentcheva, influencedBy, Andrzej_Piotr_Ruszczyński)",Darinka_Dentcheva,influencedBy,Andrzej_Piotr_Ruszczyński,,,,
+ont_18_scientist_test_29,EXACT,1.00,"(Darinka_Dentcheva, citizenship, United_States)",Darinka_Dentcheva,citizenship,United_States,"(Darinka_Dentcheva, citizenship, United_States)",Darinka_Dentcheva,citizenship,United_States
+ont_18_scientist_test_29,EXACT,1.00,"(United_States, leader, John_Roberts)",United_States,leader,John_Roberts,"(United_States, leader, John_Roberts)",United_States,leader,John_Roberts
+ont_18_scientist_test_3,EXACT,1.00,"(Darinka_Dentcheva, influencedBy, Andrzej_Piotr_Ruszczyński)",Darinka_Dentcheva,influencedBy,Andrzej_Piotr_Ruszczyński,"(Darinka_Dentcheva, influencedBy, Andrzej_Piotr_Ruszczyński)",Darinka_Dentcheva,influencedBy,Andrzej_Piotr_Ruszczyński
+ont_18_scientist_test_30,EXACT,1.00,"(Lady_Anne_Monson, residence, India)",Lady_Anne_Monson,residence,India,"(Lady_Anne_Monson, residence, India)",Lady_Anne_Monson,residence,India
+ont_18_scientist_test_30,MISSING,,"(India, leader, T._S._Thakur)",India,leader,T._S._Thakur,,,,
+ont_18_scientist_test_31,MISSING,,"(Lady_Anne_Monson, birthPlace, Kingdom_of_England)",Lady_Anne_Monson,birthPlace,Kingdom_of_England,,,,
+ont_18_scientist_test_31,MISSING,,"(Kingdom_of_England, governmentType, Unitary_state)",Kingdom_of_England,governmentType,Unitary_state,,,,
+ont_18_scientist_test_32,SEMANTIC,0.98,"(United_States, demonym, American)",United_States,demonym,American,"(United_States, demonym, Americans)",United_States,demonym,Americans
+ont_18_scientist_test_33,SEMANTIC,0.96,"(Darinka_Dentcheva, professionalField, Mathematical_optimization)",Darinka_Dentcheva,professionalField,Mathematical_optimization,"(Darinka_Dentcheva, type, Mathematical_optimization)",Darinka_Dentcheva,type,Mathematical_optimization
+ont_18_scientist_test_33,EXTRA,,,,,,"(Darinka_Dentcheva, type, Mathematician)",Darinka_Dentcheva,type,Mathematician
+ont_18_scientist_test_34,EXACT,1.00,"(Darinka_Dentcheva, knownFor, Stochastic_programming)",Darinka_Dentcheva,knownFor,Stochastic_programming,"(Darinka_Dentcheva, knownFor, stochastic programming)",Darinka_Dentcheva,knownFor,stochastic programming
+ont_18_scientist_test_34,SEMANTIC,0.96,"(Darinka_Dentcheva, professionalField, Mathematical_optimization)",Darinka_Dentcheva,professionalField,Mathematical_optimization,"(Darinka_Dentcheva, type, Mathematical_optimization)",Darinka_Dentcheva,type,Mathematical_optimization
+ont_18_scientist_test_34,SEMANTIC,0.99,"(Darinka_Dentcheva, almaMater, Humboldt_University)",Darinka_Dentcheva,almaMater,Humboldt_University,"(Darinka_Dentcheva, almaMater, Humboldt_University_of_Berlin)",Darinka_Dentcheva,almaMater,Humboldt_University_of_Berlin
+ont_18_scientist_test_34,MISSING,,"(Darinka_Dentcheva, influencedBy, Andrzej_Piotr_Ruszczyński)",Darinka_Dentcheva,influencedBy,Andrzej_Piotr_Ruszczyński,,,,
+ont_18_scientist_test_35,EXACT,1.00,"(Lady_Anne_Monson, birthDate, 1726-01-01)",Lady_Anne_Monson,birthDate,1726-01-01,"(Lady_Anne_Monson, birthDate, 1726-01-01)",Lady_Anne_Monson,birthDate,1726-01-01
+ont_18_scientist_test_35,EXACT,1.00,"(Lady_Anne_Monson, deathDate, 1776-02-18)",Lady_Anne_Monson,deathDate,1776-02-18,"(Lady_Anne_Monson, deathDate, 1776-02-18)",Lady_Anne_Monson,deathDate,1776-02-18
+ont_18_scientist_test_36,EXACT,1.00,"(Lady_Anne_Monson, residence, India)",Lady_Anne_Monson,residence,India,"(Lady_Anne_Monson, residence, India)",Lady_Anne_Monson,residence,India
+ont_18_scientist_test_36,EXACT,1.00,"(Lady_Anne_Monson, deathDate, 1776-02-18)",Lady_Anne_Monson,deathDate,1776-02-18,"(Lady_Anne_Monson, deathDate, 1776-02-18)",Lady_Anne_Monson,deathDate,1776-02-18
+ont_18_scientist_test_36,SEMANTIC,0.96,"(Lady_Anne_Monson, spouse, George_Monson)",Lady_Anne_Monson,spouse,George_Monson,"(Lady_Anne_Monson, spouse, George_Monson_(1730-1776))",Lady_Anne_Monson,spouse,George_Monson_(1730-1776)
+ont_18_scientist_test_36,MISSING,,"(Lady_Anne_Monson, nationality, Kingdom_of_England)",Lady_Anne_Monson,nationality,Kingdom_of_England,,,,
+ont_18_scientist_test_36,EXTRA,,,,,,"(George_Monson_(1730-1776), nationality, United_Kingdom)",George_Monson_(1730-1776),nationality,United_Kingdom
+ont_18_scientist_test_37,MISSING,,"(Brandon_Carter, knownFor, Anthropic_principle)",Brandon_Carter,knownFor,Anthropic_principle,,,,
+ont_18_scientist_test_37,EXTRA,,,,,,"(Brandon_Carter, knownFor, anthropic principle theory)",Brandon_Carter,knownFor,anthropic principle theory
+ont_18_scientist_test_38,EXACT,1.00,"(Darinka_Dentcheva, residence, New_Jersey)",Darinka_Dentcheva,residence,New_Jersey,"(Darinka_Dentcheva, residence, New_Jersey)",Darinka_Dentcheva,residence,New_Jersey
+ont_18_scientist_test_38,SEMANTIC,0.99,"(Darinka_Dentcheva, almaMater, Humboldt_University)",Darinka_Dentcheva,almaMater,Humboldt_University,"(Darinka_Dentcheva, almaMater, Humboldt_University_of_Berlin)",Darinka_Dentcheva,almaMater,Humboldt_University_of_Berlin
+ont_18_scientist_test_39,MISSING,,"(New_Jersey, language, English_language)",New_Jersey,language,English_language,,,,
+ont_18_scientist_test_4,MISSING,,"(Lady_Anne_Monson, spouse, George_Monson)",Lady_Anne_Monson,spouse,George_Monson,,,,
+ont_18_scientist_test_4,EXTRA,,,,,,"(Lady_Anne_Monson, spouse, George_Monson_(cricketer))",Lady_Anne_Monson,spouse,George_Monson_(cricketer)
+ont_18_scientist_test_40,EXACT,1.00,"(Lady_Anne_Monson, birthDate, 1726-01-01)",Lady_Anne_Monson,birthDate,1726-01-01,"(Lady_Anne_Monson, birthDate, 1726-01-01)",Lady_Anne_Monson,birthDate,1726-01-01
+ont_18_scientist_test_40,SEMANTIC,0.98,"(Lady_Anne_Monson, birthPlace, Kingdom_of_England)",Lady_Anne_Monson,birthPlace,Kingdom_of_England,"(Lady_Anne_Monson, birthPlace, England)",Lady_Anne_Monson,birthPlace,England
+ont_18_scientist_test_40,SEMANTIC,0.99,"(Lady_Anne_Monson, nationality, Kingdom_of_England)",Lady_Anne_Monson,nationality,Kingdom_of_England,"(Lady_Anne_Monson, nationality, United_Kingdom)",Lady_Anne_Monson,nationality,United_Kingdom
+ont_18_scientist_test_40,MISSING,,"(Lady_Anne_Monson, spouse, George_Monson)",Lady_Anne_Monson,spouse,George_Monson,,,,
+ont_18_scientist_test_40,EXTRA,,,,,,"(Lady_Anne_Monson, spouse, George_Monson_(cricketer))",Lady_Anne_Monson,spouse,George_Monson_(cricketer)
+ont_18_scientist_test_41,MISSING,,"(United_States, populationTotal, 324720797)",United_States,populationTotal,324720797,,,,
+ont_18_scientist_test_42,EXACT,1.00,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington
+ont_18_scientist_test_42,EXACT,1.00,"(Lady_Anne_Monson, birthDate, 1726-01-01)",Lady_Anne_Monson,birthDate,1726-01-01,"(Lady_Anne_Monson, birthDate, 1726-01-01)",Lady_Anne_Monson,birthDate,1726-01-01
+ont_18_scientist_test_42,EXACT,1.00,"(Lady_Anne_Monson, deathDate, 1776-02-18)",Lady_Anne_Monson,deathDate,1776-02-18,"(Lady_Anne_Monson, deathDate, 1776-02-18)",Lady_Anne_Monson,deathDate,1776-02-18
+ont_18_scientist_test_43,EXACT,1.00,"(United_States, leader, John_Roberts)",United_States,leader,John_Roberts,"(United_States, leader, John_Roberts)",United_States,leader,John_Roberts
+ont_18_scientist_test_43,EXACT,1.00,"(Darinka_Dentcheva, residence, United_States)",Darinka_Dentcheva,residence,United_States,"(Darinka_Dentcheva, residence, United_States)",Darinka_Dentcheva,residence,United_States
+ont_18_scientist_test_44,EXACT,1.00,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington
+ont_18_scientist_test_44,SEMANTIC,0.97,"(Darlington, country, United_Kingdom)",Darlington,country,United_Kingdom,"(Darlington, isPartOf, United_Kingdom)",Darlington,isPartOf,United_Kingdom
+ont_18_scientist_test_44,MISSING,,"(Lady_Anne_Monson, birthPlace, Kingdom_of_England)",Lady_Anne_Monson,birthPlace,Kingdom_of_England,,,,
+ont_18_scientist_test_45,EXACT,1.00,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington
+ont_18_scientist_test_45,EXACT,1.00,"(Lady_Anne_Monson, residence, India)",Lady_Anne_Monson,residence,India,"(Lady_Anne_Monson, residence, India)",Lady_Anne_Monson,residence,India
+ont_18_scientist_test_45,EXACT,1.00,"(Lady_Anne_Monson, deathDate, 1776-02-18)",Lady_Anne_Monson,deathDate,1776-02-18,"(Lady_Anne_Monson, deathDate, 1776-02-18)",Lady_Anne_Monson,deathDate,1776-02-18
+ont_18_scientist_test_45,EXACT,1.00,"(Lady_Anne_Monson, birthDate, 1726-01-01)",Lady_Anne_Monson,birthDate,1726-01-01,"(Lady_Anne_Monson, birthDate, 1726-01-01)",Lady_Anne_Monson,birthDate,1726-01-01
+ont_18_scientist_test_46,EXACT,1.00,"(Darlington, gridReference, NZ289147)",Darlington,gridReference,NZ289147,"(Darlington, gridReference, nz289147)",Darlington,gridReference,nz289147
+ont_18_scientist_test_46,EXACT,1.00,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington
+ont_18_scientist_test_46,SEMANTIC,0.96,"(Darlington, region, North_East_England)",Darlington,region,North_East_England,"(Darlington, isPartOf, England)",Darlington,isPartOf,England
+ont_18_scientist_test_46,MISSING,,"(Lady_Anne_Monson, birthPlace, Kingdom_of_England)",Lady_Anne_Monson,birthPlace,Kingdom_of_England,,,,
+ont_18_scientist_test_47,EXACT,1.00,"(Brandon_Carter, birthPlace, England)",Brandon_Carter,birthPlace,England,"(Brandon_Carter, birthPlace, England)",Brandon_Carter,birthPlace,England
+ont_18_scientist_test_47,EXACT,1.00,"(Brandon_Carter, knownFor, Carter_constant)",Brandon_Carter,knownFor,Carter_constant,"(Brandon_Carter, knownFor, carter constant)",Brandon_Carter,knownFor,carter constant
+ont_18_scientist_test_47,SEMANTIC,0.99,"(Brandon_Carter, doctoralAdvisor, Dennis_William_Sciama)",Brandon_Carter,doctoralAdvisor,Dennis_William_Sciama,"(Brandon_Carter, doctoralAdvisor, Dennis_W._Sciama)",Brandon_Carter,doctoralAdvisor,Dennis_W._Sciama
+ont_18_scientist_test_47,MISSING,,"(Brandon_Carter, knownFor, No-hair_theorem)",Brandon_Carter,knownFor,No-hair_theorem,,,,
+ont_18_scientist_test_47,MISSING,,"(Brandon_Carter, professionalField, General_relativity)",Brandon_Carter,professionalField,General_relativity,,,,
+ont_18_scientist_test_47,MISSING,,"(Brandon_Carter, almaMater, University_of_Cambridge)",Brandon_Carter,almaMater,University_of_Cambridge,,,,
+ont_18_scientist_test_47,EXTRA,,,,,,"(Brandon_Carter, type, General_relativity)",Brandon_Carter,type,General_relativity
+ont_18_scientist_test_48,EXACT,1.00,"(Darinka_Dentcheva, citizenship, United_States)",Darinka_Dentcheva,citizenship,United_States,"(Darinka_Dentcheva, citizenship, United_States)",Darinka_Dentcheva,citizenship,United_States
+ont_18_scientist_test_48,EXACT,1.00,"(Darinka_Dentcheva, influencedBy, Andrzej_Piotr_Ruszczyński)",Darinka_Dentcheva,influencedBy,Andrzej_Piotr_Ruszczyński,"(Darinka_Dentcheva, influencedBy, Andrzej_Piotr_Ruszczyński)",Darinka_Dentcheva,influencedBy,Andrzej_Piotr_Ruszczyński
+ont_18_scientist_test_48,MISSING,,"(Darinka_Dentcheva, knownFor, Stochastic_programming)",Darinka_Dentcheva,knownFor,Stochastic_programming,,,,
+ont_18_scientist_test_48,EXTRA,,,,,,"(Darinka_Dentcheva, type, Stochastic_programming)",Darinka_Dentcheva,type,Stochastic_programming
+ont_18_scientist_test_49,EXACT,1.00,"(Brandon_Carter, knownFor, Carter_constant)",Brandon_Carter,knownFor,Carter_constant,"(Brandon_Carter, knownFor, Carter_constant)",Brandon_Carter,knownFor,Carter_constant
+ont_18_scientist_test_49,MISSING,,"(Brandon_Carter, professionalField, General_relativity)",Brandon_Carter,professionalField,General_relativity,,,,
+ont_18_scientist_test_49,EXTRA,,,,,,"(Brandon_Carter, type, General_relativity)",Brandon_Carter,type,General_relativity
+ont_18_scientist_test_5,MISSING,,"(Brandon_Carter, professionalField, General_relativity)",Brandon_Carter,professionalField,General_relativity,,,,
+ont_18_scientist_test_5,EXTRA,,,,,,"(Brandon_Carter, type, General_relativity)",Brandon_Carter,type,General_relativity
+ont_18_scientist_test_50,EXACT,1.00,"(Darlington, gridReference, NZ289147)",Darlington,gridReference,NZ289147,"(Darlington, gridReference, nz289147)",Darlington,gridReference,nz289147
+ont_18_scientist_test_50,EXACT,1.00,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington
+ont_18_scientist_test_50,MISSING,,"(Kingdom_of_England, dissolutionYear, 1707)",Kingdom_of_England,dissolutionYear,1707,,,,
+ont_18_scientist_test_50,MISSING,,"(Lady_Anne_Monson, birthPlace, Kingdom_of_England)",Lady_Anne_Monson,birthPlace,Kingdom_of_England,,,,
+ont_18_scientist_test_50,MISSING,,"(Lady_Anne_Monson, nationality, Kingdom_of_England)",Lady_Anne_Monson,nationality,Kingdom_of_England,,,,
+ont_18_scientist_test_51,EXACT,1.00,"(Brandon_Carter, knownFor, No-hair_theorem)",Brandon_Carter,knownFor,No-hair_theorem,"(Brandon_Carter, knownFor, No-hair_theorem)",Brandon_Carter,knownFor,No-hair_theorem
+ont_18_scientist_test_51,EXACT,1.00,"(Brandon_Carter, knownFor, Carter_constant)",Brandon_Carter,knownFor,Carter_constant,"(Brandon_Carter, knownFor, Carter_constant)",Brandon_Carter,knownFor,Carter_constant
+ont_18_scientist_test_51,EXACT,1.00,"(Brandon_Carter, birthDate, 1942-01-01)",Brandon_Carter,birthDate,1942-01-01,"(Brandon_Carter, birthDate, 1942-01-01)",Brandon_Carter,birthDate,1942-01-01
+ont_18_scientist_test_51,SEMANTIC,0.98,"(Brandon_Carter, doctoralAdvisor, Dennis_William_Sciama)",Brandon_Carter,doctoralAdvisor,Dennis_William_Sciama,"(Dennis_W._Sciama, doctoralAdvisor, Brandon_Carter)",Dennis_W._Sciama,doctoralAdvisor,Brandon_Carter
+ont_18_scientist_test_51,MISSING,,"(Brandon_Carter, professionalField, General_relativity)",Brandon_Carter,professionalField,General_relativity,,,,
+ont_18_scientist_test_51,EXTRA,,,,,,"(Brandon_Carter, type, General_relativity)",Brandon_Carter,type,General_relativity
+ont_18_scientist_test_52,EXACT,1.00,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington
+ont_18_scientist_test_53,EXACT,1.00,"(Brandon_Carter, birthPlace, England)",Brandon_Carter,birthPlace,England,"(Brandon_Carter, birthPlace, England)",Brandon_Carter,birthPlace,England
+ont_18_scientist_test_53,MISSING,,"(Brandon_Carter, knownFor, Anthropic_principle)",Brandon_Carter,knownFor,Anthropic_principle,,,,
+ont_18_scientist_test_53,EXTRA,,,,,,"(Brandon_Carter, knownFor, anthropic principle theory)",Brandon_Carter,knownFor,anthropic principle theory
+ont_18_scientist_test_54,EXACT,1.00,"(India, demonym, Indian)",India,demonym,Indian,"(India, demonym, indian)",India,demonym,indian
+ont_18_scientist_test_55,EXACT,1.00,"(Darinka_Dentcheva, knownFor, Stochastic_programming)",Darinka_Dentcheva,knownFor,Stochastic_programming,"(Darinka_Dentcheva, knownFor, Stochastic_programming)",Darinka_Dentcheva,knownFor,Stochastic_programming
+ont_18_scientist_test_55,EXACT,1.00,"(Darinka_Dentcheva, birthDate, 1958-01-01)",Darinka_Dentcheva,birthDate,1958-01-01,"(Darinka_Dentcheva, birthDate, 1958-01-01)",Darinka_Dentcheva,birthDate,1958-01-01
+ont_18_scientist_test_56,MISSING,,"(Darlington, region, North_East_England)",Darlington,region,North_East_England,,,,
+ont_18_scientist_test_57,EXACT,1.00,"(India, leaderTitle, President)",India,leaderTitle,President,"(India, leaderTitle, president)",India,leaderTitle,president
+ont_18_scientist_test_58,EXACT,1.00,"(Darlington, populationTotal, 106000)",Darlington,populationTotal,106000,"(Darlington, populationTotal, 106000)",Darlington,populationTotal,106000
+ont_18_scientist_test_58,EXACT,1.00,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington
+ont_18_scientist_test_59,EXACT,1.00,"(India, leaderTitle, Chief Justice)",India,leaderTitle,Chief Justice,"(India, leaderTitle, chief justice)",India,leaderTitle,chief justice
+ont_18_scientist_test_6,SEMANTIC,0.99,"(Darinka_Dentcheva, almaMater, Humboldt_University)",Darinka_Dentcheva,almaMater,Humboldt_University,"(Darinka_Dentcheva, almaMater, Humboldt_University_of_Berlin)",Darinka_Dentcheva,almaMater,Humboldt_University_of_Berlin
+ont_18_scientist_test_6,SEMANTIC,0.96,"(Darinka_Dentcheva, professionalField, Mathematical_optimization)",Darinka_Dentcheva,professionalField,Mathematical_optimization,"(Darinka_Dentcheva, type, Mathematical_optimization)",Darinka_Dentcheva,type,Mathematical_optimization
+ont_18_scientist_test_6,EXTRA,,,,,,"(Darinka_Dentcheva, type, Mathematician)",Darinka_Dentcheva,type,Mathematician
+ont_18_scientist_test_60,EXACT,1.00,"(Brandon_Carter, birthPlace, England)",Brandon_Carter,birthPlace,England,"(Brandon_Carter, birthPlace, England)",Brandon_Carter,birthPlace,England
+ont_18_scientist_test_61,EXACT,1.00,"(Darinka_Dentcheva, citizenship, United_States)",Darinka_Dentcheva,citizenship,United_States,"(Darinka_Dentcheva, citizenship, United_States)",Darinka_Dentcheva,citizenship,United_States
+ont_18_scientist_test_61,EXACT,1.00,"(Darinka_Dentcheva, knownFor, Stochastic_programming)",Darinka_Dentcheva,knownFor,Stochastic_programming,"(Darinka_Dentcheva, knownFor, stochastic programming)",Darinka_Dentcheva,knownFor,stochastic programming
+ont_18_scientist_test_61,EXACT,1.00,"(Darinka_Dentcheva, birthDate, 1958-01-01)",Darinka_Dentcheva,birthDate,1958-01-01,"(Darinka_Dentcheva, birthDate, 1958-01-01)",Darinka_Dentcheva,birthDate,1958-01-01
+ont_18_scientist_test_61,SEMANTIC,0.96,"(Darinka_Dentcheva, professionalField, Mathematical_optimization)",Darinka_Dentcheva,professionalField,Mathematical_optimization,"(Darinka_Dentcheva, type, Mathematical_optimization)",Darinka_Dentcheva,type,Mathematical_optimization
+ont_18_scientist_test_61,MISSING,,"(Darinka_Dentcheva, residence, New_Jersey)",Darinka_Dentcheva,residence,New_Jersey,,,,
+ont_18_scientist_test_61,MISSING,,"(Darinka_Dentcheva, influencedBy, Andrzej_Piotr_Ruszczyński)",Darinka_Dentcheva,influencedBy,Andrzej_Piotr_Ruszczyński,,,,
+ont_18_scientist_test_61,EXTRA,,,,,,"(Darinka_Dentcheva, type, mathematician)",Darinka_Dentcheva,type,mathematician
+ont_18_scientist_test_62,EXACT,1.00,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington
+ont_18_scientist_test_62,EXACT,1.00,"(Lady_Anne_Monson, birthDate, 1726-01-01)",Lady_Anne_Monson,birthDate,1726-01-01,"(Lady_Anne_Monson, birthDate, 1726-01-01)",Lady_Anne_Monson,birthDate,1726-01-01
+ont_18_scientist_test_62,EXACT,1.00,"(Lady_Anne_Monson, deathDate, 1776-02-18)",Lady_Anne_Monson,deathDate,1776-02-18,"(Lady_Anne_Monson, deathDate, 1776-02-18)",Lady_Anne_Monson,deathDate,1776-02-18
+ont_18_scientist_test_62,SEMANTIC,0.99,"(Lady_Anne_Monson, nationality, Kingdom_of_England)",Lady_Anne_Monson,nationality,Kingdom_of_England,"(Lady_Anne_Monson, nationality, United_Kingdom)",Lady_Anne_Monson,nationality,United_Kingdom
+ont_18_scientist_test_62,SEMANTIC,0.96,"(Lady_Anne_Monson, birthPlace, Kingdom_of_England)",Lady_Anne_Monson,birthPlace,Kingdom_of_England,"(Lady_Anne_Monson, nationality, United_Kingdom)",Lady_Anne_Monson,nationality,United_Kingdom
+ont_18_scientist_test_62,MISSING,,"(Lady_Anne_Monson, residence, India)",Lady_Anne_Monson,residence,India,,,,
+ont_18_scientist_test_62,MISSING,,"(Lady_Anne_Monson, spouse, George_Monson)",Lady_Anne_Monson,spouse,George_Monson,,,,
+ont_18_scientist_test_62,EXTRA,,,,,,"(Lady_Anne_Monson, spouse, George_Monson_(cricketer))",Lady_Anne_Monson,spouse,George_Monson_(cricketer)
+ont_18_scientist_test_63,EXACT,1.00,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington
+ont_18_scientist_test_63,EXACT,1.00,"(Lady_Anne_Monson, residence, India)",Lady_Anne_Monson,residence,India,"(Lady_Anne_Monson, residence, India)",Lady_Anne_Monson,residence,India
+ont_18_scientist_test_63,EXACT,1.00,"(Lady_Anne_Monson, deathDate, 1776-02-18)",Lady_Anne_Monson,deathDate,1776-02-18,"(Lady_Anne_Monson, deathDate, 1776-02-18)",Lady_Anne_Monson,deathDate,1776-02-18
+ont_18_scientist_test_63,EXACT,1.00,"(Lady_Anne_Monson, birthDate, 1726-01-01)",Lady_Anne_Monson,birthDate,1726-01-01,"(Lady_Anne_Monson, birthDate, 1726-01-01)",Lady_Anne_Monson,birthDate,1726-01-01
+ont_18_scientist_test_63,MISSING,,"(Lady_Anne_Monson, nationality, Kingdom_of_England)",Lady_Anne_Monson,nationality,Kingdom_of_England,,,,
+ont_18_scientist_test_63,MISSING,,"(Lady_Anne_Monson, birthPlace, Kingdom_of_England)",Lady_Anne_Monson,birthPlace,Kingdom_of_England,,,,
+ont_18_scientist_test_64,EXACT,1.00,"(Lady_Anne_Monson, birthDate, 1726-01-01)",Lady_Anne_Monson,birthDate,1726-01-01,"(Lady_Anne_Monson, birthDate, 1726-01-01)",Lady_Anne_Monson,birthDate,1726-01-01
+ont_18_scientist_test_64,SEMANTIC,0.95,"(Lady_Anne_Monson, professionalField, Botany)",Lady_Anne_Monson,professionalField,Botany,"(Lady_Anne_Monson, knownFor, Botany)",Lady_Anne_Monson,knownFor,Botany
+ont_18_scientist_test_64,MISSING,,"(India, populationTotal, 1293057000)",India,populationTotal,1293057000,,,,
+ont_18_scientist_test_64,MISSING,,"(Lady_Anne_Monson, residence, India)",Lady_Anne_Monson,residence,India,,,,
+ont_18_scientist_test_64,MISSING,,"(India, demonym, Indian)",India,demonym,Indian,,,,
+ont_18_scientist_test_65,EXACT,1.00,"(Brandon_Carter, birthPlace, England)",Brandon_Carter,birthPlace,England,"(Brandon_Carter, birthPlace, England)",Brandon_Carter,birthPlace,England
+ont_18_scientist_test_65,EXACT,1.00,"(Brandon_Carter, birthDate, 1942-01-01)",Brandon_Carter,birthDate,1942-01-01,"(Brandon_Carter, birthDate, 1942-01-01)",Brandon_Carter,birthDate,1942-01-01
+ont_18_scientist_test_65,SEMANTIC,0.99,"(Brandon_Carter, doctoralAdvisor, Dennis_William_Sciama)",Brandon_Carter,doctoralAdvisor,Dennis_William_Sciama,"(Brandon_Carter, doctoralAdvisor, Dennis_W._Sciama)",Brandon_Carter,doctoralAdvisor,Dennis_W._Sciama
+ont_18_scientist_test_65,MISSING,,"(Brandon_Carter, professionalField, General_relativity)",Brandon_Carter,professionalField,General_relativity,,,,
+ont_18_scientist_test_65,EXTRA,,,,,,"(Brandon_Carter, type, General_relativity)",Brandon_Carter,type,General_relativity
+ont_18_scientist_test_66,EXACT,1.00,"(Brandon_Carter, birthPlace, England)",Brandon_Carter,birthPlace,England,"(Brandon_Carter, birthPlace, England)",Brandon_Carter,birthPlace,England
+ont_18_scientist_test_66,SEMANTIC,0.99,"(Brandon_Carter, doctoralAdvisor, Dennis_William_Sciama)",Brandon_Carter,doctoralAdvisor,Dennis_William_Sciama,"(Brandon_Carter, doctoralAdvisor, Dennis_W._Sciama)",Brandon_Carter,doctoralAdvisor,Dennis_W._Sciama
+ont_18_scientist_test_67,MISSING,,"(India, populationTotal, 1293057000)",India,populationTotal,1293057000,,,,
+ont_18_scientist_test_68,EXACT,1.00,"(Brandon_Carter, birthDate, 1942-01-01)",Brandon_Carter,birthDate,1942-01-01,"(Brandon_Carter, birthDate, 1942-01-01)",Brandon_Carter,birthDate,1942-01-01
+ont_18_scientist_test_68,SEMANTIC,0.99,"(Brandon_Carter, doctoralAdvisor, Dennis_William_Sciama)",Brandon_Carter,doctoralAdvisor,Dennis_William_Sciama,"(Brandon_Carter, doctoralAdvisor, Dennis_W._Sciama)",Brandon_Carter,doctoralAdvisor,Dennis_W._Sciama
+ont_18_scientist_test_69,EXACT,1.00,"(Brandon_Carter, birthPlace, England)",Brandon_Carter,birthPlace,England,"(Brandon_Carter, birthPlace, England)",Brandon_Carter,birthPlace,England
+ont_18_scientist_test_69,EXACT,1.00,"(Brandon_Carter, birthDate, 1942-01-01)",Brandon_Carter,birthDate,1942-01-01,"(Brandon_Carter, birthDate, 1942-01-01)",Brandon_Carter,birthDate,1942-01-01
+ont_18_scientist_test_69,SEMANTIC,0.99,"(Brandon_Carter, doctoralAdvisor, Dennis_William_Sciama)",Brandon_Carter,doctoralAdvisor,Dennis_William_Sciama,"(Brandon_Carter, doctoralAdvisor, Dennis_W._Sciama)",Brandon_Carter,doctoralAdvisor,Dennis_W._Sciama
+ont_18_scientist_test_69,MISSING,,"(Brandon_Carter, knownFor, Carter_constant)",Brandon_Carter,knownFor,Carter_constant,,,,
+ont_18_scientist_test_69,MISSING,,"(Brandon_Carter, knownFor, No-hair_theorem)",Brandon_Carter,knownFor,No-hair_theorem,,,,
+ont_18_scientist_test_69,MISSING,,"(Brandon_Carter, almaMater, University_of_Cambridge)",Brandon_Carter,almaMater,University_of_Cambridge,,,,
+ont_18_scientist_test_69,MISSING,,"(Brandon_Carter, professionalField, General_relativity)",Brandon_Carter,professionalField,General_relativity,,,,
+ont_18_scientist_test_69,EXTRA,,,,,,"(Brandon_Carter, type, General_relativity)",Brandon_Carter,type,General_relativity
+ont_18_scientist_test_7,SEMANTIC,0.98,"(Darlington, postalCode, DL1, DL2, DL3)",Darlington,postalCode,"DL1, DL2, DL3","(Darlington, postalCode, dl1)",Darlington,postalCode,dl1
+ont_18_scientist_test_7,EXTRA,,,,,,"(Darlington, postalCode, dl2)",Darlington,postalCode,dl2
+ont_18_scientist_test_7,EXTRA,,,,,,"(Darlington, postalCode, dl3)",Darlington,postalCode,dl3
+ont_18_scientist_test_70,EXACT,1.00,"(Lady_Anne_Monson, residence, India)",Lady_Anne_Monson,residence,India,"(Lady_Anne_Monson, residence, India)",Lady_Anne_Monson,residence,India
+ont_18_scientist_test_70,SEMANTIC,0.98,"(Lady_Anne_Monson, nationality, Kingdom_of_England)",Lady_Anne_Monson,nationality,Kingdom_of_England,"(Lady_Anne_Monson, nationality, England)",Lady_Anne_Monson,nationality,England
+ont_18_scientist_test_70,SEMANTIC,0.94,"(Lady_Anne_Monson, professionalField, Botany)",Lady_Anne_Monson,professionalField,Botany,"(Lady_Anne_Monson, type, Botany)",Lady_Anne_Monson,type,Botany
+ont_18_scientist_test_70,MISSING,,"(Lady_Anne_Monson, spouse, George_Monson)",Lady_Anne_Monson,spouse,George_Monson,,,,
+ont_18_scientist_test_70,EXTRA,,,,,,"(Lady_Anne_Monson, spouse, George_Monson_(cricketer))",Lady_Anne_Monson,spouse,George_Monson_(cricketer)
+ont_18_scientist_test_71,EXACT,1.00,"(Lady_Anne_Monson, deathDate, 1776-02-18)",Lady_Anne_Monson,deathDate,1776-02-18,"(Lady_Anne_Monson, deathDate, 1776-02-18)",Lady_Anne_Monson,deathDate,1776-02-18
+ont_18_scientist_test_71,SEMANTIC,0.99,"(Lady_Anne_Monson, nationality, Kingdom_of_England)",Lady_Anne_Monson,nationality,Kingdom_of_England,"(Lady_Anne_Monson, nationality, United_Kingdom)",Lady_Anne_Monson,nationality,United_Kingdom
+ont_18_scientist_test_71,SEMANTIC,0.96,"(Lady_Anne_Monson, birthPlace, Kingdom_of_England)",Lady_Anne_Monson,birthPlace,Kingdom_of_England,"(Lady_Anne_Monson, nationality, United_Kingdom)",Lady_Anne_Monson,nationality,United_Kingdom
+ont_18_scientist_test_72,EXACT,1.00,"(Darinka_Dentcheva, birthDate, 1958-01-01)",Darinka_Dentcheva,birthDate,1958-01-01,"(Darinka_Dentcheva, birthDate, 1958-01-01)",Darinka_Dentcheva,birthDate,1958-01-01
+ont_18_scientist_test_72,SEMANTIC,0.95,"(Darinka_Dentcheva, professionalField, Mathematical_optimization)",Darinka_Dentcheva,professionalField,Mathematical_optimization,"(Darinka_Dentcheva, type, mathematical optimization)",Darinka_Dentcheva,type,mathematical optimization
+ont_18_scientist_test_72,SEMANTIC,0.99,"(Darinka_Dentcheva, almaMater, Humboldt_University)",Darinka_Dentcheva,almaMater,Humboldt_University,"(Darinka_Dentcheva, almaMater, Humboldt_University_of_Berlin)",Darinka_Dentcheva,almaMater,Humboldt_University_of_Berlin
+ont_18_scientist_test_72,MISSING,,"(Darinka_Dentcheva, citizenship, United_States)",Darinka_Dentcheva,citizenship,United_States,,,,
+ont_18_scientist_test_72,MISSING,,"(Darinka_Dentcheva, influencedBy, Andrzej_Piotr_Ruszczyński)",Darinka_Dentcheva,influencedBy,Andrzej_Piotr_Ruszczyński,,,,
+ont_18_scientist_test_72,EXTRA,,,,,,"(Darinka_Dentcheva, citizenship, Us_(2019_film))",Darinka_Dentcheva,citizenship,Us_(2019_film)
+ont_18_scientist_test_73,EXACT,1.00,"(Brandon_Carter, birthDate, 1942-01-01)",Brandon_Carter,birthDate,1942-01-01,"(Brandon_Carter, birthDate, 1942-01-01)",Brandon_Carter,birthDate,1942-01-01
+ont_18_scientist_test_73,MISSING,,"(Brandon_Carter, professionalField, General_relativity)",Brandon_Carter,professionalField,General_relativity,,,,
+ont_18_scientist_test_73,MISSING,,"(Brandon_Carter, almaMater, University_of_Cambridge)",Brandon_Carter,almaMater,University_of_Cambridge,,,,
+ont_18_scientist_test_73,EXTRA,,,,,,"(Brandon_Carter, type, General_relativity)",Brandon_Carter,type,General_relativity
+ont_18_scientist_test_74,EXACT,1.00,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington
+ont_18_scientist_test_74,EXACT,1.00,"(Lady_Anne_Monson, birthDate, 1726-01-01)",Lady_Anne_Monson,birthDate,1726-01-01,"(Lady_Anne_Monson, birthDate, 1726-01-01)",Lady_Anne_Monson,birthDate,1726-01-01
+ont_18_scientist_test_74,MISSING,,"(Lady_Anne_Monson, nationality, Kingdom_of_England)",Lady_Anne_Monson,nationality,Kingdom_of_England,,,,
+ont_18_scientist_test_75,MISSING,,"(Kingdom_of_England, capital, Winchester)",Kingdom_of_England,capital,Winchester,,,,
+ont_18_scientist_test_75,MISSING,,"(Lady_Anne_Monson, birthPlace, Kingdom_of_England)",Lady_Anne_Monson,birthPlace,Kingdom_of_England,,,,
+ont_18_scientist_test_76,EXACT,1.00,"(Darinka_Dentcheva, knownFor, Stochastic_programming)",Darinka_Dentcheva,knownFor,Stochastic_programming,"(Darinka_Dentcheva, knownFor, Stochastic_programming)",Darinka_Dentcheva,knownFor,Stochastic_programming
+ont_18_scientist_test_76,EXACT,1.00,"(Darinka_Dentcheva, birthDate, 1958-01-01)",Darinka_Dentcheva,birthDate,1958-01-01,"(Darinka_Dentcheva, birthDate, 1958-01-01)",Darinka_Dentcheva,birthDate,1958-01-01
+ont_18_scientist_test_76,SEMANTIC,0.96,"(Darinka_Dentcheva, professionalField, Mathematical_optimization)",Darinka_Dentcheva,professionalField,Mathematical_optimization,"(Darinka_Dentcheva, type, Mathematical_optimization)",Darinka_Dentcheva,type,Mathematical_optimization
+ont_18_scientist_test_76,EXTRA,,,,,,"(Darinka_Dentcheva, type, Scientist)",Darinka_Dentcheva,type,Scientist
+ont_18_scientist_test_76,EXTRA,,,,,,"(Darinka_Dentcheva, type, professional)",Darinka_Dentcheva,type,professional
+ont_18_scientist_test_77,EXACT,1.00,"(Lady_Anne_Monson, residence, India)",Lady_Anne_Monson,residence,India,"(Lady_Anne_Monson, residence, India)",Lady_Anne_Monson,residence,India
+ont_18_scientist_test_77,MISSING,,"(Lady_Anne_Monson, nationality, Kingdom_of_England)",Lady_Anne_Monson,nationality,Kingdom_of_England,,,,
+ont_18_scientist_test_77,MISSING,,"(Lady_Anne_Monson, spouse, George_Monson)",Lady_Anne_Monson,spouse,George_Monson,,,,
+ont_18_scientist_test_77,EXTRA,,,,,,"(Lady_Anne_Monson, spouse, George_Monson_(cricketer))",Lady_Anne_Monson,spouse,George_Monson_(cricketer)
+ont_18_scientist_test_78,EXACT,1.00,"(Brandon_Carter, birthDate, 1942-01-01)",Brandon_Carter,birthDate,1942-01-01,"(Brandon_Carter, birthDate, 1942-01-01)",Brandon_Carter,birthDate,1942-01-01
+ont_18_scientist_test_78,MISSING,,"(Brandon_Carter, knownFor, Penrose_diagram)",Brandon_Carter,knownFor,Penrose_diagram,,,,
+ont_18_scientist_test_78,MISSING,,"(Brandon_Carter, almaMater, University_of_Cambridge)",Brandon_Carter,almaMater,University_of_Cambridge,,,,
+ont_18_scientist_test_78,EXTRA,,,,,,"(Brandon_Carter, knownFor, creating the penrose diagram)",Brandon_Carter,knownFor,creating the penrose diagram
+ont_18_scientist_test_79,EXACT,1.00,"(Brandon_Carter, birthPlace, England)",Brandon_Carter,birthPlace,England,"(Brandon_Carter, birthPlace, England)",Brandon_Carter,birthPlace,England
+ont_18_scientist_test_79,EXACT,1.00,"(Brandon_Carter, birthDate, 1942-01-01)",Brandon_Carter,birthDate,1942-01-01,"(Brandon_Carter, birthDate, 1942-01-01)",Brandon_Carter,birthDate,1942-01-01
+ont_18_scientist_test_79,SEMANTIC,0.99,"(Brandon_Carter, doctoralAdvisor, Dennis_William_Sciama)",Brandon_Carter,doctoralAdvisor,Dennis_William_Sciama,"(Brandon_Carter, doctoralAdvisor, Dennis_W._Sciama)",Brandon_Carter,doctoralAdvisor,Dennis_W._Sciama
+ont_18_scientist_test_8,MISSING,,"(Kingdom_of_England, governmentType, Unitary_state)",Kingdom_of_England,governmentType,Unitary_state,,,,
+ont_18_scientist_test_80,EXACT,1.00,"(Brandon_Carter, birthPlace, England)",Brandon_Carter,birthPlace,England,"(Brandon_Carter, birthPlace, England)",Brandon_Carter,birthPlace,England
+ont_18_scientist_test_80,EXACT,1.00,"(Brandon_Carter, birthDate, 1942-01-01)",Brandon_Carter,birthDate,1942-01-01,"(Brandon_Carter, birthDate, 1942-01-01)",Brandon_Carter,birthDate,1942-01-01
+ont_18_scientist_test_80,SEMANTIC,0.99,"(Brandon_Carter, doctoralAdvisor, Dennis_William_Sciama)",Brandon_Carter,doctoralAdvisor,Dennis_William_Sciama,"(Brandon_Carter, doctoralAdvisor, Dennis_W._Sciama)",Brandon_Carter,doctoralAdvisor,Dennis_W._Sciama
+ont_18_scientist_test_80,MISSING,,"(Brandon_Carter, almaMater, University_of_Cambridge)",Brandon_Carter,almaMater,University_of_Cambridge,,,,
+ont_18_scientist_test_80,MISSING,,"(University_of_Cambridge, chancellor, David_Sainsbury,_Baron_Sainsbury_of_Turville)",University_of_Cambridge,chancellor,"David_Sainsbury,_Baron_Sainsbury_of_Turville",,,,
+ont_18_scientist_test_81,EXACT,1.00,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington
+ont_18_scientist_test_81,SEMANTIC,0.98,"(Lady_Anne_Monson, nationality, Kingdom_of_England)",Lady_Anne_Monson,nationality,Kingdom_of_England,"(Lady_Anne_Monson, nationality, England)",Lady_Anne_Monson,nationality,England
+ont_18_scientist_test_82,MISSING,,"(University_of_Cambridge, country, England)",University_of_Cambridge,country,England,,,,
+ont_18_scientist_test_83,MISSING,,"(Andrzej_Piotr_Ruszczyński, professionalField, Mathematical_optimization)",Andrzej_Piotr_Ruszczyński,professionalField,Mathematical_optimization,,,,
+ont_18_scientist_test_84,EXACT,1.00,"(India, leader, Pranab_Mukherjee)",India,leader,Pranab_Mukherjee,"(India, leader, Pranab_Mukherjee)",India,leader,Pranab_Mukherjee
+ont_18_scientist_test_84,EXACT,1.00,"(Lady_Anne_Monson, residence, India)",Lady_Anne_Monson,residence,India,"(Lady_Anne_Monson, residence, India)",Lady_Anne_Monson,residence,India
+ont_18_scientist_test_84,SEMANTIC,0.99,"(Lady_Anne_Monson, nationality, Kingdom_of_England)",Lady_Anne_Monson,nationality,Kingdom_of_England,"(Lady_Anne_Monson, nationality, United_Kingdom)",Lady_Anne_Monson,nationality,United_Kingdom
+ont_18_scientist_test_84,MISSING,,"(India, areaTotal, 3287590000000.0)",India,areaTotal,3287590000000.0,,,,
+ont_18_scientist_test_85,EXACT,1.00,"(Darinka_Dentcheva, citizenship, United_States)",Darinka_Dentcheva,citizenship,United_States,"(Darinka_Dentcheva, citizenship, United_States)",Darinka_Dentcheva,citizenship,United_States
+ont_18_scientist_test_85,EXACT,1.00,"(Darinka_Dentcheva, knownFor, Stochastic_programming)",Darinka_Dentcheva,knownFor,Stochastic_programming,"(Darinka_Dentcheva, knownFor, Stochastic_programming)",Darinka_Dentcheva,knownFor,Stochastic_programming
+ont_18_scientist_test_85,MISSING,,"(United_States, longName, United States of America)",United_States,longName,United States of America,,,,
+ont_18_scientist_test_85,MISSING,,"(Darinka_Dentcheva, almaMater, Humboldt_University)",Darinka_Dentcheva,almaMater,Humboldt_University,,,,
+ont_18_scientist_test_85,EXTRA,,,,,,"(Darinka_Dentcheva, affiliation, Humboldt_University_of_Berlin)",Darinka_Dentcheva,affiliation,Humboldt_University_of_Berlin
+ont_18_scientist_test_86,MISSING,,"(University_of_Cambridge, affiliation, League_of_European_Research_Universities)",University_of_Cambridge,affiliation,League_of_European_Research_Universities,,,,
+ont_18_scientist_test_86,MISSING,,"(Brandon_Carter, almaMater, University_of_Cambridge)",Brandon_Carter,almaMater,University_of_Cambridge,,,,
+ont_18_scientist_test_87,EXACT,1.00,"(Brandon_Carter, knownFor, No-hair_theorem)",Brandon_Carter,knownFor,No-hair_theorem,"(Brandon_Carter, knownFor, no-hair theorem)",Brandon_Carter,knownFor,no-hair theorem
+ont_18_scientist_test_87,EXACT,1.00,"(Brandon_Carter, knownFor, Carter_constant)",Brandon_Carter,knownFor,Carter_constant,"(Brandon_Carter, knownFor, carter constant)",Brandon_Carter,knownFor,carter constant
+ont_18_scientist_test_87,MISSING,,"(Brandon_Carter, professionalField, General_relativity)",Brandon_Carter,professionalField,General_relativity,,,,
+ont_18_scientist_test_87,EXTRA,,,,,,"(Brandon_Carter, type, General_relativity)",Brandon_Carter,type,General_relativity
+ont_18_scientist_test_88,MISSING,,"(Lady_Anne_Monson, nationality, Kingdom_of_England)",Lady_Anne_Monson,nationality,Kingdom_of_England,,,,
+ont_18_scientist_test_89,EXACT,1.00,"(India, foundingDate, 1950-01-26)",India,foundingDate,1950-01-26,"(India, foundingDate, 1950-01-26)",India,foundingDate,1950-01-26
+ont_18_scientist_test_9,EXACT,1.00,"(United_States, leaderTitle, Vice President)",United_States,leaderTitle,Vice President,"(United_States, leaderTitle, vice president)",United_States,leaderTitle,vice president
+ont_18_scientist_test_9,EXACT,1.00,"(Darinka_Dentcheva, residence, United_States)",Darinka_Dentcheva,residence,United_States,"(Darinka_Dentcheva, residence, United_States)",Darinka_Dentcheva,residence,United_States
+ont_18_scientist_test_90,EXACT,1.00,"(Brandon_Carter, knownFor, No-hair_theorem)",Brandon_Carter,knownFor,No-hair_theorem,"(Brandon_Carter, knownFor, no-hair theorem)",Brandon_Carter,knownFor,no-hair theorem
+ont_18_scientist_test_90,EXACT,1.00,"(Brandon_Carter, knownFor, Carter_constant)",Brandon_Carter,knownFor,Carter_constant,"(Brandon_Carter, knownFor, carter constant)",Brandon_Carter,knownFor,carter constant
+ont_18_scientist_test_91,MISSING,,"(Brandon_Carter, knownFor, Carter_constant)",Brandon_Carter,knownFor,Carter_constant,,,,
+ont_18_scientist_test_91,EXTRA,,,,,,"(Brandon_Carter, knownFor, the carter constant)",Brandon_Carter,knownFor,the carter constant
+ont_18_scientist_test_92,EXACT,1.00,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington
+ont_18_scientist_test_92,EXACT,1.00,"(Lady_Anne_Monson, birthDate, 1726-01-01)",Lady_Anne_Monson,birthDate,1726-01-01,"(Lady_Anne_Monson, birthDate, 1726-01-01)",Lady_Anne_Monson,birthDate,1726-01-01
+ont_18_scientist_test_93,EXACT,1.00,"(Brandon_Carter, knownFor, Doomsday_argument)",Brandon_Carter,knownFor,Doomsday_argument,"(Brandon_Carter, knownFor, doomsday argument)",Brandon_Carter,knownFor,doomsday argument
+ont_18_scientist_test_94,EXACT,1.00,"(Darinka_Dentcheva, residence, New_Jersey)",Darinka_Dentcheva,residence,New_Jersey,"(Darinka_Dentcheva, residence, New_Jersey)",Darinka_Dentcheva,residence,New_Jersey
+ont_18_scientist_test_94,EXACT,1.00,"(United_States, leaderTitle, Vice President)",United_States,leaderTitle,Vice President,"(United_States, leaderTitle, vice president)",United_States,leaderTitle,vice president
+ont_18_scientist_test_94,SEMANTIC,0.98,"(Darinka_Dentcheva, residence, United_States)",Darinka_Dentcheva,residence,United_States,"(Darinka_Dentcheva, nationality, United_States)",Darinka_Dentcheva,nationality,United_States
+ont_18_scientist_test_95,EXACT,1.00,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington
+ont_18_scientist_test_95,EXACT,1.00,"(Lady_Anne_Monson, birthDate, 1726-01-01)",Lady_Anne_Monson,birthDate,1726-01-01,"(Lady_Anne_Monson, birthDate, 1726-01-01)",Lady_Anne_Monson,birthDate,1726-01-01
+ont_18_scientist_test_95,EXACT,1.00,"(Lady_Anne_Monson, deathDate, 1776-02-18)",Lady_Anne_Monson,deathDate,1776-02-18,"(Lady_Anne_Monson, deathDate, 1776-02-18)",Lady_Anne_Monson,deathDate,1776-02-18
+ont_18_scientist_test_95,MISSING,,"(Lady_Anne_Monson, birthPlace, Kingdom_of_England)",Lady_Anne_Monson,birthPlace,Kingdom_of_England,,,,
+ont_18_scientist_test_95,MISSING,,"(Lady_Anne_Monson, professionalField, Botany)",Lady_Anne_Monson,professionalField,Botany,,,,
+ont_18_scientist_test_95,EXTRA,,,,,,"(Lady_Anne_Monson, type, botanist)",Lady_Anne_Monson,type,botanist
+ont_18_scientist_test_96,EXACT,1.00,"(Darlington, gridReference, NZ289147)",Darlington,gridReference,NZ289147,"(Darlington, gridReference, nz289147)",Darlington,gridReference,nz289147
+ont_18_scientist_test_97,EXACT,1.00,"(Darinka_Dentcheva, knownFor, Stochastic_programming)",Darinka_Dentcheva,knownFor,Stochastic_programming,"(Darinka_Dentcheva, knownFor, stochastic programming)",Darinka_Dentcheva,knownFor,stochastic programming
+ont_18_scientist_test_98,EXACT,1.00,"(Brandon_Carter, birthPlace, England)",Brandon_Carter,birthPlace,England,"(Brandon_Carter, birthPlace, England)",Brandon_Carter,birthPlace,England
+ont_18_scientist_test_98,SEMANTIC,0.99,"(Brandon_Carter, doctoralAdvisor, Dennis_William_Sciama)",Brandon_Carter,doctoralAdvisor,Dennis_William_Sciama,"(Brandon_Carter, doctoralAdvisor, Dennis_W._Sciama)",Brandon_Carter,doctoralAdvisor,Dennis_W._Sciama
+ont_18_scientist_test_98,MISSING,,"(Brandon_Carter, professionalField, General_relativity)",Brandon_Carter,professionalField,General_relativity,,,,
+ont_18_scientist_test_98,MISSING,,"(Brandon_Carter, almaMater, University_of_Cambridge)",Brandon_Carter,almaMater,University_of_Cambridge,,,,
+ont_18_scientist_test_98,EXTRA,,,,,,"(Brandon_Carter, type, General_relativity)",Brandon_Carter,type,General_relativity
+ont_18_scientist_test_99,EXACT,1.00,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington,"(Lady_Anne_Monson, birthPlace, Darlington)",Lady_Anne_Monson,birthPlace,Darlington
+ont_18_scientist_test_99,EXACT,1.00,"(Lady_Anne_Monson, birthDate, 1726-01-01)",Lady_Anne_Monson,birthDate,1726-01-01,"(Lady_Anne_Monson, birthDate, 1726-01-01)",Lady_Anne_Monson,birthDate,1726-01-01
+ont_18_scientist_test_99,EXACT,1.00,"(Lady_Anne_Monson, deathDate, 1776-02-18)",Lady_Anne_Monson,deathDate,1776-02-18,"(Lady_Anne_Monson, deathDate, 1776-02-18)",Lady_Anne_Monson,deathDate,1776-02-18
+ont_18_scientist_test_99,MISSING,,"(Lady_Anne_Monson, birthPlace, Kingdom_of_England)",Lady_Anne_Monson,birthPlace,Kingdom_of_England,,,,
+ont_18_scientist_test_99,MISSING,,"(Lady_Anne_Monson, spouse, George_Monson)",Lady_Anne_Monson,spouse,George_Monson,,,,
+ont_18_scientist_test_99,EXTRA,,,,,,"(Lady_Anne_Monson, spouse, George_Monson_(cricketer))",Lady_Anne_Monson,spouse,George_Monson_(cricketer)

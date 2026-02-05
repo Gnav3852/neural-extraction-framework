@@ -1,0 +1,146 @@
+sent_id,match_type,similarity,expected,expected_sub,expected_rel,expected_obj,predicted,predicted_sub,predicted_rel,predicted_obj
+ont_10_comicscharacter_test_1,SEMANTIC,0.94,"(Arion_(comicsCharacter), creator, Jan_Duursema)",Arion_(comicsCharacter),creator,Jan_Duursema,"(Arion, creator, Jan_Duursema)",Arion,creator,Jan_Duursema
+ont_10_comicscharacter_test_1,SEMANTIC,0.95,"(Arion_(comicsCharacter), creator, Paul_Kupperberg)",Arion_(comicsCharacter),creator,Paul_Kupperberg,"(Arion, creator, Paul_Kupperberg)",Arion,creator,Paul_Kupperberg
+ont_10_comicscharacter_test_1,MISSING,,"(Arion_(comicsCharacter), alternativeName, Ahri'ahn)",Arion_(comicsCharacter),alternativeName,Ahri'ahn,,,,
+ont_10_comicscharacter_test_1,EXTRA,,,,,,"(Arion, alternativeName, ahri'ahn)",Arion,alternativeName,ahri'ahn
+ont_10_comicscharacter_test_10,MISSING,,"(Balder_(comicsCharacter), creator, Stan_Lee)",Balder_(comicsCharacter),creator,Stan_Lee,,,,
+ont_10_comicscharacter_test_10,MISSING,,"(Balder_(comicsCharacter), alternativeName, Balder Odinson)",Balder_(comicsCharacter),alternativeName,Balder Odinson,,,,
+ont_10_comicscharacter_test_10,MISSING,,"(Balder_(comicsCharacter), creator, Jack_Kirby)",Balder_(comicsCharacter),creator,Jack_Kirby,,,,
+ont_10_comicscharacter_test_10,EXTRA,,,,,,"(Balder_the_Brave, alternativeName, balder odinson)",Balder_the_Brave,alternativeName,balder odinson
+ont_10_comicscharacter_test_10,EXTRA,,,,,,"(Balder_the_Brave, creator, Stan_Lee)",Balder_the_Brave,creator,Stan_Lee
+ont_10_comicscharacter_test_10,EXTRA,,,,,,"(Balder_the_Brave, creator, Jack_Kirby)",Balder_the_Brave,creator,Jack_Kirby
+ont_10_comicscharacter_test_11,MISSING,,"(Balder_(comicsCharacter), alternativeName, Balder Odinson)",Balder_(comicsCharacter),alternativeName,Balder Odinson,,,,
+ont_10_comicscharacter_test_11,MISSING,,"(Balder_(comicsCharacter), creator, Jack_Kirby)",Balder_(comicsCharacter),creator,Jack_Kirby,,,,
+ont_10_comicscharacter_test_11,MISSING,,"(Jack_Kirby, nationality, Americans)",Jack_Kirby,nationality,Americans,,,,
+ont_10_comicscharacter_test_12,MISSING,,"(Balder_(comicsCharacter), creator, Stan_Lee)",Balder_(comicsCharacter),creator,Stan_Lee,,,,
+ont_10_comicscharacter_test_12,MISSING,,"(Balder_(comicsCharacter), creator, Jack_Kirby)",Balder_(comicsCharacter),creator,Jack_Kirby,,,,
+ont_10_comicscharacter_test_12,MISSING,,"(Jack_Kirby, nationality, Americans)",Jack_Kirby,nationality,Americans,,,,
+ont_10_comicscharacter_test_12,EXTRA,,,,,,"(Balder_the_Brave, creator, Jack_Kirby)",Balder_the_Brave,creator,Jack_Kirby
+ont_10_comicscharacter_test_12,EXTRA,,,,,,"(Balder_the_Brave, creator, Stan_Lee)",Balder_the_Brave,creator,Stan_Lee
+ont_10_comicscharacter_test_13,EXACT,1.00,"(Big_Hero_6_(film), distributor, Walt_Disney_Studios_Motion_Pictures)",Big_Hero_6_(film),distributor,Walt_Disney_Studios_Motion_Pictures,"(Big_Hero_6_(film), distributor, Walt_Disney_Studios_Motion_Pictures)",Big_Hero_6_(film),distributor,Walt_Disney_Studios_Motion_Pictures
+ont_10_comicscharacter_test_13,MISSING,,"(Baymax, firstAppearanceInFilm, Big_Hero_6_(film))",Baymax,firstAppearanceInFilm,Big_Hero_6_(film),,,,
+ont_10_comicscharacter_test_13,MISSING,,"(Big_Hero_6_(film), starring, Alan_Tudyk)",Big_Hero_6_(film),starring,Alan_Tudyk,,,,
+ont_10_comicscharacter_test_13,EXTRA,,,,,,"(Big_Hero_6_(film), series, Big_Hero_6_(comics))",Big_Hero_6_(film),series,Big_Hero_6_(comics)
+ont_10_comicscharacter_test_14,EXACT,1.00,"(Big_Hero_6_(film), distributor, Walt_Disney_Studios_Motion_Pictures)",Big_Hero_6_(film),distributor,Walt_Disney_Studios_Motion_Pictures,"(Big_Hero_6_(film), distributor, Walt_Disney_Studios_Motion_Pictures)",Big_Hero_6_(film),distributor,Walt_Disney_Studios_Motion_Pictures
+ont_10_comicscharacter_test_14,MISSING,,"(Baymax, firstAppearanceInFilm, Big_Hero_6_(film))",Baymax,firstAppearanceInFilm,Big_Hero_6_(film),,,,
+ont_10_comicscharacter_test_14,MISSING,,"(Big_Hero_6_(film), starring, Ryan_Potter)",Big_Hero_6_(film),starring,Ryan_Potter,,,,
+ont_10_comicscharacter_test_14,EXTRA,,,,,,"(Big_Hero_6_(film), series, Big_Hero_6_(comics))",Big_Hero_6_(film),series,Big_Hero_6_(comics)
+ont_10_comicscharacter_test_15,EXACT,1.00,"(Baymax, creator, Duncan_Rouleau)",Baymax,creator,Duncan_Rouleau,"(Baymax, creator, Duncan_Rouleau)",Baymax,creator,Duncan_Rouleau
+ont_10_comicscharacter_test_15,EXACT,1.00,"(Baymax, creator, Steven_T._Seagle)",Baymax,creator,Steven_T._Seagle,"(Baymax, creator, Steven_T._Seagle)",Baymax,creator,Steven_T._Seagle
+ont_10_comicscharacter_test_15,SEMANTIC,0.95,"(Baymax, series, Big_Hero_6_(film))",Baymax,series,Big_Hero_6_(film),"(Big_Hero_6_(film), starring, Baymax)",Big_Hero_6_(film),starring,Baymax
+ont_10_comicscharacter_test_16,EXACT,1.00,"(Baymax, creator, Duncan_Rouleau)",Baymax,creator,Duncan_Rouleau,"(Baymax, creator, Duncan_Rouleau)",Baymax,creator,Duncan_Rouleau
+ont_10_comicscharacter_test_16,EXACT,1.00,"(Baymax, voice, Scott_Adsit)",Baymax,voice,Scott_Adsit,"(Baymax, voice, Scott_Adsit)",Baymax,voice,Scott_Adsit
+ont_10_comicscharacter_test_16,EXACT,1.00,"(Baymax, creator, Steven_T._Seagle)",Baymax,creator,Steven_T._Seagle,"(Baymax, creator, Steven_T._Seagle)",Baymax,creator,Steven_T._Seagle
+ont_10_comicscharacter_test_17,EXACT,1.00,"(Bibbo_Bibbowski, creator, Marv_Wolfman)",Bibbo_Bibbowski,creator,Marv_Wolfman,"(Bibbo_Bibbowski, creator, Marv_Wolfman)",Bibbo_Bibbowski,creator,Marv_Wolfman
+ont_10_comicscharacter_test_17,EXACT,1.00,"(Bibbo_Bibbowski, creator, Jerry_Ordway)",Bibbo_Bibbowski,creator,Jerry_Ordway,"(Bibbo_Bibbowski, creator, Jerry_Ordway)",Bibbo_Bibbowski,creator,Jerry_Ordway
+ont_10_comicscharacter_test_17,MISSING,,"(Jerry_Ordway, nationality, Americans)",Jerry_Ordway,nationality,Americans,,,,
+ont_10_comicscharacter_test_18,EXACT,1.00,"(Big_Hero_6_(film), distributor, Walt_Disney_Studios_Motion_Pictures)",Big_Hero_6_(film),distributor,Walt_Disney_Studios_Motion_Pictures,"(Big_Hero_6_(film), distributor, Walt_Disney_Studios_Motion_Pictures)",Big_Hero_6_(film),distributor,Walt_Disney_Studios_Motion_Pictures
+ont_10_comicscharacter_test_18,SEMANTIC,0.95,"(Baymax, series, Big_Hero_6_(film))",Baymax,series,Big_Hero_6_(film),"(Big_Hero_6_(film), starring, Baymax)",Big_Hero_6_(film),starring,Baymax
+ont_10_comicscharacter_test_18,MISSING,,"(Big_Hero_6_(film), starring, Jamie_Chung)",Big_Hero_6_(film),starring,Jamie_Chung,,,,
+ont_10_comicscharacter_test_19,EXACT,1.00,"(Big_Hero_6_(film), distributor, Walt_Disney_Studios_Motion_Pictures)",Big_Hero_6_(film),distributor,Walt_Disney_Studios_Motion_Pictures,"(Big_Hero_6_(film), distributor, Walt_Disney_Studios_Motion_Pictures)",Big_Hero_6_(film),distributor,Walt_Disney_Studios_Motion_Pictures
+ont_10_comicscharacter_test_19,SEMANTIC,0.95,"(Baymax, series, Big_Hero_6_(film))",Baymax,series,Big_Hero_6_(film),"(Big_Hero_6_(film), starring, Baymax)",Big_Hero_6_(film),starring,Baymax
+ont_10_comicscharacter_test_19,MISSING,,"(Big_Hero_6_(film), starring, Maya_Rudolph)",Big_Hero_6_(film),starring,Maya_Rudolph,,,,
+ont_10_comicscharacter_test_2,SEMANTIC,0.94,"(Arion_(comicsCharacter), creator, Jan_Duursema)",Arion_(comicsCharacter),creator,Jan_Duursema,"(Arion, creator, Jan_Duursema)",Arion,creator,Jan_Duursema
+ont_10_comicscharacter_test_2,SEMANTIC,0.95,"(Arion_(comicsCharacter), creator, Paul_Kupperberg)",Arion_(comicsCharacter),creator,Paul_Kupperberg,"(Arion, creator, Paul_Kupperberg)",Arion,creator,Paul_Kupperberg
+ont_10_comicscharacter_test_2,MISSING,,"(Jan_Duursema, award, Eisner_Award)",Jan_Duursema,award,Eisner_Award,,,,
+ont_10_comicscharacter_test_20,SEMANTIC,0.99,"(Big_Hero_6_(film), distributor, Walt_Disney_Studios_Motion_Pictures)",Big_Hero_6_(film),distributor,Walt_Disney_Studios_Motion_Pictures,"(Walt_Disney_Studios_Motion_Pictures, distributor, Big_Hero_6_(film))",Walt_Disney_Studios_Motion_Pictures,distributor,Big_Hero_6_(film)
+ont_10_comicscharacter_test_20,SEMANTIC,0.95,"(Baymax, series, Big_Hero_6_(film))",Baymax,series,Big_Hero_6_(film),"(Big_Hero_6_(film), starring, Baymax)",Big_Hero_6_(film),starring,Baymax
+ont_10_comicscharacter_test_20,MISSING,,"(Big_Hero_6_(film), starring, Alan_Tudyk)",Big_Hero_6_(film),starring,Alan_Tudyk,,,,
+ont_10_comicscharacter_test_21,MISSING,,"(Ernie_Colón, nationality, Puerto_Ricans)",Ernie_Colón,nationality,Puerto_Ricans,,,,
+ont_10_comicscharacter_test_21,MISSING,,"(Bolt_(comicsCharacter), creator, Ernie_Colón)",Bolt_(comicsCharacter),creator,Ernie_Colón,,,,
+ont_10_comicscharacter_test_21,MISSING,,"(Bolt_(comicsCharacter), creator, Dan_Mishkin)",Bolt_(comicsCharacter),creator,Dan_Mishkin,,,,
+ont_10_comicscharacter_test_21,EXTRA,,,,,,"(Bolt_(firearms), creator, Dan_Mishkin)",Bolt_(firearms),creator,Dan_Mishkin
+ont_10_comicscharacter_test_22,MISSING,,"(Bolt_(comicsCharacter), creator, Gary_Cohn_(comics))",Bolt_(comicsCharacter),creator,Gary_Cohn_(comics),,,,
+ont_10_comicscharacter_test_22,MISSING,,"(Ernie_Colón, nationality, Puerto_Ricans)",Ernie_Colón,nationality,Puerto_Ricans,,,,
+ont_10_comicscharacter_test_22,MISSING,,"(Bolt_(comicsCharacter), creator, Ernie_Colón)",Bolt_(comicsCharacter),creator,Ernie_Colón,,,,
+ont_10_comicscharacter_test_22,EXTRA,,,,,,"(Bolt_(firearms), creator, Gary_Cohn)",Bolt_(firearms),creator,Gary_Cohn
+ont_10_comicscharacter_test_23,SEMANTIC,0.96,"(Bolt_(comicsCharacter), creator, Gary_Cohn_(comics))",Bolt_(comicsCharacter),creator,Gary_Cohn_(comics),"(Bolt_(firearms), creator, Gary_Cohn_(comics))",Bolt_(firearms),creator,Gary_Cohn_(comics)
+ont_10_comicscharacter_test_23,MISSING,,"(Bolt_(comicsCharacter), creator, Paris_Cullins)",Bolt_(comicsCharacter),creator,Paris_Cullins,,,,
+ont_10_comicscharacter_test_23,MISSING,,"(Bolt_(comicsCharacter), alternativeName, Larry Bolatinsky)",Bolt_(comicsCharacter),alternativeName,Larry Bolatinsky,,,,
+ont_10_comicscharacter_test_23,EXTRA,,,,,,"(Bolt_(firearms), alternativeName, larry bolatinsky)",Bolt_(firearms),alternativeName,larry bolatinsky
+ont_10_comicscharacter_test_23,EXTRA,,,,,,"(Bolt_(firearms), creator, Paris_Cullins)",Bolt_(firearms),creator,Paris_Cullins
+ont_10_comicscharacter_test_24,MISSING,,"(Bolt_(comicsCharacter), creator, Paris_Cullins)",Bolt_(comicsCharacter),creator,Paris_Cullins,,,,
+ont_10_comicscharacter_test_24,MISSING,,"(Bolt_(comicsCharacter), creator, Ernie_Colón)",Bolt_(comicsCharacter),creator,Ernie_Colón,,,,
+ont_10_comicscharacter_test_24,MISSING,,"(Bolt_(comicsCharacter), alternativeName, Larry Bolatinsky)",Bolt_(comicsCharacter),alternativeName,Larry Bolatinsky,,,,
+ont_10_comicscharacter_test_24,EXTRA,,,,,,"(Bolt_(firearms), alternativeName, larry bolatinsky)",Bolt_(firearms),alternativeName,larry bolatinsky
+ont_10_comicscharacter_test_24,EXTRA,,,,,,"(Bolt_(firearms), creator, Paris_Cullins)",Bolt_(firearms),creator,Paris_Cullins
+ont_10_comicscharacter_test_25,MISSING,,"(Bolt_(comicsCharacter), creator, Paris_Cullins)",Bolt_(comicsCharacter),creator,Paris_Cullins,,,,
+ont_10_comicscharacter_test_25,MISSING,,"(Bolt_(comicsCharacter), creator, Ernie_Colón)",Bolt_(comicsCharacter),creator,Ernie_Colón,,,,
+ont_10_comicscharacter_test_25,MISSING,,"(Ernie_Colón, nationality, Puerto_Ricans)",Ernie_Colón,nationality,Puerto_Ricans,,,,
+ont_10_comicscharacter_test_25,EXTRA,,,,,,"(Bolt_(firearms), creator, Paris_Cullins)",Bolt_(firearms),creator,Paris_Cullins
+ont_10_comicscharacter_test_26,MISSING,,"(Bolt_(comicsCharacter), creator, Paris_Cullins)",Bolt_(comicsCharacter),creator,Paris_Cullins,,,,
+ont_10_comicscharacter_test_26,MISSING,,"(Paris_Cullins, nationality, United_States)",Paris_Cullins,nationality,United_States,,,,
+ont_10_comicscharacter_test_26,MISSING,,"(Bolt_(comicsCharacter), creator, Dan_Mishkin)",Bolt_(comicsCharacter),creator,Dan_Mishkin,,,,
+ont_10_comicscharacter_test_26,EXTRA,,,,,,"(Bolt_(firearms), creator, Dan_Mishkin)",Bolt_(firearms),creator,Dan_Mishkin
+ont_10_comicscharacter_test_26,EXTRA,,,,,,"(Bolt_(firearms), creator, Paris_Cullins)",Bolt_(firearms),creator,Paris_Cullins
+ont_10_comicscharacter_test_27,MISSING,,"(Bolt_(comicsCharacter), creator, Paris_Cullins)",Bolt_(comicsCharacter),creator,Paris_Cullins,,,,
+ont_10_comicscharacter_test_27,MISSING,,"(Paris_Cullins, nationality, United_States)",Paris_Cullins,nationality,United_States,,,,
+ont_10_comicscharacter_test_27,MISSING,,"(Bolt_(comicsCharacter), creator, Ernie_Colón)",Bolt_(comicsCharacter),creator,Ernie_Colón,,,,
+ont_10_comicscharacter_test_27,EXTRA,,,,,,"(Bolt_(firearms), creator, Paris_Cullins)",Bolt_(firearms),creator,Paris_Cullins
+ont_10_comicscharacter_test_28,MISSING,,"(Bolt_(comicsCharacter), creator, Gary_Cohn_(comics))",Bolt_(comicsCharacter),creator,Gary_Cohn_(comics),,,,
+ont_10_comicscharacter_test_28,MISSING,,"(Bolt_(comicsCharacter), creator, Paris_Cullins)",Bolt_(comicsCharacter),creator,Paris_Cullins,,,,
+ont_10_comicscharacter_test_28,MISSING,,"(Paris_Cullins, nationality, United_States)",Paris_Cullins,nationality,United_States,,,,
+ont_10_comicscharacter_test_28,EXTRA,,,,,,"(Bolt_(firearms), creator, Gary_Cohn)",Bolt_(firearms),creator,Gary_Cohn
+ont_10_comicscharacter_test_28,EXTRA,,,,,,"(Bolt_(firearms), creator, Paris_Cullins)",Bolt_(firearms),creator,Paris_Cullins
+ont_10_comicscharacter_test_29,EXACT,1.00,"(Baymax, creator, Steven_T._Seagle)",Baymax,creator,Steven_T._Seagle,"(Baymax, creator, Steven_T._Seagle)",Baymax,creator,Steven_T._Seagle
+ont_10_comicscharacter_test_29,EXACT,1.00,"(Baymax, creator, Duncan_Rouleau)",Baymax,creator,Duncan_Rouleau,"(Baymax, creator, Duncan_Rouleau)",Baymax,creator,Duncan_Rouleau
+ont_10_comicscharacter_test_29,MISSING,,"(Duncan_Rouleau, nationality, Americans)",Duncan_Rouleau,nationality,Americans,,,,
+ont_10_comicscharacter_test_3,MISSING,,"(Aurakles, creator, Len_Wein)",Aurakles,creator,Len_Wein,,,,
+ont_10_comicscharacter_test_3,MISSING,,"(Aurakles, creator, Dick_Dillin)",Aurakles,creator,Dick_Dillin,,,,
+ont_10_comicscharacter_test_3,MISSING,,"(Aurakles, alternativeName, Aurakles)",Aurakles,alternativeName,Aurakles,,,,
+ont_10_comicscharacter_test_3,EXTRA,,,,,,"(List_of_DC_Comics_characters:_A, creator, Len_Wein)",List_of_DC_Comics_characters:_A,creator,Len_Wein
+ont_10_comicscharacter_test_3,EXTRA,,,,,,"(List_of_DC_Comics_characters:_A, alternativeName, aurakles)",List_of_DC_Comics_characters:_A,alternativeName,aurakles
+ont_10_comicscharacter_test_3,EXTRA,,,,,,"(List_of_DC_Comics_characters:_A, creator, Dick_Dillin)",List_of_DC_Comics_characters:_A,creator,Dick_Dillin
+ont_10_comicscharacter_test_30,SEMANTIC,0.98,"(Karl_Kesel, nationality, Americans)",Karl_Kesel,nationality,Americans,"(Karl_Kesel, nationality, United_States)",Karl_Kesel,nationality,United_States
+ont_10_comicscharacter_test_30,SEMANTIC,0.97,"(Auron_(comicsCharacter), creator, Karl_Kesel)",Auron_(comicsCharacter),creator,Karl_Kesel,"(Auron_(character), creator, Karl_Kesel)",Auron_(character),creator,Karl_Kesel
+ont_10_comicscharacter_test_30,MISSING,,"(Auron_(comicsCharacter), fullName, Lambien)",Auron_(comicsCharacter),fullName,Lambien,,,,
+ont_10_comicscharacter_test_30,EXTRA,,,,,,"(Auron_(character), alternativeName, lambien)",Auron_(character),alternativeName,lambien
+ont_10_comicscharacter_test_31,MISSING,,"(Big_Hero_6_(film), distributor, Walt_Disney_Studios_Motion_Pictures)",Big_Hero_6_(film),distributor,Walt_Disney_Studios_Motion_Pictures,,,,
+ont_10_comicscharacter_test_31,MISSING,,"(Baymax, series, Big_Hero_6_(film))",Baymax,series,Big_Hero_6_(film),,,,
+ont_10_comicscharacter_test_32,SEMANTIC,0.97,"(Auron_(comicsCharacter), creator, Karl_Kesel)",Auron_(comicsCharacter),creator,Karl_Kesel,"(Auron_(character), creator, Karl_Kesel)",Auron_(character),creator,Karl_Kesel
+ont_10_comicscharacter_test_32,SEMANTIC,0.97,"(Auron_(comicsCharacter), creator, Walt_Simonson)",Auron_(comicsCharacter),creator,Walt_Simonson,"(Auron_(character), creator, Walt_Simonson)",Auron_(character),creator,Walt_Simonson
+ont_10_comicscharacter_test_32,MISSING,,"(Karl_Kesel, nationality, Americans)",Karl_Kesel,nationality,Americans,,,,
+ont_10_comicscharacter_test_32,EXTRA,,,,,,"(Karl_Kesel, birthPlace, Usa,_Ōita)",Karl_Kesel,birthPlace,"Usa,_Ōita"
+ont_10_comicscharacter_test_33,EXACT,1.00,"(Baymax, creator, Duncan_Rouleau)",Baymax,creator,Duncan_Rouleau,"(Baymax, creator, Duncan_Rouleau)",Baymax,creator,Duncan_Rouleau
+ont_10_comicscharacter_test_33,EXACT,1.00,"(Baymax, creator, Steven_T._Seagle)",Baymax,creator,Steven_T._Seagle,"(Baymax, creator, Steven_T._Seagle)",Baymax,creator,Steven_T._Seagle
+ont_10_comicscharacter_test_33,MISSING,,"(Baymax, firstAppearanceInFilm, Big_Hero_6_(film))",Baymax,firstAppearanceInFilm,Big_Hero_6_(film),,,,
+ont_10_comicscharacter_test_33,EXTRA,,,,,,"(Big_Hero_6_(film), series, Big_Hero_6_(comics))",Big_Hero_6_(film),series,Big_Hero_6_(comics)
+ont_10_comicscharacter_test_34,EXACT,1.00,"(Bibbo_Bibbowski, creator, Marv_Wolfman)",Bibbo_Bibbowski,creator,Marv_Wolfman,"(Bibbo_Bibbowski, creator, Marv_Wolfman)",Bibbo_Bibbowski,creator,Marv_Wolfman
+ont_10_comicscharacter_test_34,EXACT,1.00,"(Bibbo_Bibbowski, creator, Jerry_Ordway)",Bibbo_Bibbowski,creator,Jerry_Ordway,"(Bibbo_Bibbowski, creator, Jerry_Ordway)",Bibbo_Bibbowski,creator,Jerry_Ordway
+ont_10_comicscharacter_test_34,MISSING,,"(Bibbo_Bibbowski, fullName, Bo Bibbowski)",Bibbo_Bibbowski,fullName,Bo Bibbowski,,,,
+ont_10_comicscharacter_test_34,EXTRA,,,,,,"(Bibbo_Bibbowski, alternativeName, bibbo)",Bibbo_Bibbowski,alternativeName,bibbo
+ont_10_comicscharacter_test_35,MISSING,,"(Bolt_(comicsCharacter), alternativeName, Larry Bolatinsky)",Bolt_(comicsCharacter),alternativeName,Larry Bolatinsky,,,,
+ont_10_comicscharacter_test_35,MISSING,,"(Bolt_(comicsCharacter), creator, Ernie_Colón)",Bolt_(comicsCharacter),creator,Ernie_Colón,,,,
+ont_10_comicscharacter_test_35,MISSING,,"(Bolt_(comicsCharacter), creator, Dan_Mishkin)",Bolt_(comicsCharacter),creator,Dan_Mishkin,,,,
+ont_10_comicscharacter_test_35,EXTRA,,,,,,"(Bolt_(firearms), alternativeName, larry bolatinsky)",Bolt_(firearms),alternativeName,larry bolatinsky
+ont_10_comicscharacter_test_35,EXTRA,,,,,,"(Bolt_(firearms), creator, Dan_Mishkin)",Bolt_(firearms),creator,Dan_Mishkin
+ont_10_comicscharacter_test_36,MISSING,,"(Bolt_(comicsCharacter), creator, Paris_Cullins)",Bolt_(comicsCharacter),creator,Paris_Cullins,,,,
+ont_10_comicscharacter_test_36,MISSING,,"(Bolt_(comicsCharacter), alternativeName, Larry Bolatinsky)",Bolt_(comicsCharacter),alternativeName,Larry Bolatinsky,,,,
+ont_10_comicscharacter_test_36,MISSING,,"(Bolt_(comicsCharacter), creator, Dan_Mishkin)",Bolt_(comicsCharacter),creator,Dan_Mishkin,,,,
+ont_10_comicscharacter_test_36,EXTRA,,,,,,"(Bolt_(firearms), alternativeName, larry bolatinsky)",Bolt_(firearms),alternativeName,larry bolatinsky
+ont_10_comicscharacter_test_36,EXTRA,,,,,,"(Bolt_(firearms), creator, Paris_Cullins)",Bolt_(firearms),creator,Paris_Cullins
+ont_10_comicscharacter_test_36,EXTRA,,,,,,"(Bolt_(firearms), creator, Dan_Mishkin)",Bolt_(firearms),creator,Dan_Mishkin
+ont_10_comicscharacter_test_4,MISSING,,"(Dick_Dillin, nationality, United_States)",Dick_Dillin,nationality,United_States,,,,
+ont_10_comicscharacter_test_4,MISSING,,"(Aurakles, creator, Dick_Dillin)",Aurakles,creator,Dick_Dillin,,,,
+ont_10_comicscharacter_test_4,MISSING,,"(Aurakles, alternativeName, Aurakles)",Aurakles,alternativeName,Aurakles,,,,
+ont_10_comicscharacter_test_4,EXTRA,,,,,,"(List_of_DC_Comics_characters:_A, creator, Dick_Dillin)",List_of_DC_Comics_characters:_A,creator,Dick_Dillin
+ont_10_comicscharacter_test_5,EXACT,1.00,"(Dick_Dillin, nationality, United_States)",Dick_Dillin,nationality,United_States,"(Dick_Dillin, nationality, United_States)",Dick_Dillin,nationality,United_States
+ont_10_comicscharacter_test_5,MISSING,,"(Aurakles, creator, Len_Wein)",Aurakles,creator,Len_Wein,,,,
+ont_10_comicscharacter_test_5,MISSING,,"(Aurakles, creator, Dick_Dillin)",Aurakles,creator,Dick_Dillin,,,,
+ont_10_comicscharacter_test_5,EXTRA,,,,,,"(List_of_DC_Comics_characters:_A, creator, Len_Wein)",List_of_DC_Comics_characters:_A,creator,Len_Wein
+ont_10_comicscharacter_test_5,EXTRA,,,,,,"(List_of_DC_Comics_characters:_A, creator, Dick_Dillin)",List_of_DC_Comics_characters:_A,creator,Dick_Dillin
+ont_10_comicscharacter_test_6,SEMANTIC,0.97,"(Auron_(comicsCharacter), creator, Marv_Wolfman)",Auron_(comicsCharacter),creator,Marv_Wolfman,"(Auron_(character), creator, Marv_Wolfman)",Auron_(character),creator,Marv_Wolfman
+ont_10_comicscharacter_test_6,SEMANTIC,0.97,"(Auron_(comicsCharacter), creator, Karl_Kesel)",Auron_(comicsCharacter),creator,Karl_Kesel,"(Auron_(character), creator, Karl_Kesel)",Auron_(character),creator,Karl_Kesel
+ont_10_comicscharacter_test_6,MISSING,,"(Auron_(comicsCharacter), fullName, Lambien)",Auron_(comicsCharacter),fullName,Lambien,,,,
+ont_10_comicscharacter_test_6,EXTRA,,,,,,"(Auron_(character), alternativeName, lambien)",Auron_(character),alternativeName,lambien
+ont_10_comicscharacter_test_7,SEMANTIC,0.97,"(Auron_(comicsCharacter), creator, Karl_Kesel)",Auron_(comicsCharacter),creator,Karl_Kesel,"(Auron_(character), creator, Karl_Kesel)",Auron_(character),creator,Karl_Kesel
+ont_10_comicscharacter_test_7,SEMANTIC,0.97,"(Auron_(comicsCharacter), creator, Walt_Simonson)",Auron_(comicsCharacter),creator,Walt_Simonson,"(Auron_(character), creator, Walt_Simonson)",Auron_(character),creator,Walt_Simonson
+ont_10_comicscharacter_test_7,MISSING,,"(Auron_(comicsCharacter), fullName, Lambien)",Auron_(comicsCharacter),fullName,Lambien,,,,
+ont_10_comicscharacter_test_7,EXTRA,,,,,,"(Auron_(character), alternativeName, lambien)",Auron_(character),alternativeName,lambien
+ont_10_comicscharacter_test_8,SEMANTIC,0.97,"(Auron_(comicsCharacter), creator, Marv_Wolfman)",Auron_(comicsCharacter),creator,Marv_Wolfman,"(Auron_(character), creator, Marv_Wolfman)",Auron_(character),creator,Marv_Wolfman
+ont_10_comicscharacter_test_8,SEMANTIC,0.97,"(Auron_(comicsCharacter), creator, Karl_Kesel)",Auron_(comicsCharacter),creator,Karl_Kesel,"(Auron_(character), creator, Karl_Kesel)",Auron_(character),creator,Karl_Kesel
+ont_10_comicscharacter_test_8,MISSING,,"(Karl_Kesel, nationality, Americans)",Karl_Kesel,nationality,Americans,,,,
+ont_10_comicscharacter_test_9,SEMANTIC,0.96,"(Auron_(comicsCharacter), creator, Marv_Wolfman)",Auron_(comicsCharacter),creator,Marv_Wolfman,"(Marv_Wolfman, creator, Auron_(character))",Marv_Wolfman,creator,Auron_(character)
+ont_10_comicscharacter_test_9,SEMANTIC,0.95,"(Auron_(comicsCharacter), creator, Walt_Simonson)",Auron_(comicsCharacter),creator,Walt_Simonson,"(Walt_Simonson, creator, Auron_(character))",Walt_Simonson,creator,Auron_(character)
+ont_10_comicscharacter_test_9,MISSING,,"(Auron_(comicsCharacter), fullName, Lambien)",Auron_(comicsCharacter),fullName,Lambien,,,,
+ont_10_comicscharacter_test_9,EXTRA,,,,,,"(Auron_(character), alternativeName, lambien)",Auron_(character),alternativeName,lambien

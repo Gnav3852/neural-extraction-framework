@@ -1,0 +1,406 @@
+sent_id,match_type,similarity,expected,expected_sub,expected_rel,expected_obj,predicted,predicted_sub,predicted_rel,predicted_obj
+ont_14_writtenwork_test_1,MISSING,,"(ACM_Transactions_on_Information_Systems, LCCN_number, 89646863)",ACM_Transactions_on_Information_Systems,LCCN_number,89646863,,,,
+ont_14_writtenwork_test_1,MISSING,,"(ACM_Transactions_on_Information_Systems, issnNumber, 1558-2868)",ACM_Transactions_on_Information_Systems,issnNumber,1558-2868,,,,
+ont_14_writtenwork_test_1,MISSING,,"(ACM_Transactions_on_Information_Systems, abbreviation, ACM Trans. Inf. Syst.)",ACM_Transactions_on_Information_Systems,abbreviation,ACM Trans. Inf. Syst.,,,,
+ont_14_writtenwork_test_10,MISSING,,"(AIDS_(journal), issnNumber, 0269-9370)",AIDS_(journal),issnNumber,0269-9370,,,,
+ont_14_writtenwork_test_10,MISSING,,"(AIDS_(journal), firstPublicationYear, 1987)",AIDS_(journal),firstPublicationYear,1987,,,,
+ont_14_writtenwork_test_10,MISSING,,"(AIDS_(journal), academicDiscipline, HIV/AIDS)",AIDS_(journal),academicDiscipline,HIV/AIDS,,,,
+ont_14_writtenwork_test_100,EXACT,1.00,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States
+ont_14_writtenwork_test_100,SEMANTIC,0.95,"(United_States, leader, Barack_Obama)",United_States,leader,Barack_Obama,"(United_States, president, Barack_Obama)",United_States,president,Barack_Obama
+ont_14_writtenwork_test_100,MISSING,,"(A_Severed_Wasp, country, United_States)",A_Severed_Wasp,country,United_States,,,,
+ont_14_writtenwork_test_101,EXACT,1.00,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States
+ont_14_writtenwork_test_101,SEMANTIC,0.95,"(United_States, leader, Barack_Obama)",United_States,leader,Barack_Obama,"(United_States, president, Barack_Obama)",United_States,president,Barack_Obama
+ont_14_writtenwork_test_101,MISSING,,"(A_Wizard_of_Mars, country, United_States)",A_Wizard_of_Mars,country,United_States,,,,
+ont_14_writtenwork_test_102,MISSING,,"(Alcatraz_Versus_the_Evil_Librarians, country, United_States)",Alcatraz_Versus_the_Evil_Librarians,country,United_States,,,,
+ont_14_writtenwork_test_102,MISSING,,"(United_States, leader, Barack_Obama)",United_States,leader,Barack_Obama,,,,
+ont_14_writtenwork_test_102,MISSING,,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,,,,
+ont_14_writtenwork_test_102,EXTRA,,,,,,"(Native_Americans_in_the_United_States, nationality, Us_(2019_film))",Native_Americans_in_the_United_States,nationality,Us_(2019_film)
+ont_14_writtenwork_test_102,EXTRA,,,,,,"(Us_(2019_film), president, Barack_Obama)",Us_(2019_film),president,Barack_Obama
+ont_14_writtenwork_test_103,EXACT,1.00,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,"(United_States, ethnicGroup, asian americans)",United_States,ethnicGroup,asian americans
+ont_14_writtenwork_test_103,EXACT,1.00,"(A_Severed_Wasp, country, United_States)",A_Severed_Wasp,country,United_States,"(A_Severed_Wasp, country, United_States)",A_Severed_Wasp,country,United_States
+ont_14_writtenwork_test_103,EXACT,1.00,"(United_States, leader, Barack_Obama)",United_States,leader,Barack_Obama,"(United_States, leader, Barack_Obama)",United_States,leader,Barack_Obama
+ont_14_writtenwork_test_104,EXACT,1.00,"(United_States, leader, Joe_Biden)",United_States,leader,Joe_Biden,"(United_States, leader, Joe_Biden)",United_States,leader,Joe_Biden
+ont_14_writtenwork_test_104,SEMANTIC,0.99,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,"(United_States, ethnicGroup, african american)",United_States,ethnicGroup,african american
+ont_14_writtenwork_test_104,MISSING,,"(Alcatraz_Versus_the_Evil_Librarians, country, United_States)",Alcatraz_Versus_the_Evil_Librarians,country,United_States,,,,
+ont_14_writtenwork_test_105,EXACT,1.00,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,"(United_States, ethnicGroup, asian americans)",United_States,ethnicGroup,asian americans
+ont_14_writtenwork_test_105,SEMANTIC,0.99,"(United_States, leaderTitle, President_of_the_United_States)",United_States,leaderTitle,President_of_the_United_States,"(United_States, leaderTitle, president)",United_States,leaderTitle,president
+ont_14_writtenwork_test_105,MISSING,,"(1634:_The_Ram_Rebellion, country, United_States)",1634:_The_Ram_Rebellion,country,United_States,,,,
+ont_14_writtenwork_test_106,EXACT,1.00,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States
+ont_14_writtenwork_test_106,SEMANTIC,0.99,"(United_States, leaderTitle, President_of_the_United_States)",United_States,leaderTitle,President_of_the_United_States,"(United_States, leaderTitle, president)",United_States,leaderTitle,president
+ont_14_writtenwork_test_106,MISSING,,"(1634:_The_Ram_Rebellion, country, United_States)",1634:_The_Ram_Rebellion,country,United_States,,,,
+ont_14_writtenwork_test_107,EXACT,1.00,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States
+ont_14_writtenwork_test_107,EXACT,1.00,"(A_Severed_Wasp, country, United_States)",A_Severed_Wasp,country,United_States,"(A_Severed_Wasp, country, United_States)",A_Severed_Wasp,country,United_States
+ont_14_writtenwork_test_107,SEMANTIC,0.99,"(United_States, leaderTitle, President_of_the_United_States)",United_States,leaderTitle,President_of_the_United_States,"(United_States, leaderTitle, president)",United_States,leaderTitle,president
+ont_14_writtenwork_test_108,SEMANTIC,0.99,"(United_States, leaderTitle, President_of_the_United_States)",United_States,leaderTitle,President_of_the_United_States,"(United_States, leaderTitle, president)",United_States,leaderTitle,president
+ont_14_writtenwork_test_108,SEMANTIC,0.99,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,"(United_States, ethnicGroup, native americans)",United_States,ethnicGroup,native americans
+ont_14_writtenwork_test_108,MISSING,,"(A_Wizard_of_Mars, country, United_States)",A_Wizard_of_Mars,country,United_States,,,,
+ont_14_writtenwork_test_109,EXACT,1.00,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans
+ont_14_writtenwork_test_109,EXACT,1.00,"(A_Severed_Wasp, country, United_States)",A_Severed_Wasp,country,United_States,"(A_Severed_Wasp, country, United_States)",A_Severed_Wasp,country,United_States
+ont_14_writtenwork_test_109,SEMANTIC,0.99,"(United_States, leaderTitle, President_of_the_United_States)",United_States,leaderTitle,President_of_the_United_States,"(United_States, leaderTitle, president)",United_States,leaderTitle,president
+ont_14_writtenwork_test_11,EXACT,1.00,"(Lippincott_Williams_&_Wilkins, parentCompany, Wolters_Kluwer)",Lippincott_Williams_&_Wilkins,parentCompany,Wolters_Kluwer,"(Lippincott_Williams_&_Wilkins, parentCompany, Wolters_Kluwer)",Lippincott_Williams_&_Wilkins,parentCompany,Wolters_Kluwer
+ont_14_writtenwork_test_11,MISSING,,"(AIDS_(journal), publisher, Lippincott_Williams_&_Wilkins)",AIDS_(journal),publisher,Lippincott_Williams_&_Wilkins,,,,
+ont_14_writtenwork_test_11,MISSING,,"(Lippincott_Williams_&_Wilkins, country, United_States)",Lippincott_Williams_&_Wilkins,country,United_States,,,,
+ont_14_writtenwork_test_110,EXACT,1.00,"(1634:_The_Ram_Rebellion, author, Eric_Flint)",1634:_The_Ram_Rebellion,author,Eric_Flint,"(1634:_The_Ram_Rebellion, author, Eric_Flint)",1634:_The_Ram_Rebellion,author,Eric_Flint
+ont_14_writtenwork_test_110,EXACT,1.00,"(1634:_The_Ram_Rebellion, numberOfPages, 512)",1634:_The_Ram_Rebellion,numberOfPages,512,"(1634:_The_Ram_Rebellion, numberOfPages, 512)",1634:_The_Ram_Rebellion,numberOfPages,512
+ont_14_writtenwork_test_110,SEMANTIC,1.00,"(1634:_The_Ram_Rebellion, mediaType, E-book)",1634:_The_Ram_Rebellion,mediaType,E-book,"(1634:_The_Ram_Rebellion, mediaType, Ebook)",1634:_The_Ram_Rebellion,mediaType,Ebook
+ont_14_writtenwork_test_111,EXACT,1.00,"(1634:_The_Ram_Rebellion, author, Eric_Flint)",1634:_The_Ram_Rebellion,author,Eric_Flint,"(1634:_The_Ram_Rebellion, author, Eric_Flint)",1634:_The_Ram_Rebellion,author,Eric_Flint
+ont_14_writtenwork_test_111,SEMANTIC,0.96,"(1634:_The_Ram_Rebellion, isbnNumber, 1-4165-2060-0)",1634:_The_Ram_Rebellion,isbnNumber,1-4165-2060-0,"(1634:_The_Ram_Rebellion, abbreviation, 1-4165-2060-0)",1634:_The_Ram_Rebellion,abbreviation,1-4165-2060-0
+ont_14_writtenwork_test_111,MISSING,,"(1634:_The_Ram_Rebellion, mediaType, Hardcover)",1634:_The_Ram_Rebellion,mediaType,Hardcover,,,,
+ont_14_writtenwork_test_112,EXACT,1.00,"(1634:_The_Ram_Rebellion, numberOfPages, 512)",1634:_The_Ram_Rebellion,numberOfPages,512,"(1634:_The_Ram_Rebellion, numberOfPages, 512)",1634:_The_Ram_Rebellion,numberOfPages,512
+ont_14_writtenwork_test_112,SEMANTIC,0.95,"(1634:_The_Ram_Rebellion, author, Eric Flint, Virginia DeMarce, et al.)",1634:_The_Ram_Rebellion,author,"Eric Flint, Virginia DeMarce, et al.","(1634:_The_Ram_Rebellion, author, Eric_Flint)",1634:_The_Ram_Rebellion,author,Eric_Flint
+ont_14_writtenwork_test_112,MISSING,,"(1634:_The_Ram_Rebellion, mediaType, E-book)",1634:_The_Ram_Rebellion,mediaType,E-book,,,,
+ont_14_writtenwork_test_113,MISSING,,"(ACM_Transactions_on_Information_Systems, academicDiscipline, Computer_science)",ACM_Transactions_on_Information_Systems,academicDiscipline,Computer_science,,,,
+ont_14_writtenwork_test_113,MISSING,,"(ACM_Transactions_on_Information_Systems, abbreviation, ACM Trans. Inf. Syst.)",ACM_Transactions_on_Information_Systems,abbreviation,ACM Trans. Inf. Syst.,,,,
+ont_14_writtenwork_test_113,MISSING,,"(ACM_Transactions_on_Information_Systems, issnNumber, 1046-8188)",ACM_Transactions_on_Information_Systems,issnNumber,1046-8188,,,,
+ont_14_writtenwork_test_114,MISSING,,"(ACM_Transactions_on_Information_Systems, academicDiscipline, Computer_science)",ACM_Transactions_on_Information_Systems,academicDiscipline,Computer_science,,,,
+ont_14_writtenwork_test_114,MISSING,,"(ACM_Transactions_on_Information_Systems, issnNumber, 1558-2868)",ACM_Transactions_on_Information_Systems,issnNumber,1558-2868,,,,
+ont_14_writtenwork_test_114,MISSING,,"(ACM_Transactions_on_Information_Systems, abbreviation, ACM Trans. Inf. Syst.)",ACM_Transactions_on_Information_Systems,abbreviation,ACM Trans. Inf. Syst.,,,,
+ont_14_writtenwork_test_115,MISSING,,"(United_Kingdom, leader, Elizabeth_II)",United_Kingdom,leader,Elizabeth_II,,,,
+ont_14_writtenwork_test_115,MISSING,,"(AIDS_(journal), country, United_Kingdom)",AIDS_(journal),country,United_Kingdom,,,,
+ont_14_writtenwork_test_115,MISSING,,"(AIDS_(journal), publisher, Lippincott_Williams_&_Wilkins)",AIDS_(journal),publisher,Lippincott_Williams_&_Wilkins,,,,
+ont_14_writtenwork_test_116,MISSING,,"(AIP_Advances, editor, A.T._Charlie_Johnson)",AIP_Advances,editor,A.T._Charlie_Johnson,,,,
+ont_14_writtenwork_test_116,MISSING,,"(A.T._Charlie_Johnson, residence, United_States)",A.T._Charlie_Johnson,residence,United_States,,,,
+ont_14_writtenwork_test_116,MISSING,,"(AIP_Advances, publisher, American_Institute_of_Physics)",AIP_Advances,publisher,American_Institute_of_Physics,,,,
+ont_14_writtenwork_test_116,EXTRA,,,,,,"(A.T._Charlie_Johnson, nationality, Us_(2019_film))",A.T._Charlie_Johnson,nationality,Us_(2019_film)
+ont_14_writtenwork_test_117,MISSING,,"(AIP_Advances, editor, A.T._Charlie_Johnson)",AIP_Advances,editor,A.T._Charlie_Johnson,,,,
+ont_14_writtenwork_test_117,MISSING,,"(AIP_Advances, codenCode, AAIDBI)",AIP_Advances,codenCode,AAIDBI,,,,
+ont_14_writtenwork_test_117,MISSING,,"(AIP_Advances, abbreviation, AIP Adv.)",AIP_Advances,abbreviation,AIP Adv.,,,,
+ont_14_writtenwork_test_118,EXACT,1.00,"(A_Long_Long_Way, followedBy, The_Secret_Scripture)",A_Long_Long_Way,followedBy,The_Secret_Scripture,"(A_Long_Long_Way, followedBy, The_Secret_Scripture)",A_Long_Long_Way,followedBy,The_Secret_Scripture
+ont_14_writtenwork_test_118,EXACT,1.00,"(English_language, spokenIn, Great_Britain)",English_language,spokenIn,Great_Britain,"(English_language, spokenIn, Great_Britain)",English_language,spokenIn,Great_Britain
+ont_14_writtenwork_test_118,SEMANTIC,0.99,"(A_Long_Long_Way, language, English_language)",A_Long_Long_Way,language,English_language,"(A_Long_Long_Way, language, english)",A_Long_Long_Way,language,english
+ont_14_writtenwork_test_119,EXACT,1.00,"(A_Loyal_Character_Dancer, publisher, Soho_Press)",A_Loyal_Character_Dancer,publisher,Soho_Press,"(A_Loyal_Character_Dancer, publisher, Soho_Press)",A_Loyal_Character_Dancer,publisher,Soho_Press
+ont_14_writtenwork_test_119,EXACT,1.00,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,"(United_States, ethnicGroup, african americans)",United_States,ethnicGroup,african americans
+ont_14_writtenwork_test_119,EXACT,1.00,"(A_Loyal_Character_Dancer, country, United_States)",A_Loyal_Character_Dancer,country,United_States,"(A_Loyal_Character_Dancer, country, United_States)",A_Loyal_Character_Dancer,country,United_States
+ont_14_writtenwork_test_12,MISSING,,"(AIP_Advances, editor, Vincent H. Crespi, Bernard S. Gerstman, A.T. Charlie Johnson,  Masaaki Tanaka, Enge G. Wang)",AIP_Advances,editor,"Vincent H. Crespi, Bernard S. Gerstman, A.T. Charlie Johnson,  Masaaki Tanaka, Enge G. Wang",,,,
+ont_14_writtenwork_test_12,MISSING,,"(AIP_Advances, codenCode, AAIDBI)",AIP_Advances,codenCode,AAIDBI,,,,
+ont_14_writtenwork_test_12,MISSING,,"(AIP_Advances, abbreviation, AIP Adv.)",AIP_Advances,abbreviation,AIP Adv.,,,,
+ont_14_writtenwork_test_120,EXACT,1.00,"(A_Loyal_Character_Dancer, publisher, Soho_Press)",A_Loyal_Character_Dancer,publisher,Soho_Press,"(A_Loyal_Character_Dancer, publisher, Soho_Press)",A_Loyal_Character_Dancer,publisher,Soho_Press
+ont_14_writtenwork_test_120,EXACT,1.00,"(United_States, leader, Barack_Obama)",United_States,leader,Barack_Obama,"(United_States, leader, Barack_Obama)",United_States,leader,Barack_Obama
+ont_14_writtenwork_test_120,MISSING,,"(Soho_Press, country, United_States)",Soho_Press,country,United_States,,,,
+ont_14_writtenwork_test_120,EXTRA,,,,,,"(A_Loyal_Character_Dancer, country, United_States)",A_Loyal_Character_Dancer,country,United_States
+ont_14_writtenwork_test_121,SEMANTIC,0.99,"(A_Severed_Wasp, mediaType, Print)",A_Severed_Wasp,mediaType,Print,"(A_Severed_Wasp, mediaType, Printing)",A_Severed_Wasp,mediaType,Printing
+ont_14_writtenwork_test_121,MISSING,,"(A_Severed_Wasp, libraryofCongressClassification, PS3523.E55 S4 1982)",A_Severed_Wasp,libraryofCongressClassification,PS3523.E55 S4 1982,,,,
+ont_14_writtenwork_test_121,MISSING,,"(A_Severed_Wasp, oclcNumber, 8805735)",A_Severed_Wasp,oclcNumber,8805735,,,,
+ont_14_writtenwork_test_121,EXTRA,,,,,,"(A_Severed_Wasp, firstPublicationYear, ps3523.e55 s4 1982)",A_Severed_Wasp,firstPublicationYear,ps3523.e55 s4 1982
+ont_14_writtenwork_test_121,EXTRA,,,,,,"(A_Severed_Wasp, numberOfPages, 8805735)",A_Severed_Wasp,numberOfPages,8805735
+ont_14_writtenwork_test_122,EXACT,1.00,"(A_Severed_Wasp, numberOfPages, 388)",A_Severed_Wasp,numberOfPages,388,"(A_Severed_Wasp, numberOfPages, 388)",A_Severed_Wasp,numberOfPages,388
+ont_14_writtenwork_test_122,SEMANTIC,0.99,"(A_Severed_Wasp, mediaType, Print)",A_Severed_Wasp,mediaType,Print,"(A_Severed_Wasp, mediaType, Printing)",A_Severed_Wasp,mediaType,Printing
+ont_14_writtenwork_test_122,MISSING,,"(A_Severed_Wasp, isbnNumber, 0-374-26131-8)",A_Severed_Wasp,isbnNumber,0-374-26131-8,,,,
+ont_14_writtenwork_test_122,EXTRA,,,,,,"(A_Severed_Wasp, abbreviation, 0-374-26131-8)",A_Severed_Wasp,abbreviation,0-374-26131-8
+ont_14_writtenwork_test_123,MISSING,,"(A_Wizard_of_Mars, oclcNumber, 318875313)",A_Wizard_of_Mars,oclcNumber,318875313,,,,
+ont_14_writtenwork_test_123,MISSING,,"(A_Wizard_of_Mars, mediaType, Hardcover)",A_Wizard_of_Mars,mediaType,Hardcover,,,,
+ont_14_writtenwork_test_123,MISSING,,"(A_Wizard_of_Mars, author, Diane_Duane)",A_Wizard_of_Mars,author,Diane_Duane,,,,
+ont_14_writtenwork_test_124,MISSING,,"(A_Wizard_of_Mars, isbnNumber, 978-0-15-204770-2)",A_Wizard_of_Mars,isbnNumber,978-0-15-204770-2,,,,
+ont_14_writtenwork_test_124,MISSING,,"(A_Wizard_of_Mars, mediaType, Hardcover)",A_Wizard_of_Mars,mediaType,Hardcover,,,,
+ont_14_writtenwork_test_124,MISSING,,"(A_Wizard_of_Mars, author, Diane_Duane)",A_Wizard_of_Mars,author,Diane_Duane,,,,
+ont_14_writtenwork_test_125,EXACT,1.00,"(United_Kingdom, leader, David_Cameron)",United_Kingdom,leader,David_Cameron,"(United_Kingdom, leader, David_Cameron)",United_Kingdom,leader,David_Cameron
+ont_14_writtenwork_test_125,MISSING,,"(AIDS_(journal), country, United_Kingdom)",AIDS_(journal),country,United_Kingdom,,,,
+ont_14_writtenwork_test_125,MISSING,,"(AIDS_(journal), publisher, Lippincott_Williams_&_Wilkins)",AIDS_(journal),publisher,Lippincott_Williams_&_Wilkins,,,,
+ont_14_writtenwork_test_125,EXTRA,,,,,,"(Lippincott_Williams_&_Wilkins, headquarter, United_Kingdom)",Lippincott_Williams_&_Wilkins,headquarter,United_Kingdom
+ont_14_writtenwork_test_126,EXACT,1.00,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,"(United_States, ethnicGroup, african americans)",United_States,ethnicGroup,african americans
+ont_14_writtenwork_test_126,EXACT,1.00,"(United_States, leader, Barack_Obama)",United_States,leader,Barack_Obama,"(United_States, leader, Barack_Obama)",United_States,leader,Barack_Obama
+ont_14_writtenwork_test_126,MISSING,,"(A_Fortress_of_Grey_Ice, country, United_States)",A_Fortress_of_Grey_Ice,country,United_States,,,,
+ont_14_writtenwork_test_127,EXACT,1.00,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans
+ont_14_writtenwork_test_127,SEMANTIC,0.95,"(United_States, language, English_language)",United_States,language,English_language,"(English_language, spokenIn, United_States)",English_language,spokenIn,United_States
+ont_14_writtenwork_test_127,MISSING,,"(Alcatraz_Versus_the_Evil_Librarians, country, United_States)",Alcatraz_Versus_the_Evil_Librarians,country,United_States,,,,
+ont_14_writtenwork_test_13,MISSING,,"(AIP_Advances, impactFactor, 1.524)",AIP_Advances,impactFactor,1.524,,,,
+ont_14_writtenwork_test_13,MISSING,,"(AIP_Advances, codenCode, AAIDBI)",AIP_Advances,codenCode,AAIDBI,,,,
+ont_14_writtenwork_test_13,MISSING,,"(AIP_Advances, abbreviation, AIP Adv.)",AIP_Advances,abbreviation,AIP Adv.,,,,
+ont_14_writtenwork_test_14,MISSING,,"(AIP_Advances, editor, A.T._Charlie_Johnson)",AIP_Advances,editor,A.T._Charlie_Johnson,,,,
+ont_14_writtenwork_test_14,MISSING,,"(A.T._Charlie_Johnson, almaMater, Harvard_University)",A.T._Charlie_Johnson,almaMater,Harvard_University,,,,
+ont_14_writtenwork_test_14,MISSING,,"(A.T._Charlie_Johnson, doctoralAdvisor, Michael_Tinkham)",A.T._Charlie_Johnson,doctoralAdvisor,Michael_Tinkham,,,,
+ont_14_writtenwork_test_15,MISSING,,"(AIP_Advances, editor, A.T._Charlie_Johnson)",AIP_Advances,editor,A.T._Charlie_Johnson,,,,
+ont_14_writtenwork_test_15,MISSING,,"(A.T._Charlie_Johnson, almaMater, Harvard_University)",A.T._Charlie_Johnson,almaMater,Harvard_University,,,,
+ont_14_writtenwork_test_15,MISSING,,"(A.T._Charlie_Johnson, nationality, United_States)",A.T._Charlie_Johnson,nationality,United_States,,,,
+ont_14_writtenwork_test_16,EXACT,1.00,"(A.T._Charlie_Johnson, almaMater, Harvard_University)",A.T._Charlie_Johnson,almaMater,Harvard_University,"(A.T._Charlie_Johnson, almaMater, Harvard_University)",A.T._Charlie_Johnson,almaMater,Harvard_University
+ont_14_writtenwork_test_16,MISSING,,"(AIP_Advances, editor, A.T._Charlie_Johnson)",AIP_Advances,editor,A.T._Charlie_Johnson,,,,
+ont_14_writtenwork_test_16,MISSING,,"(A.T._Charlie_Johnson, residence, United_States)",A.T._Charlie_Johnson,residence,United_States,,,,
+ont_14_writtenwork_test_17,EXACT,1.00,"(A.T._Charlie_Johnson, almaMater, Harvard_University)",A.T._Charlie_Johnson,almaMater,Harvard_University,"(A.T._Charlie_Johnson, almaMater, Harvard_University)",A.T._Charlie_Johnson,almaMater,Harvard_University
+ont_14_writtenwork_test_17,MISSING,,"(AIP_Advances, editor, A.T._Charlie_Johnson)",AIP_Advances,editor,A.T._Charlie_Johnson,,,,
+ont_14_writtenwork_test_17,MISSING,,"(AIP_Advances, abbreviation, AIP Adv.)",AIP_Advances,abbreviation,AIP Adv.,,,,
+ont_14_writtenwork_test_18,MISSING,,"(AIP_Advances, editor, A.T._Charlie_Johnson)",AIP_Advances,editor,A.T._Charlie_Johnson,,,,
+ont_14_writtenwork_test_18,MISSING,,"(A.T._Charlie_Johnson, almaMater, Harvard_University)",A.T._Charlie_Johnson,almaMater,Harvard_University,,,,
+ont_14_writtenwork_test_18,MISSING,,"(AIP_Advances, publisher, American_Institute_of_Physics)",AIP_Advances,publisher,American_Institute_of_Physics,,,,
+ont_14_writtenwork_test_19,EXACT,1.00,"(A.T._Charlie_Johnson, almaMater, Stanford_University)",A.T._Charlie_Johnson,almaMater,Stanford_University,"(A.T._Charlie_Johnson, almaMater, Stanford_University)",A.T._Charlie_Johnson,almaMater,Stanford_University
+ont_14_writtenwork_test_19,MISSING,,"(AIP_Advances, editor, A.T._Charlie_Johnson)",AIP_Advances,editor,A.T._Charlie_Johnson,,,,
+ont_14_writtenwork_test_19,MISSING,,"(AIP_Advances, publisher, American_Institute_of_Physics)",AIP_Advances,publisher,American_Institute_of_Physics,,,,
+ont_14_writtenwork_test_2,MISSING,,"(ACM_Transactions_on_Information_Systems, academicDiscipline, Computer_science)",ACM_Transactions_on_Information_Systems,academicDiscipline,Computer_science,,,,
+ont_14_writtenwork_test_2,MISSING,,"(ACM_Transactions_on_Information_Systems, LCCN_number, 89646863)",ACM_Transactions_on_Information_Systems,LCCN_number,89646863,,,,
+ont_14_writtenwork_test_2,MISSING,,"(ACM_Transactions_on_Information_Systems, abbreviation, ACM Trans. Inf. Syst.)",ACM_Transactions_on_Information_Systems,abbreviation,ACM Trans. Inf. Syst.,,,,
+ont_14_writtenwork_test_20,MISSING,,"(AIP_Advances, editor, A.T._Charlie_Johnson)",AIP_Advances,editor,A.T._Charlie_Johnson,,,,
+ont_14_writtenwork_test_20,MISSING,,"(A.T._Charlie_Johnson, doctoralAdvisor, Michael_Tinkham)",A.T._Charlie_Johnson,doctoralAdvisor,Michael_Tinkham,,,,
+ont_14_writtenwork_test_20,MISSING,,"(A.T._Charlie_Johnson, almaMater, Stanford_University)",A.T._Charlie_Johnson,almaMater,Stanford_University,,,,
+ont_14_writtenwork_test_21,MISSING,,"(AIP_Advances, editor, A.T._Charlie_Johnson)",AIP_Advances,editor,A.T._Charlie_Johnson,,,,
+ont_14_writtenwork_test_21,MISSING,,"(A.T._Charlie_Johnson, doctoralAdvisor, Michael_Tinkham)",A.T._Charlie_Johnson,doctoralAdvisor,Michael_Tinkham,,,,
+ont_14_writtenwork_test_21,MISSING,,"(A.T._Charlie_Johnson, nationality, United_States)",A.T._Charlie_Johnson,nationality,United_States,,,,
+ont_14_writtenwork_test_22,MISSING,,"(AIP_Advances, editor, A.T._Charlie_Johnson)",AIP_Advances,editor,A.T._Charlie_Johnson,,,,
+ont_14_writtenwork_test_22,MISSING,,"(A.T._Charlie_Johnson, doctoralAdvisor, Michael_Tinkham)",A.T._Charlie_Johnson,doctoralAdvisor,Michael_Tinkham,,,,
+ont_14_writtenwork_test_22,MISSING,,"(A.T._Charlie_Johnson, residence, United_States)",A.T._Charlie_Johnson,residence,United_States,,,,
+ont_14_writtenwork_test_23,MISSING,,"(AIP_Advances, editor, A.T._Charlie_Johnson)",AIP_Advances,editor,A.T._Charlie_Johnson,,,,
+ont_14_writtenwork_test_23,MISSING,,"(A.T._Charlie_Johnson, almaMater, Stanford_University)",A.T._Charlie_Johnson,almaMater,Stanford_University,,,,
+ont_14_writtenwork_test_23,MISSING,,"(A.T._Charlie_Johnson, nationality, United_States)",A.T._Charlie_Johnson,nationality,United_States,,,,
+ont_14_writtenwork_test_24,EXACT,1.00,"(A.T._Charlie_Johnson, almaMater, Stanford_University)",A.T._Charlie_Johnson,almaMater,Stanford_University,"(A.T._Charlie_Johnson, almaMater, Stanford_University)",A.T._Charlie_Johnson,almaMater,Stanford_University
+ont_14_writtenwork_test_24,MISSING,,"(AIP_Advances, editor, A.T._Charlie_Johnson)",AIP_Advances,editor,A.T._Charlie_Johnson,,,,
+ont_14_writtenwork_test_24,MISSING,,"(AIP_Advances, abbreviation, AIP Adv.)",AIP_Advances,abbreviation,AIP Adv.,,,,
+ont_14_writtenwork_test_25,EXACT,1.00,"(A_Loyal_Character_Dancer, author, Qiu_Xiaolong)",A_Loyal_Character_Dancer,author,Qiu_Xiaolong,"(A_Loyal_Character_Dancer, author, Qiu_Xiaolong)",A_Loyal_Character_Dancer,author,Qiu_Xiaolong
+ont_14_writtenwork_test_25,EXACT,1.00,"(A_Loyal_Character_Dancer, mediaType, Hardcover)",A_Loyal_Character_Dancer,mediaType,Hardcover,"(A_Loyal_Character_Dancer, mediaType, Hardcover)",A_Loyal_Character_Dancer,mediaType,Hardcover
+ont_14_writtenwork_test_25,MISSING,,"(A_Loyal_Character_Dancer, isbnNumber, 1-56947-301-3)",A_Loyal_Character_Dancer,isbnNumber,1-56947-301-3,,,,
+ont_14_writtenwork_test_25,EXTRA,,,,,,"(A_Loyal_Character_Dancer, abbreviation, 1-56947-301-3)",A_Loyal_Character_Dancer,abbreviation,1-56947-301-3
+ont_14_writtenwork_test_26,EXACT,1.00,"(A_Loyal_Character_Dancer, author, Qiu_Xiaolong)",A_Loyal_Character_Dancer,author,Qiu_Xiaolong,"(A_Loyal_Character_Dancer, author, Qiu_Xiaolong)",A_Loyal_Character_Dancer,author,Qiu_Xiaolong
+ont_14_writtenwork_test_26,EXACT,1.00,"(A_Loyal_Character_Dancer, mediaType, Hardcover)",A_Loyal_Character_Dancer,mediaType,Hardcover,"(A_Loyal_Character_Dancer, mediaType, Hardcover)",A_Loyal_Character_Dancer,mediaType,Hardcover
+ont_14_writtenwork_test_26,MISSING,,"(A_Loyal_Character_Dancer, oclcNumber, 49805501)",A_Loyal_Character_Dancer,oclcNumber,49805501,,,,
+ont_14_writtenwork_test_26,EXTRA,,,,,,"(A_Loyal_Character_Dancer, abbreviation, 49805501)",A_Loyal_Character_Dancer,abbreviation,49805501
+ont_14_writtenwork_test_27,EXACT,1.00,"(A_Loyal_Character_Dancer, author, Qiu_Xiaolong)",A_Loyal_Character_Dancer,author,Qiu_Xiaolong,"(A_Loyal_Character_Dancer, author, Qiu_Xiaolong)",A_Loyal_Character_Dancer,author,Qiu_Xiaolong
+ont_14_writtenwork_test_27,MISSING,,"(A_Loyal_Character_Dancer, isbnNumber, 1-56947-301-3)",A_Loyal_Character_Dancer,isbnNumber,1-56947-301-3,,,,
+ont_14_writtenwork_test_27,MISSING,,"(A_Loyal_Character_Dancer, mediaType, Print)",A_Loyal_Character_Dancer,mediaType,Print,,,,
+ont_14_writtenwork_test_27,EXTRA,,,,,,"(A_Loyal_Character_Dancer, abbreviation, 1-56947-301-3)",A_Loyal_Character_Dancer,abbreviation,1-56947-301-3
+ont_14_writtenwork_test_28,EXACT,1.00,"(A_Loyal_Character_Dancer, author, Qiu_Xiaolong)",A_Loyal_Character_Dancer,author,Qiu_Xiaolong,"(A_Loyal_Character_Dancer, author, Qiu_Xiaolong)",A_Loyal_Character_Dancer,author,Qiu_Xiaolong
+ont_14_writtenwork_test_28,MISSING,,"(A_Loyal_Character_Dancer, oclcNumber, 49805501)",A_Loyal_Character_Dancer,oclcNumber,49805501,,,,
+ont_14_writtenwork_test_28,MISSING,,"(A_Loyal_Character_Dancer, mediaType, Print)",A_Loyal_Character_Dancer,mediaType,Print,,,,
+ont_14_writtenwork_test_28,EXTRA,,,,,,"(A_Loyal_Character_Dancer, abbreviation, 49805501)",A_Loyal_Character_Dancer,abbreviation,49805501
+ont_14_writtenwork_test_29,EXACT,1.00,"(A_Loyal_Character_Dancer, author, Qiu_Xiaolong)",A_Loyal_Character_Dancer,author,Qiu_Xiaolong,"(A_Loyal_Character_Dancer, author, Qiu_Xiaolong)",A_Loyal_Character_Dancer,author,Qiu_Xiaolong
+ont_14_writtenwork_test_29,EXACT,1.00,"(A_Loyal_Character_Dancer, numberOfPages, 360)",A_Loyal_Character_Dancer,numberOfPages,360,"(A_Loyal_Character_Dancer, numberOfPages, 360)",A_Loyal_Character_Dancer,numberOfPages,360
+ont_14_writtenwork_test_29,SEMANTIC,0.99,"(A_Loyal_Character_Dancer, mediaType, Print)",A_Loyal_Character_Dancer,mediaType,Print,"(A_Loyal_Character_Dancer, mediaType, Printing)",A_Loyal_Character_Dancer,mediaType,Printing
+ont_14_writtenwork_test_3,MISSING,,"(ACM_Transactions_on_Information_Systems, codenCode, ATISET)",ACM_Transactions_on_Information_Systems,codenCode,ATISET,,,,
+ont_14_writtenwork_test_3,MISSING,,"(ACM_Transactions_on_Information_Systems, LCCN_number, 89646863)",ACM_Transactions_on_Information_Systems,LCCN_number,89646863,,,,
+ont_14_writtenwork_test_3,MISSING,,"(ACM_Transactions_on_Information_Systems, abbreviation, ACM Trans. Inf. Syst.)",ACM_Transactions_on_Information_Systems,abbreviation,ACM Trans. Inf. Syst.,,,,
+ont_14_writtenwork_test_30,EXACT,1.00,"(A_Loyal_Character_Dancer, author, Qiu_Xiaolong)",A_Loyal_Character_Dancer,author,Qiu_Xiaolong,"(A_Loyal_Character_Dancer, author, Qiu_Xiaolong)",A_Loyal_Character_Dancer,author,Qiu_Xiaolong
+ont_14_writtenwork_test_30,EXACT,1.00,"(A_Loyal_Character_Dancer, mediaType, Hardcover)",A_Loyal_Character_Dancer,mediaType,Hardcover,"(A_Loyal_Character_Dancer, mediaType, Hardcover)",A_Loyal_Character_Dancer,mediaType,Hardcover
+ont_14_writtenwork_test_30,EXACT,1.00,"(A_Loyal_Character_Dancer, numberOfPages, 360)",A_Loyal_Character_Dancer,numberOfPages,360,"(A_Loyal_Character_Dancer, numberOfPages, 360)",A_Loyal_Character_Dancer,numberOfPages,360
+ont_14_writtenwork_test_31,EXACT,1.00,"(A_Loyal_Character_Dancer, publisher, Soho_Press)",A_Loyal_Character_Dancer,publisher,Soho_Press,"(A_Loyal_Character_Dancer, publisher, Soho_Press)",A_Loyal_Character_Dancer,publisher,Soho_Press
+ont_14_writtenwork_test_31,EXACT,1.00,"(A_Loyal_Character_Dancer, country, United_States)",A_Loyal_Character_Dancer,country,United_States,"(A_Loyal_Character_Dancer, country, United_States)",A_Loyal_Character_Dancer,country,United_States
+ont_14_writtenwork_test_31,SEMANTIC,0.99,"(A_Loyal_Character_Dancer, language, English_language)",A_Loyal_Character_Dancer,language,English_language,"(A_Loyal_Character_Dancer, language, english)",A_Loyal_Character_Dancer,language,english
+ont_14_writtenwork_test_32,EXACT,1.00,"(A_Loyal_Character_Dancer, country, United_States)",A_Loyal_Character_Dancer,country,United_States,"(A_Loyal_Character_Dancer, country, United_States)",A_Loyal_Character_Dancer,country,United_States
+ont_14_writtenwork_test_32,EXACT,1.00,"(English_language, spokenIn, Great_Britain)",English_language,spokenIn,Great_Britain,"(English_language, spokenIn, Great_Britain)",English_language,spokenIn,Great_Britain
+ont_14_writtenwork_test_32,SEMANTIC,0.99,"(A_Loyal_Character_Dancer, language, English_language)",A_Loyal_Character_Dancer,language,English_language,"(A_Loyal_Character_Dancer, language, english)",A_Loyal_Character_Dancer,language,english
+ont_14_writtenwork_test_33,EXACT,1.00,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,"(United_States, ethnicGroup, asian americans)",United_States,ethnicGroup,asian americans
+ont_14_writtenwork_test_33,EXACT,1.00,"(A_Loyal_Character_Dancer, publisher, Soho_Press)",A_Loyal_Character_Dancer,publisher,Soho_Press,"(A_Loyal_Character_Dancer, publisher, Soho_Press)",A_Loyal_Character_Dancer,publisher,Soho_Press
+ont_14_writtenwork_test_33,EXACT,1.00,"(A_Loyal_Character_Dancer, country, United_States)",A_Loyal_Character_Dancer,country,United_States,"(A_Loyal_Character_Dancer, country, United_States)",A_Loyal_Character_Dancer,country,United_States
+ont_14_writtenwork_test_34,EXACT,1.00,"(A_Loyal_Character_Dancer, publisher, Soho_Press)",A_Loyal_Character_Dancer,publisher,Soho_Press,"(A_Loyal_Character_Dancer, publisher, Soho_Press)",A_Loyal_Character_Dancer,publisher,Soho_Press
+ont_14_writtenwork_test_34,EXACT,1.00,"(A_Loyal_Character_Dancer, country, United_States)",A_Loyal_Character_Dancer,country,United_States,"(A_Loyal_Character_Dancer, country, United_States)",A_Loyal_Character_Dancer,country,United_States
+ont_14_writtenwork_test_34,MISSING,,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,,,,
+ont_14_writtenwork_test_35,EXACT,1.00,"(A_Loyal_Character_Dancer, publisher, Soho_Press)",A_Loyal_Character_Dancer,publisher,Soho_Press,"(A_Loyal_Character_Dancer, publisher, Soho_Press)",A_Loyal_Character_Dancer,publisher,Soho_Press
+ont_14_writtenwork_test_35,EXACT,1.00,"(A_Loyal_Character_Dancer, country, United_States)",A_Loyal_Character_Dancer,country,United_States,"(A_Loyal_Character_Dancer, country, United_States)",A_Loyal_Character_Dancer,country,United_States
+ont_14_writtenwork_test_35,MISSING,,"(United_States, language, English_language)",United_States,language,English_language,,,,
+ont_14_writtenwork_test_36,EXACT,1.00,"(A_Loyal_Character_Dancer, publisher, Soho_Press)",A_Loyal_Character_Dancer,publisher,Soho_Press,"(A_Loyal_Character_Dancer, publisher, Soho_Press)",A_Loyal_Character_Dancer,publisher,Soho_Press
+ont_14_writtenwork_test_36,EXACT,1.00,"(A_Loyal_Character_Dancer, country, United_States)",A_Loyal_Character_Dancer,country,United_States,"(A_Loyal_Character_Dancer, country, United_States)",A_Loyal_Character_Dancer,country,United_States
+ont_14_writtenwork_test_36,EXACT,1.00,"(United_States, leader, Barack_Obama)",United_States,leader,Barack_Obama,"(United_States, leader, Barack_Obama)",United_States,leader,Barack_Obama
+ont_14_writtenwork_test_37,EXACT,1.00,"(A_Loyal_Character_Dancer, publisher, Soho_Press)",A_Loyal_Character_Dancer,publisher,Soho_Press,"(A_Loyal_Character_Dancer, publisher, Soho_Press)",A_Loyal_Character_Dancer,publisher,Soho_Press
+ont_14_writtenwork_test_37,EXACT,1.00,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,"(United_States, ethnicGroup, african americans)",United_States,ethnicGroup,african americans
+ont_14_writtenwork_test_37,MISSING,,"(Soho_Press, country, United_States)",Soho_Press,country,United_States,,,,
+ont_14_writtenwork_test_38,EXACT,1.00,"(A_Loyal_Character_Dancer, publisher, Soho_Press)",A_Loyal_Character_Dancer,publisher,Soho_Press,"(A_Loyal_Character_Dancer, publisher, Soho_Press)",A_Loyal_Character_Dancer,publisher,Soho_Press
+ont_14_writtenwork_test_38,MISSING,,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,,,,
+ont_14_writtenwork_test_38,MISSING,,"(Soho_Press, country, United_States)",Soho_Press,country,United_States,,,,
+ont_14_writtenwork_test_38,EXTRA,,,,,,"(A_Loyal_Character_Dancer, country, United_States)",A_Loyal_Character_Dancer,country,United_States
+ont_14_writtenwork_test_39,EXACT,1.00,"(A_Loyal_Character_Dancer, publisher, Soho_Press)",A_Loyal_Character_Dancer,publisher,Soho_Press,"(A_Loyal_Character_Dancer, publisher, Soho_Press)",A_Loyal_Character_Dancer,publisher,Soho_Press
+ont_14_writtenwork_test_39,EXACT,1.00,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States
+ont_14_writtenwork_test_39,MISSING,,"(Soho_Press, country, United_States)",Soho_Press,country,United_States,,,,
+ont_14_writtenwork_test_4,MISSING,,"(ACM_Transactions_on_Information_Systems, LCCN_number, 89646863)",ACM_Transactions_on_Information_Systems,LCCN_number,89646863,,,,
+ont_14_writtenwork_test_4,MISSING,,"(ACM_Transactions_on_Information_Systems, abbreviation, ACM Trans. Inf. Syst.)",ACM_Transactions_on_Information_Systems,abbreviation,ACM Trans. Inf. Syst.,,,,
+ont_14_writtenwork_test_4,MISSING,,"(ACM_Transactions_on_Information_Systems, issnNumber, 1046-8188)",ACM_Transactions_on_Information_Systems,issnNumber,1046-8188,,,,
+ont_14_writtenwork_test_40,EXACT,1.00,"(A_Loyal_Character_Dancer, publisher, Soho_Press)",A_Loyal_Character_Dancer,publisher,Soho_Press,"(A_Loyal_Character_Dancer, publisher, Soho_Press)",A_Loyal_Character_Dancer,publisher,Soho_Press
+ont_14_writtenwork_test_40,MISSING,,"(Soho_Press, country, United_States)",Soho_Press,country,United_States,,,,
+ont_14_writtenwork_test_40,MISSING,,"(United_States, language, English_language)",United_States,language,English_language,,,,
+ont_14_writtenwork_test_40,EXTRA,,,,,,"(A_Loyal_Character_Dancer, country, United_States)",A_Loyal_Character_Dancer,country,United_States
+ont_14_writtenwork_test_40,EXTRA,,,,,,"(A_Loyal_Character_Dancer, language, english)",A_Loyal_Character_Dancer,language,english
+ont_14_writtenwork_test_41,EXACT,1.00,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans
+ont_14_writtenwork_test_41,EXACT,1.00,"(A_Severed_Wasp, country, United_States)",A_Severed_Wasp,country,United_States,"(A_Severed_Wasp, country, United_States)",A_Severed_Wasp,country,United_States
+ont_14_writtenwork_test_41,SEMANTIC,0.99,"(A_Severed_Wasp, language, English_language)",A_Severed_Wasp,language,English_language,"(A_Severed_Wasp, language, english)",A_Severed_Wasp,language,english
+ont_14_writtenwork_test_42,EXACT,1.00,"(A_Severed_Wasp, country, United_States)",A_Severed_Wasp,country,United_States,"(A_Severed_Wasp, country, United_States)",A_Severed_Wasp,country,United_States
+ont_14_writtenwork_test_42,SEMANTIC,0.99,"(A_Severed_Wasp, language, English_language)",A_Severed_Wasp,language,English_language,"(A_Severed_Wasp, language, english)",A_Severed_Wasp,language,english
+ont_14_writtenwork_test_42,SEMANTIC,0.99,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,"(United_States, ethnicGroup, native americans)",United_States,ethnicGroup,native americans
+ont_14_writtenwork_test_43,EXACT,1.00,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,"(United_States, ethnicGroup, asian americans)",United_States,ethnicGroup,asian americans
+ont_14_writtenwork_test_43,EXACT,1.00,"(A_Severed_Wasp, country, United_States)",A_Severed_Wasp,country,United_States,"(A_Severed_Wasp, country, United_States)",A_Severed_Wasp,country,United_States
+ont_14_writtenwork_test_43,MISSING,,"(A_Severed_Wasp, language, English_language)",A_Severed_Wasp,language,English_language,,,,
+ont_14_writtenwork_test_43,EXTRA,,,,,,"(English_language, spokenIn, United_States)",English_language,spokenIn,United_States
+ont_14_writtenwork_test_44,EXACT,1.00,"(A_Severed_Wasp, mediaType, Hardcover)",A_Severed_Wasp,mediaType,Hardcover,"(A_Severed_Wasp, mediaType, Hardcover)",A_Severed_Wasp,mediaType,Hardcover
+ont_14_writtenwork_test_44,EXACT,1.00,"(A_Severed_Wasp, numberOfPages, 388)",A_Severed_Wasp,numberOfPages,388,"(A_Severed_Wasp, numberOfPages, 388)",A_Severed_Wasp,numberOfPages,388
+ont_14_writtenwork_test_44,MISSING,,"(A_Severed_Wasp, isbnNumber, 0-374-26131-8)",A_Severed_Wasp,isbnNumber,0-374-26131-8,,,,
+ont_14_writtenwork_test_44,EXTRA,,,,,,"(A_Severed_Wasp, abbreviation, 0-374-26131-8)",A_Severed_Wasp,abbreviation,0-374-26131-8
+ont_14_writtenwork_test_45,EXACT,1.00,"(A_Severed_Wasp, numberOfPages, 388)",A_Severed_Wasp,numberOfPages,388,"(A_Severed_Wasp, numberOfPages, 388)",A_Severed_Wasp,numberOfPages,388
+ont_14_writtenwork_test_45,SEMANTIC,0.99,"(A_Severed_Wasp, mediaType, Print)",A_Severed_Wasp,mediaType,Print,"(A_Severed_Wasp, mediaType, Printing)",A_Severed_Wasp,mediaType,Printing
+ont_14_writtenwork_test_45,MISSING,,"(A_Severed_Wasp, oclcNumber, 8805735)",A_Severed_Wasp,oclcNumber,8805735,,,,
+ont_14_writtenwork_test_45,EXTRA,,,,,,"(A_Severed_Wasp, frequency, 8805735)",A_Severed_Wasp,frequency,8805735
+ont_14_writtenwork_test_46,EXACT,1.00,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States
+ont_14_writtenwork_test_46,MISSING,,"(A_Wizard_of_Mars, language, English_language)",A_Wizard_of_Mars,language,English_language,,,,
+ont_14_writtenwork_test_46,MISSING,,"(A_Wizard_of_Mars, country, United_States)",A_Wizard_of_Mars,country,United_States,,,,
+ont_14_writtenwork_test_47,EXACT,1.00,"(English_language, spokenIn, Great_Britain)",English_language,spokenIn,Great_Britain,"(English_language, spokenIn, Great_Britain)",English_language,spokenIn,Great_Britain
+ont_14_writtenwork_test_47,MISSING,,"(A_Wizard_of_Mars, language, English_language)",A_Wizard_of_Mars,language,English_language,,,,
+ont_14_writtenwork_test_47,MISSING,,"(A_Wizard_of_Mars, country, United_States)",A_Wizard_of_Mars,country,United_States,,,,
+ont_14_writtenwork_test_48,EXACT,1.00,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,"(United_States, ethnicGroup, asian americans)",United_States,ethnicGroup,asian americans
+ont_14_writtenwork_test_48,MISSING,,"(A_Wizard_of_Mars, language, English_language)",A_Wizard_of_Mars,language,English_language,,,,
+ont_14_writtenwork_test_48,MISSING,,"(A_Wizard_of_Mars, country, United_States)",A_Wizard_of_Mars,country,United_States,,,,
+ont_14_writtenwork_test_49,MISSING,,"(A_Wizard_of_Mars, numberOfPages, 560)",A_Wizard_of_Mars,numberOfPages,560,,,,
+ont_14_writtenwork_test_49,MISSING,,"(A_Wizard_of_Mars, mediaType, Hardcover)",A_Wizard_of_Mars,mediaType,Hardcover,,,,
+ont_14_writtenwork_test_49,MISSING,,"(A_Wizard_of_Mars, author, Diane_Duane)",A_Wizard_of_Mars,author,Diane_Duane,,,,
+ont_14_writtenwork_test_5,MISSING,,"(AIDS_(journal), academicDiscipline, HIV/AIDS)",AIDS_(journal),academicDiscipline,HIV/AIDS,,,,
+ont_14_writtenwork_test_5,MISSING,,"(AIDS_(journal), LCCN_number, 90640840)",AIDS_(journal),LCCN_number,90640840,,,,
+ont_14_writtenwork_test_5,MISSING,,"(AIDS_(journal), academicDiscipline, HIV)",AIDS_(journal),academicDiscipline,HIV,,,,
+ont_14_writtenwork_test_50,SEMANTIC,0.97,"(Brandon_Sanderson, birthPlace, Lincoln,_Nebraska)",Brandon_Sanderson,birthPlace,"Lincoln,_Nebraska","(Brandon_Sanderson, residence, Lincoln,_Nebraska)",Brandon_Sanderson,residence,"Lincoln,_Nebraska"
+ont_14_writtenwork_test_50,MISSING,,"(Alcatraz_Versus_the_Evil_Librarians, author, Brandon_Sanderson)",Alcatraz_Versus_the_Evil_Librarians,author,Brandon_Sanderson,,,,
+ont_14_writtenwork_test_50,MISSING,,"(Alcatraz_Versus_the_Evil_Librarians, followedBy, Alcatraz_Versus_the_Scrivener's_Bones)",Alcatraz_Versus_the_Evil_Librarians,followedBy,Alcatraz_Versus_the_Scrivener's_Bones,,,,
+ont_14_writtenwork_test_51,EXACT,1.00,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,"(United_States, ethnicGroup, african americans)",United_States,ethnicGroup,african americans
+ont_14_writtenwork_test_51,MISSING,,"(Alcatraz_Versus_the_Evil_Librarians, language, English_language)",Alcatraz_Versus_the_Evil_Librarians,language,English_language,,,,
+ont_14_writtenwork_test_51,MISSING,,"(Alcatraz_Versus_the_Evil_Librarians, country, United_States)",Alcatraz_Versus_the_Evil_Librarians,country,United_States,,,,
+ont_14_writtenwork_test_52,MISSING,,"(Alcatraz_Versus_the_Evil_Librarians, language, English_language)",Alcatraz_Versus_the_Evil_Librarians,language,English_language,,,,
+ont_14_writtenwork_test_52,MISSING,,"(Alcatraz_Versus_the_Evil_Librarians, country, United_States)",Alcatraz_Versus_the_Evil_Librarians,country,United_States,,,,
+ont_14_writtenwork_test_52,MISSING,,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,,,,
+ont_14_writtenwork_test_52,EXTRA,,,,,,"(Us_(2019_film), ethnicGroup, native americans)",Us_(2019_film),ethnicGroup,native americans
+ont_14_writtenwork_test_53,EXACT,1.00,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,"(United_States, ethnicGroup, asian americans)",United_States,ethnicGroup,asian americans
+ont_14_writtenwork_test_53,MISSING,,"(Alcatraz_Versus_the_Evil_Librarians, language, English_language)",Alcatraz_Versus_the_Evil_Librarians,language,English_language,,,,
+ont_14_writtenwork_test_53,MISSING,,"(Alcatraz_Versus_the_Evil_Librarians, country, United_States)",Alcatraz_Versus_the_Evil_Librarians,country,United_States,,,,
+ont_14_writtenwork_test_54,EXACT,1.00,"(United_States, ethnicGroup, White_Americans)",United_States,ethnicGroup,White_Americans,"(United_States, ethnicGroup, white americans)",United_States,ethnicGroup,white americans
+ont_14_writtenwork_test_54,MISSING,,"(Alcatraz_Versus_the_Evil_Librarians, language, English_language)",Alcatraz_Versus_the_Evil_Librarians,language,English_language,,,,
+ont_14_writtenwork_test_54,MISSING,,"(Alcatraz_Versus_the_Evil_Librarians, country, United_States)",Alcatraz_Versus_the_Evil_Librarians,country,United_States,,,,
+ont_14_writtenwork_test_55,MISSING,,"(Alcatraz_Versus_the_Evil_Librarians, isbnNumber, 0-439-92550-9)",Alcatraz_Versus_the_Evil_Librarians,isbnNumber,0-439-92550-9,,,,
+ont_14_writtenwork_test_55,MISSING,,"(Alcatraz_Versus_the_Evil_Librarians, oclcNumber, 78771100)",Alcatraz_Versus_the_Evil_Librarians,oclcNumber,78771100,,,,
+ont_14_writtenwork_test_55,MISSING,,"(Alcatraz_Versus_the_Evil_Librarians, mediaType, Print)",Alcatraz_Versus_the_Evil_Librarians,mediaType,Print,,,,
+ont_14_writtenwork_test_56,MISSING,,"(Alcatraz_Versus_the_Evil_Librarians, isbnNumber, 0-439-92550-9)",Alcatraz_Versus_the_Evil_Librarians,isbnNumber,0-439-92550-9,,,,
+ont_14_writtenwork_test_56,MISSING,,"(Alcatraz_Versus_the_Evil_Librarians, oclcNumber, 78771100)",Alcatraz_Versus_the_Evil_Librarians,oclcNumber,78771100,,,,
+ont_14_writtenwork_test_56,MISSING,,"(Alcatraz_Versus_the_Evil_Librarians, mediaType, Hardcover)",Alcatraz_Versus_the_Evil_Librarians,mediaType,Hardcover,,,,
+ont_14_writtenwork_test_57,MISSING,,"(Alcatraz_Versus_the_Evil_Librarians, genre, Fantasy_literature)",Alcatraz_Versus_the_Evil_Librarians,genre,Fantasy_literature,,,,
+ont_14_writtenwork_test_57,MISSING,,"(Alcatraz_Versus_the_Evil_Librarians, oclcNumber, 78771100)",Alcatraz_Versus_the_Evil_Librarians,oclcNumber,78771100,,,,
+ont_14_writtenwork_test_57,MISSING,,"(Alcatraz_Versus_the_Evil_Librarians, mediaType, Hardcover)",Alcatraz_Versus_the_Evil_Librarians,mediaType,Hardcover,,,,
+ont_14_writtenwork_test_58,MISSING,,"(Alcatraz_Versus_the_Evil_Librarians, isbnNumber, 0-439-92550-9)",Alcatraz_Versus_the_Evil_Librarians,isbnNumber,0-439-92550-9,,,,
+ont_14_writtenwork_test_58,MISSING,,"(Alcatraz_Versus_the_Evil_Librarians, numberOfPages, 320)",Alcatraz_Versus_the_Evil_Librarians,numberOfPages,320,,,,
+ont_14_writtenwork_test_58,MISSING,,"(Alcatraz_Versus_the_Evil_Librarians, mediaType, Hardcover)",Alcatraz_Versus_the_Evil_Librarians,mediaType,Hardcover,,,,
+ont_14_writtenwork_test_59,MISSING,,"(Alcatraz_Versus_the_Evil_Librarians, numberOfPages, 320)",Alcatraz_Versus_the_Evil_Librarians,numberOfPages,320,,,,
+ont_14_writtenwork_test_59,MISSING,,"(Alcatraz_Versus_the_Evil_Librarians, oclcNumber, 78771100)",Alcatraz_Versus_the_Evil_Librarians,oclcNumber,78771100,,,,
+ont_14_writtenwork_test_59,MISSING,,"(Alcatraz_Versus_the_Evil_Librarians, mediaType, Print)",Alcatraz_Versus_the_Evil_Librarians,mediaType,Print,,,,
+ont_14_writtenwork_test_6,MISSING,,"(AIDS_(journal), firstPublicationYear, 1987)",AIDS_(journal),firstPublicationYear,1987,,,,
+ont_14_writtenwork_test_6,MISSING,,"(AIDS_(journal), academicDiscipline, HIV/AIDS)",AIDS_(journal),academicDiscipline,HIV/AIDS,,,,
+ont_14_writtenwork_test_6,MISSING,,"(AIDS_(journal), academicDiscipline, HIV)",AIDS_(journal),academicDiscipline,HIV,,,,
+ont_14_writtenwork_test_60,MISSING,,"(Alcatraz_Versus_the_Evil_Librarians, isbnNumber, 0-439-92550-9)",Alcatraz_Versus_the_Evil_Librarians,isbnNumber,0-439-92550-9,,,,
+ont_14_writtenwork_test_60,MISSING,,"(Alcatraz_Versus_the_Evil_Librarians, numberOfPages, 320)",Alcatraz_Versus_the_Evil_Librarians,numberOfPages,320,,,,
+ont_14_writtenwork_test_60,MISSING,,"(Alcatraz_Versus_the_Evil_Librarians, mediaType, Print)",Alcatraz_Versus_the_Evil_Librarians,mediaType,Print,,,,
+ont_14_writtenwork_test_61,EXACT,1.00,"(Brandon_Sanderson, birthPlace, Lincoln,_Nebraska)",Brandon_Sanderson,birthPlace,"Lincoln,_Nebraska","(Brandon_Sanderson, birthPlace, Lincoln,_Nebraska)",Brandon_Sanderson,birthPlace,"Lincoln,_Nebraska"
+ont_14_writtenwork_test_61,MISSING,,"(Alcatraz_Versus_the_Evil_Librarians, followedBy, Alcatraz_Versus_the_Scrivener's_Bones)",Alcatraz_Versus_the_Evil_Librarians,followedBy,Alcatraz_Versus_the_Scrivener's_Bones,,,,
+ont_14_writtenwork_test_61,MISSING,,"(Alcatraz_Versus_the_Scrivener's_Bones, author, Brandon_Sanderson)",Alcatraz_Versus_the_Scrivener's_Bones,author,Brandon_Sanderson,,,,
+ont_14_writtenwork_test_62,EXACT,1.00,"(A_Loyal_Character_Dancer, country, United_States)",A_Loyal_Character_Dancer,country,United_States,"(A_Loyal_Character_Dancer, country, United_States)",A_Loyal_Character_Dancer,country,United_States
+ont_14_writtenwork_test_62,EXACT,1.00,"(English_language, spokenIn, Great_Britain)",English_language,spokenIn,Great_Britain,"(English_language, spokenIn, Great_Britain)",English_language,spokenIn,Great_Britain
+ont_14_writtenwork_test_62,SEMANTIC,0.95,"(United_States, language, English_language)",United_States,language,English_language,"(English_language, spokenIn, United_States)",English_language,spokenIn,United_States
+ont_14_writtenwork_test_63,EXACT,1.00,"(English_language, spokenIn, Great_Britain)",English_language,spokenIn,Great_Britain,"(English_language, spokenIn, Great_Britain)",English_language,spokenIn,Great_Britain
+ont_14_writtenwork_test_63,EXACT,1.00,"(A_Severed_Wasp, country, United_States)",A_Severed_Wasp,country,United_States,"(A_Severed_Wasp, country, United_States)",A_Severed_Wasp,country,United_States
+ont_14_writtenwork_test_63,SEMANTIC,0.95,"(United_States, language, English_language)",United_States,language,English_language,"(English_language, spokenIn, United_States)",English_language,spokenIn,United_States
+ont_14_writtenwork_test_64,EXACT,1.00,"(English_language, spokenIn, Great_Britain)",English_language,spokenIn,Great_Britain,"(English_language, spokenIn, Great_Britain)",English_language,spokenIn,Great_Britain
+ont_14_writtenwork_test_64,MISSING,,"(A_Wizard_of_Mars, country, United_States)",A_Wizard_of_Mars,country,United_States,,,,
+ont_14_writtenwork_test_64,MISSING,,"(United_States, language, English_language)",United_States,language,English_language,,,,
+ont_14_writtenwork_test_64,EXTRA,,,,,,"(English_language, spokenIn, Us_(2019_film))",English_language,spokenIn,Us_(2019_film)
+ont_14_writtenwork_test_65,MISSING,,"(United_Kingdom, language, English_language)",United_Kingdom,language,English_language,,,,
+ont_14_writtenwork_test_65,MISSING,,"(AIDS_(journal), country, United_Kingdom)",AIDS_(journal),country,United_Kingdom,,,,
+ont_14_writtenwork_test_65,MISSING,,"(AIDS_(journal), publisher, Lippincott_Williams_&_Wilkins)",AIDS_(journal),publisher,Lippincott_Williams_&_Wilkins,,,,
+ont_14_writtenwork_test_66,EXACT,1.00,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans
+ont_14_writtenwork_test_66,EXACT,1.00,"(1634:_The_Ram_Rebellion, country, United_States)",1634:_The_Ram_Rebellion,country,United_States,"(1634:_The_Ram_Rebellion, country, United_States)",1634:_The_Ram_Rebellion,country,United_States
+ont_14_writtenwork_test_66,MISSING,,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.",,,,
+ont_14_writtenwork_test_67,EXACT,1.00,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.","(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C."
+ont_14_writtenwork_test_67,EXACT,1.00,"(1634:_The_Ram_Rebellion, country, United_States)",1634:_The_Ram_Rebellion,country,United_States,"(1634:_The_Ram_Rebellion, country, United_States)",1634:_The_Ram_Rebellion,country,United_States
+ont_14_writtenwork_test_67,EXACT,1.00,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,"(United_States, ethnicGroup, asian americans)",United_States,ethnicGroup,asian americans
+ont_14_writtenwork_test_67,EXTRA,,,,,,"(1634:_The_Ram_Rebellion, firstPublicationYear, 1634)",1634:_The_Ram_Rebellion,firstPublicationYear,1634
+ont_14_writtenwork_test_68,EXACT,1.00,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States
+ont_14_writtenwork_test_68,MISSING,,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.",,,,
+ont_14_writtenwork_test_68,MISSING,,"(1634:_The_Ram_Rebellion, country, United_States)",1634:_The_Ram_Rebellion,country,United_States,,,,
+ont_14_writtenwork_test_68,EXTRA,,,,,,"(1634:_The_Ram_Rebellion, firstPublicationYear, 1634)",1634:_The_Ram_Rebellion,firstPublicationYear,1634
+ont_14_writtenwork_test_69,SEMANTIC,0.99,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,"(United_States, ethnicGroup, native americans)",United_States,ethnicGroup,native americans
+ont_14_writtenwork_test_69,MISSING,,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.",,,,
+ont_14_writtenwork_test_69,MISSING,,"(A_Fortress_of_Grey_Ice, country, United_States)",A_Fortress_of_Grey_Ice,country,United_States,,,,
+ont_14_writtenwork_test_7,MISSING,,"(AIDS_(journal), issnNumber, 0269-9370)",AIDS_(journal),issnNumber,0269-9370,,,,
+ont_14_writtenwork_test_7,MISSING,,"(AIDS_(journal), firstPublicationYear, 1987)",AIDS_(journal),firstPublicationYear,1987,,,,
+ont_14_writtenwork_test_7,MISSING,,"(AIDS_(journal), academicDiscipline, HIV)",AIDS_(journal),academicDiscipline,HIV,,,,
+ont_14_writtenwork_test_70,EXACT,1.00,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.","(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C."
+ont_14_writtenwork_test_70,EXACT,1.00,"(A_Severed_Wasp, country, United_States)",A_Severed_Wasp,country,United_States,"(A_Severed_Wasp, country, United_States)",A_Severed_Wasp,country,United_States
+ont_14_writtenwork_test_70,SEMANTIC,0.99,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,"(United_States, ethnicGroup, african american)",United_States,ethnicGroup,african american
+ont_14_writtenwork_test_71,EXACT,1.00,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States
+ont_14_writtenwork_test_71,MISSING,,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.",,,,
+ont_14_writtenwork_test_71,MISSING,,"(A_Wizard_of_Mars, country, United_States)",A_Wizard_of_Mars,country,United_States,,,,
+ont_14_writtenwork_test_72,EXACT,1.00,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,"(United_States, ethnicGroup, african americans)",United_States,ethnicGroup,african americans
+ont_14_writtenwork_test_72,MISSING,,"(A_Fortress_of_Grey_Ice, country, United_States)",A_Fortress_of_Grey_Ice,country,United_States,,,,
+ont_14_writtenwork_test_72,MISSING,,"(A_Fortress_of_Grey_Ice, language, English_language)",A_Fortress_of_Grey_Ice,language,English_language,,,,
+ont_14_writtenwork_test_73,EXACT,1.00,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.","(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C."
+ont_14_writtenwork_test_73,EXACT,1.00,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans
+ont_14_writtenwork_test_73,MISSING,,"(A_Fortress_of_Grey_Ice, country, United_States)",A_Fortress_of_Grey_Ice,country,United_States,,,,
+ont_14_writtenwork_test_74,EXACT,1.00,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.","(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C."
+ont_14_writtenwork_test_74,EXACT,1.00,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans
+ont_14_writtenwork_test_74,MISSING,,"(A_Wizard_of_Mars, country, United_States)",A_Wizard_of_Mars,country,United_States,,,,
+ont_14_writtenwork_test_75,SEMANTIC,0.99,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,"(United_States, ethnicGroup, african american)",United_States,ethnicGroup,african american
+ont_14_writtenwork_test_75,SEMANTIC,0.95,"(United_States, language, English_language)",United_States,language,English_language,"(English_language, spokenIn, United_States)",English_language,spokenIn,United_States
+ont_14_writtenwork_test_75,MISSING,,"(A_Fortress_of_Grey_Ice, country, United_States)",A_Fortress_of_Grey_Ice,country,United_States,,,,
+ont_14_writtenwork_test_76,EXACT,1.00,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,"(United_States, ethnicGroup, african americans)",United_States,ethnicGroup,african americans
+ont_14_writtenwork_test_76,SEMANTIC,0.95,"(United_States, language, English_language)",United_States,language,English_language,"(English_language, spokenIn, United_States)",English_language,spokenIn,United_States
+ont_14_writtenwork_test_76,MISSING,,"(A_Wizard_of_Mars, country, United_States)",A_Wizard_of_Mars,country,United_States,,,,
+ont_14_writtenwork_test_77,EXACT,1.00,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans
+ont_14_writtenwork_test_77,EXACT,1.00,"(United_States, leader, Barack_Obama)",United_States,leader,Barack_Obama,"(United_States, leader, Barack_Obama)",United_States,leader,Barack_Obama
+ont_14_writtenwork_test_77,MISSING,,"(A_Wizard_of_Mars, country, United_States)",A_Wizard_of_Mars,country,United_States,,,,
+ont_14_writtenwork_test_78,EXACT,1.00,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,"(United_States, ethnicGroup, african americans)",United_States,ethnicGroup,african americans
+ont_14_writtenwork_test_78,SEMANTIC,0.99,"(United_States, leaderTitle, President_of_the_United_States)",United_States,leaderTitle,President_of_the_United_States,"(United_States, leaderTitle, president)",United_States,leaderTitle,president
+ont_14_writtenwork_test_78,MISSING,,"(A_Wizard_of_Mars, country, United_States)",A_Wizard_of_Mars,country,United_States,,,,
+ont_14_writtenwork_test_79,SEMANTIC,0.95,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,"(Asian_Americans, nationality, United_States)",Asian_Americans,nationality,United_States
+ont_14_writtenwork_test_79,MISSING,,"(A_Fortress_of_Grey_Ice, country, United_States)",A_Fortress_of_Grey_Ice,country,United_States,,,,
+ont_14_writtenwork_test_79,MISSING,,"(A_Fortress_of_Grey_Ice, language, English_language)",A_Fortress_of_Grey_Ice,language,English_language,,,,
+ont_14_writtenwork_test_8,EXACT,1.00,"(Lippincott_Williams_&_Wilkins, parentCompany, Wolters_Kluwer)",Lippincott_Williams_&_Wilkins,parentCompany,Wolters_Kluwer,"(Lippincott_Williams_&_Wilkins, parentCompany, Wolters_Kluwer)",Lippincott_Williams_&_Wilkins,parentCompany,Wolters_Kluwer
+ont_14_writtenwork_test_8,MISSING,,"(AIDS_(journal), country, United_Kingdom)",AIDS_(journal),country,United_Kingdom,,,,
+ont_14_writtenwork_test_8,MISSING,,"(AIDS_(journal), publisher, Lippincott_Williams_&_Wilkins)",AIDS_(journal),publisher,Lippincott_Williams_&_Wilkins,,,,
+ont_14_writtenwork_test_80,EXACT,1.00,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,"(United_States, ethnicGroup, asian americans)",United_States,ethnicGroup,asian americans
+ont_14_writtenwork_test_80,MISSING,,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.",,,,
+ont_14_writtenwork_test_80,MISSING,,"(A_Fortress_of_Grey_Ice, country, United_States)",A_Fortress_of_Grey_Ice,country,United_States,,,,
+ont_14_writtenwork_test_80,EXTRA,,,,,,"(Us_(2019_film), capital, Washington,_D.C.)",Us_(2019_film),capital,"Washington,_D.C."
+ont_14_writtenwork_test_81,EXACT,1.00,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,"(United_States, ethnicGroup, asian americans)",United_States,ethnicGroup,asian americans
+ont_14_writtenwork_test_81,EXACT,1.00,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.","(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C."
+ont_14_writtenwork_test_81,EXACT,1.00,"(A_Severed_Wasp, country, United_States)",A_Severed_Wasp,country,United_States,"(A_Severed_Wasp, country, United_States)",A_Severed_Wasp,country,United_States
+ont_14_writtenwork_test_82,EXACT,1.00,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,"(United_States, ethnicGroup, asian americans)",United_States,ethnicGroup,asian americans
+ont_14_writtenwork_test_82,SEMANTIC,0.95,"(United_States, language, English_language)",United_States,language,English_language,"(English_language, spokenIn, United_States)",English_language,spokenIn,United_States
+ont_14_writtenwork_test_82,MISSING,,"(A_Fortress_of_Grey_Ice, country, United_States)",A_Fortress_of_Grey_Ice,country,United_States,,,,
+ont_14_writtenwork_test_83,EXACT,1.00,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans
+ont_14_writtenwork_test_83,EXACT,1.00,"(A_Severed_Wasp, country, United_States)",A_Severed_Wasp,country,United_States,"(A_Severed_Wasp, country, United_States)",A_Severed_Wasp,country,United_States
+ont_14_writtenwork_test_83,SEMANTIC,0.95,"(United_States, language, English_language)",United_States,language,English_language,"(English_language, spokenIn, United_States)",English_language,spokenIn,United_States
+ont_14_writtenwork_test_84,EXACT,1.00,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,"(United_States, ethnicGroup, asian americans)",United_States,ethnicGroup,asian americans
+ont_14_writtenwork_test_84,EXACT,1.00,"(United_States, leader, Barack_Obama)",United_States,leader,Barack_Obama,"(United_States, leader, Barack_Obama)",United_States,leader,Barack_Obama
+ont_14_writtenwork_test_84,MISSING,,"(A_Fortress_of_Grey_Ice, country, United_States)",A_Fortress_of_Grey_Ice,country,United_States,,,,
+ont_14_writtenwork_test_85,EXACT,1.00,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,"(United_States, ethnicGroup, asian americans)",United_States,ethnicGroup,asian americans
+ont_14_writtenwork_test_85,EXACT,1.00,"(United_States, leader, Barack_Obama)",United_States,leader,Barack_Obama,"(United_States, leader, Barack_Obama)",United_States,leader,Barack_Obama
+ont_14_writtenwork_test_85,MISSING,,"(Alcatraz_Versus_the_Evil_Librarians, country, United_States)",Alcatraz_Versus_the_Evil_Librarians,country,United_States,,,,
+ont_14_writtenwork_test_86,EXACT,1.00,"(United_States, leader, Joe_Biden)",United_States,leader,Joe_Biden,"(United_States, leader, Joe_Biden)",United_States,leader,Joe_Biden
+ont_14_writtenwork_test_86,EXACT,1.00,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans
+ont_14_writtenwork_test_86,MISSING,,"(Alcatraz_Versus_the_Evil_Librarians, country, United_States)",Alcatraz_Versus_the_Evil_Librarians,country,United_States,,,,
+ont_14_writtenwork_test_87,EXACT,1.00,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,"(United_States, ethnicGroup, asian americans)",United_States,ethnicGroup,asian americans
+ont_14_writtenwork_test_87,SEMANTIC,0.99,"(United_States, leaderTitle, President_of_the_United_States)",United_States,leaderTitle,President_of_the_United_States,"(United_States, leaderTitle, president)",United_States,leaderTitle,president
+ont_14_writtenwork_test_87,MISSING,,"(A_Fortress_of_Grey_Ice, country, United_States)",A_Fortress_of_Grey_Ice,country,United_States,,,,
+ont_14_writtenwork_test_88,EXACT,1.00,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States
+ont_14_writtenwork_test_88,MISSING,,"(A_Fortress_of_Grey_Ice, country, United_States)",A_Fortress_of_Grey_Ice,country,United_States,,,,
+ont_14_writtenwork_test_88,MISSING,,"(United_States, language, English_language)",United_States,language,English_language,,,,
+ont_14_writtenwork_test_89,EXACT,1.00,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States
+ont_14_writtenwork_test_89,EXACT,1.00,"(A_Severed_Wasp, country, United_States)",A_Severed_Wasp,country,United_States,"(A_Severed_Wasp, country, United_States)",A_Severed_Wasp,country,United_States
+ont_14_writtenwork_test_89,SEMANTIC,0.95,"(United_States, language, English_language)",United_States,language,English_language,"(English_language, spokenIn, United_States)",English_language,spokenIn,United_States
+ont_14_writtenwork_test_9,EXACT,1.00,"(United_Kingdom, capital, London)",United_Kingdom,capital,London,"(United_Kingdom, capital, London)",United_Kingdom,capital,London
+ont_14_writtenwork_test_9,MISSING,,"(AIDS_(journal), country, United_Kingdom)",AIDS_(journal),country,United_Kingdom,,,,
+ont_14_writtenwork_test_9,MISSING,,"(AIDS_(journal), publisher, Lippincott_Williams_&_Wilkins)",AIDS_(journal),publisher,Lippincott_Williams_&_Wilkins,,,,
+ont_14_writtenwork_test_90,EXACT,1.00,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States
+ont_14_writtenwork_test_90,SEMANTIC,0.95,"(United_States, language, English_language)",United_States,language,English_language,"(English_language, spokenIn, United_States)",English_language,spokenIn,United_States
+ont_14_writtenwork_test_90,MISSING,,"(A_Wizard_of_Mars, country, United_States)",A_Wizard_of_Mars,country,United_States,,,,
+ont_14_writtenwork_test_91,SEMANTIC,0.99,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,"(United_States, ethnicGroup, african american)",United_States,ethnicGroup,african american
+ont_14_writtenwork_test_91,SEMANTIC,0.95,"(United_States, language, English_language)",United_States,language,English_language,"(English_language, spokenIn, United_States)",English_language,spokenIn,United_States
+ont_14_writtenwork_test_91,MISSING,,"(Alcatraz_Versus_the_Evil_Librarians, country, United_States)",Alcatraz_Versus_the_Evil_Librarians,country,United_States,,,,
+ont_14_writtenwork_test_92,EXACT,1.00,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States
+ont_14_writtenwork_test_92,SEMANTIC,0.95,"(United_States, language, English_language)",United_States,language,English_language,"(English_language, spokenIn, United_States)",English_language,spokenIn,United_States
+ont_14_writtenwork_test_92,MISSING,,"(Alcatraz_Versus_the_Evil_Librarians, country, United_States)",Alcatraz_Versus_the_Evil_Librarians,country,United_States,,,,
+ont_14_writtenwork_test_93,EXACT,1.00,"(English_language, spokenIn, Great_Britain)",English_language,spokenIn,Great_Britain,"(English_language, spokenIn, Great_Britain)",English_language,spokenIn,Great_Britain
+ont_14_writtenwork_test_93,SEMANTIC,0.95,"(United_States, language, English_language)",United_States,language,English_language,"(English_language, spokenIn, United_States)",English_language,spokenIn,United_States
+ont_14_writtenwork_test_93,MISSING,,"(A_Fortress_of_Grey_Ice, country, United_States)",A_Fortress_of_Grey_Ice,country,United_States,,,,
+ont_14_writtenwork_test_94,EXACT,1.00,"(United_States, ethnicGroup, White_Americans)",United_States,ethnicGroup,White_Americans,"(United_States, ethnicGroup, White_Americans)",United_States,ethnicGroup,White_Americans
+ont_14_writtenwork_test_94,SEMANTIC,0.95,"(United_States, language, English_language)",United_States,language,English_language,"(English_language, spokenIn, United_States)",English_language,spokenIn,United_States
+ont_14_writtenwork_test_94,MISSING,,"(Alcatraz_Versus_the_Evil_Librarians, country, United_States)",Alcatraz_Versus_the_Evil_Librarians,country,United_States,,,,
+ont_14_writtenwork_test_95,EXACT,1.00,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans
+ont_14_writtenwork_test_95,EXACT,1.00,"(1634:_The_Ram_Rebellion, country, United_States)",1634:_The_Ram_Rebellion,country,United_States,"(1634:_The_Ram_Rebellion, country, United_States)",1634:_The_Ram_Rebellion,country,United_States
+ont_14_writtenwork_test_95,SEMANTIC,0.95,"(United_States, leader, Barack_Obama)",United_States,leader,Barack_Obama,"(United_States, president, Barack_Obama)",United_States,president,Barack_Obama
+ont_14_writtenwork_test_96,EXACT,1.00,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,"(United_States, ethnicGroup, asian americans)",United_States,ethnicGroup,asian americans
+ont_14_writtenwork_test_96,EXACT,1.00,"(United_States, leader, Barack_Obama)",United_States,leader,Barack_Obama,"(United_States, leader, Barack_Obama)",United_States,leader,Barack_Obama
+ont_14_writtenwork_test_96,EXACT,1.00,"(1634:_The_Ram_Rebellion, country, United_States)",1634:_The_Ram_Rebellion,country,United_States,"(1634:_The_Ram_Rebellion, country, United_States)",1634:_The_Ram_Rebellion,country,United_States
+ont_14_writtenwork_test_96,EXTRA,,,,,,"(1634:_The_Ram_Rebellion, firstPublicationYear, 1634)",1634:_The_Ram_Rebellion,firstPublicationYear,1634
+ont_14_writtenwork_test_97,EXACT,1.00,"(1634:_The_Ram_Rebellion, country, United_States)",1634:_The_Ram_Rebellion,country,United_States,"(1634:_The_Ram_Rebellion, country, United_States)",1634:_The_Ram_Rebellion,country,United_States
+ont_14_writtenwork_test_97,EXACT,1.00,"(United_States, leader, Barack_Obama)",United_States,leader,Barack_Obama,"(United_States, leader, Barack_Obama)",United_States,leader,Barack_Obama
+ont_14_writtenwork_test_97,SEMANTIC,0.99,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,"(United_States, ethnicGroup, native americans)",United_States,ethnicGroup,native americans
+ont_14_writtenwork_test_98,EXACT,1.00,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States
+ont_14_writtenwork_test_98,SEMANTIC,0.98,"(United_States, leader, Barack_Obama)",United_States,leader,Barack_Obama,"(Barack_Obama, leader, United_States)",Barack_Obama,leader,United_States
+ont_14_writtenwork_test_98,MISSING,,"(A_Fortress_of_Grey_Ice, country, United_States)",A_Fortress_of_Grey_Ice,country,United_States,,,,
+ont_14_writtenwork_test_99,EXACT,1.00,"(A_Severed_Wasp, country, United_States)",A_Severed_Wasp,country,United_States,"(A_Severed_Wasp, country, United_States)",A_Severed_Wasp,country,United_States
+ont_14_writtenwork_test_99,EXACT,1.00,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,"(United_States, ethnicGroup, african americans)",United_States,ethnicGroup,african americans
+ont_14_writtenwork_test_99,EXACT,1.00,"(United_States, leader, Barack_Obama)",United_States,leader,Barack_Obama,"(United_States, leader, Barack_Obama)",United_States,leader,Barack_Obama

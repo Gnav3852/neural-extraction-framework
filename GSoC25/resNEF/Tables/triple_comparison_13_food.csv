@@ -1,0 +1,626 @@
+sent_id,match_type,similarity,expected,expected_sub,expected_rel,expected_obj,predicted,predicted_sub,predicted_rel,predicted_obj
+ont_13_food_test_1,EXACT,1.00,"(Amatriciana_sauce, country, Italy)",Amatriciana_sauce,country,Italy,"(Amatriciana_sauce, country, Italy)",Amatriciana_sauce,country,Italy
+ont_13_food_test_1,EXACT,1.00,"(Amatriciana_sauce, ingredient, Guanciale)",Amatriciana_sauce,ingredient,Guanciale,"(Amatriciana_sauce, ingredient, Guanciale)",Amatriciana_sauce,ingredient,Guanciale
+ont_13_food_test_1,SEMANTIC,0.94,"(Amatriciana_sauce, mainIngredient, Tomatoes, guanciale, cheese, olive oil)",Amatriciana_sauce,mainIngredient,"Tomatoes, guanciale, cheese, olive oil","(Amatriciana_sauce, ingredient, Tomato)",Amatriciana_sauce,ingredient,Tomato
+ont_13_food_test_1,EXTRA,,,,,,"(Amatriciana_sauce, ingredient, Cheese)",Amatriciana_sauce,ingredient,Cheese
+ont_13_food_test_1,EXTRA,,,,,,"(Amatriciana_sauce, ingredient, Olive_oil)",Amatriciana_sauce,ingredient,Olive_oil
+ont_13_food_test_10,EXACT,1.00,"(Arem-arem, country, Indonesia)",Arem-arem,country,Indonesia,"(Arem-arem, country, Indonesia)",Arem-arem,country,Indonesia
+ont_13_food_test_10,EXACT,1.00,"(Arem-arem, ingredient, Banana_leaf)",Arem-arem,ingredient,Banana_leaf,"(Arem-arem, ingredient, Banana_leaf)",Arem-arem,ingredient,Banana_leaf
+ont_13_food_test_10,MISSING,,"(Arem-arem, region, Javanese_cuisine)",Arem-arem,region,Javanese_cuisine,,,,
+ont_13_food_test_10,EXTRA,,,,,,"(Arem-arem, isPartOf, Javanese_cuisine)",Arem-arem,isPartOf,Javanese_cuisine
+ont_13_food_test_100,EXACT,1.00,"(Bionico, course, Dessert)",Bionico,course,Dessert,"(Bionico, course, Dessert)",Bionico,course,Dessert
+ont_13_food_test_100,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_100,SEMANTIC,0.97,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso,"(Mexico, currency, Peso)",Mexico,currency,Peso
+ont_13_food_test_100,MISSING,,"(Dessert, dishVariation, Cookie)",Dessert,dishVariation,Cookie,,,,
+ont_13_food_test_100,EXTRA,,,,,,"(Cookie, isPartOf, Dessert)",Cookie,isPartOf,Dessert
+ont_13_food_test_101,EXACT,1.00,"(Bionico, region, Guadalajara)",Bionico,region,Guadalajara,"(Bionico, region, Guadalajara)",Bionico,region,Guadalajara
+ont_13_food_test_101,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_102,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_102,MISSING,,"(Bionico, dishVariation, Honey)",Bionico,dishVariation,Honey,,,,
+ont_13_food_test_102,EXTRA,,,,,,"(Bionico, ingredient, Honey)",Bionico,ingredient,Honey
+ont_13_food_test_103,EXACT,1.00,"(Bionico, ingredient, Granola)",Bionico,ingredient,Granola,"(Bionico, ingredient, Granola)",Bionico,ingredient,Granola
+ont_13_food_test_103,EXACT,1.00,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans
+ont_13_food_test_103,EXACT,1.00,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso
+ont_13_food_test_103,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_103,MISSING,,"(Bionico, course, Dessert)",Bionico,course,Dessert,,,,
+ont_13_food_test_103,MISSING,,"(Dessert, dishVariation, Sandesh_(confectionery))",Dessert,dishVariation,Sandesh_(confectionery),,,,
+ont_13_food_test_103,MISSING,,"(Bionico, region, Guadalajara)",Bionico,region,Guadalajara,,,,
+ont_13_food_test_103,EXTRA,,,,,,"(Sandesh_(confectionery), course, Dessert)",Sandesh_(confectionery),course,Dessert
+ont_13_food_test_104,EXACT,1.00,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans
+ont_13_food_test_104,EXACT,1.00,"(Bionico, ingredient, Raisin)",Bionico,ingredient,Raisin,"(Bionico, ingredient, Raisin)",Bionico,ingredient,Raisin
+ont_13_food_test_104,EXACT,1.00,"(Bionico, region, Guadalajara)",Bionico,region,Guadalajara,"(Bionico, region, Guadalajara)",Bionico,region,Guadalajara
+ont_13_food_test_104,SEMANTIC,0.97,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso,"(Mexico, currency, Peso)",Mexico,currency,Peso
+ont_13_food_test_104,MISSING,,"(Bionico, course, Dessert)",Bionico,course,Dessert,,,,
+ont_13_food_test_104,MISSING,,"(Dessert, dishVariation, Cookie)",Dessert,dishVariation,Cookie,,,,
+ont_13_food_test_104,MISSING,,"(Bionico, country, Mexico)",Bionico,country,Mexico,,,,
+ont_13_food_test_105,SEMANTIC,0.97,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso,"(Mexico, currency, Peso)",Mexico,currency,Peso
+ont_13_food_test_105,MISSING,,"(Dessert, dishVariation, Sandesh_(confectionery))",Dessert,dishVariation,Sandesh_(confectionery),,,,
+ont_13_food_test_105,MISSING,,"(Bionico, course, Dessert)",Bionico,course,Dessert,,,,
+ont_13_food_test_105,MISSING,,"(Bionico, country, Mexico)",Bionico,country,Mexico,,,,
+ont_13_food_test_105,EXTRA,,,,,,"(Sandesh_(confectionery), course, Dessert)",Sandesh_(confectionery),course,Dessert
+ont_13_food_test_106,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_106,MISSING,,"(Bionico, dishVariation, Cottage_cheese)",Bionico,dishVariation,Cottage_cheese,,,,
+ont_13_food_test_106,EXTRA,,,,,,"(Bionico, ingredient, Cottage_cheese)",Bionico,ingredient,Cottage_cheese
+ont_13_food_test_107,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_107,EXACT,1.00,"(Bionico, ingredient, Condensed_milk)",Bionico,ingredient,Condensed_milk,"(Bionico, ingredient, Condensed_milk)",Bionico,ingredient,Condensed_milk
+ont_13_food_test_107,EXACT,1.00,"(Bionico, course, Dessert)",Bionico,course,Dessert,"(Bionico, course, Dessert)",Bionico,course,Dessert
+ont_13_food_test_107,EXACT,1.00,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans
+ont_13_food_test_107,EXACT,1.00,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso
+ont_13_food_test_108,EXACT,1.00,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans
+ont_13_food_test_108,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_108,SEMANTIC,0.97,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso,"(Mexico, currency, Peso)",Mexico,currency,Peso
+ont_13_food_test_108,MISSING,,"(Dessert, dishVariation, Cookie)",Dessert,dishVariation,Cookie,,,,
+ont_13_food_test_108,MISSING,,"(Bionico, region, Guadalajara)",Bionico,region,Guadalajara,,,,
+ont_13_food_test_108,MISSING,,"(Bionico, course, Dessert)",Bionico,course,Dessert,,,,
+ont_13_food_test_108,EXTRA,,,,,,"(Bionico, isPartOf, Dessert)",Bionico,isPartOf,Dessert
+ont_13_food_test_108,EXTRA,,,,,,"(Cookie, isPartOf, Dessert)",Cookie,isPartOf,Dessert
+ont_13_food_test_109,EXACT,1.00,"(Mexico, leader, Silvano_Aureoles_Conejo)",Mexico,leader,Silvano_Aureoles_Conejo,"(Mexico, leader, Silvano_Aureoles_Conejo)",Mexico,leader,Silvano_Aureoles_Conejo
+ont_13_food_test_109,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_109,SEMANTIC,0.97,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso,"(Mexico, currency, Peso)",Mexico,currency,Peso
+ont_13_food_test_109,MISSING,,"(Bionico, course, Dessert)",Bionico,course,Dessert,,,,
+ont_13_food_test_11,EXACT,1.00,"(Indonesia, currency, Indonesian_rupiah)",Indonesia,currency,Indonesian_rupiah,"(Indonesia, currency, Indonesian_rupiah)",Indonesia,currency,Indonesian_rupiah
+ont_13_food_test_11,EXACT,1.00,"(Arem-arem, country, Indonesia)",Arem-arem,country,Indonesia,"(Arem-arem, country, Indonesia)",Arem-arem,country,Indonesia
+ont_13_food_test_11,SEMANTIC,0.98,"(Indonesia, leader, Joko_Widodo)",Indonesia,leader,Joko_Widodo,"(Joko_Widodo, leader, Indonesia)",Joko_Widodo,leader,Indonesia
+ont_13_food_test_110,EXACT,1.00,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans
+ont_13_food_test_110,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_110,EXACT,1.00,"(Bionico, region, Jalisco)",Bionico,region,Jalisco,"(Bionico, region, Jalisco)",Bionico,region,Jalisco
+ont_13_food_test_110,EXACT,1.00,"(Mexico, leader, Silvano_Aureoles_Conejo)",Mexico,leader,Silvano_Aureoles_Conejo,"(Mexico, leader, Silvano_Aureoles_Conejo)",Mexico,leader,Silvano_Aureoles_Conejo
+ont_13_food_test_110,EXACT,1.00,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso
+ont_13_food_test_110,MISSING,,"(Bionico, course, Dessert)",Bionico,course,Dessert,,,,
+ont_13_food_test_111,EXACT,1.00,"(Bionico, ingredient, Granola)",Bionico,ingredient,Granola,"(Bionico, ingredient, Granola)",Bionico,ingredient,Granola
+ont_13_food_test_111,EXACT,1.00,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans
+ont_13_food_test_111,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_111,SEMANTIC,0.97,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso,"(Mexico, currency, Peso)",Mexico,currency,Peso
+ont_13_food_test_111,MISSING,,"(Dessert, dishVariation, Cookie)",Dessert,dishVariation,Cookie,,,,
+ont_13_food_test_111,MISSING,,"(Bionico, course, Dessert)",Bionico,course,Dessert,,,,
+ont_13_food_test_111,EXTRA,,,,,,"(Cookie, isPartOf, Dessert)",Cookie,isPartOf,Dessert
+ont_13_food_test_112,EXACT,1.00,"(Mexico, leader, Silvano_Aureoles_Conejo)",Mexico,leader,Silvano_Aureoles_Conejo,"(Mexico, leader, Silvano_Aureoles_Conejo)",Mexico,leader,Silvano_Aureoles_Conejo
+ont_13_food_test_112,EXACT,1.00,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans
+ont_13_food_test_112,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_112,SEMANTIC,0.97,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso,"(Mexico, currency, Peso)",Mexico,currency,Peso
+ont_13_food_test_112,MISSING,,"(Bionico, mainIngredient, Chopped Fruits, Sour Cream, Condensed Milk, Granola, Shredded Coconut, Raisins)",Bionico,mainIngredient,"Chopped Fruits, Sour Cream, Condensed Milk, Granola, Shredded Coconut, Raisins",,,,
+ont_13_food_test_112,MISSING,,"(Bionico, course, Dessert)",Bionico,course,Dessert,,,,
+ont_13_food_test_113,EXACT,1.00,"(Mexico, language, Spanish_language)",Mexico,language,Spanish_language,"(Mexico, language, Spanish_language)",Mexico,language,Spanish_language
+ont_13_food_test_113,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_113,MISSING,,"(Bionico, course, Dessert)",Bionico,course,Dessert,,,,
+ont_13_food_test_113,EXTRA,,,,,,"(Bionico, isPartOf, Dessert)",Bionico,isPartOf,Dessert
+ont_13_food_test_114,EXACT,1.00,"(Bionico, region, Jalisco)",Bionico,region,Jalisco,"(Bionico, region, Jalisco)",Bionico,region,Jalisco
+ont_13_food_test_114,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_115,EXACT,1.00,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans
+ont_13_food_test_115,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_115,EXACT,1.00,"(Bionico, course, Dessert)",Bionico,course,Dessert,"(Bionico, course, Dessert)",Bionico,course,Dessert
+ont_13_food_test_115,EXACT,1.00,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso
+ont_13_food_test_115,EXACT,1.00,"(Bionico, ingredient, Sour_cream)",Bionico,ingredient,Sour_cream,"(Bionico, ingredient, Sour_cream)",Bionico,ingredient,Sour_cream
+ont_13_food_test_116,EXACT,1.00,"(Mexico, leader, Silvano_Aureoles_Conejo)",Mexico,leader,Silvano_Aureoles_Conejo,"(Mexico, leader, Silvano_Aureoles_Conejo)",Mexico,leader,Silvano_Aureoles_Conejo
+ont_13_food_test_116,EXACT,1.00,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans
+ont_13_food_test_116,EXACT,1.00,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso
+ont_13_food_test_116,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_116,MISSING,,"(Bionico, course, Dessert)",Bionico,course,Dessert,,,,
+ont_13_food_test_116,MISSING,,"(Bionico, ingredient, Raisin)",Bionico,ingredient,Raisin,,,,
+ont_13_food_test_116,MISSING,,"(Bionico, region, Guadalajara)",Bionico,region,Guadalajara,,,,
+ont_13_food_test_116,EXTRA,,,,,,"(Mexico, region, Province_of_Guadalajara)",Mexico,region,Province_of_Guadalajara
+ont_13_food_test_117,EXACT,1.00,"(Bionico, region, Guadalajara)",Bionico,region,Guadalajara,"(Bionico, region, Guadalajara)",Bionico,region,Guadalajara
+ont_13_food_test_117,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_117,MISSING,,"(Bionico, course, Dessert)",Bionico,course,Dessert,,,,
+ont_13_food_test_118,EXACT,1.00,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans
+ont_13_food_test_118,EXACT,1.00,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso
+ont_13_food_test_118,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_118,SEMANTIC,0.96,"(Bionico, ingredient, Raisin)",Bionico,ingredient,Raisin,"(Bionico, ingredient, raisins)",Bionico,ingredient,raisins
+ont_13_food_test_118,MISSING,,"(Bionico, course, Dessert)",Bionico,course,Dessert,,,,
+ont_13_food_test_119,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_119,MISSING,,"(Bionico, course, Dessert)",Bionico,course,Dessert,,,,
+ont_13_food_test_119,MISSING,,"(Dessert, dishVariation, Cake)",Dessert,dishVariation,Cake,,,,
+ont_13_food_test_119,EXTRA,,,,,,"(Cake, family, Dessert)",Cake,family,Dessert
+ont_13_food_test_12,EXACT,1.00,"(Indonesia, leader, Joko_Widodo)",Indonesia,leader,Joko_Widodo,"(Indonesia, leader, Joko_Widodo)",Indonesia,leader,Joko_Widodo
+ont_13_food_test_12,EXACT,1.00,"(Indonesia, language, Indonesian_language)",Indonesia,language,Indonesian_language,"(Indonesia, language, Indonesian_language)",Indonesia,language,Indonesian_language
+ont_13_food_test_12,MISSING,,"(Arem-arem, country, Indonesia)",Arem-arem,country,Indonesia,,,,
+ont_13_food_test_120,EXACT,1.00,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans
+ont_13_food_test_120,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_120,SEMANTIC,0.97,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso,"(Mexico, currency, Peso)",Mexico,currency,Peso
+ont_13_food_test_120,MISSING,,"(Bionico, mainIngredient, Chopped Fruits, Sour Cream, Condensed Milk, Granola, Shredded Coconut, Raisins)",Bionico,mainIngredient,"Chopped Fruits, Sour Cream, Condensed Milk, Granola, Shredded Coconut, Raisins",,,,
+ont_13_food_test_120,MISSING,,"(Bionico, course, Dessert)",Bionico,course,Dessert,,,,
+ont_13_food_test_120,MISSING,,"(Dessert, dishVariation, Sandesh_(confectionery))",Dessert,dishVariation,Sandesh_(confectionery),,,,
+ont_13_food_test_120,EXTRA,,,,,,"(Bionico, ingredient, chopped fruits)",Bionico,ingredient,chopped fruits
+ont_13_food_test_120,EXTRA,,,,,,"(Bionico, ingredient, sour cream)",Bionico,ingredient,sour cream
+ont_13_food_test_121,EXACT,1.00,"(Mexico, leader, Silvano_Aureoles_Conejo)",Mexico,leader,Silvano_Aureoles_Conejo,"(Mexico, leader, Silvano_Aureoles_Conejo)",Mexico,leader,Silvano_Aureoles_Conejo
+ont_13_food_test_121,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_121,MISSING,,"(Bionico, course, Dessert)",Bionico,course,Dessert,,,,
+ont_13_food_test_122,EXACT,1.00,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans
+ont_13_food_test_122,EXACT,1.00,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso
+ont_13_food_test_122,EXACT,1.00,"(Bionico, region, Guadalajara)",Bionico,region,Guadalajara,"(Bionico, region, Guadalajara)",Bionico,region,Guadalajara
+ont_13_food_test_122,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_122,MISSING,,"(Bionico, ingredient, Granola)",Bionico,ingredient,Granola,,,,
+ont_13_food_test_123,EXACT,1.00,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans
+ont_13_food_test_123,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_123,EXACT,1.00,"(Bionico, course, Dessert)",Bionico,course,Dessert,"(Bionico, course, Dessert)",Bionico,course,Dessert
+ont_13_food_test_123,EXACT,1.00,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso
+ont_13_food_test_123,EXACT,1.00,"(Bionico, region, Guadalajara)",Bionico,region,Guadalajara,"(Bionico, region, Guadalajara)",Bionico,region,Guadalajara
+ont_13_food_test_123,MISSING,,"(Bionico, mainIngredient, Chopped Fruits, Sour Cream, Condensed Milk, Granola, Shredded Coconut, Raisins)",Bionico,mainIngredient,"Chopped Fruits, Sour Cream, Condensed Milk, Granola, Shredded Coconut, Raisins",,,,
+ont_13_food_test_123,MISSING,,"(Dessert, dishVariation, Sandesh_(confectionery))",Dessert,dishVariation,Sandesh_(confectionery),,,,
+ont_13_food_test_124,EXACT,1.00,"(Bionico, course, Dessert)",Bionico,course,Dessert,"(Bionico, course, Dessert)",Bionico,course,Dessert
+ont_13_food_test_124,EXACT,1.00,"(Bionico, region, Guadalajara)",Bionico,region,Guadalajara,"(Bionico, region, Guadalajara)",Bionico,region,Guadalajara
+ont_13_food_test_124,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_124,SEMANTIC,0.97,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso,"(Mexico, currency, Peso)",Mexico,currency,Peso
+ont_13_food_test_125,EXACT,1.00,"(Mexico, leader, Silvano_Aureoles_Conejo)",Mexico,leader,Silvano_Aureoles_Conejo,"(Mexico, leader, Silvano_Aureoles_Conejo)",Mexico,leader,Silvano_Aureoles_Conejo
+ont_13_food_test_125,EXACT,1.00,"(Bionico, course, Dessert)",Bionico,course,Dessert,"(Bionico, course, Dessert)",Bionico,course,Dessert
+ont_13_food_test_125,EXACT,1.00,"(Bionico, region, Guadalajara)",Bionico,region,Guadalajara,"(Bionico, region, Guadalajara)",Bionico,region,Guadalajara
+ont_13_food_test_125,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_125,SEMANTIC,0.97,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso,"(Mexico, currency, Peso)",Mexico,currency,Peso
+ont_13_food_test_125,MISSING,,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans,,,,
+ont_13_food_test_126,EXACT,1.00,"(Bionico, region, Jalisco)",Bionico,region,Jalisco,"(Bionico, region, Jalisco)",Bionico,region,Jalisco
+ont_13_food_test_126,EXACT,1.00,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans
+ont_13_food_test_126,EXACT,1.00,"(Bionico, ingredient, Granola)",Bionico,ingredient,Granola,"(Bionico, ingredient, Granola)",Bionico,ingredient,Granola
+ont_13_food_test_126,SEMANTIC,0.97,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso,"(Mexico, currency, Peso)",Mexico,currency,Peso
+ont_13_food_test_126,MISSING,,"(Bionico, country, Mexico)",Bionico,country,Mexico,,,,
+ont_13_food_test_127,EXACT,1.00,"(Mexico, leader, Enrique_Peña_Nieto)",Mexico,leader,Enrique_Peña_Nieto,"(Mexico, leader, Enrique_Peña_Nieto)",Mexico,leader,Enrique_Peña_Nieto
+ont_13_food_test_127,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_127,MISSING,,"(Bionico, course, Dessert)",Bionico,course,Dessert,,,,
+ont_13_food_test_128,EXACT,1.00,"(Bionico, region, Jalisco)",Bionico,region,Jalisco,"(Bionico, region, Jalisco)",Bionico,region,Jalisco
+ont_13_food_test_128,EXACT,1.00,"(Bionico, course, Dessert)",Bionico,course,Dessert,"(Bionico, course, Dessert)",Bionico,course,Dessert
+ont_13_food_test_129,EXACT,1.00,"(Bionico, ingredient, Granola)",Bionico,ingredient,Granola,"(Bionico, ingredient, Granola)",Bionico,ingredient,Granola
+ont_13_food_test_129,EXACT,1.00,"(Mexico, leader, Silvano_Aureoles_Conejo)",Mexico,leader,Silvano_Aureoles_Conejo,"(Mexico, leader, Silvano_Aureoles_Conejo)",Mexico,leader,Silvano_Aureoles_Conejo
+ont_13_food_test_129,EXACT,1.00,"(Bionico, region, Guadalajara)",Bionico,region,Guadalajara,"(Bionico, region, Guadalajara)",Bionico,region,Guadalajara
+ont_13_food_test_129,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_129,SEMANTIC,0.97,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso,"(Mexico, currency, Peso)",Mexico,currency,Peso
+ont_13_food_test_129,MISSING,,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans,,,,
+ont_13_food_test_129,MISSING,,"(Bionico, course, Dessert)",Bionico,course,Dessert,,,,
+ont_13_food_test_13,EXACT,1.00,"(Indonesia, leader, Jusuf_Kalla)",Indonesia,leader,Jusuf_Kalla,"(Indonesia, leader, Jusuf_Kalla)",Indonesia,leader,Jusuf_Kalla
+ont_13_food_test_13,EXACT,1.00,"(Arem-arem, country, Indonesia)",Arem-arem,country,Indonesia,"(Arem-arem, country, Indonesia)",Arem-arem,country,Indonesia
+ont_13_food_test_13,MISSING,,"(Arem-arem, region, Javanese_cuisine)",Arem-arem,region,Javanese_cuisine,,,,
+ont_13_food_test_13,EXTRA,,,,,,"(Arem-arem, ethnicGroup, Javanese_people)",Arem-arem,ethnicGroup,Javanese_people
+ont_13_food_test_130,EXACT,1.00,"(Bionico, region, Jalisco)",Bionico,region,Jalisco,"(Bionico, region, Jalisco)",Bionico,region,Jalisco
+ont_13_food_test_130,EXACT,1.00,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans
+ont_13_food_test_130,EXACT,1.00,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso
+ont_13_food_test_130,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_130,MISSING,,"(Bionico, course, Dessert)",Bionico,course,Dessert,,,,
+ont_13_food_test_131,EXACT,1.00,"(Bionico, course, Dessert)",Bionico,course,Dessert,"(Bionico, course, Dessert)",Bionico,course,Dessert
+ont_13_food_test_131,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_131,MISSING,,"(Dessert, dishVariation, Sandesh_(confectionery))",Dessert,dishVariation,Sandesh_(confectionery),,,,
+ont_13_food_test_131,EXTRA,,,,,,"(Sandesh_(confectionery), isPartOf, Confectionery)",Sandesh_(confectionery),isPartOf,Confectionery
+ont_13_food_test_131,EXTRA,,,,,,"(Sandesh_(confectionery), isPartOf, Dessert)",Sandesh_(confectionery),isPartOf,Dessert
+ont_13_food_test_132,EXACT,1.00,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans
+ont_13_food_test_132,EXACT,1.00,"(Bionico, region, Guadalajara)",Bionico,region,Guadalajara,"(Bionico, region, Guadalajara)",Bionico,region,Guadalajara
+ont_13_food_test_132,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_132,SEMANTIC,0.97,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso,"(Mexico, currency, Peso)",Mexico,currency,Peso
+ont_13_food_test_132,MISSING,,"(Bionico, course, Dessert)",Bionico,course,Dessert,,,,
+ont_13_food_test_132,MISSING,,"(Dessert, dishVariation, Sandesh_(confectionery))",Dessert,dishVariation,Sandesh_(confectionery),,,,
+ont_13_food_test_132,EXTRA,,,,,,"(Sandesh_(confectionery), course, Dessert)",Sandesh_(confectionery),course,Dessert
+ont_13_food_test_133,EXACT,1.00,"(Bionico, region, Guadalajara)",Bionico,region,Guadalajara,"(Bionico, region, Guadalajara)",Bionico,region,Guadalajara
+ont_13_food_test_133,MISSING,,"(Bionico, course, Dessert)",Bionico,course,Dessert,,,,
+ont_13_food_test_133,EXTRA,,,,,,"(Bionico, isPartOf, Dessert)",Bionico,isPartOf,Dessert
+ont_13_food_test_134,EXACT,1.00,"(Bionico, ingredient, Granola)",Bionico,ingredient,Granola,"(Bionico, ingredient, Granola)",Bionico,ingredient,Granola
+ont_13_food_test_134,EXACT,1.00,"(Bionico, course, Dessert)",Bionico,course,Dessert,"(Bionico, course, Dessert)",Bionico,course,Dessert
+ont_13_food_test_134,EXACT,1.00,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans
+ont_13_food_test_134,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_134,SEMANTIC,0.97,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso,"(Mexico, currency, Peso)",Mexico,currency,Peso
+ont_13_food_test_134,MISSING,,"(Dessert, dishVariation, Sandesh_(confectionery))",Dessert,dishVariation,Sandesh_(confectionery),,,,
+ont_13_food_test_135,EXACT,1.00,"(Indonesia, leader, Jusuf_Kalla)",Indonesia,leader,Jusuf_Kalla,"(Indonesia, leader, Jusuf_Kalla)",Indonesia,leader,Jusuf_Kalla
+ont_13_food_test_135,EXACT,1.00,"(Indonesia, leader, Joko_Widodo)",Indonesia,leader,Joko_Widodo,"(Indonesia, leader, Joko_Widodo)",Indonesia,leader,Joko_Widodo
+ont_13_food_test_135,MISSING,,"(Arem-arem, country, Indonesia)",Arem-arem,country,Indonesia,,,,
+ont_13_food_test_136,EXACT,1.00,"(Indonesia, leader, Jusuf_Kalla)",Indonesia,leader,Jusuf_Kalla,"(Indonesia, leader, Jusuf_Kalla)",Indonesia,leader,Jusuf_Kalla
+ont_13_food_test_136,EXACT,1.00,"(Arem-arem, country, Indonesia)",Arem-arem,country,Indonesia,"(Arem-arem, country, Indonesia)",Arem-arem,country,Indonesia
+ont_13_food_test_136,MISSING,,"(Arem-arem, region, Nationwide in Indonesia, but more specific to Java)",Arem-arem,region,"Nationwide in Indonesia, but more specific to Java",,,,
+ont_13_food_test_136,EXTRA,,,,,,"(Arem-arem, region, Java)",Arem-arem,region,Java
+ont_13_food_test_137,EXACT,1.00,"(Italy, leader, Sergio_Mattarella)",Italy,leader,Sergio_Mattarella,"(Italy, leader, Sergio_Mattarella)",Italy,leader,Sergio_Mattarella
+ont_13_food_test_137,EXACT,1.00,"(Arrabbiata_sauce, country, Italy)",Arrabbiata_sauce,country,Italy,"(Arrabbiata_sauce, country, Italy)",Arrabbiata_sauce,country,Italy
+ont_13_food_test_137,EXACT,1.00,"(Italy, language, Italian_language)",Italy,language,Italian_language,"(Italy, language, Italian_language)",Italy,language,Italian_language
+ont_13_food_test_138,EXACT,1.00,"(Arrabbiata_sauce, region, Rome)",Arrabbiata_sauce,region,Rome,"(Arrabbiata_sauce, region, Rome)",Arrabbiata_sauce,region,Rome
+ont_13_food_test_138,EXACT,1.00,"(Arrabbiata_sauce, country, Italy)",Arrabbiata_sauce,country,Italy,"(Arrabbiata_sauce, country, Italy)",Arrabbiata_sauce,country,Italy
+ont_13_food_test_138,EXACT,1.00,"(Arrabbiata_sauce, ingredient, Chili_pepper)",Arrabbiata_sauce,ingredient,Chili_pepper,"(Arrabbiata_sauce, ingredient, Chili_pepper)",Arrabbiata_sauce,ingredient,Chili_pepper
+ont_13_food_test_139,EXACT,1.00,"(Arrabbiata_sauce, region, Rome)",Arrabbiata_sauce,region,Rome,"(Arrabbiata_sauce, region, Rome)",Arrabbiata_sauce,region,Rome
+ont_13_food_test_139,EXACT,1.00,"(Arrabbiata_sauce, country, Italy)",Arrabbiata_sauce,country,Italy,"(Arrabbiata_sauce, country, Italy)",Arrabbiata_sauce,country,Italy
+ont_13_food_test_139,MISSING,,"(Arrabbiata_sauce, ingredient, Garlic)",Arrabbiata_sauce,ingredient,Garlic,,,,
+ont_13_food_test_139,EXTRA,,,,,,"(Garlic, isPartOf, Arrabbiata_sauce)",Garlic,isPartOf,Arrabbiata_sauce
+ont_13_food_test_14,EXACT,1.00,"(Arem-arem, country, Indonesia)",Arem-arem,country,Indonesia,"(Arem-arem, country, Indonesia)",Arem-arem,country,Indonesia
+ont_13_food_test_14,EXACT,1.00,"(Indonesia, leader, Jusuf_Kalla)",Indonesia,leader,Jusuf_Kalla,"(Indonesia, leader, Jusuf_Kalla)",Indonesia,leader,Jusuf_Kalla
+ont_13_food_test_14,EXACT,1.00,"(Indonesia, currency, Indonesian_rupiah)",Indonesia,currency,Indonesian_rupiah,"(Indonesia, currency, Indonesian_rupiah)",Indonesia,currency,Indonesian_rupiah
+ont_13_food_test_140,EXACT,1.00,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States
+ont_13_food_test_140,EXACT,1.00,"(Bacon_Explosion, ingredient, Bacon)",Bacon_Explosion,ingredient,Bacon,"(Bacon_Explosion, ingredient, Bacon)",Bacon_Explosion,ingredient,Bacon
+ont_13_food_test_140,SEMANTIC,0.96,"(Bacon_Explosion, mainIngredient, Sausage)",Bacon_Explosion,mainIngredient,Sausage,"(Bacon_Explosion, ingredient, Sausage)",Bacon_Explosion,ingredient,Sausage
+ont_13_food_test_141,EXACT,1.00,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.","(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C."
+ont_13_food_test_141,EXACT,1.00,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States
+ont_13_food_test_141,EXACT,1.00,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States
+ont_13_food_test_142,EXACT,1.00,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.","(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C."
+ont_13_food_test_142,EXACT,1.00,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States
+ont_13_food_test_142,EXACT,1.00,"(United_States, leader, Barack_Obama)",United_States,leader,Barack_Obama,"(United_States, leader, Barack_Obama)",United_States,leader,Barack_Obama
+ont_13_food_test_143,EXACT,1.00,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States
+ont_13_food_test_143,EXACT,1.00,"(United_States, leader, John_Roberts)",United_States,leader,John_Roberts,"(United_States, leader, John_Roberts)",United_States,leader,John_Roberts
+ont_13_food_test_143,MISSING,,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,,,,
+ont_13_food_test_144,MISSING,,"(Bacon_sandwich, country, United_Kingdom)",Bacon_sandwich,country,United_Kingdom,,,,
+ont_13_food_test_144,MISSING,,"(Bacon_sandwich, ingredient, Condiment)",Bacon_sandwich,ingredient,Condiment,,,,
+ont_13_food_test_144,MISSING,,"(Bacon_sandwich, dishVariation, BLT)",Bacon_sandwich,dishVariation,BLT,,,,
+ont_13_food_test_145,EXACT,1.00,"(Baked_Alaska, country, France)",Baked_Alaska,country,France,"(Baked_Alaska, country, France)",Baked_Alaska,country,France
+ont_13_food_test_145,MISSING,,"(Baked_Alaska, ingredient, Meringue)",Baked_Alaska,ingredient,Meringue,,,,
+ont_13_food_test_145,MISSING,,"(Baked_Alaska, region, New_York)",Baked_Alaska,region,New_York,,,,
+ont_13_food_test_145,EXTRA,,,,,,"(Meringue, isPartOf, Baked_Alaska)",Meringue,isPartOf,Baked_Alaska
+ont_13_food_test_145,EXTRA,,,,,,"(Baked_Alaska, region, Partition_and_secession_in_New_York)",Baked_Alaska,region,Partition_and_secession_in_New_York
+ont_13_food_test_146,EXACT,1.00,"(Baked_Alaska, country, United_States)",Baked_Alaska,country,United_States,"(Baked_Alaska, country, United_States)",Baked_Alaska,country,United_States
+ont_13_food_test_146,SEMANTIC,0.99,"(Baked_Alaska, region, New_York)",Baked_Alaska,region,New_York,"(Baked_Alaska, region, New_York_(state))",Baked_Alaska,region,New_York_(state)
+ont_13_food_test_146,MISSING,,"(Baked_Alaska, ingredient, Sponge_cake)",Baked_Alaska,ingredient,Sponge_cake,,,,
+ont_13_food_test_146,EXTRA,,,,,,"(Sponge_cake, isPartOf, Baked_Alaska)",Sponge_cake,isPartOf,Baked_Alaska
+ont_13_food_test_147,EXACT,1.00,"(Baked_Alaska, course, Dessert)",Baked_Alaska,course,Dessert,"(Baked_Alaska, course, Dessert)",Baked_Alaska,course,Dessert
+ont_13_food_test_147,MISSING,,"(Dessert, dishVariation, Cookie)",Dessert,dishVariation,Cookie,,,,
+ont_13_food_test_147,MISSING,,"(Baked_Alaska, ingredient, Christmas_pudding)",Baked_Alaska,ingredient,Christmas_pudding,,,,
+ont_13_food_test_147,EXTRA,,,,,,"(Cookie, isPartOf, Dessert)",Cookie,isPartOf,Dessert
+ont_13_food_test_147,EXTRA,,,,,,"(Christmas_pudding, isPartOf, Baked_Alaska)",Christmas_pudding,isPartOf,Baked_Alaska
+ont_13_food_test_148,EXACT,1.00,"(Baked_Alaska, course, Dessert)",Baked_Alaska,course,Dessert,"(Baked_Alaska, course, Dessert)",Baked_Alaska,course,Dessert
+ont_13_food_test_148,EXACT,1.00,"(Baked_Alaska, ingredient, Christmas_pudding)",Baked_Alaska,ingredient,Christmas_pudding,"(Baked_Alaska, ingredient, Christmas_pudding)",Baked_Alaska,ingredient,Christmas_pudding
+ont_13_food_test_148,MISSING,,"(Dessert, dishVariation, Sandesh_(confectionery))",Dessert,dishVariation,Sandesh_(confectionery),,,,
+ont_13_food_test_148,EXTRA,,,,,,"(Sandesh_(confectionery), course, Dessert)",Sandesh_(confectionery),course,Dessert
+ont_13_food_test_149,EXACT,1.00,"(Bionico, course, Dessert)",Bionico,course,Dessert,"(Bionico, course, Dessert)",Bionico,course,Dessert
+ont_13_food_test_149,EXACT,1.00,"(Bionico, ingredient, Sour_cream)",Bionico,ingredient,Sour_cream,"(Bionico, ingredient, Sour_cream)",Bionico,ingredient,Sour_cream
+ont_13_food_test_149,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_15,EXACT,1.00,"(Indonesia, leader, Jusuf_Kalla)",Indonesia,leader,Jusuf_Kalla,"(Indonesia, leader, Jusuf_Kalla)",Indonesia,leader,Jusuf_Kalla
+ont_13_food_test_15,EXACT,1.00,"(Indonesia, language, Indonesian_language)",Indonesia,language,Indonesian_language,"(Indonesia, language, Indonesian_language)",Indonesia,language,Indonesian_language
+ont_13_food_test_15,EXACT,1.00,"(Arem-arem, country, Indonesia)",Arem-arem,country,Indonesia,"(Arem-arem, country, Indonesia)",Arem-arem,country,Indonesia
+ont_13_food_test_150,EXACT,1.00,"(Bionico, region, Jalisco)",Bionico,region,Jalisco,"(Bionico, region, Jalisco)",Bionico,region,Jalisco
+ont_13_food_test_150,EXACT,1.00,"(Bionico, ingredient, Raisin)",Bionico,ingredient,Raisin,"(Bionico, ingredient, Raisin)",Bionico,ingredient,Raisin
+ont_13_food_test_150,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_151,EXACT,1.00,"(Bakso, ingredient, Celery)",Bakso,ingredient,Celery,"(Bakso, ingredient, Celery)",Bakso,ingredient,Celery
+ont_13_food_test_151,EXACT,1.00,"(Celery, genus, Apium)",Celery,genus,Apium,"(Celery, genus, Apium)",Celery,genus,Apium
+ont_13_food_test_151,EXACT,1.00,"(Celery, family, Apiaceae)",Celery,family,Apiaceae,"(Celery, family, Apiaceae)",Celery,family,Apiaceae
+ont_13_food_test_152,EXACT,1.00,"(Bionico, ingredient, Granola)",Bionico,ingredient,Granola,"(Bionico, ingredient, Granola)",Bionico,ingredient,Granola
+ont_13_food_test_152,EXACT,1.00,"(Bionico, course, Dessert)",Bionico,course,Dessert,"(Bionico, course, Dessert)",Bionico,course,Dessert
+ont_13_food_test_152,MISSING,,"(Dessert, dishVariation, Cake)",Dessert,dishVariation,Cake,,,,
+ont_13_food_test_153,EXACT,1.00,"(Indonesia, leader, Jusuf_Kalla)",Indonesia,leader,Jusuf_Kalla,"(Indonesia, leader, Jusuf_Kalla)",Indonesia,leader,Jusuf_Kalla
+ont_13_food_test_153,EXACT,1.00,"(Indonesia, capital, Jakarta)",Indonesia,capital,Jakarta,"(Indonesia, capital, Jakarta)",Indonesia,capital,Jakarta
+ont_13_food_test_153,EXACT,1.00,"(Bakso, country, Indonesia)",Bakso,country,Indonesia,"(Bakso, country, Indonesia)",Bakso,country,Indonesia
+ont_13_food_test_16,EXACT,1.00,"(Arem-arem, ingredient, Banana_leaf)",Arem-arem,ingredient,Banana_leaf,"(Arem-arem, ingredient, Banana_leaf)",Arem-arem,ingredient,Banana_leaf
+ont_13_food_test_16,MISSING,,"(Arem-arem, region, Nationwide in Indonesia, but more specific to Java)",Arem-arem,region,"Nationwide in Indonesia, but more specific to Java",,,,
+ont_13_food_test_16,MISSING,,"(Arem-arem, mainIngredient, compressed rice cooked in banana leaf with vegetables or minced meat fillings)",Arem-arem,mainIngredient,compressed rice cooked in banana leaf with vegetables or minced meat fillings,,,,
+ont_13_food_test_16,EXTRA,,,,,,"(Arem-arem, region, Java)",Arem-arem,region,Java
+ont_13_food_test_16,EXTRA,,,,,,"(Arem-arem, ingredient, Vegetable)",Arem-arem,ingredient,Vegetable
+ont_13_food_test_16,EXTRA,,,,,,"(Arem-arem, ingredient, Ground_meat)",Arem-arem,ingredient,Ground_meat
+ont_13_food_test_17,MISSING,,"(Arem-arem, region, Indonesia)",Arem-arem,region,Indonesia,,,,
+ont_13_food_test_17,MISSING,,"(Arem-arem, mainIngredient, compressed rice cooked in banana leaf with vegetables or minced meat fillings)",Arem-arem,mainIngredient,compressed rice cooked in banana leaf with vegetables or minced meat fillings,,,,
+ont_13_food_test_17,MISSING,,"(Arem-arem, ingredient, Banana_leaf)",Arem-arem,ingredient,Banana_leaf,,,,
+ont_13_food_test_18,EXACT,1.00,"(Arrabbiata_sauce, country, Italy)",Arrabbiata_sauce,country,Italy,"(Arrabbiata_sauce, country, Italy)",Arrabbiata_sauce,country,Italy
+ont_13_food_test_18,EXACT,1.00,"(Italy, capital, Rome)",Italy,capital,Rome,"(Italy, capital, Rome)",Italy,capital,Rome
+ont_13_food_test_18,EXACT,1.00,"(Italy, language, Italian_language)",Italy,language,Italian_language,"(Italy, language, Italian_language)",Italy,language,Italian_language
+ont_13_food_test_19,EXACT,1.00,"(Arrabbiata_sauce, country, Italy)",Arrabbiata_sauce,country,Italy,"(Arrabbiata_sauce, country, Italy)",Arrabbiata_sauce,country,Italy
+ont_13_food_test_19,EXACT,1.00,"(Italy, capital, Rome)",Italy,capital,Rome,"(Italy, capital, Rome)",Italy,capital,Rome
+ont_13_food_test_19,EXACT,1.00,"(Italy, leader, Sergio_Mattarella)",Italy,leader,Sergio_Mattarella,"(Italy, leader, Sergio_Mattarella)",Italy,leader,Sergio_Mattarella
+ont_13_food_test_2,EXACT,1.00,"(Amatriciana_sauce, country, Italy)",Amatriciana_sauce,country,Italy,"(Amatriciana_sauce, country, Italy)",Amatriciana_sauce,country,Italy
+ont_13_food_test_2,EXACT,1.00,"(Amatriciana_sauce, ingredient, Olive_oil)",Amatriciana_sauce,ingredient,Olive_oil,"(Amatriciana_sauce, ingredient, Olive_oil)",Amatriciana_sauce,ingredient,Olive_oil
+ont_13_food_test_2,SEMANTIC,0.94,"(Amatriciana_sauce, mainIngredient, Tomatoes, guanciale, cheese, olive oil)",Amatriciana_sauce,mainIngredient,"Tomatoes, guanciale, cheese, olive oil","(Amatriciana_sauce, ingredient, Tomato)",Amatriciana_sauce,ingredient,Tomato
+ont_13_food_test_2,EXTRA,,,,,,"(Amatriciana_sauce, ingredient, Guanciale)",Amatriciana_sauce,ingredient,Guanciale
+ont_13_food_test_2,EXTRA,,,,,,"(Amatriciana_sauce, ingredient, Cheese)",Amatriciana_sauce,ingredient,Cheese
+ont_13_food_test_20,EXACT,1.00,"(Italy, leader, Pietro_Grasso)",Italy,leader,Pietro_Grasso,"(Italy, leader, Pietro_Grasso)",Italy,leader,Pietro_Grasso
+ont_13_food_test_20,EXACT,1.00,"(Arrabbiata_sauce, country, Italy)",Arrabbiata_sauce,country,Italy,"(Arrabbiata_sauce, country, Italy)",Arrabbiata_sauce,country,Italy
+ont_13_food_test_20,EXACT,1.00,"(Italy, capital, Rome)",Italy,capital,Rome,"(Italy, capital, Rome)",Italy,capital,Rome
+ont_13_food_test_21,EXACT,1.00,"(Italy, leader, Pietro_Grasso)",Italy,leader,Pietro_Grasso,"(Italy, leader, Pietro_Grasso)",Italy,leader,Pietro_Grasso
+ont_13_food_test_21,EXACT,1.00,"(Arrabbiata_sauce, country, Italy)",Arrabbiata_sauce,country,Italy,"(Arrabbiata_sauce, country, Italy)",Arrabbiata_sauce,country,Italy
+ont_13_food_test_21,EXACT,1.00,"(Italy, language, Italian_language)",Italy,language,Italian_language,"(Italy, language, Italian_language)",Italy,language,Italian_language
+ont_13_food_test_22,EXACT,1.00,"(Arrabbiata_sauce, country, Italy)",Arrabbiata_sauce,country,Italy,"(Arrabbiata_sauce, country, Italy)",Arrabbiata_sauce,country,Italy
+ont_13_food_test_22,MISSING,,"(Arrabbiata_sauce, dishVariation, Oregano)",Arrabbiata_sauce,dishVariation,Oregano,,,,
+ont_13_food_test_22,MISSING,,"(Arrabbiata_sauce, ingredient, Chili_pepper)",Arrabbiata_sauce,ingredient,Chili_pepper,,,,
+ont_13_food_test_22,EXTRA,,,,,,"(Oregano, isPartOf, Arrabbiata_sauce)",Oregano,isPartOf,Arrabbiata_sauce
+ont_13_food_test_22,EXTRA,,,,,,"(Chili_pepper, isPartOf, Arrabbiata_sauce)",Chili_pepper,isPartOf,Arrabbiata_sauce
+ont_13_food_test_23,EXACT,1.00,"(Arrabbiata_sauce, country, Italy)",Arrabbiata_sauce,country,Italy,"(Arrabbiata_sauce, country, Italy)",Arrabbiata_sauce,country,Italy
+ont_13_food_test_23,MISSING,,"(Arrabbiata_sauce, ingredient, Garlic)",Arrabbiata_sauce,ingredient,Garlic,,,,
+ont_13_food_test_23,MISSING,,"(Arrabbiata_sauce, dishVariation, Oregano)",Arrabbiata_sauce,dishVariation,Oregano,,,,
+ont_13_food_test_23,EXTRA,,,,,,"(Garlic, isPartOf, Arrabbiata_sauce)",Garlic,isPartOf,Arrabbiata_sauce
+ont_13_food_test_23,EXTRA,,,,,,"(Arrabbiata_sauce, ingredient, Oregano)",Arrabbiata_sauce,ingredient,Oregano
+ont_13_food_test_24,EXACT,1.00,"(Tomato, family, Solanaceae)",Tomato,family,Solanaceae,"(Tomato, family, Solanaceae)",Tomato,family,Solanaceae
+ont_13_food_test_24,EXACT,1.00,"(Tomato, order, Solanales)",Tomato,order,Solanales,"(Tomato, order, Solanales)",Tomato,order,Solanales
+ont_13_food_test_24,MISSING,,"(Arrabbiata_sauce, ingredient, Tomato)",Arrabbiata_sauce,ingredient,Tomato,,,,
+ont_13_food_test_24,EXTRA,,,,,,"(Tomato, isPartOf, Arrabbiata_sauce)",Tomato,isPartOf,Arrabbiata_sauce
+ont_13_food_test_25,MISSING,,"(BLT, dishVariation, Club_sandwich)",BLT,dishVariation,Club_sandwich,,,,
+ont_13_food_test_25,MISSING,,"(Bacon_sandwich, ingredient, Bacon)",Bacon_sandwich,ingredient,Bacon,,,,
+ont_13_food_test_25,MISSING,,"(Bacon_sandwich, dishVariation, BLT)",Bacon_sandwich,dishVariation,BLT,,,,
+ont_13_food_test_25,EXTRA,,,,,,"(BLT, family, Club_sandwich)",BLT,family,Club_sandwich
+ont_13_food_test_25,EXTRA,,,,,,"(BLT, family, Bacon_sandwich)",BLT,family,Bacon_sandwich
+ont_13_food_test_26,EXACT,1.00,"(Bacon_sandwich, ingredient, Condiment)",Bacon_sandwich,ingredient,Condiment,"(Bacon_sandwich, ingredient, Condiment)",Bacon_sandwich,ingredient,Condiment
+ont_13_food_test_26,MISSING,,"(BLT, dishVariation, Club_sandwich)",BLT,dishVariation,Club_sandwich,,,,
+ont_13_food_test_26,MISSING,,"(Bacon_sandwich, dishVariation, BLT)",Bacon_sandwich,dishVariation,BLT,,,,
+ont_13_food_test_26,EXTRA,,,,,,"(BLT, family, Club_sandwich)",BLT,family,Club_sandwich
+ont_13_food_test_26,EXTRA,,,,,,"(BLT, family, Bacon_sandwich)",BLT,family,Bacon_sandwich
+ont_13_food_test_27,EXACT,1.00,"(Bacon_Explosion, course, Main course)",Bacon_Explosion,course,Main course,"(Bacon_Explosion, course, Main_course)",Bacon_Explosion,course,Main_course
+ont_13_food_test_27,EXACT,1.00,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States
+ont_13_food_test_27,EXACT,1.00,"(Bacon_Explosion, ingredient, Bacon)",Bacon_Explosion,ingredient,Bacon,"(Bacon_Explosion, ingredient, Bacon)",Bacon_Explosion,ingredient,Bacon
+ont_13_food_test_28,EXACT,1.00,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States
+ont_13_food_test_28,EXACT,1.00,"(Bacon_Explosion, ingredient, Bacon)",Bacon_Explosion,ingredient,Bacon,"(Bacon_Explosion, ingredient, Bacon)",Bacon_Explosion,ingredient,Bacon
+ont_13_food_test_28,EXACT,1.00,"(Bacon_Explosion, region, Kansas_City_metropolitan_area)",Bacon_Explosion,region,Kansas_City_metropolitan_area,"(Bacon_Explosion, region, Kansas_City_metropolitan_area)",Bacon_Explosion,region,Kansas_City_metropolitan_area
+ont_13_food_test_29,EXACT,1.00,"(Bacon_Explosion, ingredient, Sausage)",Bacon_Explosion,ingredient,Sausage,"(Bacon_Explosion, ingredient, Sausage)",Bacon_Explosion,ingredient,Sausage
+ont_13_food_test_29,EXACT,1.00,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States
+ont_13_food_test_29,EXACT,1.00,"(Bacon_Explosion, course, Main course)",Bacon_Explosion,course,Main course,"(Bacon_Explosion, course, main course)",Bacon_Explosion,course,main course
+ont_13_food_test_3,EXACT,1.00,"(Amatriciana_sauce, ingredient, Pecorino_Romano)",Amatriciana_sauce,ingredient,Pecorino_Romano,"(Amatriciana_sauce, ingredient, Pecorino_Romano)",Amatriciana_sauce,ingredient,Pecorino_Romano
+ont_13_food_test_3,SEMANTIC,0.94,"(Amatriciana_sauce, mainIngredient, Tomatoes, guanciale, cheese, olive oil)",Amatriciana_sauce,mainIngredient,"Tomatoes, guanciale, cheese, olive oil","(Amatriciana_sauce, ingredient, Tomato)",Amatriciana_sauce,ingredient,Tomato
+ont_13_food_test_3,MISSING,,"(Amatriciana_sauce, country, Italy)",Amatriciana_sauce,country,Italy,,,,
+ont_13_food_test_3,EXTRA,,,,,,"(Amatriciana_sauce, ingredient, Guanciale)",Amatriciana_sauce,ingredient,Guanciale
+ont_13_food_test_3,EXTRA,,,,,,"(Amatriciana_sauce, ingredient, Cheese)",Amatriciana_sauce,ingredient,Cheese
+ont_13_food_test_3,EXTRA,,,,,,"(Amatriciana_sauce, ingredient, Olive_oil)",Amatriciana_sauce,ingredient,Olive_oil
+ont_13_food_test_30,EXACT,1.00,"(Bacon_Explosion, ingredient, Sausage)",Bacon_Explosion,ingredient,Sausage,"(Bacon_Explosion, ingredient, Sausage)",Bacon_Explosion,ingredient,Sausage
+ont_13_food_test_30,EXACT,1.00,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States
+ont_13_food_test_30,SEMANTIC,0.96,"(Bacon_Explosion, mainIngredient, Bacon)",Bacon_Explosion,mainIngredient,Bacon,"(Bacon_Explosion, ingredient, Bacon)",Bacon_Explosion,ingredient,Bacon
+ont_13_food_test_31,EXACT,1.00,"(Bacon_Explosion, ingredient, Sausage)",Bacon_Explosion,ingredient,Sausage,"(Bacon_Explosion, ingredient, Sausage)",Bacon_Explosion,ingredient,Sausage
+ont_13_food_test_31,EXACT,1.00,"(Bacon_Explosion, region, Kansas_City_metropolitan_area)",Bacon_Explosion,region,Kansas_City_metropolitan_area,"(Bacon_Explosion, region, Kansas_City_metropolitan_area)",Bacon_Explosion,region,Kansas_City_metropolitan_area
+ont_13_food_test_31,MISSING,,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States,,,,
+ont_13_food_test_31,EXTRA,,,,,,"(Bacon_Explosion, country, Us_(2019_film))",Bacon_Explosion,country,Us_(2019_film)
+ont_13_food_test_32,EXACT,1.00,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States
+ont_13_food_test_32,EXACT,1.00,"(Bacon_Explosion, ingredient, Bacon)",Bacon_Explosion,ingredient,Bacon,"(Bacon_Explosion, ingredient, Bacon)",Bacon_Explosion,ingredient,Bacon
+ont_13_food_test_32,SEMANTIC,0.94,"(Bacon_Explosion, mainIngredient, Bacon,sausage)",Bacon_Explosion,mainIngredient,"Bacon,sausage","(Bacon_Explosion, ingredient, Sausage)",Bacon_Explosion,ingredient,Sausage
+ont_13_food_test_33,EXACT,1.00,"(Bacon_Explosion, ingredient, Sausage)",Bacon_Explosion,ingredient,Sausage,"(Bacon_Explosion, ingredient, sausage)",Bacon_Explosion,ingredient,sausage
+ont_13_food_test_33,EXACT,1.00,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States
+ont_13_food_test_33,MISSING,,"(Bacon_Explosion, mainIngredient, Bacon,sausage)",Bacon_Explosion,mainIngredient,"Bacon,sausage",,,,
+ont_13_food_test_33,EXTRA,,,,,,"(Bacon_Explosion, ingredient, bacon)",Bacon_Explosion,ingredient,bacon
+ont_13_food_test_34,EXACT,1.00,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.","(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C."
+ont_13_food_test_34,EXACT,1.00,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States
+ont_13_food_test_34,MISSING,,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,,,,
+ont_13_food_test_35,EXACT,1.00,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans
+ont_13_food_test_35,EXACT,1.00,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States
+ont_13_food_test_35,EXACT,1.00,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.","(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C."
+ont_13_food_test_36,EXACT,1.00,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.","(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C."
+ont_13_food_test_36,EXACT,1.00,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States
+ont_13_food_test_36,MISSING,,"(United_States, ethnicGroup, White_Americans)",United_States,ethnicGroup,White_Americans,,,,
+ont_13_food_test_37,EXACT,1.00,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States
+ont_13_food_test_37,EXACT,1.00,"(United_States, leader, Barack_Obama)",United_States,leader,Barack_Obama,"(United_States, leader, Barack_Obama)",United_States,leader,Barack_Obama
+ont_13_food_test_37,MISSING,,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,,,,
+ont_13_food_test_38,EXACT,1.00,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States
+ont_13_food_test_38,EXACT,1.00,"(United_States, leader, Barack_Obama)",United_States,leader,Barack_Obama,"(United_States, leader, Barack_Obama)",United_States,leader,Barack_Obama
+ont_13_food_test_38,MISSING,,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,,,,
+ont_13_food_test_39,EXACT,1.00,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States
+ont_13_food_test_39,EXACT,1.00,"(United_States, leader, Barack_Obama)",United_States,leader,Barack_Obama,"(United_States, leader, Barack_Obama)",United_States,leader,Barack_Obama
+ont_13_food_test_39,MISSING,,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,,,,
+ont_13_food_test_4,EXACT,1.00,"(Amatriciana_sauce, country, Italy)",Amatriciana_sauce,country,Italy,"(Amatriciana_sauce, country, Italy)",Amatriciana_sauce,country,Italy
+ont_13_food_test_4,EXACT,1.00,"(Amatriciana_sauce, ingredient, Tomato)",Amatriciana_sauce,ingredient,Tomato,"(Amatriciana_sauce, ingredient, Tomato)",Amatriciana_sauce,ingredient,Tomato
+ont_13_food_test_4,MISSING,,"(Amatriciana_sauce, mainIngredient, Tomatoes, guanciale, cheese, olive oil)",Amatriciana_sauce,mainIngredient,"Tomatoes, guanciale, cheese, olive oil",,,,
+ont_13_food_test_4,EXTRA,,,,,,"(Amatriciana_sauce, ingredient, Guanciale)",Amatriciana_sauce,ingredient,Guanciale
+ont_13_food_test_4,EXTRA,,,,,,"(Amatriciana_sauce, ingredient, Cheese)",Amatriciana_sauce,ingredient,Cheese
+ont_13_food_test_4,EXTRA,,,,,,"(Amatriciana_sauce, ingredient, Olive_oil)",Amatriciana_sauce,ingredient,Olive_oil
+ont_13_food_test_40,EXACT,1.00,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.","(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C."
+ont_13_food_test_40,EXACT,1.00,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States
+ont_13_food_test_40,EXACT,1.00,"(United_States, leader, Joe_Biden)",United_States,leader,Joe_Biden,"(United_States, leader, Joe_Biden)",United_States,leader,Joe_Biden
+ont_13_food_test_41,EXACT,1.00,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States
+ont_13_food_test_41,SEMANTIC,0.98,"(United_States, leader, Joe_Biden)",United_States,leader,Joe_Biden,"(Joe_Biden, leader, United_States)",Joe_Biden,leader,United_States
+ont_13_food_test_41,MISSING,,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,,,,
+ont_13_food_test_42,EXACT,1.00,"(United_States, leader, Joe_Biden)",United_States,leader,Joe_Biden,"(United_States, leader, Joe_Biden)",United_States,leader,Joe_Biden
+ont_13_food_test_42,EXACT,1.00,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States
+ont_13_food_test_42,MISSING,,"(United_States, ethnicGroup, White_Americans)",United_States,ethnicGroup,White_Americans,,,,
+ont_13_food_test_43,EXACT,1.00,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States
+ont_13_food_test_43,EXACT,1.00,"(United_States, leader, John_Roberts)",United_States,leader,John_Roberts,"(United_States, leader, John_Roberts)",United_States,leader,John_Roberts
+ont_13_food_test_43,MISSING,,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,,,,
+ont_13_food_test_44,EXACT,1.00,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States,"(Bacon_Explosion, country, United_States)",Bacon_Explosion,country,United_States
+ont_13_food_test_44,EXACT,1.00,"(United_States, leader, Paul_Ryan)",United_States,leader,Paul_Ryan,"(United_States, leader, Paul_Ryan)",United_States,leader,Paul_Ryan
+ont_13_food_test_44,MISSING,,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.",,,,
+ont_13_food_test_45,EXACT,1.00,"(Bacon_Explosion, course, Main course)",Bacon_Explosion,course,Main course,"(Bacon_Explosion, course, main course)",Bacon_Explosion,course,main course
+ont_13_food_test_45,EXACT,1.00,"(Bacon_Explosion, ingredient, Bacon)",Bacon_Explosion,ingredient,Bacon,"(Bacon_Explosion, ingredient, Bacon)",Bacon_Explosion,ingredient,Bacon
+ont_13_food_test_45,SEMANTIC,0.96,"(Bacon_Explosion, mainIngredient, Sausage)",Bacon_Explosion,mainIngredient,Sausage,"(Bacon_Explosion, ingredient, Sausage)",Bacon_Explosion,ingredient,Sausage
+ont_13_food_test_46,EXACT,1.00,"(Bacon_Explosion, course, Main course)",Bacon_Explosion,course,Main course,"(Bacon_Explosion, course, main course)",Bacon_Explosion,course,main course
+ont_13_food_test_46,EXACT,1.00,"(Bacon_Explosion, ingredient, Sausage)",Bacon_Explosion,ingredient,Sausage,"(Bacon_Explosion, ingredient, Sausage)",Bacon_Explosion,ingredient,Sausage
+ont_13_food_test_46,SEMANTIC,0.96,"(Bacon_Explosion, mainIngredient, Bacon)",Bacon_Explosion,mainIngredient,Bacon,"(Bacon_Explosion, ingredient, Bacon)",Bacon_Explosion,ingredient,Bacon
+ont_13_food_test_47,EXACT,1.00,"(Bacon_sandwich, country, United_Kingdom)",Bacon_sandwich,country,United_Kingdom,"(Bacon_sandwich, country, United_Kingdom)",Bacon_sandwich,country,United_Kingdom
+ont_13_food_test_47,EXACT,1.00,"(Bacon_sandwich, ingredient, Bacon)",Bacon_sandwich,ingredient,Bacon,"(Bacon_sandwich, ingredient, Bacon)",Bacon_sandwich,ingredient,Bacon
+ont_13_food_test_47,MISSING,,"(Bacon_sandwich, alternativeName, Bacon butty, bacon sarnie, rasher sandwich, bacon sanger, piece 'n bacon, bacon cob, bacon barm, bacon muffin)",Bacon_sandwich,alternativeName,"Bacon butty, bacon sarnie, rasher sandwich, bacon sanger, piece 'n bacon, bacon cob, bacon barm, bacon muffin",,,,
+ont_13_food_test_47,EXTRA,,,,,,"(Bacon_sandwich, course, Bacon_sandwich)",Bacon_sandwich,course,Bacon_sandwich
+ont_13_food_test_48,EXACT,1.00,"(Bacon_sandwich, ingredient, Bread)",Bacon_sandwich,ingredient,Bread,"(Bacon_sandwich, ingredient, Bread)",Bacon_sandwich,ingredient,Bread
+ont_13_food_test_48,EXACT,1.00,"(Bacon_sandwich, country, United_Kingdom)",Bacon_sandwich,country,United_Kingdom,"(Bacon_sandwich, country, United_Kingdom)",Bacon_sandwich,country,United_Kingdom
+ont_13_food_test_48,MISSING,,"(Bacon_sandwich, alternativeName, Bacon butty, bacon sarnie, rasher sandwich, bacon sanger, piece 'n bacon, bacon cob, bacon barm, bacon muffin)",Bacon_sandwich,alternativeName,"Bacon butty, bacon sarnie, rasher sandwich, bacon sanger, piece 'n bacon, bacon cob, bacon barm, bacon muffin",,,,
+ont_13_food_test_48,EXTRA,,,,,,"(Bacon_sandwich, isPartOf, Bacon_sandwich)",Bacon_sandwich,isPartOf,Bacon_sandwich
+ont_13_food_test_49,EXACT,1.00,"(Bacon_sandwich, country, United_Kingdom)",Bacon_sandwich,country,United_Kingdom,"(Bacon_sandwich, country, United_Kingdom)",Bacon_sandwich,country,United_Kingdom
+ont_13_food_test_49,EXACT,1.00,"(Bacon_sandwich, ingredient, Brown_sauce)",Bacon_sandwich,ingredient,Brown_sauce,"(Bacon_sandwich, ingredient, brown sauce)",Bacon_sandwich,ingredient,brown sauce
+ont_13_food_test_49,SEMANTIC,0.94,"(Bacon_sandwich, alternativeName, Bacon butty, bacon sarnie, rasher sandwich, bacon sanger, piece 'n bacon, bacon cob, bacon barm, bacon muffin)",Bacon_sandwich,alternativeName,"Bacon butty, bacon sarnie, rasher sandwich, bacon sanger, piece 'n bacon, bacon cob, bacon barm, bacon muffin","(Bacon_sandwich, alternativeName, bacon sarnie)",Bacon_sandwich,alternativeName,bacon sarnie
+ont_13_food_test_49,EXTRA,,,,,,"(Bacon_sandwich, alternativeName, bacon butty)",Bacon_sandwich,alternativeName,bacon butty
+ont_13_food_test_49,EXTRA,,,,,,"(Bacon_sandwich, alternativeName, rasher sandwich)",Bacon_sandwich,alternativeName,rasher sandwich
+ont_13_food_test_5,EXACT,1.00,"(Amatriciana_sauce, country, Italy)",Amatriciana_sauce,country,Italy,"(Amatriciana_sauce, country, Italy)",Amatriciana_sauce,country,Italy
+ont_13_food_test_5,EXACT,1.00,"(Italy, leader, Pietro_Grasso)",Italy,leader,Pietro_Grasso,"(Italy, leader, Pietro_Grasso)",Italy,leader,Pietro_Grasso
+ont_13_food_test_5,EXACT,1.00,"(Italy, language, Italian_language)",Italy,language,Italian_language,"(Italy, language, Italian_language)",Italy,language,Italian_language
+ont_13_food_test_50,MISSING,,"(Bacon_sandwich, country, United_Kingdom)",Bacon_sandwich,country,United_Kingdom,,,,
+ont_13_food_test_50,MISSING,,"(Bacon_sandwich, alternativeName, Bacon butty, bacon sarnie, rasher sandwich, bacon sanger, piece 'n bacon, bacon cob, bacon barm, bacon muffin)",Bacon_sandwich,alternativeName,"Bacon butty, bacon sarnie, rasher sandwich, bacon sanger, piece 'n bacon, bacon cob, bacon barm, bacon muffin",,,,
+ont_13_food_test_50,MISSING,,"(Bacon_sandwich, ingredient, Condiment)",Bacon_sandwich,ingredient,Condiment,,,,
+ont_13_food_test_51,MISSING,,"(Bacon_sandwich, country, United_Kingdom)",Bacon_sandwich,country,United_Kingdom,,,,
+ont_13_food_test_51,MISSING,,"(Bacon_sandwich, ingredient, Ketchup)",Bacon_sandwich,ingredient,Ketchup,,,,
+ont_13_food_test_51,MISSING,,"(Bacon_sandwich, alternativeName, Bacon butty, bacon sarnie, rasher sandwich, bacon sanger, piece 'n bacon, bacon cob, bacon barm, bacon muffin)",Bacon_sandwich,alternativeName,"Bacon butty, bacon sarnie, rasher sandwich, bacon sanger, piece 'n bacon, bacon cob, bacon barm, bacon muffin",,,,
+ont_13_food_test_52,MISSING,,"(BLT, dishVariation, Club_sandwich)",BLT,dishVariation,Club_sandwich,,,,
+ont_13_food_test_52,MISSING,,"(BLT, ingredient, Tomato)",BLT,ingredient,Tomato,,,,
+ont_13_food_test_52,MISSING,,"(Bacon_sandwich, dishVariation, BLT)",Bacon_sandwich,dishVariation,BLT,,,,
+ont_13_food_test_53,MISSING,,"(BLT, dishVariation, Club_sandwich)",BLT,dishVariation,Club_sandwich,,,,
+ont_13_food_test_53,MISSING,,"(Bacon_sandwich, ingredient, Brown_sauce)",Bacon_sandwich,ingredient,Brown_sauce,,,,
+ont_13_food_test_53,MISSING,,"(Bacon_sandwich, dishVariation, BLT)",Bacon_sandwich,dishVariation,BLT,,,,
+ont_13_food_test_53,EXTRA,,,,,,"(BLT, family, Club_sandwich)",BLT,family,Club_sandwich
+ont_13_food_test_53,EXTRA,,,,,,"(Brown_sauce, isPartOf, Bacon_sandwich)",Brown_sauce,isPartOf,Bacon_sandwich
+ont_13_food_test_53,EXTRA,,,,,,"(Bacon_sandwich, family, BLT)",Bacon_sandwich,family,BLT
+ont_13_food_test_54,EXACT,1.00,"(Bacon_sandwich, country, United_Kingdom)",Bacon_sandwich,country,United_Kingdom,"(Bacon_sandwich, country, United_Kingdom)",Bacon_sandwich,country,United_Kingdom
+ont_13_food_test_54,EXACT,1.00,"(Bacon_sandwich, ingredient, Bacon)",Bacon_sandwich,ingredient,Bacon,"(Bacon_sandwich, ingredient, Bacon)",Bacon_sandwich,ingredient,Bacon
+ont_13_food_test_54,MISSING,,"(Bacon_sandwich, dishVariation, BLT)",Bacon_sandwich,dishVariation,BLT,,,,
+ont_13_food_test_54,EXTRA,,,,,,"(Bacon_sandwich, family, BLT)",Bacon_sandwich,family,BLT
+ont_13_food_test_55,EXACT,1.00,"(Bacon_sandwich, country, United_Kingdom)",Bacon_sandwich,country,United_Kingdom,"(Bacon_sandwich, country, United_Kingdom)",Bacon_sandwich,country,United_Kingdom
+ont_13_food_test_55,MISSING,,"(Bacon_sandwich, ingredient, Bread)",Bacon_sandwich,ingredient,Bread,,,,
+ont_13_food_test_55,MISSING,,"(Bacon_sandwich, dishVariation, BLT)",Bacon_sandwich,dishVariation,BLT,,,,
+ont_13_food_test_55,EXTRA,,,,,,"(BLT, ingredient, Bacon_sandwich)",BLT,ingredient,Bacon_sandwich
+ont_13_food_test_55,EXTRA,,,,,,"(Bread, isPartOf, Bacon_sandwich)",Bread,isPartOf,Bacon_sandwich
+ont_13_food_test_56,EXACT,1.00,"(Bacon_sandwich, country, United_Kingdom)",Bacon_sandwich,country,United_Kingdom,"(Bacon_sandwich, country, United_Kingdom)",Bacon_sandwich,country,United_Kingdom
+ont_13_food_test_56,MISSING,,"(Bacon_sandwich, ingredient, Brown_sauce)",Bacon_sandwich,ingredient,Brown_sauce,,,,
+ont_13_food_test_56,MISSING,,"(Bacon_sandwich, dishVariation, BLT)",Bacon_sandwich,dishVariation,BLT,,,,
+ont_13_food_test_56,EXTRA,,,,,,"(Brown_sauce, isPartOf, Bacon_sandwich)",Brown_sauce,isPartOf,Bacon_sandwich
+ont_13_food_test_56,EXTRA,,,,,,"(Bacon_sandwich, division, BLT)",Bacon_sandwich,division,BLT
+ont_13_food_test_57,EXACT,1.00,"(Bacon_sandwich, ingredient, Ketchup)",Bacon_sandwich,ingredient,Ketchup,"(Bacon_sandwich, ingredient, Ketchup)",Bacon_sandwich,ingredient,Ketchup
+ont_13_food_test_57,MISSING,,"(Bacon_sandwich, country, United_Kingdom)",Bacon_sandwich,country,United_Kingdom,,,,
+ont_13_food_test_57,MISSING,,"(Bacon_sandwich, dishVariation, BLT)",Bacon_sandwich,dishVariation,BLT,,,,
+ont_13_food_test_57,EXTRA,,,,,,"(BLT, family, Bacon_sandwich)",BLT,family,Bacon_sandwich
+ont_13_food_test_57,EXTRA,,,,,,"(BLT, country, United_Kingdom)",BLT,country,United_Kingdom
+ont_13_food_test_58,MISSING,,"(BLT, dishVariation, Club_sandwich)",BLT,dishVariation,Club_sandwich,,,,
+ont_13_food_test_58,MISSING,,"(Bacon_sandwich, ingredient, Ketchup)",Bacon_sandwich,ingredient,Ketchup,,,,
+ont_13_food_test_58,MISSING,,"(Bacon_sandwich, dishVariation, BLT)",Bacon_sandwich,dishVariation,BLT,,,,
+ont_13_food_test_58,EXTRA,,,,,,"(BLT, family, Club_sandwich)",BLT,family,Club_sandwich
+ont_13_food_test_58,EXTRA,,,,,,"(BLT, family, Bacon_sandwich)",BLT,family,Bacon_sandwich
+ont_13_food_test_58,EXTRA,,,,,,"(Ketchup, isPartOf, Bacon_sandwich)",Ketchup,isPartOf,Bacon_sandwich
+ont_13_food_test_59,EXACT,1.00,"(Bionico, ingredient, Condensed_milk)",Bionico,ingredient,Condensed_milk,"(Bionico, ingredient, Condensed_milk)",Bionico,ingredient,Condensed_milk
+ont_13_food_test_59,EXACT,1.00,"(Bionico, region, Guadalajara)",Bionico,region,Guadalajara,"(Bionico, region, Guadalajara)",Bionico,region,Guadalajara
+ont_13_food_test_59,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_6,EXACT,1.00,"(Amatriciana_sauce, country, Italy)",Amatriciana_sauce,country,Italy,"(Amatriciana_sauce, country, Italy)",Amatriciana_sauce,country,Italy
+ont_13_food_test_6,EXACT,1.00,"(Amatriciana_sauce, ingredient, Olive_oil)",Amatriciana_sauce,ingredient,Olive_oil,"(Amatriciana_sauce, ingredient, Olive_oil)",Amatriciana_sauce,ingredient,Olive_oil
+ont_13_food_test_6,EXACT,1.00,"(Amatriciana_sauce, region, Lazio)",Amatriciana_sauce,region,Lazio,"(Amatriciana_sauce, region, Lazio)",Amatriciana_sauce,region,Lazio
+ont_13_food_test_60,EXACT,1.00,"(Bionico, ingredient, Granola)",Bionico,ingredient,Granola,"(Bionico, ingredient, granola)",Bionico,ingredient,granola
+ont_13_food_test_60,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_60,SEMANTIC,0.98,"(Bionico, region, Guadalajara)",Bionico,region,Guadalajara,"(Bionico, region, Province_of_Guadalajara)",Bionico,region,Province_of_Guadalajara
+ont_13_food_test_61,EXACT,1.00,"(Bionico, region, Guadalajara)",Bionico,region,Guadalajara,"(Bionico, region, Guadalajara)",Bionico,region,Guadalajara
+ont_13_food_test_61,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_61,MISSING,,"(Bionico, ingredient, Sour_cream)",Bionico,ingredient,Sour_cream,,,,
+ont_13_food_test_61,EXTRA,,,,,,"(Sour_cream, isPartOf, Bionico)",Sour_cream,isPartOf,Bionico
+ont_13_food_test_62,EXACT,1.00,"(Bionico, region, Jalisco)",Bionico,region,Jalisco,"(Bionico, region, Jalisco)",Bionico,region,Jalisco
+ont_13_food_test_62,EXACT,1.00,"(Bionico, ingredient, Condensed_milk)",Bionico,ingredient,Condensed_milk,"(Bionico, ingredient, Condensed_milk)",Bionico,ingredient,Condensed_milk
+ont_13_food_test_62,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_63,EXACT,1.00,"(Bionico, region, Jalisco)",Bionico,region,Jalisco,"(Bionico, region, Jalisco)",Bionico,region,Jalisco
+ont_13_food_test_63,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_63,MISSING,,"(Bionico, ingredient, Granola)",Bionico,ingredient,Granola,,,,
+ont_13_food_test_63,EXTRA,,,,,,"(Granola, isPartOf, Bionico)",Granola,isPartOf,Bionico
+ont_13_food_test_64,EXACT,1.00,"(Bionico, region, Jalisco)",Bionico,region,Jalisco,"(Bionico, region, Jalisco)",Bionico,region,Jalisco
+ont_13_food_test_64,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_64,MISSING,,"(Bionico, ingredient, Sour_cream)",Bionico,ingredient,Sour_cream,,,,
+ont_13_food_test_64,EXTRA,,,,,,"(Jalisco, region, Mexico)",Jalisco,region,Mexico
+ont_13_food_test_64,EXTRA,,,,,,"(Sour_cream, isPartOf, Bionico)",Sour_cream,isPartOf,Bionico
+ont_13_food_test_65,EXACT,1.00,"(Mexico, leader, Enrique_Peña_Nieto)",Mexico,leader,Enrique_Peña_Nieto,"(Mexico, leader, Enrique_Peña_Nieto)",Mexico,leader,Enrique_Peña_Nieto
+ont_13_food_test_65,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_65,SEMANTIC,0.97,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso,"(Mexico, currency, Peso)",Mexico,currency,Peso
+ont_13_food_test_66,EXACT,1.00,"(Mexico, language, Spanish_language)",Mexico,language,Spanish_language,"(Mexico, language, Spanish_language)",Mexico,language,Spanish_language
+ont_13_food_test_66,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_66,SEMANTIC,0.97,"(Mexico, leader, Enrique_Peña_Nieto)",Mexico,leader,Enrique_Peña_Nieto,"(Enrique_Peña_Nieto, leader, Mexico)",Enrique_Peña_Nieto,leader,Mexico
+ont_13_food_test_67,EXACT,1.00,"(Mexico, language, Spanish_language)",Mexico,language,Spanish_language,"(Mexico, language, Spanish_language)",Mexico,language,Spanish_language
+ont_13_food_test_67,EXACT,1.00,"(Mexico, leader, Silvano_Aureoles_Conejo)",Mexico,leader,Silvano_Aureoles_Conejo,"(Mexico, leader, Silvano_Aureoles_Conejo)",Mexico,leader,Silvano_Aureoles_Conejo
+ont_13_food_test_67,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_68,EXACT,1.00,"(Mexico, leader, Enrique_Peña_Nieto)",Mexico,leader,Enrique_Peña_Nieto,"(Mexico, leader, Enrique_Peña_Nieto)",Mexico,leader,Enrique_Peña_Nieto
+ont_13_food_test_68,EXACT,1.00,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans
+ont_13_food_test_68,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_69,EXACT,1.00,"(Mexico, leader, Enrique_Peña_Nieto)",Mexico,leader,Enrique_Peña_Nieto,"(Mexico, leader, Enrique_Peña_Nieto)",Mexico,leader,Enrique_Peña_Nieto
+ont_13_food_test_69,EXACT,1.00,"(Mexico, language, Mexican_Spanish)",Mexico,language,Mexican_Spanish,"(Mexico, language, Mexican_Spanish)",Mexico,language,Mexican_Spanish
+ont_13_food_test_69,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_7,EXACT,1.00,"(Amatriciana_sauce, country, Italy)",Amatriciana_sauce,country,Italy,"(Amatriciana_sauce, country, Italy)",Amatriciana_sauce,country,Italy
+ont_13_food_test_7,EXACT,1.00,"(Amatriciana_sauce, region, Lazio)",Amatriciana_sauce,region,Lazio,"(Amatriciana_sauce, region, Lazio)",Amatriciana_sauce,region,Lazio
+ont_13_food_test_7,MISSING,,"(Amatriciana_sauce, ingredient, Pecorino_Romano)",Amatriciana_sauce,ingredient,Pecorino_Romano,,,,
+ont_13_food_test_7,EXTRA,,,,,,"(Pecorino_Romano, isPartOf, Amatriciana_sauce)",Pecorino_Romano,isPartOf,Amatriciana_sauce
+ont_13_food_test_70,EXACT,1.00,"(Mexico, leader, Silvano_Aureoles_Conejo)",Mexico,leader,Silvano_Aureoles_Conejo,"(Mexico, leader, Silvano_Aureoles_Conejo)",Mexico,leader,Silvano_Aureoles_Conejo
+ont_13_food_test_70,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_70,MISSING,,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans,,,,
+ont_13_food_test_71,EXACT,1.00,"(Mexico, language, Mexican_Spanish)",Mexico,language,Mexican_Spanish,"(Mexico, language, Mexican_Spanish)",Mexico,language,Mexican_Spanish
+ont_13_food_test_71,EXACT,1.00,"(Mexico, leader, Silvano_Aureoles_Conejo)",Mexico,leader,Silvano_Aureoles_Conejo,"(Mexico, leader, Silvano_Aureoles_Conejo)",Mexico,leader,Silvano_Aureoles_Conejo
+ont_13_food_test_71,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_72,EXACT,1.00,"(Mexico, leader, Enrique_Peña_Nieto)",Mexico,leader,Enrique_Peña_Nieto,"(Mexico, leader, Enrique_Peña_Nieto)",Mexico,leader,Enrique_Peña_Nieto
+ont_13_food_test_72,EXACT,1.00,"(Mexico, leader, Silvano_Aureoles_Conejo)",Mexico,leader,Silvano_Aureoles_Conejo,"(Mexico, leader, Silvano_Aureoles_Conejo)",Mexico,leader,Silvano_Aureoles_Conejo
+ont_13_food_test_72,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_73,EXACT,1.00,"(Bionico, ingredient, Granola)",Bionico,ingredient,Granola,"(Bionico, ingredient, Granola)",Bionico,ingredient,Granola
+ont_13_food_test_73,EXACT,1.00,"(Bionico, course, Dessert)",Bionico,course,Dessert,"(Bionico, course, Dessert)",Bionico,course,Dessert
+ont_13_food_test_73,MISSING,,"(Dessert, dishVariation, Cookie)",Dessert,dishVariation,Cookie,,,,
+ont_13_food_test_73,EXTRA,,,,,,"(Cookie, isPartOf, Dessert)",Cookie,isPartOf,Dessert
+ont_13_food_test_74,EXACT,1.00,"(Bionico, course, Dessert)",Bionico,course,Dessert,"(Bionico, course, Dessert)",Bionico,course,Dessert
+ont_13_food_test_74,MISSING,,"(Bionico, ingredient, Granola)",Bionico,ingredient,Granola,,,,
+ont_13_food_test_74,MISSING,,"(Dessert, dishVariation, Sandesh_(confectionery))",Dessert,dishVariation,Sandesh_(confectionery),,,,
+ont_13_food_test_74,EXTRA,,,,,,"(Sandesh_(confectionery), isPartOf, Confectionery)",Sandesh_(confectionery),isPartOf,Confectionery
+ont_13_food_test_74,EXTRA,,,,,,"(Bionico, family, Sandesh_(confectionery))",Bionico,family,Sandesh_(confectionery)
+ont_13_food_test_74,EXTRA,,,,,,"(Granola, isPartOf, Bionico)",Granola,isPartOf,Bionico
+ont_13_food_test_75,EXACT,1.00,"(Bionico, ingredient, Granola)",Bionico,ingredient,Granola,"(Bionico, ingredient, Granola)",Bionico,ingredient,Granola
+ont_13_food_test_75,MISSING,,"(Bionico, course, Dessert)",Bionico,course,Dessert,,,,
+ont_13_food_test_75,MISSING,,"(Bionico, dishVariation, Cottage_cheese)",Bionico,dishVariation,Cottage_cheese,,,,
+ont_13_food_test_75,EXTRA,,,,,,"(Bionico, ingredient, Cottage_cheese)",Bionico,ingredient,Cottage_cheese
+ont_13_food_test_76,EXACT,1.00,"(Bionico, ingredient, Granola)",Bionico,ingredient,Granola,"(Bionico, ingredient, Granola)",Bionico,ingredient,Granola
+ont_13_food_test_76,EXACT,1.00,"(Bionico, course, Dessert)",Bionico,course,Dessert,"(Bionico, course, Dessert)",Bionico,course,Dessert
+ont_13_food_test_76,MISSING,,"(Bionico, dishVariation, Honey)",Bionico,dishVariation,Honey,,,,
+ont_13_food_test_76,EXTRA,,,,,,"(Bionico, ingredient, Honey)",Bionico,ingredient,Honey
+ont_13_food_test_77,EXACT,1.00,"(Bionico, course, Dessert)",Bionico,course,Dessert,"(Bionico, course, Dessert)",Bionico,course,Dessert
+ont_13_food_test_77,EXACT,1.00,"(Bionico, ingredient, Raisin)",Bionico,ingredient,Raisin,"(Bionico, ingredient, Raisin)",Bionico,ingredient,Raisin
+ont_13_food_test_77,MISSING,,"(Dessert, dishVariation, Sandesh_(confectionery))",Dessert,dishVariation,Sandesh_(confectionery),,,,
+ont_13_food_test_77,EXTRA,,,,,,"(Sandesh_(confectionery), course, Dessert)",Sandesh_(confectionery),course,Dessert
+ont_13_food_test_78,EXACT,1.00,"(Bionico, course, Dessert)",Bionico,course,Dessert,"(Bionico, course, Dessert)",Bionico,course,Dessert
+ont_13_food_test_78,EXACT,1.00,"(Bionico, ingredient, Raisin)",Bionico,ingredient,Raisin,"(Bionico, ingredient, Raisin)",Bionico,ingredient,Raisin
+ont_13_food_test_78,MISSING,,"(Bionico, dishVariation, Cottage_cheese)",Bionico,dishVariation,Cottage_cheese,,,,
+ont_13_food_test_78,EXTRA,,,,,,"(Bionico, ingredient, Cottage_cheese)",Bionico,ingredient,Cottage_cheese
+ont_13_food_test_79,EXACT,1.00,"(Bionico, course, Dessert)",Bionico,course,Dessert,"(Bionico, course, Dessert)",Bionico,course,Dessert
+ont_13_food_test_79,EXACT,1.00,"(Bionico, ingredient, Sour_cream)",Bionico,ingredient,Sour_cream,"(Bionico, ingredient, Sour_cream)",Bionico,ingredient,Sour_cream
+ont_13_food_test_79,MISSING,,"(Dessert, dishVariation, Cake)",Dessert,dishVariation,Cake,,,,
+ont_13_food_test_79,EXTRA,,,,,,"(Cake, course, Dessert)",Cake,course,Dessert
+ont_13_food_test_8,EXACT,1.00,"(Amatriciana_sauce, country, Italy)",Amatriciana_sauce,country,Italy,"(Amatriciana_sauce, country, Italy)",Amatriciana_sauce,country,Italy
+ont_13_food_test_8,EXACT,1.00,"(Amatriciana_sauce, region, Lazio)",Amatriciana_sauce,region,Lazio,"(Amatriciana_sauce, region, Lazio)",Amatriciana_sauce,region,Lazio
+ont_13_food_test_8,MISSING,,"(Amatriciana_sauce, ingredient, Tomato)",Amatriciana_sauce,ingredient,Tomato,,,,
+ont_13_food_test_8,EXTRA,,,,,,"(Tomato, isPartOf, Amatriciana_sauce)",Tomato,isPartOf,Amatriciana_sauce
+ont_13_food_test_80,EXACT,1.00,"(Bionico, ingredient, Granola)",Bionico,ingredient,Granola,"(Bionico, ingredient, Granola)",Bionico,ingredient,Granola
+ont_13_food_test_80,MISSING,,"(Bionico, course, Dessert)",Bionico,course,Dessert,,,,
+ont_13_food_test_80,MISSING,,"(Dessert, dishVariation, Ice_cream)",Dessert,dishVariation,Ice_cream,,,,
+ont_13_food_test_80,EXTRA,,,,,,"(Ice_cream, isPartOf, Dessert)",Ice_cream,isPartOf,Dessert
+ont_13_food_test_80,EXTRA,,,,,,"(Bionico, isPartOf, Dessert)",Bionico,isPartOf,Dessert
+ont_13_food_test_81,EXACT,1.00,"(Bionico, course, Dessert)",Bionico,course,Dessert,"(Bionico, course, Dessert)",Bionico,course,Dessert
+ont_13_food_test_81,EXACT,1.00,"(Bionico, ingredient, Raisin)",Bionico,ingredient,Raisin,"(Bionico, ingredient, Raisin)",Bionico,ingredient,Raisin
+ont_13_food_test_81,MISSING,,"(Dessert, dishVariation, Ice_cream)",Dessert,dishVariation,Ice_cream,,,,
+ont_13_food_test_81,EXTRA,,,,,,"(Ice_cream, isPartOf, Dessert)",Ice_cream,isPartOf,Dessert
+ont_13_food_test_82,EXACT,1.00,"(Indonesia, leader, Joko_Widodo)",Indonesia,leader,Joko_Widodo,"(Indonesia, leader, Joko_Widodo)",Indonesia,leader,Joko_Widodo
+ont_13_food_test_82,EXACT,1.00,"(Indonesia, capital, Jakarta)",Indonesia,capital,Jakarta,"(Indonesia, capital, Jakarta)",Indonesia,capital,Jakarta
+ont_13_food_test_82,EXACT,1.00,"(Bakso, country, Indonesia)",Bakso,country,Indonesia,"(Bakso, country, Indonesia)",Bakso,country,Indonesia
+ont_13_food_test_83,EXACT,1.00,"(Indonesia, language, Indonesian_language)",Indonesia,language,Indonesian_language,"(Indonesia, language, Indonesian_language)",Indonesia,language,Indonesian_language
+ont_13_food_test_83,EXACT,1.00,"(Bakso, country, Indonesia)",Bakso,country,Indonesia,"(Bakso, country, Indonesia)",Bakso,country,Indonesia
+ont_13_food_test_83,SEMANTIC,0.97,"(Indonesia, leader, Jusuf_Kalla)",Indonesia,leader,Jusuf_Kalla,"(Jusuf_Kalla, leader, Indonesia)",Jusuf_Kalla,leader,Indonesia
+ont_13_food_test_84,EXACT,1.00,"(Amatriciana_sauce, country, Italy)",Amatriciana_sauce,country,Italy,"(Amatriciana_sauce, country, Italy)",Amatriciana_sauce,country,Italy
+ont_13_food_test_84,EXACT,1.00,"(Italy, leader, Laura_Boldrini)",Italy,leader,Laura_Boldrini,"(Italy, leader, Laura_Boldrini)",Italy,leader,Laura_Boldrini
+ont_13_food_test_84,EXACT,1.00,"(Italy, capital, Rome)",Italy,capital,Rome,"(Italy, capital, Rome)",Italy,capital,Rome
+ont_13_food_test_85,EXACT,1.00,"(Amatriciana_sauce, country, Italy)",Amatriciana_sauce,country,Italy,"(Amatriciana_sauce, country, Italy)",Amatriciana_sauce,country,Italy
+ont_13_food_test_85,EXACT,1.00,"(Italy, capital, Rome)",Italy,capital,Rome,"(Italy, capital, Rome)",Italy,capital,Rome
+ont_13_food_test_85,EXACT,1.00,"(Italy, leader, Sergio_Mattarella)",Italy,leader,Sergio_Mattarella,"(Italy, leader, Sergio_Mattarella)",Italy,leader,Sergio_Mattarella
+ont_13_food_test_86,EXACT,1.00,"(Amatriciana_sauce, country, Italy)",Amatriciana_sauce,country,Italy,"(Amatriciana_sauce, country, Italy)",Amatriciana_sauce,country,Italy
+ont_13_food_test_86,EXACT,1.00,"(Italy, capital, Rome)",Italy,capital,Rome,"(Italy, capital, Rome)",Italy,capital,Rome
+ont_13_food_test_86,EXACT,1.00,"(Italy, leader, Matteo_Renzi)",Italy,leader,Matteo_Renzi,"(Italy, leader, Matteo_Renzi)",Italy,leader,Matteo_Renzi
+ont_13_food_test_87,EXACT,1.00,"(Tomato, family, Solanaceae)",Tomato,family,Solanaceae,"(Tomato, family, Solanaceae)",Tomato,family,Solanaceae
+ont_13_food_test_87,EXACT,1.00,"(Tomato, genus, Solanum)",Tomato,genus,Solanum,"(Tomato, genus, Solanum)",Tomato,genus,Solanum
+ont_13_food_test_87,MISSING,,"(Amatriciana_sauce, ingredient, Tomato)",Amatriciana_sauce,ingredient,Tomato,,,,
+ont_13_food_test_87,EXTRA,,,,,,"(Tomato, isPartOf, Amatriciana_sauce)",Tomato,isPartOf,Amatriciana_sauce
+ont_13_food_test_88,EXACT,1.00,"(Baked_Alaska, country, United_States)",Baked_Alaska,country,United_States,"(Baked_Alaska, country, United_States)",Baked_Alaska,country,United_States
+ont_13_food_test_88,SEMANTIC,0.99,"(United_States, leaderTitle, President_of_the_United_States)",United_States,leaderTitle,President_of_the_United_States,"(United_States, leaderTitle, president)",United_States,leaderTitle,president
+ont_13_food_test_88,MISSING,,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,,,,
+ont_13_food_test_89,SEMANTIC,0.99,"(United_States, leaderTitle, President_of_the_United_States)",United_States,leaderTitle,President_of_the_United_States,"(United_States, leaderTitle, president)",United_States,leaderTitle,president
+ont_13_food_test_89,MISSING,,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,,,,
+ont_13_food_test_89,MISSING,,"(Baked_Alaska, country, United_States)",Baked_Alaska,country,United_States,,,,
+ont_13_food_test_89,EXTRA,,,,,,"(Baked_Alaska, isPartOf, Dish_(food))",Baked_Alaska,isPartOf,Dish_(food)
+ont_13_food_test_9,EXACT,1.00,"(Arem-arem, country, Indonesia)",Arem-arem,country,Indonesia,"(Arem-arem, country, Indonesia)",Arem-arem,country,Indonesia
+ont_13_food_test_9,EXACT,1.00,"(Arem-arem, ingredient, Banana_leaf)",Arem-arem,ingredient,Banana_leaf,"(Arem-arem, ingredient, Banana_leaf)",Arem-arem,ingredient,Banana_leaf
+ont_13_food_test_9,MISSING,,"(Arem-arem, region, Nationwide in Indonesia, but more specific to Java)",Arem-arem,region,"Nationwide in Indonesia, but more specific to Java",,,,
+ont_13_food_test_9,EXTRA,,,,,,"(Arem-arem, region, Java)",Arem-arem,region,Java
+ont_13_food_test_90,EXACT,1.00,"(Bionico, course, Dessert)",Bionico,course,Dessert,"(Bionico, course, Dessert)",Bionico,course,Dessert
+ont_13_food_test_90,EXACT,1.00,"(Bionico, region, Guadalajara)",Bionico,region,Guadalajara,"(Bionico, region, Guadalajara)",Bionico,region,Guadalajara
+ont_13_food_test_90,EXACT,1.00,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans
+ont_13_food_test_90,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_90,SEMANTIC,0.97,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso,"(Mexico, currency, Peso)",Mexico,currency,Peso
+ont_13_food_test_90,MISSING,,"(Bionico, mainIngredient, Chopped Fruits, Sour Cream, Condensed Milk, Granola, Shredded Coconut, Raisins)",Bionico,mainIngredient,"Chopped Fruits, Sour Cream, Condensed Milk, Granola, Shredded Coconut, Raisins",,,,
+ont_13_food_test_90,MISSING,,"(Dessert, dishVariation, Cookie)",Dessert,dishVariation,Cookie,,,,
+ont_13_food_test_91,EXACT,1.00,"(Bionico, ingredient, Granola)",Bionico,ingredient,Granola,"(Bionico, ingredient, Granola)",Bionico,ingredient,Granola
+ont_13_food_test_91,EXACT,1.00,"(Bionico, course, Dessert)",Bionico,course,Dessert,"(Bionico, course, Dessert)",Bionico,course,Dessert
+ont_13_food_test_91,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_91,SEMANTIC,0.97,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso,"(Mexico, currency, Peso)",Mexico,currency,Peso
+ont_13_food_test_92,EXACT,1.00,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans
+ont_13_food_test_92,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_92,EXACT,1.00,"(Bionico, course, Dessert)",Bionico,course,Dessert,"(Bionico, course, Dessert)",Bionico,course,Dessert
+ont_13_food_test_92,EXACT,1.00,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso
+ont_13_food_test_92,EXACT,1.00,"(Bionico, region, Guadalajara)",Bionico,region,Guadalajara,"(Bionico, region, Guadalajara)",Bionico,region,Guadalajara
+ont_13_food_test_93,EXACT,1.00,"(Bionico, region, Jalisco)",Bionico,region,Jalisco,"(Bionico, region, Jalisco)",Bionico,region,Jalisco
+ont_13_food_test_93,EXACT,1.00,"(Bionico, course, Dessert)",Bionico,course,Dessert,"(Bionico, course, Dessert)",Bionico,course,Dessert
+ont_13_food_test_93,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_94,EXACT,1.00,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans
+ont_13_food_test_94,EXACT,1.00,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso
+ont_13_food_test_94,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_94,MISSING,,"(Bionico, course, Dessert)",Bionico,course,Dessert,,,,
+ont_13_food_test_94,MISSING,,"(Bionico, dishVariation, Honey)",Bionico,dishVariation,Honey,,,,
+ont_13_food_test_94,EXTRA,,,,,,"(Bionico, ingredient, Honey)",Bionico,ingredient,Honey
+ont_13_food_test_95,EXACT,1.00,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso
+ont_13_food_test_95,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_95,MISSING,,"(Bionico, mainIngredient, Chopped Fruits, Sour Cream, Condensed Milk, Granola, Shredded Coconut, Raisins)",Bionico,mainIngredient,"Chopped Fruits, Sour Cream, Condensed Milk, Granola, Shredded Coconut, Raisins",,,,
+ont_13_food_test_95,MISSING,,"(Bionico, course, Dessert)",Bionico,course,Dessert,,,,
+ont_13_food_test_95,EXTRA,,,,,,"(Bionico, family, Dessert)",Bionico,family,Dessert
+ont_13_food_test_95,EXTRA,,,,,,"(Bionico, ingredient, Sour_cream)",Bionico,ingredient,Sour_cream
+ont_13_food_test_96,EXACT,1.00,"(Bionico, course, Dessert)",Bionico,course,Dessert,"(Bionico, course, Dessert)",Bionico,course,Dessert
+ont_13_food_test_96,EXACT,1.00,"(Bionico, ingredient, Raisin)",Bionico,ingredient,Raisin,"(Bionico, ingredient, Raisin)",Bionico,ingredient,Raisin
+ont_13_food_test_96,EXACT,1.00,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso
+ont_13_food_test_96,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_97,EXACT,1.00,"(Mexico, leader, Silvano_Aureoles_Conejo)",Mexico,leader,Silvano_Aureoles_Conejo,"(Mexico, leader, Silvano_Aureoles_Conejo)",Mexico,leader,Silvano_Aureoles_Conejo
+ont_13_food_test_97,EXACT,1.00,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans
+ont_13_food_test_97,EXACT,1.00,"(Bionico, region, Guadalajara)",Bionico,region,Guadalajara,"(Bionico, region, Guadalajara)",Bionico,region,Guadalajara
+ont_13_food_test_97,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_97,SEMANTIC,0.97,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso,"(Mexico, currency, Peso)",Mexico,currency,Peso
+ont_13_food_test_97,MISSING,,"(Bionico, mainIngredient, Chopped Fruits, Sour Cream, Condensed Milk, Granola, Shredded Coconut, Raisins)",Bionico,mainIngredient,"Chopped Fruits, Sour Cream, Condensed Milk, Granola, Shredded Coconut, Raisins",,,,
+ont_13_food_test_97,MISSING,,"(Bionico, course, Dessert)",Bionico,course,Dessert,,,,
+ont_13_food_test_98,EXACT,1.00,"(Bionico, course, Dessert)",Bionico,course,Dessert,"(Bionico, course, Dessert)",Bionico,course,Dessert
+ont_13_food_test_98,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_98,MISSING,,"(Dessert, dishVariation, Cookie)",Dessert,dishVariation,Cookie,,,,
+ont_13_food_test_98,EXTRA,,,,,,"(Cookie, course, Dessert)",Cookie,course,Dessert
+ont_13_food_test_99,EXACT,1.00,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans,"(Mexico, demonym, Mexicans)",Mexico,demonym,Mexicans
+ont_13_food_test_99,EXACT,1.00,"(Bionico, ingredient, Sour_cream)",Bionico,ingredient,Sour_cream,"(Bionico, ingredient, Sour_cream)",Bionico,ingredient,Sour_cream
+ont_13_food_test_99,EXACT,1.00,"(Bionico, region, Guadalajara)",Bionico,region,Guadalajara,"(Bionico, region, Guadalajara)",Bionico,region,Guadalajara
+ont_13_food_test_99,EXACT,1.00,"(Bionico, country, Mexico)",Bionico,country,Mexico,"(Bionico, country, Mexico)",Bionico,country,Mexico
+ont_13_food_test_99,SEMANTIC,0.97,"(Mexico, currency, Mexican_peso)",Mexico,currency,Mexican_peso,"(Mexico, currency, Peso)",Mexico,currency,Peso
+ont_13_food_test_99,MISSING,,"(Dessert, dishVariation, Sandesh_(confectionery))",Dessert,dishVariation,Sandesh_(confectionery),,,,
+ont_13_food_test_99,MISSING,,"(Bionico, course, Dessert)",Bionico,course,Dessert,,,,

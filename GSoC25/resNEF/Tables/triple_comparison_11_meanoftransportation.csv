@@ -1,0 +1,344 @@
+sent_id,match_type,similarity,expected,expected_sub,expected_rel,expected_obj,predicted,predicted_sub,predicted_rel,predicted_obj
+ont_11_meanoftransportation_test_1,MISSING,,"(A-Rosa_Luna, powerType, MTU_Friedrichshafen)",A-Rosa_Luna,powerType,MTU_Friedrichshafen,,,,
+ont_11_meanoftransportation_test_1,MISSING,,"(MTU_Friedrichshafen, city, Friedrichshafen)",MTU_Friedrichshafen,city,Friedrichshafen,,,,
+ont_11_meanoftransportation_test_1,MISSING,,"(A-Rosa_Luna, builder, Germany)",A-Rosa_Luna,builder,Germany,,,,
+ont_11_meanoftransportation_test_1,EXTRA,,,,,,"(A-Rosa_Luna, countryOrigin, Germany)",A-Rosa_Luna,countryOrigin,Germany
+ont_11_meanoftransportation_test_1,EXTRA,,,,,,"(A-Rosa_Luna, engine, mtu friedrichshafen engine)",A-Rosa_Luna,engine,mtu friedrichshafen engine
+ont_11_meanoftransportation_test_10,MISSING,,"(AIDAluna, length, 252000.0 (millimetres))",AIDAluna,length,252000.0 (millimetres),,,,
+ont_11_meanoftransportation_test_10,MISSING,,"(AIDAluna, christeningDate, 2009-04-04)",AIDAluna,christeningDate,2009-04-04,,,,
+ont_11_meanoftransportation_test_10,MISSING,,"(AIDAluna, activeYearsStartDate, 2009-03-22)",AIDAluna,activeYearsStartDate,2009-03-22,,,,
+ont_11_meanoftransportation_test_11,MISSING,,"(AIDAluna, length, 252000.0 (millimetres))",AIDAluna,length,252000.0 (millimetres),,,,
+ont_11_meanoftransportation_test_11,MISSING,,"(AIDAluna, powerType, Caterpillar_Inc.)",AIDAluna,powerType,Caterpillar_Inc.,,,,
+ont_11_meanoftransportation_test_11,MISSING,,"(AIDAluna, activeYearsStartDate, 2009-03-22)",AIDAluna,activeYearsStartDate,2009-03-22,,,,
+ont_11_meanoftransportation_test_12,MISSING,,"(AIDAluna, length, 252000.0 (millimetres))",AIDAluna,length,252000.0 (millimetres),,,,
+ont_11_meanoftransportation_test_12,MISSING,,"(AIDAluna, powerType, Caterpillar_Inc.)",AIDAluna,powerType,Caterpillar_Inc.,,,,
+ont_11_meanoftransportation_test_12,MISSING,,"(AIDAluna, christeningDate, 2009-04-04)",AIDAluna,christeningDate,2009-04-04,,,,
+ont_11_meanoftransportation_test_13,MISSING,,"(AIDAluna, length, 252000.0 (millimetres))",AIDAluna,length,252000.0 (millimetres),,,,
+ont_11_meanoftransportation_test_13,MISSING,,"(AIDAluna, maidenVoyage, 2009-03-22)",AIDAluna,maidenVoyage,2009-03-22,,,,
+ont_11_meanoftransportation_test_13,MISSING,,"(AIDAluna, christeningDate, 2009-04-04)",AIDAluna,christeningDate,2009-04-04,,,,
+ont_11_meanoftransportation_test_14,MISSING,,"(AIDAluna, length, 252000.0 (millimetres))",AIDAluna,length,252000.0 (millimetres),,,,
+ont_11_meanoftransportation_test_14,MISSING,,"(AIDAluna, maidenVoyage, 2009-03-22)",AIDAluna,maidenVoyage,2009-03-22,,,,
+ont_11_meanoftransportation_test_14,MISSING,,"(AIDAluna, powerType, Caterpillar_Inc.)",AIDAluna,powerType,Caterpillar_Inc.,,,,
+ont_11_meanoftransportation_test_15,MISSING,,"(AIDAluna, length, 252000.0 (millimetres))",AIDAluna,length,252000.0 (millimetres),,,,
+ont_11_meanoftransportation_test_15,MISSING,,"(AIDAluna, shipBeam, 32.2)",AIDAluna,shipBeam,32.2,,,,
+ont_11_meanoftransportation_test_15,MISSING,,"(AIDAluna, maidenVoyage, 2009-03-22)",AIDAluna,maidenVoyage,2009-03-22,,,,
+ont_11_meanoftransportation_test_16,MISSING,,"(AIDAluna, length, 252000.0 (millimetres))",AIDAluna,length,252000.0 (millimetres),,,,
+ont_11_meanoftransportation_test_16,MISSING,,"(AIDAluna, owner, AIDA_Cruises)",AIDAluna,owner,AIDA_Cruises,,,,
+ont_11_meanoftransportation_test_16,MISSING,,"(AIDAluna, builder, Meyer_Werft)",AIDAluna,builder,Meyer_Werft,,,,
+ont_11_meanoftransportation_test_17,MISSING,,"(AIDAluna, length, 252000.0 (millimetres))",AIDAluna,length,252000.0 (millimetres),,,,
+ont_11_meanoftransportation_test_17,MISSING,,"(AIDAluna, shipBeam, 32.2)",AIDAluna,shipBeam,32.2,,,,
+ont_11_meanoftransportation_test_17,MISSING,,"(AIDAluna, activeYearsStartDate, 2009-03-22)",AIDAluna,activeYearsStartDate,2009-03-22,,,,
+ont_11_meanoftransportation_test_18,MISSING,,"(AIDAluna, length, 252000.0 (millimetres))",AIDAluna,length,252000.0 (millimetres),,,,
+ont_11_meanoftransportation_test_18,MISSING,,"(AIDAluna, shipBeam, 32.2)",AIDAluna,shipBeam,32.2,,,,
+ont_11_meanoftransportation_test_18,MISSING,,"(AIDAluna, christeningDate, 2009-04-04)",AIDAluna,christeningDate,2009-04-04,,,,
+ont_11_meanoftransportation_test_19,MISSING,,"(AIDAstella, christeningDate, 2013-03-16)",AIDAstella,christeningDate,2013-03-16,,,,
+ont_11_meanoftransportation_test_19,MISSING,,"(AIDAstella, activeYearsStartDate, 2013-03-17)",AIDAstella,activeYearsStartDate,2013-03-17,,,,
+ont_11_meanoftransportation_test_19,MISSING,,"(AIDAstella, length, 253260.0 (millimetres))",AIDAstella,length,253260.0 (millimetres),,,,
+ont_11_meanoftransportation_test_2,SEMANTIC,0.94,"(A-Rosa_Luna, length, 125800.0 (millimetres))",A-Rosa_Luna,length,125800.0 (millimetres),"(A-Rosa_Luna, length, 125800)",A-Rosa_Luna,length,125800
+ont_11_meanoftransportation_test_2,MISSING,,"(A-Rosa_Luna, shipDisplacement, 1850.0 (tonnes))",A-Rosa_Luna,shipDisplacement,1850.0 (tonnes),,,,
+ont_11_meanoftransportation_test_2,MISSING,,"(A-Rosa_Luna, builder, Neptun Werft, Warnemünde,)",A-Rosa_Luna,builder,"Neptun Werft, Warnemünde,",,,,
+ont_11_meanoftransportation_test_2,EXTRA,,,,,,"(A-Rosa_Luna, builder, Neptun_Werft)",A-Rosa_Luna,builder,Neptun_Werft
+ont_11_meanoftransportation_test_2,EXTRA,,,,,,"(A-Rosa_Luna, shipDisplacement, 1850)",A-Rosa_Luna,shipDisplacement,1850
+ont_11_meanoftransportation_test_2,EXTRA,,,,,,"(A-Rosa_Luna, launchSite, Warnemünde)",A-Rosa_Luna,launchSite,Warnemünde
+ont_11_meanoftransportation_test_20,MISSING,,"(AIDAstella, christeningDate, 2013-03-16)",AIDAstella,christeningDate,2013-03-16,,,,
+ont_11_meanoftransportation_test_20,MISSING,,"(AIDAstella, shipClass, Sphinx-class cruise ship)",AIDAstella,shipClass,Sphinx-class cruise ship,,,,
+ont_11_meanoftransportation_test_20,MISSING,,"(AIDAstella, length, 253260.0 (millimetres))",AIDAstella,length,253260.0 (millimetres),,,,
+ont_11_meanoftransportation_test_21,MISSING,,"(AIDAstella, shipBeam, 32.2)",AIDAstella,shipBeam,32.2,,,,
+ont_11_meanoftransportation_test_21,MISSING,,"(AIDAstella, builder, Meyer_Werft)",AIDAstella,builder,Meyer_Werft,,,,
+ont_11_meanoftransportation_test_21,MISSING,,"(AIDAstella, length, 253260.0 (millimetres))",AIDAstella,length,253260.0 (millimetres),,,,
+ont_11_meanoftransportation_test_22,MISSING,,"(AIDAstella, shipBeam, 32.2)",AIDAstella,shipBeam,32.2,,,,
+ont_11_meanoftransportation_test_22,MISSING,,"(AIDAstella, owner, Costa_Crociere)",AIDAstella,owner,Costa_Crociere,,,,
+ont_11_meanoftransportation_test_22,MISSING,,"(AIDAstella, length, 253260.0 (millimetres))",AIDAstella,length,253260.0 (millimetres),,,,
+ont_11_meanoftransportation_test_23,MISSING,,"(AIDAstella, christeningDate, 2013-03-16)",AIDAstella,christeningDate,2013-03-16,,,,
+ont_11_meanoftransportation_test_23,MISSING,,"(AIDAstella, maidenVoyage, 2013-03-17)",AIDAstella,maidenVoyage,2013-03-17,,,,
+ont_11_meanoftransportation_test_23,MISSING,,"(AIDAstella, length, 253260.0 (millimetres))",AIDAstella,length,253260.0 (millimetres),,,,
+ont_11_meanoftransportation_test_24,MISSING,,"(AIDAstella, shipBeam, 32.2)",AIDAstella,shipBeam,32.2,,,,
+ont_11_meanoftransportation_test_24,MISSING,,"(AIDAstella, maidenVoyage, 2013-03-17)",AIDAstella,maidenVoyage,2013-03-17,,,,
+ont_11_meanoftransportation_test_24,MISSING,,"(AIDAstella, length, 253260.0 (millimetres))",AIDAstella,length,253260.0 (millimetres),,,,
+ont_11_meanoftransportation_test_25,MISSING,,"(AIDAstella, builder, Meyer_Werft)",AIDAstella,builder,Meyer_Werft,,,,
+ont_11_meanoftransportation_test_25,MISSING,,"(AIDAstella, operator, AIDA_Cruises)",AIDAstella,operator,AIDA_Cruises,,,,
+ont_11_meanoftransportation_test_25,MISSING,,"(AIDAstella, length, 253260.0 (millimetres))",AIDAstella,length,253260.0 (millimetres),,,,
+ont_11_meanoftransportation_test_26,MISSING,,"(AIDAstella, builder, Meyer_Werft)",AIDAstella,builder,Meyer_Werft,,,,
+ont_11_meanoftransportation_test_26,MISSING,,"(AIDAstella, operator, AIDA_Cruises)",AIDAstella,operator,AIDA_Cruises,,,,
+ont_11_meanoftransportation_test_26,MISSING,,"(Meyer_Werft, location, Papenburg)",Meyer_Werft,location,Papenburg,,,,
+ont_11_meanoftransportation_test_27,MISSING,,"(Costa_Crociere, location, Italy)",Costa_Crociere,location,Italy,,,,
+ont_11_meanoftransportation_test_27,MISSING,,"(AIDAstella, operator, AIDA_Cruises)",AIDAstella,operator,AIDA_Cruises,,,,
+ont_11_meanoftransportation_test_27,MISSING,,"(AIDAstella, owner, Costa_Crociere)",AIDAstella,owner,Costa_Crociere,,,,
+ont_11_meanoftransportation_test_28,MISSING,,"(Meyer_Werft, location, Germany)",Meyer_Werft,location,Germany,,,,
+ont_11_meanoftransportation_test_28,MISSING,,"(AIDAstella, builder, Meyer_Werft)",AIDAstella,builder,Meyer_Werft,,,,
+ont_11_meanoftransportation_test_28,MISSING,,"(AIDAstella, operator, AIDA_Cruises)",AIDAstella,operator,AIDA_Cruises,,,,
+ont_11_meanoftransportation_test_28,EXTRA,,,,,,"(Meyer_Werft, foundationPlace, Germany)",Meyer_Werft,foundationPlace,Germany
+ont_11_meanoftransportation_test_29,EXACT,1.00,"(Finland, leader, Sauli_Niinistö)",Finland,leader,Sauli_Niinistö,"(Finland, leader, Sauli_Niinistö)",Finland,leader,Sauli_Niinistö
+ont_11_meanoftransportation_test_29,MISSING,,"(Aleksey_Chirikov_(icebreaker), builder, Finland)",Aleksey_Chirikov_(icebreaker),builder,Finland,,,,
+ont_11_meanoftransportation_test_29,MISSING,,"(Aleksey_Chirikov_(icebreaker), builder, Arctech_Helsinki_Shipyard)",Aleksey_Chirikov_(icebreaker),builder,Arctech_Helsinki_Shipyard,,,,
+ont_11_meanoftransportation_test_29,EXTRA,,,,,,"(Arctech_Helsinki_Shipyard, foundationPlace, Finland)",Arctech_Helsinki_Shipyard,foundationPlace,Finland
+ont_11_meanoftransportation_test_3,EXACT,1.00,"(A-Rosa_Luna, christeningDate, 2005-04-07)",A-Rosa_Luna,christeningDate,2005-04-07,"(A-Rosa_Luna, christeningDate, 2005-04-07)",A-Rosa_Luna,christeningDate,2005-04-07
+ont_11_meanoftransportation_test_3,MISSING,,"(A-Rosa_Luna, length, 125800.0 (millimetres))",A-Rosa_Luna,length,125800.0 (millimetres),,,,
+ont_11_meanoftransportation_test_3,MISSING,,"(A-Rosa_Luna, shipDisplacement, 1850.0 (tonnes))",A-Rosa_Luna,shipDisplacement,1850.0 (tonnes),,,,
+ont_11_meanoftransportation_test_3,EXTRA,,,,,,"(A-Rosa_Luna, shipDisplacement, 1850)",A-Rosa_Luna,shipDisplacement,1850
+ont_11_meanoftransportation_test_3,EXTRA,,,,,,"(A-Rosa_Luna, length, 125.8)",A-Rosa_Luna,length,125.8
+ont_11_meanoftransportation_test_30,EXACT,1.00,"(Finland, leader, Sauli_Niinistö)",Finland,leader,Sauli_Niinistö,"(Finland, leader, Sauli_Niinistö)",Finland,leader,Sauli_Niinistö
+ont_11_meanoftransportation_test_30,MISSING,,"(Aleksey_Chirikov_(icebreaker), builder, Helsinki)",Aleksey_Chirikov_(icebreaker),builder,Helsinki,,,,
+ont_11_meanoftransportation_test_30,MISSING,,"(Aleksey_Chirikov_(icebreaker), builder, Finland)",Aleksey_Chirikov_(icebreaker),builder,Finland,,,,
+ont_11_meanoftransportation_test_30,EXTRA,,,,,,"(Helsinki, isPartOf, Finland)",Helsinki,isPartOf,Finland
+ont_11_meanoftransportation_test_30,EXTRA,,,,,,"(Aleksey_Chirikov_(icebreaker), assembly, Helsinki)",Aleksey_Chirikov_(icebreaker),assembly,Helsinki
+ont_11_meanoftransportation_test_31,EXACT,1.00,"(Aleksey_Chirikov_(icebreaker), shipBeam, 21.2)",Aleksey_Chirikov_(icebreaker),shipBeam,21.2,"(Aleksey_Chirikov_(icebreaker), shipBeam, 21.2)",Aleksey_Chirikov_(icebreaker),shipBeam,21.2
+ont_11_meanoftransportation_test_31,SEMANTIC,0.94,"(Aleksey_Chirikov_(icebreaker), builder, Arctech_Helsinki_Shipyard)",Aleksey_Chirikov_(icebreaker),builder,Arctech_Helsinki_Shipyard,"(Aleksey_Chirikov_(icebreaker), launchSite, Arctech_Helsinki_Shipyard)",Aleksey_Chirikov_(icebreaker),launchSite,Arctech_Helsinki_Shipyard
+ont_11_meanoftransportation_test_31,MISSING,,"(Aleksey_Chirikov_(icebreaker), builder, Finland)",Aleksey_Chirikov_(icebreaker),builder,Finland,,,,
+ont_11_meanoftransportation_test_31,EXTRA,,,,,,"(Aleksey_Chirikov_(icebreaker), countryOrigin, Finland)",Aleksey_Chirikov_(icebreaker),countryOrigin,Finland
+ont_11_meanoftransportation_test_32,EXACT,1.00,"(Aleksey_Chirikov_(icebreaker), shipBeam, 21.2)",Aleksey_Chirikov_(icebreaker),shipBeam,21.2,"(Aleksey_Chirikov_(icebreaker), shipBeam, 21.2)",Aleksey_Chirikov_(icebreaker),shipBeam,21.2
+ont_11_meanoftransportation_test_32,MISSING,,"(Aleksey_Chirikov_(icebreaker), builder, Helsinki)",Aleksey_Chirikov_(icebreaker),builder,Helsinki,,,,
+ont_11_meanoftransportation_test_32,MISSING,,"(Aleksey_Chirikov_(icebreaker), builder, Finland)",Aleksey_Chirikov_(icebreaker),builder,Finland,,,,
+ont_11_meanoftransportation_test_32,EXTRA,,,,,,"(Aleksey_Chirikov_(icebreaker), countryOrigin, Finland)",Aleksey_Chirikov_(icebreaker),countryOrigin,Finland
+ont_11_meanoftransportation_test_32,EXTRA,,,,,,"(Aleksey_Chirikov_(icebreaker), assembly, Helsinki)",Aleksey_Chirikov_(icebreaker),assembly,Helsinki
+ont_11_meanoftransportation_test_33,MISSING,,"(Aleksey_Chirikov_(icebreaker), status, In service)",Aleksey_Chirikov_(icebreaker),status,In service,,,,
+ont_11_meanoftransportation_test_33,MISSING,,"(Aleksey_Chirikov_(icebreaker), builder, Finland)",Aleksey_Chirikov_(icebreaker),builder,Finland,,,,
+ont_11_meanoftransportation_test_33,MISSING,,"(Aleksey_Chirikov_(icebreaker), builder, Arctech_Helsinki_Shipyard)",Aleksey_Chirikov_(icebreaker),builder,Arctech_Helsinki_Shipyard,,,,
+ont_11_meanoftransportation_test_34,EXACT,1.00,"(Aleksey_Chirikov_(icebreaker), status, In service)",Aleksey_Chirikov_(icebreaker),status,In service,"(Aleksey_Chirikov_(icebreaker), status, in service)",Aleksey_Chirikov_(icebreaker),status,in service
+ont_11_meanoftransportation_test_34,MISSING,,"(Aleksey_Chirikov_(icebreaker), builder, Helsinki)",Aleksey_Chirikov_(icebreaker),builder,Helsinki,,,,
+ont_11_meanoftransportation_test_34,MISSING,,"(Aleksey_Chirikov_(icebreaker), builder, Finland)",Aleksey_Chirikov_(icebreaker),builder,Finland,,,,
+ont_11_meanoftransportation_test_34,EXTRA,,,,,,"(Helsinki, isPartOf, Finland)",Helsinki,isPartOf,Finland
+ont_11_meanoftransportation_test_34,EXTRA,,,,,,"(Aleksey_Chirikov_(icebreaker), countryOrigin, Finland)",Aleksey_Chirikov_(icebreaker),countryOrigin,Finland
+ont_11_meanoftransportation_test_34,EXTRA,,,,,,"(Aleksey_Chirikov_(icebreaker), assembly, Helsinki)",Aleksey_Chirikov_(icebreaker),assembly,Helsinki
+ont_11_meanoftransportation_test_35,EXACT,1.00,"(Finland, leader, Juha_Sipilä)",Finland,leader,Juha_Sipilä,"(Finland, leader, juha sipilä)",Finland,leader,juha sipilä
+ont_11_meanoftransportation_test_35,MISSING,,"(Aleksey_Chirikov_(icebreaker), builder, Helsinki)",Aleksey_Chirikov_(icebreaker),builder,Helsinki,,,,
+ont_11_meanoftransportation_test_35,MISSING,,"(Aleksey_Chirikov_(icebreaker), builder, Finland)",Aleksey_Chirikov_(icebreaker),builder,Finland,,,,
+ont_11_meanoftransportation_test_35,EXTRA,,,,,,"(Helsinki, isPartOf, Finland)",Helsinki,isPartOf,Finland
+ont_11_meanoftransportation_test_35,EXTRA,,,,,,"(Aleksey_Chirikov_(icebreaker), countryOrigin, Finland)",Aleksey_Chirikov_(icebreaker),countryOrigin,Finland
+ont_11_meanoftransportation_test_35,EXTRA,,,,,,"(Aleksey_Chirikov_(icebreaker), assembly, Helsinki)",Aleksey_Chirikov_(icebreaker),assembly,Helsinki
+ont_11_meanoftransportation_test_35,EXTRA,,,,,,"(Aleksey_Chirikov_(icebreaker), location, Helsinki)",Aleksey_Chirikov_(icebreaker),location,Helsinki
+ont_11_meanoftransportation_test_36,EXACT,1.00,"(Aleksey_Chirikov_(icebreaker), builder, Arctech_Helsinki_Shipyard)",Aleksey_Chirikov_(icebreaker),builder,Arctech_Helsinki_Shipyard,"(Aleksey_Chirikov_(icebreaker), builder, Arctech_Helsinki_Shipyard)",Aleksey_Chirikov_(icebreaker),builder,Arctech_Helsinki_Shipyard
+ont_11_meanoftransportation_test_36,EXACT,1.00,"(Aleksey_Chirikov_(icebreaker), status, In service)",Aleksey_Chirikov_(icebreaker),status,In service,"(Aleksey_Chirikov_(icebreaker), status, in service)",Aleksey_Chirikov_(icebreaker),status,in service
+ont_11_meanoftransportation_test_36,MISSING,,"(Aleksey_Chirikov_(icebreaker), builder, Helsinki)",Aleksey_Chirikov_(icebreaker),builder,Helsinki,,,,
+ont_11_meanoftransportation_test_36,EXTRA,,,,,,"(Aleksey_Chirikov_(icebreaker), launchSite, Helsinki)",Aleksey_Chirikov_(icebreaker),launchSite,Helsinki
+ont_11_meanoftransportation_test_37,EXACT,1.00,"(Alhambra, owner, P&O_(company))",Alhambra,owner,P&O_(company),"(Alhambra, owner, P&O_(company))",Alhambra,owner,P&O_(company)
+ont_11_meanoftransportation_test_37,MISSING,,"(Humphrys,_Tennant_and_Dykes, location, Deptford)","Humphrys,_Tennant_and_Dykes",location,Deptford,,,,
+ont_11_meanoftransportation_test_37,MISSING,,"(Alhambra, powerType, Humphrys,_Tennant_and_Dykes)",Alhambra,powerType,"Humphrys,_Tennant_and_Dykes",,,,
+ont_11_meanoftransportation_test_37,EXTRA,,,,,,"(Alhambra, engine, humphrys, tennant and dykes engine)",Alhambra,engine,"humphrys, tennant and dykes engine"
+ont_11_meanoftransportation_test_37,EXTRA,,,,,,"(Alhambra, location, Deptford)",Alhambra,location,Deptford
+ont_11_meanoftransportation_test_38,EXACT,1.00,"(Alhambra, owner, P&O_(company))",Alhambra,owner,P&O_(company),"(Alhambra, owner, P&O_(company))",Alhambra,owner,P&O_(company)
+ont_11_meanoftransportation_test_38,MISSING,,"(Humphrys,_Tennant_and_Dykes, location, London)","Humphrys,_Tennant_and_Dykes",location,London,,,,
+ont_11_meanoftransportation_test_38,MISSING,,"(Alhambra, powerType, Humphrys,_Tennant_and_Dykes)",Alhambra,powerType,"Humphrys,_Tennant_and_Dykes",,,,
+ont_11_meanoftransportation_test_39,EXACT,1.00,"(Alhambra, owner, P&O_(company))",Alhambra,owner,P&O_(company),"(Alhambra, owner, P&O_(company))",Alhambra,owner,P&O_(company)
+ont_11_meanoftransportation_test_39,MISSING,,"(P&O_(company), location, London)",P&O_(company),location,London,,,,
+ont_11_meanoftransportation_test_39,MISSING,,"(Alhambra, powerType, Humphrys,_Tennant_and_Dykes)",Alhambra,powerType,"Humphrys,_Tennant_and_Dykes",,,,
+ont_11_meanoftransportation_test_4,EXACT,1.00,"(A-Rosa_Luna, completionDate, 2005-04-06)",A-Rosa_Luna,completionDate,2005-04-06,"(A-Rosa_Luna, completionDate, 2005-04-06)",A-Rosa_Luna,completionDate,2005-04-06
+ont_11_meanoftransportation_test_4,SEMANTIC,0.94,"(A-Rosa_Luna, length, 125800.0 (millimetres))",A-Rosa_Luna,length,125800.0 (millimetres),"(A-Rosa_Luna, length, 125800)",A-Rosa_Luna,length,125800
+ont_11_meanoftransportation_test_4,MISSING,,"(A-Rosa_Luna, shipDisplacement, 1850.0 (tonnes))",A-Rosa_Luna,shipDisplacement,1850.0 (tonnes),,,,
+ont_11_meanoftransportation_test_4,EXTRA,,,,,,"(A-Rosa_Luna, shipDisplacement, 1850)",A-Rosa_Luna,shipDisplacement,1850
+ont_11_meanoftransportation_test_40,EXACT,1.00,"(Alhambra, builder, Samuda_Brothers)",Alhambra,builder,Samuda_Brothers,"(Alhambra, builder, Samuda_Brothers)",Alhambra,builder,Samuda_Brothers
+ont_11_meanoftransportation_test_40,MISSING,,"(Humphrys,_Tennant_and_Dykes, location, Deptford)","Humphrys,_Tennant_and_Dykes",location,Deptford,,,,
+ont_11_meanoftransportation_test_40,MISSING,,"(Alhambra, powerType, Humphrys,_Tennant_and_Dykes)",Alhambra,powerType,"Humphrys,_Tennant_and_Dykes",,,,
+ont_11_meanoftransportation_test_41,MISSING,,"(Alhambra, length, 63800.0 (millimetres))",Alhambra,length,63800.0 (millimetres),,,,
+ont_11_meanoftransportation_test_41,MISSING,,"(Humphrys,_Tennant_and_Dykes, location, Deptford)","Humphrys,_Tennant_and_Dykes",location,Deptford,,,,
+ont_11_meanoftransportation_test_41,MISSING,,"(Alhambra, powerType, Humphrys,_Tennant_and_Dykes)",Alhambra,powerType,"Humphrys,_Tennant_and_Dykes",,,,
+ont_11_meanoftransportation_test_41,EXTRA,,,,,,"(Alhambra, length, 63800.0)",Alhambra,length,63800.0
+ont_11_meanoftransportation_test_41,EXTRA,,,,,,"(Alhambra, engine, humphrys, tennant and dykes)",Alhambra,engine,"humphrys, tennant and dykes"
+ont_11_meanoftransportation_test_42,EXACT,1.00,"(Alhambra, builder, Samuda_Brothers)",Alhambra,builder,Samuda_Brothers,"(Alhambra, builder, Samuda_Brothers)",Alhambra,builder,Samuda_Brothers
+ont_11_meanoftransportation_test_42,MISSING,,"(Humphrys,_Tennant_and_Dykes, location, London)","Humphrys,_Tennant_and_Dykes",location,London,,,,
+ont_11_meanoftransportation_test_42,MISSING,,"(Alhambra, powerType, Humphrys,_Tennant_and_Dykes)",Alhambra,powerType,"Humphrys,_Tennant_and_Dykes",,,,
+ont_11_meanoftransportation_test_43,MISSING,,"(Alhambra, length, 63800.0 (millimetres))",Alhambra,length,63800.0 (millimetres),,,,
+ont_11_meanoftransportation_test_43,MISSING,,"(Humphrys,_Tennant_and_Dykes, location, London)","Humphrys,_Tennant_and_Dykes",location,London,,,,
+ont_11_meanoftransportation_test_43,MISSING,,"(Alhambra, powerType, Humphrys,_Tennant_and_Dykes)",Alhambra,powerType,"Humphrys,_Tennant_and_Dykes",,,,
+ont_11_meanoftransportation_test_43,EXTRA,,,,,,"(Alhambra, length, 63.8)",Alhambra,length,63.8
+ont_11_meanoftransportation_test_44,EXACT,1.00,"(Alhambra, topSpeed, 18.52)",Alhambra,topSpeed,18.52,"(Alhambra, topSpeed, 18.52)",Alhambra,topSpeed,18.52
+ont_11_meanoftransportation_test_44,MISSING,,"(Alhambra, length, 63800.0 (millimetres))",Alhambra,length,63800.0 (millimetres),,,,
+ont_11_meanoftransportation_test_44,MISSING,,"(Alhambra, shipBeam, 8.3 m)",Alhambra,shipBeam,8.3 m,,,,
+ont_11_meanoftransportation_test_44,EXTRA,,,,,,"(Alhambra, shipBeam, 8.3)",Alhambra,shipBeam,8.3
+ont_11_meanoftransportation_test_44,EXTRA,,,,,,"(Alhambra, length, 63800.0)",Alhambra,length,63800.0
+ont_11_meanoftransportation_test_45,EXACT,1.00,"(Alhambra, topSpeed, 18.52)",Alhambra,topSpeed,18.52,"(Alhambra, topSpeed, 18.52)",Alhambra,topSpeed,18.52
+ont_11_meanoftransportation_test_45,MISSING,,"(Alhambra, shipBeam, 8.3 m)",Alhambra,shipBeam,8.3 m,,,,
+ont_11_meanoftransportation_test_45,MISSING,,"(Alhambra, status, Wrecked)",Alhambra,status,Wrecked,,,,
+ont_11_meanoftransportation_test_45,EXTRA,,,,,,"(Alhambra, shipBeam, 8.3)",Alhambra,shipBeam,8.3
+ont_11_meanoftransportation_test_45,EXTRA,,,,,,"(Alhambra, fate, wrecked)",Alhambra,fate,wrecked
+ont_11_meanoftransportation_test_46,EXACT,1.00,"(Ariane_5, launchSite, Guiana_Space_Centre)",Ariane_5,launchSite,Guiana_Space_Centre,"(Ariane_5, launchSite, Guiana_Space_Centre)",Ariane_5,launchSite,Guiana_Space_Centre
+ont_11_meanoftransportation_test_46,SEMANTIC,0.98,"(Ariane_5, manufacturer, ESA and Arianespace)",Ariane_5,manufacturer,ESA and Arianespace,"(Ariane_5, manufacturer, Arianespace)",Ariane_5,manufacturer,Arianespace
+ont_11_meanoftransportation_test_46,MISSING,,"(Ariane_5, finalFlight, 2009-12-18)",Ariane_5,finalFlight,2009-12-18,,,,
+ont_11_meanoftransportation_test_46,EXTRA,,,,,,"(Ariane_5, manufacturer, European_Space_Agency)",Ariane_5,manufacturer,European_Space_Agency
+ont_11_meanoftransportation_test_46,EXTRA,,,,,,"(Ariane_5, completionDate, 2009-12-18)",Ariane_5,completionDate,2009-12-18
+ont_11_meanoftransportation_test_47,EXACT,1.00,"(Ariane_5, manufacturer, European_Space_Agency)",Ariane_5,manufacturer,European_Space_Agency,"(Ariane_5, manufacturer, European_Space_Agency)",Ariane_5,manufacturer,European_Space_Agency
+ont_11_meanoftransportation_test_47,EXACT,1.00,"(Ariane_5, launchSite, Guiana_Space_Centre)",Ariane_5,launchSite,Guiana_Space_Centre,"(Ariane_5, launchSite, Guiana_Space_Centre)",Ariane_5,launchSite,Guiana_Space_Centre
+ont_11_meanoftransportation_test_47,EXACT,1.00,"(Ariane_5, finalFlight, 2009-12-18)",Ariane_5,finalFlight,2009-12-18,"(Ariane_5, finalFlight, 2009-12-18)",Ariane_5,finalFlight,2009-12-18
+ont_11_meanoftransportation_test_48,EXACT,1.00,"(Ariane_5, launchSite, ELA-3)",Ariane_5,launchSite,ELA-3,"(Ariane_5, launchSite, ELA-3)",Ariane_5,launchSite,ELA-3
+ont_11_meanoftransportation_test_48,MISSING,,"(Ariane_5, manufacturer, Airbus_Defence_and_Space)",Ariane_5,manufacturer,Airbus_Defence_and_Space,,,,
+ont_11_meanoftransportation_test_48,MISSING,,"(Ariane_5, finalFlight, 2003-09-27)",Ariane_5,finalFlight,2003-09-27,,,,
+ont_11_meanoftransportation_test_49,MISSING,,"(Ariane_5, manufacturer, Airbus_Defence_and_Space)",Ariane_5,manufacturer,Airbus_Defence_and_Space,,,,
+ont_11_meanoftransportation_test_49,MISSING,,"(Ariane_5, launchSite, ELA-3)",Ariane_5,launchSite,ELA-3,,,,
+ont_11_meanoftransportation_test_49,MISSING,,"(Ariane_5, finalFlight, 2004-12-18)",Ariane_5,finalFlight,2004-12-18,,,,
+ont_11_meanoftransportation_test_49,EXTRA,,,,,,"(Ariane_5, completionDate, 2004-12-18)",Ariane_5,completionDate,2004-12-18
+ont_11_meanoftransportation_test_5,SEMANTIC,0.98,"(A-Rosa_Luna, shipClass, Cruise_ship)",A-Rosa_Luna,shipClass,Cruise_ship,"(A-Rosa_Luna, class, Cruise_ship)",A-Rosa_Luna,class,Cruise_ship
+ont_11_meanoftransportation_test_5,MISSING,,"(A-Rosa_Luna, length, 125800.0 (millimetres))",A-Rosa_Luna,length,125800.0 (millimetres),,,,
+ont_11_meanoftransportation_test_5,MISSING,,"(A-Rosa_Luna, shipDisplacement, 1850.0 (tonnes))",A-Rosa_Luna,shipDisplacement,1850.0 (tonnes),,,,
+ont_11_meanoftransportation_test_5,EXTRA,,,,,,"(A-Rosa_Luna, shipDisplacement, 1850)",A-Rosa_Luna,shipDisplacement,1850
+ont_11_meanoftransportation_test_5,EXTRA,,,,,,"(A-Rosa_Luna, length, 125.8)",A-Rosa_Luna,length,125.8
+ont_11_meanoftransportation_test_50,EXACT,1.00,"(Ariane_5, manufacturer, European_Space_Agency)",Ariane_5,manufacturer,European_Space_Agency,"(Ariane_5, manufacturer, European_Space_Agency)",Ariane_5,manufacturer,European_Space_Agency
+ont_11_meanoftransportation_test_50,MISSING,,"(Ariane_5, finalFlight, 2004-12-18)",Ariane_5,finalFlight,2004-12-18,,,,
+ont_11_meanoftransportation_test_50,MISSING,,"(Ariane_5, launchSite, ELA-3)",Ariane_5,launchSite,ELA-3,,,,
+ont_11_meanoftransportation_test_50,EXTRA,,,,,,"(Ariane_5, completionDate, 2004-12-18)",Ariane_5,completionDate,2004-12-18
+ont_11_meanoftransportation_test_51,EXACT,1.00,"(Ariane_5, launchSite, Guiana_Space_Centre)",Ariane_5,launchSite,Guiana_Space_Centre,"(Ariane_5, launchSite, Guiana_Space_Centre)",Ariane_5,launchSite,Guiana_Space_Centre
+ont_11_meanoftransportation_test_51,EXACT,1.00,"(Ariane_5, finalFlight, 2003-09-27)",Ariane_5,finalFlight,2003-09-27,"(Ariane_5, finalFlight, 2003-09-27)",Ariane_5,finalFlight,2003-09-27
+ont_11_meanoftransportation_test_51,SEMANTIC,0.95,"(Ariane_5, manufacturer, ESA and Arianespace)",Ariane_5,manufacturer,ESA and Arianespace,"(Ariane_5, builder, Arianespace)",Ariane_5,builder,Arianespace
+ont_11_meanoftransportation_test_51,EXTRA,,,,,,"(Ariane_5, builder, European_Space_Agency)",Ariane_5,builder,European_Space_Agency
+ont_11_meanoftransportation_test_52,EXACT,1.00,"(Ariane_5, launchSite, Guiana_Space_Centre)",Ariane_5,launchSite,Guiana_Space_Centre,"(Ariane_5, launchSite, Guiana_Space_Centre)",Ariane_5,launchSite,Guiana_Space_Centre
+ont_11_meanoftransportation_test_52,SEMANTIC,0.98,"(Ariane_5, manufacturer, ESA and Arianespace)",Ariane_5,manufacturer,ESA and Arianespace,"(Ariane_5, manufacturer, Arianespace)",Ariane_5,manufacturer,Arianespace
+ont_11_meanoftransportation_test_52,MISSING,,"(Ariane_5, finalFlight, 2004-12-18)",Ariane_5,finalFlight,2004-12-18,,,,
+ont_11_meanoftransportation_test_52,EXTRA,,,,,,"(Ariane_5, manufacturer, European_Space_Agency)",Ariane_5,manufacturer,European_Space_Agency
+ont_11_meanoftransportation_test_53,EXACT,1.00,"(Ariane_5, manufacturer, Arianespace)",Ariane_5,manufacturer,Arianespace,"(Ariane_5, manufacturer, Arianespace)",Ariane_5,manufacturer,Arianespace
+ont_11_meanoftransportation_test_53,EXACT,1.00,"(Ariane_5, launchSite, Guiana_Space_Centre)",Ariane_5,launchSite,Guiana_Space_Centre,"(Ariane_5, launchSite, Guiana_Space_Centre)",Ariane_5,launchSite,Guiana_Space_Centre
+ont_11_meanoftransportation_test_53,MISSING,,"(Ariane_5, finalFlight, 2009-12-18)",Ariane_5,finalFlight,2009-12-18,,,,
+ont_11_meanoftransportation_test_54,EXACT,1.00,"(Ariane_5, manufacturer, Arianespace)",Ariane_5,manufacturer,Arianespace,"(Ariane_5, manufacturer, Arianespace)",Ariane_5,manufacturer,Arianespace
+ont_11_meanoftransportation_test_54,EXACT,1.00,"(Ariane_5, launchSite, Guiana_Space_Centre)",Ariane_5,launchSite,Guiana_Space_Centre,"(Ariane_5, launchSite, Guiana_Space_Centre)",Ariane_5,launchSite,Guiana_Space_Centre
+ont_11_meanoftransportation_test_54,MISSING,,"(Ariane_5, finalFlight, 2003-09-27)",Ariane_5,finalFlight,2003-09-27,,,,
+ont_11_meanoftransportation_test_54,EXTRA,,,,,,"(Ariane_5, completionDate, 2003-09-27)",Ariane_5,completionDate,2003-09-27
+ont_11_meanoftransportation_test_55,EXACT,1.00,"(Ariane_5, manufacturer, Arianespace)",Ariane_5,manufacturer,Arianespace,"(Ariane_5, manufacturer, Arianespace)",Ariane_5,manufacturer,Arianespace
+ont_11_meanoftransportation_test_55,EXACT,1.00,"(Ariane_5, launchSite, Guiana_Space_Centre)",Ariane_5,launchSite,Guiana_Space_Centre,"(Ariane_5, launchSite, Guiana_Space_Centre)",Ariane_5,launchSite,Guiana_Space_Centre
+ont_11_meanoftransportation_test_55,EXACT,1.00,"(Ariane_5, finalFlight, 2004-12-18)",Ariane_5,finalFlight,2004-12-18,"(Ariane_5, finalFlight, 2004-12-18)",Ariane_5,finalFlight,2004-12-18
+ont_11_meanoftransportation_test_56,EXACT,1.00,"(Ariane_5, launchSite, ELA-3)",Ariane_5,launchSite,ELA-3,"(Ariane_5, launchSite, ELA-3)",Ariane_5,launchSite,ELA-3
+ont_11_meanoftransportation_test_56,MISSING,,"(Arianespace, city, Courcouronnes)",Arianespace,city,Courcouronnes,,,,
+ont_11_meanoftransportation_test_56,MISSING,,"(ELA-3, operator, Arianespace)",ELA-3,operator,Arianespace,,,,
+ont_11_meanoftransportation_test_57,EXACT,1.00,"(Ariane_5, launchSite, ELA-3)",Ariane_5,launchSite,ELA-3,"(Ariane_5, launchSite, ELA-3)",Ariane_5,launchSite,ELA-3
+ont_11_meanoftransportation_test_57,MISSING,,"(Arianespace, country, France)",Arianespace,country,France,,,,
+ont_11_meanoftransportation_test_57,MISSING,,"(ELA-3, operator, Arianespace)",ELA-3,operator,Arianespace,,,,
+ont_11_meanoftransportation_test_57,EXTRA,,,,,,"(Ariane_5, countryOrigin, France)",Ariane_5,countryOrigin,France
+ont_11_meanoftransportation_test_57,EXTRA,,,,,,"(Ariane_5, operator, Arianespace)",Ariane_5,operator,Arianespace
+ont_11_meanoftransportation_test_58,EXACT,1.00,"(Audi_A1, bodyStyle, Hatchback)",Audi_A1,bodyStyle,Hatchback,"(Audi_A1, bodyStyle, Hatchback)",Audi_A1,bodyStyle,Hatchback
+ont_11_meanoftransportation_test_58,SEMANTIC,0.99,"(Audi_A1, engine, 1.2 (litres))",Audi_A1,engine,1.2 (litres),"(Audi_A1, engine, 1.2 litre)",Audi_A1,engine,1.2 litre
+ont_11_meanoftransportation_test_58,SEMANTIC,0.99,"(Audi_A1, assembly, Brussels, Belgium)",Audi_A1,assembly,"Brussels, Belgium","(Audi_A1, assembly, Brussels)",Audi_A1,assembly,Brussels
+ont_11_meanoftransportation_test_58,EXTRA,,,,,,"(Brussels, isPartOf, Belgium)",Brussels,isPartOf,Belgium
+ont_11_meanoftransportation_test_59,EXACT,1.00,"(Audi_A1, transmission, 5-speed manual)",Audi_A1,transmission,5-speed manual,"(Audi_A1, transmission, 5-speed manual)",Audi_A1,transmission,5-speed manual
+ont_11_meanoftransportation_test_59,SEMANTIC,0.99,"(Audi_A1, engine, 1.2 (litres))",Audi_A1,engine,1.2 (litres),"(Audi_A1, engine, 1.2 litre)",Audi_A1,engine,1.2 litre
+ont_11_meanoftransportation_test_59,SEMANTIC,0.99,"(Audi_A1, assembly, Brussels, Belgium)",Audi_A1,assembly,"Brussels, Belgium","(Audi_A1, assembly, Belgium)",Audi_A1,assembly,Belgium
+ont_11_meanoftransportation_test_59,EXTRA,,,,,,"(Audi_A1, assembly, Brussels)",Audi_A1,assembly,Brussels
+ont_11_meanoftransportation_test_59,EXTRA,,,,,,"(Brussels, isPartOf, Belgium)",Brussels,isPartOf,Belgium
+ont_11_meanoftransportation_test_6,MISSING,,"(AIDAluna, owner, AIDA_Cruises)",AIDAluna,owner,AIDA_Cruises,,,,
+ont_11_meanoftransportation_test_6,MISSING,,"(AIDAluna, powerType, Caterpillar_Inc.)",AIDAluna,powerType,Caterpillar_Inc.,,,,
+ont_11_meanoftransportation_test_6,MISSING,,"(AIDA_Cruises, location, Germany)",AIDA_Cruises,location,Germany,,,,
+ont_11_meanoftransportation_test_60,EXACT,1.00,"(Audi_A1, transmission, 5-speed manual)",Audi_A1,transmission,5-speed manual,"(Audi_A1, transmission, 5-speed manual)",Audi_A1,transmission,5-speed manual
+ont_11_meanoftransportation_test_60,EXACT,1.00,"(Audi_A1, assembly, Audi_Brussels)",Audi_A1,assembly,Audi_Brussels,"(Audi_A1, assembly, Audi_Brussels)",Audi_A1,assembly,Audi_Brussels
+ont_11_meanoftransportation_test_60,SEMANTIC,0.99,"(Audi_A1, engine, 1.2 (litres))",Audi_A1,engine,1.2 (litres),"(Audi_A1, engine, 1.2 litre)",Audi_A1,engine,1.2 litre
+ont_11_meanoftransportation_test_61,EXACT,1.00,"(Audi_A1, manufacturer, Audi)",Audi_A1,manufacturer,Audi,"(Audi_A1, manufacturer, Audi)",Audi_A1,manufacturer,Audi
+ont_11_meanoftransportation_test_61,SEMANTIC,0.98,"(Audi, division, Audi_e-tron)",Audi,division,Audi_e-tron,"(Audi, division, Audi_e-tron_(brand))",Audi,division,Audi_e-tron_(brand)
+ont_11_meanoftransportation_test_61,MISSING,,"(Audi, subsidiary, Quattro_GmbH)",Audi,subsidiary,Quattro_GmbH,,,,
+ont_11_meanoftransportation_test_62,EXACT,1.00,"(Audi_A1, manufacturer, Audi)",Audi_A1,manufacturer,Audi,"(Audi_A1, manufacturer, Audi)",Audi_A1,manufacturer,Audi
+ont_11_meanoftransportation_test_62,EXACT,1.00,"(Audi, foundedBy, August_Horch)",Audi,foundedBy,August_Horch,"(Audi, foundedBy, August_Horch)",Audi,foundedBy,August_Horch
+ont_11_meanoftransportation_test_62,MISSING,,"(Audi, division, Audi_e-tron)",Audi,division,Audi_e-tron,,,,
+ont_11_meanoftransportation_test_62,EXTRA,,,,,,"(Audi_Q8_e-tron, manufacturer, Audi)",Audi_Q8_e-tron,manufacturer,Audi
+ont_11_meanoftransportation_test_63,EXACT,1.00,"(Audi_A1, manufacturer, Audi)",Audi_A1,manufacturer,Audi,"(Audi_A1, manufacturer, Audi)",Audi_A1,manufacturer,Audi
+ont_11_meanoftransportation_test_63,EXACT,1.00,"(Audi, foundedBy, August_Horch)",Audi,foundedBy,August_Horch,"(Audi, foundedBy, august horch)",Audi,foundedBy,august horch
+ont_11_meanoftransportation_test_63,SEMANTIC,0.95,"(Audi, subsidiary, Ducati)",Audi,subsidiary,Ducati,"(Ducati_Motor_Holding, subsidiary, Audi)",Ducati_Motor_Holding,subsidiary,Audi
+ont_11_meanoftransportation_test_64,EXACT,1.00,"(Audi, foundedBy, August_Horch)",Audi,foundedBy,August_Horch,"(Audi, foundedBy, August_Horch)",Audi,foundedBy,August_Horch
+ont_11_meanoftransportation_test_64,SEMANTIC,0.95,"(Audi_A1, manufacturer, Audi)",Audi_A1,manufacturer,Audi,"(Audi, product, Audi_A1)",Audi,product,Audi_A1
+ont_11_meanoftransportation_test_64,MISSING,,"(Audi, subsidiary, Lamborghini)",Audi,subsidiary,Lamborghini,,,,
+ont_11_meanoftransportation_test_64,EXTRA,,,,,,"(Lamborghini, parentCompany, Audi)",Lamborghini,parentCompany,Audi
+ont_11_meanoftransportation_test_65,EXACT,1.00,"(Audi, foundedBy, August_Horch)",Audi,foundedBy,August_Horch,"(Audi, foundedBy, August_Horch)",Audi,foundedBy,August_Horch
+ont_11_meanoftransportation_test_65,EXACT,1.00,"(Audi_A1, manufacturer, Audi)",Audi_A1,manufacturer,Audi,"(Audi_A1, manufacturer, Audi)",Audi_A1,manufacturer,Audi
+ont_11_meanoftransportation_test_65,MISSING,,"(Audi, subsidiary, Quattro_GmbH)",Audi,subsidiary,Quattro_GmbH,,,,
+ont_11_meanoftransportation_test_66,EXACT,1.00,"(Caterpillar_Inc., foundationPlace, California)",Caterpillar_Inc.,foundationPlace,California,"(Caterpillar_Inc., foundationPlace, California)",Caterpillar_Inc.,foundationPlace,California
+ont_11_meanoftransportation_test_66,MISSING,,"(Caterpillar_Inc., location, United_States)",Caterpillar_Inc.,location,United_States,,,,
+ont_11_meanoftransportation_test_66,MISSING,,"(AIDAluna, powerType, Caterpillar_Inc.)",AIDAluna,powerType,Caterpillar_Inc.,,,,
+ont_11_meanoftransportation_test_67,MISSING,,"(Caterpillar_Inc., foundationPlace, United_States)",Caterpillar_Inc.,foundationPlace,United_States,,,,
+ont_11_meanoftransportation_test_67,MISSING,,"(Caterpillar_Inc., location, Peoria,_Illinois)",Caterpillar_Inc.,location,"Peoria,_Illinois",,,,
+ont_11_meanoftransportation_test_67,MISSING,,"(AIDAluna, powerType, Caterpillar_Inc.)",AIDAluna,powerType,Caterpillar_Inc.,,,,
+ont_11_meanoftransportation_test_67,EXTRA,,,,,,"(Caterpillar_Inc., foundationPlace, Us_(2019_film))",Caterpillar_Inc.,foundationPlace,Us_(2019_film)
+ont_11_meanoftransportation_test_68,MISSING,,"(Caterpillar_Inc., keyPerson, Douglas_R._Oberhelman)",Caterpillar_Inc.,keyPerson,Douglas_R._Oberhelman,,,,
+ont_11_meanoftransportation_test_68,MISSING,,"(Caterpillar_Inc., location, Illinois)",Caterpillar_Inc.,location,Illinois,,,,
+ont_11_meanoftransportation_test_68,MISSING,,"(AIDAluna, powerType, Caterpillar_Inc.)",AIDAluna,powerType,Caterpillar_Inc.,,,,
+ont_11_meanoftransportation_test_69,SEMANTIC,0.98,"(Caterpillar_Inc., keyPerson, Douglas_R._Oberhelman)",Caterpillar_Inc.,keyPerson,Douglas_R._Oberhelman,"(Caterpillar_Inc., keyPerson, douglas r oberhelman)",Caterpillar_Inc.,keyPerson,douglas r oberhelman
+ont_11_meanoftransportation_test_69,MISSING,,"(Caterpillar_Inc., location, Peoria,_Illinois)",Caterpillar_Inc.,location,"Peoria,_Illinois",,,,
+ont_11_meanoftransportation_test_69,MISSING,,"(AIDAluna, powerType, Caterpillar_Inc.)",AIDAluna,powerType,Caterpillar_Inc.,,,,
+ont_11_meanoftransportation_test_7,MISSING,,"(AIDAstella, builder, Meyer_Werft)",AIDAstella,builder,Meyer_Werft,,,,
+ont_11_meanoftransportation_test_7,MISSING,,"(AIDAstella, operator, AIDA_Cruises)",AIDAstella,operator,AIDA_Cruises,,,,
+ont_11_meanoftransportation_test_7,MISSING,,"(AIDA_Cruises, location, Germany)",AIDA_Cruises,location,Germany,,,,
+ont_11_meanoftransportation_test_70,MISSING,,"(Caterpillar_Inc., location, Peoria,_Illinois)",Caterpillar_Inc.,location,"Peoria,_Illinois",,,,
+ont_11_meanoftransportation_test_70,MISSING,,"(AIDAluna, owner, AIDA_Cruises)",AIDAluna,owner,AIDA_Cruises,,,,
+ont_11_meanoftransportation_test_70,MISSING,,"(AIDAluna, powerType, Caterpillar_Inc.)",AIDAluna,powerType,Caterpillar_Inc.,,,,
+ont_11_meanoftransportation_test_71,MISSING,,"(Caterpillar_Inc., location, United_States)",Caterpillar_Inc.,location,United_States,,,,
+ont_11_meanoftransportation_test_71,MISSING,,"(AIDAluna, owner, AIDA_Cruises)",AIDAluna,owner,AIDA_Cruises,,,,
+ont_11_meanoftransportation_test_71,MISSING,,"(AIDAluna, powerType, Caterpillar_Inc.)",AIDAluna,powerType,Caterpillar_Inc.,,,,
+ont_11_meanoftransportation_test_71,EXTRA,,,,,,"(Caterpillar_Inc., foundationPlace, Us_(2019_film))",Caterpillar_Inc.,foundationPlace,Us_(2019_film)
+ont_11_meanoftransportation_test_72,EXACT,1.00,"(Ariane_5, manufacturer, European_Space_Agency)",Ariane_5,manufacturer,European_Space_Agency,"(Ariane_5, manufacturer, European_Space_Agency)",Ariane_5,manufacturer,European_Space_Agency
+ont_11_meanoftransportation_test_72,MISSING,,"(ELA-3, site, Guiana_Space_Centre)",ELA-3,site,Guiana_Space_Centre,,,,
+ont_11_meanoftransportation_test_72,MISSING,,"(Ariane_5, launchSite, ELA-3)",Ariane_5,launchSite,ELA-3,,,,
+ont_11_meanoftransportation_test_73,EXACT,1.00,"(Ariane_5, launchSite, ELA-3)",Ariane_5,launchSite,ELA-3,"(Ariane_5, launchSite, ELA-3)",Ariane_5,launchSite,ELA-3
+ont_11_meanoftransportation_test_73,MISSING,,"(ELA-3, site, Guiana_Space_Centre)",ELA-3,site,Guiana_Space_Centre,,,,
+ont_11_meanoftransportation_test_73,MISSING,,"(ELA-3, operator, Arianespace)",ELA-3,operator,Arianespace,,,,
+ont_11_meanoftransportation_test_74,EXACT,1.00,"(Finland, leader, Juha_Sipilä)",Finland,leader,Juha_Sipilä,"(Finland, leader, Juha_Sipilä)",Finland,leader,Juha_Sipilä
+ont_11_meanoftransportation_test_74,EXACT,1.00,"(Aleksey_Chirikov_(icebreaker), builder, Arctech_Helsinki_Shipyard)",Aleksey_Chirikov_(icebreaker),builder,Arctech_Helsinki_Shipyard,"(Aleksey_Chirikov_(icebreaker), builder, Arctech_Helsinki_Shipyard)",Aleksey_Chirikov_(icebreaker),builder,Arctech_Helsinki_Shipyard
+ont_11_meanoftransportation_test_74,MISSING,,"(Aleksey_Chirikov_(icebreaker), builder, Finland)",Aleksey_Chirikov_(icebreaker),builder,Finland,,,,
+ont_11_meanoftransportation_test_74,EXTRA,,,,,,"(Aleksey_Chirikov_(icebreaker), countryOrigin, Finland)",Aleksey_Chirikov_(icebreaker),countryOrigin,Finland
+ont_11_meanoftransportation_test_75,EXACT,1.00,"(Finland, leader, Sauli_Niinistö)",Finland,leader,Sauli_Niinistö,"(Finland, leader, Sauli_Niinistö)",Finland,leader,Sauli_Niinistö
+ont_11_meanoftransportation_test_75,EXACT,1.00,"(Finland, leader, Juha_Sipilä)",Finland,leader,Juha_Sipilä,"(Finland, leader, Juha_Sipilä)",Finland,leader,Juha_Sipilä
+ont_11_meanoftransportation_test_75,MISSING,,"(Aleksey_Chirikov_(icebreaker), builder, Finland)",Aleksey_Chirikov_(icebreaker),builder,Finland,,,,
+ont_11_meanoftransportation_test_75,EXTRA,,,,,,"(Aleksey_Chirikov_(icebreaker), assembly, Finland)",Aleksey_Chirikov_(icebreaker),assembly,Finland
+ont_11_meanoftransportation_test_76,EXACT,1.00,"(A-Rosa_Luna, builder, Neptun_Werft)",A-Rosa_Luna,builder,Neptun_Werft,"(A-Rosa_Luna, builder, Neptun_Werft)",A-Rosa_Luna,builder,Neptun_Werft
+ont_11_meanoftransportation_test_76,MISSING,,"(A-Rosa_Luna, powerType, MTU_Friedrichshafen)",A-Rosa_Luna,powerType,MTU_Friedrichshafen,,,,
+ont_11_meanoftransportation_test_76,MISSING,,"(MTU_Friedrichshafen, city, Friedrichshafen)",MTU_Friedrichshafen,city,Friedrichshafen,,,,
+ont_11_meanoftransportation_test_77,MISSING,,"(A-Rosa_Luna, powerType, MTU_Friedrichshafen)",A-Rosa_Luna,powerType,MTU_Friedrichshafen,,,,
+ont_11_meanoftransportation_test_77,MISSING,,"(MTU_Friedrichshafen, city, Friedrichshafen)",MTU_Friedrichshafen,city,Friedrichshafen,,,,
+ont_11_meanoftransportation_test_77,MISSING,,"(A-Rosa_Luna, builder, Rostock)",A-Rosa_Luna,builder,Rostock,,,,
+ont_11_meanoftransportation_test_77,EXTRA,,,,,,"(A-Rosa_Luna, assembly, Rostock)",A-Rosa_Luna,assembly,Rostock
+ont_11_meanoftransportation_test_78,MISSING,,"(MTU_Friedrichshafen, owner, Rolls-Royce_Holdings)",MTU_Friedrichshafen,owner,Rolls-Royce_Holdings,,,,
+ont_11_meanoftransportation_test_78,MISSING,,"(A-Rosa_Luna, powerType, MTU_Friedrichshafen)",A-Rosa_Luna,powerType,MTU_Friedrichshafen,,,,
+ont_11_meanoftransportation_test_78,MISSING,,"(MTU_Friedrichshafen, city, Friedrichshafen)",MTU_Friedrichshafen,city,Friedrichshafen,,,,
+ont_11_meanoftransportation_test_79,EXACT,1.00,"(MTU_Friedrichshafen, parentCompany, Rolls-Royce_Power_Systems)",MTU_Friedrichshafen,parentCompany,Rolls-Royce_Power_Systems,"(MTU_Friedrichshafen, parentCompany, Rolls-Royce_Power_Systems)",MTU_Friedrichshafen,parentCompany,Rolls-Royce_Power_Systems
+ont_11_meanoftransportation_test_79,SEMANTIC,0.98,"(MTU_Friedrichshafen, city, Friedrichshafen)",MTU_Friedrichshafen,city,Friedrichshafen,"(MTU_Friedrichshafen, location, Friedrichshafen)",MTU_Friedrichshafen,location,Friedrichshafen
+ont_11_meanoftransportation_test_79,MISSING,,"(A-Rosa_Luna, powerType, MTU_Friedrichshafen)",A-Rosa_Luna,powerType,MTU_Friedrichshafen,,,,
+ont_11_meanoftransportation_test_79,EXTRA,,,,,,"(A-Rosa_Luna, manufacturer, MTU_Friedrichshafen)",A-Rosa_Luna,manufacturer,MTU_Friedrichshafen
+ont_11_meanoftransportation_test_8,MISSING,,"(AIDA_Cruises, location, Rostock)",AIDA_Cruises,location,Rostock,,,,
+ont_11_meanoftransportation_test_8,MISSING,,"(AIDAluna, owner, AIDA_Cruises)",AIDAluna,owner,AIDA_Cruises,,,,
+ont_11_meanoftransportation_test_8,MISSING,,"(AIDAluna, powerType, Caterpillar_Inc.)",AIDAluna,powerType,Caterpillar_Inc.,,,,
+ont_11_meanoftransportation_test_80,MISSING,,"(MTU_Friedrichshafen, parentCompany, Rolls-Royce_Power_Systems)",MTU_Friedrichshafen,parentCompany,Rolls-Royce_Power_Systems,,,,
+ont_11_meanoftransportation_test_80,MISSING,,"(MTU_Friedrichshafen, owner, Rolls-Royce_Holdings)",MTU_Friedrichshafen,owner,Rolls-Royce_Holdings,,,,
+ont_11_meanoftransportation_test_80,MISSING,,"(A-Rosa_Luna, powerType, MTU_Friedrichshafen)",A-Rosa_Luna,powerType,MTU_Friedrichshafen,,,,
+ont_11_meanoftransportation_test_81,SEMANTIC,0.97,"(A-Rosa_Luna, builder, Neptun_Werft)",A-Rosa_Luna,builder,Neptun_Werft,"(Rosa_Luna, builder, Neptun_Werft)",Rosa_Luna,builder,Neptun_Werft
+ont_11_meanoftransportation_test_81,MISSING,,"(A-Rosa_Luna, powerType, MTU_Friedrichshafen)",A-Rosa_Luna,powerType,MTU_Friedrichshafen,,,,
+ont_11_meanoftransportation_test_81,MISSING,,"(Neptun_Werft, city, Rostock)",Neptun_Werft,city,Rostock,,,,
+ont_11_meanoftransportation_test_81,EXTRA,,,,,,"(Rosa_Luna, assembly, Rostock)",Rosa_Luna,assembly,Rostock
+ont_11_meanoftransportation_test_82,EXACT,1.00,"(A-Rosa_Luna, builder, Neptun_Werft)",A-Rosa_Luna,builder,Neptun_Werft,"(A-Rosa_Luna, builder, Neptun_Werft)",A-Rosa_Luna,builder,Neptun_Werft
+ont_11_meanoftransportation_test_82,MISSING,,"(Rostock, country, Germany)",Rostock,country,Germany,,,,
+ont_11_meanoftransportation_test_82,MISSING,,"(Neptun_Werft, city, Rostock)",Neptun_Werft,city,Rostock,,,,
+ont_11_meanoftransportation_test_82,EXTRA,,,,,,"(A-Rosa_Luna, countryOrigin, Germany)",A-Rosa_Luna,countryOrigin,Germany
+ont_11_meanoftransportation_test_82,EXTRA,,,,,,"(A-Rosa_Luna, location, Rostock)",A-Rosa_Luna,location,Rostock
+ont_11_meanoftransportation_test_82,EXTRA,,,,,,"(Rostock, isPartOf, Germany)",Rostock,isPartOf,Germany
+ont_11_meanoftransportation_test_83,SEMANTIC,0.98,"(A-Rosa_Luna, shipClass, Cruise_ship)",A-Rosa_Luna,shipClass,Cruise_ship,"(A-Rosa_Luna, class, Cruise_ship)",A-Rosa_Luna,class,Cruise_ship
+ont_11_meanoftransportation_test_83,MISSING,,"(A-Rosa_Luna, length, 125800.0 (millimetres))",A-Rosa_Luna,length,125800.0 (millimetres),,,,
+ont_11_meanoftransportation_test_83,MISSING,,"(A-Rosa_Luna, shipOrdered, 2004-01-22)",A-Rosa_Luna,shipOrdered,2004-01-22,,,,
+ont_11_meanoftransportation_test_83,EXTRA,,,,,,"(A-Rosa_Luna, maidenVoyage, 2004-01-22)",A-Rosa_Luna,maidenVoyage,2004-01-22
+ont_11_meanoftransportation_test_83,EXTRA,,,,,,"(A-Rosa_Luna, length, 125.8)",A-Rosa_Luna,length,125.8
+ont_11_meanoftransportation_test_84,MISSING,,"(AIDAstella, operator, AIDA_Cruises)",AIDAstella,operator,AIDA_Cruises,,,,
+ont_11_meanoftransportation_test_84,MISSING,,"(AIDA_Cruises, location, Germany)",AIDA_Cruises,location,Germany,,,,
+ont_11_meanoftransportation_test_84,MISSING,,"(AIDAstella, owner, Costa_Crociere)",AIDAstella,owner,Costa_Crociere,,,,
+ont_11_meanoftransportation_test_85,EXACT,1.00,"(Aleksey_Chirikov_(icebreaker), builder, Arctech_Helsinki_Shipyard)",Aleksey_Chirikov_(icebreaker),builder,Arctech_Helsinki_Shipyard,"(Aleksey_Chirikov_(icebreaker), builder, Arctech_Helsinki_Shipyard)",Aleksey_Chirikov_(icebreaker),builder,Arctech_Helsinki_Shipyard
+ont_11_meanoftransportation_test_85,MISSING,,"(Finland, demonym, Finns)",Finland,demonym,Finns,,,,
+ont_11_meanoftransportation_test_85,MISSING,,"(Aleksey_Chirikov_(icebreaker), builder, Finland)",Aleksey_Chirikov_(icebreaker),builder,Finland,,,,
+ont_11_meanoftransportation_test_85,EXTRA,,,,,,"(Aleksey_Chirikov_(icebreaker), countryOrigin, Finland)",Aleksey_Chirikov_(icebreaker),countryOrigin,Finland
+ont_11_meanoftransportation_test_85,EXTRA,,,,,,"(Finland, ethnicGroup, Finns)",Finland,ethnicGroup,Finns
+ont_11_meanoftransportation_test_86,MISSING,,"(Alhambra, length, 63800.0 (millimetres))",Alhambra,length,63800.0 (millimetres),,,,
+ont_11_meanoftransportation_test_86,MISSING,,"(Alhambra, shipBeam, 8.3 m)",Alhambra,shipBeam,8.3 m,,,,
+ont_11_meanoftransportation_test_86,MISSING,,"(Alhambra, status, Wrecked)",Alhambra,status,Wrecked,,,,
+ont_11_meanoftransportation_test_86,EXTRA,,,,,,"(Alhambra, shipBeam, 8.3)",Alhambra,shipBeam,8.3
+ont_11_meanoftransportation_test_86,EXTRA,,,,,,"(Alhambra, length, 63800.0)",Alhambra,length,63800.0
+ont_11_meanoftransportation_test_87,EXACT,1.00,"(Audi_A1, bodyStyle, Hatchback)",Audi_A1,bodyStyle,Hatchback,"(Audi_A1, bodyStyle, Hatchback)",Audi_A1,bodyStyle,Hatchback
+ont_11_meanoftransportation_test_87,EXACT,1.00,"(Audi_A1, assembly, Audi_Brussels)",Audi_A1,assembly,Audi_Brussels,"(Audi_A1, assembly, Audi_Brussels)",Audi_A1,assembly,Audi_Brussels
+ont_11_meanoftransportation_test_87,SEMANTIC,0.99,"(Audi_A1, engine, 1.2 (litres))",Audi_A1,engine,1.2 (litres),"(Audi_A1, engine, 1.2 litre)",Audi_A1,engine,1.2 litre
+ont_11_meanoftransportation_test_88,EXACT,1.00,"(Audi_A1, manufacturer, Audi)",Audi_A1,manufacturer,Audi,"(Audi_A1, manufacturer, Audi)",Audi_A1,manufacturer,Audi
+ont_11_meanoftransportation_test_88,MISSING,,"(Audi_A1, relatedMeanOfTransportation, Volkswagen_Polo)",Audi_A1,relatedMeanOfTransportation,Volkswagen_Polo,,,,
+ont_11_meanoftransportation_test_88,MISSING,,"(Audi_A1, relatedMeanOfTransportation, SEAT_Ibiza)",Audi_A1,relatedMeanOfTransportation,SEAT_Ibiza,,,,
+ont_11_meanoftransportation_test_88,EXTRA,,,,,,"(Audi_A1, comparable, Volkswagen_Polo)",Audi_A1,comparable,Volkswagen_Polo
+ont_11_meanoftransportation_test_88,EXTRA,,,,,,"(Audi_A1, comparable, SEAT_Ibiza)",Audi_A1,comparable,SEAT_Ibiza
+ont_11_meanoftransportation_test_89,EXACT,1.00,"(Caterpillar_Inc., foundationPlace, California)",Caterpillar_Inc.,foundationPlace,California,"(Caterpillar_Inc., foundationPlace, California)",Caterpillar_Inc.,foundationPlace,California
+ont_11_meanoftransportation_test_89,MISSING,,"(Caterpillar_Inc., location, Peoria,_Illinois)",Caterpillar_Inc.,location,"Peoria,_Illinois",,,,
+ont_11_meanoftransportation_test_89,MISSING,,"(AIDAluna, powerType, Caterpillar_Inc.)",AIDAluna,powerType,Caterpillar_Inc.,,,,
+ont_11_meanoftransportation_test_9,MISSING,,"(AIDAstella, operator, AIDA_Cruises)",AIDAstella,operator,AIDA_Cruises,,,,
+ont_11_meanoftransportation_test_9,MISSING,,"(AIDA_Cruises, location, Rostock)",AIDA_Cruises,location,Rostock,,,,
+ont_11_meanoftransportation_test_9,MISSING,,"(AIDAstella, owner, Costa_Crociere)",AIDAstella,owner,Costa_Crociere,,,,
+ont_11_meanoftransportation_test_90,MISSING,,"(Caterpillar_Inc., keyPerson, Douglas_R._Oberhelman)",Caterpillar_Inc.,keyPerson,Douglas_R._Oberhelman,,,,
+ont_11_meanoftransportation_test_90,MISSING,,"(Caterpillar_Inc., location, United_States)",Caterpillar_Inc.,location,United_States,,,,
+ont_11_meanoftransportation_test_90,MISSING,,"(AIDAluna, powerType, Caterpillar_Inc.)",AIDAluna,powerType,Caterpillar_Inc.,,,,
+ont_11_meanoftransportation_test_91,EXACT,1.00,"(Ariane_5, launchSite, ELA-3)",Ariane_5,launchSite,ELA-3,"(Ariane_5, launchSite, ELA-3)",Ariane_5,launchSite,ELA-3
+ont_11_meanoftransportation_test_91,MISSING,,"(ELA-3, site, Guiana_Space_Centre)",ELA-3,site,Guiana_Space_Centre,,,,
+ont_11_meanoftransportation_test_91,MISSING,,"(Guiana_Space_Centre, headquarter, Kourou,_French_Guiana)",Guiana_Space_Centre,headquarter,"Kourou,_French_Guiana",,,,
+ont_11_meanoftransportation_test_91,EXTRA,,,,,,"(Kourou, isPartOf, French_Guiana)",Kourou,isPartOf,French_Guiana
+ont_11_meanoftransportation_test_92,EXACT,1.00,"(Ariane_5, launchSite, ELA-3)",Ariane_5,launchSite,ELA-3,"(Ariane_5, launchSite, ELA-3)",Ariane_5,launchSite,ELA-3
+ont_11_meanoftransportation_test_92,MISSING,,"(Guiana_Space_Centre, location, French_Guiana)",Guiana_Space_Centre,location,French_Guiana,,,,
+ont_11_meanoftransportation_test_92,MISSING,,"(ELA-3, site, Guiana_Space_Centre)",ELA-3,site,Guiana_Space_Centre,,,,

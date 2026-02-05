@@ -1,0 +1,202 @@
+sent_id,match_type,similarity,expected,expected_sub,expected_rel,expected_obj,predicted,predicted_sub,predicted_rel,predicted_obj
+ont_7_company_test_1,EXACT,1.00,"(Chinabank, type, Public_company)",Chinabank,type,Public_company,"(Chinabank, type, Public_company)",Chinabank,type,Public_company
+ont_7_company_test_1,MISSING,,"(Chinabank, foundationPlace, Insular_Government_of_the_Philippine_Islands)",Chinabank,foundationPlace,Insular_Government_of_the_Philippine_Islands,,,,
+ont_7_company_test_1,MISSING,,"(Chinabank, foundationPlace, Manila)",Chinabank,foundationPlace,Manila,,,,
+ont_7_company_test_1,EXTRA,,,,,,"(Chinabank, foundationPlace, Manila_hemp)",Chinabank,foundationPlace,Manila_hemp
+ont_7_company_test_10,EXACT,1.00,"(Chinabank, numberOfLocations, 295)",Chinabank,numberOfLocations,295,"(Chinabank, numberOfLocations, 295)",Chinabank,numberOfLocations,295
+ont_7_company_test_10,EXACT,1.00,"(Chinabank, netIncome, 15100000000)",Chinabank,netIncome,15100000000,"(Chinabank, netIncome, 15100000000)",Chinabank,netIncome,15100000000
+ont_7_company_test_10,EXACT,1.00,"(Chinabank, type, Public_company)",Chinabank,type,Public_company,"(Chinabank, type, Public_company)",Chinabank,type,Public_company
+ont_7_company_test_11,EXACT,1.00,"(Chinabank, numberOfLocations, 295)",Chinabank,numberOfLocations,295,"(Chinabank, numberOfLocations, 295)",Chinabank,numberOfLocations,295
+ont_7_company_test_11,MISSING,,"(Chinabank, foundationPlace, Insular_Government_of_the_Philippine_Islands)",Chinabank,foundationPlace,Insular_Government_of_the_Philippine_Islands,,,,
+ont_7_company_test_11,MISSING,,"(Chinabank, foundationPlace, Manila)",Chinabank,foundationPlace,Manila,,,,
+ont_7_company_test_11,EXTRA,,,,,,"(Chinabank, foundationPlace, Manila_hemp)",Chinabank,foundationPlace,Manila_hemp
+ont_7_company_test_12,EXACT,1.00,"(Chinabank, numberOfLocations, 295)",Chinabank,numberOfLocations,295,"(Chinabank, numberOfLocations, 295)",Chinabank,numberOfLocations,295
+ont_7_company_test_12,EXACT,1.00,"(Chinabank, type, Public_company)",Chinabank,type,Public_company,"(Chinabank, type, Public_company)",Chinabank,type,Public_company
+ont_7_company_test_12,MISSING,,"(Chinabank, foundationPlace, Manila)",Chinabank,foundationPlace,Manila,,,,
+ont_7_company_test_12,EXTRA,,,,,,"(Chinabank, foundationPlace, Manila_hemp)",Chinabank,foundationPlace,Manila_hemp
+ont_7_company_test_13,EXACT,1.00,"(Trane, location, Swords,_Dublin)",Trane,location,"Swords,_Dublin","(Trane, location, Swords,_Dublin)",Trane,location,"Swords,_Dublin"
+ont_7_company_test_13,EXACT,1.00,"(Trane, foundationPlace, La_Crosse,_Wisconsin)",Trane,foundationPlace,"La_Crosse,_Wisconsin","(Trane, foundationPlace, La_Crosse,_Wisconsin)",Trane,foundationPlace,"La_Crosse,_Wisconsin"
+ont_7_company_test_13,MISSING,,"(La_Crosse,_Wisconsin, isPartOf, Wisconsin)","La_Crosse,_Wisconsin",isPartOf,Wisconsin,,,,
+ont_7_company_test_14,EXACT,1.00,"(Trane, foundingDate, 1913-01-01)",Trane,foundingDate,1913-01-01,"(Trane, foundingDate, 1913-01-01)",Trane,foundingDate,1913-01-01
+ont_7_company_test_14,EXACT,1.00,"(Trane, numberOfEmployees, 29000)",Trane,numberOfEmployees,29000,"(Trane, numberOfEmployees, 29000)",Trane,numberOfEmployees,29000
+ont_7_company_test_14,EXACT,1.00,"(Trane, foundationPlace, La_Crosse,_Wisconsin)",Trane,foundationPlace,"La_Crosse,_Wisconsin","(Trane, foundationPlace, La_Crosse,_Wisconsin)",Trane,foundationPlace,"La_Crosse,_Wisconsin"
+ont_7_company_test_15,EXACT,1.00,"(Trane, foundingDate, 1913-01-01)",Trane,foundingDate,1913-01-01,"(Trane, foundingDate, 1913-01-01)",Trane,foundingDate,1913-01-01
+ont_7_company_test_15,EXACT,1.00,"(Trane, foundationPlace, La_Crosse,_Wisconsin)",Trane,foundationPlace,"La_Crosse,_Wisconsin","(Trane, foundationPlace, La_Crosse,_Wisconsin)",Trane,foundationPlace,"La_Crosse,_Wisconsin"
+ont_7_company_test_15,MISSING,,"(Trane, product, HVAC)",Trane,product,HVAC,,,,
+ont_7_company_test_15,EXTRA,,,,,,"(Trane, product, Heating,_ventilation,_and_air_conditioning)",Trane,product,"Heating,_ventilation,_and_air_conditioning"
+ont_7_company_test_16,EXACT,1.00,"(Trane, foundingDate, 1913-01-01)",Trane,foundingDate,1913-01-01,"(Trane, foundingDate, 1913-01-01)",Trane,foundingDate,1913-01-01
+ont_7_company_test_16,EXACT,1.00,"(Trane, location, Ireland)",Trane,location,Ireland,"(Trane, location, Ireland)",Trane,location,Ireland
+ont_7_company_test_16,EXACT,1.00,"(Trane, foundationPlace, La_Crosse,_Wisconsin)",Trane,foundationPlace,"La_Crosse,_Wisconsin","(Trane, foundationPlace, La_Crosse,_Wisconsin)",Trane,foundationPlace,"La_Crosse,_Wisconsin"
+ont_7_company_test_17,EXACT,1.00,"(Trane, foundingDate, 1913-01-01)",Trane,foundingDate,1913-01-01,"(Trane, foundingDate, 1913-01-01)",Trane,foundingDate,1913-01-01
+ont_7_company_test_17,EXACT,1.00,"(Trane, numberOfEmployees, 29000)",Trane,numberOfEmployees,29000,"(Trane, numberOfEmployees, 29000)",Trane,numberOfEmployees,29000
+ont_7_company_test_17,EXACT,1.00,"(Trane, location, Ireland)",Trane,location,Ireland,"(Trane, location, Ireland)",Trane,location,Ireland
+ont_7_company_test_18,EXACT,1.00,"(Trane, foundingDate, 1913-01-01)",Trane,foundingDate,1913-01-01,"(Trane, foundingDate, 1913-01-01)",Trane,foundingDate,1913-01-01
+ont_7_company_test_18,EXACT,1.00,"(Trane, numberOfEmployees, 29000)",Trane,numberOfEmployees,29000,"(Trane, numberOfEmployees, 29000)",Trane,numberOfEmployees,29000
+ont_7_company_test_18,MISSING,,"(Trane, product, HVAC)",Trane,product,HVAC,,,,
+ont_7_company_test_18,EXTRA,,,,,,"(Trane, product, Heating,_ventilation,_and_air_conditioning)",Trane,product,"Heating,_ventilation,_and_air_conditioning"
+ont_7_company_test_19,EXACT,1.00,"(Trane, location, Ireland)",Trane,location,Ireland,"(Trane, location, Ireland)",Trane,location,Ireland
+ont_7_company_test_19,MISSING,,"(Ireland, location, Europe)",Ireland,location,Europe,,,,
+ont_7_company_test_19,MISSING,,"(Trane, product, HVAC)",Trane,product,HVAC,,,,
+ont_7_company_test_19,EXTRA,,,,,,"(Trane, product, Heating,_ventilation,_and_air_conditioning)",Trane,product,"Heating,_ventilation,_and_air_conditioning"
+ont_7_company_test_2,EXACT,1.00,"(Chinabank, type, Public_company)",Chinabank,type,Public_company,"(Chinabank, type, Public_company)",Chinabank,type,Public_company
+ont_7_company_test_2,MISSING,,"(Chinabank, foundationPlace, Manila)",Chinabank,foundationPlace,Manila,,,,
+ont_7_company_test_2,MISSING,,"(Manila, type, Capital_city)",Manila,type,Capital_city,,,,
+ont_7_company_test_2,EXTRA,,,,,,"(Chinabank, foundationPlace, Manila_hemp)",Chinabank,foundationPlace,Manila_hemp
+ont_7_company_test_20,SEMANTIC,0.99,"(Trane, industry, Building_materials)",Trane,industry,Building_materials,"(Trane, industry, Building_material)",Trane,industry,Building_material
+ont_7_company_test_20,SEMANTIC,0.97,"(Trane, location, Ireland)",Trane,location,Ireland,"(Trane, location, Dublin)",Trane,location,Dublin
+ont_7_company_test_20,MISSING,,"(Trane, location, Swords,_Dublin)",Trane,location,"Swords,_Dublin",,,,
+ont_7_company_test_20,EXTRA,,,,,,"(Trane, location, Sword)",Trane,location,Sword
+ont_7_company_test_20,EXTRA,,,,,,"(Trane, country, Ireland)",Trane,country,Ireland
+ont_7_company_test_20,EXTRA,,,,,,"(Trane, type, Company)",Trane,type,Company
+ont_7_company_test_21,MISSING,,"(Trane, type, Subsidiary)",Trane,type,Subsidiary,,,,
+ont_7_company_test_21,MISSING,,"(Trane, location, Swords,_Dublin)",Trane,location,"Swords,_Dublin",,,,
+ont_7_company_test_21,MISSING,,"(Trane, netIncome, 556300000)",Trane,netIncome,556300000,,,,
+ont_7_company_test_22,EXACT,1.00,"(Trane, numberOfEmployees, 29000)",Trane,numberOfEmployees,29000,"(Trane, numberOfEmployees, 29000)",Trane,numberOfEmployees,29000
+ont_7_company_test_22,SEMANTIC,0.99,"(Trane, industry, Building_materials)",Trane,industry,Building_materials,"(Trane, industry, Building_material)",Trane,industry,Building_material
+ont_7_company_test_22,MISSING,,"(Trane, product, HVAC)",Trane,product,HVAC,,,,
+ont_7_company_test_22,EXTRA,,,,,,"(Trane, product, Heating,_ventilation,_and_air_conditioning)",Trane,product,"Heating,_ventilation,_and_air_conditioning"
+ont_7_company_test_23,EXACT,1.00,"(Trane, operatingIncome, 875400000)",Trane,operatingIncome,875400000,"(Trane, operatingIncome, 875400000)",Trane,operatingIncome,875400000
+ont_7_company_test_23,EXACT,1.00,"(Trane, foundingDate, 1913-01-01)",Trane,foundingDate,1913-01-01,"(Trane, foundingDate, 1913-01-01)",Trane,foundingDate,1913-01-01
+ont_7_company_test_23,SEMANTIC,0.95,"(Trane, location, Ireland)",Trane,location,Ireland,"(Trane, country, Ireland)",Trane,country,Ireland
+ont_7_company_test_24,EXACT,1.00,"(Trane, operatingIncome, 875400000)",Trane,operatingIncome,875400000,"(Trane, operatingIncome, 875400000)",Trane,operatingIncome,875400000
+ont_7_company_test_24,EXACT,1.00,"(Trane, location, Ireland)",Trane,location,Ireland,"(Trane, location, Ireland)",Trane,location,Ireland
+ont_7_company_test_24,EXACT,1.00,"(Trane, foundationPlace, La_Crosse,_Wisconsin)",Trane,foundationPlace,"La_Crosse,_Wisconsin","(Trane, foundationPlace, La_Crosse,_Wisconsin)",Trane,foundationPlace,"La_Crosse,_Wisconsin"
+ont_7_company_test_25,SEMANTIC,0.95,"(Trane, product, Building_Management_System)",Trane,product,Building_Management_System,"(Trane, product, Building_automation)",Trane,product,Building_automation
+ont_7_company_test_25,MISSING,,"(Trane, industry, Building_materials)",Trane,industry,Building_materials,,,,
+ont_7_company_test_25,MISSING,,"(Trane, product, HVAC)",Trane,product,HVAC,,,,
+ont_7_company_test_25,EXTRA,,,,,,"(Trane, industry, Ministry_of_Construction_Materials_Industry)",Trane,industry,Ministry_of_Construction_Materials_Industry
+ont_7_company_test_25,EXTRA,,,,,,"(Trane, product, Heating,_ventilation,_and_air_conditioning)",Trane,product,"Heating,_ventilation,_and_air_conditioning"
+ont_7_company_test_26,SEMANTIC,0.96,"(Trane, product, Building_Management_System)",Trane,product,Building_Management_System,"(Trane, product, building management systems)",Trane,product,building management systems
+ont_7_company_test_26,SEMANTIC,0.95,"(Trane, location, Ireland)",Trane,location,Ireland,"(Trane, country, Ireland)",Trane,country,Ireland
+ont_7_company_test_26,MISSING,,"(Trane, location, Swords,_Dublin)",Trane,location,"Swords,_Dublin",,,,
+ont_7_company_test_26,EXTRA,,,,,,"(Trane, city, Dublin)",Trane,city,Dublin
+ont_7_company_test_26,EXTRA,,,,,,"(Trane, location, Sword)",Trane,location,Sword
+ont_7_company_test_27,EXACT,1.00,"(Trane, netIncome, 556300000)",Trane,netIncome,556300000,"(Trane, netIncome, 556300000)",Trane,netIncome,556300000
+ont_7_company_test_27,SEMANTIC,0.95,"(Trane, product, Building_Management_System)",Trane,product,Building_Management_System,"(Trane, product, Building_automation)",Trane,product,Building_automation
+ont_7_company_test_27,MISSING,,"(Trane, location, Swords,_Dublin)",Trane,location,"Swords,_Dublin",,,,
+ont_7_company_test_27,EXTRA,,,,,,"(Trane, location, Dublin)",Trane,location,Dublin
+ont_7_company_test_27,EXTRA,,,,,,"(Trane, location, Sword)",Trane,location,Sword
+ont_7_company_test_28,EXACT,1.00,"(Trane, revenue, 10264000000)",Trane,revenue,10264000000,"(Trane, revenue, 10264000000)",Trane,revenue,10264000000
+ont_7_company_test_28,SEMANTIC,0.96,"(Trane, product, Building_Management_System)",Trane,product,Building_Management_System,"(Trane, product, building management systems)",Trane,product,building management systems
+ont_7_company_test_28,MISSING,,"(Trane, location, Swords,_Dublin)",Trane,location,"Swords,_Dublin",,,,
+ont_7_company_test_28,EXTRA,,,,,,"(Trane, product, Sword)",Trane,product,Sword
+ont_7_company_test_28,EXTRA,,,,,,"(Trane, city, Dublin)",Trane,city,Dublin
+ont_7_company_test_29,EXACT,1.00,"(Trane, netIncome, 556300000)",Trane,netIncome,556300000,"(Trane, netIncome, 556300000)",Trane,netIncome,556300000
+ont_7_company_test_29,EXACT,1.00,"(Trane, revenue, 10264000000)",Trane,revenue,10264000000,"(Trane, revenue, 10264000000)",Trane,revenue,10264000000
+ont_7_company_test_29,SEMANTIC,0.95,"(Trane, product, Building_Management_System)",Trane,product,Building_Management_System,"(Trane, product, Building_automation)",Trane,product,Building_automation
+ont_7_company_test_3,MISSING,,"(Insular_Government_of_the_Philippine_Islands, foundingDate, 1901-07-01)",Insular_Government_of_the_Philippine_Islands,foundingDate,1901-07-01,,,,
+ont_7_company_test_3,MISSING,,"(Chinabank, foundationPlace, Manila)",Chinabank,foundationPlace,Manila,,,,
+ont_7_company_test_3,MISSING,,"(Chinabank, foundationPlace, Insular_Government_of_the_Philippine_Islands)",Chinabank,foundationPlace,Insular_Government_of_the_Philippine_Islands,,,,
+ont_7_company_test_3,EXTRA,,,,,,"(Chinabank, foundationPlace, Manila_hemp)",Chinabank,foundationPlace,Manila_hemp
+ont_7_company_test_30,EXACT,1.00,"(Trane, revenue, 10264000000)",Trane,revenue,10264000000,"(Trane, revenue, 10264000000)",Trane,revenue,10264000000
+ont_7_company_test_30,SEMANTIC,0.95,"(Trane, product, Building_Management_System)",Trane,product,Building_Management_System,"(Trane, product, Building_automation)",Trane,product,Building_automation
+ont_7_company_test_30,MISSING,,"(Trane, type, Subsidiary)",Trane,type,Subsidiary,,,,
+ont_7_company_test_31,EXACT,1.00,"(Trane, netIncome, 556300000)",Trane,netIncome,556300000,"(Trane, netIncome, 556300000)",Trane,netIncome,556300000
+ont_7_company_test_31,EXACT,1.00,"(Trane, revenue, 10264000000)",Trane,revenue,10264000000,"(Trane, revenue, 10264000000)",Trane,revenue,10264000000
+ont_7_company_test_31,MISSING,,"(Trane, location, Swords,_Dublin)",Trane,location,"Swords,_Dublin",,,,
+ont_7_company_test_31,EXTRA,,,,,,"(Trane, city, Dublin)",Trane,city,Dublin
+ont_7_company_test_31,EXTRA,,,,,,"(Trane, location, Sword)",Trane,location,Sword
+ont_7_company_test_31,EXTRA,,,,,,"(Trane, type, Company)",Trane,type,Company
+ont_7_company_test_32,EXACT,1.00,"(Trane, operatingIncome, 875400000)",Trane,operatingIncome,875400000,"(Trane, operatingIncome, 875400000)",Trane,operatingIncome,875400000
+ont_7_company_test_32,EXACT,1.00,"(Trane, foundingDate, 1913-01-01)",Trane,foundingDate,1913-01-01,"(Trane, foundingDate, 1913-01-01)",Trane,foundingDate,1913-01-01
+ont_7_company_test_32,MISSING,,"(Trane, type, Subsidiary)",Trane,type,Subsidiary,,,,
+ont_7_company_test_32,EXTRA,,,,,,"(Trane, type, subsidiary company)",Trane,type,subsidiary company
+ont_7_company_test_33,SEMANTIC,0.98,"(Chinabank, location, Philippines)",Chinabank,location,Philippines,"(Chinabank, country, Philippines)",Chinabank,country,Philippines
+ont_7_company_test_34,EXACT,1.00,"(Chinabank, netIncome, 15100000000)",Chinabank,netIncome,15100000000,"(Chinabank, netIncome, 15100000000)",Chinabank,netIncome,15100000000
+ont_7_company_test_34,EXACT,1.00,"(Chinabank, numberOfEmployees, 5594)",Chinabank,numberOfEmployees,5594,"(Chinabank, numberOfEmployees, 5594)",Chinabank,numberOfEmployees,5594
+ont_7_company_test_35,EXACT,1.00,"(Chinabank, foundingDate, 1920-08-16)",Chinabank,foundingDate,1920-08-16,"(Chinabank, foundingDate, 1920-08-16)",Chinabank,foundingDate,1920-08-16
+ont_7_company_test_35,EXACT,1.00,"(Chinabank, type, Public_company)",Chinabank,type,Public_company,"(Chinabank, type, Public_company)",Chinabank,type,Public_company
+ont_7_company_test_36,EXACT,1.00,"(Chinabank, numberOfLocations, 295)",Chinabank,numberOfLocations,295,"(Chinabank, numberOfLocations, 295)",Chinabank,numberOfLocations,295
+ont_7_company_test_36,SEMANTIC,0.98,"(Chinabank, location, Philippines)",Chinabank,location,Philippines,"(Chinabank, country, Philippines)",Chinabank,country,Philippines
+ont_7_company_test_37,MISSING,,"(Manila, isPartOf, Metro_Manila)",Manila,isPartOf,Metro_Manila,,,,
+ont_7_company_test_38,MISSING,,"(La_Crosse,_Wisconsin, isPartOf, La_Crosse_County,_Wisconsin)","La_Crosse,_Wisconsin",isPartOf,"La_Crosse_County,_Wisconsin",,,,
+ont_7_company_test_39,EXACT,1.00,"(Trane, foundingDate, 1913-01-01)",Trane,foundingDate,1913-01-01,"(Trane, foundingDate, 1913-01-01)",Trane,foundingDate,1913-01-01
+ont_7_company_test_39,EXACT,1.00,"(Trane, numberOfEmployees, 29000)",Trane,numberOfEmployees,29000,"(Trane, numberOfEmployees, 29000)",Trane,numberOfEmployees,29000
+ont_7_company_test_39,SEMANTIC,0.99,"(Trane, industry, Building_materials)",Trane,industry,Building_materials,"(Trane, industry, Building_material)",Trane,industry,Building_material
+ont_7_company_test_39,MISSING,,"(Trane, product, HVAC)",Trane,product,HVAC,,,,
+ont_7_company_test_39,EXTRA,,,,,,"(Trane, product, Heating,_ventilation,_and_air_conditioning)",Trane,product,"Heating,_ventilation,_and_air_conditioning"
+ont_7_company_test_4,MISSING,,"(Chinabank, foundationPlace, Insular_Government_of_the_Philippine_Islands)",Chinabank,foundationPlace,Insular_Government_of_the_Philippine_Islands,,,,
+ont_7_company_test_4,MISSING,,"(Chinabank, foundationPlace, Manila)",Chinabank,foundationPlace,Manila,,,,
+ont_7_company_test_4,MISSING,,"(Manila, isPartOf, Metro_Manila)",Manila,isPartOf,Metro_Manila,,,,
+ont_7_company_test_4,EXTRA,,,,,,"(Manila_hemp, isPartOf, Metro_Manila)",Manila_hemp,isPartOf,Metro_Manila
+ont_7_company_test_4,EXTRA,,,,,,"(Chinabank, foundationPlace, Manila_hemp)",Chinabank,foundationPlace,Manila_hemp
+ont_7_company_test_4,EXTRA,,,,,,"(Philippines, capital, Manila_hemp)",Philippines,capital,Manila_hemp
+ont_7_company_test_40,EXACT,1.00,"(Chinabank, type, Public_company)",Chinabank,type,Public_company,"(Chinabank, type, Public_company)",Chinabank,type,Public_company
+ont_7_company_test_40,MISSING,,"(Chinabank, foundationPlace, Insular_Government_of_the_Philippine_Islands)",Chinabank,foundationPlace,Insular_Government_of_the_Philippine_Islands,,,,
+ont_7_company_test_40,MISSING,,"(Chinabank, foundationPlace, Manila)",Chinabank,foundationPlace,Manila,,,,
+ont_7_company_test_40,MISSING,,"(Manila, type, Capital_city)",Manila,type,Capital_city,,,,
+ont_7_company_test_40,EXTRA,,,,,,"(Chinabank, foundationPlace, Manila_hemp)",Chinabank,foundationPlace,Manila_hemp
+ont_7_company_test_40,EXTRA,,,,,,"(Philippines, capital, Manila_hemp)",Philippines,capital,Manila_hemp
+ont_7_company_test_41,EXACT,1.00,"(Trane, foundationPlace, La_Crosse,_Wisconsin)",Trane,foundationPlace,"La_Crosse,_Wisconsin","(Trane, foundationPlace, La_Crosse,_Wisconsin)",Trane,foundationPlace,"La_Crosse,_Wisconsin"
+ont_7_company_test_41,EXACT,1.00,"(Trane, foundingDate, 1913-01-01)",Trane,foundingDate,1913-01-01,"(Trane, foundingDate, 1913-01-01)",Trane,foundingDate,1913-01-01
+ont_7_company_test_41,EXACT,1.00,"(Trane, revenue, 10264000000)",Trane,revenue,10264000000,"(Trane, revenue, 10264000000)",Trane,revenue,10264000000
+ont_7_company_test_41,MISSING,,"(La_Crosse,_Wisconsin, elevationAboveTheSeaLevel, 204.0)","La_Crosse,_Wisconsin",elevationAboveTheSeaLevel,204.0,,,,
+ont_7_company_test_41,EXTRA,,,,,,"(La_Crosse,_Wisconsin, areaTotal, 204)","La_Crosse,_Wisconsin",areaTotal,204
+ont_7_company_test_42,EXACT,1.00,"(Trane, operatingIncome, 875400000)",Trane,operatingIncome,875400000,"(Trane, operatingIncome, 875400000)",Trane,operatingIncome,875400000
+ont_7_company_test_43,MISSING,,"(La_Crosse,_Wisconsin, leaderTitle, Mayor)","La_Crosse,_Wisconsin",leaderTitle,Mayor,,,,
+ont_7_company_test_44,EXACT,1.00,"(Trane, foundingDate, 1913-01-01)",Trane,foundingDate,1913-01-01,"(Trane, foundingDate, 1913-01-01)",Trane,foundingDate,1913-01-01
+ont_7_company_test_44,SEMANTIC,0.96,"(Trane, industry, Building_materials)",Trane,industry,Building_materials,"(Trane, industry, building materials producer)",Trane,industry,building materials producer
+ont_7_company_test_44,MISSING,,"(Swords,_Dublin, isPartOf, Leinster)","Swords,_Dublin",isPartOf,Leinster,,,,
+ont_7_company_test_44,MISSING,,"(Trane, location, Swords,_Dublin)",Trane,location,"Swords,_Dublin",,,,
+ont_7_company_test_44,EXTRA,,,,,,"(Trane, foundationPlace, Dublin)",Trane,foundationPlace,Dublin
+ont_7_company_test_44,EXTRA,,,,,,"(Trane, foundationPlace, Sword)",Trane,foundationPlace,Sword
+ont_7_company_test_45,EXACT,1.00,"(Chinabank, numberOfLocations, 295)",Chinabank,numberOfLocations,295,"(Chinabank, numberOfLocations, 295)",Chinabank,numberOfLocations,295
+ont_7_company_test_45,EXACT,1.00,"(Chinabank, foundingDate, 1920-08-16)",Chinabank,foundingDate,1920-08-16,"(Chinabank, foundingDate, 1920-08-16)",Chinabank,foundingDate,1920-08-16
+ont_7_company_test_45,EXACT,1.00,"(Chinabank, netIncome, 15100000000)",Chinabank,netIncome,15100000000,"(Chinabank, netIncome, 15100000000)",Chinabank,netIncome,15100000000
+ont_7_company_test_45,MISSING,,"(Chinabank, service, Banking)",Chinabank,service,Banking,,,,
+ont_7_company_test_46,EXACT,1.00,"(Chinabank, numberOfLocations, 295)",Chinabank,numberOfLocations,295,"(Chinabank, numberOfLocations, 295)",Chinabank,numberOfLocations,295
+ont_7_company_test_46,EXACT,1.00,"(Chinabank, type, Public_company)",Chinabank,type,Public_company,"(Chinabank, type, Public_company)",Chinabank,type,Public_company
+ont_7_company_test_46,SEMANTIC,0.98,"(Chinabank, location, Philippines)",Chinabank,location,Philippines,"(Chinabank, country, Philippines)",Chinabank,country,Philippines
+ont_7_company_test_47,EXACT,1.00,"(Trane, foundingDate, 1913-01-01)",Trane,foundingDate,1913-01-01,"(Trane, foundingDate, 1913-01-01)",Trane,foundingDate,1913-01-01
+ont_7_company_test_47,EXACT,1.00,"(Trane, foundationPlace, La_Crosse,_Wisconsin)",Trane,foundationPlace,"La_Crosse,_Wisconsin","(Trane, foundationPlace, La_Crosse,_Wisconsin)",Trane,foundationPlace,"La_Crosse,_Wisconsin"
+ont_7_company_test_47,SEMANTIC,0.99,"(Trane, industry, Building_materials)",Trane,industry,Building_materials,"(Trane, industry, Building_material)",Trane,industry,Building_material
+ont_7_company_test_47,SEMANTIC,0.95,"(Trane, location, Ireland)",Trane,location,Ireland,"(Trane, country, Ireland)",Trane,country,Ireland
+ont_7_company_test_48,MISSING,,"(Manila, leaderTitle, City Council)",Manila,leaderTitle,City Council,,,,
+ont_7_company_test_48,MISSING,,"(Chinabank, foundationPlace, Manila)",Chinabank,foundationPlace,Manila,,,,
+ont_7_company_test_48,EXTRA,,,,,,"(Chinabank, foundationPlace, Manila_hemp)",Chinabank,foundationPlace,Manila_hemp
+ont_7_company_test_49,MISSING,,"(La_Crosse,_Wisconsin, elevationAboveTheSeaLevel, 204.0)","La_Crosse,_Wisconsin",elevationAboveTheSeaLevel,204.0,,,,
+ont_7_company_test_49,EXTRA,,,,,,"(La_Crosse,_Wisconsin, areaTotal, 204.0)","La_Crosse,_Wisconsin",areaTotal,204.0
+ont_7_company_test_5,EXACT,1.00,"(Chinabank, foundingDate, 1920-08-16)",Chinabank,foundingDate,1920-08-16,"(Chinabank, foundingDate, 1920-08-16)",Chinabank,foundingDate,1920-08-16
+ont_7_company_test_5,EXACT,1.00,"(Chinabank, netIncome, 15100000000)",Chinabank,netIncome,15100000000,"(Chinabank, netIncome, 15100000000)",Chinabank,netIncome,15100000000
+ont_7_company_test_5,EXACT,1.00,"(Chinabank, numberOfEmployees, 5594)",Chinabank,numberOfEmployees,5594,"(Chinabank, numberOfEmployees, 5594)",Chinabank,numberOfEmployees,5594
+ont_7_company_test_50,EXACT,1.00,"(Trane, operatingIncome, 875400000)",Trane,operatingIncome,875400000,"(Trane, operatingIncome, 875400000)",Trane,operatingIncome,875400000
+ont_7_company_test_50,EXACT,1.00,"(Trane, foundationPlace, La_Crosse,_Wisconsin)",Trane,foundationPlace,"La_Crosse,_Wisconsin","(Trane, foundationPlace, La_Crosse,_Wisconsin)",Trane,foundationPlace,"La_Crosse,_Wisconsin"
+ont_7_company_test_50,SEMANTIC,0.98,"(Trane, netIncome, 556300000)",Trane,netIncome,556300000,"(Trane, netIncome, 556000000)",Trane,netIncome,556000000
+ont_7_company_test_50,EXTRA,,,,,,"(Trane, type, Company)",Trane,type,Company
+ont_7_company_test_51,EXACT,1.00,"(Trane, operatingIncome, 875400000)",Trane,operatingIncome,875400000,"(Trane, operatingIncome, 875400000)",Trane,operatingIncome,875400000
+ont_7_company_test_51,EXACT,1.00,"(Trane, revenue, 10264000000)",Trane,revenue,10264000000,"(Trane, revenue, 10264000000)",Trane,revenue,10264000000
+ont_7_company_test_51,MISSING,,"(Trane, industry, Building_materials)",Trane,industry,Building_materials,,,,
+ont_7_company_test_52,MISSING,,"(Swords,_Dublin, leaderTitle, County Manager)","Swords,_Dublin",leaderTitle,County Manager,,,,
+ont_7_company_test_52,MISSING,,"(Trane, location, Swords,_Dublin)",Trane,location,"Swords,_Dublin",,,,
+ont_7_company_test_53,SEMANTIC,0.98,"(Chinabank, location, Philippines)",Chinabank,location,Philippines,"(Chinabank, country, Philippines)",Chinabank,country,Philippines
+ont_7_company_test_53,MISSING,,"(Chinabank, foundationPlace, Insular_Government_of_the_Philippine_Islands)",Chinabank,foundationPlace,Insular_Government_of_the_Philippine_Islands,,,,
+ont_7_company_test_53,MISSING,,"(Chinabank, foundationPlace, Manila)",Chinabank,foundationPlace,Manila,,,,
+ont_7_company_test_53,EXTRA,,,,,,"(Manila_hemp, country, Philippines)",Manila_hemp,country,Philippines
+ont_7_company_test_53,EXTRA,,,,,,"(Chinabank, product, Manila_hemp)",Chinabank,product,Manila_hemp
+ont_7_company_test_53,EXTRA,,,,,,"(Chinabank, foundationPlace, Manila_hemp)",Chinabank,foundationPlace,Manila_hemp
+ont_7_company_test_54,EXACT,1.00,"(Trane, type, Subsidiary)",Trane,type,Subsidiary,"(Trane, type, Subsidiary)",Trane,type,Subsidiary
+ont_7_company_test_54,EXACT,1.00,"(Trane, foundationPlace, La_Crosse,_Wisconsin)",Trane,foundationPlace,"La_Crosse,_Wisconsin","(Trane, foundationPlace, La_Crosse,_Wisconsin)",Trane,foundationPlace,"La_Crosse,_Wisconsin"
+ont_7_company_test_54,EXACT,1.00,"(La_Crosse,_Wisconsin, areaTotal, 58.38)","La_Crosse,_Wisconsin",areaTotal,58.38,"(La_Crosse,_Wisconsin, areaTotal, 58.38)","La_Crosse,_Wisconsin",areaTotal,58.38
+ont_7_company_test_54,EXTRA,,,,,,"(Trane, foundationPlace, Wisconsin)",Trane,foundationPlace,Wisconsin
+ont_7_company_test_55,EXACT,1.00,"(Trane, foundationPlace, La_Crosse,_Wisconsin)",Trane,foundationPlace,"La_Crosse,_Wisconsin","(Trane, foundationPlace, La_Crosse,_Wisconsin)",Trane,foundationPlace,"La_Crosse,_Wisconsin"
+ont_7_company_test_55,SEMANTIC,0.95,"(Trane, location, Ireland)",Trane,location,Ireland,"(Trane, country, Ireland)",Trane,country,Ireland
+ont_7_company_test_55,MISSING,,"(Ireland, location, Europe)",Ireland,location,Europe,,,,
+ont_7_company_test_55,EXTRA,,,,,,"(Trane, foundationPlace, Wisconsin)",Trane,foundationPlace,Wisconsin
+ont_7_company_test_55,EXTRA,,,,,,"(Trane, regionServed, Europe)",Trane,regionServed,Europe
+ont_7_company_test_56,EXACT,1.00,"(Trane, numberOfEmployees, 29000)",Trane,numberOfEmployees,29000,"(Trane, numberOfEmployees, 29000)",Trane,numberOfEmployees,29000
+ont_7_company_test_56,EXACT,1.00,"(Trane, netIncome, 556300000)",Trane,netIncome,556300000,"(Trane, netIncome, 556300000)",Trane,netIncome,556300000
+ont_7_company_test_56,EXACT,1.00,"(Trane, revenue, 10264000000)",Trane,revenue,10264000000,"(Trane, revenue, 10264000000)",Trane,revenue,10264000000
+ont_7_company_test_6,EXACT,1.00,"(Chinabank, foundingDate, 1920-08-16)",Chinabank,foundingDate,1920-08-16,"(Chinabank, foundingDate, 1920-08-16)",Chinabank,foundingDate,1920-08-16
+ont_7_company_test_6,EXACT,1.00,"(Chinabank, netIncome, 15100000000)",Chinabank,netIncome,15100000000,"(Chinabank, netIncome, 15100000000)",Chinabank,netIncome,15100000000
+ont_7_company_test_6,SEMANTIC,0.95,"(Chinabank, service, Banking)",Chinabank,service,Banking,"(Chinabank, service, Retail_banking)",Chinabank,service,Retail_banking
+ont_7_company_test_7,EXACT,1.00,"(Chinabank, foundingDate, 1920-08-16)",Chinabank,foundingDate,1920-08-16,"(Chinabank, foundingDate, 1920-08-16)",Chinabank,foundingDate,1920-08-16
+ont_7_company_test_7,EXACT,1.00,"(Chinabank, numberOfEmployees, 5594)",Chinabank,numberOfEmployees,5594,"(Chinabank, numberOfEmployees, 5594)",Chinabank,numberOfEmployees,5594
+ont_7_company_test_7,MISSING,,"(Chinabank, service, Banking)",Chinabank,service,Banking,,,,
+ont_7_company_test_7,EXTRA,,,,,,"(Chinabank, type, Bank)",Chinabank,type,Bank
+ont_7_company_test_8,EXACT,1.00,"(Chinabank, numberOfLocations, 295)",Chinabank,numberOfLocations,295,"(Chinabank, numberOfLocations, 295)",Chinabank,numberOfLocations,295
+ont_7_company_test_8,EXACT,1.00,"(Chinabank, foundingDate, 1920-08-16)",Chinabank,foundingDate,1920-08-16,"(Chinabank, foundingDate, 1920-08-16)",Chinabank,foundingDate,1920-08-16
+ont_7_company_test_8,SEMANTIC,0.95,"(Chinabank, service, Banking)",Chinabank,service,Banking,"(Chinabank, service, Retail_banking)",Chinabank,service,Retail_banking
+ont_7_company_test_9,EXACT,1.00,"(Chinabank, numberOfLocations, 295)",Chinabank,numberOfLocations,295,"(Chinabank, numberOfLocations, 295)",Chinabank,numberOfLocations,295
+ont_7_company_test_9,EXACT,1.00,"(Chinabank, netIncome, 15100000000)",Chinabank,netIncome,15100000000,"(Chinabank, netIncome, 15100000000)",Chinabank,netIncome,15100000000
+ont_7_company_test_9,MISSING,,"(Chinabank, foundationPlace, Manila)",Chinabank,foundationPlace,Manila,,,,
+ont_7_company_test_9,EXTRA,,,,,,"(Chinabank, foundationPlace, Manila_hemp)",Chinabank,foundationPlace,Manila_hemp

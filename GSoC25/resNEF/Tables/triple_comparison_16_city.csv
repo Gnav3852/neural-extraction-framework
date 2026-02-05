@@ -1,0 +1,977 @@
+sent_id,match_type,similarity,expected,expected_sub,expected_rel,expected_obj,predicted,predicted_sub,predicted_rel,predicted_obj
+ont_16_city_test_1,EXACT,1.00,"(Albany,_Georgia, country, United_States)","Albany,_Georgia",country,United_States,"(Albany,_Georgia, country, United_States)","Albany,_Georgia",country,United_States
+ont_16_city_test_1,SEMANTIC,0.97,"(Albany,_Georgia, isPartOf, United_States)","Albany,_Georgia",isPartOf,United_States,"(Albany,_Georgia, state, Georgia_(U.S._state))","Albany,_Georgia",state,Georgia_(U.S._state)
+ont_16_city_test_1,SEMANTIC,0.98,"(Albany,_Georgia, isPartOf, Georgia_(U.S._state))","Albany,_Georgia",isPartOf,Georgia_(U.S._state),"(Albany,_Georgia, state, Georgia_(U.S._state))","Albany,_Georgia",state,Georgia_(U.S._state)
+ont_16_city_test_10,EXACT,1.00,"(Albany,_Oregon, country, United_States)","Albany,_Oregon",country,United_States,"(Albany,_Oregon, country, United_States)","Albany,_Oregon",country,United_States
+ont_16_city_test_10,SEMANTIC,0.97,"(Albany,_Oregon, isPartOf, Benton_County,_Oregon)","Albany,_Oregon",isPartOf,"Benton_County,_Oregon","(Albany,_Oregon, countySeat, Benton_County,_Oregon)","Albany,_Oregon",countySeat,"Benton_County,_Oregon"
+ont_16_city_test_10,MISSING,,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,,,,
+ont_16_city_test_10,EXTRA,,,,,,"(Albany,_Oregon, ethnicGroup, African_Americans)","Albany,_Oregon",ethnicGroup,African_Americans
+ont_16_city_test_10,EXTRA,,,,,,"(Benton_County,_Oregon, state, Oregon)","Benton_County,_Oregon",state,Oregon
+ont_16_city_test_10,EXTRA,,,,,,"(Oregon, isPartOf, United_States)",Oregon,isPartOf,United_States
+ont_16_city_test_100,EXACT,1.00,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.","(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C."
+ont_16_city_test_100,MISSING,,"(Auburn,_Washington, isPartOf, Pierce_County,_Washington)","Auburn,_Washington",isPartOf,"Pierce_County,_Washington",,,,
+ont_16_city_test_100,MISSING,,"(Auburn,_Washington, country, United_States)","Auburn,_Washington",country,United_States,,,,
+ont_16_city_test_100,EXTRA,,,,,,"(Auburn_hair, location, Pierce_County,_Washington)",Auburn_hair,location,"Pierce_County,_Washington"
+ont_16_city_test_100,EXTRA,,,,,,"(Auburn_hair, state, Washington_(state))",Auburn_hair,state,Washington_(state)
+ont_16_city_test_100,EXTRA,,,,,,"(Auburn_hair, isPartOf, United_States)",Auburn_hair,isPartOf,United_States
+ont_16_city_test_101,MISSING,,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.",,,,
+ont_16_city_test_101,MISSING,,"(Pierce_County,_Washington, country, United_States)","Pierce_County,_Washington",country,United_States,,,,
+ont_16_city_test_101,MISSING,,"(Auburn,_Washington, isPartOf, Pierce_County,_Washington)","Auburn,_Washington",isPartOf,"Pierce_County,_Washington",,,,
+ont_16_city_test_101,EXTRA,,,,,,"(Auburn_hair, country, United_States)",Auburn_hair,country,United_States
+ont_16_city_test_101,EXTRA,,,,,,"(Auburn_hair, location, Pierce_County,_Washington)",Auburn_hair,location,"Pierce_County,_Washington"
+ont_16_city_test_101,EXTRA,,,,,,"(Auburn_hair, state, Washington_(state))",Auburn_hair,state,Washington_(state)
+ont_16_city_test_102,EXACT,1.00,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.","(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C."
+ont_16_city_test_102,MISSING,,"(Auburn,_Washington, isPartOf, Washington_(state))","Auburn,_Washington",isPartOf,Washington_(state),,,,
+ont_16_city_test_102,MISSING,,"(Auburn,_Washington, country, United_States)","Auburn,_Washington",country,United_States,,,,
+ont_16_city_test_102,EXTRA,,,,,,"(Auburn_hair, country, United_States)",Auburn_hair,country,United_States
+ont_16_city_test_102,EXTRA,,,,,,"(Auburn_hair, state, Washington_(state))",Auburn_hair,state,Washington_(state)
+ont_16_city_test_103,MISSING,,"(Auburn,_Washington, isPartOf, Washington_(state))","Auburn,_Washington",isPartOf,Washington_(state),,,,
+ont_16_city_test_103,MISSING,,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.",,,,
+ont_16_city_test_103,MISSING,,"(Washington_(state), country, United_States)",Washington_(state),country,United_States,,,,
+ont_16_city_test_103,EXTRA,,,,,,"(Auburn_hair, country, United_States)",Auburn_hair,country,United_States
+ont_16_city_test_103,EXTRA,,,,,,"(Auburn_hair, state, Washington_(state))",Auburn_hair,state,Washington_(state)
+ont_16_city_test_104,MISSING,,"(Auburn,_Washington, populationDensity, 914.8 (inhabitants per square kilometre))","Auburn,_Washington",populationDensity,914.8 (inhabitants per square kilometre),,,,
+ont_16_city_test_104,MISSING,,"(Auburn,_Washington, areaTotal, 77.41 (square kilometres))","Auburn,_Washington",areaTotal,77.41 (square kilometres),,,,
+ont_16_city_test_104,MISSING,,"(Auburn,_Washington, leaderTitle, Mayor)","Auburn,_Washington",leaderTitle,Mayor,,,,
+ont_16_city_test_104,EXTRA,,,,,,"(Auburn_hair, populationDensity, 914.8)",Auburn_hair,populationDensity,914.8
+ont_16_city_test_104,EXTRA,,,,,,"(Auburn_hair, areaTotal, 77.41)",Auburn_hair,areaTotal,77.41
+ont_16_city_test_104,EXTRA,,,,,,"(Auburn_hair, state, Washington_(state))",Auburn_hair,state,Washington_(state)
+ont_16_city_test_105,EXACT,1.00,"(Austin,_Texas, country, United_States)","Austin,_Texas",country,United_States,"(Austin,_Texas, country, United_States)","Austin,_Texas",country,United_States
+ont_16_city_test_105,SEMANTIC,0.97,"(Austin,_Texas, leaderTitle, City_Manager)","Austin,_Texas",leaderTitle,City_Manager,"(Austin,_Texas, leader, city manager)","Austin,_Texas",leader,city manager
+ont_16_city_test_105,MISSING,,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,,,,
+ont_16_city_test_105,EXTRA,,,,,,"(Austin,_Texas, ethnicGroup, African_Americans)","Austin,_Texas",ethnicGroup,African_Americans
+ont_16_city_test_105,EXTRA,,,,,,"(Austin,_Texas, state, Texas_(steamboat))","Austin,_Texas",state,Texas_(steamboat)
+ont_16_city_test_106,EXACT,1.00,"(United_States, demonym, Americans)",United_States,demonym,Americans,"(United_States, demonym, Americans)",United_States,demonym,Americans
+ont_16_city_test_106,EXACT,1.00,"(Austin,_Texas, country, United_States)","Austin,_Texas",country,United_States,"(Austin,_Texas, country, United_States)","Austin,_Texas",country,United_States
+ont_16_city_test_106,MISSING,,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,,,,
+ont_16_city_test_106,EXTRA,,,,,,"(Austin,_Texas, state, Texas_(steamboat))","Austin,_Texas",state,Texas_(steamboat)
+ont_16_city_test_107,EXACT,1.00,"(Hays_County,_Texas, largestCity, San_Marcos,_Texas)","Hays_County,_Texas",largestCity,"San_Marcos,_Texas","(Hays_County,_Texas, largestCity, San_Marcos,_Texas)","Hays_County,_Texas",largestCity,"San_Marcos,_Texas"
+ont_16_city_test_107,SEMANTIC,0.96,"(Austin,_Texas, isPartOf, Travis_County,_Texas)","Austin,_Texas",isPartOf,"Travis_County,_Texas","(Austin,_Texas, countySeat, Travis_County,_Texas)","Austin,_Texas",countySeat,"Travis_County,_Texas"
+ont_16_city_test_107,SEMANTIC,0.96,"(Austin,_Texas, isPartOf, Hays_County,_Texas)","Austin,_Texas",isPartOf,"Hays_County,_Texas","(Austin,_Texas, countySeat, Hays_County,_Texas)","Austin,_Texas",countySeat,"Hays_County,_Texas"
+ont_16_city_test_107,EXTRA,,,,,,"(Austin,_Texas, state, Texas_(steamboat))","Austin,_Texas",state,Texas_(steamboat)
+ont_16_city_test_108,SEMANTIC,0.97,"(Austin,_Texas, isPartOf, Hays_County,_Texas)","Austin,_Texas",isPartOf,"Hays_County,_Texas","(Austin,_Texas, location, Hays_County,_Texas)","Austin,_Texas",location,"Hays_County,_Texas"
+ont_16_city_test_108,MISSING,,"(Austin,_Texas, isPartOf, Texas)","Austin,_Texas",isPartOf,Texas,,,,
+ont_16_city_test_108,MISSING,,"(Hays_County,_Texas, largestCity, San_Marcos,_Texas)","Hays_County,_Texas",largestCity,"San_Marcos,_Texas",,,,
+ont_16_city_test_108,EXTRA,,,,,,"(Austin,_Texas, state, Texas_(steamboat))","Austin,_Texas",state,Texas_(steamboat)
+ont_16_city_test_109,SEMANTIC,0.97,"(Austin,_Texas, isPartOf, Hays_County,_Texas)","Austin,_Texas",isPartOf,"Hays_County,_Texas","(Austin,_Texas, location, Hays_County,_Texas)","Austin,_Texas",location,"Hays_County,_Texas"
+ont_16_city_test_109,MISSING,,"(Austin,_Texas, isPartOf, Texas)","Austin,_Texas",isPartOf,Texas,,,,
+ont_16_city_test_109,MISSING,,"(Texas, largestCity, Houston)",Texas,largestCity,Houston,,,,
+ont_16_city_test_109,EXTRA,,,,,,"(Austin,_Texas, location, Texas_(steamboat))","Austin,_Texas",location,Texas_(steamboat)
+ont_16_city_test_109,EXTRA,,,,,,"(Austin,_Texas, state, Texas_(steamboat))","Austin,_Texas",state,Texas_(steamboat)
+ont_16_city_test_11,MISSING,,"(Albany,_Oregon, isPartOf, Oregon)","Albany,_Oregon",isPartOf,Oregon,,,,
+ont_16_city_test_11,MISSING,,"(Albany,_Oregon, isPartOf, Benton_County,_Oregon)","Albany,_Oregon",isPartOf,"Benton_County,_Oregon",,,,
+ont_16_city_test_11,MISSING,,"(Albany,_Oregon, country, United_States)","Albany,_Oregon",country,United_States,,,,
+ont_16_city_test_11,EXTRA,,,,,,"(Benton_County,_Oregon, state, Oregon)","Benton_County,_Oregon",state,Oregon
+ont_16_city_test_11,EXTRA,,,,,,"(Albany,_New_York, location, Benton_County,_Arkansas)","Albany,_New_York",location,"Benton_County,_Arkansas"
+ont_16_city_test_11,EXTRA,,,,,,"(Oregon, isPartOf, United_States)",Oregon,isPartOf,United_States
+ont_16_city_test_110,SEMANTIC,0.96,"(Austin,_Texas, isPartOf, Travis_County,_Texas)","Austin,_Texas",isPartOf,"Travis_County,_Texas","(Austin,_Texas, countySeat, Travis_County,_Texas)","Austin,_Texas",countySeat,"Travis_County,_Texas"
+ont_16_city_test_110,MISSING,,"(Austin,_Texas, isPartOf, Texas)","Austin,_Texas",isPartOf,Texas,,,,
+ont_16_city_test_110,MISSING,,"(Texas, largestCity, Houston)",Texas,largestCity,Houston,,,,
+ont_16_city_test_110,EXTRA,,,,,,"(Austin,_Texas, state, Texas_(steamboat))","Austin,_Texas",state,Texas_(steamboat)
+ont_16_city_test_110,EXTRA,,,,,,"(Houston, type, City)",Houston,type,City
+ont_16_city_test_110,EXTRA,,,,,,"(Austin,_Texas, type, City)","Austin,_Texas",type,City
+ont_16_city_test_110,EXTRA,,,,,,"(Houston, state, Texas_(steamboat))",Houston,state,Texas_(steamboat)
+ont_16_city_test_111,SEMANTIC,0.97,"(Austin,_Texas, populationDensity, 1296.65 (inhabitants per square kilometre))","Austin,_Texas",populationDensity,1296.65 (inhabitants per square kilometre),"(Austin,_Texas, populationDensity, 1296.65)","Austin,_Texas",populationDensity,1296.65
+ont_16_city_test_111,MISSING,,"(Austin,_Texas, areaTotal, 703.95 (square kilometres))","Austin,_Texas",areaTotal,703.95 (square kilometres),,,,
+ont_16_city_test_111,MISSING,,"(Austin,_Texas, areaOfLand, 686.0 (square kilometres))","Austin,_Texas",areaOfLand,686.0 (square kilometres),,,,
+ont_16_city_test_111,EXTRA,,,,,,"(Austin,_Texas, state, Texas_(steamboat))","Austin,_Texas",state,Texas_(steamboat)
+ont_16_city_test_111,EXTRA,,,,,,"(Austin,_Texas, areaTotal, 686.0)","Austin,_Texas",areaTotal,686.0
+ont_16_city_test_111,EXTRA,,,,,,"(Austin,_Texas, areaTotal, 703.95)","Austin,_Texas",areaTotal,703.95
+ont_16_city_test_112,SEMANTIC,0.98,"(Antioch,_California, isPartOf, California)","Antioch,_California",isPartOf,California,"(Antioch,_California, state, California)","Antioch,_California",state,California
+ont_16_city_test_112,SEMANTIC,0.98,"(Antioch,_California, isPartOf, Contra_Costa_County,_California)","Antioch,_California",isPartOf,"Contra_Costa_County,_California","(Antioch, location, Contra_Costa_County,_California)",Antioch,location,"Contra_Costa_County,_California"
+ont_16_city_test_112,MISSING,,"(California, language, English_language)",California,language,English_language,,,,
+ont_16_city_test_112,EXTRA,,,,,,"(Contra_Costa_County,_California, location, California)","Contra_Costa_County,_California",location,California
+ont_16_city_test_112,EXTRA,,,,,,"(Antioch, language, English_language)",Antioch,language,English_language
+ont_16_city_test_113,SEMANTIC,0.99,"(Alpharetta,_Georgia, isPartOf, Georgia_(U.S._state))","Alpharetta,_Georgia",isPartOf,Georgia_(U.S._state),"(Alpharetta,_Georgia, isPartOf, United_States)","Alpharetta,_Georgia",isPartOf,United_States
+ont_16_city_test_113,SEMANTIC,0.98,"(Alpharetta,_Georgia, isPartOf, Fulton_County,_Georgia)","Alpharetta,_Georgia",isPartOf,"Fulton_County,_Georgia","(Alpharetta,_Georgia, location, Fulton_County,_Georgia)","Alpharetta,_Georgia",location,"Fulton_County,_Georgia"
+ont_16_city_test_113,MISSING,,"(Fulton_County,_Georgia, country, United_States)","Fulton_County,_Georgia",country,United_States,,,,
+ont_16_city_test_113,EXTRA,,,,,,"(Alpharetta,_Georgia, state, Georgia_(U.S._state))","Alpharetta,_Georgia",state,Georgia_(U.S._state)
+ont_16_city_test_114,SEMANTIC,0.98,"(Albany,_Georgia, isPartOf, Dougherty_County,_Georgia)","Albany,_Georgia",isPartOf,"Dougherty_County,_Georgia","(Albany,_Georgia, location, Dougherty_County,_Georgia)","Albany,_Georgia",location,"Dougherty_County,_Georgia"
+ont_16_city_test_114,SEMANTIC,0.98,"(Albany,_Georgia, isPartOf, Georgia_(U.S._state))","Albany,_Georgia",isPartOf,Georgia_(U.S._state),"(Albany,_Georgia, state, Georgia_(U.S._state))","Albany,_Georgia",state,Georgia_(U.S._state)
+ont_16_city_test_114,MISSING,,"(Georgia_(U.S._state), capital, Atlanta)",Georgia_(U.S._state),capital,Atlanta,,,,
+ont_16_city_test_115,SEMANTIC,0.98,"(Alpharetta,_Georgia, isPartOf, Georgia_(U.S._state))","Alpharetta,_Georgia",isPartOf,Georgia_(U.S._state),"(Alpharetta,_Georgia, state, Georgia_(U.S._state))","Alpharetta,_Georgia",state,Georgia_(U.S._state)
+ont_16_city_test_115,SEMANTIC,0.98,"(Alpharetta,_Georgia, isPartOf, Fulton_County,_Georgia)","Alpharetta,_Georgia",isPartOf,"Fulton_County,_Georgia","(Alpharetta,_Georgia, location, Fulton_County,_Georgia)","Alpharetta,_Georgia",location,"Fulton_County,_Georgia"
+ont_16_city_test_115,MISSING,,"(Georgia_(U.S._state), country, United_States)",Georgia_(U.S._state),country,United_States,,,,
+ont_16_city_test_115,EXTRA,,,,,,"(Alpharetta,_Georgia, country, United_States)","Alpharetta,_Georgia",country,United_States
+ont_16_city_test_116,SEMANTIC,0.98,"(Alpharetta,_Georgia, isPartOf, Georgia_(U.S._state))","Alpharetta,_Georgia",isPartOf,Georgia_(U.S._state),"(Alpharetta,_Georgia, state, Georgia_(U.S._state))","Alpharetta,_Georgia",state,Georgia_(U.S._state)
+ont_16_city_test_116,MISSING,,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,,,,
+ont_16_city_test_116,MISSING,,"(Georgia_(U.S._state), country, United_States)",Georgia_(U.S._state),country,United_States,,,,
+ont_16_city_test_117,SEMANTIC,0.97,"(Alexandria,_Indiana, isPartOf, Madison_County,_Indiana)","Alexandria,_Indiana",isPartOf,"Madison_County,_Indiana","(Alexandria, location, Madison_County,_Indiana)",Alexandria,location,"Madison_County,_Indiana"
+ont_16_city_test_117,SEMANTIC,0.95,"(Alexandria,_Indiana, isPartOf, Indiana)","Alexandria,_Indiana",isPartOf,Indiana,"(Alexandria, state, Indiana)",Alexandria,state,Indiana
+ont_16_city_test_117,MISSING,,"(Indiana, capital, Indianapolis)",Indiana,capital,Indianapolis,,,,
+ont_16_city_test_118,EXACT,1.00,"(Indiana, capital, Indianapolis)",Indiana,capital,Indianapolis,"(Indiana, capital, Indianapolis)",Indiana,capital,Indianapolis
+ont_16_city_test_118,MISSING,,"(Monroe_Township,_Madison_County,_Indiana, isPartOf, Indiana)","Monroe_Township,_Madison_County,_Indiana",isPartOf,Indiana,,,,
+ont_16_city_test_118,MISSING,,"(Alexandria,_Indiana, isPartOf, Monroe_Township,_Madison_County,_Indiana)","Alexandria,_Indiana",isPartOf,"Monroe_Township,_Madison_County,_Indiana",,,,
+ont_16_city_test_118,EXTRA,,,,,,"(Monroe_Township,_Middlesex_County,_New_Jersey, location, Madison_County,_New_York)","Monroe_Township,_Middlesex_County,_New_Jersey",location,"Madison_County,_New_York"
+ont_16_city_test_118,EXTRA,,,,,,"(Alexandria, location, Monroe_Township,_Middlesex_County,_New_Jersey)",Alexandria,location,"Monroe_Township,_Middlesex_County,_New_Jersey"
+ont_16_city_test_118,EXTRA,,,,,,"(Madison_County,_Indiana, state, Indiana)","Madison_County,_Indiana",state,Indiana
+ont_16_city_test_119,SEMANTIC,0.96,"(Indiana, country, United_States)",Indiana,country,United_States,"(Indianapolis, country, United_States)",Indianapolis,country,United_States
+ont_16_city_test_119,SEMANTIC,0.96,"(Anderson,_Indiana, isPartOf, Indiana)","Anderson,_Indiana",isPartOf,Indiana,"(Anderson,_Indiana, country, United_States)","Anderson,_Indiana",country,United_States
+ont_16_city_test_119,MISSING,,"(Indiana, capital, Indianapolis)",Indiana,capital,Indianapolis,,,,
+ont_16_city_test_119,EXTRA,,,,,,"(Indianapolis, state, Indiana)",Indianapolis,state,Indiana
+ont_16_city_test_119,EXTRA,,,,,,"(Anderson,_Indiana, state, Indiana)","Anderson,_Indiana",state,Indiana
+ont_16_city_test_12,EXACT,1.00,"(Albany,_Oregon, country, United_States)","Albany,_Oregon",country,United_States,"(Albany,_Oregon, country, United_States)","Albany,_Oregon",country,United_States
+ont_16_city_test_12,SEMANTIC,0.97,"(Albany,_Oregon, isPartOf, Oregon)","Albany,_Oregon",isPartOf,Oregon,"(Albany,_Oregon, state, Oregon)","Albany,_Oregon",state,Oregon
+ont_16_city_test_12,SEMANTIC,0.97,"(Albany,_Oregon, isPartOf, Linn_County,_Oregon)","Albany,_Oregon",isPartOf,"Linn_County,_Oregon","(Albany,_Oregon, countySeat, Linn_County,_Oregon)","Albany,_Oregon",countySeat,"Linn_County,_Oregon"
+ont_16_city_test_12,EXTRA,,,,,,"(Albany,_New_York, type, City)","Albany,_New_York",type,City
+ont_16_city_test_120,SEMANTIC,0.95,"(Angola,_Indiana, isPartOf, United_States)","Angola,_Indiana",isPartOf,United_States,"(Angola, state, Indiana)",Angola,state,Indiana
+ont_16_city_test_120,SEMANTIC,0.96,"(Angola,_Indiana, isPartOf, Indiana)","Angola,_Indiana",isPartOf,Indiana,"(Angola, state, Indiana)",Angola,state,Indiana
+ont_16_city_test_120,MISSING,,"(Indiana, capital, Indianapolis)",Indiana,capital,Indianapolis,,,,
+ont_16_city_test_120,EXTRA,,,,,,"(Angola, country, United_States)",Angola,country,United_States
+ont_16_city_test_120,EXTRA,,,,,,"(Angola, type, City)",Angola,type,City
+ont_16_city_test_121,MISSING,,"(Indiana, country, United_States)",Indiana,country,United_States,,,,
+ont_16_city_test_121,MISSING,,"(Monroe_Township,_Madison_County,_Indiana, isPartOf, Indiana)","Monroe_Township,_Madison_County,_Indiana",isPartOf,Indiana,,,,
+ont_16_city_test_121,MISSING,,"(Alexandria,_Indiana, isPartOf, Monroe_Township,_Madison_County,_Indiana)","Alexandria,_Indiana",isPartOf,"Monroe_Township,_Madison_County,_Indiana",,,,
+ont_16_city_test_121,EXTRA,,,,,,"(Alexandria, country, United_States)",Alexandria,country,United_States
+ont_16_city_test_121,EXTRA,,,,,,"(Alexandria, state, Indiana)",Alexandria,state,Indiana
+ont_16_city_test_121,EXTRA,,,,,,"(Alexandria, location, Monroe_Township,_Middlesex_County,_New_Jersey)",Alexandria,location,"Monroe_Township,_Middlesex_County,_New_Jersey"
+ont_16_city_test_121,EXTRA,,,,,,"(Alexandria, isPartOf, United_States)",Alexandria,isPartOf,United_States
+ont_16_city_test_121,EXTRA,,,,,,"(Alexandria, location, Madison_County,_Indiana)",Alexandria,location,"Madison_County,_Indiana"
+ont_16_city_test_122,SEMANTIC,0.97,"(Alexandria,_Indiana, isPartOf, Madison_County,_Indiana)","Alexandria,_Indiana",isPartOf,"Madison_County,_Indiana","(Alexandria, location, Madison_County,_Indiana)",Alexandria,location,"Madison_County,_Indiana"
+ont_16_city_test_122,MISSING,,"(Alexandria,_Indiana, isPartOf, Monroe_Township,_Madison_County,_Indiana)","Alexandria,_Indiana",isPartOf,"Monroe_Township,_Madison_County,_Indiana",,,,
+ont_16_city_test_122,MISSING,,"(Madison_County,_Indiana, country, United_States)","Madison_County,_Indiana",country,United_States,,,,
+ont_16_city_test_122,EXTRA,,,,,,"(Alexandria, country, United_States)",Alexandria,country,United_States
+ont_16_city_test_122,EXTRA,,,,,,"(Alexandria, state, Indiana)",Alexandria,state,Indiana
+ont_16_city_test_122,EXTRA,,,,,,"(Alexandria, location, Monroe_Township,_Middlesex_County,_New_Jersey)",Alexandria,location,"Monroe_Township,_Middlesex_County,_New_Jersey"
+ont_16_city_test_122,EXTRA,,,,,,"(Alexandria, isPartOf, United_States)",Alexandria,isPartOf,United_States
+ont_16_city_test_123,SEMANTIC,0.98,"(Anderson,_Indiana, isPartOf, Madison_County,_Indiana)","Anderson,_Indiana",isPartOf,"Madison_County,_Indiana","(Anderson,_Indiana, location, Madison_County,_Indiana)","Anderson,_Indiana",location,"Madison_County,_Indiana"
+ont_16_city_test_123,MISSING,,"(Anderson,_Indiana, isPartOf, Adams, Fall Creek, Lafayette, Richland, Union)","Anderson,_Indiana",isPartOf,"Adams, Fall Creek, Lafayette, Richland, Union",,,,
+ont_16_city_test_123,MISSING,,"(Madison_County,_Indiana, country, United_States)","Madison_County,_Indiana",country,United_States,,,,
+ont_16_city_test_123,EXTRA,,,,,,"(Anderson,_Indiana, location, Lafayette,_Indiana)","Anderson,_Indiana",location,"Lafayette,_Indiana"
+ont_16_city_test_123,EXTRA,,,,,,"(Anderson,_Indiana, country, United_States)","Anderson,_Indiana",country,United_States
+ont_16_city_test_123,EXTRA,,,,,,"(Anderson,_Indiana, state, Indiana)","Anderson,_Indiana",state,Indiana
+ont_16_city_test_124,SEMANTIC,0.94,"(Anderson,_Indiana, isPartOf, Indiana)","Anderson,_Indiana",isPartOf,Indiana,"(Anderson,_Indiana, countySeat, Madison_County,_Indiana)","Anderson,_Indiana",countySeat,"Madison_County,_Indiana"
+ont_16_city_test_124,SEMANTIC,0.97,"(Anderson,_Indiana, isPartOf, Madison_County,_Indiana)","Anderson,_Indiana",isPartOf,"Madison_County,_Indiana","(Anderson,_Indiana, countySeat, Madison_County,_Indiana)","Anderson,_Indiana",countySeat,"Madison_County,_Indiana"
+ont_16_city_test_124,SEMANTIC,0.98,"(Madison_County,_Indiana, country, United_States)","Madison_County,_Indiana",country,United_States,"(Madison_County,_Indiana, state, Indiana)","Madison_County,_Indiana",state,Indiana
+ont_16_city_test_124,EXTRA,,,,,,"(Indiana, isPartOf, United_States)",Indiana,isPartOf,United_States
+ont_16_city_test_125,SEMANTIC,0.98,"(Atlantic_City,_New_Jersey, isPartOf, New_Jersey)","Atlantic_City,_New_Jersey",isPartOf,New_Jersey,"(Atlantic_City,_New_Jersey, isPartOf, United_States)","Atlantic_City,_New_Jersey",isPartOf,United_States
+ont_16_city_test_125,MISSING,,"(New_Jersey, country, United_States)",New_Jersey,country,United_States,,,,
+ont_16_city_test_125,MISSING,,"(New_Jersey, capital, Trenton,_New_Jersey)",New_Jersey,capital,"Trenton,_New_Jersey",,,,
+ont_16_city_test_125,EXTRA,,,,,,"(Atlantic_City,_New_Jersey, state, New_Jersey)","Atlantic_City,_New_Jersey",state,New_Jersey
+ont_16_city_test_126,EXACT,1.00,"(United_States, largestCity, New_York_City)",United_States,largestCity,New_York_City,"(United_States, largestCity, New_York_City)",United_States,largestCity,New_York_City
+ont_16_city_test_126,SEMANTIC,0.97,"(Atlantic_City,_New_Jersey, isPartOf, New_Jersey)","Atlantic_City,_New_Jersey",isPartOf,New_Jersey,"(Atlantic_City,_New_Jersey, state, New_Jersey)","Atlantic_City,_New_Jersey",state,New_Jersey
+ont_16_city_test_126,MISSING,,"(New_Jersey, country, United_States)",New_Jersey,country,United_States,,,,
+ont_16_city_test_126,EXTRA,,,,,,"(Atlantic_City,_New_Jersey, country, United_States)","Atlantic_City,_New_Jersey",country,United_States
+ont_16_city_test_127,SEMANTIC,0.95,"(Arlington,_Texas, isPartOf, Texas)","Arlington,_Texas",isPartOf,Texas,"(Arlington,_Texas, location, Tarrant_County,_Texas)","Arlington,_Texas",location,"Tarrant_County,_Texas"
+ont_16_city_test_127,SEMANTIC,0.97,"(Arlington,_Texas, isPartOf, Tarrant_County,_Texas)","Arlington,_Texas",isPartOf,"Tarrant_County,_Texas","(Arlington,_Texas, location, Tarrant_County,_Texas)","Arlington,_Texas",location,"Tarrant_County,_Texas"
+ont_16_city_test_127,MISSING,,"(Tarrant_County,_Texas, largestCity, Fort_Worth,_Texas)","Tarrant_County,_Texas",largestCity,"Fort_Worth,_Texas",,,,
+ont_16_city_test_127,EXTRA,,,,,,"(Arlington,_Texas, state, Texas_(steamboat))","Arlington,_Texas",state,Texas_(steamboat)
+ont_16_city_test_128,SEMANTIC,0.96,"(Arlington,_Texas, isPartOf, Texas)","Arlington,_Texas",isPartOf,Texas,"(Arlington,_Texas, country, United_States)","Arlington,_Texas",country,United_States
+ont_16_city_test_128,MISSING,,"(Texas, capital, Austin,_Texas)",Texas,capital,"Austin,_Texas",,,,
+ont_16_city_test_128,MISSING,,"(Texas, country, United_States)",Texas,country,United_States,,,,
+ont_16_city_test_128,EXTRA,,,,,,"(Arlington,_Texas, type, Town)","Arlington,_Texas",type,Town
+ont_16_city_test_128,EXTRA,,,,,,"(Arlington,_Texas, state, Texas_(steamboat))","Arlington,_Texas",state,Texas_(steamboat)
+ont_16_city_test_129,MISSING,,"(Texas, largestCity, Houston)",Texas,largestCity,Houston,,,,
+ont_16_city_test_129,MISSING,,"(Arlington,_Texas, isPartOf, Texas)","Arlington,_Texas",isPartOf,Texas,,,,
+ont_16_city_test_129,MISSING,,"(Texas, capital, Austin,_Texas)",Texas,capital,"Austin,_Texas",,,,
+ont_16_city_test_129,EXTRA,,,,,,"(Arlington,_Texas, state, Texas_(steamboat))","Arlington,_Texas",state,Texas_(steamboat)
+ont_16_city_test_13,EXACT,1.00,"(Albany,_Oregon, country, United_States)","Albany,_Oregon",country,United_States,"(Albany,_Oregon, country, United_States)","Albany,_Oregon",country,United_States
+ont_16_city_test_13,SEMANTIC,0.97,"(Albany,_Oregon, isPartOf, Oregon)","Albany,_Oregon",isPartOf,Oregon,"(Albany,_Oregon, state, Oregon)","Albany,_Oregon",state,Oregon
+ont_16_city_test_13,MISSING,,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,,,,
+ont_16_city_test_13,EXTRA,,,,,,"(Albany,_Oregon, ethnicGroup, African_Americans)","Albany,_Oregon",ethnicGroup,African_Americans
+ont_16_city_test_13,EXTRA,,,,,,"(Oregon, isPartOf, United_States)",Oregon,isPartOf,United_States
+ont_16_city_test_130,SEMANTIC,0.98,"(Arlington,_Texas, isPartOf, Texas)","Arlington,_Texas",isPartOf,Texas,"(Arlington,_Texas, isPartOf, United_States)","Arlington,_Texas",isPartOf,United_States
+ont_16_city_test_130,MISSING,,"(Texas, language, English_language)",Texas,language,English_language,,,,
+ont_16_city_test_130,MISSING,,"(Texas, country, United_States)",Texas,country,United_States,,,,
+ont_16_city_test_130,EXTRA,,,,,,"(Arlington,_Texas, state, Texas_(steamboat))","Arlington,_Texas",state,Texas_(steamboat)
+ont_16_city_test_131,MISSING,,"(Texas, largestCity, Houston)",Texas,largestCity,Houston,,,,
+ont_16_city_test_131,MISSING,,"(Arlington,_Texas, isPartOf, Texas)","Arlington,_Texas",isPartOf,Texas,,,,
+ont_16_city_test_131,MISSING,,"(Texas, language, English_language)",Texas,language,English_language,,,,
+ont_16_city_test_131,EXTRA,,,,,,"(Texas_(steamboat), language, English_language)",Texas_(steamboat),language,English_language
+ont_16_city_test_131,EXTRA,,,,,,"(Arlington,_Texas, state, Texas_(steamboat))","Arlington,_Texas",state,Texas_(steamboat)
+ont_16_city_test_131,EXTRA,,,,,,"(Texas_(steamboat), largestCity, Houston)",Texas_(steamboat),largestCity,Houston
+ont_16_city_test_132,MISSING,,"(Arlington,_Texas, isPartOf, Texas)","Arlington,_Texas",isPartOf,Texas,,,,
+ont_16_city_test_132,MISSING,,"(Texas, language, English_language)",Texas,language,English_language,,,,
+ont_16_city_test_132,MISSING,,"(Texas, capital, Austin,_Texas)",Texas,capital,"Austin,_Texas",,,,
+ont_16_city_test_132,EXTRA,,,,,,"(Texas_(steamboat), language, English_language)",Texas_(steamboat),language,English_language
+ont_16_city_test_132,EXTRA,,,,,,"(Texas_(steamboat), capital, Austin,_Texas)",Texas_(steamboat),capital,"Austin,_Texas"
+ont_16_city_test_132,EXTRA,,,,,,"(Arlington,_Texas, isPartOf, Texas_(steamboat))","Arlington,_Texas",isPartOf,Texas_(steamboat)
+ont_16_city_test_133,MISSING,,"(Texas, language, Spanish_language)",Texas,language,Spanish_language,,,,
+ont_16_city_test_133,MISSING,,"(Arlington,_Texas, isPartOf, Texas)","Arlington,_Texas",isPartOf,Texas,,,,
+ont_16_city_test_133,MISSING,,"(Texas, capital, Austin,_Texas)",Texas,capital,"Austin,_Texas",,,,
+ont_16_city_test_133,EXTRA,,,,,,"(Arlington,_Texas, state, Texas_(steamboat))","Arlington,_Texas",state,Texas_(steamboat)
+ont_16_city_test_134,EXACT,1.00,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.","(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C."
+ont_16_city_test_134,SEMANTIC,0.98,"(Abilene,_Texas, isPartOf, Jones_County,_Texas)","Abilene,_Texas",isPartOf,"Jones_County,_Texas","(Abilene,_Texas, location, Jones_County,_Texas)","Abilene,_Texas",location,"Jones_County,_Texas"
+ont_16_city_test_134,MISSING,,"(Jones_County,_Texas, country, United_States)","Jones_County,_Texas",country,United_States,,,,
+ont_16_city_test_134,EXTRA,,,,,,"(Abilene,_Texas, country, United_States)","Abilene,_Texas",country,United_States
+ont_16_city_test_134,EXTRA,,,,,,"(Abilene,_Texas, state, Texas_(steamboat))","Abilene,_Texas",state,Texas_(steamboat)
+ont_16_city_test_135,SEMANTIC,0.97,"(Abilene,_Texas, isPartOf, Taylor_County,_Texas)","Abilene,_Texas",isPartOf,"Taylor_County,_Texas","(Abilene,_Texas, countySeat, Taylor_County,_Texas)","Abilene,_Texas",countySeat,"Taylor_County,_Texas"
+ont_16_city_test_135,MISSING,,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.",,,,
+ont_16_city_test_135,MISSING,,"(Taylor_County,_Texas, country, United_States)","Taylor_County,_Texas",country,United_States,,,,
+ont_16_city_test_135,EXTRA,,,,,,"(Abilene,_Texas, country, United_States)","Abilene,_Texas",country,United_States
+ont_16_city_test_135,EXTRA,,,,,,"(Abilene,_Texas, state, Texas_(steamboat))","Abilene,_Texas",state,Texas_(steamboat)
+ont_16_city_test_136,EXACT,1.00,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.","(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C."
+ont_16_city_test_136,SEMANTIC,0.97,"(Akron,_Ohio, country, United_States)","Akron,_Ohio",country,United_States,"(Akron,_Ohio, isPartOf, United_States)","Akron,_Ohio",isPartOf,United_States
+ont_16_city_test_136,SEMANTIC,0.98,"(Akron,_Ohio, isPartOf, Summit_County,_Ohio)","Akron,_Ohio",isPartOf,"Summit_County,_Ohio","(Akron,_Ohio, location, Summit_County,_Ohio)","Akron,_Ohio",location,"Summit_County,_Ohio"
+ont_16_city_test_136,EXTRA,,,,,,"(Akron,_Ohio, state, Ohio)","Akron,_Ohio",state,Ohio
+ont_16_city_test_137,EXACT,1.00,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.","(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C."
+ont_16_city_test_137,SEMANTIC,0.97,"(Akron,_Ohio, country, United_States)","Akron,_Ohio",country,United_States,"(Akron,_Ohio, isPartOf, United_States)","Akron,_Ohio",isPartOf,United_States
+ont_16_city_test_137,MISSING,,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,,,,
+ont_16_city_test_137,EXTRA,,,,,,"(Washington,_D.C., ethnicGroup, African_Americans)","Washington,_D.C.",ethnicGroup,African_Americans
+ont_16_city_test_138,EXACT,1.00,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.","(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C."
+ont_16_city_test_138,EXACT,1.00,"(Albany,_Oregon, country, United_States)","Albany,_Oregon",country,United_States,"(Albany,_Oregon, country, United_States)","Albany,_Oregon",country,United_States
+ont_16_city_test_138,MISSING,,"(Albany,_Oregon, isPartOf, Linn_County,_Oregon)","Albany,_Oregon",isPartOf,"Linn_County,_Oregon",,,,
+ont_16_city_test_139,SEMANTIC,0.97,"(Albany,_Oregon, country, United_States)","Albany,_Oregon",country,United_States,"(Albany,_Oregon, state, Oregon)","Albany,_Oregon",state,Oregon
+ont_16_city_test_139,MISSING,,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.",,,,
+ont_16_city_test_139,MISSING,,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,,,,
+ont_16_city_test_139,EXTRA,,,,,,"(Albany,_New_York, country, United_States)","Albany,_New_York",country,United_States
+ont_16_city_test_14,EXACT,1.00,"(Albany,_Oregon, country, United_States)","Albany,_Oregon",country,United_States,"(Albany,_Oregon, country, United_States)","Albany,_Oregon",country,United_States
+ont_16_city_test_14,SEMANTIC,0.97,"(Albany,_Oregon, isPartOf, Oregon)","Albany,_Oregon",isPartOf,Oregon,"(Albany,_Oregon, state, Oregon)","Albany,_Oregon",state,Oregon
+ont_16_city_test_14,SEMANTIC,0.97,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,"(Native_Americans_in_the_United_States, ethnicGroup, Ethnic_group)",Native_Americans_in_the_United_States,ethnicGroup,Ethnic_group
+ont_16_city_test_14,EXTRA,,,,,,"(Albany,_New_York, type, City)","Albany,_New_York",type,City
+ont_16_city_test_14,EXTRA,,,,,,"(United_States, type, Country)",United_States,type,Country
+ont_16_city_test_140,EXACT,1.00,"(Albany,_Oregon, country, United_States)","Albany,_Oregon",country,United_States,"(Albany,_Oregon, country, United_States)","Albany,_Oregon",country,United_States
+ont_16_city_test_140,SEMANTIC,0.96,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,"(Native_Americans_in_the_United_States, type, Ethnic_group)",Native_Americans_in_the_United_States,type,Ethnic_group
+ont_16_city_test_140,MISSING,,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.",,,,
+ont_16_city_test_141,EXACT,1.00,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.","(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C."
+ont_16_city_test_141,EXACT,1.00,"(Albany,_Oregon, country, United_States)","Albany,_Oregon",country,United_States,"(Albany,_Oregon, country, United_States)","Albany,_Oregon",country,United_States
+ont_16_city_test_141,MISSING,,"(Albany,_Oregon, isPartOf, Benton_County,_Oregon)","Albany,_Oregon",isPartOf,"Benton_County,_Oregon",,,,
+ont_16_city_test_141,EXTRA,,,,,,"(Albany,_New_York, location, Benton_County,_Arkansas)","Albany,_New_York",location,"Benton_County,_Arkansas"
+ont_16_city_test_141,EXTRA,,,,,,"(Albany,_Oregon, state, Oregon)","Albany,_Oregon",state,Oregon
+ont_16_city_test_142,EXACT,1.00,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.","(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C."
+ont_16_city_test_142,EXACT,1.00,"(Amarillo,_Texas, country, United_States)","Amarillo,_Texas",country,United_States,"(Amarillo,_Texas, country, United_States)","Amarillo,_Texas",country,United_States
+ont_16_city_test_142,MISSING,,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,,,,
+ont_16_city_test_142,EXTRA,,,,,,"(Amarillo,_Texas, ethnicGroup, African_Americans)","Amarillo,_Texas",ethnicGroup,African_Americans
+ont_16_city_test_142,EXTRA,,,,,,"(Amarillo,_Texas, state, Texas_(steamboat))","Amarillo,_Texas",state,Texas_(steamboat)
+ont_16_city_test_143,EXACT,1.00,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.","(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C."
+ont_16_city_test_143,SEMANTIC,0.98,"(Amarillo,_Texas, country, United_States)","Amarillo,_Texas",country,United_States,"(Amarillo,_Texas, isPartOf, United_States)","Amarillo,_Texas",isPartOf,United_States
+ont_16_city_test_143,MISSING,,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,,,,
+ont_16_city_test_144,EXACT,1.00,"(Amarillo,_Texas, country, United_States)","Amarillo,_Texas",country,United_States,"(Amarillo,_Texas, country, United_States)","Amarillo,_Texas",country,United_States
+ont_16_city_test_144,MISSING,,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.",,,,
+ont_16_city_test_144,MISSING,,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,,,,
+ont_16_city_test_144,EXTRA,,,,,,"(Amarillo,_Texas, state, Texas_(steamboat))","Amarillo,_Texas",state,Texas_(steamboat)
+ont_16_city_test_145,SEMANTIC,0.94,"(Atlantic_County,_New_Jersey, country, United_States)","Atlantic_County,_New_Jersey",country,United_States,"(Atlantic_City,_New_Jersey, location, Atlantic_County,_New_Jersey)","Atlantic_City,_New_Jersey",location,"Atlantic_County,_New_Jersey"
+ont_16_city_test_145,SEMANTIC,0.98,"(Atlantic_City,_New_Jersey, isPartOf, Atlantic_County,_New_Jersey)","Atlantic_City,_New_Jersey",isPartOf,"Atlantic_County,_New_Jersey","(Atlantic_City,_New_Jersey, location, Atlantic_County,_New_Jersey)","Atlantic_City,_New_Jersey",location,"Atlantic_County,_New_Jersey"
+ont_16_city_test_145,MISSING,,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.",,,,
+ont_16_city_test_145,EXTRA,,,,,,"(Atlantic_City,_New_Jersey, country, United_States)","Atlantic_City,_New_Jersey",country,United_States
+ont_16_city_test_145,EXTRA,,,,,,"(Atlantic_City,_New_Jersey, state, New_Jersey)","Atlantic_City,_New_Jersey",state,New_Jersey
+ont_16_city_test_146,EXACT,1.00,"(Attica,_Indiana, country, United_States)","Attica,_Indiana",country,United_States,"(Attica,_Indiana, country, United_States)","Attica,_Indiana",country,United_States
+ont_16_city_test_146,SEMANTIC,0.98,"(Attica,_Indiana, isPartOf, Fountain_County,_Indiana)","Attica,_Indiana",isPartOf,"Fountain_County,_Indiana","(Attica,_Indiana, location, Fountain_County,_Indiana)","Attica,_Indiana",location,"Fountain_County,_Indiana"
+ont_16_city_test_146,MISSING,,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.",,,,
+ont_16_city_test_146,EXTRA,,,,,,"(Attica,_Indiana, state, Indiana)","Attica,_Indiana",state,Indiana
+ont_16_city_test_147,EXACT,1.00,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.","(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C."
+ont_16_city_test_147,SEMANTIC,0.98,"(Attica,_Indiana, country, United_States)","Attica,_Indiana",country,United_States,"(Attica,_Indiana, isPartOf, United_States)","Attica,_Indiana",isPartOf,United_States
+ont_16_city_test_147,MISSING,,"(Attica,_Indiana, isPartOf, Logan_Township,_Fountain_County,_Indiana)","Attica,_Indiana",isPartOf,"Logan_Township,_Fountain_County,_Indiana",,,,
+ont_16_city_test_147,EXTRA,,,,,,"(Attica, location, Logan_Township,_Pike_County,_Indiana)",Attica,location,"Logan_Township,_Pike_County,_Indiana"
+ont_16_city_test_147,EXTRA,,,,,,"(Attica, location, Fountain_County,_Indiana)",Attica,location,"Fountain_County,_Indiana"
+ont_16_city_test_147,EXTRA,,,,,,"(Attica, state, Indiana)",Attica,state,Indiana
+ont_16_city_test_148,EXACT,1.00,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.","(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C."
+ont_16_city_test_148,SEMANTIC,0.98,"(Attica,_Indiana, isPartOf, Fountain_County,_Indiana)","Attica,_Indiana",isPartOf,"Fountain_County,_Indiana","(Attica,_Indiana, location, Fountain_County,_Indiana)","Attica,_Indiana",location,"Fountain_County,_Indiana"
+ont_16_city_test_148,MISSING,,"(Fountain_County,_Indiana, country, United_States)","Fountain_County,_Indiana",country,United_States,,,,
+ont_16_city_test_148,EXTRA,,,,,,"(Attica,_Indiana, country, United_States)","Attica,_Indiana",country,United_States
+ont_16_city_test_149,EXACT,1.00,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.","(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C."
+ont_16_city_test_149,EXACT,1.00,"(Akron,_Ohio, country, United_States)","Akron,_Ohio",country,United_States,"(Akron,_Ohio, country, United_States)","Akron,_Ohio",country,United_States
+ont_16_city_test_149,MISSING,,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,,,,
+ont_16_city_test_149,EXTRA,,,,,,"(Akron,_Ohio, state, Ohio)","Akron,_Ohio",state,Ohio
+ont_16_city_test_15,SEMANTIC,0.97,"(Albany,_Oregon, isPartOf, Oregon)","Albany,_Oregon",isPartOf,Oregon,"(Albany,_Oregon, state, Oregon)","Albany,_Oregon",state,Oregon
+ont_16_city_test_15,SEMANTIC,0.97,"(Albany,_Oregon, country, United_States)","Albany,_Oregon",country,United_States,"(Albany,_Oregon, state, Oregon)","Albany,_Oregon",state,Oregon
+ont_16_city_test_15,MISSING,,"(Oregon, capital, Salem,_Oregon)",Oregon,capital,"Salem,_Oregon",,,,
+ont_16_city_test_15,EXTRA,,,,,,"(Albany,_Oregon, type, City)","Albany,_Oregon",type,City
+ont_16_city_test_150,EXACT,1.00,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.","(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C."
+ont_16_city_test_150,EXACT,1.00,"(Akron,_Ohio, country, United_States)","Akron,_Ohio",country,United_States,"(Akron,_Ohio, country, United_States)","Akron,_Ohio",country,United_States
+ont_16_city_test_150,MISSING,,"(United_States, language, English_language)",United_States,language,English_language,,,,
+ont_16_city_test_150,EXTRA,,,,,,"(Akron,_Ohio, state, Ohio)","Akron,_Ohio",state,Ohio
+ont_16_city_test_151,EXACT,1.00,"(Albuquerque,_New_Mexico, country, United_States)","Albuquerque,_New_Mexico",country,United_States,"(Albuquerque,_New_Mexico, country, United_States)","Albuquerque,_New_Mexico",country,United_States
+ont_16_city_test_151,EXACT,1.00,"(United_States, demonym, Americans)",United_States,demonym,Americans,"(United_States, demonym, Americans)",United_States,demonym,Americans
+ont_16_city_test_151,MISSING,,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,,,,
+ont_16_city_test_151,EXTRA,,,,,,"(Albuquerque,_New_Mexico, state, New_Mexico)","Albuquerque,_New_Mexico",state,New_Mexico
+ont_16_city_test_152,SEMANTIC,0.96,"(Angola,_Indiana, country, United_States)","Angola,_Indiana",country,United_States,"(Angola, state, Indiana)",Angola,state,Indiana
+ont_16_city_test_152,SEMANTIC,0.97,"(Angola,_Indiana, isPartOf, Pleasant_Township,_Steuben_County,_Indiana)","Angola,_Indiana",isPartOf,"Pleasant_Township,_Steuben_County,_Indiana","(Angola, location, Pleasant_Township,_Steuben_County,_Indiana)",Angola,location,"Pleasant_Township,_Steuben_County,_Indiana"
+ont_16_city_test_152,MISSING,,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,,,,
+ont_16_city_test_152,EXTRA,,,,,,"(Angola, country, United_States)",Angola,country,United_States
+ont_16_city_test_152,EXTRA,,,,,,"(Angola, location, Steuben_County,_Indiana)",Angola,location,"Steuben_County,_Indiana"
+ont_16_city_test_153,EXACT,1.00,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans
+ont_16_city_test_153,SEMANTIC,0.97,"(Angola,_Indiana, isPartOf, Steuben_County,_Indiana)","Angola,_Indiana",isPartOf,"Steuben_County,_Indiana","(Angola, countySeat, Steuben_County,_Indiana)",Angola,countySeat,"Steuben_County,_Indiana"
+ont_16_city_test_153,SEMANTIC,0.96,"(Angola,_Indiana, country, United_States)","Angola,_Indiana",country,United_States,"(Angola, state, Indiana)",Angola,state,Indiana
+ont_16_city_test_153,EXTRA,,,,,,"(Angola, country, United_States)",Angola,country,United_States
+ont_16_city_test_154,SEMANTIC,0.97,"(Albuquerque,_New_Mexico, country, United_States)","Albuquerque,_New_Mexico",country,United_States,"(Albuquerque,_New_Mexico, state, New_Mexico)","Albuquerque,_New_Mexico",state,New_Mexico
+ont_16_city_test_154,MISSING,,"(United_States, demonym, Americans)",United_States,demonym,Americans,,,,
+ont_16_city_test_154,MISSING,,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,,,,
+ont_16_city_test_154,EXTRA,,,,,,"(Albuquerque,_New_Mexico, country, Us_(2019_film))","Albuquerque,_New_Mexico",country,Us_(2019_film)
+ont_16_city_test_154,EXTRA,,,,,,"(Us_(2019_film), demonym, Americans)",Us_(2019_film),demonym,Americans
+ont_16_city_test_155,EXACT,1.00,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans
+ont_16_city_test_155,EXACT,1.00,"(United_States, language, English_language)",United_States,language,English_language,"(United_States, language, English_language)",United_States,language,English_language
+ont_16_city_test_155,SEMANTIC,0.96,"(Angola,_Indiana, country, United_States)","Angola,_Indiana",country,United_States,"(Angola, state, Indiana)",Angola,state,Indiana
+ont_16_city_test_155,EXTRA,,,,,,"(Angola, country, United_States)",Angola,country,United_States
+ont_16_city_test_156,EXACT,1.00,"(Albuquerque,_New_Mexico, country, United_States)","Albuquerque,_New_Mexico",country,United_States,"(Albuquerque,_New_Mexico, country, United_States)","Albuquerque,_New_Mexico",country,United_States
+ont_16_city_test_156,MISSING,,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,,,,
+ont_16_city_test_156,MISSING,,"(United_States, leader, Barack_Obama)",United_States,leader,Barack_Obama,,,,
+ont_16_city_test_156,EXTRA,,,,,,"(Albuquerque,_New_Mexico, isPartOf, United_States)","Albuquerque,_New_Mexico",isPartOf,United_States
+ont_16_city_test_157,EXACT,1.00,"(Albuquerque,_New_Mexico, country, United_States)","Albuquerque,_New_Mexico",country,United_States,"(Albuquerque,_New_Mexico, country, United_States)","Albuquerque,_New_Mexico",country,United_States
+ont_16_city_test_157,SEMANTIC,0.99,"(United_States, leaderTitle, President_of_the_United_States)",United_States,leaderTitle,President_of_the_United_States,"(United_States, leaderTitle, president)",United_States,leaderTitle,president
+ont_16_city_test_157,MISSING,,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,,,,
+ont_16_city_test_157,EXTRA,,,,,,"(Albuquerque,_New_Mexico, state, New_Mexico)","Albuquerque,_New_Mexico",state,New_Mexico
+ont_16_city_test_158,EXACT,1.00,"(Akron,_Ohio, country, United_States)","Akron,_Ohio",country,United_States,"(Akron,_Ohio, country, United_States)","Akron,_Ohio",country,United_States
+ont_16_city_test_158,SEMANTIC,0.97,"(Akron,_Ohio, isPartOf, Summit_County,_Ohio)","Akron,_Ohio",isPartOf,"Summit_County,_Ohio","(Akron,_Ohio, countySeat, Summit_County,_Ohio)","Akron,_Ohio",countySeat,"Summit_County,_Ohio"
+ont_16_city_test_158,MISSING,,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,,,,
+ont_16_city_test_158,EXTRA,,,,,,"(Akron,_Ohio, state, Ohio)","Akron,_Ohio",state,Ohio
+ont_16_city_test_159,SEMANTIC,0.97,"(Albany,_Oregon, isPartOf, Linn_County,_Oregon)","Albany,_Oregon",isPartOf,"Linn_County,_Oregon","(Albany,_Oregon, countySeat, Linn_County,_Oregon)","Albany,_Oregon",countySeat,"Linn_County,_Oregon"
+ont_16_city_test_159,SEMANTIC,0.97,"(Albany,_Oregon, country, United_States)","Albany,_Oregon",country,United_States,"(Albany,_Oregon, isPartOf, United_States)","Albany,_Oregon",isPartOf,United_States
+ont_16_city_test_159,MISSING,,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,,,,
+ont_16_city_test_159,EXTRA,,,,,,"(Albany,_Oregon, ethnicGroup, Asian_Americans)","Albany,_Oregon",ethnicGroup,Asian_Americans
+ont_16_city_test_159,EXTRA,,,,,,"(Albany,_Oregon, state, Oregon)","Albany,_Oregon",state,Oregon
+ont_16_city_test_16,SEMANTIC,0.95,"(Alexandria,_Indiana, isPartOf, Indiana)","Alexandria,_Indiana",isPartOf,Indiana,"(Alexandria, state, Indiana)",Alexandria,state,Indiana
+ont_16_city_test_16,MISSING,,"(Indiana, capital, Indianapolis)",Indiana,capital,Indianapolis,,,,
+ont_16_city_test_16,MISSING,,"(Alexandria,_Indiana, isPartOf, Monroe_Township,_Madison_County,_Indiana)","Alexandria,_Indiana",isPartOf,"Monroe_Township,_Madison_County,_Indiana",,,,
+ont_16_city_test_16,EXTRA,,,,,,"(Alexandria, location, Madison_County,_Indiana)",Alexandria,location,"Madison_County,_Indiana"
+ont_16_city_test_160,EXACT,1.00,"(Albany,_Oregon, country, United_States)","Albany,_Oregon",country,United_States,"(Albany,_Oregon, country, United_States)","Albany,_Oregon",country,United_States
+ont_16_city_test_160,MISSING,,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,,,,
+ont_16_city_test_160,MISSING,,"(Albany,_Oregon, isPartOf, Oregon)","Albany,_Oregon",isPartOf,Oregon,,,,
+ont_16_city_test_161,EXACT,1.00,"(Austin,_Texas, leaderTitle, City_Manager)","Austin,_Texas",leaderTitle,City_Manager,"(Austin,_Texas, leaderTitle, city manager)","Austin,_Texas",leaderTitle,city manager
+ont_16_city_test_161,EXACT,1.00,"(Austin,_Texas, country, United_States)","Austin,_Texas",country,United_States,"(Austin,_Texas, country, United_States)","Austin,_Texas",country,United_States
+ont_16_city_test_161,MISSING,,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,,,,
+ont_16_city_test_161,EXTRA,,,,,,"(Austin,_Texas, state, Texas_(steamboat))","Austin,_Texas",state,Texas_(steamboat)
+ont_16_city_test_162,EXACT,1.00,"(United_States, demonym, Americans)",United_States,demonym,Americans,"(United_States, demonym, Americans)",United_States,demonym,Americans
+ont_16_city_test_162,EXACT,1.00,"(Austin,_Texas, country, United_States)","Austin,_Texas",country,United_States,"(Austin,_Texas, country, United_States)","Austin,_Texas",country,United_States
+ont_16_city_test_162,MISSING,,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,,,,
+ont_16_city_test_162,EXTRA,,,,,,"(Austin,_Texas, state, Texas_(steamboat))","Austin,_Texas",state,Texas_(steamboat)
+ont_16_city_test_163,EXACT,1.00,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.","(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C."
+ont_16_city_test_163,EXACT,1.00,"(Akron,_Ohio, country, United_States)","Akron,_Ohio",country,United_States,"(Akron,_Ohio, country, United_States)","Akron,_Ohio",country,United_States
+ont_16_city_test_163,MISSING,,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,,,,
+ont_16_city_test_163,EXTRA,,,,,,"(Akron,_Ohio, ethnicGroup, Asian_Americans)","Akron,_Ohio",ethnicGroup,Asian_Americans
+ont_16_city_test_164,SEMANTIC,0.97,"(Albany,_Oregon, country, United_States)","Albany,_Oregon",country,United_States,"(Albany,_Oregon, state, Oregon)","Albany,_Oregon",state,Oregon
+ont_16_city_test_164,MISSING,,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,,,,
+ont_16_city_test_164,MISSING,,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.",,,,
+ont_16_city_test_165,EXACT,1.00,"(Akron,_Ohio, country, United_States)","Akron,_Ohio",country,United_States,"(Akron,_Ohio, country, United_States)","Akron,_Ohio",country,United_States
+ont_16_city_test_165,MISSING,,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,,,,
+ont_16_city_test_165,MISSING,,"(United_States, language, English_language)",United_States,language,English_language,,,,
+ont_16_city_test_165,EXTRA,,,,,,"(Akron,_Ohio, isPartOf, United_States)","Akron,_Ohio",isPartOf,United_States
+ont_16_city_test_165,EXTRA,,,,,,"(Akron,_Ohio, ethnicGroup, Asian_Americans)","Akron,_Ohio",ethnicGroup,Asian_Americans
+ont_16_city_test_165,EXTRA,,,,,,"(Akron,_Ohio, state, Ohio)","Akron,_Ohio",state,Ohio
+ont_16_city_test_166,EXACT,1.00,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans
+ont_16_city_test_166,EXACT,1.00,"(Albany,_Georgia, country, United_States)","Albany,_Georgia",country,United_States,"(Albany,_Georgia, country, United_States)","Albany,_Georgia",country,United_States
+ont_16_city_test_166,EXACT,1.00,"(United_States, language, English_language)",United_States,language,English_language,"(United_States, language, English_language)",United_States,language,English_language
+ont_16_city_test_167,EXACT,1.00,"(Albuquerque,_New_Mexico, country, United_States)","Albuquerque,_New_Mexico",country,United_States,"(Albuquerque,_New_Mexico, country, United_States)","Albuquerque,_New_Mexico",country,United_States
+ont_16_city_test_167,MISSING,,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,,,,
+ont_16_city_test_167,MISSING,,"(United_States, language, English_language)",United_States,language,English_language,,,,
+ont_16_city_test_167,EXTRA,,,,,,"(Albuquerque,_New_Mexico, state, New_Mexico)","Albuquerque,_New_Mexico",state,New_Mexico
+ont_16_city_test_168,SEMANTIC,0.96,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,"(Asian_Americans, ethnicGroup, Ethnic_group)",Asian_Americans,ethnicGroup,Ethnic_group
+ont_16_city_test_168,SEMANTIC,0.98,"(Albuquerque,_New_Mexico, country, United_States)","Albuquerque,_New_Mexico",country,United_States,"(Albuquerque,_New_Mexico, isPartOf, United_States)","Albuquerque,_New_Mexico",isPartOf,United_States
+ont_16_city_test_168,SEMANTIC,0.98,"(United_States, leader, Barack_Obama)",United_States,leader,Barack_Obama,"(Barack_Obama, leader, United_States)",Barack_Obama,leader,United_States
+ont_16_city_test_169,SEMANTIC,0.97,"(Akron,_Ohio, country, United_States)","Akron,_Ohio",country,United_States,"(Akron,_Ohio, isPartOf, United_States)","Akron,_Ohio",isPartOf,United_States
+ont_16_city_test_169,MISSING,,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,,,,
+ont_16_city_test_169,MISSING,,"(Akron,_Ohio, isPartOf, Summit_County,_Ohio)","Akron,_Ohio",isPartOf,"Summit_County,_Ohio",,,,
+ont_16_city_test_169,EXTRA,,,,,,"(Akron,_Ohio, state, Ohio)","Akron,_Ohio",state,Ohio
+ont_16_city_test_17,SEMANTIC,0.95,"(Indiana, capital, Indianapolis)",Indiana,capital,Indianapolis,"(United_States, capital, Indianapolis)",United_States,capital,Indianapolis
+ont_16_city_test_17,SEMANTIC,0.95,"(Alexandria,_Indiana, isPartOf, Indiana)","Alexandria,_Indiana",isPartOf,Indiana,"(Alexandria, state, Indiana)",Alexandria,state,Indiana
+ont_16_city_test_17,MISSING,,"(Indiana, country, United_States)",Indiana,country,United_States,,,,
+ont_16_city_test_17,EXTRA,,,,,,"(Alexandria, country, United_States)",Alexandria,country,United_States
+ont_16_city_test_170,MISSING,,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,,,,
+ont_16_city_test_170,MISSING,,"(Auburn,_Alabama, isPartOf, Alabama)","Auburn,_Alabama",isPartOf,Alabama,,,,
+ont_16_city_test_170,MISSING,,"(Alabama, country, United_States)",Alabama,country,United_States,,,,
+ont_16_city_test_170,EXTRA,,,,,,"(Auburn_hair, country, United_States)",Auburn_hair,country,United_States
+ont_16_city_test_170,EXTRA,,,,,,"(Auburn_hair, state, Alabama)",Auburn_hair,state,Alabama
+ont_16_city_test_171,EXACT,1.00,"(Albuquerque,_New_Mexico, country, United_States)","Albuquerque,_New_Mexico",country,United_States,"(Albuquerque,_New_Mexico, country, United_States)","Albuquerque,_New_Mexico",country,United_States
+ont_16_city_test_171,MISSING,,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,,,,
+ont_16_city_test_171,MISSING,,"(Albuquerque,_New_Mexico, leaderTitle, United_States_House_of_Representatives)","Albuquerque,_New_Mexico",leaderTitle,United_States_House_of_Representatives,,,,
+ont_16_city_test_171,EXTRA,,,,,,"(Albuquerque,_New_Mexico, state, New_Mexico)","Albuquerque,_New_Mexico",state,New_Mexico
+ont_16_city_test_172,MISSING,,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,,,,
+ont_16_city_test_172,MISSING,,"(Auburn,_Alabama, isPartOf, Alabama)","Auburn,_Alabama",isPartOf,Alabama,,,,
+ont_16_city_test_172,MISSING,,"(Auburn,_Alabama, country, United_States)","Auburn,_Alabama",country,United_States,,,,
+ont_16_city_test_172,EXTRA,,,,,,"(Auburn_hair, country, United_States)",Auburn_hair,country,United_States
+ont_16_city_test_172,EXTRA,,,,,,"(Auburn_hair, state, Alabama)",Auburn_hair,state,Alabama
+ont_16_city_test_173,EXACT,1.00,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.","(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C."
+ont_16_city_test_173,EXACT,1.00,"(Auburn,_Alabama, country, United_States)","Auburn,_Alabama",country,United_States,"(Auburn,_Alabama, country, United_States)","Auburn,_Alabama",country,United_States
+ont_16_city_test_173,MISSING,,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,,,,
+ont_16_city_test_174,EXACT,1.00,"(Albuquerque,_New_Mexico, country, United_States)","Albuquerque,_New_Mexico",country,United_States,"(Albuquerque,_New_Mexico, country, United_States)","Albuquerque,_New_Mexico",country,United_States
+ont_16_city_test_174,EXACT,1.00,"(United_States, demonym, Americans)",United_States,demonym,Americans,"(United_States, demonym, Americans)",United_States,demonym,Americans
+ont_16_city_test_174,MISSING,,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,,,,
+ont_16_city_test_174,EXTRA,,,,,,"(Albuquerque,_New_Mexico, state, New_Mexico)","Albuquerque,_New_Mexico",state,New_Mexico
+ont_16_city_test_175,EXACT,1.00,"(Albuquerque,_New_Mexico, country, United_States)","Albuquerque,_New_Mexico",country,United_States,"(Albuquerque,_New_Mexico, country, United_States)","Albuquerque,_New_Mexico",country,United_States
+ont_16_city_test_175,MISSING,,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,,,,
+ont_16_city_test_175,MISSING,,"(United_States, language, English_language)",United_States,language,English_language,,,,
+ont_16_city_test_175,EXTRA,,,,,,"(Albuquerque,_New_Mexico, state, New_Mexico)","Albuquerque,_New_Mexico",state,New_Mexico
+ont_16_city_test_176,EXACT,1.00,"(Albuquerque,_New_Mexico, country, United_States)","Albuquerque,_New_Mexico",country,United_States,"(Albuquerque,_New_Mexico, country, United_States)","Albuquerque,_New_Mexico",country,United_States
+ont_16_city_test_176,EXACT,1.00,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States
+ont_16_city_test_176,SEMANTIC,0.99,"(United_States, leaderTitle, President_of_the_United_States)",United_States,leaderTitle,President_of_the_United_States,"(United_States, leaderTitle, president)",United_States,leaderTitle,president
+ont_16_city_test_176,EXTRA,,,,,,"(Albuquerque,_New_Mexico, state, New_Mexico)","Albuquerque,_New_Mexico",state,New_Mexico
+ont_16_city_test_177,EXACT,1.00,"(Akron,_Ohio, country, United_States)","Akron,_Ohio",country,United_States,"(Akron,_Ohio, country, United_States)","Akron,_Ohio",country,United_States
+ont_16_city_test_177,MISSING,,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,,,,
+ont_16_city_test_177,MISSING,,"(United_States, language, English_language)",United_States,language,English_language,,,,
+ont_16_city_test_177,EXTRA,,,,,,"(Akron,_Ohio, state, Ohio)","Akron,_Ohio",state,Ohio
+ont_16_city_test_177,EXTRA,,,,,,"(Akron,_Ohio, isPartOf, United_States)","Akron,_Ohio",isPartOf,United_States
+ont_16_city_test_177,EXTRA,,,,,,"(Akron,_Ohio, language, English_language)","Akron,_Ohio",language,English_language
+ont_16_city_test_178,EXACT,1.00,"(United_States, language, English_language)",United_States,language,English_language,"(United_States, language, English_language)",United_States,language,English_language
+ont_16_city_test_178,EXACT,1.00,"(Albany,_Georgia, country, United_States)","Albany,_Georgia",country,United_States,"(Albany,_Georgia, country, United_States)","Albany,_Georgia",country,United_States
+ont_16_city_test_178,EXACT,1.00,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States
+ont_16_city_test_178,EXTRA,,,,,,"(Albany,_Georgia, state, Georgia_(U.S._state))","Albany,_Georgia",state,Georgia_(U.S._state)
+ont_16_city_test_179,EXACT,1.00,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans
+ont_16_city_test_179,EXACT,1.00,"(Albany,_Oregon, country, United_States)","Albany,_Oregon",country,United_States,"(Albany,_Oregon, country, United_States)","Albany,_Oregon",country,United_States
+ont_16_city_test_179,EXACT,1.00,"(United_States, language, English_language)",United_States,language,English_language,"(United_States, language, English_language)",United_States,language,English_language
+ont_16_city_test_18,SEMANTIC,0.97,"(Alexandria,_Indiana, isPartOf, Madison_County,_Indiana)","Alexandria,_Indiana",isPartOf,"Madison_County,_Indiana","(Alexandria, location, Madison_County,_Indiana)",Alexandria,location,"Madison_County,_Indiana"
+ont_16_city_test_18,SEMANTIC,0.95,"(Alexandria,_Indiana, isPartOf, Indiana)","Alexandria,_Indiana",isPartOf,Indiana,"(Alexandria, state, Indiana)",Alexandria,state,Indiana
+ont_16_city_test_18,MISSING,,"(Indiana, country, United_States)",Indiana,country,United_States,,,,
+ont_16_city_test_18,EXTRA,,,,,,"(Alexandria, country, United_States)",Alexandria,country,United_States
+ont_16_city_test_180,SEMANTIC,0.97,"(Albany,_Oregon, country, United_States)","Albany,_Oregon",country,United_States,"(Albany,_Oregon, isPartOf, United_States)","Albany,_Oregon",isPartOf,United_States
+ont_16_city_test_180,MISSING,,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,,,,
+ont_16_city_test_180,MISSING,,"(United_States, language, English_language)",United_States,language,English_language,,,,
+ont_16_city_test_180,EXTRA,,,,,,"(Albany,_Oregon, state, Oregon)","Albany,_Oregon",state,Oregon
+ont_16_city_test_181,EXACT,1.00,"(Akron,_Ohio, country, United_States)","Akron,_Ohio",country,United_States,"(Akron,_Ohio, country, United_States)","Akron,_Ohio",country,United_States
+ont_16_city_test_181,MISSING,,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,,,,
+ont_16_city_test_181,MISSING,,"(United_States, language, English_language)",United_States,language,English_language,,,,
+ont_16_city_test_181,EXTRA,,,,,,"(Akron,_Ohio, state, Ohio)","Akron,_Ohio",state,Ohio
+ont_16_city_test_182,EXACT,1.00,"(Angola,_Indiana, country, United_States)","Angola,_Indiana",country,United_States,"(Angola,_Indiana, country, United_States)","Angola,_Indiana",country,United_States
+ont_16_city_test_182,MISSING,,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,,,,
+ont_16_city_test_182,MISSING,,"(United_States, language, English_language)",United_States,language,English_language,,,,
+ont_16_city_test_182,EXTRA,,,,,,"(Angola,_Indiana, ethnicGroup, Native_Americans_in_the_United_States)","Angola,_Indiana",ethnicGroup,Native_Americans_in_the_United_States
+ont_16_city_test_182,EXTRA,,,,,,"(Angola, state, Indiana)",Angola,state,Indiana
+ont_16_city_test_182,EXTRA,,,,,,"(Angola,_Indiana, language, English_language)","Angola,_Indiana",language,English_language
+ont_16_city_test_183,EXACT,1.00,"(Albuquerque,_New_Mexico, country, United_States)","Albuquerque,_New_Mexico",country,United_States,"(Albuquerque,_New_Mexico, country, United_States)","Albuquerque,_New_Mexico",country,United_States
+ont_16_city_test_183,SEMANTIC,0.97,"(Albuquerque,_New_Mexico, leaderTitle, United_States_House_of_Representatives)","Albuquerque,_New_Mexico",leaderTitle,United_States_House_of_Representatives,"(Albuquerque,_New_Mexico, leader, United_States_House_of_Representatives)","Albuquerque,_New_Mexico",leader,United_States_House_of_Representatives
+ont_16_city_test_183,MISSING,,"(United_States, leader, Barack_Obama)",United_States,leader,Barack_Obama,,,,
+ont_16_city_test_183,EXTRA,,,,,,"(Albuquerque,_New_Mexico, state, New_Mexico)","Albuquerque,_New_Mexico",state,New_Mexico
+ont_16_city_test_184,EXACT,1.00,"(Austin,_Texas, country, United_States)","Austin,_Texas",country,United_States,"(Austin,_Texas, country, United_States)","Austin,_Texas",country,United_States
+ont_16_city_test_184,SEMANTIC,0.99,"(United_States, leaderTitle, President_of_the_United_States)",United_States,leaderTitle,President_of_the_United_States,"(United_States, leaderTitle, president)",United_States,leaderTitle,president
+ont_16_city_test_184,MISSING,,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,,,,
+ont_16_city_test_184,EXTRA,,,,,,"(Austin,_Texas, state, Texas_(steamboat))","Austin,_Texas",state,Texas_(steamboat)
+ont_16_city_test_185,EXACT,1.00,"(Austin,_Texas, country, United_States)","Austin,_Texas",country,United_States,"(Austin,_Texas, country, United_States)","Austin,_Texas",country,United_States
+ont_16_city_test_185,SEMANTIC,0.99,"(United_States, leaderTitle, President_of_the_United_States)",United_States,leaderTitle,President_of_the_United_States,"(United_States, leaderTitle, president)",United_States,leaderTitle,president
+ont_16_city_test_185,MISSING,,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,,,,
+ont_16_city_test_185,EXTRA,,,,,,"(Austin,_Texas, state, Texas_(steamboat))","Austin,_Texas",state,Texas_(steamboat)
+ont_16_city_test_186,SEMANTIC,0.97,"(Anaheim,_California, leaderTitle, United_States_House_of_Representatives)","Anaheim,_California",leaderTitle,United_States_House_of_Representatives,"(Anaheim,_California, leader, United_States_House_of_Representatives)","Anaheim,_California",leader,United_States_House_of_Representatives
+ont_16_city_test_186,SEMANTIC,0.98,"(Anaheim,_California, isPartOf, California)","Anaheim,_California",isPartOf,California,"(Anaheim,_California, state, California)","Anaheim,_California",state,California
+ont_16_city_test_186,MISSING,,"(United_States_House_of_Representatives, location, Washington,_D.C.)",United_States_House_of_Representatives,location,"Washington,_D.C.",,,,
+ont_16_city_test_187,SEMANTIC,0.97,"(Austin,_Texas, isPartOf, Williamson_County,_Texas)","Austin,_Texas",isPartOf,"Williamson_County,_Texas","(Austin,_Texas, location, Williamson_County,_Texas)","Austin,_Texas",location,"Williamson_County,_Texas"
+ont_16_city_test_187,SEMANTIC,0.96,"(Austin,_Texas, isPartOf, Travis_County,_Texas)","Austin,_Texas",isPartOf,"Travis_County,_Texas","(Austin,_Texas, countySeat, Travis_County,_Texas)","Austin,_Texas",countySeat,"Travis_County,_Texas"
+ont_16_city_test_187,MISSING,,"(Williamson_County,_Texas, largestCity, Round_Rock,_Texas)","Williamson_County,_Texas",largestCity,"Round_Rock,_Texas",,,,
+ont_16_city_test_187,EXTRA,,,,,,"(Austin,_Texas, state, Texas_(steamboat))","Austin,_Texas",state,Texas_(steamboat)
+ont_16_city_test_188,SEMANTIC,0.98,"(Abilene,_Texas, populationDensity, 429.9 (inhabitants per square kilometre))","Abilene,_Texas",populationDensity,429.9 (inhabitants per square kilometre),"(Abilene,_Texas, populationDensity, 429.9)","Abilene,_Texas",populationDensity,429.9
+ont_16_city_test_188,SEMANTIC,0.96,"(Abilene,_Texas, areaTotal, 286.5 (square kilometres))","Abilene,_Texas",areaTotal,286.5 (square kilometres),"(Abilene,_Texas, areaTotal, 286.5)","Abilene,_Texas",areaTotal,286.5
+ont_16_city_test_188,MISSING,,"(Abilene,_Texas, elevationAboveTheSeaLevel, 524.0)","Abilene,_Texas",elevationAboveTheSeaLevel,524.0,,,,
+ont_16_city_test_188,EXTRA,,,,,,"(Abilene,_Texas, utcOffset, 524)","Abilene,_Texas",utcOffset,524
+ont_16_city_test_189,EXACT,1.00,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.","(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C."
+ont_16_city_test_189,SEMANTIC,0.96,"(Abilene,_Texas, isPartOf, Texas)","Abilene,_Texas",isPartOf,Texas,"(Abilene,_Texas, country, United_States)","Abilene,_Texas",country,United_States
+ont_16_city_test_189,MISSING,,"(Texas, country, United_States)",Texas,country,United_States,,,,
+ont_16_city_test_189,EXTRA,,,,,,"(Abilene,_Texas, state, Texas_(steamboat))","Abilene,_Texas",state,Texas_(steamboat)
+ont_16_city_test_19,SEMANTIC,0.95,"(Alexandria,_Indiana, isPartOf, Indiana)","Alexandria,_Indiana",isPartOf,Indiana,"(Alexandria, state, Indiana)",Alexandria,state,Indiana
+ont_16_city_test_19,MISSING,,"(Indiana, country, United_States)",Indiana,country,United_States,,,,
+ont_16_city_test_19,MISSING,,"(Alexandria,_Indiana, isPartOf, Monroe_Township,_Madison_County,_Indiana)","Alexandria,_Indiana",isPartOf,"Monroe_Township,_Madison_County,_Indiana",,,,
+ont_16_city_test_19,EXTRA,,,,,,"(Alexandria, country, United_States)",Alexandria,country,United_States
+ont_16_city_test_19,EXTRA,,,,,,"(Alexandria, location, Monroe_Township,_Middlesex_County,_New_Jersey)",Alexandria,location,"Monroe_Township,_Middlesex_County,_New_Jersey"
+ont_16_city_test_19,EXTRA,,,,,,"(Alexandria, isPartOf, United_States)",Alexandria,isPartOf,United_States
+ont_16_city_test_19,EXTRA,,,,,,"(Alexandria, location, Madison_County,_Indiana)",Alexandria,location,"Madison_County,_Indiana"
+ont_16_city_test_190,EXACT,1.00,"(Albany,_Georgia, country, United_States)","Albany,_Georgia",country,United_States,"(Albany,_Georgia, country, United_States)","Albany,_Georgia",country,United_States
+ont_16_city_test_190,SEMANTIC,0.97,"(Albany,_Georgia, isPartOf, Dougherty_County,_Georgia)","Albany,_Georgia",isPartOf,"Dougherty_County,_Georgia","(Albany,_Georgia, countySeat, Dougherty_County,_Georgia)","Albany,_Georgia",countySeat,"Dougherty_County,_Georgia"
+ont_16_city_test_190,MISSING,,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,,,,
+ont_16_city_test_190,EXTRA,,,,,,"(Albany,_Georgia, state, Georgia_(U.S._state))","Albany,_Georgia",state,Georgia_(U.S._state)
+ont_16_city_test_190,EXTRA,,,,,,"(Albany,_Georgia, type, City)","Albany,_Georgia",type,City
+ont_16_city_test_190,EXTRA,,,,,,"(Albany,_Georgia, ethnicGroup, African_Americans)","Albany,_Georgia",ethnicGroup,African_Americans
+ont_16_city_test_191,EXACT,1.00,"(Albany,_Oregon, country, United_States)","Albany,_Oregon",country,United_States,"(Albany,_Oregon, country, United_States)","Albany,_Oregon",country,United_States
+ont_16_city_test_191,SEMANTIC,0.97,"(Albany,_Oregon, isPartOf, Linn_County,_Oregon)","Albany,_Oregon",isPartOf,"Linn_County,_Oregon","(Albany,_Oregon, countySeat, Linn_County,_Oregon)","Albany,_Oregon",countySeat,"Linn_County,_Oregon"
+ont_16_city_test_191,SEMANTIC,0.98,"(Albany,_Oregon, isPartOf, Benton_County,_Oregon)","Albany,_Oregon",isPartOf,"Benton_County,_Oregon","(Albany,_Oregon, location, Benton_County,_Oregon)","Albany,_Oregon",location,"Benton_County,_Oregon"
+ont_16_city_test_191,EXTRA,,,,,,"(Albany,_Oregon, type, City)","Albany,_Oregon",type,City
+ont_16_city_test_191,EXTRA,,,,,,"(Albany,_Oregon, state, Oregon)","Albany,_Oregon",state,Oregon
+ont_16_city_test_192,EXACT,1.00,"(Albuquerque,_New_Mexico, country, United_States)","Albuquerque,_New_Mexico",country,United_States,"(Albuquerque,_New_Mexico, country, United_States)","Albuquerque,_New_Mexico",country,United_States
+ont_16_city_test_192,MISSING,,"(Albuquerque,_New_Mexico, leaderTitle, New_Mexico_House_of_Representatives)","Albuquerque,_New_Mexico",leaderTitle,New_Mexico_House_of_Representatives,,,,
+ont_16_city_test_192,MISSING,,"(New_Mexico_House_of_Representatives, leader, Don_Tripp)",New_Mexico_House_of_Representatives,leader,Don_Tripp,,,,
+ont_16_city_test_192,EXTRA,,,,,,"(Albuquerque,_New_Mexico, state, New_Mexico)","Albuquerque,_New_Mexico",state,New_Mexico
+ont_16_city_test_193,EXACT,1.00,"(Albuquerque,_New_Mexico, country, United_States)","Albuquerque,_New_Mexico",country,United_States,"(Albuquerque,_New_Mexico, country, United_States)","Albuquerque,_New_Mexico",country,United_States
+ont_16_city_test_193,MISSING,,"(Albuquerque_City_Council, leader, Richard_J._Berry)",Albuquerque_City_Council,leader,Richard_J._Berry,,,,
+ont_16_city_test_193,MISSING,,"(Albuquerque,_New_Mexico, leaderTitle, Albuquerque_City_Council)","Albuquerque,_New_Mexico",leaderTitle,Albuquerque_City_Council,,,,
+ont_16_city_test_193,EXTRA,,,,,,"(Albuquerque,_New_Mexico, governmentType, Albuquerque_City_Council)","Albuquerque,_New_Mexico",governmentType,Albuquerque_City_Council
+ont_16_city_test_193,EXTRA,,,,,,"(Albuquerque,_New_Mexico, state, New_Mexico)","Albuquerque,_New_Mexico",state,New_Mexico
+ont_16_city_test_194,EXACT,1.00,"(Alpharetta,_Georgia, country, United_States)","Alpharetta,_Georgia",country,United_States,"(Alpharetta,_Georgia, country, United_States)","Alpharetta,_Georgia",country,United_States
+ont_16_city_test_194,SEMANTIC,0.98,"(Alpharetta,_Georgia, isPartOf, Georgia_(U.S._state))","Alpharetta,_Georgia",isPartOf,Georgia_(U.S._state),"(Alpharetta,_Georgia, state, Georgia_(U.S._state))","Alpharetta,_Georgia",state,Georgia_(U.S._state)
+ont_16_city_test_194,MISSING,,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,,,,
+ont_16_city_test_195,SEMANTIC,0.98,"(Amarillo,_Texas, isPartOf, Potter_County,_Texas)","Amarillo,_Texas",isPartOf,"Potter_County,_Texas","(Amarillo,_Texas, location, Potter_County,_Texas)","Amarillo,_Texas",location,"Potter_County,_Texas"
+ont_16_city_test_195,SEMANTIC,0.98,"(Amarillo,_Texas, isPartOf, Randall_County,_Texas)","Amarillo,_Texas",isPartOf,"Randall_County,_Texas","(Amarillo,_Texas, location, Randall_County,_Texas)","Amarillo,_Texas",location,"Randall_County,_Texas"
+ont_16_city_test_195,MISSING,,"(Potter_County,_Texas, country, United_States)","Potter_County,_Texas",country,United_States,,,,
+ont_16_city_test_195,EXTRA,,,,,,"(Amarillo,_Texas, country, United_States)","Amarillo,_Texas",country,United_States
+ont_16_city_test_195,EXTRA,,,,,,"(Amarillo,_Texas, state, Texas_(steamboat))","Amarillo,_Texas",state,Texas_(steamboat)
+ont_16_city_test_196,SEMANTIC,0.97,"(Amarillo,_Texas, isPartOf, Potter_County,_Texas)","Amarillo,_Texas",isPartOf,"Potter_County,_Texas","(Amarillo,_Texas, countySeat, Potter_County,_Texas)","Amarillo,_Texas",countySeat,"Potter_County,_Texas"
+ont_16_city_test_196,MISSING,,"(Potter_County,_Texas, country, United_States)","Potter_County,_Texas",country,United_States,,,,
+ont_16_city_test_196,MISSING,,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,,,,
+ont_16_city_test_196,EXTRA,,,,,,"(Amarillo,_Texas, isPartOf, United_States)","Amarillo,_Texas",isPartOf,United_States
+ont_16_city_test_196,EXTRA,,,,,,"(Amarillo,_Texas, state, Texas_(steamboat))","Amarillo,_Texas",state,Texas_(steamboat)
+ont_16_city_test_197,EXACT,1.00,"(Amarillo,_Texas, country, United_States)","Amarillo,_Texas",country,United_States,"(Amarillo,_Texas, country, United_States)","Amarillo,_Texas",country,United_States
+ont_16_city_test_197,SEMANTIC,0.98,"(Amarillo,_Texas, isPartOf, Randall_County,_Texas)","Amarillo,_Texas",isPartOf,"Randall_County,_Texas","(Amarillo,_Texas, location, Randall_County,_Texas)","Amarillo,_Texas",location,"Randall_County,_Texas"
+ont_16_city_test_197,MISSING,,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,,,,
+ont_16_city_test_197,EXTRA,,,,,,"(Amarillo,_Texas, state, Texas_(steamboat))","Amarillo,_Texas",state,Texas_(steamboat)
+ont_16_city_test_198,MISSING,,"(Orange_County,_California, isPartOf, Greater_Los_Angeles_Area)","Orange_County,_California",isPartOf,Greater_Los_Angeles_Area,,,,
+ont_16_city_test_198,MISSING,,"(Anaheim,_California, isPartOf, Orange_County,_California)","Anaheim,_California",isPartOf,"Orange_County,_California",,,,
+ont_16_city_test_198,MISSING,,"(Orange_County,_California, country, United_States)","Orange_County,_California",country,United_States,,,,
+ont_16_city_test_198,EXTRA,,,,,,"(Anaheim,_California, location, Greater_Los_Angeles)","Anaheim,_California",location,Greater_Los_Angeles
+ont_16_city_test_198,EXTRA,,,,,,"(Anaheim,_California, country, United_States)","Anaheim,_California",country,United_States
+ont_16_city_test_199,SEMANTIC,0.97,"(Anaheim,_California, isPartOf, Orange_County,_California)","Anaheim,_California",isPartOf,"Orange_County,_California","(Anaheim,_California, location, Orange_County,_California)","Anaheim,_California",location,"Orange_County,_California"
+ont_16_city_test_199,MISSING,,"(United_States_House_of_Representatives, location, United_States)",United_States_House_of_Representatives,location,United_States,,,,
+ont_16_city_test_199,MISSING,,"(Anaheim,_California, leaderTitle, United_States_House_of_Representatives)","Anaheim,_California",leaderTitle,United_States_House_of_Representatives,,,,
+ont_16_city_test_199,EXTRA,,,,,,"(Anaheim,_California, state, California)","Anaheim,_California",state,California
+ont_16_city_test_199,EXTRA,,,,,,"(Anaheim,_California, governmentType, United_States_House_of_Representatives)","Anaheim,_California",governmentType,United_States_House_of_Representatives
+ont_16_city_test_2,SEMANTIC,0.95,"(Albany,_Georgia, areaTotal, 144.7 (square kilometres))","Albany,_Georgia",areaTotal,144.7 (square kilometres),"(Albany,_Georgia, areaTotal, 144.7)","Albany,_Georgia",areaTotal,144.7
+ont_16_city_test_2,SEMANTIC,0.98,"(Albany,_Georgia, populationDensity, 535.0 (inhabitants per square kilometre))","Albany,_Georgia",populationDensity,535.0 (inhabitants per square kilometre),"(Albany,_Georgia, populationDensity, 535)","Albany,_Georgia",populationDensity,535
+ont_16_city_test_2,MISSING,,"(Albany,_Georgia, elevationAboveTheSeaLevel, 62.0)","Albany,_Georgia",elevationAboveTheSeaLevel,62.0,,,,
+ont_16_city_test_2,EXTRA,,,,,,"(Albany,_Georgia, utcOffset, 62)","Albany,_Georgia",utcOffset,62
+ont_16_city_test_20,SEMANTIC,0.97,"(Alexandria,_Indiana, isPartOf, Madison_County,_Indiana)","Alexandria,_Indiana",isPartOf,"Madison_County,_Indiana","(Alexandria, location, Madison_County,_Indiana)",Alexandria,location,"Madison_County,_Indiana"
+ont_16_city_test_20,SEMANTIC,0.95,"(Alexandria,_Indiana, isPartOf, Indiana)","Alexandria,_Indiana",isPartOf,Indiana,"(Alexandria, state, Indiana)",Alexandria,state,Indiana
+ont_16_city_test_20,MISSING,,"(Madison_County,_Indiana, country, United_States)","Madison_County,_Indiana",country,United_States,,,,
+ont_16_city_test_20,EXTRA,,,,,,"(Alexandria, country, United_States)",Alexandria,country,United_States
+ont_16_city_test_200,SEMANTIC,0.97,"(Angola,_Indiana, isPartOf, Steuben_County,_Indiana)","Angola,_Indiana",isPartOf,"Steuben_County,_Indiana","(Angola, countySeat, Steuben_County,_Indiana)",Angola,countySeat,"Steuben_County,_Indiana"
+ont_16_city_test_200,SEMANTIC,0.96,"(Angola,_Indiana, country, United_States)","Angola,_Indiana",country,United_States,"(Angola, state, Indiana)",Angola,state,Indiana
+ont_16_city_test_200,MISSING,,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,,,,
+ont_16_city_test_200,EXTRA,,,,,,"(Angola, isPartOf, United_States)",Angola,isPartOf,United_States
+ont_16_city_test_201,SEMANTIC,0.95,"(Atlanta, populationDensity, 1299.0 (inhabitants per square kilometre))",Atlanta,populationDensity,1299.0 (inhabitants per square kilometre),"(Atlanta, populationDensity, 1299)",Atlanta,populationDensity,1299
+ont_16_city_test_201,SEMANTIC,0.96,"(Atlanta, areaCode, 404, 678, 470)",Atlanta,areaCode,"404, 678, 470","(Atlanta, areaCode, 470)",Atlanta,areaCode,470
+ont_16_city_test_201,MISSING,,"(Atlanta, areaTotal, 347.1 (square kilometres))",Atlanta,areaTotal,347.1 (square kilometres),,,,
+ont_16_city_test_201,EXTRA,,,,,,"(Atlanta, areaCode, 678)",Atlanta,areaCode,678
+ont_16_city_test_201,EXTRA,,,,,,"(Atlanta, areaCode, 404)",Atlanta,areaCode,404
+ont_16_city_test_201,EXTRA,,,,,,"(Atlanta, areaTotal, 347.1)",Atlanta,areaTotal,347.1
+ont_16_city_test_202,EXACT,1.00,"(Atlanta, country, United_States)",Atlanta,country,United_States,"(Atlanta, country, United_States)",Atlanta,country,United_States
+ont_16_city_test_202,SEMANTIC,0.97,"(Atlanta, isPartOf, Georgia_(U.S._state))",Atlanta,isPartOf,Georgia_(U.S._state),"(Atlanta, state, Georgia_(U.S._state))",Atlanta,state,Georgia_(U.S._state)
+ont_16_city_test_202,MISSING,,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,,,,
+ont_16_city_test_202,EXTRA,,,,,,"(Atlanta, location, United_States)",Atlanta,location,United_States
+ont_16_city_test_203,EXACT,1.00,"(Atlanta, country, United_States)",Atlanta,country,United_States,"(Atlanta, country, United_States)",Atlanta,country,United_States
+ont_16_city_test_203,SEMANTIC,0.97,"(Atlanta, isPartOf, DeKalb_County,_Georgia)",Atlanta,isPartOf,"DeKalb_County,_Georgia","(Atlanta, location, DeKalb_County,_Georgia)",Atlanta,location,"DeKalb_County,_Georgia"
+ont_16_city_test_203,MISSING,,"(Atlanta, isPartOf, Georgia)",Atlanta,isPartOf,Georgia,,,,
+ont_16_city_test_203,EXTRA,,,,,,"(Atlanta, state, Georgia_(U.S._state))",Atlanta,state,Georgia_(U.S._state)
+ont_16_city_test_204,MISSING,,"(Auburn,_Alabama, isPartOf, Lee_County,_Alabama)","Auburn,_Alabama",isPartOf,"Lee_County,_Alabama",,,,
+ont_16_city_test_204,MISSING,,"(Lee_County,_Alabama, state, Alabama)","Lee_County,_Alabama",state,Alabama,,,,
+ont_16_city_test_204,MISSING,,"(Auburn,_Alabama, country, United_States)","Auburn,_Alabama",country,United_States,,,,
+ont_16_city_test_204,EXTRA,,,,,,"(Auburn_hair, country, United_States)",Auburn_hair,country,United_States
+ont_16_city_test_204,EXTRA,,,,,,"(Auburn_hair, state, Alabama)",Auburn_hair,state,Alabama
+ont_16_city_test_204,EXTRA,,,,,,"(Auburn_hair, location, Lee_County,_Alabama)",Auburn_hair,location,"Lee_County,_Alabama"
+ont_16_city_test_205,MISSING,,"(Auburn,_Washington, isPartOf, Washington_(state))","Auburn,_Washington",isPartOf,Washington_(state),,,,
+ont_16_city_test_205,MISSING,,"(Washington_(state), capital, Olympia,_Washington)",Washington_(state),capital,"Olympia,_Washington",,,,
+ont_16_city_test_205,MISSING,,"(Auburn,_Washington, country, United_States)","Auburn,_Washington",country,United_States,,,,
+ont_16_city_test_205,EXTRA,,,,,,"(Auburn_hair, state, Washington_(state))",Auburn_hair,state,Washington_(state)
+ont_16_city_test_205,EXTRA,,,,,,"(Auburn_hair, isPartOf, United_States)",Auburn_hair,isPartOf,United_States
+ont_16_city_test_206,EXACT,1.00,"(United_States, demonym, Americans)",United_States,demonym,Americans,"(United_States, demonym, Americans)",United_States,demonym,Americans
+ont_16_city_test_206,EXACT,1.00,"(Austin,_Texas, country, United_States)","Austin,_Texas",country,United_States,"(Austin,_Texas, country, United_States)","Austin,_Texas",country,United_States
+ont_16_city_test_206,MISSING,,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,,,,
+ont_16_city_test_206,EXTRA,,,,,,"(Austin,_Texas, ethnicGroup, African_Americans)","Austin,_Texas",ethnicGroup,African_Americans
+ont_16_city_test_207,SEMANTIC,0.98,"(Anderson,_Indiana, isPartOf, Indiana)","Anderson,_Indiana",isPartOf,Indiana,"(Anderson,_Indiana, isPartOf, United_States)","Anderson,_Indiana",isPartOf,United_States
+ont_16_city_test_207,SEMANTIC,0.98,"(Anderson,_Indiana, isPartOf, Madison_County,_Indiana)","Anderson,_Indiana",isPartOf,"Madison_County,_Indiana","(Anderson,_Indiana, location, Madison_County,_Indiana)","Anderson,_Indiana",location,"Madison_County,_Indiana"
+ont_16_city_test_207,MISSING,,"(Indiana, country, United_States)",Indiana,country,United_States,,,,
+ont_16_city_test_207,EXTRA,,,,,,"(Anderson,_Indiana, state, Indiana)","Anderson,_Indiana",state,Indiana
+ont_16_city_test_208,SEMANTIC,0.97,"(Alexandria,_Indiana, isPartOf, Madison_County,_Indiana)","Alexandria,_Indiana",isPartOf,"Madison_County,_Indiana","(Alexandria, location, Madison_County,_Indiana)",Alexandria,location,"Madison_County,_Indiana"
+ont_16_city_test_208,MISSING,,"(Madison_County,_Indiana, largestCity, Anderson,_Indiana)","Madison_County,_Indiana",largestCity,"Anderson,_Indiana",,,,
+ont_16_city_test_208,MISSING,,"(Madison_County,_Indiana, country, United_States)","Madison_County,_Indiana",country,United_States,,,,
+ont_16_city_test_208,EXTRA,,,,,,"(Anderson,_Indiana, countySeat, Madison_County,_Indiana)","Anderson,_Indiana",countySeat,"Madison_County,_Indiana"
+ont_16_city_test_208,EXTRA,,,,,,"(Alexandria,_Virginia, isPartOf, United_States)","Alexandria,_Virginia",isPartOf,United_States
+ont_16_city_test_208,EXTRA,,,,,,"(Alexandria, state, Indiana)",Alexandria,state,Indiana
+ont_16_city_test_209,EXACT,1.00,"(Abilene,_Texas, country, United_States)","Abilene,_Texas",country,United_States,"(Abilene,_Texas, country, United_States)","Abilene,_Texas",country,United_States
+ont_16_city_test_209,SEMANTIC,0.98,"(Abilene,_Texas, isPartOf, Jones_County,_Texas)","Abilene,_Texas",isPartOf,"Jones_County,_Texas","(Abilene,_Texas, location, Jones_County,_Texas)","Abilene,_Texas",location,"Jones_County,_Texas"
+ont_16_city_test_209,MISSING,,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.",,,,
+ont_16_city_test_209,EXTRA,,,,,,"(Abilene,_Texas, state, Texas_(steamboat))","Abilene,_Texas",state,Texas_(steamboat)
+ont_16_city_test_21,EXACT,1.00,"(Alpharetta,_Georgia, country, United_States)","Alpharetta,_Georgia",country,United_States,"(Alpharetta,_Georgia, country, United_States)","Alpharetta,_Georgia",country,United_States
+ont_16_city_test_21,SEMANTIC,0.94,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,"(African_Americans, ethnicGroup, Ethnic_group)",African_Americans,ethnicGroup,Ethnic_group
+ont_16_city_test_21,MISSING,,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.",,,,
+ont_16_city_test_21,EXTRA,,,,,,"(United_States, capital, Country_music)",United_States,capital,Country_music
+ont_16_city_test_21,EXTRA,,,,,,"(Alpharetta,_Georgia, state, Georgia_(U.S._state))","Alpharetta,_Georgia",state,Georgia_(U.S._state)
+ont_16_city_test_210,EXACT,1.00,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.","(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C."
+ont_16_city_test_210,EXACT,1.00,"(Abilene,_Texas, country, United_States)","Abilene,_Texas",country,United_States,"(Abilene,_Texas, country, United_States)","Abilene,_Texas",country,United_States
+ont_16_city_test_210,SEMANTIC,0.97,"(Abilene,_Texas, isPartOf, Taylor_County,_Texas)","Abilene,_Texas",isPartOf,"Taylor_County,_Texas","(Abilene,_Texas, location, Taylor_County,_Texas)","Abilene,_Texas",location,"Taylor_County,_Texas"
+ont_16_city_test_210,EXTRA,,,,,,"(Abilene,_Texas, state, Texas_(steamboat))","Abilene,_Texas",state,Texas_(steamboat)
+ont_16_city_test_211,EXACT,1.00,"(Albany,_Oregon, country, United_States)","Albany,_Oregon",country,United_States,"(Albany,_Oregon, country, United_States)","Albany,_Oregon",country,United_States
+ont_16_city_test_211,SEMANTIC,0.97,"(Albany,_Oregon, isPartOf, Oregon)","Albany,_Oregon",isPartOf,Oregon,"(Albany,_Oregon, state, Oregon)","Albany,_Oregon",state,Oregon
+ont_16_city_test_211,MISSING,,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.",,,,
+ont_16_city_test_212,MISSING,,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.",,,,
+ont_16_city_test_212,MISSING,,"(King_County,_Washington, country, United_States)","King_County,_Washington",country,United_States,,,,
+ont_16_city_test_212,MISSING,,"(Auburn,_Washington, isPartOf, King_County,_Washington)","Auburn,_Washington",isPartOf,"King_County,_Washington",,,,
+ont_16_city_test_212,EXTRA,,,,,,"(Auburn_hair, country, United_States)",Auburn_hair,country,United_States
+ont_16_city_test_212,EXTRA,,,,,,"(Auburn_hair, state, Washington_(state))",Auburn_hair,state,Washington_(state)
+ont_16_city_test_213,EXACT,1.00,"(Albuquerque,_New_Mexico, country, United_States)","Albuquerque,_New_Mexico",country,United_States,"(Albuquerque,_New_Mexico, country, United_States)","Albuquerque,_New_Mexico",country,United_States
+ont_16_city_test_213,MISSING,,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,,,,
+ont_16_city_test_213,MISSING,,"(United_States, language, English_language)",United_States,language,English_language,,,,
+ont_16_city_test_213,EXTRA,,,,,,"(Albuquerque,_New_Mexico, isPartOf, United_States)","Albuquerque,_New_Mexico",isPartOf,United_States
+ont_16_city_test_213,EXTRA,,,,,,"(Albuquerque,_New_Mexico, state, New_Mexico)","Albuquerque,_New_Mexico",state,New_Mexico
+ont_16_city_test_214,EXACT,1.00,"(Albany,_Oregon, country, United_States)","Albany,_Oregon",country,United_States,"(Albany,_Oregon, country, United_States)","Albany,_Oregon",country,United_States
+ont_16_city_test_214,MISSING,,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,,,,
+ont_16_city_test_214,MISSING,,"(United_States, language, English_language)",United_States,language,English_language,,,,
+ont_16_city_test_214,EXTRA,,,,,,"(Albany,_Oregon, state, Oregon)","Albany,_Oregon",state,Oregon
+ont_16_city_test_215,EXACT,1.00,"(Albuquerque,_New_Mexico, country, United_States)","Albuquerque,_New_Mexico",country,United_States,"(Albuquerque,_New_Mexico, country, United_States)","Albuquerque,_New_Mexico",country,United_States
+ont_16_city_test_215,MISSING,,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,,,,
+ont_16_city_test_215,MISSING,,"(United_States, leader, Barack_Obama)",United_States,leader,Barack_Obama,,,,
+ont_16_city_test_215,EXTRA,,,,,,"(Albuquerque,_New_Mexico, state, New_Mexico)","Albuquerque,_New_Mexico",state,New_Mexico
+ont_16_city_test_216,SEMANTIC,0.98,"(Angola,_Indiana, country, United_States)","Angola,_Indiana",country,United_States,"(Angola,_Indiana, isPartOf, United_States)","Angola,_Indiana",isPartOf,United_States
+ont_16_city_test_216,MISSING,,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,,,,
+ont_16_city_test_216,MISSING,,"(United_States, language, English_language)",United_States,language,English_language,,,,
+ont_16_city_test_216,EXTRA,,,,,,"(Angola,_Indiana, ethnicGroup, Asian_Americans)","Angola,_Indiana",ethnicGroup,Asian_Americans
+ont_16_city_test_216,EXTRA,,,,,,"(Angola,_Indiana, language, English_language)","Angola,_Indiana",language,English_language
+ont_16_city_test_217,SEMANTIC,0.97,"(Anaheim,_California, leaderTitle, United_States_House_of_Representatives)","Anaheim,_California",leaderTitle,United_States_House_of_Representatives,"(Anaheim,_California, leader, United_States_House_of_Representatives)","Anaheim,_California",leader,United_States_House_of_Representatives
+ont_16_city_test_217,MISSING,,"(United_States_House_of_Representatives, isPartOf, United_States_Congress)",United_States_House_of_Representatives,isPartOf,United_States_Congress,,,,
+ont_16_city_test_217,MISSING,,"(United_States_House_of_Representatives, location, United_States)",United_States_House_of_Representatives,location,United_States,,,,
+ont_16_city_test_217,EXTRA,,,,,,"(Anaheim,_California, state, California)","Anaheim,_California",state,California
+ont_16_city_test_217,EXTRA,,,,,,"(Anaheim,_California, country, United_States)","Anaheim,_California",country,United_States
+ont_16_city_test_22,SEMANTIC,0.98,"(Alpharetta,_Georgia, country, United_States)","Alpharetta,_Georgia",country,United_States,"(Alpharetta,_Georgia, isPartOf, United_States)","Alpharetta,_Georgia",isPartOf,United_States
+ont_16_city_test_22,SEMANTIC,0.98,"(Alpharetta,_Georgia, isPartOf, Fulton_County,_Georgia)","Alpharetta,_Georgia",isPartOf,"Fulton_County,_Georgia","(Alpharetta,_Georgia, location, Fulton_County,_Georgia)","Alpharetta,_Georgia",location,"Fulton_County,_Georgia"
+ont_16_city_test_22,MISSING,,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,,,,
+ont_16_city_test_22,EXTRA,,,,,,"(Alpharetta,_Georgia, state, Georgia_(U.S._state))","Alpharetta,_Georgia",state,Georgia_(U.S._state)
+ont_16_city_test_23,EXACT,1.00,"(Alpharetta,_Georgia, country, United_States)","Alpharetta,_Georgia",country,United_States,"(Alpharetta,_Georgia, country, United_States)","Alpharetta,_Georgia",country,United_States
+ont_16_city_test_23,MISSING,,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,,,,
+ont_16_city_test_23,MISSING,,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.",,,,
+ont_16_city_test_24,EXACT,1.00,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.","(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C."
+ont_16_city_test_24,EXACT,1.00,"(Alpharetta,_Georgia, country, United_States)","Alpharetta,_Georgia",country,United_States,"(Alpharetta,_Georgia, country, United_States)","Alpharetta,_Georgia",country,United_States
+ont_16_city_test_24,MISSING,,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,,,,
+ont_16_city_test_24,EXTRA,,,,,,"(Alpharetta,_Georgia, state, Georgia_(U.S._state))","Alpharetta,_Georgia",state,Georgia_(U.S._state)
+ont_16_city_test_25,EXACT,1.00,"(Amarillo,_Texas, country, United_States)","Amarillo,_Texas",country,United_States,"(Amarillo,_Texas, country, United_States)","Amarillo,_Texas",country,United_States
+ont_16_city_test_25,SEMANTIC,0.97,"(Amarillo,_Texas, isPartOf, Potter_County,_Texas)","Amarillo,_Texas",isPartOf,"Potter_County,_Texas","(Amarillo,_Texas, countySeat, Potter_County,_Texas)","Amarillo,_Texas",countySeat,"Potter_County,_Texas"
+ont_16_city_test_25,MISSING,,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,,,,
+ont_16_city_test_25,EXTRA,,,,,,"(Amarillo,_Texas, state, Texas_(steamboat))","Amarillo,_Texas",state,Texas_(steamboat)
+ont_16_city_test_26,EXACT,1.00,"(Amarillo,_Texas, country, United_States)","Amarillo,_Texas",country,United_States,"(Amarillo,_Texas, country, United_States)","Amarillo,_Texas",country,United_States
+ont_16_city_test_26,SEMANTIC,0.97,"(Amarillo,_Texas, isPartOf, Potter_County,_Texas)","Amarillo,_Texas",isPartOf,"Potter_County,_Texas","(Amarillo,_Texas, countySeat, Potter_County,_Texas)","Amarillo,_Texas",countySeat,"Potter_County,_Texas"
+ont_16_city_test_26,MISSING,,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,,,,
+ont_16_city_test_26,EXTRA,,,,,,"(Amarillo,_Texas, state, Texas_(steamboat))","Amarillo,_Texas",state,Texas_(steamboat)
+ont_16_city_test_27,SEMANTIC,0.98,"(Amarillo,_Texas, isPartOf, Randall_County,_Texas)","Amarillo,_Texas",isPartOf,"Randall_County,_Texas","(Amarillo,_Texas, location, Randall_County,_Texas)","Amarillo,_Texas",location,"Randall_County,_Texas"
+ont_16_city_test_27,SEMANTIC,0.97,"(Amarillo,_Texas, isPartOf, Potter_County,_Texas)","Amarillo,_Texas",isPartOf,"Potter_County,_Texas","(Amarillo,_Texas, countySeat, Potter_County,_Texas)","Amarillo,_Texas",countySeat,"Potter_County,_Texas"
+ont_16_city_test_27,MISSING,,"(Randall_County,_Texas, country, United_States)","Randall_County,_Texas",country,United_States,,,,
+ont_16_city_test_27,EXTRA,,,,,,"(Amarillo,_Texas, isPartOf, Us_(2019_film))","Amarillo,_Texas",isPartOf,Us_(2019_film)
+ont_16_city_test_27,EXTRA,,,,,,"(Amarillo,_Texas, location, Texas_(steamboat))","Amarillo,_Texas",location,Texas_(steamboat)
+ont_16_city_test_28,SEMANTIC,0.97,"(Amarillo,_Texas, isPartOf, Potter_County,_Texas)","Amarillo,_Texas",isPartOf,"Potter_County,_Texas","(Amarillo,_Texas, countySeat, Potter_County,_Texas)","Amarillo,_Texas",countySeat,"Potter_County,_Texas"
+ont_16_city_test_28,SEMANTIC,0.98,"(Amarillo,_Texas, isPartOf, United_States)","Amarillo,_Texas",isPartOf,United_States,"(Amarillo,_Texas, country, United_States)","Amarillo,_Texas",country,United_States
+ont_16_city_test_28,MISSING,,"(Potter_County,_Texas, country, United_States)","Potter_County,_Texas",country,United_States,,,,
+ont_16_city_test_28,EXTRA,,,,,,"(Amarillo,_Texas, state, Texas_(steamboat))","Amarillo,_Texas",state,Texas_(steamboat)
+ont_16_city_test_29,SEMANTIC,0.97,"(Amarillo,_Texas, isPartOf, Potter_County,_Texas)","Amarillo,_Texas",isPartOf,"Potter_County,_Texas","(Amarillo,_Texas, countySeat, Potter_County,_Texas)","Amarillo,_Texas",countySeat,"Potter_County,_Texas"
+ont_16_city_test_29,SEMANTIC,0.94,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,"(African_Americans, type, Ethnic_group)",African_Americans,type,Ethnic_group
+ont_16_city_test_29,MISSING,,"(Potter_County,_Texas, country, United_States)","Potter_County,_Texas",country,United_States,,,,
+ont_16_city_test_29,EXTRA,,,,,,"(African_Americans, location, United_States)",African_Americans,location,United_States
+ont_16_city_test_29,EXTRA,,,,,,"(Texas_(steamboat), isPartOf, United_States)",Texas_(steamboat),isPartOf,United_States
+ont_16_city_test_29,EXTRA,,,,,,"(Amarillo,_Texas, state, Texas_(steamboat))","Amarillo,_Texas",state,Texas_(steamboat)
+ont_16_city_test_3,EXACT,1.00,"(Albany,_Georgia, country, United_States)","Albany,_Georgia",country,United_States,"(Albany,_Georgia, country, United_States)","Albany,_Georgia",country,United_States
+ont_16_city_test_3,SEMANTIC,0.98,"(Albany,_Georgia, isPartOf, Dougherty_County,_Georgia)","Albany,_Georgia",isPartOf,"Dougherty_County,_Georgia","(Albany,_Georgia, location, Dougherty_County,_Georgia)","Albany,_Georgia",location,"Dougherty_County,_Georgia"
+ont_16_city_test_3,SEMANTIC,0.98,"(Albany,_Georgia, isPartOf, Georgia_(U.S._state))","Albany,_Georgia",isPartOf,Georgia_(U.S._state),"(Albany,_Georgia, state, Georgia_(U.S._state))","Albany,_Georgia",state,Georgia_(U.S._state)
+ont_16_city_test_3,EXTRA,,,,,,"(Albany,_Georgia, type, City)","Albany,_Georgia",type,City
+ont_16_city_test_30,SEMANTIC,0.97,"(Amarillo,_Texas, isPartOf, Potter_County,_Texas)","Amarillo,_Texas",isPartOf,"Potter_County,_Texas","(Amarillo,_Texas, countySeat, Potter_County,_Texas)","Amarillo,_Texas",countySeat,"Potter_County,_Texas"
+ont_16_city_test_30,MISSING,,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,,,,
+ont_16_city_test_30,MISSING,,"(Potter_County,_Texas, country, United_States)","Potter_County,_Texas",country,United_States,,,,
+ont_16_city_test_30,EXTRA,,,,,,"(Amarillo,_Texas, isPartOf, United_States)","Amarillo,_Texas",isPartOf,United_States
+ont_16_city_test_30,EXTRA,,,,,,"(Amarillo,_Texas, state, Texas_(steamboat))","Amarillo,_Texas",state,Texas_(steamboat)
+ont_16_city_test_31,SEMANTIC,0.96,"(Amarillo,_Texas, isPartOf, Texas)","Amarillo,_Texas",isPartOf,Texas,"(Amarillo,_Texas, country, United_States)","Amarillo,_Texas",country,United_States
+ont_16_city_test_31,SEMANTIC,0.97,"(Amarillo,_Texas, isPartOf, Randall_County,_Texas)","Amarillo,_Texas",isPartOf,"Randall_County,_Texas","(Amarillo,_Texas, countySeat, Randall_County,_Texas)","Amarillo,_Texas",countySeat,"Randall_County,_Texas"
+ont_16_city_test_31,MISSING,,"(Randall_County,_Texas, country, United_States)","Randall_County,_Texas",country,United_States,,,,
+ont_16_city_test_31,EXTRA,,,,,,"(Amarillo,_Texas, state, Texas_(steamboat))","Amarillo,_Texas",state,Texas_(steamboat)
+ont_16_city_test_32,EXACT,1.00,"(Amarillo,_Texas, country, United_States)","Amarillo,_Texas",country,United_States,"(Amarillo,_Texas, country, United_States)","Amarillo,_Texas",country,United_States
+ont_16_city_test_32,MISSING,,"(Amarillo,_Texas, isPartOf, Texas)","Amarillo,_Texas",isPartOf,Texas,,,,
+ont_16_city_test_32,MISSING,,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,,,,
+ont_16_city_test_33,SEMANTIC,0.98,"(Amarillo,_Texas, isPartOf, Texas)","Amarillo,_Texas",isPartOf,Texas,"(Amarillo,_Texas, isPartOf, United_States)","Amarillo,_Texas",isPartOf,United_States
+ont_16_city_test_33,SEMANTIC,0.97,"(Amarillo,_Texas, isPartOf, Potter_County,_Texas)","Amarillo,_Texas",isPartOf,"Potter_County,_Texas","(Amarillo,_Texas, countySeat, Potter_County,_Texas)","Amarillo,_Texas",countySeat,"Potter_County,_Texas"
+ont_16_city_test_33,SEMANTIC,0.98,"(Amarillo,_Texas, country, United_States)","Amarillo,_Texas",country,United_States,"(Amarillo,_Texas, isPartOf, United_States)","Amarillo,_Texas",isPartOf,United_States
+ont_16_city_test_33,EXTRA,,,,,,"(Amarillo,_Texas, type, City)","Amarillo,_Texas",type,City
+ont_16_city_test_33,EXTRA,,,,,,"(Amarillo,_Texas, state, Texas_(steamboat))","Amarillo,_Texas",state,Texas_(steamboat)
+ont_16_city_test_34,SEMANTIC,0.96,"(Amarillo,_Texas, isPartOf, Texas)","Amarillo,_Texas",isPartOf,Texas,"(Amarillo,_Texas, country, United_States)","Amarillo,_Texas",country,United_States
+ont_16_city_test_34,SEMANTIC,0.97,"(Amarillo,_Texas, isPartOf, Potter_County,_Texas)","Amarillo,_Texas",isPartOf,"Potter_County,_Texas","(Amarillo,_Texas, countySeat, Potter_County,_Texas)","Amarillo,_Texas",countySeat,"Potter_County,_Texas"
+ont_16_city_test_34,MISSING,,"(Potter_County,_Texas, country, United_States)","Potter_County,_Texas",country,United_States,,,,
+ont_16_city_test_34,EXTRA,,,,,,"(Amarillo,_Texas, state, Texas_(steamboat))","Amarillo,_Texas",state,Texas_(steamboat)
+ont_16_city_test_35,SEMANTIC,0.96,"(Amarillo,_Texas, isPartOf, Texas)","Amarillo,_Texas",isPartOf,Texas,"(Amarillo,_Texas, country, United_States)","Amarillo,_Texas",country,United_States
+ont_16_city_test_35,SEMANTIC,0.97,"(Amarillo,_Texas, isPartOf, Potter_County,_Texas)","Amarillo,_Texas",isPartOf,"Potter_County,_Texas","(Amarillo,_Texas, countySeat, Potter_County,_Texas)","Amarillo,_Texas",countySeat,"Potter_County,_Texas"
+ont_16_city_test_35,MISSING,,"(Texas, country, United_States)",Texas,country,United_States,,,,
+ont_16_city_test_35,EXTRA,,,,,,"(Amarillo,_Texas, state, Texas_(steamboat))","Amarillo,_Texas",state,Texas_(steamboat)
+ont_16_city_test_36,SEMANTIC,0.96,"(Amarillo,_Texas, isPartOf, Texas)","Amarillo,_Texas",isPartOf,Texas,"(Amarillo,_Texas, country, United_States)","Amarillo,_Texas",country,United_States
+ont_16_city_test_36,SEMANTIC,0.98,"(Amarillo,_Texas, isPartOf, United_States)","Amarillo,_Texas",isPartOf,United_States,"(Amarillo,_Texas, country, United_States)","Amarillo,_Texas",country,United_States
+ont_16_city_test_36,MISSING,,"(Texas, country, United_States)",Texas,country,United_States,,,,
+ont_16_city_test_36,EXTRA,,,,,,"(Amarillo,_Texas, state, Texas_(steamboat))","Amarillo,_Texas",state,Texas_(steamboat)
+ont_16_city_test_37,EXACT,1.00,"(United_States, leaderTitle, President_of_the_United_States)",United_States,leaderTitle,President_of_the_United_States,"(United_States, leaderTitle, president of the united states)",United_States,leaderTitle,president of the united states
+ont_16_city_test_37,SEMANTIC,0.97,"(Anaheim,_California, isPartOf, Orange_County,_California)","Anaheim,_California",isPartOf,"Orange_County,_California","(Anaheim,_California, location, Orange_County,_California)","Anaheim,_California",location,"Orange_County,_California"
+ont_16_city_test_37,SEMANTIC,0.98,"(Anaheim,_California, country, United_States)","Anaheim,_California",country,United_States,"(Anaheim,_California, isPartOf, United_States)","Anaheim,_California",isPartOf,United_States
+ont_16_city_test_37,EXTRA,,,,,,"(Anaheim,_California, type, City)","Anaheim,_California",type,City
+ont_16_city_test_37,EXTRA,,,,,,"(Anaheim,_California, state, California)","Anaheim,_California",state,California
+ont_16_city_test_38,SEMANTIC,0.97,"(Anaheim,_California, isPartOf, Orange_County,_California)","Anaheim,_California",isPartOf,"Orange_County,_California","(Anaheim,_California, location, Orange_County,_California)","Anaheim,_California",location,"Orange_County,_California"
+ont_16_city_test_38,SEMANTIC,0.97,"(Anaheim,_California, leaderTitle, United_States_House_of_Representatives)","Anaheim,_California",leaderTitle,United_States_House_of_Representatives,"(Anaheim,_California, leader, United_States_House_of_Representatives)","Anaheim,_California",leader,United_States_House_of_Representatives
+ont_16_city_test_38,MISSING,,"(United_States_House_of_Representatives, location, United_States_Capitol)",United_States_House_of_Representatives,location,United_States_Capitol,,,,
+ont_16_city_test_38,EXTRA,,,,,,"(Anaheim,_California, state, California)","Anaheim,_California",state,California
+ont_16_city_test_39,SEMANTIC,0.97,"(Anaheim,_California, isPartOf, Orange_County,_California)","Anaheim,_California",isPartOf,"Orange_County,_California","(Anaheim,_California, countySeat, Orange_County,_California)","Anaheim,_California",countySeat,"Orange_County,_California"
+ont_16_city_test_39,SEMANTIC,0.97,"(Anaheim,_California, leaderTitle, United_States_House_of_Representatives)","Anaheim,_California",leaderTitle,United_States_House_of_Representatives,"(Anaheim,_California, leader, United_States_House_of_Representatives)","Anaheim,_California",leader,United_States_House_of_Representatives
+ont_16_city_test_39,MISSING,,"(United_States_House_of_Representatives, location, Washington,_D.C.)",United_States_House_of_Representatives,location,"Washington,_D.C.",,,,
+ont_16_city_test_39,EXTRA,,,,,,"(Anaheim,_California, state, California)","Anaheim,_California",state,California
+ont_16_city_test_4,EXACT,1.00,"(Albany,_Georgia, isPartOf, United_States)","Albany,_Georgia",isPartOf,United_States,"(Albany,_Georgia, isPartOf, United_States)","Albany,_Georgia",isPartOf,United_States
+ont_16_city_test_4,SEMANTIC,0.97,"(Albany,_Georgia, isPartOf, Dougherty_County,_Georgia)","Albany,_Georgia",isPartOf,"Dougherty_County,_Georgia","(Albany,_Georgia, countySeat, Dougherty_County,_Georgia)","Albany,_Georgia",countySeat,"Dougherty_County,_Georgia"
+ont_16_city_test_4,SEMANTIC,0.98,"(Albany,_Georgia, country, United_States)","Albany,_Georgia",country,United_States,"(Albany,_Georgia, state, Georgia_(U.S._state))","Albany,_Georgia",state,Georgia_(U.S._state)
+ont_16_city_test_40,SEMANTIC,0.97,"(Anaheim,_California, leaderTitle, California_State_Assembly)","Anaheim,_California",leaderTitle,California_State_Assembly,"(Anaheim,_California, leader, California_State_Assembly)","Anaheim,_California",leader,California_State_Assembly
+ont_16_city_test_40,SEMANTIC,0.98,"(Anaheim,_California, isPartOf, California)","Anaheim,_California",isPartOf,California,"(Anaheim,_California, state, California)","Anaheim,_California",state,California
+ont_16_city_test_40,SEMANTIC,0.97,"(Anaheim,_California, country, United_States)","Anaheim,_California",country,United_States,"(Anaheim,_California, state, California)","Anaheim,_California",state,California
+ont_16_city_test_40,EXTRA,,,,,,"(California, location, Us_(2019_film))",California,location,Us_(2019_film)
+ont_16_city_test_41,SEMANTIC,0.98,"(Anaheim,_California, isPartOf, California)","Anaheim,_California",isPartOf,California,"(Anaheim,_California, state, California)","Anaheim,_California",state,California
+ont_16_city_test_41,MISSING,,"(Anaheim,_California, leaderTitle, California_State_Assembly)","Anaheim,_California",leaderTitle,California_State_Assembly,,,,
+ont_16_city_test_41,MISSING,,"(California, country, United_States)",California,country,United_States,,,,
+ont_16_city_test_41,EXTRA,,,,,,"(Anaheim,_California, governmentType, California_State_Assembly)","Anaheim,_California",governmentType,California_State_Assembly
+ont_16_city_test_41,EXTRA,,,,,,"(Anaheim,_California, country, United_States)","Anaheim,_California",country,United_States
+ont_16_city_test_42,SEMANTIC,0.98,"(Anaheim,_California, isPartOf, California)","Anaheim,_California",isPartOf,California,"(Anaheim,_California, state, California)","Anaheim,_California",state,California
+ont_16_city_test_42,MISSING,,"(Anaheim,_California, leaderTitle, California_State_Assembly)","Anaheim,_California",leaderTitle,California_State_Assembly,,,,
+ont_16_city_test_42,MISSING,,"(California_State_Assembly, location, California_State_Capitol)",California_State_Assembly,location,California_State_Capitol,,,,
+ont_16_city_test_42,EXTRA,,,,,,"(Anaheim,_California, governmentType, California_State_Assembly)","Anaheim,_California",governmentType,California_State_Assembly
+ont_16_city_test_43,SEMANTIC,0.97,"(Anaheim,_California, leaderTitle, California_State_Assembly)","Anaheim,_California",leaderTitle,California_State_Assembly,"(Anaheim,_California, leader, California_State_Assembly)","Anaheim,_California",leader,California_State_Assembly
+ont_16_city_test_43,SEMANTIC,0.97,"(Anaheim,_California, country, United_States)","Anaheim,_California",country,United_States,"(Anaheim,_California, country, Usa,_Ōita)","Anaheim,_California",country,"Usa,_Ōita"
+ont_16_city_test_43,MISSING,,"(California_State_Assembly, isPartOf, California_State_Legislature)",California_State_Assembly,isPartOf,California_State_Legislature,,,,
+ont_16_city_test_43,EXTRA,,,,,,"(Anaheim,_California, type, City)","Anaheim,_California",type,City
+ont_16_city_test_43,EXTRA,,,,,,"(Anaheim,_California, state, California)","Anaheim,_California",state,California
+ont_16_city_test_44,SEMANTIC,0.97,"(Anaheim,_California, leaderTitle, California_State_Assembly)","Anaheim,_California",leaderTitle,California_State_Assembly,"(Anaheim,_California, leader, California_State_Assembly)","Anaheim,_California",leader,California_State_Assembly
+ont_16_city_test_44,MISSING,,"(California_State_Assembly, location, California_State_Capitol)",California_State_Assembly,location,California_State_Capitol,,,,
+ont_16_city_test_44,MISSING,,"(California_State_Assembly, isPartOf, California_State_Legislature)",California_State_Assembly,isPartOf,California_State_Legislature,,,,
+ont_16_city_test_44,EXTRA,,,,,,"(Anaheim,_California, state, California)","Anaheim,_California",state,California
+ont_16_city_test_45,SEMANTIC,0.96,"(Anderson,_Indiana, isPartOf, Indiana)","Anderson,_Indiana",isPartOf,Indiana,"(Anderson,_Indiana, country, United_States)","Anderson,_Indiana",country,United_States
+ont_16_city_test_45,SEMANTIC,0.94,"(Anderson,_Indiana, isPartOf, Adams_Township,_Madison_County,_Indiana)","Anderson,_Indiana",isPartOf,"Adams_Township,_Madison_County,_Indiana","(Anderson,_Indiana, location, Adams_Township,_Parke_County,_Indiana)","Anderson,_Indiana",location,"Adams_Township,_Parke_County,_Indiana"
+ont_16_city_test_45,MISSING,,"(Indiana, country, United_States)",Indiana,country,United_States,,,,
+ont_16_city_test_45,EXTRA,,,,,,"(Anderson,_Indiana, location, Madison_County,_Indiana)","Anderson,_Indiana",location,"Madison_County,_Indiana"
+ont_16_city_test_45,EXTRA,,,,,,"(Anderson,_Indiana, state, Indiana)","Anderson,_Indiana",state,Indiana
+ont_16_city_test_46,SEMANTIC,0.98,"(Anderson,_Indiana, isPartOf, Anderson_Township,_Madison_County,_Indiana)","Anderson,_Indiana",isPartOf,"Anderson_Township,_Madison_County,_Indiana","(Anderson,_Indiana, location, Anderson_Township,_Madison_County,_Indiana)","Anderson,_Indiana",location,"Anderson_Township,_Madison_County,_Indiana"
+ont_16_city_test_46,SEMANTIC,0.96,"(Anderson,_Indiana, isPartOf, Indiana)","Anderson,_Indiana",isPartOf,Indiana,"(Anderson,_Indiana, country, United_States)","Anderson,_Indiana",country,United_States
+ont_16_city_test_46,SEMANTIC,0.97,"(Anderson_Township,_Madison_County,_Indiana, country, United_States)","Anderson_Township,_Madison_County,_Indiana",country,United_States,"(Anderson,_Indiana, location, Anderson_Township,_Madison_County,_Indiana)","Anderson,_Indiana",location,"Anderson_Township,_Madison_County,_Indiana"
+ont_16_city_test_46,EXTRA,,,,,,"(Anderson,_Indiana, countySeat, Madison_County,_Indiana)","Anderson,_Indiana",countySeat,"Madison_County,_Indiana"
+ont_16_city_test_46,EXTRA,,,,,,"(Anderson,_Indiana, state, Indiana)","Anderson,_Indiana",state,Indiana
+ont_16_city_test_47,SEMANTIC,0.98,"(Anderson,_Indiana, isPartOf, Anderson_Township,_Madison_County,_Indiana)","Anderson,_Indiana",isPartOf,"Anderson_Township,_Madison_County,_Indiana","(Anderson,_Indiana, location, Anderson_Township,_Madison_County,_Indiana)","Anderson,_Indiana",location,"Anderson_Township,_Madison_County,_Indiana"
+ont_16_city_test_47,SEMANTIC,0.96,"(Anderson,_Indiana, isPartOf, Indiana)","Anderson,_Indiana",isPartOf,Indiana,"(Anderson,_Indiana, country, United_States)","Anderson,_Indiana",country,United_States
+ont_16_city_test_47,MISSING,,"(Indiana, country, United_States)",Indiana,country,United_States,,,,
+ont_16_city_test_47,EXTRA,,,,,,"(Anderson,_Indiana, location, Madison_County,_Indiana)","Anderson,_Indiana",location,"Madison_County,_Indiana"
+ont_16_city_test_47,EXTRA,,,,,,"(Anderson,_Indiana, state, Indiana)","Anderson,_Indiana",state,Indiana
+ont_16_city_test_48,SEMANTIC,0.98,"(Anderson,_Indiana, isPartOf, Anderson_Township,_Madison_County,_Indiana)","Anderson,_Indiana",isPartOf,"Anderson_Township,_Madison_County,_Indiana","(Anderson,_Indiana, location, Anderson_Township,_Madison_County,_Indiana)","Anderson,_Indiana",location,"Anderson_Township,_Madison_County,_Indiana"
+ont_16_city_test_48,SEMANTIC,0.98,"(Anderson,_Indiana, isPartOf, Madison_County,_Indiana)","Anderson,_Indiana",isPartOf,"Madison_County,_Indiana","(Anderson,_Indiana, location, Madison_County,_Indiana)","Anderson,_Indiana",location,"Madison_County,_Indiana"
+ont_16_city_test_48,MISSING,,"(Madison_County,_Indiana, country, United_States)","Madison_County,_Indiana",country,United_States,,,,
+ont_16_city_test_48,EXTRA,,,,,,"(Anderson,_Indiana, isPartOf, United_States)","Anderson,_Indiana",isPartOf,United_States
+ont_16_city_test_48,EXTRA,,,,,,"(Anderson,_Indiana, state, Indiana)","Anderson,_Indiana",state,Indiana
+ont_16_city_test_49,SEMANTIC,0.99,"(Fall_Creek_Township,_Madison_County,_Indiana, country, United_States)","Fall_Creek_Township,_Madison_County,_Indiana",country,United_States,"(Fall_Creek_Township,_Madison_County,_Indiana, state, Indiana)","Fall_Creek_Township,_Madison_County,_Indiana",state,Indiana
+ont_16_city_test_49,MISSING,,"(Anderson,_Indiana, isPartOf, Adams, Fall Creek, Lafayette, Richland, Union)","Anderson,_Indiana",isPartOf,"Adams, Fall Creek, Lafayette, Richland, Union",,,,
+ont_16_city_test_49,MISSING,,"(Anderson,_Indiana, isPartOf, Fall_Creek_Township,_Madison_County,_Indiana)","Anderson,_Indiana",isPartOf,"Fall_Creek_Township,_Madison_County,_Indiana",,,,
+ont_16_city_test_49,EXTRA,,,,,,"(Anderson,_Indiana, location, Madison_County,_Indiana)","Anderson,_Indiana",location,"Madison_County,_Indiana"
+ont_16_city_test_49,EXTRA,,,,,,"(Anderson,_Indiana, state, Indiana)","Anderson,_Indiana",state,Indiana
+ont_16_city_test_49,EXTRA,,,,,,"(Fall_Creek_Township,_Madison_County,_Indiana, location, Madison_County,_Indiana)","Fall_Creek_Township,_Madison_County,_Indiana",location,"Madison_County,_Indiana"
+ont_16_city_test_49,EXTRA,,,,,,"(Anderson,_Indiana, isPartOf, United_States)","Anderson,_Indiana",isPartOf,United_States
+ont_16_city_test_5,EXACT,1.00,"(Albany,_Georgia, country, United_States)","Albany,_Georgia",country,United_States,"(Albany,_Georgia, country, United_States)","Albany,_Georgia",country,United_States
+ont_16_city_test_5,SEMANTIC,0.97,"(Albany,_Georgia, isPartOf, Dougherty_County,_Georgia)","Albany,_Georgia",isPartOf,"Dougherty_County,_Georgia","(Albany,_Georgia, countySeat, Dougherty_County,_Georgia)","Albany,_Georgia",countySeat,"Dougherty_County,_Georgia"
+ont_16_city_test_5,MISSING,,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,,,,
+ont_16_city_test_5,EXTRA,,,,,,"(Albany,_Georgia, state, Georgia_(U.S._state))","Albany,_Georgia",state,Georgia_(U.S._state)
+ont_16_city_test_50,SEMANTIC,0.98,"(Anderson,_Indiana, isPartOf, Anderson_Township,_Madison_County,_Indiana)","Anderson,_Indiana",isPartOf,"Anderson_Township,_Madison_County,_Indiana","(Anderson,_Indiana, location, Anderson_Township,_Madison_County,_Indiana)","Anderson,_Indiana",location,"Anderson_Township,_Madison_County,_Indiana"
+ont_16_city_test_50,SEMANTIC,0.98,"(Fall_Creek_Township,_Madison_County,_Indiana, country, United_States)","Fall_Creek_Township,_Madison_County,_Indiana",country,United_States,"(Fall_Creek_Township,_Madison_County,_Indiana, location, Madison_County,_Indiana)","Fall_Creek_Township,_Madison_County,_Indiana",location,"Madison_County,_Indiana"
+ont_16_city_test_50,MISSING,,"(Anderson,_Indiana, isPartOf, Fall_Creek_Township,_Madison_County,_Indiana)","Anderson,_Indiana",isPartOf,"Fall_Creek_Township,_Madison_County,_Indiana",,,,
+ont_16_city_test_50,EXTRA,,,,,,"(Anderson_Township,_Madison_County,_Indiana, location, Madison_County,_Indiana)","Anderson_Township,_Madison_County,_Indiana",location,"Madison_County,_Indiana"
+ont_16_city_test_50,EXTRA,,,,,,"(Madison_County,_Indiana, state, Indiana)","Madison_County,_Indiana",state,Indiana
+ont_16_city_test_50,EXTRA,,,,,,"(Indiana, country, United_States)",Indiana,country,United_States
+ont_16_city_test_51,SEMANTIC,0.98,"(Anderson,_Indiana, isPartOf, Indiana)","Anderson,_Indiana",isPartOf,Indiana,"(Anderson,_Indiana, isPartOf, United_States)","Anderson,_Indiana",isPartOf,United_States
+ont_16_city_test_51,MISSING,,"(Fall_Creek_Township,_Madison_County,_Indiana, country, United_States)","Fall_Creek_Township,_Madison_County,_Indiana",country,United_States,,,,
+ont_16_city_test_51,MISSING,,"(Anderson,_Indiana, isPartOf, Fall_Creek_Township,_Madison_County,_Indiana)","Anderson,_Indiana",isPartOf,"Fall_Creek_Township,_Madison_County,_Indiana",,,,
+ont_16_city_test_51,EXTRA,,,,,,"(Anderson,_Indiana, countySeat, Madison_County,_Indiana)","Anderson,_Indiana",countySeat,"Madison_County,_Indiana"
+ont_16_city_test_51,EXTRA,,,,,,"(Anderson,_Indiana, state, Indiana)","Anderson,_Indiana",state,Indiana
+ont_16_city_test_52,SEMANTIC,0.97,"(Anderson,_Indiana, isPartOf, Madison_County,_Indiana)","Anderson,_Indiana",isPartOf,"Madison_County,_Indiana","(Anderson,_Indiana, countySeat, Madison_County,_Indiana)","Anderson,_Indiana",countySeat,"Madison_County,_Indiana"
+ont_16_city_test_52,SEMANTIC,0.98,"(Anderson,_Indiana, isPartOf, Fall_Creek_Township,_Madison_County,_Indiana)","Anderson,_Indiana",isPartOf,"Fall_Creek_Township,_Madison_County,_Indiana","(Anderson,_Indiana, location, Fall_Creek_Township,_Madison_County,_Indiana)","Anderson,_Indiana",location,"Fall_Creek_Township,_Madison_County,_Indiana"
+ont_16_city_test_52,MISSING,,"(Fall_Creek_Township,_Madison_County,_Indiana, country, United_States)","Fall_Creek_Township,_Madison_County,_Indiana",country,United_States,,,,
+ont_16_city_test_52,EXTRA,,,,,,"(Anderson,_Indiana, country, United_States)","Anderson,_Indiana",country,United_States
+ont_16_city_test_52,EXTRA,,,,,,"(Anderson,_Indiana, state, Indiana)","Anderson,_Indiana",state,Indiana
+ont_16_city_test_53,SEMANTIC,0.98,"(Anderson,_Indiana, isPartOf, Indiana)","Anderson,_Indiana",isPartOf,Indiana,"(Anderson,_Indiana, isPartOf, United_States)","Anderson,_Indiana",isPartOf,United_States
+ont_16_city_test_53,MISSING,,"(Indiana, country, United_States)",Indiana,country,United_States,,,,
+ont_16_city_test_53,MISSING,,"(Anderson,_Indiana, isPartOf, Adams, Fall Creek, Lafayette, Richland, Union)","Anderson,_Indiana",isPartOf,"Adams, Fall Creek, Lafayette, Richland, Union",,,,
+ont_16_city_test_53,EXTRA,,,,,,"(Anderson,_Indiana, location, Lafayette,_Indiana)","Anderson,_Indiana",location,"Lafayette,_Indiana"
+ont_16_city_test_53,EXTRA,,,,,,"(Anderson,_Indiana, location, Richland_County,_Wisconsin)","Anderson,_Indiana",location,"Richland_County,_Wisconsin"
+ont_16_city_test_53,EXTRA,,,,,,"(Anderson,_Indiana, location, Union_councils_of_Bangladesh)","Anderson,_Indiana",location,Union_councils_of_Bangladesh
+ont_16_city_test_54,SEMANTIC,0.96,"(Anderson,_Indiana, isPartOf, Indiana)","Anderson,_Indiana",isPartOf,Indiana,"(Anderson,_Indiana, country, United_States)","Anderson,_Indiana",country,United_States
+ont_16_city_test_54,MISSING,,"(Anderson,_Indiana, isPartOf, Lafayette_Township,_Madison_County,_Indiana)","Anderson,_Indiana",isPartOf,"Lafayette_Township,_Madison_County,_Indiana",,,,
+ont_16_city_test_54,MISSING,,"(Lafayette_Township,_Madison_County,_Indiana, country, United_States)","Lafayette_Township,_Madison_County,_Indiana",country,United_States,,,,
+ont_16_city_test_54,EXTRA,,,,,,"(Anderson,_Indiana, countySeat, Madison_County,_Indiana)","Anderson,_Indiana",countySeat,"Madison_County,_Indiana"
+ont_16_city_test_54,EXTRA,,,,,,"(Madison_County,_Indiana, state, Indiana)","Madison_County,_Indiana",state,Indiana
+ont_16_city_test_54,EXTRA,,,,,,"(Anderson,_Indiana, location, Lafayette_Township,_New_Jersey)","Anderson,_Indiana",location,"Lafayette_Township,_New_Jersey"
+ont_16_city_test_54,EXTRA,,,,,,"(Anderson,_Indiana, state, Indiana)","Anderson,_Indiana",state,Indiana
+ont_16_city_test_55,SEMANTIC,0.96,"(Anderson,_Indiana, isPartOf, Indiana)","Anderson,_Indiana",isPartOf,Indiana,"(Anderson,_Indiana, country, United_States)","Anderson,_Indiana",country,United_States
+ont_16_city_test_55,MISSING,,"(Anderson,_Indiana, isPartOf, Union_Township,_Madison_County,_Indiana)","Anderson,_Indiana",isPartOf,"Union_Township,_Madison_County,_Indiana",,,,
+ont_16_city_test_55,MISSING,,"(Union_Township,_Madison_County,_Indiana, country, United_States)","Union_Township,_Madison_County,_Indiana",country,United_States,,,,
+ont_16_city_test_55,EXTRA,,,,,,"(Anderson,_Indiana, countySeat, Madison_County,_Indiana)","Anderson,_Indiana",countySeat,"Madison_County,_Indiana"
+ont_16_city_test_55,EXTRA,,,,,,"(Anderson,_Indiana, location, Union_Township,_Union_County,_New_Jersey)","Anderson,_Indiana",location,"Union_Township,_Union_County,_New_Jersey"
+ont_16_city_test_55,EXTRA,,,,,,"(Anderson,_Indiana, state, Indiana)","Anderson,_Indiana",state,Indiana
+ont_16_city_test_56,SEMANTIC,0.95,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,"(Asian_Americans, type, Ethnic_group)",Asian_Americans,type,Ethnic_group
+ont_16_city_test_56,SEMANTIC,0.96,"(Angola,_Indiana, isPartOf, Indiana)","Angola,_Indiana",isPartOf,Indiana,"(Angola, state, Indiana)",Angola,state,Indiana
+ont_16_city_test_56,SEMANTIC,0.96,"(Angola,_Indiana, country, United_States)","Angola,_Indiana",country,United_States,"(Angola, state, Indiana)",Angola,state,Indiana
+ont_16_city_test_57,SEMANTIC,0.96,"(Angola,_Indiana, isPartOf, Indiana)","Angola,_Indiana",isPartOf,Indiana,"(Angola, state, Indiana)",Angola,state,Indiana
+ont_16_city_test_57,SEMANTIC,0.96,"(Angola,_Indiana, country, United_States)","Angola,_Indiana",country,United_States,"(Angola, state, Indiana)",Angola,state,Indiana
+ont_16_city_test_57,MISSING,,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,,,,
+ont_16_city_test_57,EXTRA,,,,,,"(Angola, country, United_States)",Angola,country,United_States
+ont_16_city_test_57,EXTRA,,,,,,"(Angola, ethnicGroup, Native_Americans_in_the_United_States)",Angola,ethnicGroup,Native_Americans_in_the_United_States
+ont_16_city_test_57,EXTRA,,,,,,"(Angola, type, City)",Angola,type,City
+ont_16_city_test_58,SEMANTIC,0.96,"(Angola,_Indiana, isPartOf, Indiana)","Angola,_Indiana",isPartOf,Indiana,"(Angola, state, Indiana)",Angola,state,Indiana
+ont_16_city_test_58,SEMANTIC,0.96,"(Angola,_Indiana, country, United_States)","Angola,_Indiana",country,United_States,"(Angola, state, Indiana)",Angola,state,Indiana
+ont_16_city_test_58,SEMANTIC,0.97,"(Angola,_Indiana, isPartOf, Pleasant_Township,_Steuben_County,_Indiana)","Angola,_Indiana",isPartOf,"Pleasant_Township,_Steuben_County,_Indiana","(Angola, location, Pleasant_Township,_Steuben_County,_Indiana)",Angola,location,"Pleasant_Township,_Steuben_County,_Indiana"
+ont_16_city_test_58,EXTRA,,,,,,"(Indiana, isPartOf, United_States)",Indiana,isPartOf,United_States
+ont_16_city_test_58,EXTRA,,,,,,"(Steuben_County,_Indiana, state, Indiana)","Steuben_County,_Indiana",state,Indiana
+ont_16_city_test_58,EXTRA,,,,,,"(Pleasant_Township,_Steuben_County,_Indiana, location, Steuben_County,_Indiana)","Pleasant_Township,_Steuben_County,_Indiana",location,"Steuben_County,_Indiana"
+ont_16_city_test_59,SEMANTIC,0.96,"(Angola,_Indiana, country, United_States)","Angola,_Indiana",country,United_States,"(Angola, state, Indiana)",Angola,state,Indiana
+ont_16_city_test_59,SEMANTIC,0.97,"(Angola,_Indiana, isPartOf, Pleasant_Township,_Steuben_County,_Indiana)","Angola,_Indiana",isPartOf,"Pleasant_Township,_Steuben_County,_Indiana","(Angola, location, Pleasant_Township,_Steuben_County,_Indiana)",Angola,location,"Pleasant_Township,_Steuben_County,_Indiana"
+ont_16_city_test_59,MISSING,,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,,,,
+ont_16_city_test_59,EXTRA,,,,,,"(Angola, country, United_States)",Angola,country,United_States
+ont_16_city_test_59,EXTRA,,,,,,"(Angola, location, Steuben_County,_Indiana)",Angola,location,"Steuben_County,_Indiana"
+ont_16_city_test_6,SEMANTIC,0.97,"(Albany,_Georgia, isPartOf, Dougherty_County,_Georgia)","Albany,_Georgia",isPartOf,"Dougherty_County,_Georgia","(Albany,_Georgia, countySeat, Dougherty_County,_Georgia)","Albany,_Georgia",countySeat,"Dougherty_County,_Georgia"
+ont_16_city_test_6,MISSING,,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,,,,
+ont_16_city_test_6,MISSING,,"(Albany,_Georgia, country, United_States)","Albany,_Georgia",country,United_States,,,,
+ont_16_city_test_60,SEMANTIC,0.97,"(Angola,_Indiana, isPartOf, Pleasant_Township,_Steuben_County,_Indiana)","Angola,_Indiana",isPartOf,"Pleasant_Township,_Steuben_County,_Indiana","(Angola, location, Pleasant_Township,_Steuben_County,_Indiana)",Angola,location,"Pleasant_Township,_Steuben_County,_Indiana"
+ont_16_city_test_60,MISSING,,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,,,,
+ont_16_city_test_60,MISSING,,"(Angola,_Indiana, country, United_States)","Angola,_Indiana",country,United_States,,,,
+ont_16_city_test_60,EXTRA,,,,,,"(Indiana, isPartOf, United_States)",Indiana,isPartOf,United_States
+ont_16_city_test_60,EXTRA,,,,,,"(Angola, ethnicGroup, Native_Americans_in_the_United_States)",Angola,ethnicGroup,Native_Americans_in_the_United_States
+ont_16_city_test_60,EXTRA,,,,,,"(Steuben_County,_Indiana, state, Indiana)","Steuben_County,_Indiana",state,Indiana
+ont_16_city_test_60,EXTRA,,,,,,"(Pleasant_Township,_Steuben_County,_Indiana, location, Steuben_County,_Indiana)","Pleasant_Township,_Steuben_County,_Indiana",location,"Steuben_County,_Indiana"
+ont_16_city_test_61,SEMANTIC,0.96,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,"(Asian_Americans, ethnicGroup, Ethnic_group)",Asian_Americans,ethnicGroup,Ethnic_group
+ont_16_city_test_61,SEMANTIC,0.97,"(Angola,_Indiana, isPartOf, Steuben_County,_Indiana)","Angola,_Indiana",isPartOf,"Steuben_County,_Indiana","(Angola, location, Steuben_County,_Indiana)",Angola,location,"Steuben_County,_Indiana"
+ont_16_city_test_61,MISSING,,"(Angola,_Indiana, country, United_States)","Angola,_Indiana",country,United_States,,,,
+ont_16_city_test_61,EXTRA,,,,,,"(Steuben_County,_Indiana, country, United_States)","Steuben_County,_Indiana",country,United_States
+ont_16_city_test_61,EXTRA,,,,,,"(Steuben_County,_Indiana, state, Indiana)","Steuben_County,_Indiana",state,Indiana
+ont_16_city_test_61,EXTRA,,,,,,"(Indiana, type, U.S._state)",Indiana,type,U.S._state
+ont_16_city_test_62,EXACT,1.00,"(Angola,_Indiana, country, United_States)","Angola,_Indiana",country,United_States,"(Angola,_Indiana, country, United_States)","Angola,_Indiana",country,United_States
+ont_16_city_test_62,SEMANTIC,0.94,"(Angola,_Indiana, isPartOf, Steuben_County,_Indiana)","Angola,_Indiana",isPartOf,"Steuben_County,_Indiana","(Angola,_Indiana, location, Pleasant_Township,_Steuben_County,_Indiana)","Angola,_Indiana",location,"Pleasant_Township,_Steuben_County,_Indiana"
+ont_16_city_test_62,SEMANTIC,0.98,"(Angola,_Indiana, isPartOf, Pleasant_Township,_Steuben_County,_Indiana)","Angola,_Indiana",isPartOf,"Pleasant_Township,_Steuben_County,_Indiana","(Angola,_Indiana, location, Pleasant_Township,_Steuben_County,_Indiana)","Angola,_Indiana",location,"Pleasant_Township,_Steuben_County,_Indiana"
+ont_16_city_test_62,EXTRA,,,,,,"(Steuben_County,_Indiana, country, United_States)","Steuben_County,_Indiana",country,United_States
+ont_16_city_test_62,EXTRA,,,,,,"(Angola,_Indiana, state, Indiana)","Angola,_Indiana",state,Indiana
+ont_16_city_test_62,EXTRA,,,,,,"(Pleasant_Township,_Steuben_County,_Indiana, location, Steuben_County,_Indiana)","Pleasant_Township,_Steuben_County,_Indiana",location,"Steuben_County,_Indiana"
+ont_16_city_test_63,SEMANTIC,0.98,"(Antioch,_California, isPartOf, California)","Antioch,_California",isPartOf,California,"(Antioch,_California, state, California)","Antioch,_California",state,California
+ont_16_city_test_63,SEMANTIC,0.98,"(Antioch,_California, isPartOf, Contra_Costa_County,_California)","Antioch,_California",isPartOf,"Contra_Costa_County,_California","(Antioch, location, Contra_Costa_County,_California)",Antioch,location,"Contra_Costa_County,_California"
+ont_16_city_test_63,MISSING,,"(California, language, Spanish_language)",California,language,Spanish_language,,,,
+ont_16_city_test_64,SEMANTIC,0.96,"(Antioch,_California, isPartOf, California)","Antioch,_California",isPartOf,California,"(Antioch, state, California)",Antioch,state,California
+ont_16_city_test_64,SEMANTIC,0.98,"(Antioch,_California, isPartOf, Contra_Costa_County,_California)","Antioch,_California",isPartOf,"Contra_Costa_County,_California","(Antioch, location, Contra_Costa_County,_California)",Antioch,location,"Contra_Costa_County,_California"
+ont_16_city_test_64,MISSING,,"(California, language, Chinese_language)",California,language,Chinese_language,,,,
+ont_16_city_test_65,SEMANTIC,0.96,"(Antioch,_California, isPartOf, California)","Antioch,_California",isPartOf,California,"(Antioch,_California, location, Contra_Costa_County,_California)","Antioch,_California",location,"Contra_Costa_County,_California"
+ont_16_city_test_65,SEMANTIC,0.98,"(Antioch,_California, isPartOf, Contra_Costa_County,_California)","Antioch,_California",isPartOf,"Contra_Costa_County,_California","(Antioch,_California, location, Contra_Costa_County,_California)","Antioch,_California",location,"Contra_Costa_County,_California"
+ont_16_city_test_65,MISSING,,"(California, language, Vietnamese_language)",California,language,Vietnamese_language,,,,
+ont_16_city_test_65,EXTRA,,,,,,"(Antioch, state, California)",Antioch,state,California
+ont_16_city_test_65,EXTRA,,,,,,"(Antioch, language, Vietnamese_language)",Antioch,language,Vietnamese_language
+ont_16_city_test_66,SEMANTIC,0.98,"(Antioch,_California, isPartOf, Contra_Costa_County,_California)","Antioch,_California",isPartOf,"Contra_Costa_County,_California","(Antioch, location, Contra_Costa_County,_California)",Antioch,location,"Contra_Costa_County,_California"
+ont_16_city_test_66,MISSING,,"(Contra_Costa_County,_California, isPartOf, San_Francisco_Bay_Area)","Contra_Costa_County,_California",isPartOf,San_Francisco_Bay_Area,,,,
+ont_16_city_test_66,MISSING,,"(Antioch,_California, leaderTitle, Mayor)","Antioch,_California",leaderTitle,Mayor,,,,
+ont_16_city_test_66,EXTRA,,,,,,"(Antioch, state, California)",Antioch,state,California
+ont_16_city_test_66,EXTRA,,,,,,"(Antioch, location, San_Francisco_Bay_Area)",Antioch,location,San_Francisco_Bay_Area
+ont_16_city_test_67,SEMANTIC,0.98,"(Antioch,_California, isPartOf, Contra_Costa_County,_California)","Antioch,_California",isPartOf,"Contra_Costa_County,_California","(Antioch,_California, location, Contra_Costa_County,_California)","Antioch,_California",location,"Contra_Costa_County,_California"
+ont_16_city_test_67,SEMANTIC,0.96,"(Antioch,_California, leaderTitle, United_States_House_of_Representatives)","Antioch,_California",leaderTitle,United_States_House_of_Representatives,"(Antioch, leader, United_States_House_of_Representatives)",Antioch,leader,United_States_House_of_Representatives
+ont_16_city_test_67,MISSING,,"(Contra_Costa_County,_California, isPartOf, San_Francisco_Bay_Area)","Contra_Costa_County,_California",isPartOf,San_Francisco_Bay_Area,,,,
+ont_16_city_test_67,EXTRA,,,,,,"(Antioch, state, California)",Antioch,state,California
+ont_16_city_test_67,EXTRA,,,,,,"(Antioch,_California, location, San_Francisco_Bay_Area)","Antioch,_California",location,San_Francisco_Bay_Area
+ont_16_city_test_67,EXTRA,,,,,,"(San_Francisco_Bay_Area, state, California)",San_Francisco_Bay_Area,state,California
+ont_16_city_test_68,EXACT,1.00,"(Antioch,_California, areaCode, 925)","Antioch,_California",areaCode,925,"(Antioch,_California, areaCode, 925)","Antioch,_California",areaCode,925
+ont_16_city_test_68,SEMANTIC,0.97,"(Antioch,_California, areaTotal, 75.324 (square kilometres))","Antioch,_California",areaTotal,75.324 (square kilometres),"(Antioch,_California, areaTotal, 75.324)","Antioch,_California",areaTotal,75.324
+ont_16_city_test_68,SEMANTIC,0.99,"(Antioch,_California, postalCode, 94509, 94531)","Antioch,_California",postalCode,"94509, 94531","(Antioch,_California, postalCode, 94509)","Antioch,_California",postalCode,94509
+ont_16_city_test_68,EXTRA,,,,,,"(Antioch,_California, state, California)","Antioch,_California",state,California
+ont_16_city_test_68,EXTRA,,,,,,"(Antioch,_California, postalCode, 94531)","Antioch,_California",postalCode,94531
+ont_16_city_test_69,SEMANTIC,0.95,"(Arlington,_Texas, isPartOf, Texas)","Arlington,_Texas",isPartOf,Texas,"(Arlington,_Texas, location, Tarrant_County,_Texas)","Arlington,_Texas",location,"Tarrant_County,_Texas"
+ont_16_city_test_69,SEMANTIC,0.97,"(Arlington,_Texas, isPartOf, Tarrant_County,_Texas)","Arlington,_Texas",isPartOf,"Tarrant_County,_Texas","(Arlington,_Texas, location, Tarrant_County,_Texas)","Arlington,_Texas",location,"Tarrant_County,_Texas"
+ont_16_city_test_69,MISSING,,"(Texas, largestCity, Houston)",Texas,largestCity,Houston,,,,
+ont_16_city_test_69,EXTRA,,,,,,"(Arlington,_Texas, state, Texas_(steamboat))","Arlington,_Texas",state,Texas_(steamboat)
+ont_16_city_test_7,SEMANTIC,0.98,"(Albany,_Georgia, country, United_States)","Albany,_Georgia",country,United_States,"(Albany,_Georgia, state, Georgia_(U.S._state))","Albany,_Georgia",state,Georgia_(U.S._state)
+ont_16_city_test_7,SEMANTIC,0.98,"(Albany,_Georgia, isPartOf, Georgia_(U.S._state))","Albany,_Georgia",isPartOf,Georgia_(U.S._state),"(Albany,_Georgia, state, Georgia_(U.S._state))","Albany,_Georgia",state,Georgia_(U.S._state)
+ont_16_city_test_7,MISSING,,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,,,,
+ont_16_city_test_70,SEMANTIC,0.99,"(Tarrant_County,_Texas, countySeat, Fort_Worth,_Texas)","Tarrant_County,_Texas",countySeat,"Fort_Worth,_Texas","(Fort_Worth,_Texas, countySeat, Tarrant_County,_Texas)","Fort_Worth,_Texas",countySeat,"Tarrant_County,_Texas"
+ont_16_city_test_70,SEMANTIC,0.97,"(Arlington,_Texas, isPartOf, Tarrant_County,_Texas)","Arlington,_Texas",isPartOf,"Tarrant_County,_Texas","(Arlington,_Texas, location, Tarrant_County,_Texas)","Arlington,_Texas",location,"Tarrant_County,_Texas"
+ont_16_city_test_70,MISSING,,"(Tarrant_County,_Texas, country, United_States)","Tarrant_County,_Texas",country,United_States,,,,
+ont_16_city_test_70,EXTRA,,,,,,"(Arlington,_Texas, country, United_States)","Arlington,_Texas",country,United_States
+ont_16_city_test_70,EXTRA,,,,,,"(Arlington,_Texas, state, Texas_(steamboat))","Arlington,_Texas",state,Texas_(steamboat)
+ont_16_city_test_70,EXTRA,,,,,,"(Fort_Worth,_Texas, country, United_States)","Fort_Worth,_Texas",country,United_States
+ont_16_city_test_71,SEMANTIC,0.97,"(Arlington,_Texas, isPartOf, Tarrant_County,_Texas)","Arlington,_Texas",isPartOf,"Tarrant_County,_Texas","(Arlington,_Texas, location, Tarrant_County,_Texas)","Arlington,_Texas",location,"Tarrant_County,_Texas"
+ont_16_city_test_71,MISSING,,"(Tarrant_County,_Texas, largestCity, Fort_Worth,_Texas)","Tarrant_County,_Texas",largestCity,"Fort_Worth,_Texas",,,,
+ont_16_city_test_71,MISSING,,"(Tarrant_County,_Texas, country, United_States)","Tarrant_County,_Texas",country,United_States,,,,
+ont_16_city_test_71,EXTRA,,,,,,"(Fort_Worth,_Texas, state, Texas_(steamboat))","Fort_Worth,_Texas",state,Texas_(steamboat)
+ont_16_city_test_71,EXTRA,,,,,,"(Arlington,_Texas, state, Texas_(steamboat))","Arlington,_Texas",state,Texas_(steamboat)
+ont_16_city_test_71,EXTRA,,,,,,"(Arlington,_Texas, country, United_States)","Arlington,_Texas",country,United_States
+ont_16_city_test_72,EXACT,1.00,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.","(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C."
+ont_16_city_test_72,SEMANTIC,0.96,"(Atlanta, country, United_States)",Atlanta,country,United_States,"(Atlanta, isPartOf, United_States)",Atlanta,isPartOf,United_States
+ont_16_city_test_72,MISSING,,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,,,,
+ont_16_city_test_73,EXACT,1.00,"(Atlanta, country, United_States)",Atlanta,country,United_States,"(Atlanta, country, United_States)",Atlanta,country,United_States
+ont_16_city_test_73,MISSING,,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.",,,,
+ont_16_city_test_73,MISSING,,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,,,,
+ont_16_city_test_74,EXACT,1.00,"(Atlanta, country, United_States)",Atlanta,country,United_States,"(Atlanta, country, United_States)",Atlanta,country,United_States
+ont_16_city_test_74,SEMANTIC,0.96,"(Atlanta, isPartOf, Fulton_County,_Georgia)",Atlanta,isPartOf,"Fulton_County,_Georgia","(Atlanta, countySeat, Fulton_County,_Georgia)",Atlanta,countySeat,"Fulton_County,_Georgia"
+ont_16_city_test_74,MISSING,,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,,,,
+ont_16_city_test_74,EXTRA,,,,,,"(Atlanta, ethnicGroup, Asian_Americans)",Atlanta,ethnicGroup,Asian_Americans
+ont_16_city_test_74,EXTRA,,,,,,"(Atlanta, state, Georgia_(U.S._state))",Atlanta,state,Georgia_(U.S._state)
+ont_16_city_test_75,SEMANTIC,0.95,"(Atlanta, country, United_States)",Atlanta,country,United_States,"(Atlanta, state, Georgia_(U.S._state))",Atlanta,state,Georgia_(U.S._state)
+ont_16_city_test_75,SEMANTIC,0.97,"(Atlanta, isPartOf, Georgia_(U.S._state))",Atlanta,isPartOf,Georgia_(U.S._state),"(Atlanta, state, Georgia_(U.S._state))",Atlanta,state,Georgia_(U.S._state)
+ont_16_city_test_75,MISSING,,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,,,,
+ont_16_city_test_76,EXACT,1.00,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.","(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C."
+ont_16_city_test_76,EXACT,1.00,"(Atlanta, country, United_States)",Atlanta,country,United_States,"(Atlanta, country, United_States)",Atlanta,country,United_States
+ont_16_city_test_76,MISSING,,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,,,,
+ont_16_city_test_77,EXACT,1.00,"(Atlanta, country, United_States)",Atlanta,country,United_States,"(Atlanta, country, United_States)",Atlanta,country,United_States
+ont_16_city_test_77,SEMANTIC,0.96,"(Atlanta, isPartOf, Fulton_County,_Georgia)",Atlanta,isPartOf,"Fulton_County,_Georgia","(Atlanta, countySeat, Fulton_County,_Georgia)",Atlanta,countySeat,"Fulton_County,_Georgia"
+ont_16_city_test_77,MISSING,,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,,,,
+ont_16_city_test_77,EXTRA,,,,,,"(Atlanta, isPartOf, United_States)",Atlanta,isPartOf,United_States
+ont_16_city_test_77,EXTRA,,,,,,"(Atlanta, state, Georgia_(U.S._state))",Atlanta,state,Georgia_(U.S._state)
+ont_16_city_test_78,EXACT,1.00,"(Atlanta, country, United_States)",Atlanta,country,United_States,"(Atlanta, country, United_States)",Atlanta,country,United_States
+ont_16_city_test_78,SEMANTIC,0.97,"(Atlanta, isPartOf, DeKalb_County,_Georgia)",Atlanta,isPartOf,"DeKalb_County,_Georgia","(Atlanta, location, DeKalb_County,_Georgia)",Atlanta,location,"DeKalb_County,_Georgia"
+ont_16_city_test_78,SEMANTIC,0.97,"(Atlanta, isPartOf, Georgia_(U.S._state))",Atlanta,isPartOf,Georgia_(U.S._state),"(Atlanta, state, Georgia_(U.S._state))",Atlanta,state,Georgia_(U.S._state)
+ont_16_city_test_79,EXACT,1.00,"(Atlanta, country, United_States)",Atlanta,country,United_States,"(Atlanta, country, United_States)",Atlanta,country,United_States
+ont_16_city_test_79,SEMANTIC,0.97,"(Atlanta, isPartOf, DeKalb_County,_Georgia)",Atlanta,isPartOf,"DeKalb_County,_Georgia","(Atlanta, location, DeKalb_County,_Georgia)",Atlanta,location,"DeKalb_County,_Georgia"
+ont_16_city_test_79,MISSING,,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,,,,
+ont_16_city_test_79,EXTRA,,,,,,"(Atlanta, state, Georgia_(U.S._state))",Atlanta,state,Georgia_(U.S._state)
+ont_16_city_test_8,SEMANTIC,0.98,"(Albany,_Georgia, country, United_States)","Albany,_Georgia",country,United_States,"(Albany,_Georgia, state, Georgia_(U.S._state))","Albany,_Georgia",state,Georgia_(U.S._state)
+ont_16_city_test_8,SEMANTIC,0.98,"(Albany,_Georgia, isPartOf, Georgia_(U.S._state))","Albany,_Georgia",isPartOf,Georgia_(U.S._state),"(Albany,_Georgia, state, Georgia_(U.S._state))","Albany,_Georgia",state,Georgia_(U.S._state)
+ont_16_city_test_8,MISSING,,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,,,,
+ont_16_city_test_80,EXACT,1.00,"(Atlanta, country, United_States)",Atlanta,country,United_States,"(Atlanta, country, United_States)",Atlanta,country,United_States
+ont_16_city_test_80,SEMANTIC,0.95,"(Atlanta, isPartOf, DeKalb_County,_Georgia)",Atlanta,isPartOf,"DeKalb_County,_Georgia","(Atlanta, countySeat, DeKalb_County,_Georgia)",Atlanta,countySeat,"DeKalb_County,_Georgia"
+ont_16_city_test_80,MISSING,,"(United_States, ethnicGroup, Native_Americans_in_the_United_States)",United_States,ethnicGroup,Native_Americans_in_the_United_States,,,,
+ont_16_city_test_80,EXTRA,,,,,,"(Atlanta, state, Georgia_(U.S._state))",Atlanta,state,Georgia_(U.S._state)
+ont_16_city_test_81,SEMANTIC,0.95,"(Atlanta, isPartOf, Georgia)",Atlanta,isPartOf,Georgia,"(Atlanta, isPartOf, United_States)",Atlanta,isPartOf,United_States
+ont_16_city_test_81,SEMANTIC,0.97,"(Atlanta, isPartOf, DeKalb_County,_Georgia)",Atlanta,isPartOf,"DeKalb_County,_Georgia","(Atlanta, location, DeKalb_County,_Georgia)",Atlanta,location,"DeKalb_County,_Georgia"
+ont_16_city_test_81,MISSING,,"(DeKalb_County,_Georgia, country, United_States)","DeKalb_County,_Georgia",country,United_States,,,,
+ont_16_city_test_81,EXTRA,,,,,,"(Atlanta, state, Georgia_(U.S._state))",Atlanta,state,Georgia_(U.S._state)
+ont_16_city_test_82,SEMANTIC,0.98,"(DeKalb_County,_Georgia, country, United_States)","DeKalb_County,_Georgia",country,United_States,"(DeKalb_County,_Georgia, state, Georgia_(U.S._state))","DeKalb_County,_Georgia",state,Georgia_(U.S._state)
+ont_16_city_test_82,SEMANTIC,0.96,"(Atlanta, isPartOf, Fulton_County,_Georgia)",Atlanta,isPartOf,"Fulton_County,_Georgia","(Atlanta, countySeat, Fulton_County,_Georgia)",Atlanta,countySeat,"Fulton_County,_Georgia"
+ont_16_city_test_82,SEMANTIC,0.95,"(Atlanta, isPartOf, DeKalb_County,_Georgia)",Atlanta,isPartOf,"DeKalb_County,_Georgia","(Atlanta, countySeat, DeKalb_County,_Georgia)",Atlanta,countySeat,"DeKalb_County,_Georgia"
+ont_16_city_test_82,EXTRA,,,,,,"(Georgia_(U.S._state), isPartOf, United_States)",Georgia_(U.S._state),isPartOf,United_States
+ont_16_city_test_82,EXTRA,,,,,,"(Fulton_County,_Georgia, state, Georgia_(U.S._state))","Fulton_County,_Georgia",state,Georgia_(U.S._state)
+ont_16_city_test_83,SEMANTIC,0.96,"(Atlanta, country, United_States)",Atlanta,country,United_States,"(Atlanta, isPartOf, United_States)",Atlanta,isPartOf,United_States
+ont_16_city_test_83,SEMANTIC,0.96,"(Atlanta, isPartOf, Fulton_County,_Georgia)",Atlanta,isPartOf,"Fulton_County,_Georgia","(Atlanta, countySeat, Fulton_County,_Georgia)",Atlanta,countySeat,"Fulton_County,_Georgia"
+ont_16_city_test_83,SEMANTIC,0.97,"(Atlanta, isPartOf, Georgia_(U.S._state))",Atlanta,isPartOf,Georgia_(U.S._state),"(Atlanta, state, Georgia_(U.S._state))",Atlanta,state,Georgia_(U.S._state)
+ont_16_city_test_84,SEMANTIC,0.96,"(Atlanta, country, United_States)",Atlanta,country,United_States,"(Atlanta, isPartOf, United_States)",Atlanta,isPartOf,United_States
+ont_16_city_test_84,SEMANTIC,0.96,"(Atlanta, isPartOf, Fulton_County,_Georgia)",Atlanta,isPartOf,"Fulton_County,_Georgia","(Atlanta, countySeat, Fulton_County,_Georgia)",Atlanta,countySeat,"Fulton_County,_Georgia"
+ont_16_city_test_84,SEMANTIC,0.97,"(Atlanta, isPartOf, DeKalb_County,_Georgia)",Atlanta,isPartOf,"DeKalb_County,_Georgia","(Atlanta, location, DeKalb_County,_Georgia)",Atlanta,location,"DeKalb_County,_Georgia"
+ont_16_city_test_84,EXTRA,,,,,,"(Atlanta, state, Georgia_(U.S._state))",Atlanta,state,Georgia_(U.S._state)
+ont_16_city_test_85,EXACT,1.00,"(Atlanta, areaCode, 404)",Atlanta,areaCode,404,"(Atlanta, areaCode, 404)",Atlanta,areaCode,404
+ont_16_city_test_85,SEMANTIC,0.95,"(Atlanta, populationDensity, 1299.0 (inhabitants per square kilometre))",Atlanta,populationDensity,1299.0 (inhabitants per square kilometre),"(Atlanta, populationDensity, 1299)",Atlanta,populationDensity,1299
+ont_16_city_test_85,MISSING,,"(Atlanta, areaTotal, 347.1 (square kilometres))",Atlanta,areaTotal,347.1 (square kilometres),,,,
+ont_16_city_test_85,EXTRA,,,,,,"(Atlanta, areaTotal, 347.1)",Atlanta,areaTotal,347.1
+ont_16_city_test_86,EXACT,1.00,"(United_States, largestCity, New_York_City)",United_States,largestCity,New_York_City,"(United_States, largestCity, New_York_City)",United_States,largestCity,New_York_City
+ont_16_city_test_86,SEMANTIC,0.98,"(Atlantic_City,_New_Jersey, country, United_States)","Atlantic_City,_New_Jersey",country,United_States,"(Atlantic_City,_New_Jersey, state, New_Jersey)","Atlantic_City,_New_Jersey",state,New_Jersey
+ont_16_city_test_86,SEMANTIC,0.98,"(Atlantic_City,_New_Jersey, isPartOf, Atlantic_County,_New_Jersey)","Atlantic_City,_New_Jersey",isPartOf,"Atlantic_County,_New_Jersey","(Atlantic_City,_New_Jersey, location, Atlantic_County,_New_Jersey)","Atlantic_City,_New_Jersey",location,"Atlantic_County,_New_Jersey"
+ont_16_city_test_86,EXTRA,,,,,,"(Atlantic_City,_New_Jersey, isPartOf, United_States)","Atlantic_City,_New_Jersey",isPartOf,United_States
+ont_16_city_test_87,EXACT,1.00,"(Atlantic_City,_New_Jersey, country, United_States)","Atlantic_City,_New_Jersey",country,United_States,"(Atlantic_City,_New_Jersey, country, United_States)","Atlantic_City,_New_Jersey",country,United_States
+ont_16_city_test_87,SEMANTIC,0.97,"(Atlantic_City,_New_Jersey, isPartOf, New_Jersey)","Atlantic_City,_New_Jersey",isPartOf,New_Jersey,"(Atlantic_City,_New_Jersey, state, New_Jersey)","Atlantic_City,_New_Jersey",state,New_Jersey
+ont_16_city_test_87,MISSING,,"(New_Jersey, largestCity, Newark,_New_Jersey)",New_Jersey,largestCity,"Newark,_New_Jersey",,,,
+ont_16_city_test_88,EXACT,1.00,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.","(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C."
+ont_16_city_test_88,EXACT,1.00,"(Atlantic_City,_New_Jersey, country, United_States)","Atlantic_City,_New_Jersey",country,United_States,"(Atlantic_City,_New_Jersey, country, United_States)","Atlantic_City,_New_Jersey",country,United_States
+ont_16_city_test_88,SEMANTIC,0.97,"(Atlantic_City,_New_Jersey, isPartOf, Atlantic_County,_New_Jersey)","Atlantic_City,_New_Jersey",isPartOf,"Atlantic_County,_New_Jersey","(Atlantic_City,_New_Jersey, countySeat, Atlantic_County,_New_Jersey)","Atlantic_City,_New_Jersey",countySeat,"Atlantic_County,_New_Jersey"
+ont_16_city_test_88,EXTRA,,,,,,"(Atlantic_City,_New_Jersey, state, New_Jersey)","Atlantic_City,_New_Jersey",state,New_Jersey
+ont_16_city_test_89,EXACT,1.00,"(United_States, largestCity, New_York_City)",United_States,largestCity,New_York_City,"(United_States, largestCity, New_York_City)",United_States,largestCity,New_York_City
+ont_16_city_test_89,SEMANTIC,0.94,"(Atlantic_County,_New_Jersey, country, United_States)","Atlantic_County,_New_Jersey",country,United_States,"(Atlantic_City,_New_Jersey, location, Atlantic_County,_New_Jersey)","Atlantic_City,_New_Jersey",location,"Atlantic_County,_New_Jersey"
+ont_16_city_test_89,SEMANTIC,0.98,"(Atlantic_City,_New_Jersey, isPartOf, Atlantic_County,_New_Jersey)","Atlantic_City,_New_Jersey",isPartOf,"Atlantic_County,_New_Jersey","(Atlantic_City,_New_Jersey, location, Atlantic_County,_New_Jersey)","Atlantic_City,_New_Jersey",location,"Atlantic_County,_New_Jersey"
+ont_16_city_test_89,EXTRA,,,,,,"(Atlantic_City,_New_Jersey, country, United_States)","Atlantic_City,_New_Jersey",country,United_States
+ont_16_city_test_89,EXTRA,,,,,,"(Atlantic_City,_New_Jersey, state, New_Jersey)","Atlantic_City,_New_Jersey",state,New_Jersey
+ont_16_city_test_9,SEMANTIC,0.94,"(Albany,_Oregon, areaTotal, 45.97 (square kilometres))","Albany,_Oregon",areaTotal,45.97 (square kilometres),"(Albany,_Oregon, areaTotal, 45.97)","Albany,_Oregon",areaTotal,45.97
+ont_16_city_test_9,SEMANTIC,0.97,"(Albany,_Oregon, populationDensity, 1104.1 (inhabitants per square kilometre))","Albany,_Oregon",populationDensity,1104.1 (inhabitants per square kilometre),"(Albany,_Oregon, populationDensity, 1104.1)","Albany,_Oregon",populationDensity,1104.1
+ont_16_city_test_9,MISSING,,"(Albany,_Oregon, elevationAboveTheSeaLevel, 64.008)","Albany,_Oregon",elevationAboveTheSeaLevel,64.008,,,,
+ont_16_city_test_9,EXTRA,,,,,,"(Albany,_Oregon, utcOffset, 64.008)","Albany,_Oregon",utcOffset,64.008
+ont_16_city_test_90,MISSING,,"(Atlantic_City,_New_Jersey, leaderTitle, Clerk_(municipal_official))","Atlantic_City,_New_Jersey",leaderTitle,Clerk_(municipal_official),,,,
+ont_16_city_test_90,MISSING,,"(Atlantic_City,_New_Jersey, areaTotal, 44.125 (square kilometres))","Atlantic_City,_New_Jersey",areaTotal,44.125 (square kilometres),,,,
+ont_16_city_test_90,MISSING,,"(Atlantic_City,_New_Jersey, populationDensity, 1421.2 (inhabitants per square kilometre))","Atlantic_City,_New_Jersey",populationDensity,1421.2 (inhabitants per square kilometre),,,,
+ont_16_city_test_91,EXACT,1.00,"(Attica,_Indiana, country, United_States)","Attica,_Indiana",country,United_States,"(Attica,_Indiana, country, United_States)","Attica,_Indiana",country,United_States
+ont_16_city_test_91,SEMANTIC,0.96,"(Attica,_Indiana, isPartOf, Indiana)","Attica,_Indiana",isPartOf,Indiana,"(Attica, state, Indiana)",Attica,state,Indiana
+ont_16_city_test_91,MISSING,,"(Indiana, capital, Indianapolis)",Indiana,capital,Indianapolis,,,,
+ont_16_city_test_92,SEMANTIC,0.98,"(Attica,_Indiana, country, United_States)","Attica,_Indiana",country,United_States,"(Attica,_Indiana, isPartOf, United_States)","Attica,_Indiana",isPartOf,United_States
+ont_16_city_test_92,SEMANTIC,0.98,"(Attica,_Indiana, isPartOf, Indiana)","Attica,_Indiana",isPartOf,Indiana,"(Attica,_Indiana, isPartOf, United_States)","Attica,_Indiana",isPartOf,United_States
+ont_16_city_test_92,MISSING,,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.",,,,
+ont_16_city_test_92,EXTRA,,,,,,"(Attica,_Indiana, state, Indiana)","Attica,_Indiana",state,Indiana
+ont_16_city_test_93,MISSING,,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.",,,,
+ont_16_city_test_93,MISSING,,"(United_States, ethnicGroup, African_Americans)",United_States,ethnicGroup,African_Americans,,,,
+ont_16_city_test_93,MISSING,,"(Auburn,_Alabama, country, United_States)","Auburn,_Alabama",country,United_States,,,,
+ont_16_city_test_93,EXTRA,,,,,,"(Auburn_hair, state, Alabama)",Auburn_hair,state,Alabama
+ont_16_city_test_93,EXTRA,,,,,,"(Auburn_hair, country, Us_(2019_film))",Auburn_hair,country,Us_(2019_film)
+ont_16_city_test_94,EXACT,1.00,"(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C.","(United_States, capital, Washington,_D.C.)",United_States,capital,"Washington,_D.C."
+ont_16_city_test_94,EXACT,1.00,"(Auburn,_Alabama, country, United_States)","Auburn,_Alabama",country,United_States,"(Auburn,_Alabama, country, United_States)","Auburn,_Alabama",country,United_States
+ont_16_city_test_94,MISSING,,"(United_States, ethnicGroup, Asian_Americans)",United_States,ethnicGroup,Asian_Americans,,,,
+ont_16_city_test_94,EXTRA,,,,,,"(Auburn_hair, state, Alabama)",Auburn_hair,state,Alabama
+ont_16_city_test_94,EXTRA,,,,,,"(Washington,_D.C., country, United_States)","Washington,_D.C.",country,United_States
+ont_16_city_test_95,SEMANTIC,0.98,"(Auburn,_Alabama, populationDensity, 368.65 (inhabitants per square kilometre))","Auburn,_Alabama",populationDensity,368.65 (inhabitants per square kilometre),"(Auburn,_Alabama, populationDensity, 368.65)","Auburn,_Alabama",populationDensity,368.65
+ont_16_city_test_95,SEMANTIC,0.95,"(Auburn,_Alabama, areaTotal, 140.8 (square kilometres))","Auburn,_Alabama",areaTotal,140.8 (square kilometres),"(Auburn,_Alabama, areaTotal, 140.8)","Auburn,_Alabama",areaTotal,140.8
+ont_16_city_test_95,MISSING,,"(Auburn,_Alabama, elevationAboveTheSeaLevel, 214.0)","Auburn,_Alabama",elevationAboveTheSeaLevel,214.0,,,,
+ont_16_city_test_95,EXTRA,,,,,,"(Auburn,_Alabama, utcOffset, 214)","Auburn,_Alabama",utcOffset,214
+ont_16_city_test_96,MISSING,,"(Auburn,_Alabama, isPartOf, Lee_County,_Alabama)","Auburn,_Alabama",isPartOf,"Lee_County,_Alabama",,,,
+ont_16_city_test_96,MISSING,,"(Alabama, country, United_States)",Alabama,country,United_States,,,,
+ont_16_city_test_96,MISSING,,"(Auburn,_Alabama, isPartOf, Alabama)","Auburn,_Alabama",isPartOf,Alabama,,,,
+ont_16_city_test_96,EXTRA,,,,,,"(Auburn_hair, country, United_States)",Auburn_hair,country,United_States
+ont_16_city_test_96,EXTRA,,,,,,"(Auburn_hair, state, Alabama)",Auburn_hair,state,Alabama
+ont_16_city_test_96,EXTRA,,,,,,"(Auburn_hair, location, Lee_County,_Alabama)",Auburn_hair,location,"Lee_County,_Alabama"
+ont_16_city_test_97,MISSING,,"(Alabama, country, United_States)",Alabama,country,United_States,,,,
+ont_16_city_test_97,MISSING,,"(Auburn,_Alabama, isPartOf, Lee_County,_Alabama)","Auburn,_Alabama",isPartOf,"Lee_County,_Alabama",,,,
+ont_16_city_test_97,MISSING,,"(Lee_County,_Alabama, state, Alabama)","Lee_County,_Alabama",state,Alabama,,,,
+ont_16_city_test_97,EXTRA,,,,,,"(Auburn_hair, country, United_States)",Auburn_hair,country,United_States
+ont_16_city_test_97,EXTRA,,,,,,"(Auburn_hair, state, Alabama)",Auburn_hair,state,Alabama
+ont_16_city_test_97,EXTRA,,,,,,"(Auburn_hair, countySeat, Lee_County,_Alabama)",Auburn_hair,countySeat,"Lee_County,_Alabama"
+ont_16_city_test_98,MISSING,,"(Auburn,_Alabama, isPartOf, Lee_County,_Alabama)","Auburn,_Alabama",isPartOf,"Lee_County,_Alabama",,,,
+ont_16_city_test_98,MISSING,,"(Lee_County,_Alabama, country, United_States)","Lee_County,_Alabama",country,United_States,,,,
+ont_16_city_test_98,MISSING,,"(Auburn,_Alabama, isPartOf, Alabama)","Auburn,_Alabama",isPartOf,Alabama,,,,
+ont_16_city_test_98,EXTRA,,,,,,"(Auburn_hair, country, United_States)",Auburn_hair,country,United_States
+ont_16_city_test_98,EXTRA,,,,,,"(Auburn_hair, state, Alabama)",Auburn_hair,state,Alabama
+ont_16_city_test_98,EXTRA,,,,,,"(Auburn_hair, countySeat, Lee_County,_Alabama)",Auburn_hair,countySeat,"Lee_County,_Alabama"
+ont_16_city_test_99,MISSING,,"(Lee_County,_Alabama, country, United_States)","Lee_County,_Alabama",country,United_States,,,,
+ont_16_city_test_99,MISSING,,"(Auburn,_Alabama, isPartOf, Lee_County,_Alabama)","Auburn,_Alabama",isPartOf,"Lee_County,_Alabama",,,,
+ont_16_city_test_99,MISSING,,"(Lee_County,_Alabama, state, Alabama)","Lee_County,_Alabama",state,Alabama,,,,
+ont_16_city_test_99,EXTRA,,,,,,"(Auburn_hair, country, United_States)",Auburn_hair,country,United_States
+ont_16_city_test_99,EXTRA,,,,,,"(Auburn_hair, state, Alabama)",Auburn_hair,state,Alabama
+ont_16_city_test_99,EXTRA,,,,,,"(Auburn_hair, location, Lee_County,_Alabama)",Auburn_hair,location,"Lee_County,_Alabama"

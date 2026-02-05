@@ -1,0 +1,1006 @@
+sent_id,match_type,similarity,expected,expected_sub,expected_rel,expected_obj,predicted,predicted_sub,predicted_rel,predicted_obj
+ont_2_musicalwork_test_1,SEMANTIC,0.95,"(Mermaid_(Train_song), followedBy, Imagine_(John_Lennon_song))",Mermaid_(Train_song),followedBy,Imagine_(John_Lennon_song),"(Imagine_(John_Lennon_song), followedBy, Mermaid)",Imagine_(John_Lennon_song),followedBy,Mermaid
+ont_2_musicalwork_test_1,MISSING,,"(Mermaid_(Train_song), producer, Espionage_(production_team))",Mermaid_(Train_song),producer,Espionage_(production_team),,,,
+ont_2_musicalwork_test_1,MISSING,,"(Mermaid_(Train_song), album, California_37_(Train_album))",Mermaid_(Train_song),album,California_37_(Train_album),,,,
+ont_2_musicalwork_test_1,EXTRA,,,,,,"(Imagine_(John_Lennon_song), album, California_37_(album))",Imagine_(John_Lennon_song),album,California_37_(album)
+ont_2_musicalwork_test_1,EXTRA,,,,,,"(Imagine_(John_Lennon_song), type, Song)",Imagine_(John_Lennon_song),type,Song
+ont_2_musicalwork_test_1,EXTRA,,,,,,"(Imagine_(John_Lennon_song), musicalBand, Train)",Imagine_(John_Lennon_song),musicalBand,Train
+ont_2_musicalwork_test_10,MISSING,,"(Mermaid_(Train_song), writer, Espen_Lind)",Mermaid_(Train_song),writer,Espen_Lind,,,,
+ont_2_musicalwork_test_10,MISSING,,"(Mermaid_(Train_song), precededBy, This'll_Be_My_Year)",Mermaid_(Train_song),precededBy,This'll_Be_My_Year,,,,
+ont_2_musicalwork_test_10,MISSING,,"(Mermaid_(Train_song), runtime, 3.16)",Mermaid_(Train_song),runtime,3.16,,,,
+ont_2_musicalwork_test_10,MISSING,,"(Mermaid_(Train_song), writer, Amund_Bjørklund)",Mermaid_(Train_song),writer,Amund_Bjørklund,,,,
+ont_2_musicalwork_test_10,MISSING,,"(Mermaid_(Train_song), releaseDate, 2012-12-27)",Mermaid_(Train_song),releaseDate,2012-12-27,,,,
+ont_2_musicalwork_test_10,EXTRA,,,,,,"(Mermaid, writer, Amund_Bjørklund)",Mermaid,writer,Amund_Bjørklund
+ont_2_musicalwork_test_10,EXTRA,,,,,,"(Mermaid, runtime, 3.16)",Mermaid,runtime,3.16
+ont_2_musicalwork_test_10,EXTRA,,,,,,"(Mermaid, writer, Espen_Lind)",Mermaid,writer,Espen_Lind
+ont_2_musicalwork_test_10,EXTRA,,,,,,"(Mermaid, releaseDate, 2012-12-27)",Mermaid,releaseDate,2012-12-27
+ont_2_musicalwork_test_100,MISSING,,"(Punk_blues, instrument, Drum_kit)",Punk_blues,instrument,Drum_kit,,,,
+ont_2_musicalwork_test_100,MISSING,,"(Turn_Me_On_(album), genre, Punk_blues)",Turn_Me_On_(album),genre,Punk_blues,,,,
+ont_2_musicalwork_test_100,EXTRA,,,,,,"(Turn_Me_On_(David_Guetta_song), genre, Punk_blues)",Turn_Me_On_(David_Guetta_song),genre,Punk_blues
+ont_2_musicalwork_test_101,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, producer, The_Velvet_Underground)",Bootleg_Series_Volume_1:_The_Quine_Tapes,producer,The_Velvet_Underground,,,,
+ont_2_musicalwork_test_102,MISSING,,"(Nord_(Year_of_No_Light_album), genre, Post-metal)",Nord_(Year_of_No_Light_album),genre,Post-metal,,,,
+ont_2_musicalwork_test_102,MISSING,,"(Nord_(Year_of_No_Light_album), releaseDate, 2006-09-06)",Nord_(Year_of_No_Light_album),releaseDate,2006-09-06,,,,
+ont_2_musicalwork_test_102,MISSING,,"(Nord_(Year_of_No_Light_album), artist, Year_of_No_Light)",Nord_(Year_of_No_Light_album),artist,Year_of_No_Light,,,,
+ont_2_musicalwork_test_102,EXTRA,,,,,,"(Nord_(French_department), genre, Post-metal)",Nord_(French_department),genre,Post-metal
+ont_2_musicalwork_test_102,EXTRA,,,,,,"(Nord_(French_department), type, Album)",Nord_(French_department),type,Album
+ont_2_musicalwork_test_102,EXTRA,,,,,,"(Nord_(French_department), musicalBand, Year_of_No_Light)",Nord_(French_department),musicalBand,Year_of_No_Light
+ont_2_musicalwork_test_102,EXTRA,,,,,,"(Nord_(French_department), releaseDate, 2006-09-06)",Nord_(French_department),releaseDate,2006-09-06
+ont_2_musicalwork_test_103,MISSING,,"(Turn_Me_On_(album), genre, Noise_rock)",Turn_Me_On_(album),genre,Noise_rock,,,,
+ont_2_musicalwork_test_103,EXTRA,,,,,,"(Turn_Me_On_(Kim_Kyu-jong_EP), genre, Noise_rock)",Turn_Me_On_(Kim_Kyu-jong_EP),genre,Noise_rock
+ont_2_musicalwork_test_104,MISSING,,"(Turn_Me_On_(album), precededBy, Let_It_Breed)",Turn_Me_On_(album),precededBy,Let_It_Breed,,,,
+ont_2_musicalwork_test_104,MISSING,,"(Turn_Me_On_(album), runtime, 35.1)",Turn_Me_On_(album),runtime,35.1,,,,
+ont_2_musicalwork_test_104,MISSING,,"(Turn_Me_On_(album), producer, Wharton_Tiers)",Turn_Me_On_(album),producer,Wharton_Tiers,,,,
+ont_2_musicalwork_test_104,MISSING,,"(Turn_Me_On_(album), producer, The_Honeymoon_Killers_(American_band))",Turn_Me_On_(album),producer,The_Honeymoon_Killers_(American_band),,,,
+ont_2_musicalwork_test_104,EXTRA,,,,,,"(Turn_Me_On_(David_Guetta_song), producer, Wharton_Tiers)",Turn_Me_On_(David_Guetta_song),producer,Wharton_Tiers
+ont_2_musicalwork_test_104,EXTRA,,,,,,"(Turn_Me_On_(David_Guetta_song), runtime, 35.1)",Turn_Me_On_(David_Guetta_song),runtime,35.1
+ont_2_musicalwork_test_104,EXTRA,,,,,,"(Turn_Me_On_(David_Guetta_song), followedBy, Let_It_Breed)",Turn_Me_On_(David_Guetta_song),followedBy,Let_It_Breed
+ont_2_musicalwork_test_104,EXTRA,,,,,,"(Turn_Me_On_(Kim_Kyu-jong_EP), musicalBand, The_Honeymoon_Killers_(American_band))",Turn_Me_On_(Kim_Kyu-jong_EP),musicalBand,The_Honeymoon_Killers_(American_band)
+ont_2_musicalwork_test_105,SEMANTIC,0.97,"(Mermaid_(Train_song), followedBy, Imagine_(John_Lennon_song))",Mermaid_(Train_song),followedBy,Imagine_(John_Lennon_song),"(Mermaid, followedBy, Imagine_(John_Lennon_song))",Mermaid,followedBy,Imagine_(John_Lennon_song)
+ont_2_musicalwork_test_105,MISSING,,"(Mermaid_(Train_song), format, Music_download)",Mermaid_(Train_song),format,Music_download,,,,
+ont_2_musicalwork_test_105,MISSING,,"(Mermaid_(Train_song), producer, Espionage_(production_team))",Mermaid_(Train_song),producer,Espionage_(production_team),,,,
+ont_2_musicalwork_test_105,EXTRA,,,,,,"(Mermaid, producer, Espionage)",Mermaid,producer,Espionage
+ont_2_musicalwork_test_105,EXTRA,,,,,,"(Imagine_(John_Lennon_song), artist, John_Lennon)",Imagine_(John_Lennon_song),artist,John_Lennon
+ont_2_musicalwork_test_105,EXTRA,,,,,,"(Mermaid, musicalBand, Train)",Mermaid,musicalBand,Train
+ont_2_musicalwork_test_105,EXTRA,,,,,,"(Mermaid, format, digital)",Mermaid,format,digital
+ont_2_musicalwork_test_106,EXACT,1.00,"(Reggae, stylisticOrigin, Rhythm_and_Blues)",Reggae,stylisticOrigin,Rhythm_and_Blues,"(Reggae, stylisticOrigin, Rhythm_and_blues)",Reggae,stylisticOrigin,Rhythm_and_blues
+ont_2_musicalwork_test_107,MISSING,,"(Mermaid_(Train_song), runtime, 3.16)",Mermaid_(Train_song),runtime,3.16,,,,
+ont_2_musicalwork_test_107,EXTRA,,,,,,"(The_Mermaid_(ballad), runtime, 196)",The_Mermaid_(ballad),runtime,196
+ont_2_musicalwork_test_107,EXTRA,,,,,,"(The_Mermaid_(ballad), musicalBand, Train)",The_Mermaid_(ballad),musicalBand,Train
+ont_2_musicalwork_test_108,EXACT,1.00,"(Imagine_(John_Lennon_song), followedBy, Happy_Xmas_(War_Is_Over))",Imagine_(John_Lennon_song),followedBy,Happy_Xmas_(War_Is_Over),"(Imagine_(John_Lennon_song), followedBy, Happy_Xmas_(War_Is_Over))",Imagine_(John_Lennon_song),followedBy,Happy_Xmas_(War_Is_Over)
+ont_2_musicalwork_test_108,SEMANTIC,0.95,"(Imagine_(John_Lennon_song), musicalArtist, John_Lennon)",Imagine_(John_Lennon_song),musicalArtist,John_Lennon,"(Imagine_(John_Lennon_song), writer, John_Lennon)",Imagine_(John_Lennon_song),writer,John_Lennon
+ont_2_musicalwork_test_108,SEMANTIC,0.97,"(Mermaid_(Train_song), followedBy, Imagine_(John_Lennon_song))",Mermaid_(Train_song),followedBy,Imagine_(John_Lennon_song),"(Mermaid, followedBy, Imagine_(John_Lennon_song))",Mermaid,followedBy,Imagine_(John_Lennon_song)
+ont_2_musicalwork_test_108,MISSING,,"(Mermaid_(Train_song), musicalBand, Train_(band))",Mermaid_(Train_song),musicalBand,Train_(band),,,,
+ont_2_musicalwork_test_108,EXTRA,,,,,,"(Mermaid, writer, Train)",Mermaid,writer,Train
+ont_2_musicalwork_test_109,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, releaseDate, 2001-10-16)",Bootleg_Series_Volume_1:_The_Quine_Tapes,releaseDate,2001-10-16,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, releaseDate, 2001-10-16)",Bootleg_Series_Volume_1:_The_Quine_Tapes,releaseDate,2001-10-16
+ont_2_musicalwork_test_109,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, runtime, 230.05)",Bootleg_Series_Volume_1:_The_Quine_Tapes,runtime,230.05,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, runtime, 230.05)",Bootleg_Series_Volume_1:_The_Quine_Tapes,runtime,230.05
+ont_2_musicalwork_test_11,MISSING,,"(Nord_(Year_of_No_Light_album), genre, Post-metal)",Nord_(Year_of_No_Light_album),genre,Post-metal,,,,
+ont_2_musicalwork_test_11,MISSING,,"(Nord_(Year_of_No_Light_album), followedBy, Live_at_Roadburn_2008_(Year_of_No_Light_album))",Nord_(Year_of_No_Light_album),followedBy,Live_at_Roadburn_2008_(Year_of_No_Light_album),,,,
+ont_2_musicalwork_test_11,MISSING,,"(Nord_(Year_of_No_Light_album), genre, Sludge_metal)",Nord_(Year_of_No_Light_album),genre,Sludge_metal,,,,
+ont_2_musicalwork_test_11,MISSING,,"(Nord_(Year_of_No_Light_album), releaseDate, 2006-09-06)",Nord_(Year_of_No_Light_album),releaseDate,2006-09-06,,,,
+ont_2_musicalwork_test_11,MISSING,,"(Nord_(Year_of_No_Light_album), producer, Year_of_No_Light)",Nord_(Year_of_No_Light_album),producer,Year_of_No_Light,,,,
+ont_2_musicalwork_test_110,SEMANTIC,0.95,"(Mermaid_(Train_song), recordLabel, Columbia_Records)",Mermaid_(Train_song),recordLabel,Columbia_Records,"(Mermaid, recordLabel, Columbia_Records)",Mermaid,recordLabel,Columbia_Records
+ont_2_musicalwork_test_110,MISSING,,"(Mermaid_(Train_song), genre, Pop_rock)",Mermaid_(Train_song),genre,Pop_rock,,,,
+ont_2_musicalwork_test_110,EXTRA,,,,,,"(Mermaid, genre, Pop_rock)",Mermaid,genre,Pop_rock
+ont_2_musicalwork_test_110,EXTRA,,,,,,"(Mermaid, musicalBand, Train)",Mermaid,musicalBand,Train
+ont_2_musicalwork_test_110,EXTRA,,,,,,"(Mermaid, type, Song)",Mermaid,type,Song
+ont_2_musicalwork_test_111,SEMANTIC,0.96,"(Train_(band), formerBandMember, Johnny_Colt)",Train_(band),formerBandMember,Johnny_Colt,"(Johnny_Colt, formerBandMember, Train)",Johnny_Colt,formerBandMember,Train
+ont_2_musicalwork_test_111,SEMANTIC,0.96,"(Train_(band), formerBandMember, Charlie_Colin)",Train_(band),formerBandMember,Charlie_Colin,"(Charlie_Colin, formerBandMember, Train)",Charlie_Colin,formerBandMember,Train
+ont_2_musicalwork_test_111,MISSING,,"(Mermaid_(Train_song), musicalBand, Train_(band))",Mermaid_(Train_song),musicalBand,Train_(band),,,,
+ont_2_musicalwork_test_111,EXTRA,,,,,,"(Mermaid, musicalBand, Train)",Mermaid,musicalBand,Train
+ont_2_musicalwork_test_112,MISSING,,"(Year_of_No_Light, associatedBand/associatedMusicalArtist, Altar_of_Plagues)",Year_of_No_Light,associatedBand/associatedMusicalArtist,Altar_of_Plagues,,,,
+ont_2_musicalwork_test_112,MISSING,,"(Nord_(Year_of_No_Light_album), producer, Year_of_No_Light)",Nord_(Year_of_No_Light_album),producer,Year_of_No_Light,,,,
+ont_2_musicalwork_test_112,EXTRA,,,,,,"(Nord_(French_department), type, Album)",Nord_(French_department),type,Album
+ont_2_musicalwork_test_112,EXTRA,,,,,,"(Nord_(French_department), musicalBand, Year_of_No_Light)",Nord_(French_department),musicalBand,Year_of_No_Light
+ont_2_musicalwork_test_113,SEMANTIC,0.98,"(Reggae, derivative, Hip_hop_music)",Reggae,derivative,Hip_hop_music,"(Hip_hop_music, derivative, Reggae)",Hip_hop_music,derivative,Reggae
+ont_2_musicalwork_test_114,MISSING,,"(Turn_Me_On_(album), runtime, 35.1)",Turn_Me_On_(album),runtime,35.1,,,,
+ont_2_musicalwork_test_114,MISSING,,"(Turn_Me_On_(album), producer, Wharton_Tiers)",Turn_Me_On_(album),producer,Wharton_Tiers,,,,
+ont_2_musicalwork_test_114,MISSING,,"(Turn_Me_On_(album), genre, Punk_blues)",Turn_Me_On_(album),genre,Punk_blues,,,,
+ont_2_musicalwork_test_114,MISSING,,"(Turn_Me_On_(album), genre, Noise_rock)",Turn_Me_On_(album),genre,Noise_rock,,,,
+ont_2_musicalwork_test_114,EXTRA,,,,,,"(Turn_Me_On_(David_Guetta_song), genre, Noise_rock)",Turn_Me_On_(David_Guetta_song),genre,Noise_rock
+ont_2_musicalwork_test_114,EXTRA,,,,,,"(Turn_Me_On_(David_Guetta_song), genre, Punk_blues)",Turn_Me_On_(David_Guetta_song),genre,Punk_blues
+ont_2_musicalwork_test_114,EXTRA,,,,,,"(Turn_Me_On_(David_Guetta_song), producer, Wharton_Tiers)",Turn_Me_On_(David_Guetta_song),producer,Wharton_Tiers
+ont_2_musicalwork_test_114,EXTRA,,,,,,"(Turn_Me_On_(David_Guetta_song), runtime, 35 minutes 10 seconds)",Turn_Me_On_(David_Guetta_song),runtime,35 minutes 10 seconds
+ont_2_musicalwork_test_115,EXACT,1.00,"(Imagine_(John_Lennon_song), followedBy, Happy_Xmas_(War_Is_Over))",Imagine_(John_Lennon_song),followedBy,Happy_Xmas_(War_Is_Over),"(Imagine_(John_Lennon_song), followedBy, Happy_Xmas_(War_Is_Over))",Imagine_(John_Lennon_song),followedBy,Happy_Xmas_(War_Is_Over)
+ont_2_musicalwork_test_115,EXTRA,,,,,,"(Imagine_(John_Lennon_song), musicalArtist, John_Lennon)",Imagine_(John_Lennon_song),musicalArtist,John_Lennon
+ont_2_musicalwork_test_116,MISSING,,"(Turn_Me_On_(album), genre, Punk_blues)",Turn_Me_On_(album),genre,Punk_blues,,,,
+ont_2_musicalwork_test_116,MISSING,,"(Turn_Me_On_(album), producer, The_Honeymoon_Killers_(American_band))",Turn_Me_On_(album),producer,The_Honeymoon_Killers_(American_band),,,,
+ont_2_musicalwork_test_116,MISSING,,"(Turn_Me_On_(album), genre, Noise_rock)",Turn_Me_On_(album),genre,Noise_rock,,,,
+ont_2_musicalwork_test_116,EXTRA,,,,,,"(Turn_Me_On_(David_Guetta_song), genre, Punk_blues)",Turn_Me_On_(David_Guetta_song),genre,Punk_blues
+ont_2_musicalwork_test_116,EXTRA,,,,,,"(Turn_Me_On_(David_Guetta_song), musicalBand, The_Honeymoon_Killers)",Turn_Me_On_(David_Guetta_song),musicalBand,The_Honeymoon_Killers
+ont_2_musicalwork_test_116,EXTRA,,,,,,"(Turn_Me_On_(David_Guetta_song), genre, Noise_rock)",Turn_Me_On_(David_Guetta_song),genre,Noise_rock
+ont_2_musicalwork_test_117,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, releaseDate, 2001-10-16)",Bootleg_Series_Volume_1:_The_Quine_Tapes,releaseDate,2001-10-16,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, releaseDate, 2001-10-16)",Bootleg_Series_Volume_1:_The_Quine_Tapes,releaseDate,2001-10-16
+ont_2_musicalwork_test_117,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Universal_Music_Group)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Universal_Music_Group,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Universal_Music_Group)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Universal_Music_Group
+ont_2_musicalwork_test_117,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, genre, Rock_music)",Bootleg_Series_Volume_1:_The_Quine_Tapes,genre,Rock_music,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, genre, Rock_music)",Bootleg_Series_Volume_1:_The_Quine_Tapes,genre,Rock_music
+ont_2_musicalwork_test_117,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Polydor_Records)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Polydor_Records,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Polydor_Records)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Polydor_Records
+ont_2_musicalwork_test_117,SEMANTIC,0.95,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, artist, The_Velvet_Underground)",Bootleg_Series_Volume_1:_The_Quine_Tapes,artist,The_Velvet_Underground,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, musicalBand, The_Velvet_Underground)",Bootleg_Series_Volume_1:_The_Quine_Tapes,musicalBand,The_Velvet_Underground
+ont_2_musicalwork_test_117,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, precededBy, Squeeze_(The_Velvet_Underground_album))",Bootleg_Series_Volume_1:_The_Quine_Tapes,precededBy,Squeeze_(The_Velvet_Underground_album),,,,
+ont_2_musicalwork_test_118,SEMANTIC,0.99,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, St._Louis,_Missouri)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,"St._Louis,_Missouri","(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, St._Louis)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,St._Louis
+ont_2_musicalwork_test_119,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, San_Francisco)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,San_Francisco,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, San_Francisco)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,San_Francisco
+ont_2_musicalwork_test_119,SEMANTIC,0.99,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, St._Louis,_Missouri)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,"St._Louis,_Missouri","(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, St._Louis)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,St._Louis
+ont_2_musicalwork_test_119,MISSING,,"(San_Francisco, timeZone, Pacific_Time_Zone)",San_Francisco,timeZone,Pacific_Time_Zone,,,,
+ont_2_musicalwork_test_119,EXTRA,,,,,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, timeZone, Pacific_Time_Zone)",Bootleg_Series_Volume_1:_The_Quine_Tapes,timeZone,Pacific_Time_Zone
+ont_2_musicalwork_test_12,MISSING,,"(Nord_(Year_of_No_Light_album), followedBy, Live_at_Roadburn_2008_(Year_of_No_Light_album))",Nord_(Year_of_No_Light_album),followedBy,Live_at_Roadburn_2008_(Year_of_No_Light_album),,,,
+ont_2_musicalwork_test_12,MISSING,,"(Nord_(Year_of_No_Light_album), genre, Sludge_metal)",Nord_(Year_of_No_Light_album),genre,Sludge_metal,,,,
+ont_2_musicalwork_test_12,MISSING,,"(Nord_(Year_of_No_Light_album), releaseDate, 2006-09-06)",Nord_(Year_of_No_Light_album),releaseDate,2006-09-06,,,,
+ont_2_musicalwork_test_12,MISSING,,"(Nord_(Year_of_No_Light_album), producer, Year_of_No_Light)",Nord_(Year_of_No_Light_album),producer,Year_of_No_Light,,,,
+ont_2_musicalwork_test_12,MISSING,,"(Nord_(Year_of_No_Light_album), artist, Year_of_No_Light)",Nord_(Year_of_No_Light_album),artist,Year_of_No_Light,,,,
+ont_2_musicalwork_test_12,EXTRA,,,,,,"(Nord_(French_department), type, Album)",Nord_(French_department),type,Album
+ont_2_musicalwork_test_12,EXTRA,,,,,,"(Nord_(French_department), genre, Sludge_metal)",Nord_(French_department),genre,Sludge_metal
+ont_2_musicalwork_test_12,EXTRA,,,,,,"(Nord_(French_department), releaseDate, 2006-09-06)",Nord_(French_department),releaseDate,2006-09-06
+ont_2_musicalwork_test_12,EXTRA,,,,,,"(Nord_(French_department), musicalBand, Year_of_No_Light)",Nord_(French_department),musicalBand,Year_of_No_Light
+ont_2_musicalwork_test_120,SEMANTIC,0.96,"(Train_(band), recordLabel, Warner_Music_Group)",Train_(band),recordLabel,Warner_Music_Group,"(Train, recordLabel, Warner_Music_Group)",Train,recordLabel,Warner_Music_Group
+ont_2_musicalwork_test_121,EXACT,1.00,"(Imagine_(John_Lennon_song), genre, Pop_music)",Imagine_(John_Lennon_song),genre,Pop_music,"(Imagine_(John_Lennon_song), genre, Pop_music)",Imagine_(John_Lennon_song),genre,Pop_music
+ont_2_musicalwork_test_121,EXTRA,,,,,,"(Imagine_(John_Lennon_song), artist, John_Lennon)",Imagine_(John_Lennon_song),artist,John_Lennon
+ont_2_musicalwork_test_122,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, producer, The_Velvet_Underground)",Bootleg_Series_Volume_1:_The_Quine_Tapes,producer,The_Velvet_Underground,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, producer, The_Velvet_Underground)",Bootleg_Series_Volume_1:_The_Quine_Tapes,producer,The_Velvet_Underground
+ont_2_musicalwork_test_122,SEMANTIC,0.99,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, St._Louis,_Missouri)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,"St._Louis,_Missouri","(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, St._Louis)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,St._Louis
+ont_2_musicalwork_test_122,SEMANTIC,0.95,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, United_States)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,United_States,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, St._Louis)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,St._Louis
+ont_2_musicalwork_test_122,SEMANTIC,0.99,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, runtime, 230.05)",Bootleg_Series_Volume_1:_The_Quine_Tapes,runtime,230.05,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, runtime, 230:05)",Bootleg_Series_Volume_1:_The_Quine_Tapes,runtime,230:05
+ont_2_musicalwork_test_122,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, artist, The_Velvet_Underground)",Bootleg_Series_Volume_1:_The_Quine_Tapes,artist,The_Velvet_Underground,,,,
+ont_2_musicalwork_test_123,MISSING,,"(Turn_Me_On_(album), genre, Punk_blues)",Turn_Me_On_(album),genre,Punk_blues,,,,
+ont_2_musicalwork_test_123,MISSING,,"(Turn_Me_On_(album), producer, The_Honeymoon_Killers_(American_band))",Turn_Me_On_(album),producer,The_Honeymoon_Killers_(American_band),,,,
+ont_2_musicalwork_test_123,MISSING,,"(Turn_Me_On_(album), artist, The_Honeymoon_Killers_(American_band))",Turn_Me_On_(album),artist,The_Honeymoon_Killers_(American_band),,,,
+ont_2_musicalwork_test_123,EXTRA,,,,,,"(Turn_Me_On_(David_Guetta_song), genre, Punk_blues)",Turn_Me_On_(David_Guetta_song),genre,Punk_blues
+ont_2_musicalwork_test_124,MISSING,,"(Mermaid_(Train_song), genre, Reggae)",Mermaid_(Train_song),genre,Reggae,,,,
+ont_2_musicalwork_test_124,MISSING,,"(Mermaid_(Train_song), musicalBand, Train_(band))",Mermaid_(Train_song),musicalBand,Train_(band),,,,
+ont_2_musicalwork_test_124,MISSING,,"(Train_(band), genre, Pop_rock)",Train_(band),genre,Pop_rock,,,,
+ont_2_musicalwork_test_124,EXTRA,,,,,,"(Mermaid, genre, Reggae)",Mermaid,genre,Reggae
+ont_2_musicalwork_test_124,EXTRA,,,,,,"(Mermaid, genre, Pop_rock)",Mermaid,genre,Pop_rock
+ont_2_musicalwork_test_124,EXTRA,,,,,,"(Mermaid, musicalBand, Train)",Mermaid,musicalBand,Train
+ont_2_musicalwork_test_125,MISSING,,"(Turn_Me_On_(album), runtime, 35.1)",Turn_Me_On_(album),runtime,35.1,,,,
+ont_2_musicalwork_test_125,EXTRA,,,,,,"(Turn_Me_On_(Kim_Kyu-jong_EP), runtime, 35 minutes 10 seconds)",Turn_Me_On_(Kim_Kyu-jong_EP),runtime,35 minutes 10 seconds
+ont_2_musicalwork_test_126,MISSING,,"(Nord_(Year_of_No_Light_album), releaseDate, 2006-09-06)",Nord_(Year_of_No_Light_album),releaseDate,2006-09-06,,,,
+ont_2_musicalwork_test_126,MISSING,,"(Nord_(Year_of_No_Light_album), precededBy, Demo_2004_(Year_of_No_Light_album))",Nord_(Year_of_No_Light_album),precededBy,Demo_2004_(Year_of_No_Light_album),,,,
+ont_2_musicalwork_test_126,MISSING,,"(Nord_(Year_of_No_Light_album), runtime, 58.41)",Nord_(Year_of_No_Light_album),runtime,58.41,,,,
+ont_2_musicalwork_test_126,MISSING,,"(Nord_(Year_of_No_Light_album), recordLabel, E-Vinyl)",Nord_(Year_of_No_Light_album),recordLabel,E-Vinyl,,,,
+ont_2_musicalwork_test_126,EXTRA,,,,,,"(Nord_(French_department), artist, Year_of_No_Light)",Nord_(French_department),artist,Year_of_No_Light
+ont_2_musicalwork_test_126,EXTRA,,,,,,"(Nord_(French_department), releaseDate, 2006-09-06)",Nord_(French_department),releaseDate,2006-09-06
+ont_2_musicalwork_test_126,EXTRA,,,,,,"(Nord_(French_department), runtime, 58.41)",Nord_(French_department),runtime,58.41
+ont_2_musicalwork_test_126,EXTRA,,,,,,"(Nord_(French_department), followedBy, Demo_2004)",Nord_(French_department),followedBy,Demo_2004
+ont_2_musicalwork_test_126,EXTRA,,,,,,"(Nord_(French_department), recordLabel, E-Vinyl)",Nord_(French_department),recordLabel,E-Vinyl
+ont_2_musicalwork_test_127,SEMANTIC,0.94,"(Imagine_(John_Lennon_song), certification, FIMI)",Imagine_(John_Lennon_song),certification,FIMI,"(Imagine_(John_Lennon_song), certification, Federazione_Industria_Musicale_Italiana)",Imagine_(John_Lennon_song),certification,Federazione_Industria_Musicale_Italiana
+ont_2_musicalwork_test_127,EXTRA,,,,,,"(Imagine_(John_Lennon_song), musicalArtist, John_Lennon)",Imagine_(John_Lennon_song),musicalArtist,John_Lennon
+ont_2_musicalwork_test_128,SEMANTIC,0.98,"(The_Velvet_Underground, formerBandMember, Lou_Reed)",The_Velvet_Underground,formerBandMember,Lou_Reed,"(Lou_Reed, formerBandMember, The_Velvet_Underground)",Lou_Reed,formerBandMember,The_Velvet_Underground
+ont_2_musicalwork_test_129,MISSING,,"(Live_at_Roadburn_2008_(Year_of_No_Light_album), producer, Roadburn_Festival)",Live_at_Roadburn_2008_(Year_of_No_Light_album),producer,Roadburn_Festival,,,,
+ont_2_musicalwork_test_129,MISSING,,"(Nord_(Year_of_No_Light_album), producer, Year_of_No_Light)",Nord_(Year_of_No_Light_album),producer,Year_of_No_Light,,,,
+ont_2_musicalwork_test_129,MISSING,,"(Nord_(Year_of_No_Light_album), followedBy, Live_at_Roadburn_2008_(Year_of_No_Light_album))",Nord_(Year_of_No_Light_album),followedBy,Live_at_Roadburn_2008_(Year_of_No_Light_album),,,,
+ont_2_musicalwork_test_129,MISSING,,"(Live_at_Roadburn_2008_(Year_of_No_Light_album), followedBy, Karysun_/_Year_of_No_Light)",Live_at_Roadburn_2008_(Year_of_No_Light_album),followedBy,Karysun_/_Year_of_No_Light,,,,
+ont_2_musicalwork_test_13,MISSING,,"(Nord_(Year_of_No_Light_album), recordLabel, Crucial_Blast)",Nord_(Year_of_No_Light_album),recordLabel,Crucial_Blast,,,,
+ont_2_musicalwork_test_13,MISSING,,"(Nord_(Year_of_No_Light_album), producer, Year_of_No_Light)",Nord_(Year_of_No_Light_album),producer,Year_of_No_Light,,,,
+ont_2_musicalwork_test_13,MISSING,,"(Nord_(Year_of_No_Light_album), followedBy, Live_at_Roadburn_2008_(Year_of_No_Light_album))",Nord_(Year_of_No_Light_album),followedBy,Live_at_Roadburn_2008_(Year_of_No_Light_album),,,,
+ont_2_musicalwork_test_13,MISSING,,"(Nord_(Year_of_No_Light_album), artist, Year_of_No_Light)",Nord_(Year_of_No_Light_album),artist,Year_of_No_Light,,,,
+ont_2_musicalwork_test_13,EXTRA,,,,,,"(Nord_(French_department), recordLabel, Crucial_Blast)",Nord_(French_department),recordLabel,Crucial_Blast
+ont_2_musicalwork_test_13,EXTRA,,,,,,"(Nord_(French_department), musicalBand, Year_of_No_Light)",Nord_(French_department),musicalBand,Year_of_No_Light
+ont_2_musicalwork_test_130,MISSING,,"(Mermaid_(Train_song), writer, Amund_Bjørklund)",Mermaid_(Train_song),writer,Amund_Bjørklund,,,,
+ont_2_musicalwork_test_130,EXTRA,,,,,,"(Mermaid, writer, Amund_Bjørklund)",Mermaid,writer,Amund_Bjørklund
+ont_2_musicalwork_test_131,SEMANTIC,0.96,"(Take_It_Off!, followedBy, 'Til_Death_Do_Us_Part_(EP))",Take_It_Off!,followedBy,'Til_Death_Do_Us_Part_(EP),"('Til_Death_Do_Us_Part_(EP), followedBy, Take_It_Off_(album))",'Til_Death_Do_Us_Part_(EP),followedBy,Take_It_Off_(album)
+ont_2_musicalwork_test_131,MISSING,,"(Turn_Me_On_(album), followedBy, Take_It_Off!)",Turn_Me_On_(album),followedBy,Take_It_Off!,,,,
+ont_2_musicalwork_test_131,MISSING,,"(Turn_Me_On_(album), producer, The_Honeymoon_Killers_(American_band))",Turn_Me_On_(album),producer,The_Honeymoon_Killers_(American_band),,,,
+ont_2_musicalwork_test_131,EXTRA,,,,,,"(Turn_Me_On_(David_Guetta_song), followedBy, Take_It_Off_(album))",Turn_Me_On_(David_Guetta_song),followedBy,Take_It_Off_(album)
+ont_2_musicalwork_test_131,EXTRA,,,,,,"(Turn_Me_On_(Kim_Kyu-jong_EP), musicalBand, The_Honeymoon_Killers)",Turn_Me_On_(Kim_Kyu-jong_EP),musicalBand,The_Honeymoon_Killers
+ont_2_musicalwork_test_131,EXTRA,,,,,,"(Turn_Me_On_(David_Guetta_song), producer, The_Honeymoon_Killers)",Turn_Me_On_(David_Guetta_song),producer,The_Honeymoon_Killers
+ont_2_musicalwork_test_132,SEMANTIC,0.97,"(Mermaid_(Train_song), followedBy, Imagine_(John_Lennon_song))",Mermaid_(Train_song),followedBy,Imagine_(John_Lennon_song),"(Mermaid, followedBy, Imagine_(John_Lennon_song))",Mermaid,followedBy,Imagine_(John_Lennon_song)
+ont_2_musicalwork_test_132,MISSING,,"(Mermaid_(Train_song), genre, Reggae)",Mermaid_(Train_song),genre,Reggae,,,,
+ont_2_musicalwork_test_132,EXTRA,,,,,,"(Mermaid, musicalBand, Train)",Mermaid,musicalBand,Train
+ont_2_musicalwork_test_132,EXTRA,,,,,,"(Imagine_(John_Lennon_song), musicalBand, Train)",Imagine_(John_Lennon_song),musicalBand,Train
+ont_2_musicalwork_test_132,EXTRA,,,,,,"(Mermaid, genre, Reggae)",Mermaid,genre,Reggae
+ont_2_musicalwork_test_132,EXTRA,,,,,,"(Imagine_(John_Lennon_song), writer, John_Lennon)",Imagine_(John_Lennon_song),writer,John_Lennon
+ont_2_musicalwork_test_133,MISSING,,"(Nord_(Year_of_No_Light_album), precededBy, Demo_2004_(Year_of_No_Light_album))",Nord_(Year_of_No_Light_album),precededBy,Demo_2004_(Year_of_No_Light_album),,,,
+ont_2_musicalwork_test_133,MISSING,,"(Nord_(Year_of_No_Light_album), runtime, 58.41)",Nord_(Year_of_No_Light_album),runtime,58.41,,,,
+ont_2_musicalwork_test_133,EXTRA,,,,,,"(Nord_(French_department), derivative, Demo_2004)",Nord_(French_department),derivative,Demo_2004
+ont_2_musicalwork_test_133,EXTRA,,,,,,"(Nord_(French_department), type, Album)",Nord_(French_department),type,Album
+ont_2_musicalwork_test_133,EXTRA,,,,,,"(Nord_(French_department), musicalBand, Year_of_No_Light)",Nord_(French_department),musicalBand,Year_of_No_Light
+ont_2_musicalwork_test_133,EXTRA,,,,,,"(Nord_(French_department), runtime, 58.41)",Nord_(French_department),runtime,58.41
+ont_2_musicalwork_test_134,MISSING,,"(Nord_(Year_of_No_Light_album), releaseDate, 2006-09-06)",Nord_(Year_of_No_Light_album),releaseDate,2006-09-06,,,,
+ont_2_musicalwork_test_135,SEMANTIC,0.95,"(Mermaid_(Train_song), recordLabel, Columbia_Records)",Mermaid_(Train_song),recordLabel,Columbia_Records,"(Mermaid, recordLabel, Columbia_Records)",Mermaid,recordLabel,Columbia_Records
+ont_2_musicalwork_test_135,MISSING,,"(Mermaid_(Train_song), recordLabel, Sony_Music_Entertainment)",Mermaid_(Train_song),recordLabel,Sony_Music_Entertainment,,,,
+ont_2_musicalwork_test_135,EXTRA,,,,,,"(Mermaid, musicalBand, Train)",Mermaid,musicalBand,Train
+ont_2_musicalwork_test_135,EXTRA,,,,,,"(Mermaid, recordLabel, Sony_Music)",Mermaid,recordLabel,Sony_Music
+ont_2_musicalwork_test_136,SEMANTIC,0.97,"(Mermaid_(Train_song), followedBy, Imagine_(John_Lennon_song))",Mermaid_(Train_song),followedBy,Imagine_(John_Lennon_song),"(Mermaid, followedBy, Imagine_(John_Lennon_song))",Mermaid,followedBy,Imagine_(John_Lennon_song)
+ont_2_musicalwork_test_136,MISSING,,"(Mermaid_(Train_song), genre, Reggae)",Mermaid_(Train_song),genre,Reggae,,,,
+ont_2_musicalwork_test_136,MISSING,,"(Mermaid_(Train_song), writer, Espen_Lind)",Mermaid_(Train_song),writer,Espen_Lind,,,,
+ont_2_musicalwork_test_136,MISSING,,"(Mermaid_(Train_song), producer, Espionage_(production_team))",Mermaid_(Train_song),producer,Espionage_(production_team),,,,
+ont_2_musicalwork_test_136,MISSING,,"(Mermaid_(Train_song), runtime, 3.16)",Mermaid_(Train_song),runtime,3.16,,,,
+ont_2_musicalwork_test_136,MISSING,,"(Mermaid_(Train_song), writer, Amund_Bjørklund)",Mermaid_(Train_song),writer,Amund_Bjørklund,,,,
+ont_2_musicalwork_test_136,MISSING,,"(Mermaid_(Train_song), musicalBand, Train_(band))",Mermaid_(Train_song),musicalBand,Train_(band),,,,
+ont_2_musicalwork_test_136,EXTRA,,,,,,"(Mermaid, genre, Reggae)",Mermaid,genre,Reggae
+ont_2_musicalwork_test_136,EXTRA,,,,,,"(Mermaid, writer, Amund_Bjørklund)",Mermaid,writer,Amund_Bjørklund
+ont_2_musicalwork_test_136,EXTRA,,,,,,"(Mermaid, writer, Espen_Lind)",Mermaid,writer,Espen_Lind
+ont_2_musicalwork_test_137,MISSING,,"(Mermaid_(Train_song), album, California_37_(Train_album))",Mermaid_(Train_song),album,California_37_(Train_album),,,,
+ont_2_musicalwork_test_137,EXTRA,,,,,,"(Mermaid, musicalBand, Train)",Mermaid,musicalBand,Train
+ont_2_musicalwork_test_137,EXTRA,,,,,,"(Mermaid, album, California_37_(album))",Mermaid,album,California_37_(album)
+ont_2_musicalwork_test_138,MISSING,,"(Rock_music, musicFusionGenre, Noise_rock)",Rock_music,musicFusionGenre,Noise_rock,,,,
+ont_2_musicalwork_test_138,EXTRA,,,,,,"(Noise_rock, genre, Genre)",Noise_rock,genre,Genre
+ont_2_musicalwork_test_138,EXTRA,,,,,,"(Noise_rock, stylisticOrigin, Rock_music)",Noise_rock,stylisticOrigin,Rock_music
+ont_2_musicalwork_test_139,MISSING,,"(Nord_(Year_of_No_Light_album), followedBy, Live_at_Roadburn_2008_(Year_of_No_Light_album))",Nord_(Year_of_No_Light_album),followedBy,Live_at_Roadburn_2008_(Year_of_No_Light_album),,,,
+ont_2_musicalwork_test_139,EXTRA,,,,,,"(Nord_(French_department), musicalBand, Year_of_No_Light)",Nord_(French_department),musicalBand,Year_of_No_Light
+ont_2_musicalwork_test_14,EXACT,1.00,"(Pop_rock, stylisticOrigin, Rock_music)",Pop_rock,stylisticOrigin,Rock_music,"(Pop_rock, stylisticOrigin, Rock_music)",Pop_rock,stylisticOrigin,Rock_music
+ont_2_musicalwork_test_140,SEMANTIC,0.95,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, artist, The_Velvet_Underground)",Bootleg_Series_Volume_1:_The_Quine_Tapes,artist,The_Velvet_Underground,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, musicalBand, The_Velvet_Underground)",Bootleg_Series_Volume_1:_The_Quine_Tapes,musicalBand,The_Velvet_Underground
+ont_2_musicalwork_test_140,MISSING,,"(The_Velvet_Underground, genre, Proto-punk)",The_Velvet_Underground,genre,Proto-punk,,,,
+ont_2_musicalwork_test_140,EXTRA,,,,,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, genre, Proto-punk)",Bootleg_Series_Volume_1:_The_Quine_Tapes,genre,Proto-punk
+ont_2_musicalwork_test_141,MISSING,,"(Turn_Me_On_(album), genre, Punk_blues)",Turn_Me_On_(album),genre,Punk_blues,,,,
+ont_2_musicalwork_test_141,MISSING,,"(Punk_blues, stylisticOrigin, Garage_rock)",Punk_blues,stylisticOrigin,Garage_rock,,,,
+ont_2_musicalwork_test_141,EXTRA,,,,,,"(Turn_Me_On_(Kim_Kyu-jong_EP), genre, Punk_blues)",Turn_Me_On_(Kim_Kyu-jong_EP),genre,Punk_blues
+ont_2_musicalwork_test_142,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, releaseDate, 2001-10-16)",Bootleg_Series_Volume_1:_The_Quine_Tapes,releaseDate,2001-10-16,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, releaseDate, 2001-10-16)",Bootleg_Series_Volume_1:_The_Quine_Tapes,releaseDate,2001-10-16
+ont_2_musicalwork_test_142,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, precededBy, Squeeze_(The_Velvet_Underground_album))",Bootleg_Series_Volume_1:_The_Quine_Tapes,precededBy,Squeeze_(The_Velvet_Underground_album),,,,
+ont_2_musicalwork_test_142,MISSING,,"(Squeeze_(The_Velvet_Underground_album), precededBy, Andy_Warhol's_Velvet_Underground_Featuring_Nico)",Squeeze_(The_Velvet_Underground_album),precededBy,Andy_Warhol's_Velvet_Underground_Featuring_Nico,,,,
+ont_2_musicalwork_test_142,EXTRA,,,,,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, followedBy, Squeeze_play_(bridge))",Bootleg_Series_Volume_1:_The_Quine_Tapes,followedBy,Squeeze_play_(bridge)
+ont_2_musicalwork_test_142,EXTRA,,,,,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, musicalBand, The_Velvet_Underground)",Bootleg_Series_Volume_1:_The_Quine_Tapes,musicalBand,The_Velvet_Underground
+ont_2_musicalwork_test_143,MISSING,,"(Imagine_(John_Lennon_song), precededBy, Power_to_the_People_(song))",Imagine_(John_Lennon_song),precededBy,Power_to_the_People_(song),,,,
+ont_2_musicalwork_test_143,EXTRA,,,,,,"(Imagine_(John_Lennon_song), writer, John_Lennon)",Imagine_(John_Lennon_song),writer,John_Lennon
+ont_2_musicalwork_test_143,EXTRA,,,,,,"(Power_to_the_People_(song), writer, John_Lennon)",Power_to_the_People_(song),writer,John_Lennon
+ont_2_musicalwork_test_144,MISSING,,"(Mermaid_(Train_song), writer, Espen_Lind)",Mermaid_(Train_song),writer,Espen_Lind,,,,
+ont_2_musicalwork_test_144,MISSING,,"(Mermaid_(Train_song), precededBy, This'll_Be_My_Year)",Mermaid_(Train_song),precededBy,This'll_Be_My_Year,,,,
+ont_2_musicalwork_test_144,MISSING,,"(Mermaid_(Train_song), runtime, 3.16)",Mermaid_(Train_song),runtime,3.16,,,,
+ont_2_musicalwork_test_144,MISSING,,"(Mermaid_(Train_song), followedBy, Imagine_(John_Lennon_song))",Mermaid_(Train_song),followedBy,Imagine_(John_Lennon_song),,,,
+ont_2_musicalwork_test_144,MISSING,,"(Mermaid_(Train_song), writer, Amund_Bjørklund)",Mermaid_(Train_song),writer,Amund_Bjørklund,,,,
+ont_2_musicalwork_test_144,MISSING,,"(Mermaid_(Train_song), releaseDate, 2012-12-27)",Mermaid_(Train_song),releaseDate,2012-12-27,,,,
+ont_2_musicalwork_test_144,EXTRA,,,,,,"(Mermaid, musicalBand, Train)",Mermaid,musicalBand,Train
+ont_2_musicalwork_test_144,EXTRA,,,,,,"(Mermaid, runtime, 196)",Mermaid,runtime,196
+ont_2_musicalwork_test_144,EXTRA,,,,,,"(Mermaid, writer, Espen_Lind)",Mermaid,writer,Espen_Lind
+ont_2_musicalwork_test_144,EXTRA,,,,,,"(Mermaid, writer, Amund_Bjørklund)",Mermaid,writer,Amund_Bjørklund
+ont_2_musicalwork_test_144,EXTRA,,,,,,"(Mermaid, releaseDate, 2017-12-27)",Mermaid,releaseDate,2017-12-27
+ont_2_musicalwork_test_145,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, releaseDate, 2001-10-16)",Bootleg_Series_Volume_1:_The_Quine_Tapes,releaseDate,2001-10-16,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, releaseDate, 2001-10-16)",Bootleg_Series_Volume_1:_The_Quine_Tapes,releaseDate,2001-10-16
+ont_2_musicalwork_test_145,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Polydor_Records)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Polydor_Records,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Polydor_Records)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Polydor_Records
+ont_2_musicalwork_test_145,SEMANTIC,0.96,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Universal_Music_Group)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Universal_Music_Group,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, owner, Universal_Music_Group)",Bootleg_Series_Volume_1:_The_Quine_Tapes,owner,Universal_Music_Group
+ont_2_musicalwork_test_145,SEMANTIC,0.99,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, runtime, 230.05)",Bootleg_Series_Volume_1:_The_Quine_Tapes,runtime,230.05,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, runtime, 230:05)",Bootleg_Series_Volume_1:_The_Quine_Tapes,runtime,230:05
+ont_2_musicalwork_test_146,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, San_Francisco)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,San_Francisco,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, San_Francisco)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,San_Francisco
+ont_2_musicalwork_test_146,SEMANTIC,0.99,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, St._Louis,_Missouri)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,"St._Louis,_Missouri","(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, St._Louis)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,St._Louis
+ont_2_musicalwork_test_146,MISSING,,"(San_Francisco, areaCode, 628)",San_Francisco,areaCode,628,,,,
+ont_2_musicalwork_test_146,EXTRA,,,,,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, areaCode, 628)",Bootleg_Series_Volume_1:_The_Quine_Tapes,areaCode,628
+ont_2_musicalwork_test_147,MISSING,,"(Mermaid_(Train_song), writer, Pat_Monahan)",Mermaid_(Train_song),writer,Pat_Monahan,,,,
+ont_2_musicalwork_test_147,EXTRA,,,,,,"(Mermaid, musicalBand, Train)",Mermaid,musicalBand,Train
+ont_2_musicalwork_test_147,EXTRA,,,,,,"(Mermaid, writer, Pat_Monahan)",Mermaid,writer,Pat_Monahan
+ont_2_musicalwork_test_148,MISSING,,"(Nord_(Year_of_No_Light_album), genre, Post-metal)",Nord_(Year_of_No_Light_album),genre,Post-metal,,,,
+ont_2_musicalwork_test_148,MISSING,,"(Nord_(Year_of_No_Light_album), recordLabel, Crucial_Blast)",Nord_(Year_of_No_Light_album),recordLabel,Crucial_Blast,,,,
+ont_2_musicalwork_test_148,MISSING,,"(Nord_(Year_of_No_Light_album), releaseDate, 2006-09-06)",Nord_(Year_of_No_Light_album),releaseDate,2006-09-06,,,,
+ont_2_musicalwork_test_148,MISSING,,"(Nord_(Year_of_No_Light_album), recordLabel, E-Vinyl)",Nord_(Year_of_No_Light_album),recordLabel,E-Vinyl,,,,
+ont_2_musicalwork_test_148,EXTRA,,,,,,"(Nord_(French_department), genre, Post-metal)",Nord_(French_department),genre,Post-metal
+ont_2_musicalwork_test_148,EXTRA,,,,,,"(Year_of_No_Light, format, E-Vinyl)",Year_of_No_Light,format,E-Vinyl
+ont_2_musicalwork_test_148,EXTRA,,,,,,"(Nord_(French_department), owner, Crucial_Blast)",Nord_(French_department),owner,Crucial_Blast
+ont_2_musicalwork_test_148,EXTRA,,,,,,"(Nord_(French_department), releaseDate, 2006-09-06)",Nord_(French_department),releaseDate,2006-09-06
+ont_2_musicalwork_test_149,MISSING,,"(Pop_rock, musicFusionGenre, Baroque_pop)",Pop_rock,musicFusionGenre,Baroque_pop,,,,
+ont_2_musicalwork_test_149,EXTRA,,,,,,"(Baroque_pop, stylisticOrigin, Pop_rock)",Baroque_pop,stylisticOrigin,Pop_rock
+ont_2_musicalwork_test_149,EXTRA,,,,,,"(Baroque_pop, type, Music_genre)",Baroque_pop,type,Music_genre
+ont_2_musicalwork_test_15,MISSING,,"(Nord_(Year_of_No_Light_album), genre, Post-metal)",Nord_(Year_of_No_Light_album),genre,Post-metal,,,,
+ont_2_musicalwork_test_15,MISSING,,"(Nord_(Year_of_No_Light_album), releaseDate, 2006-09-06)",Nord_(Year_of_No_Light_album),releaseDate,2006-09-06,,,,
+ont_2_musicalwork_test_15,MISSING,,"(Nord_(Year_of_No_Light_album), followedBy, Live_at_Roadburn_2008_(Year_of_No_Light_album))",Nord_(Year_of_No_Light_album),followedBy,Live_at_Roadburn_2008_(Year_of_No_Light_album),,,,
+ont_2_musicalwork_test_15,MISSING,,"(Nord_(Year_of_No_Light_album), genre, Sludge_metal)",Nord_(Year_of_No_Light_album),genre,Sludge_metal,,,,
+ont_2_musicalwork_test_15,EXTRA,,,,,,"(Nord_(French_department), genre, Post-metal)",Nord_(French_department),genre,Post-metal
+ont_2_musicalwork_test_15,EXTRA,,,,,,"(Nord_(French_department), genre, Sludge_metal)",Nord_(French_department),genre,Sludge_metal
+ont_2_musicalwork_test_15,EXTRA,,,,,,"(Nord_(French_department), releaseDate, 2006-09-06)",Nord_(French_department),releaseDate,2006-09-06
+ont_2_musicalwork_test_15,EXTRA,,,,,,"(Nord_(French_department), musicalBand, Year_of_No_Light)",Nord_(French_department),musicalBand,Year_of_No_Light
+ont_2_musicalwork_test_150,EXACT,1.00,"(Sludge_metal, stylisticOrigin, Hardcore_punk)",Sludge_metal,stylisticOrigin,Hardcore_punk,"(Sludge_metal, stylisticOrigin, Hardcore_punk)",Sludge_metal,stylisticOrigin,Hardcore_punk
+ont_2_musicalwork_test_150,MISSING,,"(Nord_(Year_of_No_Light_album), genre, Sludge_metal)",Nord_(Year_of_No_Light_album),genre,Sludge_metal,,,,
+ont_2_musicalwork_test_150,EXTRA,,,,,,"(Nord_(French_department), genre, Sludge_metal)",Nord_(French_department),genre,Sludge_metal
+ont_2_musicalwork_test_150,EXTRA,,,,,,"(Nord_(French_department), musicalBand, Year_of_No_Light)",Nord_(French_department),musicalBand,Year_of_No_Light
+ont_2_musicalwork_test_151,MISSING,,"(Turn_Me_On_(album), genre, Punk_blues)",Turn_Me_On_(album),genre,Punk_blues,,,,
+ont_2_musicalwork_test_151,MISSING,,"(Turn_Me_On_(album), artist, The_Honeymoon_Killers_(American_band))",Turn_Me_On_(album),artist,The_Honeymoon_Killers_(American_band),,,,
+ont_2_musicalwork_test_151,MISSING,,"(The_Honeymoon_Killers_(American_band), genre, Noise_rock)",The_Honeymoon_Killers_(American_band),genre,Noise_rock,,,,
+ont_2_musicalwork_test_151,EXTRA,,,,,,"(Turn_Me_On_(David_Guetta_song), genre, Punk_blues)",Turn_Me_On_(David_Guetta_song),genre,Punk_blues
+ont_2_musicalwork_test_151,EXTRA,,,,,,"(Turn_Me_On_(Kim_Kyu-jong_EP), genre, Noise_rock)",Turn_Me_On_(Kim_Kyu-jong_EP),genre,Noise_rock
+ont_2_musicalwork_test_151,EXTRA,,,,,,"(Turn_Me_On_(David_Guetta_song), musicalBand, The_Honeymoon_Killers)",Turn_Me_On_(David_Guetta_song),musicalBand,The_Honeymoon_Killers
+ont_2_musicalwork_test_152,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, United_States)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,United_States,,,,
+ont_2_musicalwork_test_153,MISSING,,"(Year_of_No_Light, associatedBand/associatedMusicalArtist, Monarch_(band))",Year_of_No_Light,associatedBand/associatedMusicalArtist,Monarch_(band),,,,
+ont_2_musicalwork_test_153,EXTRA,,,,,,"(Monarch, musicalBand, Year_of_No_Light)",Monarch,musicalBand,Year_of_No_Light
+ont_2_musicalwork_test_153,EXTRA,,,,,,"(Monarch, type, Band_(rock_and_pop))",Monarch,type,Band_(rock_and_pop)
+ont_2_musicalwork_test_154,EXACT,1.00,"(Imagine_(John_Lennon_song), producer, Phil_Spector)",Imagine_(John_Lennon_song),producer,Phil_Spector,"(Imagine_(John_Lennon_song), producer, Phil_Spector)",Imagine_(John_Lennon_song),producer,Phil_Spector
+ont_2_musicalwork_test_154,EXTRA,,,,,,"(Imagine_(John_Lennon_song), writer, John_Lennon)",Imagine_(John_Lennon_song),writer,John_Lennon
+ont_2_musicalwork_test_155,EXACT,1.00,"(Punk_blues, stylisticOrigin, Garage_rock)",Punk_blues,stylisticOrigin,Garage_rock,"(Punk_blues, stylisticOrigin, Garage_rock)",Punk_blues,stylisticOrigin,Garage_rock
+ont_2_musicalwork_test_156,MISSING,,"(Nord_(Year_of_No_Light_album), genre, Post-metal)",Nord_(Year_of_No_Light_album),genre,Post-metal,,,,
+ont_2_musicalwork_test_156,EXTRA,,,,,,"(Nord_(French_department), genre, Post-metal)",Nord_(French_department),genre,Post-metal
+ont_2_musicalwork_test_156,EXTRA,,,,,,"(Nord_(French_department), type, Album)",Nord_(French_department),type,Album
+ont_2_musicalwork_test_156,EXTRA,,,,,,"(Nord_(French_department), musicalBand, Year_of_No_Light)",Nord_(French_department),musicalBand,Year_of_No_Light
+ont_2_musicalwork_test_157,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, precededBy, Squeeze_(The_Velvet_Underground_album))",Bootleg_Series_Volume_1:_The_Quine_Tapes,precededBy,Squeeze_(The_Velvet_Underground_album),,,,
+ont_2_musicalwork_test_157,EXTRA,,,,,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, followedBy, Squeeze_play_(bridge))",Bootleg_Series_Volume_1:_The_Quine_Tapes,followedBy,Squeeze_play_(bridge)
+ont_2_musicalwork_test_158,MISSING,,"(Nord_(Year_of_No_Light_album), genre, Post-metal)",Nord_(Year_of_No_Light_album),genre,Post-metal,,,,
+ont_2_musicalwork_test_158,MISSING,,"(Nord_(Year_of_No_Light_album), releaseDate, 2006-09-06)",Nord_(Year_of_No_Light_album),releaseDate,2006-09-06,,,,
+ont_2_musicalwork_test_158,MISSING,,"(Nord_(Year_of_No_Light_album), genre, Sludge_metal)",Nord_(Year_of_No_Light_album),genre,Sludge_metal,,,,
+ont_2_musicalwork_test_158,EXTRA,,,,,,"(Year_of_No_Light, genre, Sludge_metal)",Year_of_No_Light,genre,Sludge_metal
+ont_2_musicalwork_test_158,EXTRA,,,,,,"(Year_of_No_Light, releaseDate, 2006-06-09)",Year_of_No_Light,releaseDate,2006-06-09
+ont_2_musicalwork_test_158,EXTRA,,,,,,"(Year_of_No_Light, musicSubgenre, Post-metal)",Year_of_No_Light,musicSubgenre,Post-metal
+ont_2_musicalwork_test_158,EXTRA,,,,,,"(Year_of_No_Light, musicalBand, Nord_(French_department))",Year_of_No_Light,musicalBand,Nord_(French_department)
+ont_2_musicalwork_test_159,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, genre, Rock_music)",Bootleg_Series_Volume_1:_The_Quine_Tapes,genre,Rock_music,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, genre, Rock_music)",Bootleg_Series_Volume_1:_The_Quine_Tapes,genre,Rock_music
+ont_2_musicalwork_test_159,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, precededBy, Squeeze_(The_Velvet_Underground_album))",Bootleg_Series_Volume_1:_The_Quine_Tapes,precededBy,Squeeze_(The_Velvet_Underground_album),,,,
+ont_2_musicalwork_test_159,EXTRA,,,,,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, followedBy, Squeeze_play_(bridge))",Bootleg_Series_Volume_1:_The_Quine_Tapes,followedBy,Squeeze_play_(bridge)
+ont_2_musicalwork_test_159,EXTRA,,,,,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, type, Album)",Bootleg_Series_Volume_1:_The_Quine_Tapes,type,Album
+ont_2_musicalwork_test_159,EXTRA,,,,,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, musicalBand, The_Velvet_Underground)",Bootleg_Series_Volume_1:_The_Quine_Tapes,musicalBand,The_Velvet_Underground
+ont_2_musicalwork_test_16,EXACT,1.00,"(Reggae, stylisticOrigin, Rhythm_and_Blues)",Reggae,stylisticOrigin,Rhythm_and_Blues,"(Reggae, stylisticOrigin, Rhythm_and_blues)",Reggae,stylisticOrigin,Rhythm_and_blues
+ont_2_musicalwork_test_16,MISSING,,"(Mermaid_(Train_song), genre, Reggae)",Mermaid_(Train_song),genre,Reggae,,,,
+ont_2_musicalwork_test_16,EXTRA,,,,,,"(Mermaid, genre, Reggae)",Mermaid,genre,Reggae
+ont_2_musicalwork_test_16,EXTRA,,,,,,"(Mermaid, musicalBand, Train)",Mermaid,musicalBand,Train
+ont_2_musicalwork_test_160,MISSING,,"(San_Francisco, areaCode, 628)",San_Francisco,areaCode,628,,,,
+ont_2_musicalwork_test_161,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, runtime, 230.05)",Bootleg_Series_Volume_1:_The_Quine_Tapes,runtime,230.05,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, runtime, 230.05)",Bootleg_Series_Volume_1:_The_Quine_Tapes,runtime,230.05
+ont_2_musicalwork_test_161,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, genre, Rock_music)",Bootleg_Series_Volume_1:_The_Quine_Tapes,genre,Rock_music,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, genre, Rock_music)",Bootleg_Series_Volume_1:_The_Quine_Tapes,genre,Rock_music
+ont_2_musicalwork_test_161,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Polydor_Records)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Polydor_Records,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Polydor_Records)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Polydor_Records
+ont_2_musicalwork_test_161,SEMANTIC,0.95,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, artist, The_Velvet_Underground)",Bootleg_Series_Volume_1:_The_Quine_Tapes,artist,The_Velvet_Underground,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, musicalBand, The_Velvet_Underground)",Bootleg_Series_Volume_1:_The_Quine_Tapes,musicalBand,The_Velvet_Underground
+ont_2_musicalwork_test_161,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Universal_Music_Group)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Universal_Music_Group,,,,
+ont_2_musicalwork_test_161,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, precededBy, Squeeze_(The_Velvet_Underground_album))",Bootleg_Series_Volume_1:_The_Quine_Tapes,precededBy,Squeeze_(The_Velvet_Underground_album),,,,
+ont_2_musicalwork_test_161,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, producer, The_Velvet_Underground)",Bootleg_Series_Volume_1:_The_Quine_Tapes,producer,The_Velvet_Underground,,,,
+ont_2_musicalwork_test_161,EXTRA,,,,,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, followedBy, Squeeze_play_(bridge))",Bootleg_Series_Volume_1:_The_Quine_Tapes,followedBy,Squeeze_play_(bridge)
+ont_2_musicalwork_test_162,MISSING,,"(Turn_Me_On_(album), followedBy, Take_It_Off!)",Turn_Me_On_(album),followedBy,Take_It_Off!,,,,
+ont_2_musicalwork_test_163,MISSING,,"(Nord_(Year_of_No_Light_album), recordLabel, Crucial_Blast)",Nord_(Year_of_No_Light_album),recordLabel,Crucial_Blast,,,,
+ont_2_musicalwork_test_163,EXTRA,,,,,,"(Nord_(French_department), recordLabel, Crucial_Blast)",Nord_(French_department),recordLabel,Crucial_Blast
+ont_2_musicalwork_test_163,EXTRA,,,,,,"(Nord_(French_department), musicalBand, Year_of_No_Light)",Nord_(French_department),musicalBand,Year_of_No_Light
+ont_2_musicalwork_test_164,EXACT,1.00,"(Imagine_(John_Lennon_song), producer, Phil_Spector)",Imagine_(John_Lennon_song),producer,Phil_Spector,"(Imagine_(John_Lennon_song), producer, Phil_Spector)",Imagine_(John_Lennon_song),producer,Phil_Spector
+ont_2_musicalwork_test_164,SEMANTIC,0.97,"(Mermaid_(Train_song), followedBy, Imagine_(John_Lennon_song))",Mermaid_(Train_song),followedBy,Imagine_(John_Lennon_song),"(Mermaid, followedBy, Imagine_(John_Lennon_song))",Mermaid,followedBy,Imagine_(John_Lennon_song)
+ont_2_musicalwork_test_164,MISSING,,"(Mermaid_(Train_song), producer, Espionage_(production_team))",Mermaid_(Train_song),producer,Espionage_(production_team),,,,
+ont_2_musicalwork_test_164,EXTRA,,,,,,"(Mermaid, musicalBand, Train)",Mermaid,musicalBand,Train
+ont_2_musicalwork_test_164,EXTRA,,,,,,"(Imagine_(John_Lennon_song), writer, John_Lennon)",Imagine_(John_Lennon_song),writer,John_Lennon
+ont_2_musicalwork_test_165,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Universal_Music_Group)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Universal_Music_Group,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Universal_Music_Group)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Universal_Music_Group
+ont_2_musicalwork_test_165,SEMANTIC,0.95,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, artist, The_Velvet_Underground)",Bootleg_Series_Volume_1:_The_Quine_Tapes,artist,The_Velvet_Underground,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, musicalBand, The_Velvet_Underground)",Bootleg_Series_Volume_1:_The_Quine_Tapes,musicalBand,The_Velvet_Underground
+ont_2_musicalwork_test_165,MISSING,,"(Universal_Music_Group, parentCompany, Vivendi)",Universal_Music_Group,parentCompany,Vivendi,,,,
+ont_2_musicalwork_test_165,MISSING,,"(The_Velvet_Underground, formerBandMember, Lou_Reed)",The_Velvet_Underground,formerBandMember,Lou_Reed,,,,
+ont_2_musicalwork_test_166,SEMANTIC,0.95,"(Mermaid_(Train_song), followedBy, Imagine_(John_Lennon_song))",Mermaid_(Train_song),followedBy,Imagine_(John_Lennon_song),"(Imagine_(John_Lennon_song), followedBy, Mermaid)",Imagine_(John_Lennon_song),followedBy,Mermaid
+ont_2_musicalwork_test_166,MISSING,,"(Mermaid_(Train_song), precededBy, This'll_Be_My_Year)",Mermaid_(Train_song),precededBy,This'll_Be_My_Year,,,,
+ont_2_musicalwork_test_166,MISSING,,"(Imagine_(John_Lennon_song), followedBy, Happy_Xmas_(War_Is_Over))",Imagine_(John_Lennon_song),followedBy,Happy_Xmas_(War_Is_Over),,,,
+ont_2_musicalwork_test_166,EXTRA,,,,,,"(Imagine_(John_Lennon_song), writer, John_Lennon)",Imagine_(John_Lennon_song),writer,John_Lennon
+ont_2_musicalwork_test_166,EXTRA,,,,,,"(Imagine_(John_Lennon_song), type, Song)",Imagine_(John_Lennon_song),type,Song
+ont_2_musicalwork_test_167,MISSING,,"(Nord_(Year_of_No_Light_album), producer, Year_of_No_Light)",Nord_(Year_of_No_Light_album),producer,Year_of_No_Light,,,,
+ont_2_musicalwork_test_167,MISSING,,"(Nord_(Year_of_No_Light_album), genre, Sludge_metal)",Nord_(Year_of_No_Light_album),genre,Sludge_metal,,,,
+ont_2_musicalwork_test_167,EXTRA,,,,,,"(Nord_(French_department), producer, Year_of_No_Light)",Nord_(French_department),producer,Year_of_No_Light
+ont_2_musicalwork_test_167,EXTRA,,,,,,"(Nord_(French_department), genre, Sludge_metal)",Nord_(French_department),genre,Sludge_metal
+ont_2_musicalwork_test_167,EXTRA,,,,,,"(Nord_(French_department), musicalBand, Year_of_No_Light)",Nord_(French_department),musicalBand,Year_of_No_Light
+ont_2_musicalwork_test_168,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, releaseDate, 2001-10-16)",Bootleg_Series_Volume_1:_The_Quine_Tapes,releaseDate,2001-10-16,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, releaseDate, 2001-10-16)",Bootleg_Series_Volume_1:_The_Quine_Tapes,releaseDate,2001-10-16
+ont_2_musicalwork_test_168,EXTRA,,,,,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, type, Album)",Bootleg_Series_Volume_1:_The_Quine_Tapes,type,Album
+ont_2_musicalwork_test_169,SEMANTIC,0.95,"(Mermaid_(Train_song), recordLabel, Columbia_Records)",Mermaid_(Train_song),recordLabel,Columbia_Records,"(Mermaid, recordLabel, Columbia_Records)",Mermaid,recordLabel,Columbia_Records
+ont_2_musicalwork_test_169,MISSING,,"(Mermaid_(Train_song), musicalBand, Train_(band))",Mermaid_(Train_song),musicalBand,Train_(band),,,,
+ont_2_musicalwork_test_169,MISSING,,"(Mermaid_(Train_song), runtime, 3.16)",Mermaid_(Train_song),runtime,3.16,,,,
+ont_2_musicalwork_test_169,MISSING,,"(Mermaid_(Train_song), recordLabel, Sony_Music_Entertainment)",Mermaid_(Train_song),recordLabel,Sony_Music_Entertainment,,,,
+ont_2_musicalwork_test_169,EXTRA,,,,,,"(Mermaid, musicalBand, Train)",Mermaid,musicalBand,Train
+ont_2_musicalwork_test_169,EXTRA,,,,,,"(Mermaid, runtime, 3 minutes 16 seconds)",Mermaid,runtime,3 minutes 16 seconds
+ont_2_musicalwork_test_169,EXTRA,,,,,,"(Mermaid, recordLabel, Sony_Music)",Mermaid,recordLabel,Sony_Music
+ont_2_musicalwork_test_169,EXTRA,,,,,,"(Mermaid, type, Song)",Mermaid,type,Song
+ont_2_musicalwork_test_17,EXACT,1.00,"(Universal_Music_Group, keyPerson, Lucian_Grainge)",Universal_Music_Group,keyPerson,Lucian_Grainge,"(Universal_Music_Group, keyPerson, Lucian_Grainge)",Universal_Music_Group,keyPerson,Lucian_Grainge
+ont_2_musicalwork_test_170,MISSING,,"(Nord_(Year_of_No_Light_album), genre, Post-metal)",Nord_(Year_of_No_Light_album),genre,Post-metal,,,,
+ont_2_musicalwork_test_170,MISSING,,"(Nord_(Year_of_No_Light_album), recordLabel, Crucial_Blast)",Nord_(Year_of_No_Light_album),recordLabel,Crucial_Blast,,,,
+ont_2_musicalwork_test_170,MISSING,,"(Nord_(Year_of_No_Light_album), artist, Year_of_No_Light)",Nord_(Year_of_No_Light_album),artist,Year_of_No_Light,,,,
+ont_2_musicalwork_test_170,EXTRA,,,,,,"(Nord_(French_department), type, Album)",Nord_(French_department),type,Album
+ont_2_musicalwork_test_170,EXTRA,,,,,,"(Nord_(French_department), recordLabel, Crucial_Blast)",Nord_(French_department),recordLabel,Crucial_Blast
+ont_2_musicalwork_test_170,EXTRA,,,,,,"(Nord_(French_department), musicalBand, Year_of_No_Light)",Nord_(French_department),musicalBand,Year_of_No_Light
+ont_2_musicalwork_test_170,EXTRA,,,,,,"(Nord_(French_department), musicSubgenre, Post-metal)",Nord_(French_department),musicSubgenre,Post-metal
+ont_2_musicalwork_test_171,MISSING,,"(Turn_Me_On_(album), precededBy, Let_It_Breed)",Turn_Me_On_(album),precededBy,Let_It_Breed,,,,
+ont_2_musicalwork_test_171,MISSING,,"(Turn_Me_On_(album), runtime, 35.1)",Turn_Me_On_(album),runtime,35.1,,,,
+ont_2_musicalwork_test_171,EXTRA,,,,,,"(Turn_Me_On_(David_Guetta_song), runtime, 35.1)",Turn_Me_On_(David_Guetta_song),runtime,35.1
+ont_2_musicalwork_test_171,EXTRA,,,,,,"(Turn_Me_On_(David_Guetta_song), followedBy, Let_It_Breed)",Turn_Me_On_(David_Guetta_song),followedBy,Let_It_Breed
+ont_2_musicalwork_test_172,MISSING,,"(Turn_Me_On_(album), genre, Punk_blues)",Turn_Me_On_(album),genre,Punk_blues,,,,
+ont_2_musicalwork_test_172,MISSING,,"(Turn_Me_On_(album), artist, The_Honeymoon_Killers_(American_band))",Turn_Me_On_(album),artist,The_Honeymoon_Killers_(American_band),,,,
+ont_2_musicalwork_test_172,EXTRA,,,,,,"(Turn_Me_On_(David_Guetta_song), genre, Punk_blues)",Turn_Me_On_(David_Guetta_song),genre,Punk_blues
+ont_2_musicalwork_test_172,EXTRA,,,,,,"(Turn_Me_On_(David_Guetta_song), musicalBand, The_Honeymoon_Killers)",Turn_Me_On_(David_Guetta_song),musicalBand,The_Honeymoon_Killers
+ont_2_musicalwork_test_173,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, genre, Rock_music)",Bootleg_Series_Volume_1:_The_Quine_Tapes,genre,Rock_music,,,,
+ont_2_musicalwork_test_173,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Polydor_Records)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Polydor_Records,,,,
+ont_2_musicalwork_test_174,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, San_Francisco)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,San_Francisco,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, San_Francisco)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,San_Francisco
+ont_2_musicalwork_test_174,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Polydor_Records)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Polydor_Records,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Polydor_Records)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Polydor_Records
+ont_2_musicalwork_test_174,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, precededBy, Squeeze_(The_Velvet_Underground_album))",Bootleg_Series_Volume_1:_The_Quine_Tapes,precededBy,Squeeze_(The_Velvet_Underground_album),,,,
+ont_2_musicalwork_test_174,EXTRA,,,,,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, followedBy, Squeeze_play_(bridge))",Bootleg_Series_Volume_1:_The_Quine_Tapes,followedBy,Squeeze_play_(bridge)
+ont_2_musicalwork_test_174,EXTRA,,,,,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, musicalBand, The_Velvet_Underground)",Bootleg_Series_Volume_1:_The_Quine_Tapes,musicalBand,The_Velvet_Underground
+ont_2_musicalwork_test_175,MISSING,,"(Nord_(Year_of_No_Light_album), recordLabel, Crucial_Blast)",Nord_(Year_of_No_Light_album),recordLabel,Crucial_Blast,,,,
+ont_2_musicalwork_test_175,MISSING,,"(Nord_(Year_of_No_Light_album), followedBy, Live_at_Roadburn_2008_(Year_of_No_Light_album))",Nord_(Year_of_No_Light_album),followedBy,Live_at_Roadburn_2008_(Year_of_No_Light_album),,,,
+ont_2_musicalwork_test_175,MISSING,,"(Nord_(Year_of_No_Light_album), genre, Sludge_metal)",Nord_(Year_of_No_Light_album),genre,Sludge_metal,,,,
+ont_2_musicalwork_test_175,MISSING,,"(Nord_(Year_of_No_Light_album), releaseDate, 2006-09-06)",Nord_(Year_of_No_Light_album),releaseDate,2006-09-06,,,,
+ont_2_musicalwork_test_175,MISSING,,"(Nord_(Year_of_No_Light_album), producer, Year_of_No_Light)",Nord_(Year_of_No_Light_album),producer,Year_of_No_Light,,,,
+ont_2_musicalwork_test_175,MISSING,,"(Nord_(Year_of_No_Light_album), artist, Year_of_No_Light)",Nord_(Year_of_No_Light_album),artist,Year_of_No_Light,,,,
+ont_2_musicalwork_test_175,EXTRA,,,,,,"(Nord_(French_department), recordLabel, Crucial_Blast)",Nord_(French_department),recordLabel,Crucial_Blast
+ont_2_musicalwork_test_175,EXTRA,,,,,,"(Nord_(French_department), genre, Sludge_metal)",Nord_(French_department),genre,Sludge_metal
+ont_2_musicalwork_test_175,EXTRA,,,,,,"(Nord_(French_department), releaseDate, 2006-09-06)",Nord_(French_department),releaseDate,2006-09-06
+ont_2_musicalwork_test_175,EXTRA,,,,,,"(Nord_(French_department), musicalBand, Year_of_No_Light)",Nord_(French_department),musicalBand,Year_of_No_Light
+ont_2_musicalwork_test_176,MISSING,,"(Mermaid_(Train_song), writer, Espen_Lind)",Mermaid_(Train_song),writer,Espen_Lind,,,,
+ont_2_musicalwork_test_176,MISSING,,"(Mermaid_(Train_song), recordLabel, Sony_Music_Entertainment)",Mermaid_(Train_song),recordLabel,Sony_Music_Entertainment,,,,
+ont_2_musicalwork_test_176,EXTRA,,,,,,"(Mermaid, writer, Espen_Lind)",Mermaid,writer,Espen_Lind
+ont_2_musicalwork_test_176,EXTRA,,,,,,"(Mermaid, recordLabel, Sony_Music)",Mermaid,recordLabel,Sony_Music
+ont_2_musicalwork_test_177,MISSING,,"(Nord_(Year_of_No_Light_album), producer, Year_of_No_Light)",Nord_(Year_of_No_Light_album),producer,Year_of_No_Light,,,,
+ont_2_musicalwork_test_177,MISSING,,"(Nord_(Year_of_No_Light_album), followedBy, Live_at_Roadburn_2008_(Year_of_No_Light_album))",Nord_(Year_of_No_Light_album),followedBy,Live_at_Roadburn_2008_(Year_of_No_Light_album),,,,
+ont_2_musicalwork_test_177,MISSING,,"(Nord_(Year_of_No_Light_album), genre, Sludge_metal)",Nord_(Year_of_No_Light_album),genre,Sludge_metal,,,,
+ont_2_musicalwork_test_177,EXTRA,,,,,,"(Nord_(French_department), producer, Year_of_No_Light)",Nord_(French_department),producer,Year_of_No_Light
+ont_2_musicalwork_test_177,EXTRA,,,,,,"(Nord_(French_department), genre, Sludge_metal)",Nord_(French_department),genre,Sludge_metal
+ont_2_musicalwork_test_177,EXTRA,,,,,,"(Nord_(French_department), type, Album)",Nord_(French_department),type,Album
+ont_2_musicalwork_test_178,MISSING,,"(Punk_blues, stylisticOrigin, Garage_rock)",Punk_blues,stylisticOrigin,Garage_rock,,,,
+ont_2_musicalwork_test_178,MISSING,,"(Turn_Me_On_(album), genre, Punk_blues)",Turn_Me_On_(album),genre,Punk_blues,,,,
+ont_2_musicalwork_test_178,MISSING,,"(Noise_rock, stylisticOrigin, Noise_music)",Noise_rock,stylisticOrigin,Noise_music,,,,
+ont_2_musicalwork_test_178,MISSING,,"(Turn_Me_On_(album), genre, Noise_rock)",Turn_Me_On_(album),genre,Noise_rock,,,,
+ont_2_musicalwork_test_179,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, runtime, 230.05)",Bootleg_Series_Volume_1:_The_Quine_Tapes,runtime,230.05,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, runtime, 230.05)",Bootleg_Series_Volume_1:_The_Quine_Tapes,runtime,230.05
+ont_2_musicalwork_test_179,SEMANTIC,0.95,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, United_States)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,United_States,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, St._Louis)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,St._Louis
+ont_2_musicalwork_test_179,SEMANTIC,0.99,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, St._Louis,_Missouri)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,"St._Louis,_Missouri","(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, St._Louis)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,St._Louis
+ont_2_musicalwork_test_179,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, precededBy, Squeeze_(The_Velvet_Underground_album))",Bootleg_Series_Volume_1:_The_Quine_Tapes,precededBy,Squeeze_(The_Velvet_Underground_album),,,,
+ont_2_musicalwork_test_18,SEMANTIC,0.95,"(The_Honeymoon_Killers_(American_band), genre, Noise_rock)",The_Honeymoon_Killers_(American_band),genre,Noise_rock,"(The_Honeymoon_Killers_(Belgian_band), genre, Noise_rock)",The_Honeymoon_Killers_(Belgian_band),genre,Noise_rock
+ont_2_musicalwork_test_180,EXACT,1.00,"(Imagine_(John_Lennon_song), album, Imagine_(John_Lennon_album))",Imagine_(John_Lennon_song),album,Imagine_(John_Lennon_album),"(Imagine_(John_Lennon_song), album, Imagine_(John_Lennon_album))",Imagine_(John_Lennon_song),album,Imagine_(John_Lennon_album)
+ont_2_musicalwork_test_180,SEMANTIC,0.97,"(Mermaid_(Train_song), followedBy, Imagine_(John_Lennon_song))",Mermaid_(Train_song),followedBy,Imagine_(John_Lennon_song),"(Mermaid, followedBy, Imagine_(John_Lennon_song))",Mermaid,followedBy,Imagine_(John_Lennon_song)
+ont_2_musicalwork_test_180,MISSING,,"(Mermaid_(Train_song), album, California_37_(Train_album))",Mermaid_(Train_song),album,California_37_(Train_album),,,,
+ont_2_musicalwork_test_180,EXTRA,,,,,,"(Mermaid, musicalBand, Train)",Mermaid,musicalBand,Train
+ont_2_musicalwork_test_180,EXTRA,,,,,,"(Imagine_(John_Lennon_song), writer, John_Lennon)",Imagine_(John_Lennon_song),writer,John_Lennon
+ont_2_musicalwork_test_180,EXTRA,,,,,,"(Mermaid, album, California_37_(album))",Mermaid,album,California_37_(album)
+ont_2_musicalwork_test_181,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, genre, Rock_music)",Bootleg_Series_Volume_1:_The_Quine_Tapes,genre,Rock_music,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, genre, Rock_music)",Bootleg_Series_Volume_1:_The_Quine_Tapes,genre,Rock_music
+ont_2_musicalwork_test_181,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Polydor_Records)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Polydor_Records,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Polydor_Records)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Polydor_Records
+ont_2_musicalwork_test_181,SEMANTIC,0.94,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Universal_Music_Group)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Universal_Music_Group,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, type, Album)",Bootleg_Series_Volume_1:_The_Quine_Tapes,type,Album
+ont_2_musicalwork_test_181,SEMANTIC,0.95,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, artist, The_Velvet_Underground)",Bootleg_Series_Volume_1:_The_Quine_Tapes,artist,The_Velvet_Underground,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, musicalBand, The_Velvet_Underground)",Bootleg_Series_Volume_1:_The_Quine_Tapes,musicalBand,The_Velvet_Underground
+ont_2_musicalwork_test_181,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, precededBy, Squeeze_(The_Velvet_Underground_album))",Bootleg_Series_Volume_1:_The_Quine_Tapes,precededBy,Squeeze_(The_Velvet_Underground_album),,,,
+ont_2_musicalwork_test_181,EXTRA,,,,,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, followedBy, Squeeze_play_(bridge))",Bootleg_Series_Volume_1:_The_Quine_Tapes,followedBy,Squeeze_play_(bridge)
+ont_2_musicalwork_test_182,EXACT,1.00,"(Universal_Music_Group, keyPerson, Lucian_Grainge)",Universal_Music_Group,keyPerson,Lucian_Grainge,"(Universal_Music_Group, keyPerson, Lucian_Grainge)",Universal_Music_Group,keyPerson,Lucian_Grainge
+ont_2_musicalwork_test_182,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Universal_Music_Group)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Universal_Music_Group,,,,
+ont_2_musicalwork_test_182,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, United_States)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,United_States,,,,
+ont_2_musicalwork_test_182,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Polydor_Records)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Polydor_Records,,,,
+ont_2_musicalwork_test_183,MISSING,,"(Mermaid_(Train_song), producer, Espionage_(production_team))",Mermaid_(Train_song),producer,Espionage_(production_team),,,,
+ont_2_musicalwork_test_183,MISSING,,"(Mermaid_(Train_song), writer, Stargate_(production_team))",Mermaid_(Train_song),writer,Stargate_(production_team),,,,
+ont_2_musicalwork_test_183,MISSING,,"(Mermaid_(Train_song), writer, Amund_Bjørklund)",Mermaid_(Train_song),writer,Amund_Bjørklund,,,,
+ont_2_musicalwork_test_183,MISSING,,"(Mermaid_(Train_song), format, Music_download)",Mermaid_(Train_song),format,Music_download,,,,
+ont_2_musicalwork_test_183,MISSING,,"(Mermaid_(Train_song), album, California_37_(Train_album))",Mermaid_(Train_song),album,California_37_(Train_album),,,,
+ont_2_musicalwork_test_183,EXTRA,,,,,,"(Mermaid, musicalBand, Train)",Mermaid,musicalBand,Train
+ont_2_musicalwork_test_183,EXTRA,,,,,,"(Mermaid, format, Digital_distribution)",Mermaid,format,Digital_distribution
+ont_2_musicalwork_test_183,EXTRA,,,,,,"(Mermaid, album, California_37_(album))",Mermaid,album,California_37_(album)
+ont_2_musicalwork_test_183,EXTRA,,,,,,"(Mermaid, type, Song)",Mermaid,type,Song
+ont_2_musicalwork_test_183,EXTRA,,,,,,"(Mermaid, producer, Espionage_(production_team))",Mermaid,producer,Espionage_(production_team)
+ont_2_musicalwork_test_184,MISSING,,"(Squeeze_(The_Velvet_Underground_album), producer, The_Velvet_Underground)",Squeeze_(The_Velvet_Underground_album),producer,The_Velvet_Underground,,,,
+ont_2_musicalwork_test_184,EXTRA,,,,,,"(Squeeze_play_(bridge), producer, The_Velvet_Underground)",Squeeze_play_(bridge),producer,The_Velvet_Underground
+ont_2_musicalwork_test_185,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, precededBy, Squeeze_(The_Velvet_Underground_album))",Bootleg_Series_Volume_1:_The_Quine_Tapes,precededBy,Squeeze_(The_Velvet_Underground_album),,,,
+ont_2_musicalwork_test_185,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, San_Francisco)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,San_Francisco,,,,
+ont_2_musicalwork_test_185,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, genre, Rock_music)",Bootleg_Series_Volume_1:_The_Quine_Tapes,genre,Rock_music,,,,
+ont_2_musicalwork_test_185,EXTRA,,,,,,"(Squeeze_play_(bridge), musicalBand, The_Velvet_Underground)",Squeeze_play_(bridge),musicalBand,The_Velvet_Underground
+ont_2_musicalwork_test_185,EXTRA,,,,,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, derivative, Squeeze_play_(bridge))",Bootleg_Series_Volume_1:_The_Quine_Tapes,derivative,Squeeze_play_(bridge)
+ont_2_musicalwork_test_185,EXTRA,,,,,,"(Squeeze_play_(bridge), genre, Rock_music)",Squeeze_play_(bridge),genre,Rock_music
+ont_2_musicalwork_test_185,EXTRA,,,,,,"(Squeeze_play_(bridge), recordedIn, San_Francisco)",Squeeze_play_(bridge),recordedIn,San_Francisco
+ont_2_musicalwork_test_186,MISSING,,"(Nord_(Year_of_No_Light_album), genre, Post-metal)",Nord_(Year_of_No_Light_album),genre,Post-metal,,,,
+ont_2_musicalwork_test_186,MISSING,,"(Nord_(Year_of_No_Light_album), followedBy, Live_at_Roadburn_2008_(Year_of_No_Light_album))",Nord_(Year_of_No_Light_album),followedBy,Live_at_Roadburn_2008_(Year_of_No_Light_album),,,,
+ont_2_musicalwork_test_186,MISSING,,"(Nord_(Year_of_No_Light_album), genre, Sludge_metal)",Nord_(Year_of_No_Light_album),genre,Sludge_metal,,,,
+ont_2_musicalwork_test_186,MISSING,,"(Nord_(Year_of_No_Light_album), releaseDate, 2006-09-06)",Nord_(Year_of_No_Light_album),releaseDate,2006-09-06,,,,
+ont_2_musicalwork_test_186,MISSING,,"(Nord_(Year_of_No_Light_album), producer, Year_of_No_Light)",Nord_(Year_of_No_Light_album),producer,Year_of_No_Light,,,,
+ont_2_musicalwork_test_186,MISSING,,"(Nord_(Year_of_No_Light_album), artist, Year_of_No_Light)",Nord_(Year_of_No_Light_album),artist,Year_of_No_Light,,,,
+ont_2_musicalwork_test_186,EXTRA,,,,,,"(Nord_(French_department), genre, Post-metal)",Nord_(French_department),genre,Post-metal
+ont_2_musicalwork_test_186,EXTRA,,,,,,"(Nord_(French_department), musicalBand, Year_of_No_Light)",Nord_(French_department),musicalBand,Year_of_No_Light
+ont_2_musicalwork_test_186,EXTRA,,,,,,"(Nord_(French_department), releaseDate, 2006-09-06)",Nord_(French_department),releaseDate,2006-09-06
+ont_2_musicalwork_test_186,EXTRA,,,,,,"(Nord_(French_department), genre, Sludge_metal)",Nord_(French_department),genre,Sludge_metal
+ont_2_musicalwork_test_187,MISSING,,"(Nord_(Year_of_No_Light_album), recordLabel, Crucial_Blast)",Nord_(Year_of_No_Light_album),recordLabel,Crucial_Blast,,,,
+ont_2_musicalwork_test_187,MISSING,,"(Nord_(Year_of_No_Light_album), releaseDate, 2006-09-06)",Nord_(Year_of_No_Light_album),releaseDate,2006-09-06,,,,
+ont_2_musicalwork_test_187,MISSING,,"(Nord_(Year_of_No_Light_album), producer, Year_of_No_Light)",Nord_(Year_of_No_Light_album),producer,Year_of_No_Light,,,,
+ont_2_musicalwork_test_187,MISSING,,"(Nord_(Year_of_No_Light_album), artist, Year_of_No_Light)",Nord_(Year_of_No_Light_album),artist,Year_of_No_Light,,,,
+ont_2_musicalwork_test_187,EXTRA,,,,,,"(Nord_(French_department), musicalBand, Year_of_No_Light)",Nord_(French_department),musicalBand,Year_of_No_Light
+ont_2_musicalwork_test_187,EXTRA,,,,,,"(Nord_(French_department), recordLabel, Crucial_Blast)",Nord_(French_department),recordLabel,Crucial_Blast
+ont_2_musicalwork_test_187,EXTRA,,,,,,"(Nord_(French_department), releaseDate, 2006-09-06)",Nord_(French_department),releaseDate,2006-09-06
+ont_2_musicalwork_test_188,MISSING,,"(Live_at_Roadburn_2008_(Year_of_No_Light_album), producer, Roadburn_Festival)",Live_at_Roadburn_2008_(Year_of_No_Light_album),producer,Roadburn_Festival,,,,
+ont_2_musicalwork_test_189,MISSING,,"(Mermaid_(Train_song), writer, Pat_Monahan)",Mermaid_(Train_song),writer,Pat_Monahan,,,,
+ont_2_musicalwork_test_189,MISSING,,"(Mermaid_(Train_song), producer, Espionage_(production_team))",Mermaid_(Train_song),producer,Espionage_(production_team),,,,
+ont_2_musicalwork_test_189,MISSING,,"(Mermaid_(Train_song), followedBy, Imagine_(John_Lennon_song))",Mermaid_(Train_song),followedBy,Imagine_(John_Lennon_song),,,,
+ont_2_musicalwork_test_189,EXTRA,,,,,,"(Imagine_(John_Lennon_song), writer, Pat_Monahan)",Imagine_(John_Lennon_song),writer,Pat_Monahan
+ont_2_musicalwork_test_189,EXTRA,,,,,,"(Imagine_(John_Lennon_song), type, song)",Imagine_(John_Lennon_song),type,song
+ont_2_musicalwork_test_189,EXTRA,,,,,,"(Imagine_(John_Lennon_song), musicalArtist, John_Lennon)",Imagine_(John_Lennon_song),musicalArtist,John_Lennon
+ont_2_musicalwork_test_189,EXTRA,,,,,,"(Train, followedBy, Mermaid)",Train,followedBy,Mermaid
+ont_2_musicalwork_test_19,EXACT,1.00,"(Pop_rock, stylisticOrigin, Rock_music)",Pop_rock,stylisticOrigin,Rock_music,"(Pop_rock, stylisticOrigin, Rock_music)",Pop_rock,stylisticOrigin,Rock_music
+ont_2_musicalwork_test_19,SEMANTIC,0.95,"(Reggae, stylisticOrigin, Ska)",Reggae,stylisticOrigin,Ska,"(Reggae, derivative, Ska)",Reggae,derivative,Ska
+ont_2_musicalwork_test_19,MISSING,,"(Mermaid_(Train_song), genre, Reggae)",Mermaid_(Train_song),genre,Reggae,,,,
+ont_2_musicalwork_test_19,MISSING,,"(Mermaid_(Train_song), genre, Pop_rock)",Mermaid_(Train_song),genre,Pop_rock,,,,
+ont_2_musicalwork_test_19,EXTRA,,,,,,"(Mermaid, genre, Reggae)",Mermaid,genre,Reggae
+ont_2_musicalwork_test_19,EXTRA,,,,,,"(Mermaid, genre, Pop_rock)",Mermaid,genre,Pop_rock
+ont_2_musicalwork_test_190,MISSING,,"(United_States, areaTotal, 9833520000000.0)",United_States,areaTotal,9833520000000.0,,,,
+ont_2_musicalwork_test_191,MISSING,,"(Noise_rock, musicFusionGenre, Noise_pop)",Noise_rock,musicFusionGenre,Noise_pop,,,,
+ont_2_musicalwork_test_191,MISSING,,"(Turn_Me_On_(album), genre, Punk_blues)",Turn_Me_On_(album),genre,Punk_blues,,,,
+ont_2_musicalwork_test_191,MISSING,,"(Turn_Me_On_(album), genre, Noise_rock)",Turn_Me_On_(album),genre,Noise_rock,,,,
+ont_2_musicalwork_test_192,MISSING,,"(Turn_Me_On_(album), runtime, 35.1)",Turn_Me_On_(album),runtime,35.1,,,,
+ont_2_musicalwork_test_192,MISSING,,"(Turn_Me_On_(album), genre, Punk_blues)",Turn_Me_On_(album),genre,Punk_blues,,,,
+ont_2_musicalwork_test_192,MISSING,,"(Turn_Me_On_(album), artist, The_Honeymoon_Killers_(American_band))",Turn_Me_On_(album),artist,The_Honeymoon_Killers_(American_band),,,,
+ont_2_musicalwork_test_192,MISSING,,"(Turn_Me_On_(album), genre, Noise_rock)",Turn_Me_On_(album),genre,Noise_rock,,,,
+ont_2_musicalwork_test_192,EXTRA,,,,,,"(Turn_Me_On_(David_Guetta_song), genre, Punk_blues)",Turn_Me_On_(David_Guetta_song),genre,Punk_blues
+ont_2_musicalwork_test_192,EXTRA,,,,,,"(Turn_Me_On_(David_Guetta_song), musicalBand, The_Honeymoon_Killers)",Turn_Me_On_(David_Guetta_song),musicalBand,The_Honeymoon_Killers
+ont_2_musicalwork_test_192,EXTRA,,,,,,"(Turn_Me_On_(David_Guetta_song), runtime, 35 minutes 10 seconds)",Turn_Me_On_(David_Guetta_song),runtime,35 minutes 10 seconds
+ont_2_musicalwork_test_192,EXTRA,,,,,,"(Turn_Me_On_(David_Guetta_song), genre, Noise_rock)",Turn_Me_On_(David_Guetta_song),genre,Noise_rock
+ont_2_musicalwork_test_193,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Universal_Music_Group)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Universal_Music_Group,,,,
+ont_2_musicalwork_test_193,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, producer, The_Velvet_Underground)",Bootleg_Series_Volume_1:_The_Quine_Tapes,producer,The_Velvet_Underground,,,,
+ont_2_musicalwork_test_193,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Polydor_Records)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Polydor_Records,,,,
+ont_2_musicalwork_test_194,SEMANTIC,0.94,"(Imagine_(John_Lennon_song), certification, FIMI)",Imagine_(John_Lennon_song),certification,FIMI,"(Imagine_(John_Lennon_song), certification, Federazione_Industria_Musicale_Italiana)",Imagine_(John_Lennon_song),certification,Federazione_Industria_Musicale_Italiana
+ont_2_musicalwork_test_194,SEMANTIC,0.97,"(Mermaid_(Train_song), followedBy, Imagine_(John_Lennon_song))",Mermaid_(Train_song),followedBy,Imagine_(John_Lennon_song),"(Mermaid, followedBy, Imagine_(John_Lennon_song))",Mermaid,followedBy,Imagine_(John_Lennon_song)
+ont_2_musicalwork_test_194,MISSING,,"(Mermaid_(Train_song), musicalBand, Train_(band))",Mermaid_(Train_song),musicalBand,Train_(band),,,,
+ont_2_musicalwork_test_194,MISSING,,"(Mermaid_(Train_song), producer, Espionage_(production_team))",Mermaid_(Train_song),producer,Espionage_(production_team),,,,
+ont_2_musicalwork_test_194,EXTRA,,,,,,"(Mermaid, musicalBand, Train)",Mermaid,musicalBand,Train
+ont_2_musicalwork_test_194,EXTRA,,,,,,"(Mermaid, writer, Train)",Mermaid,writer,Train
+ont_2_musicalwork_test_194,EXTRA,,,,,,"(Imagine_(John_Lennon_song), writer, John_Lennon)",Imagine_(John_Lennon_song),writer,John_Lennon
+ont_2_musicalwork_test_195,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Polydor_Records)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Polydor_Records,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Polydor_Records)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Polydor_Records
+ont_2_musicalwork_test_195,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, precededBy, Squeeze_(The_Velvet_Underground_album))",Bootleg_Series_Volume_1:_The_Quine_Tapes,precededBy,Squeeze_(The_Velvet_Underground_album),,,,
+ont_2_musicalwork_test_195,EXTRA,,,,,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, followedBy, Squeeze_play_(bridge))",Bootleg_Series_Volume_1:_The_Quine_Tapes,followedBy,Squeeze_play_(bridge)
+ont_2_musicalwork_test_196,SEMANTIC,0.98,"(Imagine_(John_Lennon_song), precededBy, Power_to_the_People_(song))",Imagine_(John_Lennon_song),precededBy,Power_to_the_People_(song),"(Imagine_(John_Lennon_song), followedBy, Power_to_the_People_(song))",Imagine_(John_Lennon_song),followedBy,Power_to_the_People_(song)
+ont_2_musicalwork_test_196,MISSING,,"(Mermaid_(Train_song), precededBy, This'll_Be_My_Year)",Mermaid_(Train_song),precededBy,This'll_Be_My_Year,,,,
+ont_2_musicalwork_test_196,MISSING,,"(Mermaid_(Train_song), followedBy, Imagine_(John_Lennon_song))",Mermaid_(Train_song),followedBy,Imagine_(John_Lennon_song),,,,
+ont_2_musicalwork_test_196,MISSING,,"(Mermaid_(Train_song), genre, Pop_rock)",Mermaid_(Train_song),genre,Pop_rock,,,,
+ont_2_musicalwork_test_196,MISSING,,"(Imagine_(John_Lennon_song), followedBy, Happy_Xmas_(War_Is_Over))",Imagine_(John_Lennon_song),followedBy,Happy_Xmas_(War_Is_Over),,,,
+ont_2_musicalwork_test_196,EXTRA,,,,,,"(Mermaid, genre, Pop_rock)",Mermaid,genre,Pop_rock
+ont_2_musicalwork_test_196,EXTRA,,,,,,"(Imagine_(John_Lennon_song), writer, John_Lennon)",Imagine_(John_Lennon_song),writer,John_Lennon
+ont_2_musicalwork_test_197,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Polydor_Records)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Polydor_Records,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Polydor_Records)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Polydor_Records
+ont_2_musicalwork_test_197,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, San_Francisco)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,San_Francisco,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, San_Francisco)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,San_Francisco
+ont_2_musicalwork_test_197,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, genre, Rock_music)",Bootleg_Series_Volume_1:_The_Quine_Tapes,genre,Rock_music,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, genre, Rock_music)",Bootleg_Series_Volume_1:_The_Quine_Tapes,genre,Rock_music
+ont_2_musicalwork_test_197,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, precededBy, Squeeze_(The_Velvet_Underground_album))",Bootleg_Series_Volume_1:_The_Quine_Tapes,precededBy,Squeeze_(The_Velvet_Underground_album),,,,
+ont_2_musicalwork_test_198,SEMANTIC,0.98,"(Train_(band), formerBandMember, Charlie_Colin)",Train_(band),formerBandMember,Charlie_Colin,"(Train, formerBandMember, Charlie_Colin)",Train,formerBandMember,Charlie_Colin
+ont_2_musicalwork_test_199,MISSING,,"(Mermaid_(Train_song), musicalBand, Train_(band))",Mermaid_(Train_song),musicalBand,Train_(band),,,,
+ont_2_musicalwork_test_199,MISSING,,"(Mermaid_(Train_song), genre, Pop_rock)",Mermaid_(Train_song),genre,Pop_rock,,,,
+ont_2_musicalwork_test_199,MISSING,,"(Mermaid_(Train_song), runtime, 3.16)",Mermaid_(Train_song),runtime,3.16,,,,
+ont_2_musicalwork_test_199,EXTRA,,,,,,"(Mermaid, genre, Pop_rock)",Mermaid,genre,Pop_rock
+ont_2_musicalwork_test_199,EXTRA,,,,,,"(Mermaid, musicalBand, Train)",Mermaid,musicalBand,Train
+ont_2_musicalwork_test_199,EXTRA,,,,,,"(Mermaid, runtime, 3 minutes 16 seconds)",Mermaid,runtime,3 minutes 16 seconds
+ont_2_musicalwork_test_2,MISSING,,"(Mermaid_(Train_song), genre, Reggae)",Mermaid_(Train_song),genre,Reggae,,,,
+ont_2_musicalwork_test_2,MISSING,,"(Mermaid_(Train_song), writer, Espen_Lind)",Mermaid_(Train_song),writer,Espen_Lind,,,,
+ont_2_musicalwork_test_2,MISSING,,"(Mermaid_(Train_song), recordLabel, Columbia_Records)",Mermaid_(Train_song),recordLabel,Columbia_Records,,,,
+ont_2_musicalwork_test_2,MISSING,,"(Mermaid_(Train_song), runtime, 3.16)",Mermaid_(Train_song),runtime,3.16,,,,
+ont_2_musicalwork_test_2,MISSING,,"(Mermaid_(Train_song), writer, Amund_Bjørklund)",Mermaid_(Train_song),writer,Amund_Bjørklund,,,,
+ont_2_musicalwork_test_2,MISSING,,"(Mermaid_(Train_song), recordLabel, Sony_Music_Entertainment)",Mermaid_(Train_song),recordLabel,Sony_Music_Entertainment,,,,
+ont_2_musicalwork_test_20,MISSING,,"(Nord_(Year_of_No_Light_album), releaseDate, 2006-09-06)",Nord_(Year_of_No_Light_album),releaseDate,2006-09-06,,,,
+ont_2_musicalwork_test_20,MISSING,,"(Nord_(Year_of_No_Light_album), followedBy, Live_at_Roadburn_2008_(Year_of_No_Light_album))",Nord_(Year_of_No_Light_album),followedBy,Live_at_Roadburn_2008_(Year_of_No_Light_album),,,,
+ont_2_musicalwork_test_20,MISSING,,"(Nord_(Year_of_No_Light_album), genre, Sludge_metal)",Nord_(Year_of_No_Light_album),genre,Sludge_metal,,,,
+ont_2_musicalwork_test_20,EXTRA,,,,,,"(Nord_(French_department), type, Album)",Nord_(French_department),type,Album
+ont_2_musicalwork_test_20,EXTRA,,,,,,"(Nord_(French_department), genre, Sludge_metal)",Nord_(French_department),genre,Sludge_metal
+ont_2_musicalwork_test_20,EXTRA,,,,,,"(Nord_(French_department), releaseDate, 2006-09-06)",Nord_(French_department),releaseDate,2006-09-06
+ont_2_musicalwork_test_20,EXTRA,,,,,,"(Nord_(French_department), musicalBand, Year_of_No_Light)",Nord_(French_department),musicalBand,Year_of_No_Light
+ont_2_musicalwork_test_200,MISSING,,"(Mermaid_(Train_song), genre, Reggae)",Mermaid_(Train_song),genre,Reggae,,,,
+ont_2_musicalwork_test_200,MISSING,,"(Mermaid_(Train_song), precededBy, This'll_Be_My_Year)",Mermaid_(Train_song),precededBy,This'll_Be_My_Year,,,,
+ont_2_musicalwork_test_200,MISSING,,"(Mermaid_(Train_song), producer, Espionage_(production_team))",Mermaid_(Train_song),producer,Espionage_(production_team),,,,
+ont_2_musicalwork_test_200,MISSING,,"(Mermaid_(Train_song), runtime, 3.16)",Mermaid_(Train_song),runtime,3.16,,,,
+ont_2_musicalwork_test_200,MISSING,,"(Mermaid_(Train_song), followedBy, Imagine_(John_Lennon_song))",Mermaid_(Train_song),followedBy,Imagine_(John_Lennon_song),,,,
+ont_2_musicalwork_test_200,MISSING,,"(Mermaid_(Train_song), genre, Pop_rock)",Mermaid_(Train_song),genre,Pop_rock,,,,
+ont_2_musicalwork_test_200,MISSING,,"(Mermaid_(Train_song), releaseDate, 2012-12-27)",Mermaid_(Train_song),releaseDate,2012-12-27,,,,
+ont_2_musicalwork_test_200,EXTRA,,,,,,"(Mermaid, genre, Reggae)",Mermaid,genre,Reggae
+ont_2_musicalwork_test_200,EXTRA,,,,,,"(Mermaid, genre, Pop_rock)",Mermaid,genre,Pop_rock
+ont_2_musicalwork_test_200,EXTRA,,,,,,"(Mermaid, writer, Espen_Lind)",Mermaid,writer,Espen_Lind
+ont_2_musicalwork_test_200,EXTRA,,,,,,"(Mermaid, releaseDate, 2012-12-27)",Mermaid,releaseDate,2012-12-27
+ont_2_musicalwork_test_201,SEMANTIC,0.95,"(Mermaid_(Train_song), recordLabel, Columbia_Records)",Mermaid_(Train_song),recordLabel,Columbia_Records,"(Mermaid, recordLabel, Columbia_Records)",Mermaid,recordLabel,Columbia_Records
+ont_2_musicalwork_test_201,MISSING,,"(Mermaid_(Train_song), musicalBand, Train_(band))",Mermaid_(Train_song),musicalBand,Train_(band),,,,
+ont_2_musicalwork_test_201,MISSING,,"(Mermaid_(Train_song), genre, Pop_rock)",Mermaid_(Train_song),genre,Pop_rock,,,,
+ont_2_musicalwork_test_201,MISSING,,"(Mermaid_(Train_song), runtime, 3.16)",Mermaid_(Train_song),runtime,3.16,,,,
+ont_2_musicalwork_test_201,EXTRA,,,,,,"(Mermaid, writer, Train)",Mermaid,writer,Train
+ont_2_musicalwork_test_201,EXTRA,,,,,,"(Mermaid, genre, Pop_rock)",Mermaid,genre,Pop_rock
+ont_2_musicalwork_test_201,EXTRA,,,,,,"(Mermaid, runtime, 196)",Mermaid,runtime,196
+ont_2_musicalwork_test_202,MISSING,,"(Nord_(Year_of_No_Light_album), precededBy, Demo_2004_(Year_of_No_Light_album))",Nord_(Year_of_No_Light_album),precededBy,Demo_2004_(Year_of_No_Light_album),,,,
+ont_2_musicalwork_test_203,MISSING,,"(Mermaid_(Train_song), writer, Espen_Lind)",Mermaid_(Train_song),writer,Espen_Lind,,,,
+ont_2_musicalwork_test_203,MISSING,,"(Mermaid_(Train_song), precededBy, This'll_Be_My_Year)",Mermaid_(Train_song),precededBy,This'll_Be_My_Year,,,,
+ont_2_musicalwork_test_203,MISSING,,"(Mermaid_(Train_song), runtime, 3.16)",Mermaid_(Train_song),runtime,3.16,,,,
+ont_2_musicalwork_test_203,MISSING,,"(Mermaid_(Train_song), genre, Pop_rock)",Mermaid_(Train_song),genre,Pop_rock,,,,
+ont_2_musicalwork_test_203,MISSING,,"(Mermaid_(Train_song), releaseDate, 2012-12-27)",Mermaid_(Train_song),releaseDate,2012-12-27,,,,
+ont_2_musicalwork_test_203,EXTRA,,,,,,"(Mermaid, genre, Pop_rock)",Mermaid,genre,Pop_rock
+ont_2_musicalwork_test_203,EXTRA,,,,,,"(Mermaid, musicalBand, Train)",Mermaid,musicalBand,Train
+ont_2_musicalwork_test_203,EXTRA,,,,,,"(Mermaid, releaseDate, 2012-12-27)",Mermaid,releaseDate,2012-12-27
+ont_2_musicalwork_test_203,EXTRA,,,,,,"(Mermaid, runtime, 3 minutes and 16 seconds)",Mermaid,runtime,3 minutes and 16 seconds
+ont_2_musicalwork_test_203,EXTRA,,,,,,"(Mermaid, writer, Espen_Lind)",Mermaid,writer,Espen_Lind
+ont_2_musicalwork_test_204,MISSING,,"(Nord_(Year_of_No_Light_album), recordLabel, Crucial_Blast)",Nord_(Year_of_No_Light_album),recordLabel,Crucial_Blast,,,,
+ont_2_musicalwork_test_204,MISSING,,"(Nord_(Year_of_No_Light_album), artist, Year_of_No_Light)",Nord_(Year_of_No_Light_album),artist,Year_of_No_Light,,,,
+ont_2_musicalwork_test_204,MISSING,,"(Nord_(Year_of_No_Light_album), recordLabel, E-Vinyl)",Nord_(Year_of_No_Light_album),recordLabel,E-Vinyl,,,,
+ont_2_musicalwork_test_204,EXTRA,,,,,,"(Nord_(French_department), recordLabel, Crucial_Blast)",Nord_(French_department),recordLabel,Crucial_Blast
+ont_2_musicalwork_test_204,EXTRA,,,,,,"(Nord_(French_department), musicalBand, Year_of_No_Light)",Nord_(French_department),musicalBand,Year_of_No_Light
+ont_2_musicalwork_test_204,EXTRA,,,,,,"(Nord_(French_department), recordLabel, E-Vinyl)",Nord_(French_department),recordLabel,E-Vinyl
+ont_2_musicalwork_test_205,MISSING,,"(Year_of_No_Light, associatedBand/associatedMusicalArtist, Altar_of_Plagues)",Year_of_No_Light,associatedBand/associatedMusicalArtist,Altar_of_Plagues,,,,
+ont_2_musicalwork_test_206,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, runtime, 230.05)",Bootleg_Series_Volume_1:_The_Quine_Tapes,runtime,230.05,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, runtime, 230.05)",Bootleg_Series_Volume_1:_The_Quine_Tapes,runtime,230.05
+ont_2_musicalwork_test_206,SEMANTIC,0.95,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, artist, The_Velvet_Underground)",Bootleg_Series_Volume_1:_The_Quine_Tapes,artist,The_Velvet_Underground,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, musicalBand, The_Velvet_Underground)",Bootleg_Series_Volume_1:_The_Quine_Tapes,musicalBand,The_Velvet_Underground
+ont_2_musicalwork_test_206,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, producer, The_Velvet_Underground)",Bootleg_Series_Volume_1:_The_Quine_Tapes,producer,The_Velvet_Underground,,,,
+ont_2_musicalwork_test_207,MISSING,,"(Turn_Me_On_(album), precededBy, Let_It_Breed)",Turn_Me_On_(album),precededBy,Let_It_Breed,,,,
+ont_2_musicalwork_test_207,MISSING,,"(Turn_Me_On_(album), runtime, 35.1)",Turn_Me_On_(album),runtime,35.1,,,,
+ont_2_musicalwork_test_207,MISSING,,"(Turn_Me_On_(album), genre, Punk_blues)",Turn_Me_On_(album),genre,Punk_blues,,,,
+ont_2_musicalwork_test_207,MISSING,,"(Turn_Me_On_(album), producer, The_Honeymoon_Killers_(American_band))",Turn_Me_On_(album),producer,The_Honeymoon_Killers_(American_band),,,,
+ont_2_musicalwork_test_207,MISSING,,"(Turn_Me_On_(album), genre, Noise_rock)",Turn_Me_On_(album),genre,Noise_rock,,,,
+ont_2_musicalwork_test_207,EXTRA,,,,,,"(Turn_Me_On_(David_Guetta_song), musicalBand, The_Honeymoon_Killers_(American_band))",Turn_Me_On_(David_Guetta_song),musicalBand,The_Honeymoon_Killers_(American_band)
+ont_2_musicalwork_test_207,EXTRA,,,,,,"(Turn_Me_On_(David_Guetta_song), derivative, Let_It_Breed)",Turn_Me_On_(David_Guetta_song),derivative,Let_It_Breed
+ont_2_musicalwork_test_207,EXTRA,,,,,,"(Turn_Me_On_(Kim_Kyu-jong_EP), genre, Punk_blues)",Turn_Me_On_(Kim_Kyu-jong_EP),genre,Punk_blues
+ont_2_musicalwork_test_207,EXTRA,,,,,,"(Turn_Me_On_(David_Guetta_song), runtime, 35.1)",Turn_Me_On_(David_Guetta_song),runtime,35.1
+ont_2_musicalwork_test_207,EXTRA,,,,,,"(Turn_Me_On_(David_Guetta_song), genre, Noise_rock)",Turn_Me_On_(David_Guetta_song),genre,Noise_rock
+ont_2_musicalwork_test_208,MISSING,,"(Mermaid_(Train_song), musicalBand, Train_(band))",Mermaid_(Train_song),musicalBand,Train_(band),,,,
+ont_2_musicalwork_test_208,MISSING,,"(Mermaid_(Train_song), recordLabel, Columbia_Records)",Mermaid_(Train_song),recordLabel,Columbia_Records,,,,
+ont_2_musicalwork_test_208,MISSING,,"(Mermaid_(Train_song), runtime, 3.16)",Mermaid_(Train_song),runtime,3.16,,,,
+ont_2_musicalwork_test_208,EXTRA,,,,,,"(The_Mermaid_(ballad), runtime, three minute sixteen seconds)",The_Mermaid_(ballad),runtime,three minute sixteen seconds
+ont_2_musicalwork_test_208,EXTRA,,,,,,"(The_Mermaid_(ballad), writer, Train)",The_Mermaid_(ballad),writer,Train
+ont_2_musicalwork_test_208,EXTRA,,,,,,"(The_Mermaid_(ballad), recordLabel, Columbia_Records)",The_Mermaid_(ballad),recordLabel,Columbia_Records
+ont_2_musicalwork_test_209,MISSING,,"(Turn_Me_On_(album), genre, Punk_blues)",Turn_Me_On_(album),genre,Punk_blues,,,,
+ont_2_musicalwork_test_209,MISSING,,"(Turn_Me_On_(album), producer, The_Honeymoon_Killers_(American_band))",Turn_Me_On_(album),producer,The_Honeymoon_Killers_(American_band),,,,
+ont_2_musicalwork_test_209,EXTRA,,,,,,"(Turn_Me_On_(David_Guetta_song), genre, Punk_blues)",Turn_Me_On_(David_Guetta_song),genre,Punk_blues
+ont_2_musicalwork_test_209,EXTRA,,,,,,"(Turn_Me_On_(Kim_Kyu-jong_EP), type, Album)",Turn_Me_On_(Kim_Kyu-jong_EP),type,Album
+ont_2_musicalwork_test_209,EXTRA,,,,,,"(Turn_Me_On_(Kim_Kyu-jong_EP), musicalBand, The_Honeymoon_Killers)",Turn_Me_On_(Kim_Kyu-jong_EP),musicalBand,The_Honeymoon_Killers
+ont_2_musicalwork_test_21,MISSING,,"(Mermaid_(Train_song), genre, Pop_rock)",Mermaid_(Train_song),genre,Pop_rock,,,,
+ont_2_musicalwork_test_21,MISSING,,"(Pop_rock, musicFusionGenre, Baroque_pop)",Pop_rock,musicFusionGenre,Baroque_pop,,,,
+ont_2_musicalwork_test_21,EXTRA,,,,,,"(Baroque_pop, stylisticOrigin, Pop_rock)",Baroque_pop,stylisticOrigin,Pop_rock
+ont_2_musicalwork_test_21,EXTRA,,,,,,"(Baroque_pop, type, Music_genre)",Baroque_pop,type,Music_genre
+ont_2_musicalwork_test_21,EXTRA,,,,,,"(Train_Song, musicalBand, Mermaid)",Train_Song,musicalBand,Mermaid
+ont_2_musicalwork_test_22,MISSING,,"(Mermaid_(Train_song), writer, Stargate_(production_team))",Mermaid_(Train_song),writer,Stargate_(production_team),,,,
+ont_2_musicalwork_test_22,EXTRA,,,,,,"(Mermaid, producer, Stargate_(record_producers))",Mermaid,producer,Stargate_(record_producers)
+ont_2_musicalwork_test_23,SEMANTIC,0.97,"(Mermaid_(Train_song), followedBy, Imagine_(John_Lennon_song))",Mermaid_(Train_song),followedBy,Imagine_(John_Lennon_song),"(Mermaid, followedBy, Imagine_(John_Lennon_song))",Mermaid,followedBy,Imagine_(John_Lennon_song)
+ont_2_musicalwork_test_23,MISSING,,"(Mermaid_(Train_song), genre, Reggae)",Mermaid_(Train_song),genre,Reggae,,,,
+ont_2_musicalwork_test_23,MISSING,,"(Mermaid_(Train_song), precededBy, This'll_Be_My_Year)",Mermaid_(Train_song),precededBy,This'll_Be_My_Year,,,,
+ont_2_musicalwork_test_23,MISSING,,"(Mermaid_(Train_song), runtime, 3.16)",Mermaid_(Train_song),runtime,3.16,,,,
+ont_2_musicalwork_test_23,EXTRA,,,,,,"(Mermaid, musicalBand, Train)",Mermaid,musicalBand,Train
+ont_2_musicalwork_test_23,EXTRA,,,,,,"(Mermaid, runtime, 3 minutes and 16 seconds)",Mermaid,runtime,3 minutes and 16 seconds
+ont_2_musicalwork_test_23,EXTRA,,,,,,"(Mermaid, genre, Reggae)",Mermaid,genre,Reggae
+ont_2_musicalwork_test_23,EXTRA,,,,,,"(Imagine_(John_Lennon_song), writer, John_Lennon)",Imagine_(John_Lennon_song),writer,John_Lennon
+ont_2_musicalwork_test_24,MISSING,,"(Mermaid_(Train_song), recordLabel, Sony_Music_Entertainment)",Mermaid_(Train_song),recordLabel,Sony_Music_Entertainment,,,,
+ont_2_musicalwork_test_24,EXTRA,,,,,,"(Mermaid, musicalBand, Train)",Mermaid,musicalBand,Train
+ont_2_musicalwork_test_24,EXTRA,,,,,,"(Mermaid, recordLabel, Sony_Music)",Mermaid,recordLabel,Sony_Music
+ont_2_musicalwork_test_25,MISSING,,"(Post-metal, instrument, Synthesizer)",Post-metal,instrument,Synthesizer,,,,
+ont_2_musicalwork_test_26,SEMANTIC,0.95,"(Mermaid_(Train_song), recordLabel, Columbia_Records)",Mermaid_(Train_song),recordLabel,Columbia_Records,"(Mermaid, recordLabel, Columbia_Records)",Mermaid,recordLabel,Columbia_Records
+ont_2_musicalwork_test_26,MISSING,,"(Mermaid_(Train_song), musicalBand, Train_(band))",Mermaid_(Train_song),musicalBand,Train_(band),,,,
+ont_2_musicalwork_test_26,MISSING,,"(Mermaid_(Train_song), genre, Pop_rock)",Mermaid_(Train_song),genre,Pop_rock,,,,
+ont_2_musicalwork_test_26,EXTRA,,,,,,"(Mermaid, genre, Pop_rock)",Mermaid,genre,Pop_rock
+ont_2_musicalwork_test_26,EXTRA,,,,,,"(Mermaid, musicalBand, Train)",Mermaid,musicalBand,Train
+ont_2_musicalwork_test_27,SEMANTIC,0.97,"(Mermaid_(Train_song), followedBy, Imagine_(John_Lennon_song))",Mermaid_(Train_song),followedBy,Imagine_(John_Lennon_song),"(Mermaid, followedBy, Imagine_(John_Lennon_song))",Mermaid,followedBy,Imagine_(John_Lennon_song)
+ont_2_musicalwork_test_27,EXTRA,,,,,,"(Mermaid, musicalBand, Train)",Mermaid,musicalBand,Train
+ont_2_musicalwork_test_27,EXTRA,,,,,,"(Imagine_(John_Lennon_song), musicalArtist, John_Lennon)",Imagine_(John_Lennon_song),musicalArtist,John_Lennon
+ont_2_musicalwork_test_28,SEMANTIC,0.95,"(Mermaid_(Train_song), recordLabel, Columbia_Records)",Mermaid_(Train_song),recordLabel,Columbia_Records,"(Mermaid, recordLabel, Columbia_Records)",Mermaid,recordLabel,Columbia_Records
+ont_2_musicalwork_test_28,MISSING,,"(Mermaid_(Train_song), runtime, 3.16)",Mermaid_(Train_song),runtime,3.16,,,,
+ont_2_musicalwork_test_28,MISSING,,"(Mermaid_(Train_song), musicalBand, Train_(band))",Mermaid_(Train_song),musicalBand,Train_(band),,,,
+ont_2_musicalwork_test_28,MISSING,,"(Mermaid_(Train_song), genre, Pop_rock)",Mermaid_(Train_song),genre,Pop_rock,,,,
+ont_2_musicalwork_test_28,MISSING,,"(Mermaid_(Train_song), releaseDate, 2012-12-27)",Mermaid_(Train_song),releaseDate,2012-12-27,,,,
+ont_2_musicalwork_test_28,EXTRA,,,,,,"(Mermaid, writer, Train)",Mermaid,writer,Train
+ont_2_musicalwork_test_28,EXTRA,,,,,,"(Mermaid, releaseDate, 2012-12-27)",Mermaid,releaseDate,2012-12-27
+ont_2_musicalwork_test_28,EXTRA,,,,,,"(Mermaid, runtime, 3.16)",Mermaid,runtime,3.16
+ont_2_musicalwork_test_29,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Polydor_Records)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Polydor_Records,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Polydor_Records)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Polydor_Records
+ont_2_musicalwork_test_29,SEMANTIC,0.99,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Universal_Music_Group)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Universal_Music_Group,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, distributingLabel, Universal_Music_Group)",Bootleg_Series_Volume_1:_The_Quine_Tapes,distributingLabel,Universal_Music_Group
+ont_2_musicalwork_test_29,MISSING,,"(Universal_Music_Group, location, Santa_Monica,_California)",Universal_Music_Group,location,"Santa_Monica,_California",,,,
+ont_2_musicalwork_test_29,MISSING,,"(Polydor_Records, location, London)",Polydor_Records,location,London,,,,
+ont_2_musicalwork_test_29,EXTRA,,,,,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, London)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,London
+ont_2_musicalwork_test_3,MISSING,,"(Nord_(Year_of_No_Light_album), genre, Post-metal)",Nord_(Year_of_No_Light_album),genre,Post-metal,,,,
+ont_2_musicalwork_test_3,MISSING,,"(Nord_(Year_of_No_Light_album), recordLabel, Crucial_Blast)",Nord_(Year_of_No_Light_album),recordLabel,Crucial_Blast,,,,
+ont_2_musicalwork_test_3,MISSING,,"(Nord_(Year_of_No_Light_album), genre, Sludge_metal)",Nord_(Year_of_No_Light_album),genre,Sludge_metal,,,,
+ont_2_musicalwork_test_3,MISSING,,"(Nord_(Year_of_No_Light_album), releaseDate, 2006-09-06)",Nord_(Year_of_No_Light_album),releaseDate,2006-09-06,,,,
+ont_2_musicalwork_test_3,MISSING,,"(Nord_(Year_of_No_Light_album), producer, Year_of_No_Light)",Nord_(Year_of_No_Light_album),producer,Year_of_No_Light,,,,
+ont_2_musicalwork_test_3,EXTRA,,,,,,"(Nord_(French_department), genre, Post-metal)",Nord_(French_department),genre,Post-metal
+ont_2_musicalwork_test_3,EXTRA,,,,,,"(Nord_(French_department), album, Year_of_No_Light)",Nord_(French_department),album,Year_of_No_Light
+ont_2_musicalwork_test_3,EXTRA,,,,,,"(Nord_(French_department), genre, Sludge_metal)",Nord_(French_department),genre,Sludge_metal
+ont_2_musicalwork_test_3,EXTRA,,,,,,"(Year_of_No_Light, releaseDate, 2006-06-09)",Year_of_No_Light,releaseDate,2006-06-09
+ont_2_musicalwork_test_30,MISSING,,"(Nord_(Year_of_No_Light_album), recordLabel, Crucial_Blast)",Nord_(Year_of_No_Light_album),recordLabel,Crucial_Blast,,,,
+ont_2_musicalwork_test_30,MISSING,,"(Nord_(Year_of_No_Light_album), runtime, 58.41)",Nord_(Year_of_No_Light_album),runtime,58.41,,,,
+ont_2_musicalwork_test_30,MISSING,,"(Nord_(Year_of_No_Light_album), releaseDate, 2006-09-06)",Nord_(Year_of_No_Light_album),releaseDate,2006-09-06,,,,
+ont_2_musicalwork_test_30,MISSING,,"(Nord_(Year_of_No_Light_album), artist, Year_of_No_Light)",Nord_(Year_of_No_Light_album),artist,Year_of_No_Light,,,,
+ont_2_musicalwork_test_30,MISSING,,"(Nord_(Year_of_No_Light_album), recordLabel, E-Vinyl)",Nord_(Year_of_No_Light_album),recordLabel,E-Vinyl,,,,
+ont_2_musicalwork_test_30,EXTRA,,,,,,"(Nord_(French_department), recordLabel, Crucial_Blast)",Nord_(French_department),recordLabel,Crucial_Blast
+ont_2_musicalwork_test_30,EXTRA,,,,,,"(Nord_(French_department), releaseDate, 2006-09-06)",Nord_(French_department),releaseDate,2006-09-06
+ont_2_musicalwork_test_30,EXTRA,,,,,,"(Nord_(French_department), musicalBand, Year_of_No_Light)",Nord_(French_department),musicalBand,Year_of_No_Light
+ont_2_musicalwork_test_30,EXTRA,,,,,,"(Nord_(French_department), distributingLabel, E-Vinyl)",Nord_(French_department),distributingLabel,E-Vinyl
+ont_2_musicalwork_test_30,EXTRA,,,,,,"(Nord_(French_department), runtime, 3521)",Nord_(French_department),runtime,3521
+ont_2_musicalwork_test_31,MISSING,,"(Nord_(Year_of_No_Light_album), recordLabel, E-Vinyl)",Nord_(Year_of_No_Light_album),recordLabel,E-Vinyl,,,,
+ont_2_musicalwork_test_31,EXTRA,,,,,,"(Nord_(French_department), recordLabel, E-Vinyl)",Nord_(French_department),recordLabel,E-Vinyl
+ont_2_musicalwork_test_32,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Universal_Music_Group)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Universal_Music_Group,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Universal_Music_Group)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Universal_Music_Group
+ont_2_musicalwork_test_32,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Polydor_Records)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Polydor_Records,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Polydor_Records)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Polydor_Records
+ont_2_musicalwork_test_32,MISSING,,"(Universal_Music_Group, keyPerson, Lucian_Grainge)",Universal_Music_Group,keyPerson,Lucian_Grainge,,,,
+ont_2_musicalwork_test_33,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, runtime, 230.05)",Bootleg_Series_Volume_1:_The_Quine_Tapes,runtime,230.05,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, runtime, 230.05)",Bootleg_Series_Volume_1:_The_Quine_Tapes,runtime,230.05
+ont_2_musicalwork_test_33,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, producer, The_Velvet_Underground)",Bootleg_Series_Volume_1:_The_Quine_Tapes,producer,The_Velvet_Underground,,,,
+ont_2_musicalwork_test_33,EXTRA,,,,,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, musicalBand, The_Velvet_Underground)",Bootleg_Series_Volume_1:_The_Quine_Tapes,musicalBand,The_Velvet_Underground
+ont_2_musicalwork_test_34,MISSING,,"(Mermaid_(Train_song), musicalBand, Train_(band))",Mermaid_(Train_song),musicalBand,Train_(band),,,,
+ont_2_musicalwork_test_34,MISSING,,"(Mermaid_(Train_song), recordLabel, Columbia_Records)",Mermaid_(Train_song),recordLabel,Columbia_Records,,,,
+ont_2_musicalwork_test_34,MISSING,,"(Train_(band), recordLabel, Warner_Music_Group)",Train_(band),recordLabel,Warner_Music_Group,,,,
+ont_2_musicalwork_test_34,EXTRA,,,,,,"(Mermaid, distributingLabel, Columbia_Records)",Mermaid,distributingLabel,Columbia_Records
+ont_2_musicalwork_test_34,EXTRA,,,,,,"(Mermaid, musicalBand, Train)",Mermaid,musicalBand,Train
+ont_2_musicalwork_test_35,MISSING,,"(Mermaid_(Train_song), genre, Reggae)",Mermaid_(Train_song),genre,Reggae,,,,
+ont_2_musicalwork_test_35,MISSING,,"(Mermaid_(Train_song), writer, Espen_Lind)",Mermaid_(Train_song),writer,Espen_Lind,,,,
+ont_2_musicalwork_test_35,MISSING,,"(Mermaid_(Train_song), precededBy, This'll_Be_My_Year)",Mermaid_(Train_song),precededBy,This'll_Be_My_Year,,,,
+ont_2_musicalwork_test_35,MISSING,,"(Mermaid_(Train_song), runtime, 3.16)",Mermaid_(Train_song),runtime,3.16,,,,
+ont_2_musicalwork_test_35,MISSING,,"(Mermaid_(Train_song), genre, Pop_rock)",Mermaid_(Train_song),genre,Pop_rock,,,,
+ont_2_musicalwork_test_35,MISSING,,"(Mermaid_(Train_song), releaseDate, 2012-12-27)",Mermaid_(Train_song),releaseDate,2012-12-27,,,,
+ont_2_musicalwork_test_35,EXTRA,,,,,,"(Mermaid, genre, Pop_rock)",Mermaid,genre,Pop_rock
+ont_2_musicalwork_test_35,EXTRA,,,,,,"(Mermaid, musicalBand, Train)",Mermaid,musicalBand,Train
+ont_2_musicalwork_test_35,EXTRA,,,,,,"(Mermaid, runtime, 3 minutes, 16 seconds)",Mermaid,runtime,"3 minutes, 16 seconds"
+ont_2_musicalwork_test_35,EXTRA,,,,,,"(Mermaid, writer, Espen_Lind)",Mermaid,writer,Espen_Lind
+ont_2_musicalwork_test_36,EXACT,1.00,"(Imagine_(John_Lennon_song), followedBy, Happy_Xmas_(War_Is_Over))",Imagine_(John_Lennon_song),followedBy,Happy_Xmas_(War_Is_Over),"(Imagine_(John_Lennon_song), followedBy, Happy_Xmas_(War_Is_Over))",Imagine_(John_Lennon_song),followedBy,Happy_Xmas_(War_Is_Over)
+ont_2_musicalwork_test_36,MISSING,,"(Mermaid_(Train_song), followedBy, Imagine_(John_Lennon_song))",Mermaid_(Train_song),followedBy,Imagine_(John_Lennon_song),,,,
+ont_2_musicalwork_test_36,MISSING,,"(Mermaid_(Train_song), recordLabel, Sony_Music_Entertainment)",Mermaid_(Train_song),recordLabel,Sony_Music_Entertainment,,,,
+ont_2_musicalwork_test_36,EXTRA,,,,,,"(Imagine_(John_Lennon_song), artist, John_Lennon)",Imagine_(John_Lennon_song),artist,John_Lennon
+ont_2_musicalwork_test_36,EXTRA,,,,,,"(Mermaid, musicalBand, Train)",Mermaid,musicalBand,Train
+ont_2_musicalwork_test_36,EXTRA,,,,,,"(Imagine_(John_Lennon_song), recordLabel, Sony_Music)",Imagine_(John_Lennon_song),recordLabel,Sony_Music
+ont_2_musicalwork_test_36,EXTRA,,,,,,"(Mermaid, recordLabel, Sony_Music)",Mermaid,recordLabel,Sony_Music
+ont_2_musicalwork_test_37,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, United_States)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,United_States,,,,
+ont_2_musicalwork_test_37,MISSING,,"(San_Francisco, utcOffset, &minus;7)",San_Francisco,utcOffset,&minus;7,,,,
+ont_2_musicalwork_test_37,MISSING,,"(United_States, areaTotal, 9833520000000.0)",United_States,areaTotal,9833520000000.0,,,,
+ont_2_musicalwork_test_37,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, San_Francisco)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,San_Francisco,,,,
+ont_2_musicalwork_test_38,MISSING,,"(Sludge_metal, musicSubgenre, Southern_sludge)",Sludge_metal,musicSubgenre,Southern_sludge,,,,
+ont_2_musicalwork_test_38,MISSING,,"(Nord_(Year_of_No_Light_album), genre, Post-metal)",Nord_(Year_of_No_Light_album),genre,Post-metal,,,,
+ont_2_musicalwork_test_38,MISSING,,"(Sludge_metal, musicSubgenre, Stoner_sludge)",Sludge_metal,musicSubgenre,Stoner_sludge,,,,
+ont_2_musicalwork_test_38,MISSING,,"(Nord_(Year_of_No_Light_album), genre, Sludge_metal)",Nord_(Year_of_No_Light_album),genre,Sludge_metal,,,,
+ont_2_musicalwork_test_38,EXTRA,,,,,,"(Nord_(French_department), genre, Post-metal)",Nord_(French_department),genre,Post-metal
+ont_2_musicalwork_test_38,EXTRA,,,,,,"(Nord_(French_department), genre, Sludge_metal)",Nord_(French_department),genre,Sludge_metal
+ont_2_musicalwork_test_38,EXTRA,,,,,,"(Nord_(French_department), musicalBand, Year_of_No_Light)",Nord_(French_department),musicalBand,Year_of_No_Light
+ont_2_musicalwork_test_39,MISSING,,"(Mermaid_(Train_song), recordLabel, Columbia_Records)",Mermaid_(Train_song),recordLabel,Columbia_Records,,,,
+ont_2_musicalwork_test_39,MISSING,,"(Mermaid_(Train_song), genre, Pop_rock)",Mermaid_(Train_song),genre,Pop_rock,,,,
+ont_2_musicalwork_test_39,MISSING,,"(Mermaid_(Train_song), runtime, 3.16)",Mermaid_(Train_song),runtime,3.16,,,,
+ont_2_musicalwork_test_39,MISSING,,"(Mermaid_(Train_song), recordLabel, Sony_Music_Entertainment)",Mermaid_(Train_song),recordLabel,Sony_Music_Entertainment,,,,
+ont_2_musicalwork_test_4,MISSING,,"(Nord_(Year_of_No_Light_album), followedBy, Live_at_Roadburn_2008_(Year_of_No_Light_album))",Nord_(Year_of_No_Light_album),followedBy,Live_at_Roadburn_2008_(Year_of_No_Light_album),,,,
+ont_2_musicalwork_test_4,MISSING,,"(Nord_(Year_of_No_Light_album), artist, Year_of_No_Light)",Nord_(Year_of_No_Light_album),artist,Year_of_No_Light,,,,
+ont_2_musicalwork_test_4,EXTRA,,,,,,"(Nord_(French_department), type, Album)",Nord_(French_department),type,Album
+ont_2_musicalwork_test_4,EXTRA,,,,,,"(Nord_(French_department), musicalBand, Year_of_No_Light)",Nord_(French_department),musicalBand,Year_of_No_Light
+ont_2_musicalwork_test_40,MISSING,,"(Mermaid_(Train_song), releaseDate, 2012-12-27)",Mermaid_(Train_song),releaseDate,2012-12-27,,,,
+ont_2_musicalwork_test_40,EXTRA,,,,,,"(Mermaid, musicalBand, Train)",Mermaid,musicalBand,Train
+ont_2_musicalwork_test_40,EXTRA,,,,,,"(Mermaid, releaseDate, 2012-12-27)",Mermaid,releaseDate,2012-12-27
+ont_2_musicalwork_test_41,SEMANTIC,0.95,"(Mermaid_(Train_song), recordLabel, Columbia_Records)",Mermaid_(Train_song),recordLabel,Columbia_Records,"(Mermaid, recordLabel, Columbia_Records)",Mermaid,recordLabel,Columbia_Records
+ont_2_musicalwork_test_41,SEMANTIC,0.97,"(Mermaid_(Train_song), followedBy, Imagine_(John_Lennon_song))",Mermaid_(Train_song),followedBy,Imagine_(John_Lennon_song),"(Mermaid, followedBy, Imagine_(John_Lennon_song))",Mermaid,followedBy,Imagine_(John_Lennon_song)
+ont_2_musicalwork_test_41,MISSING,,"(Imagine_(John_Lennon_song), followedBy, Happy_Xmas_(War_Is_Over))",Imagine_(John_Lennon_song),followedBy,Happy_Xmas_(War_Is_Over),,,,
+ont_2_musicalwork_test_41,MISSING,,"(Mermaid_(Train_song), recordLabel, Sony_Music_Entertainment)",Mermaid_(Train_song),recordLabel,Sony_Music_Entertainment,,,,
+ont_2_musicalwork_test_41,EXTRA,,,,,,"(Mermaid, musicalBand, Train)",Mermaid,musicalBand,Train
+ont_2_musicalwork_test_41,EXTRA,,,,,,"(Mermaid, recordLabel, Sony_Music)",Mermaid,recordLabel,Sony_Music
+ont_2_musicalwork_test_41,EXTRA,,,,,,"(Imagine_(John_Lennon_song), writer, John_Lennon)",Imagine_(John_Lennon_song),writer,John_Lennon
+ont_2_musicalwork_test_42,MISSING,,"(Mermaid_(Train_song), genre, Reggae)",Mermaid_(Train_song),genre,Reggae,,,,
+ont_2_musicalwork_test_42,MISSING,,"(Mermaid_(Train_song), writer, Espen_Lind)",Mermaid_(Train_song),writer,Espen_Lind,,,,
+ont_2_musicalwork_test_42,MISSING,,"(Mermaid_(Train_song), precededBy, This'll_Be_My_Year)",Mermaid_(Train_song),precededBy,This'll_Be_My_Year,,,,
+ont_2_musicalwork_test_42,MISSING,,"(Mermaid_(Train_song), releaseDate, 2012-12-27)",Mermaid_(Train_song),releaseDate,2012-12-27,,,,
+ont_2_musicalwork_test_42,EXTRA,,,,,,"(Mermaid, genre, Reggae)",Mermaid,genre,Reggae
+ont_2_musicalwork_test_42,EXTRA,,,,,,"(Mermaid, musicalBand, Train)",Mermaid,musicalBand,Train
+ont_2_musicalwork_test_42,EXTRA,,,,,,"(Mermaid, writer, Espen_Lind)",Mermaid,writer,Espen_Lind
+ont_2_musicalwork_test_42,EXTRA,,,,,,"(Mermaid, releaseDate, 2012-12-27)",Mermaid,releaseDate,2012-12-27
+ont_2_musicalwork_test_43,SEMANTIC,0.95,"(Mermaid_(Train_song), recordLabel, Columbia_Records)",Mermaid_(Train_song),recordLabel,Columbia_Records,"(Mermaid, recordLabel, Columbia_Records)",Mermaid,recordLabel,Columbia_Records
+ont_2_musicalwork_test_43,MISSING,,"(Sony_Music_Entertainment, owner, Sony_Corporation)",Sony_Music_Entertainment,owner,Sony_Corporation,,,,
+ont_2_musicalwork_test_43,MISSING,,"(Mermaid_(Train_song), recordLabel, Sony_Music_Entertainment)",Mermaid_(Train_song),recordLabel,Sony_Music_Entertainment,,,,
+ont_2_musicalwork_test_43,EXTRA,,,,,,"(Mermaid, recordLabel, Sony_Music)",Mermaid,recordLabel,Sony_Music
+ont_2_musicalwork_test_44,MISSING,,"(Nord_(Year_of_No_Light_album), recordLabel, Crucial_Blast)",Nord_(Year_of_No_Light_album),recordLabel,Crucial_Blast,,,,
+ont_2_musicalwork_test_44,MISSING,,"(Nord_(Year_of_No_Light_album), producer, Year_of_No_Light)",Nord_(Year_of_No_Light_album),producer,Year_of_No_Light,,,,
+ont_2_musicalwork_test_44,MISSING,,"(Nord_(Year_of_No_Light_album), recordLabel, E-Vinyl)",Nord_(Year_of_No_Light_album),recordLabel,E-Vinyl,,,,
+ont_2_musicalwork_test_44,EXTRA,,,,,,"(Year_of_No_Light, format, E-Vinyl)",Year_of_No_Light,format,E-Vinyl
+ont_2_musicalwork_test_44,EXTRA,,,,,,"(Year_of_No_Light, recordLabel, Crucial_Blast)",Year_of_No_Light,recordLabel,Crucial_Blast
+ont_2_musicalwork_test_44,EXTRA,,,,,,"(Year_of_No_Light, musicalBand, Nord_(French_department))",Year_of_No_Light,musicalBand,Nord_(French_department)
+ont_2_musicalwork_test_45,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, genre, Rock_music)",Bootleg_Series_Volume_1:_The_Quine_Tapes,genre,Rock_music,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, genre, Rock_music)",Bootleg_Series_Volume_1:_The_Quine_Tapes,genre,Rock_music
+ont_2_musicalwork_test_45,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Polydor_Records)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Polydor_Records,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Polydor_Records)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Polydor_Records
+ont_2_musicalwork_test_45,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, precededBy, Squeeze_(The_Velvet_Underground_album))",Bootleg_Series_Volume_1:_The_Quine_Tapes,precededBy,Squeeze_(The_Velvet_Underground_album),,,,
+ont_2_musicalwork_test_45,EXTRA,,,,,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, followedBy, Squeeze_play_(bridge))",Bootleg_Series_Volume_1:_The_Quine_Tapes,followedBy,Squeeze_play_(bridge)
+ont_2_musicalwork_test_45,EXTRA,,,,,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, type, Album)",Bootleg_Series_Volume_1:_The_Quine_Tapes,type,Album
+ont_2_musicalwork_test_46,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Universal_Music_Group)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Universal_Music_Group,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Universal_Music_Group)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Universal_Music_Group
+ont_2_musicalwork_test_46,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, San_Francisco)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,San_Francisco,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, San_Francisco)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,San_Francisco
+ont_2_musicalwork_test_46,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Polydor_Records)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Polydor_Records,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Polydor_Records)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Polydor_Records
+ont_2_musicalwork_test_46,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, precededBy, Squeeze_(The_Velvet_Underground_album))",Bootleg_Series_Volume_1:_The_Quine_Tapes,precededBy,Squeeze_(The_Velvet_Underground_album),,,,
+ont_2_musicalwork_test_46,EXTRA,,,,,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, followedBy, Squeeze_play_(bridge))",Bootleg_Series_Volume_1:_The_Quine_Tapes,followedBy,Squeeze_play_(bridge)
+ont_2_musicalwork_test_47,MISSING,,"(San_Francisco, leader, Ed_Lee_(politician))",San_Francisco,leader,Ed_Lee_(politician),,,,
+ont_2_musicalwork_test_48,SEMANTIC,0.95,"(Mermaid_(Train_song), recordLabel, Columbia_Records)",Mermaid_(Train_song),recordLabel,Columbia_Records,"(Mermaid, recordLabel, Columbia_Records)",Mermaid,recordLabel,Columbia_Records
+ont_2_musicalwork_test_48,MISSING,,"(Mermaid_(Train_song), genre, Reggae)",Mermaid_(Train_song),genre,Reggae,,,,
+ont_2_musicalwork_test_48,MISSING,,"(Mermaid_(Train_song), producer, Espionage_(production_team))",Mermaid_(Train_song),producer,Espionage_(production_team),,,,
+ont_2_musicalwork_test_48,MISSING,,"(Mermaid_(Train_song), runtime, 3.16)",Mermaid_(Train_song),runtime,3.16,,,,
+ont_2_musicalwork_test_48,MISSING,,"(Mermaid_(Train_song), followedBy, Imagine_(John_Lennon_song))",Mermaid_(Train_song),followedBy,Imagine_(John_Lennon_song),,,,
+ont_2_musicalwork_test_48,MISSING,,"(Mermaid_(Train_song), recordLabel, Sony_Music_Entertainment)",Mermaid_(Train_song),recordLabel,Sony_Music_Entertainment,,,,
+ont_2_musicalwork_test_48,EXTRA,,,,,,"(Mermaid, musicalBand, Train)",Mermaid,musicalBand,Train
+ont_2_musicalwork_test_48,EXTRA,,,,,,"(Mermaid, runtime, 3 minutes and 16 seconds)",Mermaid,runtime,3 minutes and 16 seconds
+ont_2_musicalwork_test_48,EXTRA,,,,,,"(Mermaid, genre, Reggae)",Mermaid,genre,Reggae
+ont_2_musicalwork_test_48,EXTRA,,,,,,"(Imagine_(John_Lennon_song), musicalArtist, John_Lennon)",Imagine_(John_Lennon_song),musicalArtist,John_Lennon
+ont_2_musicalwork_test_49,SEMANTIC,0.97,"(Mermaid_(Train_song), followedBy, Imagine_(John_Lennon_song))",Mermaid_(Train_song),followedBy,Imagine_(John_Lennon_song),"(Mermaid, followedBy, Imagine_(John_Lennon_song))",Mermaid,followedBy,Imagine_(John_Lennon_song)
+ont_2_musicalwork_test_49,MISSING,,"(Mermaid_(Train_song), producer, Espionage_(production_team))",Mermaid_(Train_song),producer,Espionage_(production_team),,,,
+ont_2_musicalwork_test_49,MISSING,,"(Mermaid_(Train_song), format, Music_download)",Mermaid_(Train_song),format,Music_download,,,,
+ont_2_musicalwork_test_49,MISSING,,"(Mermaid_(Train_song), writer, Pat_Monahan)",Mermaid_(Train_song),writer,Pat_Monahan,,,,
+ont_2_musicalwork_test_49,MISSING,,"(Mermaid_(Train_song), album, California_37_(Train_album))",Mermaid_(Train_song),album,California_37_(Train_album),,,,
+ont_2_musicalwork_test_49,EXTRA,,,,,,"(Mermaid, musicalBand, Train)",Mermaid,musicalBand,Train
+ont_2_musicalwork_test_49,EXTRA,,,,,,"(Mermaid, album, California_37_(album))",Mermaid,album,California_37_(album)
+ont_2_musicalwork_test_49,EXTRA,,,,,,"(Imagine_(John_Lennon_song), writer, John_Lennon)",Imagine_(John_Lennon_song),writer,John_Lennon
+ont_2_musicalwork_test_49,EXTRA,,,,,,"(Mermaid, writer, Pat_Monahan)",Mermaid,writer,Pat_Monahan
+ont_2_musicalwork_test_5,MISSING,,"(Mermaid_(Train_song), producer, Espionage_(production_team))",Mermaid_(Train_song),producer,Espionage_(production_team),,,,
+ont_2_musicalwork_test_5,MISSING,,"(Mermaid_(Train_song), writer, Stargate_(production_team))",Mermaid_(Train_song),writer,Stargate_(production_team),,,,
+ont_2_musicalwork_test_5,MISSING,,"(Mermaid_(Train_song), followedBy, Imagine_(John_Lennon_song))",Mermaid_(Train_song),followedBy,Imagine_(John_Lennon_song),,,,
+ont_2_musicalwork_test_5,MISSING,,"(Mermaid_(Train_song), writer, Amund_Bjørklund)",Mermaid_(Train_song),writer,Amund_Bjørklund,,,,
+ont_2_musicalwork_test_5,MISSING,,"(Mermaid_(Train_song), recordLabel, Sony_Music_Entertainment)",Mermaid_(Train_song),recordLabel,Sony_Music_Entertainment,,,,
+ont_2_musicalwork_test_5,EXTRA,,,,,,"(Mermaid, musicalBand, Train)",Mermaid,musicalBand,Train
+ont_2_musicalwork_test_5,EXTRA,,,,,,"(Mermaid, recordLabel, Sony_Music)",Mermaid,recordLabel,Sony_Music
+ont_2_musicalwork_test_5,EXTRA,,,,,,"(Mermaid, producer, Stargate_(record_producers))",Mermaid,producer,Stargate_(record_producers)
+ont_2_musicalwork_test_5,EXTRA,,,,,,"(Mermaid, writer, Amund_Bjørklund)",Mermaid,writer,Amund_Bjørklund
+ont_2_musicalwork_test_5,EXTRA,,,,,,"(Imagine_(John_Lennon_song), writer, John_Lennon)",Imagine_(John_Lennon_song),writer,John_Lennon
+ont_2_musicalwork_test_50,MISSING,,"(Nord_(Year_of_No_Light_album), genre, Post-metal)",Nord_(Year_of_No_Light_album),genre,Post-metal,,,,
+ont_2_musicalwork_test_50,MISSING,,"(Nord_(Year_of_No_Light_album), runtime, 58.41)",Nord_(Year_of_No_Light_album),runtime,58.41,,,,
+ont_2_musicalwork_test_50,MISSING,,"(Nord_(Year_of_No_Light_album), genre, Sludge_metal)",Nord_(Year_of_No_Light_album),genre,Sludge_metal,,,,
+ont_2_musicalwork_test_50,MISSING,,"(Nord_(Year_of_No_Light_album), precededBy, Demo_2004_(Year_of_No_Light_album))",Nord_(Year_of_No_Light_album),precededBy,Demo_2004_(Year_of_No_Light_album),,,,
+ont_2_musicalwork_test_50,MISSING,,"(Nord_(Year_of_No_Light_album), releaseDate, 2006-09-06)",Nord_(Year_of_No_Light_album),releaseDate,2006-09-06,,,,
+ont_2_musicalwork_test_50,MISSING,,"(Nord_(Year_of_No_Light_album), producer, Year_of_No_Light)",Nord_(Year_of_No_Light_album),producer,Year_of_No_Light,,,,
+ont_2_musicalwork_test_50,EXTRA,,,,,,"(Nord_(French_department), releaseDate, 2006-09-06)",Nord_(French_department),releaseDate,2006-09-06
+ont_2_musicalwork_test_50,EXTRA,,,,,,"(Nord_(French_department), musicalBand, Year_of_No_Light)",Nord_(French_department),musicalBand,Year_of_No_Light
+ont_2_musicalwork_test_50,EXTRA,,,,,,"(Nord_(French_department), runtime, 58 minutes 41 seconds)",Nord_(French_department),runtime,58 minutes 41 seconds
+ont_2_musicalwork_test_50,EXTRA,,,,,,"(Nord_(French_department), genre, Post-metal)",Nord_(French_department),genre,Post-metal
+ont_2_musicalwork_test_50,EXTRA,,,,,,"(Nord_(French_department), genre, Sludge)",Nord_(French_department),genre,Sludge
+ont_2_musicalwork_test_51,MISSING,,"(Mermaid_(Train_song), musicalBand, Train_(band))",Mermaid_(Train_song),musicalBand,Train_(band),,,,
+ont_2_musicalwork_test_51,EXTRA,,,,,,"(Mermaid, musicalBand, Train)",Mermaid,musicalBand,Train
+ont_2_musicalwork_test_52,MISSING,,"(Nord_(Year_of_No_Light_album), releaseDate, 2006-09-06)",Nord_(Year_of_No_Light_album),releaseDate,2006-09-06,,,,
+ont_2_musicalwork_test_52,MISSING,,"(Nord_(Year_of_No_Light_album), followedBy, Live_at_Roadburn_2008_(Year_of_No_Light_album))",Nord_(Year_of_No_Light_album),followedBy,Live_at_Roadburn_2008_(Year_of_No_Light_album),,,,
+ont_2_musicalwork_test_52,EXTRA,,,,,,"(Nord_(French_department), releaseDate, 2006-09-06)",Nord_(French_department),releaseDate,2006-09-06
+ont_2_musicalwork_test_52,EXTRA,,,,,,"(Nord_(French_department), musicalBand, Year_of_No_Light)",Nord_(French_department),musicalBand,Year_of_No_Light
+ont_2_musicalwork_test_53,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, San_Francisco)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,San_Francisco,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, San_Francisco)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,San_Francisco
+ont_2_musicalwork_test_53,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, precededBy, Squeeze_(The_Velvet_Underground_album))",Bootleg_Series_Volume_1:_The_Quine_Tapes,precededBy,Squeeze_(The_Velvet_Underground_album),,,,
+ont_2_musicalwork_test_53,EXTRA,,,,,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, derivative, Squeeze_play_(bridge))",Bootleg_Series_Volume_1:_The_Quine_Tapes,derivative,Squeeze_play_(bridge)
+ont_2_musicalwork_test_54,MISSING,,"(Rock_music, musicSubgenre, Proto-punk)",Rock_music,musicSubgenre,Proto-punk,,,,
+ont_2_musicalwork_test_54,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, genre, Rock_music)",Bootleg_Series_Volume_1:_The_Quine_Tapes,genre,Rock_music,,,,
+ont_2_musicalwork_test_55,SEMANTIC,0.99,"(Rock_music, musicSubgenre, Proto-punk)",Rock_music,musicSubgenre,Proto-punk,"(Proto-punk, musicSubgenre, Rock_music)",Proto-punk,musicSubgenre,Rock_music
+ont_2_musicalwork_test_56,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, runtime, 230.05)",Bootleg_Series_Volume_1:_The_Quine_Tapes,runtime,230.05,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, runtime, 230.05)",Bootleg_Series_Volume_1:_The_Quine_Tapes,runtime,230.05
+ont_2_musicalwork_test_56,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, genre, Rock_music)",Bootleg_Series_Volume_1:_The_Quine_Tapes,genre,Rock_music,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, genre, Rock_music)",Bootleg_Series_Volume_1:_The_Quine_Tapes,genre,Rock_music
+ont_2_musicalwork_test_56,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Polydor_Records)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Polydor_Records,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Polydor_Records)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Polydor_Records
+ont_2_musicalwork_test_56,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, precededBy, Squeeze_(The_Velvet_Underground_album))",Bootleg_Series_Volume_1:_The_Quine_Tapes,precededBy,Squeeze_(The_Velvet_Underground_album),,,,
+ont_2_musicalwork_test_56,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, producer, The_Velvet_Underground)",Bootleg_Series_Volume_1:_The_Quine_Tapes,producer,The_Velvet_Underground,,,,
+ont_2_musicalwork_test_56,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, artist, The_Velvet_Underground)",Bootleg_Series_Volume_1:_The_Quine_Tapes,artist,The_Velvet_Underground,,,,
+ont_2_musicalwork_test_56,EXTRA,,,,,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, followedBy, Squeeze_play_(bridge))",Bootleg_Series_Volume_1:_The_Quine_Tapes,followedBy,Squeeze_play_(bridge)
+ont_2_musicalwork_test_57,SEMANTIC,0.97,"(Mermaid_(Train_song), followedBy, Imagine_(John_Lennon_song))",Mermaid_(Train_song),followedBy,Imagine_(John_Lennon_song),"(Mermaid, followedBy, Imagine_(John_Lennon_song))",Mermaid,followedBy,Imagine_(John_Lennon_song)
+ont_2_musicalwork_test_57,MISSING,,"(Mermaid_(Train_song), genre, Reggae)",Mermaid_(Train_song),genre,Reggae,,,,
+ont_2_musicalwork_test_57,MISSING,,"(Mermaid_(Train_song), producer, Espionage_(production_team))",Mermaid_(Train_song),producer,Espionage_(production_team),,,,
+ont_2_musicalwork_test_57,MISSING,,"(Mermaid_(Train_song), format, Music_download)",Mermaid_(Train_song),format,Music_download,,,,
+ont_2_musicalwork_test_57,MISSING,,"(Mermaid_(Train_song), album, California_37_(Train_album))",Mermaid_(Train_song),album,California_37_(Train_album),,,,
+ont_2_musicalwork_test_57,EXTRA,,,,,,"(Mermaid, album, California_37_(album))",Mermaid,album,California_37_(album)
+ont_2_musicalwork_test_57,EXTRA,,,,,,"(Mermaid, format, Digital_data)",Mermaid,format,Digital_data
+ont_2_musicalwork_test_57,EXTRA,,,,,,"(Mermaid, genre, Reggae)",Mermaid,genre,Reggae
+ont_2_musicalwork_test_57,EXTRA,,,,,,"(California_37_(album), musicalBand, Train)",California_37_(album),musicalBand,Train
+ont_2_musicalwork_test_58,MISSING,,"(Mermaid_(Train_song), precededBy, This'll_Be_My_Year)",Mermaid_(Train_song),precededBy,This'll_Be_My_Year,,,,
+ont_2_musicalwork_test_59,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, releaseDate, 2001-10-16)",Bootleg_Series_Volume_1:_The_Quine_Tapes,releaseDate,2001-10-16,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, releaseDate, 2001-10-16)",Bootleg_Series_Volume_1:_The_Quine_Tapes,releaseDate,2001-10-16
+ont_2_musicalwork_test_59,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, runtime, 230.05)",Bootleg_Series_Volume_1:_The_Quine_Tapes,runtime,230.05,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, runtime, 230.05)",Bootleg_Series_Volume_1:_The_Quine_Tapes,runtime,230.05
+ont_2_musicalwork_test_59,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, San_Francisco)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,San_Francisco,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, San_Francisco)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,San_Francisco
+ont_2_musicalwork_test_59,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, precededBy, Squeeze_(The_Velvet_Underground_album))",Bootleg_Series_Volume_1:_The_Quine_Tapes,precededBy,Squeeze_(The_Velvet_Underground_album),,,,
+ont_2_musicalwork_test_59,EXTRA,,,,,,"(Squeeze_play_(bridge), musicalBand, The_Velvet_Underground)",Squeeze_play_(bridge),musicalBand,The_Velvet_Underground
+ont_2_musicalwork_test_59,EXTRA,,,,,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, followedBy, Squeeze_play_(bridge))",Bootleg_Series_Volume_1:_The_Quine_Tapes,followedBy,Squeeze_play_(bridge)
+ont_2_musicalwork_test_6,MISSING,,"(Nord_(Year_of_No_Light_album), precededBy, Demo_2004_(Year_of_No_Light_album))",Nord_(Year_of_No_Light_album),precededBy,Demo_2004_(Year_of_No_Light_album),,,,
+ont_2_musicalwork_test_6,MISSING,,"(Nord_(Year_of_No_Light_album), runtime, 58.41)",Nord_(Year_of_No_Light_album),runtime,58.41,,,,
+ont_2_musicalwork_test_6,MISSING,,"(Nord_(Year_of_No_Light_album), followedBy, Live_at_Roadburn_2008_(Year_of_No_Light_album))",Nord_(Year_of_No_Light_album),followedBy,Live_at_Roadburn_2008_(Year_of_No_Light_album),,,,
+ont_2_musicalwork_test_6,MISSING,,"(Nord_(Year_of_No_Light_album), releaseDate, 2006-09-06)",Nord_(Year_of_No_Light_album),releaseDate,2006-09-06,,,,
+ont_2_musicalwork_test_6,MISSING,,"(Nord_(Year_of_No_Light_album), artist, Year_of_No_Light)",Nord_(Year_of_No_Light_album),artist,Year_of_No_Light,,,,
+ont_2_musicalwork_test_6,EXTRA,,,,,,"(Demo_2004, recordedIn, Nord_(French_department))",Demo_2004,recordedIn,Nord_(French_department)
+ont_2_musicalwork_test_6,EXTRA,,,,,,"(Nord_(French_department), releaseDate, 2006-09-06)",Nord_(French_department),releaseDate,2006-09-06
+ont_2_musicalwork_test_6,EXTRA,,,,,,"(Nord_(French_department), musicalBand, Year_of_No_Light)",Nord_(French_department),musicalBand,Year_of_No_Light
+ont_2_musicalwork_test_6,EXTRA,,,,,,"(Nord_(French_department), runtime, 58.41)",Nord_(French_department),runtime,58.41
+ont_2_musicalwork_test_60,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Polydor_Records)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Polydor_Records,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordLabel, Polydor_Records)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordLabel,Polydor_Records
+ont_2_musicalwork_test_60,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, precededBy, Squeeze_(The_Velvet_Underground_album))",Bootleg_Series_Volume_1:_The_Quine_Tapes,precededBy,Squeeze_(The_Velvet_Underground_album),,,,
+ont_2_musicalwork_test_60,MISSING,,"(Squeeze_(The_Velvet_Underground_album), precededBy, Andy_Warhol's_Velvet_Underground_Featuring_Nico)",Squeeze_(The_Velvet_Underground_album),precededBy,Andy_Warhol's_Velvet_Underground_Featuring_Nico,,,,
+ont_2_musicalwork_test_60,MISSING,,"(Polydor_Records, location, London)",Polydor_Records,location,London,,,,
+ont_2_musicalwork_test_60,EXTRA,,,,,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, London)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,London
+ont_2_musicalwork_test_61,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, producer, The_Velvet_Underground)",Bootleg_Series_Volume_1:_The_Quine_Tapes,producer,The_Velvet_Underground,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, producer, The_Velvet_Underground)",Bootleg_Series_Volume_1:_The_Quine_Tapes,producer,The_Velvet_Underground
+ont_2_musicalwork_test_61,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, genre, Rock_music)",Bootleg_Series_Volume_1:_The_Quine_Tapes,genre,Rock_music,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, genre, Rock_music)",Bootleg_Series_Volume_1:_The_Quine_Tapes,genre,Rock_music
+ont_2_musicalwork_test_61,SEMANTIC,0.98,"(The_Velvet_Underground, genre, Proto-punk)",The_Velvet_Underground,genre,Proto-punk,"(The_Velvet_Underground_(album), genre, Proto-punk)",The_Velvet_Underground_(album),genre,Proto-punk
+ont_2_musicalwork_test_61,EXTRA,,,,,,"(The_Velvet_Underground, type, Band_(rock_and_pop))",The_Velvet_Underground,type,Band_(rock_and_pop)
+ont_2_musicalwork_test_61,EXTRA,,,,,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, type, Album)",Bootleg_Series_Volume_1:_The_Quine_Tapes,type,Album
+ont_2_musicalwork_test_62,MISSING,,"(Nord_(Year_of_No_Light_album), genre, Post-metal)",Nord_(Year_of_No_Light_album),genre,Post-metal,,,,
+ont_2_musicalwork_test_62,MISSING,,"(Nord_(Year_of_No_Light_album), runtime, 58.41)",Nord_(Year_of_No_Light_album),runtime,58.41,,,,
+ont_2_musicalwork_test_62,MISSING,,"(Nord_(Year_of_No_Light_album), genre, Sludge_metal)",Nord_(Year_of_No_Light_album),genre,Sludge_metal,,,,
+ont_2_musicalwork_test_62,MISSING,,"(Nord_(Year_of_No_Light_album), precededBy, Demo_2004_(Year_of_No_Light_album))",Nord_(Year_of_No_Light_album),precededBy,Demo_2004_(Year_of_No_Light_album),,,,
+ont_2_musicalwork_test_62,MISSING,,"(Nord_(Year_of_No_Light_album), releaseDate, 2006-09-06)",Nord_(Year_of_No_Light_album),releaseDate,2006-09-06,,,,
+ont_2_musicalwork_test_62,MISSING,,"(Nord_(Year_of_No_Light_album), artist, Year_of_No_Light)",Nord_(Year_of_No_Light_album),artist,Year_of_No_Light,,,,
+ont_2_musicalwork_test_62,EXTRA,,,,,,"(Nord_(French_department), releaseDate, 2006-09-06)",Nord_(French_department),releaseDate,2006-09-06
+ont_2_musicalwork_test_62,EXTRA,,,,,,"(Nord_(French_department), musicalBand, Year_of_No_Light)",Nord_(French_department),musicalBand,Year_of_No_Light
+ont_2_musicalwork_test_62,EXTRA,,,,,,"(Nord_(French_department), runtime, 58 minutes 41 seconds)",Nord_(French_department),runtime,58 minutes 41 seconds
+ont_2_musicalwork_test_62,EXTRA,,,,,,"(Nord_(French_department), genre, Post-metal)",Nord_(French_department),genre,Post-metal
+ont_2_musicalwork_test_62,EXTRA,,,,,,"(Nord_(French_department), genre, Sludge_metal)",Nord_(French_department),genre,Sludge_metal
+ont_2_musicalwork_test_63,MISSING,,"(Nord_(Year_of_No_Light_album), recordLabel, Crucial_Blast)",Nord_(Year_of_No_Light_album),recordLabel,Crucial_Blast,,,,
+ont_2_musicalwork_test_63,MISSING,,"(Nord_(Year_of_No_Light_album), followedBy, Live_at_Roadburn_2008_(Year_of_No_Light_album))",Nord_(Year_of_No_Light_album),followedBy,Live_at_Roadburn_2008_(Year_of_No_Light_album),,,,
+ont_2_musicalwork_test_63,MISSING,,"(Nord_(Year_of_No_Light_album), releaseDate, 2006-09-06)",Nord_(Year_of_No_Light_album),releaseDate,2006-09-06,,,,
+ont_2_musicalwork_test_63,MISSING,,"(Nord_(Year_of_No_Light_album), producer, Year_of_No_Light)",Nord_(Year_of_No_Light_album),producer,Year_of_No_Light,,,,
+ont_2_musicalwork_test_63,MISSING,,"(Nord_(Year_of_No_Light_album), artist, Year_of_No_Light)",Nord_(Year_of_No_Light_album),artist,Year_of_No_Light,,,,
+ont_2_musicalwork_test_63,EXTRA,,,,,,"(Nord_(French_department), artist, Year_of_No_Light)",Nord_(French_department),artist,Year_of_No_Light
+ont_2_musicalwork_test_63,EXTRA,,,,,,"(Nord_(French_department), recordLabel, Crucial_Blast)",Nord_(French_department),recordLabel,Crucial_Blast
+ont_2_musicalwork_test_63,EXTRA,,,,,,"(Nord_(French_department), releaseDate, 2006-09-06)",Nord_(French_department),releaseDate,2006-09-06
+ont_2_musicalwork_test_64,MISSING,,"(Nord_(Year_of_No_Light_album), releaseDate, 2006-09-06)",Nord_(Year_of_No_Light_album),releaseDate,2006-09-06,,,,
+ont_2_musicalwork_test_64,MISSING,,"(Nord_(Year_of_No_Light_album), producer, Year_of_No_Light)",Nord_(Year_of_No_Light_album),producer,Year_of_No_Light,,,,
+ont_2_musicalwork_test_64,MISSING,,"(Nord_(Year_of_No_Light_album), followedBy, Live_at_Roadburn_2008_(Year_of_No_Light_album))",Nord_(Year_of_No_Light_album),followedBy,Live_at_Roadburn_2008_(Year_of_No_Light_album),,,,
+ont_2_musicalwork_test_64,MISSING,,"(Nord_(Year_of_No_Light_album), genre, Sludge_metal)",Nord_(Year_of_No_Light_album),genre,Sludge_metal,,,,
+ont_2_musicalwork_test_64,EXTRA,,,,,,"(Nord_(French_department), genre, Sludge_metal)",Nord_(French_department),genre,Sludge_metal
+ont_2_musicalwork_test_64,EXTRA,,,,,,"(Nord_(French_department), musicalBand, Year_of_No_Light)",Nord_(French_department),musicalBand,Year_of_No_Light
+ont_2_musicalwork_test_64,EXTRA,,,,,,"(Nord_(French_department), releaseDate, 2006-06-09)",Nord_(French_department),releaseDate,2006-06-09
+ont_2_musicalwork_test_65,MISSING,,"(Nord_(Year_of_No_Light_album), genre, Post-metal)",Nord_(Year_of_No_Light_album),genre,Post-metal,,,,
+ont_2_musicalwork_test_65,MISSING,,"(Nord_(Year_of_No_Light_album), recordLabel, Crucial_Blast)",Nord_(Year_of_No_Light_album),recordLabel,Crucial_Blast,,,,
+ont_2_musicalwork_test_65,MISSING,,"(Nord_(Year_of_No_Light_album), recordLabel, E-Vinyl)",Nord_(Year_of_No_Light_album),recordLabel,E-Vinyl,,,,
+ont_2_musicalwork_test_65,EXTRA,,,,,,"(Nord_(French_department), genre, Post-metal)",Nord_(French_department),genre,Post-metal
+ont_2_musicalwork_test_65,EXTRA,,,,,,"(Nord_(French_department), musicalBand, Year_of_No_Light)",Nord_(French_department),musicalBand,Year_of_No_Light
+ont_2_musicalwork_test_65,EXTRA,,,,,,"(Nord_(French_department), recordLabel, Crucial_Blast)",Nord_(French_department),recordLabel,Crucial_Blast
+ont_2_musicalwork_test_65,EXTRA,,,,,,"(Nord_(French_department), recordLabel, E-Vinyl)",Nord_(French_department),recordLabel,E-Vinyl
+ont_2_musicalwork_test_66,EXACT,1.00,"(Imagine_(John_Lennon_song), musicalArtist, John_Lennon)",Imagine_(John_Lennon_song),musicalArtist,John_Lennon,"(Imagine_(John_Lennon_song), musicalArtist, John_Lennon)",Imagine_(John_Lennon_song),musicalArtist,John_Lennon
+ont_2_musicalwork_test_66,EXTRA,,,,,,"(Imagine_(John_Lennon_song), type, Song)",Imagine_(John_Lennon_song),type,Song
+ont_2_musicalwork_test_67,MISSING,,"(San_Francisco, utcOffset, &minus;7)",San_Francisco,utcOffset,&minus;7,,,,
+ont_2_musicalwork_test_68,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, releaseDate, 2001-10-16)",Bootleg_Series_Volume_1:_The_Quine_Tapes,releaseDate,2001-10-16,,,,
+ont_2_musicalwork_test_68,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, United_States)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,United_States,,,,
+ont_2_musicalwork_test_68,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, precededBy, Squeeze_(The_Velvet_Underground_album))",Bootleg_Series_Volume_1:_The_Quine_Tapes,precededBy,Squeeze_(The_Velvet_Underground_album),,,,
+ont_2_musicalwork_test_68,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, St._Louis,_Missouri)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,"St._Louis,_Missouri",,,,
+ont_2_musicalwork_test_68,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, runtime, 230.05)",Bootleg_Series_Volume_1:_The_Quine_Tapes,runtime,230.05,,,,
+ont_2_musicalwork_test_69,MISSING,,"(Nord_(Year_of_No_Light_album), releaseDate, 2006-09-06)",Nord_(Year_of_No_Light_album),releaseDate,2006-09-06,,,,
+ont_2_musicalwork_test_69,MISSING,,"(Nord_(Year_of_No_Light_album), followedBy, Live_at_Roadburn_2008_(Year_of_No_Light_album))",Nord_(Year_of_No_Light_album),followedBy,Live_at_Roadburn_2008_(Year_of_No_Light_album),,,,
+ont_2_musicalwork_test_69,MISSING,,"(Nord_(Year_of_No_Light_album), artist, Year_of_No_Light)",Nord_(Year_of_No_Light_album),artist,Year_of_No_Light,,,,
+ont_2_musicalwork_test_69,EXTRA,,,,,,"(Nord_(French_department), type, Album)",Nord_(French_department),type,Album
+ont_2_musicalwork_test_69,EXTRA,,,,,,"(Nord_(French_department), musicalBand, Year_of_No_Light)",Nord_(French_department),musicalBand,Year_of_No_Light
+ont_2_musicalwork_test_69,EXTRA,,,,,,"(Nord_(French_department), releaseDate, 2006-09-06)",Nord_(French_department),releaseDate,2006-09-06
+ont_2_musicalwork_test_7,MISSING,,"(Year_of_No_Light, associatedBand/associatedMusicalArtist, Monarch_(band))",Year_of_No_Light,associatedBand/associatedMusicalArtist,Monarch_(band),,,,
+ont_2_musicalwork_test_7,MISSING,,"(Nord_(Year_of_No_Light_album), artist, Year_of_No_Light)",Nord_(Year_of_No_Light_album),artist,Year_of_No_Light,,,,
+ont_2_musicalwork_test_7,EXTRA,,,,,,"(Year_of_No_Light, recordedIn, Nord_(French_department))",Year_of_No_Light,recordedIn,Nord_(French_department)
+ont_2_musicalwork_test_7,EXTRA,,,,,,"(Year_of_No_Light, musicalBand, Year_of_No_Light)",Year_of_No_Light,musicalBand,Year_of_No_Light
+ont_2_musicalwork_test_70,MISSING,,"(Mermaid_(Train_song), writer, Espen_Lind)",Mermaid_(Train_song),writer,Espen_Lind,,,,
+ont_2_musicalwork_test_70,MISSING,,"(Mermaid_(Train_song), precededBy, This'll_Be_My_Year)",Mermaid_(Train_song),precededBy,This'll_Be_My_Year,,,,
+ont_2_musicalwork_test_70,MISSING,,"(Mermaid_(Train_song), runtime, 3.16)",Mermaid_(Train_song),runtime,3.16,,,,
+ont_2_musicalwork_test_70,MISSING,,"(Mermaid_(Train_song), releaseDate, 2012-12-27)",Mermaid_(Train_song),releaseDate,2012-12-27,,,,
+ont_2_musicalwork_test_70,EXTRA,,,,,,"(The_Mermaid_(ballad), releaseDate, 2012-12-27)",The_Mermaid_(ballad),releaseDate,2012-12-27
+ont_2_musicalwork_test_70,EXTRA,,,,,,"(The_Mermaid_(ballad), musicalBand, Train)",The_Mermaid_(ballad),musicalBand,Train
+ont_2_musicalwork_test_70,EXTRA,,,,,,"(The_Mermaid_(ballad), writer, Espen_Lind)",The_Mermaid_(ballad),writer,Espen_Lind
+ont_2_musicalwork_test_70,EXTRA,,,,,,"(The_Mermaid_(ballad), runtime, 3 minutes 16 seconds)",The_Mermaid_(ballad),runtime,3 minutes 16 seconds
+ont_2_musicalwork_test_71,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, releaseDate, 2001-10-16)",Bootleg_Series_Volume_1:_The_Quine_Tapes,releaseDate,2001-10-16,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, releaseDate, 2001-10-16)",Bootleg_Series_Volume_1:_The_Quine_Tapes,releaseDate,2001-10-16
+ont_2_musicalwork_test_71,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, runtime, 230.05)",Bootleg_Series_Volume_1:_The_Quine_Tapes,runtime,230.05,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, runtime, 230.05)",Bootleg_Series_Volume_1:_The_Quine_Tapes,runtime,230.05
+ont_2_musicalwork_test_71,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, genre, Rock_music)",Bootleg_Series_Volume_1:_The_Quine_Tapes,genre,Rock_music,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, genre, Rock_music)",Bootleg_Series_Volume_1:_The_Quine_Tapes,genre,Rock_music
+ont_2_musicalwork_test_71,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, St._Louis,_Missouri)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,"St._Louis,_Missouri",,,,
+ont_2_musicalwork_test_71,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, United_States)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,United_States,,,,
+ont_2_musicalwork_test_71,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, precededBy, Squeeze_(The_Velvet_Underground_album))",Bootleg_Series_Volume_1:_The_Quine_Tapes,precededBy,Squeeze_(The_Velvet_Underground_album),,,,
+ont_2_musicalwork_test_71,EXTRA,,,,,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, musicalBand, The_Velvet_Underground)",Bootleg_Series_Volume_1:_The_Quine_Tapes,musicalBand,The_Velvet_Underground
+ont_2_musicalwork_test_72,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, United_States)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,United_States,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, United_States)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,United_States
+ont_2_musicalwork_test_72,SEMANTIC,0.95,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, artist, The_Velvet_Underground)",Bootleg_Series_Volume_1:_The_Quine_Tapes,artist,The_Velvet_Underground,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, musicalBand, The_Velvet_Underground)",Bootleg_Series_Volume_1:_The_Quine_Tapes,musicalBand,The_Velvet_Underground
+ont_2_musicalwork_test_72,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, producer, The_Velvet_Underground)",Bootleg_Series_Volume_1:_The_Quine_Tapes,producer,The_Velvet_Underground,,,,
+ont_2_musicalwork_test_73,MISSING,,"(Nord_(Year_of_No_Light_album), genre, Post-metal)",Nord_(Year_of_No_Light_album),genre,Post-metal,,,,
+ont_2_musicalwork_test_73,MISSING,,"(Nord_(Year_of_No_Light_album), recordLabel, Crucial_Blast)",Nord_(Year_of_No_Light_album),recordLabel,Crucial_Blast,,,,
+ont_2_musicalwork_test_73,EXTRA,,,,,,"(Nord_(French_department), genre, Post-metal)",Nord_(French_department),genre,Post-metal
+ont_2_musicalwork_test_73,EXTRA,,,,,,"(Nord_(French_department), recordLabel, Crucial_Blast)",Nord_(French_department),recordLabel,Crucial_Blast
+ont_2_musicalwork_test_73,EXTRA,,,,,,"(Nord_(French_department), musicalBand, Year_of_No_Light)",Nord_(French_department),musicalBand,Year_of_No_Light
+ont_2_musicalwork_test_74,MISSING,,"(The_Velvet_Underground, associatedBand/associatedMusicalArtist, Theatre_of_Eternal_Music)",The_Velvet_Underground,associatedBand/associatedMusicalArtist,Theatre_of_Eternal_Music,,,,
+ont_2_musicalwork_test_74,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, producer, The_Velvet_Underground)",Bootleg_Series_Volume_1:_The_Quine_Tapes,producer,The_Velvet_Underground,,,,
+ont_2_musicalwork_test_75,MISSING,,"(Sludge_metal, musicSubgenre, Southern_sludge)",Sludge_metal,musicSubgenre,Southern_sludge,,,,
+ont_2_musicalwork_test_75,MISSING,,"(Nord_(Year_of_No_Light_album), genre, Sludge_metal)",Nord_(Year_of_No_Light_album),genre,Sludge_metal,,,,
+ont_2_musicalwork_test_75,EXTRA,,,,,,"(Nord_(French_department), genre, Sludge_metal)",Nord_(French_department),genre,Sludge_metal
+ont_2_musicalwork_test_75,EXTRA,,,,,,"(Nord_(French_department), musicalBand, Year_of_No_Light)",Nord_(French_department),musicalBand,Year_of_No_Light
+ont_2_musicalwork_test_76,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, genre, Rock_music)",Bootleg_Series_Volume_1:_The_Quine_Tapes,genre,Rock_music,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, genre, Rock_music)",Bootleg_Series_Volume_1:_The_Quine_Tapes,genre,Rock_music
+ont_2_musicalwork_test_76,SEMANTIC,0.95,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, artist, The_Velvet_Underground)",Bootleg_Series_Volume_1:_The_Quine_Tapes,artist,The_Velvet_Underground,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, musicalBand, The_Velvet_Underground)",Bootleg_Series_Volume_1:_The_Quine_Tapes,musicalBand,The_Velvet_Underground
+ont_2_musicalwork_test_76,SEMANTIC,0.99,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, runtime, 230.05)",Bootleg_Series_Volume_1:_The_Quine_Tapes,runtime,230.05,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, runtime, 230:05)",Bootleg_Series_Volume_1:_The_Quine_Tapes,runtime,230:05
+ont_2_musicalwork_test_76,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, precededBy, Squeeze_(The_Velvet_Underground_album))",Bootleg_Series_Volume_1:_The_Quine_Tapes,precededBy,Squeeze_(The_Velvet_Underground_album),,,,
+ont_2_musicalwork_test_76,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, St._Louis,_Missouri)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,"St._Louis,_Missouri",,,,
+ont_2_musicalwork_test_76,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, United_States)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,United_States,,,,
+ont_2_musicalwork_test_76,MISSING,,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, producer, The_Velvet_Underground)",Bootleg_Series_Volume_1:_The_Quine_Tapes,producer,The_Velvet_Underground,,,,
+ont_2_musicalwork_test_77,MISSING,,"(Turn_Me_On_(album), producer, The_Honeymoon_Killers_(American_band))",Turn_Me_On_(album),producer,The_Honeymoon_Killers_(American_band),,,,
+ont_2_musicalwork_test_77,MISSING,,"(The_Honeymoon_Killers_(American_band), associatedBand/associatedMusicalArtist, Pussy_Galore_(band))",The_Honeymoon_Killers_(American_band),associatedBand/associatedMusicalArtist,Pussy_Galore_(band),,,,
+ont_2_musicalwork_test_77,EXTRA,,,,,,"(Turn_Me_On_(David_Guetta_song), musicalBand, The_Honeymoon_Killers)",Turn_Me_On_(David_Guetta_song),musicalBand,The_Honeymoon_Killers
+ont_2_musicalwork_test_77,EXTRA,,,,,,"(Turn_Me_On_(David_Guetta_song), producer, The_Honeymoon_Killers_(American_band))",Turn_Me_On_(David_Guetta_song),producer,The_Honeymoon_Killers_(American_band)
+ont_2_musicalwork_test_77,EXTRA,,,,,,"(Turn_Me_On_(David_Guetta_song), musicalBand, Pussy_Galore_(band))",Turn_Me_On_(David_Guetta_song),musicalBand,Pussy_Galore_(band)
+ont_2_musicalwork_test_78,SEMANTIC,0.94,"(Mermaid_(Train_song), writer, Amund_Bjørklund)",Mermaid_(Train_song),writer,Amund_Bjørklund,"(The_Mermaid_(ballad), writer, Amund_Bjørklund)",The_Mermaid_(ballad),writer,Amund_Bjørklund
+ont_2_musicalwork_test_78,MISSING,,"(Mermaid_(Train_song), genre, Reggae)",Mermaid_(Train_song),genre,Reggae,,,,
+ont_2_musicalwork_test_78,MISSING,,"(Mermaid_(Train_song), runtime, 3.16)",Mermaid_(Train_song),runtime,3.16,,,,
+ont_2_musicalwork_test_78,MISSING,,"(Mermaid_(Train_song), writer, Stargate_(production_team))",Mermaid_(Train_song),writer,Stargate_(production_team),,,,
+ont_2_musicalwork_test_78,MISSING,,"(Mermaid_(Train_song), followedBy, Imagine_(John_Lennon_song))",Mermaid_(Train_song),followedBy,Imagine_(John_Lennon_song),,,,
+ont_2_musicalwork_test_78,EXTRA,,,,,,"(The_Mermaid_(ballad), musicalBand, Train)",The_Mermaid_(ballad),musicalBand,Train
+ont_2_musicalwork_test_78,EXTRA,,,,,,"(The_Mermaid_(ballad), genre, Reggae)",The_Mermaid_(ballad),genre,Reggae
+ont_2_musicalwork_test_78,EXTRA,,,,,,"(The_Mermaid_(ballad), runtime, 3:16)",The_Mermaid_(ballad),runtime,3:16
+ont_2_musicalwork_test_78,EXTRA,,,,,,"(The_Mermaid_(ballad), producer, Stargate_(record_producers))",The_Mermaid_(ballad),producer,Stargate_(record_producers)
+ont_2_musicalwork_test_79,MISSING,,"(Mermaid_(Train_song), writer, Espen_Lind)",Mermaid_(Train_song),writer,Espen_Lind,,,,
+ont_2_musicalwork_test_79,MISSING,,"(Mermaid_(Train_song), producer, Espionage_(production_team))",Mermaid_(Train_song),producer,Espionage_(production_team),,,,
+ont_2_musicalwork_test_79,MISSING,,"(Mermaid_(Train_song), followedBy, Imagine_(John_Lennon_song))",Mermaid_(Train_song),followedBy,Imagine_(John_Lennon_song),,,,
+ont_2_musicalwork_test_79,MISSING,,"(Mermaid_(Train_song), writer, Amund_Bjørklund)",Mermaid_(Train_song),writer,Amund_Bjørklund,,,,
+ont_2_musicalwork_test_79,MISSING,,"(Mermaid_(Train_song), format, Music_download)",Mermaid_(Train_song),format,Music_download,,,,
+ont_2_musicalwork_test_79,MISSING,,"(Mermaid_(Train_song), album, California_37_(Train_album))",Mermaid_(Train_song),album,California_37_(Train_album),,,,
+ont_2_musicalwork_test_79,EXTRA,,,,,,"(Mermaid, writer, Amund_Bjørklund)",Mermaid,writer,Amund_Bjørklund
+ont_2_musicalwork_test_79,EXTRA,,,,,,"(Mermaid, album, California_37_(album))",Mermaid,album,California_37_(album)
+ont_2_musicalwork_test_79,EXTRA,,,,,,"(Imagine_(John_Lennon_song), writer, John_Lennon)",Imagine_(John_Lennon_song),writer,John_Lennon
+ont_2_musicalwork_test_79,EXTRA,,,,,,"(Mermaid, writer, Espen_Lind)",Mermaid,writer,Espen_Lind
+ont_2_musicalwork_test_8,MISSING,,"(Nord_(Year_of_No_Light_album), genre, Post-metal)",Nord_(Year_of_No_Light_album),genre,Post-metal,,,,
+ont_2_musicalwork_test_8,MISSING,,"(Nord_(Year_of_No_Light_album), recordLabel, Crucial_Blast)",Nord_(Year_of_No_Light_album),recordLabel,Crucial_Blast,,,,
+ont_2_musicalwork_test_8,MISSING,,"(Nord_(Year_of_No_Light_album), followedBy, Live_at_Roadburn_2008_(Year_of_No_Light_album))",Nord_(Year_of_No_Light_album),followedBy,Live_at_Roadburn_2008_(Year_of_No_Light_album),,,,
+ont_2_musicalwork_test_8,MISSING,,"(Nord_(Year_of_No_Light_album), genre, Sludge_metal)",Nord_(Year_of_No_Light_album),genre,Sludge_metal,,,,
+ont_2_musicalwork_test_8,MISSING,,"(Nord_(Year_of_No_Light_album), releaseDate, 2006-09-06)",Nord_(Year_of_No_Light_album),releaseDate,2006-09-06,,,,
+ont_2_musicalwork_test_8,MISSING,,"(Nord_(Year_of_No_Light_album), producer, Year_of_No_Light)",Nord_(Year_of_No_Light_album),producer,Year_of_No_Light,,,,
+ont_2_musicalwork_test_8,MISSING,,"(Nord_(Year_of_No_Light_album), artist, Year_of_No_Light)",Nord_(Year_of_No_Light_album),artist,Year_of_No_Light,,,,
+ont_2_musicalwork_test_8,EXTRA,,,,,,"(Nord_(French_department), recordLabel, Crucial_Blast)",Nord_(French_department),recordLabel,Crucial_Blast
+ont_2_musicalwork_test_8,EXTRA,,,,,,"(Nord_(French_department), musicalBand, Year_of_No_Light)",Nord_(French_department),musicalBand,Year_of_No_Light
+ont_2_musicalwork_test_8,EXTRA,,,,,,"(Nord_(French_department), releaseDate, 2006-09-06)",Nord_(French_department),releaseDate,2006-09-06
+ont_2_musicalwork_test_8,EXTRA,,,,,,"(Nord_(French_department), genre, Post-metal)",Nord_(French_department),genre,Post-metal
+ont_2_musicalwork_test_8,EXTRA,,,,,,"(Nord_(French_department), genre, Sludge_metal)",Nord_(French_department),genre,Sludge_metal
+ont_2_musicalwork_test_80,MISSING,,"(Polydor_Records, distributingLabel, Interscope_Geffen_A&M)",Polydor_Records,distributingLabel,Interscope_Geffen_A&M,,,,
+ont_2_musicalwork_test_81,MISSING,,"(Nord_(Year_of_No_Light_album), producer, Year_of_No_Light)",Nord_(Year_of_No_Light_album),producer,Year_of_No_Light,,,,
+ont_2_musicalwork_test_81,MISSING,,"(Nord_(Year_of_No_Light_album), followedBy, Live_at_Roadburn_2008_(Year_of_No_Light_album))",Nord_(Year_of_No_Light_album),followedBy,Live_at_Roadburn_2008_(Year_of_No_Light_album),,,,
+ont_2_musicalwork_test_81,EXTRA,,,,,,"(Nord_(French_department), musicalBand, Year_of_No_Light)",Nord_(French_department),musicalBand,Year_of_No_Light
+ont_2_musicalwork_test_82,MISSING,,"(Post-metal, instrument, Synthesizer)",Post-metal,instrument,Synthesizer,,,,
+ont_2_musicalwork_test_82,MISSING,,"(Nord_(Year_of_No_Light_album), genre, Post-metal)",Nord_(Year_of_No_Light_album),genre,Post-metal,,,,
+ont_2_musicalwork_test_82,MISSING,,"(Sludge_metal, instrument, Singing)",Sludge_metal,instrument,Singing,,,,
+ont_2_musicalwork_test_82,MISSING,,"(Nord_(Year_of_No_Light_album), genre, Sludge_metal)",Nord_(Year_of_No_Light_album),genre,Sludge_metal,,,,
+ont_2_musicalwork_test_82,EXTRA,,,,,,"(Nord_(French_department), genre, Post-metal)",Nord_(French_department),genre,Post-metal
+ont_2_musicalwork_test_82,EXTRA,,,,,,"(Nord_(French_department), genre, Sludge_metal)",Nord_(French_department),genre,Sludge_metal
+ont_2_musicalwork_test_82,EXTRA,,,,,,"(Nord_(French_department), instrument, Synthesizer)",Nord_(French_department),instrument,Synthesizer
+ont_2_musicalwork_test_82,EXTRA,,,,,,"(Nord_(French_department), musicalBand, Year_of_No_Light)",Nord_(French_department),musicalBand,Year_of_No_Light
+ont_2_musicalwork_test_83,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, United_States)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,United_States,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, recordedIn, United_States)",Bootleg_Series_Volume_1:_The_Quine_Tapes,recordedIn,United_States
+ont_2_musicalwork_test_83,EXACT,1.00,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, runtime, 230.05)",Bootleg_Series_Volume_1:_The_Quine_Tapes,runtime,230.05,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, runtime, 230.05)",Bootleg_Series_Volume_1:_The_Quine_Tapes,runtime,230.05
+ont_2_musicalwork_test_83,SEMANTIC,0.95,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, artist, The_Velvet_Underground)",Bootleg_Series_Volume_1:_The_Quine_Tapes,artist,The_Velvet_Underground,"(Bootleg_Series_Volume_1:_The_Quine_Tapes, musicalBand, The_Velvet_Underground)",Bootleg_Series_Volume_1:_The_Quine_Tapes,musicalBand,The_Velvet_Underground
+ont_2_musicalwork_test_84,MISSING,,"(Turn_Me_On_(album), precededBy, Let_It_Breed)",Turn_Me_On_(album),precededBy,Let_It_Breed,,,,
+ont_2_musicalwork_test_84,MISSING,,"(Turn_Me_On_(album), producer, Wharton_Tiers)",Turn_Me_On_(album),producer,Wharton_Tiers,,,,
+ont_2_musicalwork_test_84,EXTRA,,,,,,"(Turn_Me_On_(David_Guetta_song), producer, Wharton_Tiers)",Turn_Me_On_(David_Guetta_song),producer,Wharton_Tiers
+ont_2_musicalwork_test_84,EXTRA,,,,,,"(Turn_Me_On_(David_Guetta_song), followedBy, Let_It_Breed)",Turn_Me_On_(David_Guetta_song),followedBy,Let_It_Breed
+ont_2_musicalwork_test_85,MISSING,,"(Turn_Me_On_(album), genre, Punk_blues)",Turn_Me_On_(album),genre,Punk_blues,,,,
+ont_2_musicalwork_test_85,MISSING,,"(Turn_Me_On_(album), genre, Noise_rock)",Turn_Me_On_(album),genre,Noise_rock,,,,
+ont_2_musicalwork_test_85,EXTRA,,,,,,"(Turn_Me_On_(David_Guetta_song), genre, Noise_rock)",Turn_Me_On_(David_Guetta_song),genre,Noise_rock
+ont_2_musicalwork_test_85,EXTRA,,,,,,"(Turn_Me_On_(Kim_Kyu-jong_EP), genre, Punk_blues)",Turn_Me_On_(Kim_Kyu-jong_EP),genre,Punk_blues
+ont_2_musicalwork_test_86,EXACT,1.00,"(Sludge_metal, instrument, Singing)",Sludge_metal,instrument,Singing,"(Sludge_metal, instrument, Singing)",Sludge_metal,instrument,Singing
+ont_2_musicalwork_test_87,MISSING,,"(Sludge_metal, musicSubgenre, Stoner_sludge)",Sludge_metal,musicSubgenre,Stoner_sludge,,,,
+ont_2_musicalwork_test_88,MISSING,,"(Mermaid_(Train_song), writer, Espen_Lind)",Mermaid_(Train_song),writer,Espen_Lind,,,,
+ont_2_musicalwork_test_88,MISSING,,"(Stargate_(production_team), associatedBand/associatedMusicalArtist, Michael_Jackson)",Stargate_(production_team),associatedBand/associatedMusicalArtist,Michael_Jackson,,,,
+ont_2_musicalwork_test_88,MISSING,,"(Mermaid_(Train_song), writer, Stargate_(production_team))",Mermaid_(Train_song),writer,Stargate_(production_team),,,,
+ont_2_musicalwork_test_88,MISSING,,"(Stargate_(production_team), associatedBand/associatedMusicalArtist, Benny_Blanco)",Stargate_(production_team),associatedBand/associatedMusicalArtist,Benny_Blanco,,,,
+ont_2_musicalwork_test_88,EXTRA,,,,,,"(Mermaid, writer, Stargate_(record_producers))",Mermaid,writer,Stargate_(record_producers)
+ont_2_musicalwork_test_88,EXTRA,,,,,,"(Mermaid, writer, Espen_Lind)",Mermaid,writer,Espen_Lind
+ont_2_musicalwork_test_89,EXACT,1.00,"(Imagine_(John_Lennon_song), followedBy, Happy_Xmas_(War_Is_Over))",Imagine_(John_Lennon_song),followedBy,Happy_Xmas_(War_Is_Over),"(Imagine_(John_Lennon_song), followedBy, Happy_Xmas_(War_Is_Over))",Imagine_(John_Lennon_song),followedBy,Happy_Xmas_(War_Is_Over)
+ont_2_musicalwork_test_89,EXACT,1.00,"(Imagine_(John_Lennon_song), genre, Pop_music)",Imagine_(John_Lennon_song),genre,Pop_music,"(Imagine_(John_Lennon_song), genre, Pop_music)",Imagine_(John_Lennon_song),genre,Pop_music
+ont_2_musicalwork_test_89,SEMANTIC,0.97,"(Mermaid_(Train_song), followedBy, Imagine_(John_Lennon_song))",Mermaid_(Train_song),followedBy,Imagine_(John_Lennon_song),"(Mermaid, followedBy, Imagine_(John_Lennon_song))",Mermaid,followedBy,Imagine_(John_Lennon_song)
+ont_2_musicalwork_test_89,MISSING,,"(Mermaid_(Train_song), genre, Reggae)",Mermaid_(Train_song),genre,Reggae,,,,
+ont_2_musicalwork_test_89,EXTRA,,,,,,"(Mermaid, genre, Reggae)",Mermaid,genre,Reggae
+ont_2_musicalwork_test_89,EXTRA,,,,,,"(Mermaid, musicalBand, Train)",Mermaid,musicalBand,Train
+ont_2_musicalwork_test_9,EXACT,1.00,"(Imagine_(John_Lennon_song), musicalArtist, John_Lennon)",Imagine_(John_Lennon_song),musicalArtist,John_Lennon,"(Imagine_(John_Lennon_song), musicalArtist, John_Lennon)",Imagine_(John_Lennon_song),musicalArtist,John_Lennon
+ont_2_musicalwork_test_9,SEMANTIC,0.94,"(Imagine_(John_Lennon_song), certification, FIMI)",Imagine_(John_Lennon_song),certification,FIMI,"(Imagine_(John_Lennon_song), certification, Federazione_Industria_Musicale_Italiana)",Imagine_(John_Lennon_song),certification,Federazione_Industria_Musicale_Italiana
+ont_2_musicalwork_test_9,MISSING,,"(Mermaid_(Train_song), producer, Espionage_(production_team))",Mermaid_(Train_song),producer,Espionage_(production_team),,,,
+ont_2_musicalwork_test_9,MISSING,,"(Mermaid_(Train_song), followedBy, Imagine_(John_Lennon_song))",Mermaid_(Train_song),followedBy,Imagine_(John_Lennon_song),,,,
+ont_2_musicalwork_test_9,EXTRA,,,,,,"(Mermaid, followedBy, Train)",Mermaid,followedBy,Train
+ont_2_musicalwork_test_9,EXTRA,,,,,,"(Train, followedBy, Imagine_(John_Lennon_song))",Train,followedBy,Imagine_(John_Lennon_song)
+ont_2_musicalwork_test_90,SEMANTIC,0.95,"(Mermaid_(Train_song), recordLabel, Columbia_Records)",Mermaid_(Train_song),recordLabel,Columbia_Records,"(Mermaid, recordLabel, Columbia_Records)",Mermaid,recordLabel,Columbia_Records
+ont_2_musicalwork_test_90,EXTRA,,,,,,"(Mermaid, musicalBand, Train)",Mermaid,musicalBand,Train
+ont_2_musicalwork_test_90,EXTRA,,,,,,"(Mermaid, type, Song)",Mermaid,type,Song
+ont_2_musicalwork_test_91,MISSING,,"(Mermaid_(Train_song), format, Music_download)",Mermaid_(Train_song),format,Music_download,,,,
+ont_2_musicalwork_test_91,EXTRA,,,,,,"(Mermaid, writer, Train)",Mermaid,writer,Train
+ont_2_musicalwork_test_91,EXTRA,,,,,,"(Mermaid, format, Music_download)",Mermaid,format,Music_download
+ont_2_musicalwork_test_91,EXTRA,,,,,,"(Mermaid, type, Song)",Mermaid,type,Song
+ont_2_musicalwork_test_92,EXACT,1.00,"(Imagine_(John_Lennon_song), album, Imagine_(John_Lennon_album))",Imagine_(John_Lennon_song),album,Imagine_(John_Lennon_album),"(Imagine_(John_Lennon_song), album, Imagine_(John_Lennon_album))",Imagine_(John_Lennon_song),album,Imagine_(John_Lennon_album)
+ont_2_musicalwork_test_92,EXTRA,,,,,,"(Imagine_(John_Lennon_song), artist, John_Lennon)",Imagine_(John_Lennon_song),artist,John_Lennon
+ont_2_musicalwork_test_93,MISSING,,"(Turn_Me_On_(album), producer, The_Honeymoon_Killers_(American_band))",Turn_Me_On_(album),producer,The_Honeymoon_Killers_(American_band),,,,
+ont_2_musicalwork_test_94,EXACT,1.00,"(Imagine_(John_Lennon_song), followedBy, Happy_Xmas_(War_Is_Over))",Imagine_(John_Lennon_song),followedBy,Happy_Xmas_(War_Is_Over),"(Imagine_(John_Lennon_song), followedBy, Happy_Xmas_(War_Is_Over))",Imagine_(John_Lennon_song),followedBy,Happy_Xmas_(War_Is_Over)
+ont_2_musicalwork_test_94,SEMANTIC,0.97,"(Mermaid_(Train_song), followedBy, Imagine_(John_Lennon_song))",Mermaid_(Train_song),followedBy,Imagine_(John_Lennon_song),"(Mermaid, followedBy, Imagine_(John_Lennon_song))",Mermaid,followedBy,Imagine_(John_Lennon_song)
+ont_2_musicalwork_test_94,MISSING,,"(Mermaid_(Train_song), genre, Pop_rock)",Mermaid_(Train_song),genre,Pop_rock,,,,
+ont_2_musicalwork_test_94,EXTRA,,,,,,"(Mermaid, genre, Pop_rock)",Mermaid,genre,Pop_rock
+ont_2_musicalwork_test_94,EXTRA,,,,,,"(Mermaid, musicalBand, Train)",Mermaid,musicalBand,Train
+ont_2_musicalwork_test_94,EXTRA,,,,,,"(Imagine_(John_Lennon_song), writer, John_Lennon)",Imagine_(John_Lennon_song),writer,John_Lennon
+ont_2_musicalwork_test_95,MISSING,,"(Turn_Me_On_(album), followedBy, Take_It_Off!)",Turn_Me_On_(album),followedBy,Take_It_Off!,,,,
+ont_2_musicalwork_test_95,MISSING,,"(Turn_Me_On_(album), producer, Wharton_Tiers)",Turn_Me_On_(album),producer,Wharton_Tiers,,,,
+ont_2_musicalwork_test_96,EXACT,1.00,"(Pop_rock, musicSubgenre, Indie_pop)",Pop_rock,musicSubgenre,Indie_pop,"(Pop_rock, musicSubgenre, Indie_pop)",Pop_rock,musicSubgenre,Indie_pop
+ont_2_musicalwork_test_97,MISSING,,"(Nord_(Year_of_No_Light_album), genre, Sludge_metal)",Nord_(Year_of_No_Light_album),genre,Sludge_metal,,,,
+ont_2_musicalwork_test_97,EXTRA,,,,,,"(Nord_(French_department), type, Album)",Nord_(French_department),type,Album
+ont_2_musicalwork_test_97,EXTRA,,,,,,"(Nord_(French_department), genre, Sludge_metal)",Nord_(French_department),genre,Sludge_metal
+ont_2_musicalwork_test_97,EXTRA,,,,,,"(Nord_(French_department), musicalBand, Year_of_No_Light)",Nord_(French_department),musicalBand,Year_of_No_Light
+ont_2_musicalwork_test_98,SEMANTIC,0.96,"(Train_(band), genre, Pop_rock)",Train_(band),genre,Pop_rock,"(Train, genre, Pop_rock)",Train,genre,Pop_rock
+ont_2_musicalwork_test_99,MISSING,,"(Mermaid_(Train_song), genre, Reggae)",Mermaid_(Train_song),genre,Reggae,,,,
+ont_2_musicalwork_test_99,MISSING,,"(Mermaid_(Train_song), precededBy, This'll_Be_My_Year)",Mermaid_(Train_song),precededBy,This'll_Be_My_Year,,,,
+ont_2_musicalwork_test_99,MISSING,,"(Mermaid_(Train_song), producer, Espionage_(production_team))",Mermaid_(Train_song),producer,Espionage_(production_team),,,,
+ont_2_musicalwork_test_99,MISSING,,"(Mermaid_(Train_song), runtime, 3.16)",Mermaid_(Train_song),runtime,3.16,,,,
+ont_2_musicalwork_test_99,MISSING,,"(Mermaid_(Train_song), followedBy, Imagine_(John_Lennon_song))",Mermaid_(Train_song),followedBy,Imagine_(John_Lennon_song),,,,
+ont_2_musicalwork_test_99,MISSING,,"(Mermaid_(Train_song), musicalBand, Train_(band))",Mermaid_(Train_song),musicalBand,Train_(band),,,,
+ont_2_musicalwork_test_99,EXTRA,,,,,,"(Mermaid, genre, Reggae)",Mermaid,genre,Reggae
+ont_2_musicalwork_test_99,EXTRA,,,,,,"(Mermaid, musicalBand, Train)",Mermaid,musicalBand,Train
+ont_2_musicalwork_test_99,EXTRA,,,,,,"(Mermaid, runtime, 3 minutes and 16 seconds)",Mermaid,runtime,3 minutes and 16 seconds

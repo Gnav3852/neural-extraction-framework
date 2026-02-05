@@ -1,0 +1,331 @@
+sent_id,match_type,similarity,expected,expected_sub,expected_rel,expected_obj,predicted,predicted_sub,predicted_rel,predicted_obj
+ont_3_airport_test_1,SEMANTIC,0.99,"(Abilene_Regional_Airport, cityServed, Abilene,_Texas)",Abilene_Regional_Airport,cityServed,"Abilene,_Texas","(Abilene_Regional_Airport, city, Abilene,_Texas)",Abilene_Regional_Airport,city,"Abilene,_Texas"
+ont_3_airport_test_1,MISSING,,"(Abilene,_Texas, country, United_States)","Abilene,_Texas",country,United_States,,,,
+ont_3_airport_test_1,MISSING,,"(Abilene,_Texas, isPartOf, Jones_County,_Texas)","Abilene,_Texas",isPartOf,"Jones_County,_Texas",,,,
+ont_3_airport_test_1,EXTRA,,,,,,"(Abilene_Regional_Airport, ceremonialCounty, Jones_County,_Texas)",Abilene_Regional_Airport,ceremonialCounty,"Jones_County,_Texas"
+ont_3_airport_test_1,EXTRA,,,,,,"(Abilene_Regional_Airport, country, United_States)",Abilene_Regional_Airport,country,United_States
+ont_3_airport_test_1,EXTRA,,,,,,"(Abilene_Regional_Airport, location, Texas_(steamboat))",Abilene_Regional_Airport,location,Texas_(steamboat)
+ont_3_airport_test_10,SEMANTIC,0.95,"(Afonso_Pena_International_Airport, operatingOrganisation, Infraero)",Afonso_Pena_International_Airport,operatingOrganisation,Infraero,"(Afonso_Pena_International_Airport, owner, Infraero)",Afonso_Pena_International_Airport,owner,Infraero
+ont_3_airport_test_10,MISSING,,"(Afonso_Pena_International_Airport, elevationAboveTheSeaLevel, 911.0)",Afonso_Pena_International_Airport,elevationAboveTheSeaLevel,911.0,,,,
+ont_3_airport_test_10,MISSING,,"(Afonso_Pena_International_Airport, location, São_José_dos_Pinhais)",Afonso_Pena_International_Airport,location,São_José_dos_Pinhais,,,,
+ont_3_airport_test_10,EXTRA,,,,,,"(Afonso_Pena_International_Airport, runwayLength, 911)",Afonso_Pena_International_Airport,runwayLength,911
+ont_3_airport_test_11,EXACT,1.00,"(Afonso_Pena_International_Airport, runwayLength, 1800.0)",Afonso_Pena_International_Airport,runwayLength,1800.0,"(Afonso_Pena_International_Airport, runwayLength, 1800.0)",Afonso_Pena_International_Airport,runwayLength,1800.0
+ont_3_airport_test_11,MISSING,,"(Afonso_Pena_International_Airport, location, São_José_dos_Pinhais)",Afonso_Pena_International_Airport,location,São_José_dos_Pinhais,,,,
+ont_3_airport_test_11,MISSING,,"(Afonso_Pena_International_Airport, runwayName, 11/29)",Afonso_Pena_International_Airport,runwayName,11/29,,,,
+ont_3_airport_test_11,EXTRA,,,,,,"(Afonso_Pena_International_Airport, icaoLocationIdentifier, 29)",Afonso_Pena_International_Airport,icaoLocationIdentifier,29
+ont_3_airport_test_12,SEMANTIC,1.00,"(Afonso_Pena_International_Airport, runwayLength, 1800.0)",Afonso_Pena_International_Airport,runwayLength,1800.0,"(Afonso_Pena_International_Airport, runwayLength, 1800)",Afonso_Pena_International_Airport,runwayLength,1800
+ont_3_airport_test_12,MISSING,,"(Afonso_Pena_International_Airport, runwayName, 15/33)",Afonso_Pena_International_Airport,runwayName,15/33,,,,
+ont_3_airport_test_12,MISSING,,"(Afonso_Pena_International_Airport, location, São_José_dos_Pinhais)",Afonso_Pena_International_Airport,location,São_José_dos_Pinhais,,,,
+ont_3_airport_test_12,EXTRA,,,,,,"(Afonso_Pena_International_Airport, icaoLocationIdentifier, 33)",Afonso_Pena_International_Airport,icaoLocationIdentifier,33
+ont_3_airport_test_13,EXACT,1.00,"(Afonso_Pena_International_Airport, runwayLength, 2215.0)",Afonso_Pena_International_Airport,runwayLength,2215.0,"(Afonso_Pena_International_Airport, runwayLength, 2215.0)",Afonso_Pena_International_Airport,runwayLength,2215.0
+ont_3_airport_test_13,MISSING,,"(Afonso_Pena_International_Airport, location, São_José_dos_Pinhais)",Afonso_Pena_International_Airport,location,São_José_dos_Pinhais,,,,
+ont_3_airport_test_13,MISSING,,"(Afonso_Pena_International_Airport, runwayName, 11/29)",Afonso_Pena_International_Airport,runwayName,11/29,,,,
+ont_3_airport_test_13,EXTRA,,,,,,"(Afonso_Pena_International_Airport, icaoLocationIdentifier, 29)",Afonso_Pena_International_Airport,icaoLocationIdentifier,29
+ont_3_airport_test_14,EXACT,1.00,"(Afonso_Pena_International_Airport, runwayLength, 2215.0)",Afonso_Pena_International_Airport,runwayLength,2215.0,"(Afonso_Pena_International_Airport, runwayLength, 2215.0)",Afonso_Pena_International_Airport,runwayLength,2215.0
+ont_3_airport_test_14,MISSING,,"(Afonso_Pena_International_Airport, runwayName, 15/33)",Afonso_Pena_International_Airport,runwayName,15/33,,,,
+ont_3_airport_test_14,MISSING,,"(Afonso_Pena_International_Airport, location, São_José_dos_Pinhais)",Afonso_Pena_International_Airport,location,São_José_dos_Pinhais,,,,
+ont_3_airport_test_14,EXTRA,,,,,,"(Afonso_Pena_International_Airport, icaoLocationIdentifier, 33)",Afonso_Pena_International_Airport,icaoLocationIdentifier,33
+ont_3_airport_test_15,EXACT,1.00,"(Agra_Airport, location, Uttar_Pradesh)",Agra_Airport,location,Uttar_Pradesh,"(Agra_Airport, location, Uttar_Pradesh)",Agra_Airport,location,Uttar_Pradesh
+ont_3_airport_test_15,MISSING,,"(Uttar_Pradesh, isPartOf, Awadh)",Uttar_Pradesh,isPartOf,Awadh,,,,
+ont_3_airport_test_15,MISSING,,"(Agra_Airport, elevationAboveTheSeaLevel, 167.94)",Agra_Airport,elevationAboveTheSeaLevel,167.94,,,,
+ont_3_airport_test_15,EXTRA,,,,,,"(Agra_Airport, location, Awadh)",Agra_Airport,location,Awadh
+ont_3_airport_test_15,EXTRA,,,,,,"(Agra_Airport, runwayLength, 167.94)",Agra_Airport,runwayLength,167.94
+ont_3_airport_test_16,SEMANTIC,0.96,"(Agra_Airport, location, Uttar_Pradesh)",Agra_Airport,location,Uttar_Pradesh,"(Agra_Airport, regionServed, Uttar_Pradesh)",Agra_Airport,regionServed,Uttar_Pradesh
+ont_3_airport_test_16,MISSING,,"(Uttar_Pradesh, isPartOf, Bundelkhand)",Uttar_Pradesh,isPartOf,Bundelkhand,,,,
+ont_3_airport_test_16,MISSING,,"(Agra_Airport, elevationAboveTheSeaLevel, 167.94)",Agra_Airport,elevationAboveTheSeaLevel,167.94,,,,
+ont_3_airport_test_16,EXTRA,,,,,,"(Agra_Airport, runwayLength, 167.94)",Agra_Airport,runwayLength,167.94
+ont_3_airport_test_17,EXACT,1.00,"(Agra_Airport, icaoLocationIdentifier, VIAG)",Agra_Airport,icaoLocationIdentifier,VIAG,"(Agra_Airport, icaoLocationIdentifier, viag)",Agra_Airport,icaoLocationIdentifier,viag
+ont_3_airport_test_17,SEMANTIC,0.96,"(Agra_Airport, operatingOrganisation, Airports_Authority_of_India)",Agra_Airport,operatingOrganisation,Airports_Authority_of_India,"(Agra_Airport, owner, airports authority of india)",Agra_Airport,owner,airports authority of india
+ont_3_airport_test_17,SEMANTIC,0.99,"(Agra_Airport, location, India)",Agra_Airport,location,India,"(Agra_Airport, country, India)",Agra_Airport,country,India
+ont_3_airport_test_18,SEMANTIC,0.99,"(Agra_Airport, location, India)",Agra_Airport,location,India,"(Agra_Airport, country, India)",Agra_Airport,country,India
+ont_3_airport_test_18,MISSING,,"(India, leader, T._S._Thakur)",India,leader,T._S._Thakur,,,,
+ont_3_airport_test_18,MISSING,,"(India, leader, Narendra_Modi)",India,leader,Narendra_Modi,,,,
+ont_3_airport_test_18,EXTRA,,,,,,"(Agra_Airport, leader, T._S._Thakur)",Agra_Airport,leader,T._S._Thakur
+ont_3_airport_test_18,EXTRA,,,,,,"(Agra_Airport, leader, Narendra_Modi)",Agra_Airport,leader,Narendra_Modi
+ont_3_airport_test_19,EXACT,1.00,"(Agra_Airport, icaoLocationIdentifier, VIAG)",Agra_Airport,icaoLocationIdentifier,VIAG,"(Agra_Airport, icaoLocationIdentifier, viag)",Agra_Airport,icaoLocationIdentifier,viag
+ont_3_airport_test_19,SEMANTIC,0.97,"(Agra_Airport, operatingOrganisation, Airports_Authority_of_India)",Agra_Airport,operatingOrganisation,Airports_Authority_of_India,"(Agra_Airport, owner, Airports_Authority_of_India)",Agra_Airport,owner,Airports_Authority_of_India
+ont_3_airport_test_19,MISSING,,"(Agra_Airport, location, Uttar_Pradesh)",Agra_Airport,location,Uttar_Pradesh,,,,
+ont_3_airport_test_2,SEMANTIC,0.99,"(Abilene_Regional_Airport, cityServed, Abilene,_Texas)",Abilene_Regional_Airport,cityServed,"Abilene,_Texas","(Abilene_Regional_Airport, city, Abilene,_Texas)",Abilene_Regional_Airport,city,"Abilene,_Texas"
+ont_3_airport_test_2,MISSING,,"(Abilene,_Texas, country, United_States)","Abilene,_Texas",country,United_States,,,,
+ont_3_airport_test_2,MISSING,,"(Abilene,_Texas, isPartOf, Texas)","Abilene,_Texas",isPartOf,Texas,,,,
+ont_3_airport_test_2,EXTRA,,,,,,"(Abilene_Regional_Airport, location, Texas_(steamboat))",Abilene_Regional_Airport,location,Texas_(steamboat)
+ont_3_airport_test_2,EXTRA,,,,,,"(Abilene_Regional_Airport, country, United_States)",Abilene_Regional_Airport,country,United_States
+ont_3_airport_test_20,EXACT,1.00,"(Agra_Airport, location, Uttar_Pradesh)",Agra_Airport,location,Uttar_Pradesh,"(Agra_Airport, location, Uttar_Pradesh)",Agra_Airport,location,Uttar_Pradesh
+ont_3_airport_test_20,MISSING,,"(Uttar_Pradesh, isPartOf, Awadh)",Uttar_Pradesh,isPartOf,Awadh,,,,
+ont_3_airport_test_20,MISSING,,"(Uttar_Pradesh, isPartOf, Bundelkhand)",Uttar_Pradesh,isPartOf,Bundelkhand,,,,
+ont_3_airport_test_21,EXACT,1.00,"(Agra_Airport, location, Uttar_Pradesh)",Agra_Airport,location,Uttar_Pradesh,"(Agra_Airport, location, Uttar_Pradesh)",Agra_Airport,location,Uttar_Pradesh
+ont_3_airport_test_21,SEMANTIC,0.98,"(Uttar_Pradesh, isPartOf, Awadh)",Uttar_Pradesh,isPartOf,Awadh,"(Awadh, isPartOf, Uttar_Pradesh)",Awadh,isPartOf,Uttar_Pradesh
+ont_3_airport_test_21,MISSING,,"(Uttar_Pradesh, leader, Ram_Naik)",Uttar_Pradesh,leader,Ram_Naik,,,,
+ont_3_airport_test_22,EXACT,1.00,"(Agra_Airport, location, Uttar_Pradesh)",Agra_Airport,location,Uttar_Pradesh,"(Agra_Airport, location, Uttar_Pradesh)",Agra_Airport,location,Uttar_Pradesh
+ont_3_airport_test_22,MISSING,,"(Uttar_Pradesh, isPartOf, Bundelkhand)",Uttar_Pradesh,isPartOf,Bundelkhand,,,,
+ont_3_airport_test_22,MISSING,,"(Uttar_Pradesh, leader, Ram_Naik)",Uttar_Pradesh,leader,Ram_Naik,,,,
+ont_3_airport_test_22,EXTRA,,,,,,"(Agra_Airport, location, Bundelkhand)",Agra_Airport,location,Bundelkhand
+ont_3_airport_test_23,EXACT,1.00,"(Agra_Airport, icaoLocationIdentifier, VIAG)",Agra_Airport,icaoLocationIdentifier,VIAG,"(Agra_Airport, icaoLocationIdentifier, viag)",Agra_Airport,icaoLocationIdentifier,viag
+ont_3_airport_test_23,SEMANTIC,0.96,"(Agra_Airport, operatingOrganisation, Indian_Air_Force)",Agra_Airport,operatingOrganisation,Indian_Air_Force,"(Agra_Airport, owner, Indian_Air_Force)",Agra_Airport,owner,Indian_Air_Force
+ont_3_airport_test_23,MISSING,,"(Agra_Airport, location, Agra)",Agra_Airport,location,Agra,,,,
+ont_3_airport_test_24,EXACT,1.00,"(Alderney_Airport, runwayLength, 497.0)",Alderney_Airport,runwayLength,497.0,"(Alderney_Airport, runwayLength, 497.0)",Alderney_Airport,runwayLength,497.0
+ont_3_airport_test_24,SEMANTIC,0.99,"(Alderney_Airport, cityServed, Alderney)",Alderney_Airport,cityServed,Alderney,"(Alderney_Airport, regionServed, Alderney)",Alderney_Airport,regionServed,Alderney
+ont_3_airport_test_24,MISSING,,"(Alderney_Airport, 1stRunwaySurfaceType, Poaceae)",Alderney_Airport,1stRunwaySurfaceType,Poaceae,,,,
+ont_3_airport_test_24,EXTRA,,,,,,"(Alderney_Airport, class, Poaceae)",Alderney_Airport,class,Poaceae
+ont_3_airport_test_25,MISSING,,"(Poaceae, class, Monocotyledon)",Poaceae,class,Monocotyledon,,,,
+ont_3_airport_test_25,MISSING,,"(Alderney_Airport, 1stRunwaySurfaceType, Poaceae)",Alderney_Airport,1stRunwaySurfaceType,Poaceae,,,,
+ont_3_airport_test_25,MISSING,,"(Poaceae, order, Commelinids)",Poaceae,order,Commelinids,,,,
+ont_3_airport_test_25,EXTRA,,,,,,"(Alderney_Airport, class, Poaceae)",Alderney_Airport,class,Poaceae
+ont_3_airport_test_26,MISSING,,"(Poaceae, order, Poales)",Poaceae,order,Poales,,,,
+ont_3_airport_test_26,MISSING,,"(Alderney_Airport, 1stRunwaySurfaceType, Poaceae)",Alderney_Airport,1stRunwaySurfaceType,Poaceae,,,,
+ont_3_airport_test_26,MISSING,,"(Poaceae, class, Monocotyledon)",Poaceae,class,Monocotyledon,,,,
+ont_3_airport_test_26,EXTRA,,,,,,"(Alderney_Airport, class, Poaceae)",Alderney_Airport,class,Poaceae
+ont_3_airport_test_27,MISSING,,"(Poaceae, order, Poales)",Poaceae,order,Poales,,,,
+ont_3_airport_test_27,MISSING,,"(Alderney_Airport, 1stRunwaySurfaceType, Poaceae)",Alderney_Airport,1stRunwaySurfaceType,Poaceae,,,,
+ont_3_airport_test_27,MISSING,,"(Poaceae, order, Commelinids)",Poaceae,order,Commelinids,,,,
+ont_3_airport_test_27,EXTRA,,,,,,"(Alderney_Airport, class, poaceae of the orders poales and commelinids)",Alderney_Airport,class,poaceae of the orders poales and commelinids
+ont_3_airport_test_28,EXACT,1.00,"(Alderney_Airport, runwayLength, 497.0)",Alderney_Airport,runwayLength,497.0,"(Alderney_Airport, runwayLength, 497.0)",Alderney_Airport,runwayLength,497.0
+ont_3_airport_test_28,SEMANTIC,0.94,"(Alderney_Airport, 1stRunwaySurfaceType, Asphalt)",Alderney_Airport,1stRunwaySurfaceType,Asphalt,"(Alderney_Airport, icaoLocationIdentifier, asphalt)",Alderney_Airport,icaoLocationIdentifier,asphalt
+ont_3_airport_test_28,SEMANTIC,0.99,"(Alderney_Airport, cityServed, Alderney)",Alderney_Airport,cityServed,Alderney,"(Alderney_Airport, regionServed, Alderney)",Alderney_Airport,regionServed,Alderney
+ont_3_airport_test_29,EXACT,1.00,"(Alderney_Airport, runwayLength, 733.0)",Alderney_Airport,runwayLength,733.0,"(Alderney_Airport, runwayLength, 733.0)",Alderney_Airport,runwayLength,733.0
+ont_3_airport_test_29,SEMANTIC,0.94,"(Alderney_Airport, 1stRunwaySurfaceType, Asphalt)",Alderney_Airport,1stRunwaySurfaceType,Asphalt,"(Alderney_Airport, class, Asphalt)",Alderney_Airport,class,Asphalt
+ont_3_airport_test_29,SEMANTIC,0.99,"(Alderney_Airport, cityServed, Alderney)",Alderney_Airport,cityServed,Alderney,"(Alderney_Airport, regionServed, Alderney)",Alderney_Airport,regionServed,Alderney
+ont_3_airport_test_3,SEMANTIC,0.99,"(Abilene_Regional_Airport, cityServed, Abilene,_Texas)",Abilene_Regional_Airport,cityServed,"Abilene,_Texas","(Abilene_Regional_Airport, regionServed, Abilene,_Texas)",Abilene_Regional_Airport,regionServed,"Abilene,_Texas"
+ont_3_airport_test_3,SEMANTIC,0.99,"(Abilene_Regional_Airport, runwayLength, 1121.0)",Abilene_Regional_Airport,runwayLength,1121.0,"(Abilene_Regional_Airport, runwayLength, 1121)",Abilene_Regional_Airport,runwayLength,1121
+ont_3_airport_test_3,MISSING,,"(Abilene_Regional_Airport, elevationAboveTheSeaLevel, 546)",Abilene_Regional_Airport,elevationAboveTheSeaLevel,546,,,,
+ont_3_airport_test_3,EXTRA,,,,,,"(Abilene_Regional_Airport, runwayLength, 546)",Abilene_Regional_Airport,runwayLength,546
+ont_3_airport_test_30,EXACT,1.00,"(Alderney_Airport, runwayLength, 877.0)",Alderney_Airport,runwayLength,877.0,"(Alderney_Airport, runwayLength, 877.0)",Alderney_Airport,runwayLength,877.0
+ont_3_airport_test_30,SEMANTIC,0.94,"(Alderney_Airport, 1stRunwaySurfaceType, Asphalt)",Alderney_Airport,1stRunwaySurfaceType,Asphalt,"(Alderney_Airport, class, Asphalt)",Alderney_Airport,class,Asphalt
+ont_3_airport_test_30,MISSING,,"(Alderney_Airport, cityServed, Alderney)",Alderney_Airport,cityServed,Alderney,,,,
+ont_3_airport_test_31,EXACT,1.00,"(Alpena_County_Regional_Airport, location, Maple_Ridge_Township,_Alpena_County,_Michigan)",Alpena_County_Regional_Airport,location,"Maple_Ridge_Township,_Alpena_County,_Michigan","(Alpena_County_Regional_Airport, location, Maple_Ridge_Township,_Alpena_County,_Michigan)",Alpena_County_Regional_Airport,location,"Maple_Ridge_Township,_Alpena_County,_Michigan"
+ont_3_airport_test_31,SEMANTIC,0.99,"(Alpena_County_Regional_Airport, runwayLength, 1533.0)",Alpena_County_Regional_Airport,runwayLength,1533.0,"(Alpena_County_Regional_Airport, runwayLength, 1533)",Alpena_County_Regional_Airport,runwayLength,1533
+ont_3_airport_test_31,MISSING,,"(Alpena_County_Regional_Airport, elevationAboveTheSeaLevel, 210)",Alpena_County_Regional_Airport,elevationAboveTheSeaLevel,210,,,,
+ont_3_airport_test_31,EXTRA,,,,,,"(Alpena_County_Regional_Airport, runwayLength, 210)",Alpena_County_Regional_Airport,runwayLength,210
+ont_3_airport_test_31,EXTRA,,,,,,"(Alpena_County_Regional_Airport, location, Michigan)",Alpena_County_Regional_Airport,location,Michigan
+ont_3_airport_test_32,EXACT,1.00,"(Alpena_County_Regional_Airport, location, Maple_Ridge_Township,_Alpena_County,_Michigan)",Alpena_County_Regional_Airport,location,"Maple_Ridge_Township,_Alpena_County,_Michigan","(Alpena_County_Regional_Airport, location, Maple_Ridge_Township,_Alpena_County,_Michigan)",Alpena_County_Regional_Airport,location,"Maple_Ridge_Township,_Alpena_County,_Michigan"
+ont_3_airport_test_32,SEMANTIC,0.99,"(Alpena_County_Regional_Airport, runwayLength, 1533.0)",Alpena_County_Regional_Airport,runwayLength,1533.0,"(Alpena_County_Regional_Airport, runwayLength, 1533)",Alpena_County_Regional_Airport,runwayLength,1533
+ont_3_airport_test_32,MISSING,,"(Maple_Ridge_Township,_Alpena_County,_Michigan, country, United_States)","Maple_Ridge_Township,_Alpena_County,_Michigan",country,United_States,,,,
+ont_3_airport_test_32,EXTRA,,,,,,"(Alpena_County_Regional_Airport, ceremonialCounty, Alpena_County,_Michigan)",Alpena_County_Regional_Airport,ceremonialCounty,"Alpena_County,_Michigan"
+ont_3_airport_test_32,EXTRA,,,,,,"(Alpena_County_Regional_Airport, regionServed, Michigan)",Alpena_County_Regional_Airport,regionServed,Michigan
+ont_3_airport_test_32,EXTRA,,,,,,"(Alpena_County_Regional_Airport, country, United_States)",Alpena_County_Regional_Airport,country,United_States
+ont_3_airport_test_33,EXACT,1.00,"(Alpena_County_Regional_Airport, runwayLength, 2744.0)",Alpena_County_Regional_Airport,runwayLength,2744.0,"(Alpena_County_Regional_Airport, runwayLength, 2744.0)",Alpena_County_Regional_Airport,runwayLength,2744.0
+ont_3_airport_test_33,EXACT,1.00,"(Alpena_County_Regional_Airport, location, Maple_Ridge_Township,_Alpena_County,_Michigan)",Alpena_County_Regional_Airport,location,"Maple_Ridge_Township,_Alpena_County,_Michigan","(Alpena_County_Regional_Airport, location, Maple_Ridge_Township,_Alpena_County,_Michigan)",Alpena_County_Regional_Airport,location,"Maple_Ridge_Township,_Alpena_County,_Michigan"
+ont_3_airport_test_33,MISSING,,"(Maple_Ridge_Township,_Alpena_County,_Michigan, country, United_States)","Maple_Ridge_Township,_Alpena_County,_Michigan",country,United_States,,,,
+ont_3_airport_test_33,EXTRA,,,,,,"(Alpena_County_Regional_Airport, location, Alpena_County,_Michigan)",Alpena_County_Regional_Airport,location,"Alpena_County,_Michigan"
+ont_3_airport_test_33,EXTRA,,,,,,"(Alpena_County_Regional_Airport, location, Michigan)",Alpena_County_Regional_Airport,location,Michigan
+ont_3_airport_test_33,EXTRA,,,,,,"(Alpena_County_Regional_Airport, country, United_States)",Alpena_County_Regional_Airport,country,United_States
+ont_3_airport_test_34,EXACT,1.00,"(Alpena_County_Regional_Airport, runwayLength, 2744.0)",Alpena_County_Regional_Airport,runwayLength,2744.0,"(Alpena_County_Regional_Airport, runwayLength, 2744.0)",Alpena_County_Regional_Airport,runwayLength,2744.0
+ont_3_airport_test_34,SEMANTIC,0.96,"(Alpena_County_Regional_Airport, location, Wilson_Township,_Alpena_County,_Michigan)",Alpena_County_Regional_Airport,location,"Wilson_Township,_Alpena_County,_Michigan","(Alpena_County_Regional_Airport, location, Michigan)",Alpena_County_Regional_Airport,location,Michigan
+ont_3_airport_test_34,MISSING,,"(Alpena_County_Regional_Airport, elevationAboveTheSeaLevel, 210)",Alpena_County_Regional_Airport,elevationAboveTheSeaLevel,210,,,,
+ont_3_airport_test_34,EXTRA,,,,,,"(Alpena_County_Regional_Airport, location, Wilson_Township,_Cass_County,_Minnesota)",Alpena_County_Regional_Airport,location,"Wilson_Township,_Cass_County,_Minnesota"
+ont_3_airport_test_34,EXTRA,,,,,,"(Alpena_County_Regional_Airport, ceremonialCounty, Alpena_County,_Michigan)",Alpena_County_Regional_Airport,ceremonialCounty,"Alpena_County,_Michigan"
+ont_3_airport_test_34,EXTRA,,,,,,"(Alpena_County_Regional_Airport, runwayLength, 210)",Alpena_County_Regional_Airport,runwayLength,210
+ont_3_airport_test_35,MISSING,,"(Wilson_Township,_Alpena_County,_Michigan, country, United_States)","Wilson_Township,_Alpena_County,_Michigan",country,United_States,,,,
+ont_3_airport_test_35,MISSING,,"(Alpena_County_Regional_Airport, location, Wilson_Township,_Alpena_County,_Michigan)",Alpena_County_Regional_Airport,location,"Wilson_Township,_Alpena_County,_Michigan",,,,
+ont_3_airport_test_35,MISSING,,"(Alpena_County_Regional_Airport, elevationAboveTheSeaLevel, 210)",Alpena_County_Regional_Airport,elevationAboveTheSeaLevel,210,,,,
+ont_3_airport_test_35,EXTRA,,,,,,"(Alpena_County_Regional_Airport, location, Wilson_Township,_Cass_County,_Minnesota)",Alpena_County_Regional_Airport,location,"Wilson_Township,_Cass_County,_Minnesota"
+ont_3_airport_test_35,EXTRA,,,,,,"(Alpena_County_Regional_Airport, runwayLength, 210)",Alpena_County_Regional_Airport,runwayLength,210
+ont_3_airport_test_35,EXTRA,,,,,,"(Alpena_County_Regional_Airport, ceremonialCounty, Alpena_County,_Michigan)",Alpena_County_Regional_Airport,ceremonialCounty,"Alpena_County,_Michigan"
+ont_3_airport_test_35,EXTRA,,,,,,"(Alpena_County_Regional_Airport, regionServed, Michigan)",Alpena_County_Regional_Airport,regionServed,Michigan
+ont_3_airport_test_35,EXTRA,,,,,,"(Alpena_County_Regional_Airport, country, United_States)",Alpena_County_Regional_Airport,country,United_States
+ont_3_airport_test_36,EXACT,1.00,"(Alpena_County_Regional_Airport, runwayLength, 1533.0)",Alpena_County_Regional_Airport,runwayLength,1533.0,"(Alpena_County_Regional_Airport, runwayLength, 1533.0)",Alpena_County_Regional_Airport,runwayLength,1533.0
+ont_3_airport_test_36,MISSING,,"(Wilson_Township,_Alpena_County,_Michigan, country, United_States)","Wilson_Township,_Alpena_County,_Michigan",country,United_States,,,,
+ont_3_airport_test_36,MISSING,,"(Alpena_County_Regional_Airport, location, Wilson_Township,_Alpena_County,_Michigan)",Alpena_County_Regional_Airport,location,"Wilson_Township,_Alpena_County,_Michigan",,,,
+ont_3_airport_test_36,EXTRA,,,,,,"(Alpena_County_Regional_Airport, location, Wilson_Township,_Cass_County,_Minnesota)",Alpena_County_Regional_Airport,location,"Wilson_Township,_Cass_County,_Minnesota"
+ont_3_airport_test_36,EXTRA,,,,,,"(Alpena_County_Regional_Airport, ceremonialCounty, Alpena_County,_Michigan)",Alpena_County_Regional_Airport,ceremonialCounty,"Alpena_County,_Michigan"
+ont_3_airport_test_36,EXTRA,,,,,,"(Alpena_County_Regional_Airport, regionServed, Michigan)",Alpena_County_Regional_Airport,regionServed,Michigan
+ont_3_airport_test_36,EXTRA,,,,,,"(Alpena_County_Regional_Airport, country, United_States)",Alpena_County_Regional_Airport,country,United_States
+ont_3_airport_test_37,SEMANTIC,0.96,"(Alpena_County_Regional_Airport, location, Wilson_Township,_Alpena_County,_Michigan)",Alpena_County_Regional_Airport,location,"Wilson_Township,_Alpena_County,_Michigan","(Alpena_County_Regional_Airport, location, Michigan)",Alpena_County_Regional_Airport,location,Michigan
+ont_3_airport_test_37,SEMANTIC,0.99,"(Alpena_County_Regional_Airport, runwayLength, 2744.0)",Alpena_County_Regional_Airport,runwayLength,2744.0,"(Alpena_County_Regional_Airport, runwayLength, 2744)",Alpena_County_Regional_Airport,runwayLength,2744
+ont_3_airport_test_37,MISSING,,"(Wilson_Township,_Alpena_County,_Michigan, country, United_States)","Wilson_Township,_Alpena_County,_Michigan",country,United_States,,,,
+ont_3_airport_test_37,EXTRA,,,,,,"(Alpena_County_Regional_Airport, location, Wilson_Township,_Cass_County,_Minnesota)",Alpena_County_Regional_Airport,location,"Wilson_Township,_Cass_County,_Minnesota"
+ont_3_airport_test_37,EXTRA,,,,,,"(Alpena_County_Regional_Airport, regionServed, Usa,_Ōita)",Alpena_County_Regional_Airport,regionServed,"Usa,_Ōita"
+ont_3_airport_test_37,EXTRA,,,,,,"(Alpena_County_Regional_Airport, ceremonialCounty, Alpena_County,_Michigan)",Alpena_County_Regional_Airport,ceremonialCounty,"Alpena_County,_Michigan"
+ont_3_airport_test_38,SEMANTIC,1.00,"(Angola_International_Airport, runwayLength, 3800.0)",Angola_International_Airport,runwayLength,3800.0,"(Angola_International_Airport, runwayLength, 3800)",Angola_International_Airport,runwayLength,3800
+ont_3_airport_test_38,MISSING,,"(Angola_International_Airport, location, Ícolo_e_Bengo)",Angola_International_Airport,location,Ícolo_e_Bengo,,,,
+ont_3_airport_test_38,MISSING,,"(Angola_International_Airport, elevationAboveTheSeaLevelInMetres, 159)",Angola_International_Airport,elevationAboveTheSeaLevelInMetres,159,,,,
+ont_3_airport_test_38,EXTRA,,,,,,"(Angola_International_Airport, runwayLength, 159)",Angola_International_Airport,runwayLength,159
+ont_3_airport_test_39,SEMANTIC,1.00,"(Angola_International_Airport, runwayLength, 4000.0)",Angola_International_Airport,runwayLength,4000.0,"(Angola_International_Airport, runwayLength, 4000)",Angola_International_Airport,runwayLength,4000
+ont_3_airport_test_39,MISSING,,"(Angola_International_Airport, location, Ícolo_e_Bengo)",Angola_International_Airport,location,Ícolo_e_Bengo,,,,
+ont_3_airport_test_39,MISSING,,"(Angola_International_Airport, elevationAboveTheSeaLevelInMetres, 159)",Angola_International_Airport,elevationAboveTheSeaLevelInMetres,159,,,,
+ont_3_airport_test_39,EXTRA,,,,,,"(Angola_International_Airport, runwayLength, 159)",Angola_International_Airport,runwayLength,159
+ont_3_airport_test_4,SEMANTIC,0.99,"(Abilene_Regional_Airport, runwayLength, 2194.0)",Abilene_Regional_Airport,runwayLength,2194.0,"(Abilene_Regional_Airport, runwayLength, 2194)",Abilene_Regional_Airport,runwayLength,2194
+ont_3_airport_test_4,SEMANTIC,0.99,"(Abilene_Regional_Airport, cityServed, Abilene,_Texas)",Abilene_Regional_Airport,cityServed,"Abilene,_Texas","(Abilene_Regional_Airport, regionServed, Abilene,_Texas)",Abilene_Regional_Airport,regionServed,"Abilene,_Texas"
+ont_3_airport_test_4,MISSING,,"(Abilene_Regional_Airport, elevationAboveTheSeaLevel, 546)",Abilene_Regional_Airport,elevationAboveTheSeaLevel,546,,,,
+ont_3_airport_test_4,EXTRA,,,,,,"(Abilene_Regional_Airport, foundingYear, 546)",Abilene_Regional_Airport,foundingYear,546
+ont_3_airport_test_4,EXTRA,,,,,,"(Abilene_Regional_Airport, location, Texas_(steamboat))",Abilene_Regional_Airport,location,Texas_(steamboat)
+ont_3_airport_test_40,MISSING,,"(Angola_International_Airport, location, Ícolo_e_Bengo)",Angola_International_Airport,location,Ícolo_e_Bengo,,,,
+ont_3_airport_test_40,MISSING,,"(Angola_International_Airport, elevationAboveTheSeaLevelInMetres, 159)",Angola_International_Airport,elevationAboveTheSeaLevelInMetres,159,,,,
+ont_3_airport_test_40,MISSING,,"(Ícolo_e_Bengo, country, Angola)",Ícolo_e_Bengo,country,Angola,,,,
+ont_3_airport_test_40,EXTRA,,,,,,"(Angola_International_Airport, runwayLength, 159)",Angola_International_Airport,runwayLength,159
+ont_3_airport_test_40,EXTRA,,,,,,"(Angola_International_Airport, country, Angola)",Angola_International_Airport,country,Angola
+ont_3_airport_test_41,SEMANTIC,1.00,"(Angola_International_Airport, runwayLength, 3800.0)",Angola_International_Airport,runwayLength,3800.0,"(Angola_International_Airport, runwayLength, 3800)",Angola_International_Airport,runwayLength,3800
+ont_3_airport_test_41,MISSING,,"(Ícolo_e_Bengo, country, Angola)",Ícolo_e_Bengo,country,Angola,,,,
+ont_3_airport_test_41,MISSING,,"(Angola_International_Airport, location, Ícolo_e_Bengo)",Angola_International_Airport,location,Ícolo_e_Bengo,,,,
+ont_3_airport_test_41,EXTRA,,,,,,"(Angola_International_Airport, country, Angola)",Angola_International_Airport,country,Angola
+ont_3_airport_test_42,MISSING,,"(Angola_International_Airport, location, Ícolo_e_Bengo)",Angola_International_Airport,location,Ícolo_e_Bengo,,,,
+ont_3_airport_test_42,MISSING,,"(Angola_International_Airport, runwayName, 05L/23R)",Angola_International_Airport,runwayName,05L/23R,,,,
+ont_3_airport_test_42,MISSING,,"(Ícolo_e_Bengo, country, Angola)",Ícolo_e_Bengo,country,Angola,,,,
+ont_3_airport_test_42,EXTRA,,,,,,"(Angola_International_Airport, country, Angola)",Angola_International_Airport,country,Angola
+ont_3_airport_test_42,EXTRA,,,,,,"(Angola_International_Airport, icaoLocationIdentifier, 23r)",Angola_International_Airport,icaoLocationIdentifier,23r
+ont_3_airport_test_43,MISSING,,"(Angola_International_Airport, location, Ícolo_e_Bengo)",Angola_International_Airport,location,Ícolo_e_Bengo,,,,
+ont_3_airport_test_43,MISSING,,"(Ícolo_e_Bengo, isPartOf, Luanda_Province)",Ícolo_e_Bengo,isPartOf,Luanda_Province,,,,
+ont_3_airport_test_43,MISSING,,"(Ícolo_e_Bengo, country, Angola)",Ícolo_e_Bengo,country,Angola,,,,
+ont_3_airport_test_43,EXTRA,,,,,,"(Angola_International_Airport, location, Luanda_Province)",Angola_International_Airport,location,Luanda_Province
+ont_3_airport_test_44,SEMANTIC,0.97,"(Angola_International_Airport, cityServed, Luanda)",Angola_International_Airport,cityServed,Luanda,"(Angola_International_Airport, city, Luanda)",Angola_International_Airport,city,Luanda
+ont_3_airport_test_44,SEMANTIC,1.00,"(Angola_International_Airport, runwayLength, 4000.0)",Angola_International_Airport,runwayLength,4000.0,"(Angola_International_Airport, runwayLength, 4000)",Angola_International_Airport,runwayLength,4000
+ont_3_airport_test_44,MISSING,,"(Angola_International_Airport, elevationAboveTheSeaLevelInMetres, 159)",Angola_International_Airport,elevationAboveTheSeaLevelInMetres,159,,,,
+ont_3_airport_test_44,EXTRA,,,,,,"(Angola_International_Airport, runwayLength, 159)",Angola_International_Airport,runwayLength,159
+ont_3_airport_test_45,SEMANTIC,0.94,"(Ardmore_Airport_(New_Zealand), 3rdRunwaySurfaceType, Poaceae)",Ardmore_Airport_(New_Zealand),3rdRunwaySurfaceType,Poaceae,"(Ardmore_Airport_(New_Zealand), class, Poaceae)",Ardmore_Airport_(New_Zealand),class,Poaceae
+ont_3_airport_test_45,SEMANTIC,1.00,"(Ardmore_Airport_(New_Zealand), runwayLength, 518.0)",Ardmore_Airport_(New_Zealand),runwayLength,518.0,"(Ardmore_Airport_(New_Zealand), runwayLength, 518)",Ardmore_Airport_(New_Zealand),runwayLength,518
+ont_3_airport_test_45,MISSING,,"(Ardmore_Airport_(New_Zealand), elevationAboveTheSeaLevel, 34.0)",Ardmore_Airport_(New_Zealand),elevationAboveTheSeaLevel,34.0,,,,
+ont_3_airport_test_45,EXTRA,,,,,,"(Ardmore_Airport_(New_Zealand), country, New_Zealand)",Ardmore_Airport_(New_Zealand),country,New_Zealand
+ont_3_airport_test_45,EXTRA,,,,,,"(Ardmore_Airport_(New_Zealand), runwayLength, 34)",Ardmore_Airport_(New_Zealand),runwayLength,34
+ont_3_airport_test_46,SEMANTIC,0.94,"(Ardmore_Airport_(New_Zealand), 3rdRunwaySurfaceType, Poaceae)",Ardmore_Airport_(New_Zealand),3rdRunwaySurfaceType,Poaceae,"(Ardmore_Airport_(New_Zealand), class, Poaceae)",Ardmore_Airport_(New_Zealand),class,Poaceae
+ont_3_airport_test_46,MISSING,,"(Poaceae, class, Monocotyledon)",Poaceae,class,Monocotyledon,,,,
+ont_3_airport_test_46,MISSING,,"(Poaceae, division, Flowering_plant)",Poaceae,division,Flowering_plant,,,,
+ont_3_airport_test_46,EXTRA,,,,,,"(Ardmore_Airport_(New_Zealand), country, New_Zealand)",Ardmore_Airport_(New_Zealand),country,New_Zealand
+ont_3_airport_test_47,EXACT,1.00,"(Poaceae, class, Monocotyledon)",Poaceae,class,Monocotyledon,"(Poaceae, class, Monocotyledon)",Poaceae,class,Monocotyledon
+ont_3_airport_test_47,EXACT,1.00,"(Poaceae, order, Commelinids)",Poaceae,order,Commelinids,"(Poaceae, order, Commelinids)",Poaceae,order,Commelinids
+ont_3_airport_test_47,SEMANTIC,0.94,"(Ardmore_Airport_(New_Zealand), 3rdRunwaySurfaceType, Poaceae)",Ardmore_Airport_(New_Zealand),3rdRunwaySurfaceType,Poaceae,"(Ardmore_Airport_(New_Zealand), class, Poaceae)",Ardmore_Airport_(New_Zealand),class,Poaceae
+ont_3_airport_test_48,EXACT,1.00,"(Poaceae, order, Poales)",Poaceae,order,Poales,"(Poaceae, order, Poales)",Poaceae,order,Poales
+ont_3_airport_test_48,EXACT,1.00,"(Poaceae, class, Monocotyledon)",Poaceae,class,Monocotyledon,"(Poaceae, class, Monocotyledon)",Poaceae,class,Monocotyledon
+ont_3_airport_test_48,SEMANTIC,0.94,"(Ardmore_Airport_(New_Zealand), 3rdRunwaySurfaceType, Poaceae)",Ardmore_Airport_(New_Zealand),3rdRunwaySurfaceType,Poaceae,"(Ardmore_Airport_(New_Zealand), class, Poaceae)",Ardmore_Airport_(New_Zealand),class,Poaceae
+ont_3_airport_test_49,SEMANTIC,0.94,"(Ardmore_Airport_(New_Zealand), 3rdRunwaySurfaceType, Poaceae)",Ardmore_Airport_(New_Zealand),3rdRunwaySurfaceType,Poaceae,"(Ardmore_Airport_(New_Zealand), class, Poaceae)",Ardmore_Airport_(New_Zealand),class,Poaceae
+ont_3_airport_test_49,MISSING,,"(Poaceae, order, Commelinids)",Poaceae,order,Commelinids,,,,
+ont_3_airport_test_49,MISSING,,"(Poaceae, division, Flowering_plant)",Poaceae,division,Flowering_plant,,,,
+ont_3_airport_test_49,EXTRA,,,,,,"(Ardmore_Airport_(New_Zealand), country, New_Zealand)",Ardmore_Airport_(New_Zealand),country,New_Zealand
+ont_3_airport_test_5,SEMANTIC,0.99,"(Abilene_Regional_Airport, cityServed, Abilene,_Texas)",Abilene_Regional_Airport,cityServed,"Abilene,_Texas","(Abilene_Regional_Airport, city, Abilene,_Texas)",Abilene_Regional_Airport,city,"Abilene,_Texas"
+ont_3_airport_test_5,SEMANTIC,0.99,"(Abilene_Regional_Airport, runwayLength, 2195.0)",Abilene_Regional_Airport,runwayLength,2195.0,"(Abilene_Regional_Airport, runwayLength, 2195)",Abilene_Regional_Airport,runwayLength,2195
+ont_3_airport_test_5,MISSING,,"(Abilene_Regional_Airport, elevationAboveTheSeaLevel, 546)",Abilene_Regional_Airport,elevationAboveTheSeaLevel,546,,,,
+ont_3_airport_test_5,EXTRA,,,,,,"(Abilene_Regional_Airport, runwayLength, 546)",Abilene_Regional_Airport,runwayLength,546
+ont_3_airport_test_50,MISSING,,"(Ardmore_Airport_(New_Zealand), runwayLength, 1411.0)",Ardmore_Airport_(New_Zealand),runwayLength,1411.0,,,,
+ont_3_airport_test_50,MISSING,,"(Ardmore_Airport_(New_Zealand), 3rdRunwaySurfaceType, Poaceae)",Ardmore_Airport_(New_Zealand),3rdRunwaySurfaceType,Poaceae,,,,
+ont_3_airport_test_50,MISSING,,"(Ardmore_Airport_(New_Zealand), elevationAboveTheSeaLevel, 34.0)",Ardmore_Airport_(New_Zealand),elevationAboveTheSeaLevel,34.0,,,,
+ont_3_airport_test_51,SEMANTIC,0.94,"(Ardmore_Airport_(New_Zealand), 3rdRunwaySurfaceType, Poaceae)",Ardmore_Airport_(New_Zealand),3rdRunwaySurfaceType,Poaceae,"(Ardmore_Airport_(New_Zealand), class, Poaceae)",Ardmore_Airport_(New_Zealand),class,Poaceae
+ont_3_airport_test_51,SEMANTIC,1.00,"(Ardmore_Airport_(New_Zealand), runwayLength, 597.0)",Ardmore_Airport_(New_Zealand),runwayLength,597.0,"(Ardmore_Airport_(New_Zealand), runwayLength, 597)",Ardmore_Airport_(New_Zealand),runwayLength,597
+ont_3_airport_test_51,MISSING,,"(Ardmore_Airport_(New_Zealand), elevationAboveTheSeaLevel, 34.0)",Ardmore_Airport_(New_Zealand),elevationAboveTheSeaLevel,34.0,,,,
+ont_3_airport_test_51,EXTRA,,,,,,"(Ardmore_Airport_(New_Zealand), foundingYear, 34)",Ardmore_Airport_(New_Zealand),foundingYear,34
+ont_3_airport_test_52,SEMANTIC,0.99,"(Athens_International_Airport, cityServed, Athens)",Athens_International_Airport,cityServed,Athens,"(Athens_International_Airport, regionServed, Athens)",Athens_International_Airport,regionServed,Athens
+ont_3_airport_test_52,MISSING,,"(Athens, country, Greece)",Athens,country,Greece,,,,
+ont_3_airport_test_52,MISSING,,"(Greece, leader, Nikos_Voutsis)",Greece,leader,Nikos_Voutsis,,,,
+ont_3_airport_test_52,EXTRA,,,,,,"(Athens_International_Airport, country, Greece)",Athens_International_Airport,country,Greece
+ont_3_airport_test_53,SEMANTIC,0.97,"(Athens_International_Airport, cityServed, Athens)",Athens_International_Airport,cityServed,Athens,"(Athens_International_Airport, city, Athens)",Athens_International_Airport,city,Athens
+ont_3_airport_test_53,MISSING,,"(Athens, country, Greece)",Athens,country,Greece,,,,
+ont_3_airport_test_53,MISSING,,"(Greece, leader, Prokopis_Pavlopoulos)",Greece,leader,Prokopis_Pavlopoulos,,,,
+ont_3_airport_test_53,EXTRA,,,,,,"(Athens_International_Airport, country, Greece)",Athens_International_Airport,country,Greece
+ont_3_airport_test_54,EXACT,1.00,"(Athens_International_Airport, location, Spata)",Athens_International_Airport,location,Spata,"(Athens_International_Airport, location, Spata)",Athens_International_Airport,location,Spata
+ont_3_airport_test_54,SEMANTIC,0.99,"(Athens_International_Airport, cityServed, Athens)",Athens_International_Airport,cityServed,Athens,"(Athens_International_Airport, regionServed, Athens)",Athens_International_Airport,regionServed,Athens
+ont_3_airport_test_54,MISSING,,"(Athens_International_Airport, elevationAboveTheSeaLevelInMetres, 94)",Athens_International_Airport,elevationAboveTheSeaLevelInMetres,94,,,,
+ont_3_airport_test_54,EXTRA,,,,,,"(Athens_International_Airport, runwayLength, 94)",Athens_International_Airport,runwayLength,94
+ont_3_airport_test_55,EXACT,1.00,"(Athens_International_Airport, location, Spata)",Athens_International_Airport,location,Spata,"(Athens_International_Airport, location, Spata)",Athens_International_Airport,location,Spata
+ont_3_airport_test_55,SEMANTIC,0.99,"(Athens_International_Airport, runwayLength, 3800.0)",Athens_International_Airport,runwayLength,3800.0,"(Athens_International_Airport, runwayLength, 3800)",Athens_International_Airport,runwayLength,3800
+ont_3_airport_test_55,SEMANTIC,0.97,"(Athens_International_Airport, cityServed, Athens)",Athens_International_Airport,cityServed,Athens,"(Athens_International_Airport, city, Athens)",Athens_International_Airport,city,Athens
+ont_3_airport_test_56,EXACT,1.00,"(Athens_International_Airport, runwayLength, 4000.0)",Athens_International_Airport,runwayLength,4000.0,"(Athens_International_Airport, runwayLength, 4000.0)",Athens_International_Airport,runwayLength,4000.0
+ont_3_airport_test_56,EXACT,1.00,"(Athens_International_Airport, location, Spata)",Athens_International_Airport,location,Spata,"(Athens_International_Airport, location, Spata)",Athens_International_Airport,location,Spata
+ont_3_airport_test_56,SEMANTIC,0.99,"(Athens_International_Airport, cityServed, Athens)",Athens_International_Airport,cityServed,Athens,"(Athens_International_Airport, regionServed, Athens)",Athens_International_Airport,regionServed,Athens
+ont_3_airport_test_57,SEMANTIC,0.96,"(Agra_Airport, operatingOrganisation, Indian_Air_Force)",Agra_Airport,operatingOrganisation,Indian_Air_Force,"(Agra_Airport, owner, Indian_Air_Force)",Agra_Airport,owner,Indian_Air_Force
+ont_3_airport_test_57,MISSING,,"(Indian_Air_Force, transportAircraft, Boeing_C-17_Globemaster_III)",Indian_Air_Force,transportAircraft,Boeing_C-17_Globemaster_III,,,,
+ont_3_airport_test_57,MISSING,,"(Indian_Air_Force, aircraftHelicopter, HAL_Light_Combat_Helicopter)",Indian_Air_Force,aircraftHelicopter,HAL_Light_Combat_Helicopter,,,,
+ont_3_airport_test_58,SEMANTIC,0.95,"(Afonso_Pena_International_Airport, operatingOrganisation, Infraero)",Afonso_Pena_International_Airport,operatingOrganisation,Infraero,"(Afonso_Pena_International_Airport, owner, Infraero)",Afonso_Pena_International_Airport,owner,Infraero
+ont_3_airport_test_58,MISSING,,"(Infraero, location, Brasília)",Infraero,location,Brasília,,,,
+ont_3_airport_test_58,MISSING,,"(Afonso_Pena_International_Airport, elevationAboveTheSeaLevel, 911.0)",Afonso_Pena_International_Airport,elevationAboveTheSeaLevel,911.0,,,,
+ont_3_airport_test_58,EXTRA,,,,,,"(Afonso_Pena_International_Airport, runwayLength, 911)",Afonso_Pena_International_Airport,runwayLength,911
+ont_3_airport_test_58,EXTRA,,,,,,"(Afonso_Pena_International_Airport, location, Brasília)",Afonso_Pena_International_Airport,location,Brasília
+ont_3_airport_test_59,SEMANTIC,0.94,"(Ardmore_Airport_(New_Zealand), 2ndRunwaySurfaceType, Poaceae)",Ardmore_Airport_(New_Zealand),2ndRunwaySurfaceType,Poaceae,"(Ardmore_Airport_(New_Zealand), class, Poaceae)",Ardmore_Airport_(New_Zealand),class,Poaceae
+ont_3_airport_test_59,MISSING,,"(Poaceae, class, Monocotyledon)",Poaceae,class,Monocotyledon,,,,
+ont_3_airport_test_59,MISSING,,"(Poaceae, order, Poales)",Poaceae,order,Poales,,,,
+ont_3_airport_test_59,EXTRA,,,,,,"(Ardmore_Airport_(New_Zealand), country, New_Zealand)",Ardmore_Airport_(New_Zealand),country,New_Zealand
+ont_3_airport_test_6,MISSING,,"(Adirondack_Regional_Airport, cityServed, Saranac_Lake,_New_York)",Adirondack_Regional_Airport,cityServed,"Saranac_Lake,_New_York",,,,
+ont_3_airport_test_6,MISSING,,"(Adirondack_Regional_Airport, elevationAboveTheSeaLevel, 507)",Adirondack_Regional_Airport,elevationAboveTheSeaLevel,507,,,,
+ont_3_airport_test_6,MISSING,,"(Adirondack_Regional_Airport, cityServed, Lake_Placid,_New_York)",Adirondack_Regional_Airport,cityServed,"Lake_Placid,_New_York",,,,
+ont_3_airport_test_60,EXACT,1.00,"(Poaceae, class, Monocotyledon)",Poaceae,class,Monocotyledon,"(Poaceae, class, Monocotyledon)",Poaceae,class,Monocotyledon
+ont_3_airport_test_60,EXACT,1.00,"(Poaceae, division, Flowering_plant)",Poaceae,division,Flowering_plant,"(Poaceae, division, Flowering_plant)",Poaceae,division,Flowering_plant
+ont_3_airport_test_60,MISSING,,"(Alderney_Airport, 1stRunwaySurfaceType, Poaceae)",Alderney_Airport,1stRunwaySurfaceType,Poaceae,,,,
+ont_3_airport_test_60,EXTRA,,,,,,"(Alderney_Airport, class, Poaceae)",Alderney_Airport,class,Poaceae
+ont_3_airport_test_61,MISSING,,"(Alderney_Airport, 1stRunwaySurfaceType, Poaceae)",Alderney_Airport,1stRunwaySurfaceType,Poaceae,,,,
+ont_3_airport_test_61,MISSING,,"(Poaceae, order, Commelinids)",Poaceae,order,Commelinids,,,,
+ont_3_airport_test_61,MISSING,,"(Poaceae, division, Flowering_plant)",Poaceae,division,Flowering_plant,,,,
+ont_3_airport_test_61,EXTRA,,,,,,"(Alderney_Airport, class, poaceae)",Alderney_Airport,class,poaceae
+ont_3_airport_test_62,MISSING,,"(Poaceae, order, Poales)",Poaceae,order,Poales,,,,
+ont_3_airport_test_62,MISSING,,"(Alderney_Airport, 1stRunwaySurfaceType, Poaceae)",Alderney_Airport,1stRunwaySurfaceType,Poaceae,,,,
+ont_3_airport_test_62,MISSING,,"(Poaceae, division, Flowering_plant)",Poaceae,division,Flowering_plant,,,,
+ont_3_airport_test_62,EXTRA,,,,,,"(Alderney_Airport, class, Poaceae)",Alderney_Airport,class,Poaceae
+ont_3_airport_test_63,SEMANTIC,0.94,"(Ardmore_Airport_(New_Zealand), 2ndRunwaySurfaceType, Poaceae)",Ardmore_Airport_(New_Zealand),2ndRunwaySurfaceType,Poaceae,"(Ardmore_Airport_(New_Zealand), class, Poaceae)",Ardmore_Airport_(New_Zealand),class,Poaceae
+ont_3_airport_test_63,MISSING,,"(Poaceae, order, Poales)",Poaceae,order,Poales,,,,
+ont_3_airport_test_63,MISSING,,"(Poaceae, division, Flowering_plant)",Poaceae,division,Flowering_plant,,,,
+ont_3_airport_test_64,SEMANTIC,0.94,"(Ardmore_Airport_(New_Zealand), 2ndRunwaySurfaceType, Poaceae)",Ardmore_Airport_(New_Zealand),2ndRunwaySurfaceType,Poaceae,"(Ardmore_Airport_(New_Zealand), class, Poaceae)",Ardmore_Airport_(New_Zealand),class,Poaceae
+ont_3_airport_test_64,MISSING,,"(Poaceae, order, Commelinids)",Poaceae,order,Commelinids,,,,
+ont_3_airport_test_64,MISSING,,"(Poaceae, division, Flowering_plant)",Poaceae,division,Flowering_plant,,,,
+ont_3_airport_test_64,EXTRA,,,,,,"(Ardmore_Airport_(New_Zealand), country, New_Zealand)",Ardmore_Airport_(New_Zealand),country,New_Zealand
+ont_3_airport_test_65,SEMANTIC,0.99,"(Adirondack_Regional_Airport, cityServed, Saranac_Lake,_New_York)",Adirondack_Regional_Airport,cityServed,"Saranac_Lake,_New_York","(Adirondack_Regional_Airport, regionServed, Saranac_Lake,_New_York)",Adirondack_Regional_Airport,regionServed,"Saranac_Lake,_New_York"
+ont_3_airport_test_65,MISSING,,"(Harrietstown,_New_York, isPartOf, United_States)","Harrietstown,_New_York",isPartOf,United_States,,,,
+ont_3_airport_test_65,MISSING,,"(Saranac_Lake,_New_York, isPartOf, Harrietstown,_New_York)","Saranac_Lake,_New_York",isPartOf,"Harrietstown,_New_York",,,,
+ont_3_airport_test_65,EXTRA,,,,,,"(Adirondack_Regional_Airport, regionServed, New_York_(state))",Adirondack_Regional_Airport,regionServed,New_York_(state)
+ont_3_airport_test_65,EXTRA,,,,,,"(Adirondack_Regional_Airport, country, United_States)",Adirondack_Regional_Airport,country,United_States
+ont_3_airport_test_66,SEMANTIC,0.98,"(Adirondack_Regional_Airport, cityServed, Saranac_Lake,_New_York)",Adirondack_Regional_Airport,cityServed,"Saranac_Lake,_New_York","(Adirondack_Regional_Airport, city, Saranac_Lake,_New_York)",Adirondack_Regional_Airport,city,"Saranac_Lake,_New_York"
+ont_3_airport_test_66,MISSING,,"(Saranac_Lake,_New_York, isPartOf, Harrietstown,_New_York)","Saranac_Lake,_New_York",isPartOf,"Harrietstown,_New_York",,,,
+ont_3_airport_test_66,MISSING,,"(Harrietstown,_New_York, isPartOf, New_York)","Harrietstown,_New_York",isPartOf,New_York,,,,
+ont_3_airport_test_67,SEMANTIC,0.96,"(Saranac_Lake,_New_York, isPartOf, Essex_County,_New_York)","Saranac_Lake,_New_York",isPartOf,"Essex_County,_New_York","(Saranac_Lake,_New_York, isPartOf, New_York_(state))","Saranac_Lake,_New_York",isPartOf,New_York_(state)
+ont_3_airport_test_67,SEMANTIC,0.98,"(Adirondack_Regional_Airport, cityServed, Saranac_Lake,_New_York)",Adirondack_Regional_Airport,cityServed,"Saranac_Lake,_New_York","(Adirondack_Regional_Airport, city, Saranac_Lake,_New_York)",Adirondack_Regional_Airport,city,"Saranac_Lake,_New_York"
+ont_3_airport_test_67,MISSING,,"(Saranac_Lake,_New_York, isPartOf, Harrietstown,_New_York)","Saranac_Lake,_New_York",isPartOf,"Harrietstown,_New_York",,,,
+ont_3_airport_test_67,EXTRA,,,,,,"(Harrietstown,_New_York, isPartOf, New_York_(state))","Harrietstown,_New_York",isPartOf,New_York_(state)
+ont_3_airport_test_67,EXTRA,,,,,,"(Essex_County,_New_York, division, New_York_(state))","Essex_County,_New_York",division,New_York_(state)
+ont_3_airport_test_68,SEMANTIC,0.94,"(Adirondack_Regional_Airport, cityServed, Saranac_Lake,_New_York)",Adirondack_Regional_Airport,cityServed,"Saranac_Lake,_New_York","(Adirondack_Regional_Airport, regionServed, New_York_(state))",Adirondack_Regional_Airport,regionServed,New_York_(state)
+ont_3_airport_test_68,MISSING,,"(Saranac_Lake,_New_York, isPartOf, United_States)","Saranac_Lake,_New_York",isPartOf,United_States,,,,
+ont_3_airport_test_68,MISSING,,"(Saranac_Lake,_New_York, isPartOf, Harrietstown,_New_York)","Saranac_Lake,_New_York",isPartOf,"Harrietstown,_New_York",,,,
+ont_3_airport_test_68,EXTRA,,,,,,"(Adirondack_Regional_Airport, country, United_States)",Adirondack_Regional_Airport,country,United_States
+ont_3_airport_test_69,SEMANTIC,0.98,"(Adirondack_Regional_Airport, cityServed, Saranac_Lake,_New_York)",Adirondack_Regional_Airport,cityServed,"Saranac_Lake,_New_York","(Adirondack_Regional_Airport, city, Saranac_Lake,_New_York)",Adirondack_Regional_Airport,city,"Saranac_Lake,_New_York"
+ont_3_airport_test_69,MISSING,,"(Saranac_Lake,_New_York, isPartOf, United_States)","Saranac_Lake,_New_York",isPartOf,United_States,,,,
+ont_3_airport_test_69,MISSING,,"(Saranac_Lake,_New_York, isPartOf, Essex_County,_New_York)","Saranac_Lake,_New_York",isPartOf,"Essex_County,_New_York",,,,
+ont_3_airport_test_69,EXTRA,,,,,,"(Adirondack_Regional_Airport, regionServed, New_York_(state))",Adirondack_Regional_Airport,regionServed,New_York_(state)
+ont_3_airport_test_69,EXTRA,,,,,,"(Adirondack_Regional_Airport, regionServed, Essex_County,_New_York)",Adirondack_Regional_Airport,regionServed,"Essex_County,_New_York"
+ont_3_airport_test_69,EXTRA,,,,,,"(Adirondack_Regional_Airport, country, United_States)",Adirondack_Regional_Airport,country,United_States
+ont_3_airport_test_7,SEMANTIC,0.99,"(Afonso_Pena_International_Airport, cityServed, Curitiba)",Afonso_Pena_International_Airport,cityServed,Curitiba,"(Afonso_Pena_International_Airport, regionServed, Curitiba)",Afonso_Pena_International_Airport,regionServed,Curitiba
+ont_3_airport_test_7,MISSING,,"(Curitiba, isPartOf, South_Region,_Brazil)",Curitiba,isPartOf,"South_Region,_Brazil",,,,
+ont_3_airport_test_7,MISSING,,"(Curitiba, isPartOf, Paraná_(state))",Curitiba,isPartOf,Paraná_(state),,,,
+ont_3_airport_test_7,EXTRA,,,,,,"(Afonso_Pena_International_Airport, country, Brazil)",Afonso_Pena_International_Airport,country,Brazil
+ont_3_airport_test_70,SEMANTIC,0.99,"(Abilene_Regional_Airport, cityServed, Abilene,_Texas)",Abilene_Regional_Airport,cityServed,"Abilene,_Texas","(Abilene_Regional_Airport, regionServed, Abilene,_Texas)",Abilene_Regional_Airport,regionServed,"Abilene,_Texas"
+ont_3_airport_test_70,MISSING,,"(Abilene,_Texas, country, United_States)","Abilene,_Texas",country,United_States,,,,
+ont_3_airport_test_70,MISSING,,"(Abilene,_Texas, isPartOf, Taylor_County,_Texas)","Abilene,_Texas",isPartOf,"Taylor_County,_Texas",,,,
+ont_3_airport_test_70,EXTRA,,,,,,"(Abilene_Regional_Airport, country, United_States)",Abilene_Regional_Airport,country,United_States
+ont_3_airport_test_70,EXTRA,,,,,,"(Abilene_Regional_Airport, regionServed, Texas_(steamboat))",Abilene_Regional_Airport,regionServed,Texas_(steamboat)
+ont_3_airport_test_70,EXTRA,,,,,,"(Abilene_Regional_Airport, ceremonialCounty, Taylor_County,_Texas)",Abilene_Regional_Airport,ceremonialCounty,"Taylor_County,_Texas"
+ont_3_airport_test_71,EXACT,1.00,"(Adirondack_Regional_Airport, runwayLength, 1219.0)",Adirondack_Regional_Airport,runwayLength,1219.0,"(Adirondack_Regional_Airport, runwayLength, 1219.0)",Adirondack_Regional_Airport,runwayLength,1219.0
+ont_3_airport_test_71,SEMANTIC,0.98,"(Adirondack_Regional_Airport, cityServed, Saranac_Lake,_New_York)",Adirondack_Regional_Airport,cityServed,"Saranac_Lake,_New_York","(Adirondack_Regional_Airport, city, Saranac_Lake,_New_York)",Adirondack_Regional_Airport,city,"Saranac_Lake,_New_York"
+ont_3_airport_test_71,SEMANTIC,0.99,"(Adirondack_Regional_Airport, cityServed, Lake_Placid,_New_York)",Adirondack_Regional_Airport,cityServed,"Lake_Placid,_New_York","(Adirondack_Regional_Airport, regionServed, Lake_Placid,_New_York)",Adirondack_Regional_Airport,regionServed,"Lake_Placid,_New_York"
+ont_3_airport_test_71,EXTRA,,,,,,"(Adirondack_Regional_Airport, regionServed, New_York_(state))",Adirondack_Regional_Airport,regionServed,New_York_(state)
+ont_3_airport_test_72,EXACT,1.00,"(Agra_Airport, icaoLocationIdentifier, VIAG)",Agra_Airport,icaoLocationIdentifier,VIAG,"(Agra_Airport, icaoLocationIdentifier, viag)",Agra_Airport,icaoLocationIdentifier,viag
+ont_3_airport_test_72,SEMANTIC,0.96,"(Agra_Airport, operatingOrganisation, Indian_Air_Force)",Agra_Airport,operatingOrganisation,Indian_Air_Force,"(Agra_Airport, owner, Indian_Air_Force)",Agra_Airport,owner,Indian_Air_Force
+ont_3_airport_test_72,SEMANTIC,0.99,"(Agra_Airport, location, India)",Agra_Airport,location,India,"(Agra_Airport, country, India)",Agra_Airport,country,India
+ont_3_airport_test_73,SEMANTIC,0.99,"(Alderney_Airport, runwayLength, 733.0)",Alderney_Airport,runwayLength,733.0,"(Alderney_Airport, runwayLength, 733)",Alderney_Airport,runwayLength,733
+ont_3_airport_test_73,SEMANTIC,0.96,"(Alderney_Airport, cityServed, Alderney)",Alderney_Airport,cityServed,Alderney,"(Alderney_Airport, city, Alderney)",Alderney_Airport,city,Alderney
+ont_3_airport_test_73,MISSING,,"(Alderney_Airport, 1stRunwaySurfaceType, Poaceae)",Alderney_Airport,1stRunwaySurfaceType,Poaceae,,,,
+ont_3_airport_test_73,EXTRA,,,,,,"(Alderney_Airport, class, poaceae)",Alderney_Airport,class,poaceae
+ont_3_airport_test_74,SEMANTIC,0.99,"(Alpena_County_Regional_Airport, runwayLength, 1533.0)",Alpena_County_Regional_Airport,runwayLength,1533.0,"(Alpena_County_Regional_Airport, runwayLength, 1533)",Alpena_County_Regional_Airport,runwayLength,1533
+ont_3_airport_test_74,MISSING,,"(Alpena_County_Regional_Airport, location, Wilson_Township,_Alpena_County,_Michigan)",Alpena_County_Regional_Airport,location,"Wilson_Township,_Alpena_County,_Michigan",,,,
+ont_3_airport_test_74,MISSING,,"(Alpena_County_Regional_Airport, elevationAboveTheSeaLevel, 210)",Alpena_County_Regional_Airport,elevationAboveTheSeaLevel,210,,,,
+ont_3_airport_test_74,EXTRA,,,,,,"(Alpena_County_Regional_Airport, location, Wilson_Township,_Cass_County,_Minnesota)",Alpena_County_Regional_Airport,location,"Wilson_Township,_Cass_County,_Minnesota"
+ont_3_airport_test_74,EXTRA,,,,,,"(Alpena_County_Regional_Airport, runwayLength, 210)",Alpena_County_Regional_Airport,runwayLength,210
+ont_3_airport_test_74,EXTRA,,,,,,"(Alpena_County_Regional_Airport, ceremonialCounty, Alpena_County,_Michigan)",Alpena_County_Regional_Airport,ceremonialCounty,"Alpena_County,_Michigan"
+ont_3_airport_test_74,EXTRA,,,,,,"(Alpena_County_Regional_Airport, regionServed, Michigan)",Alpena_County_Regional_Airport,regionServed,Michigan
+ont_3_airport_test_75,SEMANTIC,1.00,"(Angola_International_Airport, runwayLength, 4000.0)",Angola_International_Airport,runwayLength,4000.0,"(Angola_International_Airport, runwayLength, 4000)",Angola_International_Airport,runwayLength,4000
+ont_3_airport_test_75,MISSING,,"(Angola_International_Airport, location, Ícolo_e_Bengo)",Angola_International_Airport,location,Ícolo_e_Bengo,,,,
+ont_3_airport_test_75,MISSING,,"(Ícolo_e_Bengo, country, Angola)",Ícolo_e_Bengo,country,Angola,,,,
+ont_3_airport_test_76,SEMANTIC,0.97,"(Angola_International_Airport, runwayName, South Runway)",Angola_International_Airport,runwayName,South Runway,"(Angola_International_Airport, icaoLocationIdentifier, south runway)",Angola_International_Airport,icaoLocationIdentifier,south runway
+ont_3_airport_test_76,MISSING,,"(Angola_International_Airport, location, Ícolo_e_Bengo)",Angola_International_Airport,location,Ícolo_e_Bengo,,,,
+ont_3_airport_test_76,MISSING,,"(Ícolo_e_Bengo, country, Angola)",Ícolo_e_Bengo,country,Angola,,,,
+ont_3_airport_test_76,EXTRA,,,,,,"(Angola_International_Airport, country, Angola)",Angola_International_Airport,country,Angola
+ont_3_airport_test_77,SEMANTIC,0.94,"(Ardmore_Airport_(New_Zealand), 3rdRunwaySurfaceType, Poaceae)",Ardmore_Airport_(New_Zealand),3rdRunwaySurfaceType,Poaceae,"(Ardmore_Airport_(New_Zealand), class, Poaceae)",Ardmore_Airport_(New_Zealand),class,Poaceae
+ont_3_airport_test_77,MISSING,,"(Poaceae, order, Poales)",Poaceae,order,Poales,,,,
+ont_3_airport_test_77,MISSING,,"(Poaceae, division, Flowering_plant)",Poaceae,division,Flowering_plant,,,,
+ont_3_airport_test_78,SEMANTIC,0.97,"(Athens_International_Airport, cityServed, Athens)",Athens_International_Airport,cityServed,Athens,"(Athens_International_Airport, city, Athens)",Athens_International_Airport,city,Athens
+ont_3_airport_test_78,MISSING,,"(Athens, country, Greece)",Athens,country,Greece,,,,
+ont_3_airport_test_78,MISSING,,"(Greece, leader, Alexis_Tsipras)",Greece,leader,Alexis_Tsipras,,,,
+ont_3_airport_test_78,EXTRA,,,,,,"(Athens_International_Airport, country, Greece)",Athens_International_Airport,country,Greece
+ont_3_airport_test_79,SEMANTIC,0.94,"(Ardmore_Airport_(New_Zealand), 2ndRunwaySurfaceType, Poaceae)",Ardmore_Airport_(New_Zealand),2ndRunwaySurfaceType,Poaceae,"(Ardmore_Airport_(New_Zealand), class, Poaceae)",Ardmore_Airport_(New_Zealand),class,Poaceae
+ont_3_airport_test_79,MISSING,,"(Poaceae, class, Monocotyledon)",Poaceae,class,Monocotyledon,,,,
+ont_3_airport_test_79,MISSING,,"(Poaceae, order, Commelinids)",Poaceae,order,Commelinids,,,,
+ont_3_airport_test_79,EXTRA,,,,,,"(Ardmore_Airport_(New_Zealand), country, New_Zealand)",Ardmore_Airport_(New_Zealand),country,New_Zealand
+ont_3_airport_test_8,SEMANTIC,0.99,"(Afonso_Pena_International_Airport, cityServed, Curitiba)",Afonso_Pena_International_Airport,cityServed,Curitiba,"(Afonso_Pena_International_Airport, regionServed, Curitiba)",Afonso_Pena_International_Airport,regionServed,Curitiba
+ont_3_airport_test_8,MISSING,,"(Curitiba, leader, Democratic_Labour_Party_(Brazil))",Curitiba,leader,Democratic_Labour_Party_(Brazil),,,,
+ont_3_airport_test_8,MISSING,,"(Curitiba, isPartOf, Paraná_(state))",Curitiba,isPartOf,Paraná_(state),,,,
+ont_3_airport_test_8,EXTRA,,,,,,"(Afonso_Pena_International_Airport, country, Brazil)",Afonso_Pena_International_Airport,country,Brazil
+ont_3_airport_test_9,SEMANTIC,0.99,"(Afonso_Pena_International_Airport, cityServed, Curitiba)",Afonso_Pena_International_Airport,cityServed,Curitiba,"(Afonso_Pena_International_Airport, regionServed, Curitiba)",Afonso_Pena_International_Airport,regionServed,Curitiba
+ont_3_airport_test_9,MISSING,,"(Curitiba, leader, Democratic_Labour_Party_(Brazil))",Curitiba,leader,Democratic_Labour_Party_(Brazil),,,,
+ont_3_airport_test_9,MISSING,,"(Curitiba, isPartOf, South_Region,_Brazil)",Curitiba,isPartOf,"South_Region,_Brazil",,,,
