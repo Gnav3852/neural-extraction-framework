@@ -27,10 +27,10 @@ except ImportError:
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
     from NEF import EnhancedNEFPipeline, _bootstrap_gemini_client
 
-# Text2KGBench paths (relative to this script)
+# Data paths: use NEF/Dataset (test + ontologies)
 SCRIPT_DIR = Path(__file__).parent
 TEXT2KG_ROOT = SCRIPT_DIR / "Text2KGBench" / "Text2KGBench-main"
-DBPEDIA_DATA = TEXT2KG_ROOT / "data" / "dbpedia_webnlg"
+DBPEDIA_DATA = SCRIPT_DIR / "Dataset"
 
 # DBpedia ontology list
 DBPEDIA_ONTOLOGIES = [
@@ -704,10 +704,10 @@ Examples:
         traceback.print_exc()
         return 1
     
-    # Check Text2KGBench data directory
+    # Check Dataset directory (test + ontologies)
     if not DBPEDIA_DATA.exists():
-        print(f"❌ ERROR: Text2KGBench data directory not found: {DBPEDIA_DATA}")
-        print(f"   Please ensure Text2KGBench is located at: {TEXT2KG_ROOT}")
+        print(f"❌ ERROR: Dataset directory not found: {DBPEDIA_DATA}")
+        print(f"   Please ensure Dataset/ (test/, ground_truth/, ontologies/) exists under NEF.")
         return 1
     
     # Create output directory

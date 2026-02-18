@@ -370,8 +370,7 @@ def main():
                       "avg_onto_conf": f"{global_onto_conf / num_ontologies:.2f}",
                       "avg_sub_halluc": f"{global_sub_halluc / num_ontologies:.2f}",
                       "avg_rel_halluc": f"{global_rel_halluc / num_ontologies:.2f}",
-                      "avg_obj_halluc": f"{global_obj_halluc / num_ontologies:.2f}",
-                      "onto_list": eval_inputs['onto_list']}
+                      "avg_obj_halluc": f"{global_obj_halluc / num_ontologies:.2f}"}
     append_jsonl(global_metrics, eval_inputs['avg_out_file'])
 
 

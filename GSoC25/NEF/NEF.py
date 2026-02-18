@@ -728,7 +728,7 @@ class EnhancedNEFPipeline:
     def _extract_triples(self, text: str, ontology_context: Optional[str] = None, debug: bool = False) -> list[dict]:
         """
         Strict extractor:
-        - forces lowercase S/P/O
+        - preserves subject/object casing as in the text (for entity linking)
         - enforces 1–3 word predicates
         - confidence ≥ 0.5
         - REQUIRES Redis grounding for subject
@@ -745,7 +745,7 @@ SYSTEM: Return ONLY a valid JSON array (no prose, no markdown fences).
 
 Task: Read the text and extract up to 5 RDF triples with confidence.{ontology_section}
 You MUST:
-- Make subject, predicate, and object ALL lowercase.
+- Write subject, predicate, and object exactly as they appear in the text (preserve capitalization; do not lowercase).
 - Use the most complete, consistent entity names.
 - Resolve clear pronouns (he, she, it, they, this/that, here/there) to the correct entity; if unclear, do not guess.
 - Keep predicates extremely concise: 1–3 words max (e.g., "founded", "born in", "wrote").

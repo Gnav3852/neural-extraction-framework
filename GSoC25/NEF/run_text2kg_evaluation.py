@@ -78,7 +78,7 @@ def create_eval_config():
 
 
 def create_custom_results_config(results_dir: Path) -> Optional[str]:
-    """Create a temporary config for a custom results directory (predictions only; uses benchmark ground truth)."""
+    """Create a temporary config for a custom results directory (predictions only; uses NEF/Dataset for gt and ontologies)."""
     results_dir = results_dir.resolve()
     eval_files = list(results_dir.glob("ont_*_nef_responses.jsonl"))
     if not eval_files:
@@ -91,12 +91,14 @@ def create_custom_results_config(results_dir: Path) -> Optional[str]:
             onto_list.append(onto_id)
     if not onto_list:
         return None
+    # Paths relative to EVAL_DIR (Text2KGBench src/evaluation): NEF/Dataset is ../../../../../Dataset
+    dataset_rel = "../../../../../Dataset"
     config = {
         "onto_list": sorted(set(onto_list)),
         "path_patterns": {
             "sys": os.path.relpath(results_dir / "ont_$$onto$$_nef_responses.jsonl", EVAL_DIR),
-            "gt": "../../data/dbpedia_webnlg/ground_truth/ont_$$onto$$_ground_truth.jsonl",
-            "onto": "../../data/dbpedia_webnlg/ontologies/$$onto$$_ontology.json",
+            "gt": f"{dataset_rel}/ground_truth/ont_$$onto$$_ground_truth.jsonl",
+            "onto": f"{dataset_rel}/ontologies/$$onto$$_ontology.json",
             "output": os.path.relpath(results_dir / "eval_metrics" / "ont_$$onto$$_eval_results.jsonl", EVAL_DIR)
         },
         "avg_out_file": os.path.relpath(results_dir / "eval_metrics" / "avg_eval_results.jsonl", EVAL_DIR)
@@ -374,7 +376,8 @@ def generate_comparison_tables_for_ontologies(config_data: dict, base_dir: Path,
         if custom_results_dir is not None:
             gt_file = (EVAL_DIR / path_patterns.get("gt", "").replace("$$onto$$", onto_id)).resolve()
             pred_file = (EVAL_DIR / path_patterns.get("sys", "").replace("$$onto$$", onto_id)).resolve()
-            output_dir = custom_results_dir.resolve()
+            output_dir = (custom_results_dir / "Tables").resolve()
+            output_dir.mkdir(parents=True, exist_ok=True)
         elif use_eval_folder:
             gt_file = EVAL_FOLDER / f"ont_{onto_id}_ground_truth.jsonl"
             pred_file = EVAL_FOLDER / f"ont_{onto_id}_nef_responses.jsonl"
