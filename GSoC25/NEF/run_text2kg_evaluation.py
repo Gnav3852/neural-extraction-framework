@@ -172,7 +172,7 @@ def compute_triple_embeddings(triple_strings: List[str]) -> Dict[str, np.ndarray
             if (i + 1) % 20 == 0:
                 print(f"      Embedded {i+1}/{len(triple_strings)}...")
             resp = client.models.embed_content(
-                model="models/embedding-001",
+                model="models/gemini-embedding-001",
                 contents=triple,
                 config=types.EmbedContentConfig(task_type="SEMANTIC_SIMILARITY")
             )
