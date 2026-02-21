@@ -91,8 +91,8 @@ def create_custom_results_config(results_dir: Path) -> Optional[str]:
             onto_list.append(onto_id)
     if not onto_list:
         return None
-    # Paths relative to EVAL_DIR (Text2KGBench src/evaluation): NEF/Dataset is ../../../../../Dataset
-    dataset_rel = "../../../../../Dataset"
+    # Paths relative to EVAL_DIR (Text2KGBench src/evaluation): NEF/Dataset is ../../../../Dataset
+    dataset_rel = "../../../../Dataset"
     config = {
         "onto_list": sorted(set(onto_list)),
         "path_patterns": {
