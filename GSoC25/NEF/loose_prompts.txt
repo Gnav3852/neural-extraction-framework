@@ -1,0 +1,40 @@
+# NEF Loose Prompts (complement to rigid baseline)
+# Use these for prompt-swap experiments: minimal instructions, same output format.
+
+================================================================================
+LOOSE DISAMBIGUATION PROMPT
+================================================================================
+
+Given the context and the candidate options below, pick the one subject (by index), one predicate (by URI), and one object (by index) that best fit the meaning of the context.
+
+Allowed predicate URIs (with semantic information):
+{pred_list_text}
+
+Subject candidates (choose by INDEX):
+{subj_list_text}
+
+Object candidates (choose by INDEX):
+{obj_list_text}
+
+Context:
+{context}
+
+Reply with JSON on one line only:
+{"subject_index": 0, "predicate": "URI", "object_index": 0}
+
+================================================================================
+LOOSE EXTRACTION PROMPT
+================================================================================
+
+Extract RDF triples (subject, predicate, object) from the text below. Return a JSON array of objects. Preserve how entities and predicates are written in the text.
+
+Each object in the array should have: subject, predicate, object. You may optionally include "confidence" (0–1) and "object_type" ("entity", "literal", "number", or "date").
+
+Output format:
+[
+  {"subject": "...", "predicate": "...", "object": "...", "object_type": "entity|literal|number|date", "confidence": 0.0},
+  ...
+]
+
+Text:
+{text}
