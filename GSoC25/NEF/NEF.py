@@ -741,23 +741,15 @@ class EnhancedNEFPipeline:
             ontology_section = f"\n{ontology_context}\n"
         
         prompt = f"""
-SYSTEM: Return ONLY a valid JSON array (no prose, no markdown fences).
+Extract RDF triples (subject, predicate, object) from the text below. Return a JSON array of objects. Preserve how entities and predicates are written in the text.
 
-Task: Read the text and extract up to 5 RDF triples with confidence.{ontology_section}
-You MUST:
-- Write subject, predicate, and object exactly as they appear in the text (preserve capitalization; do not lowercase).
-- Use the most complete, consistent entity names.
-- Resolve clear pronouns (he, she, it, they, this/that, here/there) to the correct entity; if unclear, do not guess.
-- Keep predicates extremely concise: 1–3 words max (e.g., "founded", "born in", "wrote").
-- Include only items with confidence ≥ 0.5.
-- If ontology context is provided, extract triples according to the ontology relations and concepts.
-- For DATE objects: Normalize to YYYY-MM-DD format (e.g., "Aug. 16, 1920" → "1920-08-16", "January 1, 2000" → "2000-01-01").
-- For NUMBER objects: Remove commas and use digits only (e.g., "15,100,000,000" → "15100000000", "5,594" → "5594").
-- Optionally include "object_type" field: "entity", "literal", "number", or "date" to help processing.
+Include object_type for each triple: "entity", "literal", "number", or "date". You may include "confidence" (0–1).
+- For DATE objects: use YYYY-MM-DD.
+- For NUMBER objects: digits only, no commas.
 
-Output schema:
+Output format:
 [
-  {{"subject":"...", "predicate":"...", "object":"...", "object_type":"entity|literal|number|date", "confidence":0.0}},
+  {"subject": "...", "predicate": "...", "object": "...", "object_type": "entity|literal|number|date", "confidence": 0.0},
   ...
 ]
 
