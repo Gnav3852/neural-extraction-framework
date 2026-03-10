@@ -749,7 +749,7 @@ Include object_type for each triple: "entity", "literal", "number", or "date". Y
 
 Output format:
 [
-  {"subject": "...", "predicate": "...", "object": "...", "object_type": "entity|literal|number|date", "confidence": 0.0},
+  {{"subject": "...", "predicate": "...", "object": "...", "object_type": "entity|literal|number|date", "confidence": 0.0}},
   ...
 ]
 
