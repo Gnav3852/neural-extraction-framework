@@ -137,12 +137,23 @@ def main():
     global_p = sum(m["semantic_precision"] for m in semantic_by_onto.values()) / n_onto
     global_r = sum(m["semantic_recall"] for m in semantic_by_onto.values()) / n_onto
     global_f1 = sum(m["semantic_f1"] for m in semantic_by_onto.values()) / n_onto
+    global_updated = False
     for entry in entries:
-        if entry.get("id") == "global":
+        if entry.get("id") == "global" or entry.get("type") == "global":
             entry["semantic_precision"] = f"{global_p:.2f}"
             entry["semantic_recall"] = f"{global_r:.2f}"
             entry["semantic_f1"] = f"{global_f1:.2f}"
+            global_updated = True
             break
+    if not global_updated:
+        # Append global line if none found (e.g. different file format)
+        entries.append({
+            "id": "global",
+            "type": "global",
+            "semantic_precision": f"{global_p:.2f}",
+            "semantic_recall": f"{global_r:.2f}",
+            "semantic_f1": f"{global_f1:.2f}",
+        })
 
     # Write back
     with open(AVG_FILE, "w", encoding="utf-8") as f:

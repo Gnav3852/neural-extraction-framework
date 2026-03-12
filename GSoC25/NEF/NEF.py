@@ -494,7 +494,7 @@ class LLMDisambiguator:
         subj_list_text = self._fmt_indexed(subject_candidates)
         obj_list_text  = self._fmt_indexed(object_candidates)
 
-        prompt = f"""Pick the best RDF triple using ONLY these options.
+        prompt = f"""Given the context and the candidate options below, pick the one subject (by index), one predicate (by URI), and one object (by index) that best fit the meaning of the context.
 
 Allowed predicate URIs (with semantic information):
 {pred_list_text}
@@ -505,18 +505,11 @@ Subject candidates (choose by INDEX):
 Object candidates (choose by INDEX):
 {obj_list_text}
 
-Context (helps decide, but does NOT add new options):
+Context:
 {context}
 
-Return ONLY strict JSON on one line (no prose):
+Reply with JSON on one line only:
 {{"subject_index": 0, "predicate": "URI", "object_index": 0}}
-Rules:
-- "predicate" MUST be exactly one URI from Allowed predicate URIs.
-- "subject_index" MUST be an integer index from Subject candidates.
-- "object_index" MUST be an integer index from Object candidates.
-- Choose the predicate that best matches the semantic meaning in the context.
-- Consider the domain and range constraints when selecting.
-- Do not invent or modify URIs. Do not swap roles.
 """
 
         # Call the model (Gemini client style)

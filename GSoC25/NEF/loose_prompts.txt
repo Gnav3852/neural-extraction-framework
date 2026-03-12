@@ -22,6 +22,33 @@ Context:
 Reply with JSON on one line only:
 {"subject_index": 0, "predicate": "URI", "object_index": 0}
 
+
+RIDGID
+
+Pick the best RDF triple using ONLY these options.
+
+Allowed predicate URIs (with semantic information):
+{pred_list_text}
+
+Subject candidates (choose by INDEX):
+{subj_list_text}
+
+Object candidates (choose by INDEX):
+{obj_list_text}
+
+Context (helps decide, but does NOT add new options):
+{context}
+
+Return ONLY strict JSON on one line (no prose):
+{{"subject_index": 0, "predicate": "URI", "object_index": 0}}
+Rules:
+- "predicate" MUST be exactly one URI from Allowed predicate URIs.
+- "subject_index" MUST be an integer index from Subject candidates.
+- "object_index" MUST be an integer index from Object candidates.
+- Choose the predicate that best matches the semantic meaning in the context.
+- Consider the domain and range constraints when selecting.
+- Do not invent or modify URIs. Do not swap roles.
+
 ================================================================================
 LOOSE EXTRACTION PROMPT
 ================================================================================
