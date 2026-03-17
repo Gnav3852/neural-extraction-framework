@@ -26,6 +26,18 @@ def _bootstrap_gemini_client(api_key: Optional[str]) -> "genai.Client":
         raise RuntimeError("No Gemini API key found. Pass --api-key or set GEMINI_API_KEY.")
     return genai.Client(api_key=key)
 
+# =============== OpenRouter (OpenAI-compatible) for reasoning ===============
+def _bootstrap_openrouter_client(api_key: Optional[str] = None):
+    """Return OpenAI client configured for OpenRouter. Requires: pip install openai"""
+    key = api_key or os.getenv("OPENROUTER_API_KEY")
+    if not key:
+        raise RuntimeError("No OpenRouter API key. Set OPENROUTER_API_KEY or pass --openrouter-api-key.")
+    try:
+        from openai import OpenAI
+    except ImportError:
+        raise RuntimeError("OpenRouter requires: pip install openai")
+    return OpenAI(base_url="https://openrouter.ai/api/v1", api_key=key)
+
 # =============== Utils ===============
 
 _YEAR = re.compile(r"^\d{4}$")
@@ -356,6 +368,7 @@ class LLMDisambiguator:
         predicate_threshold: float = 0.5,
         new_predicate_namespace: str | None = None,
         verbose: bool = True,
+        generate_fn: Optional[Any] = None,
         **kwargs,  # absorb any unexpected args from the pipeline
     ):
         self.client = client
@@ -363,7 +376,7 @@ class LLMDisambiguator:
         self.thr = float(predicate_threshold)
         self.new_predicate_namespace = new_predicate_namespace
         self.verbose = verbose
-        # Optionally stash the rest if you ever want to inspect them:
+        self.generate_fn = generate_fn  # if set, use this for generation instead of client
         self._extra_kwargs = kwargs
 
     # ------------------------ helpers ------------------------
@@ -494,7 +507,7 @@ class LLMDisambiguator:
         subj_list_text = self._fmt_indexed(subject_candidates)
         obj_list_text  = self._fmt_indexed(object_candidates)
 
-        prompt = f"""Given the context and the candidate options below, pick the one subject (by index), one predicate (by URI), and one object (by index) that best fit the meaning of the context.
+        prompt = f"""Pick the best RDF triple using ONLY these options.
 
 Allowed predicate URIs (with semantic information):
 {pred_list_text}
@@ -505,21 +518,33 @@ Subject candidates (choose by INDEX):
 Object candidates (choose by INDEX):
 {obj_list_text}
 
-Context:
+Context (helps decide, but does NOT add new options):
 {context}
 
-Reply with JSON on one line only:
+Return ONLY strict JSON on one line (no prose):
 {{"subject_index": 0, "predicate": "URI", "object_index": 0}}
+Rules:
+- "predicate" MUST be exactly one URI from Allowed predicate URIs.
+- "subject_index" MUST be an integer index from Subject candidates.
+- "object_index" MUST be an integer index from Object candidates.
+- Choose the predicate that best matches the semantic meaning in the context.
+- Consider the domain and range constraints when selecting.
+- Do not invent or modify URIs. Do not swap roles.
 """
 
-        # Call the model (Gemini client style)
-        resp = self.client.models.generate_content(
-            model=self.model_name,
-            contents=prompt,
-            config={"response_mime_type": "application/json"},
-        )
-
-        data = self._get_json(getattr(resp, "text", None))
+        # Call the model (via reasoner abstraction or Gemini)
+        if self.generate_fn:
+            response_text = self.generate_fn(
+                prompt, self.model_name, json_mode=True, json_object=True, temperature=None
+            )
+        else:
+            resp = self.client.models.generate_content(
+                model=self.model_name,
+                contents=prompt,
+                config={"response_mime_type": "application/json"},
+            )
+            response_text = getattr(resp, "text", None)
+        data = self._get_json(response_text)
 
         # Validate predicate
         pred_uri = data.get("predicate", "")
@@ -584,6 +609,10 @@ class EnhancedNEFPipeline:
         redis_password: Optional[str] = None,
         allowed_predicates: Optional[List[str]] = None,
         verbose: bool = True,
+        reasoner: str = "gemini",
+        reasoner_model: Optional[str] = None,
+        openrouter_client: Optional[Any] = None,
+        temperature: Optional[float] = 0,
     ):
         self.redis_host = redis_host or os.getenv("NEF_REDIS_HOST")
         self.redis_port = (
@@ -591,30 +620,31 @@ class EnhancedNEFPipeline:
             if redis_port is not None
             else int(os.getenv("NEF_REDIS_PORT"))
         )
-        # No hardcoded password; stays None unless provided
         self.redis_password = (
             redis_password
             if redis_password is not None
             else os.getenv("NEF_REDIS_PASSWORD")
         )
         self.verbose = verbose
-        self.client = client  # for extractor too
+        self.client = client  # always Gemini for embeddings
         self.require_redis_grounding = True  # strict
-        
-        # Store allowed predicates (set of URIs for fast lookup)
-        # If provided, only predicates matching these URIs will be considered
+        self._temperature = temperature
+
+        # Reasoner: "gemini" uses client.models.generate_content; "openrouter" uses openrouter_client
+        self._reasoner = (reasoner or "gemini").lower()
+        self._reasoner_model = reasoner_model or llm_model
+        self._openrouter_client = openrouter_client
+        self._reasoner_call = self._make_reasoner_call()
+
         self.allowed_predicates: Optional[set] = None
         if allowed_predicates:
             self.allowed_predicates = set(allowed_predicates)
             if self.verbose:
                 _safe_print(f"✓ Ontology filtering enabled: {len(self.allowed_predicates)} allowed predicates")
-        
-        # Store predicate metadata (label, domain, range) for better disambiguation
+
         self.predicate_metadata: Optional[Dict[str, Dict[str, str]]] = None
-        
-        # Store ontology context for extraction phase
         self.ontology_context: Optional[str] = None
-        
+
         self.redis_el = RedisEntityLinking(
             host=redis_host, port=int(redis_port), password=redis_password, verbose=verbose
         )
@@ -627,13 +657,49 @@ class EnhancedNEFPipeline:
         )
         self.llm = LLMDisambiguator(
             client=self.client,
-            model_name=llm_model,
+            model_name=self._reasoner_model,
             predicate_threshold=predicate_threshold,
             new_predicate_namespace=new_predicate_namespace,
             verbose=verbose,
+            generate_fn=self._reasoner_call,
         )
         if self.verbose:
             _safe_print("✓ Enhanced NEF Pipeline initialized")
+            if self._reasoner == "openrouter":
+                _safe_print(f"   Reasoner: OpenRouter ({self._reasoner_model})")
+            else:
+                _safe_print(f"   Reasoner: Gemini ({self._reasoner_model})")
+
+    def _make_reasoner_call(self):
+        """Return a callable (prompt, model_id, json_mode=True, json_object=True, temperature=None) -> str.
+        json_object: True for disambiguation (JSON object), False for extraction (JSON array). OpenRouter only sets response_format when json_object=True."""
+        if self._reasoner == "openrouter":
+            oc = self._openrouter_client
+            if oc is None:
+                raise RuntimeError("OpenRouter reasoner requires openrouter_client.")
+            def _call(prompt: str, model_id: str, json_mode: bool = True, json_object: bool = True, temperature: Optional[float] = None) -> str:
+                kwargs = {"model": model_id, "messages": [{"role": "user", "content": prompt}]}
+                if json_mode and json_object:
+                    kwargs["response_format"] = {"type": "json_object"}
+                t = temperature if temperature is not None else self._temperature
+                if t is not None:
+                    kwargs["temperature"] = t
+                resp = oc.chat.completions.create(**kwargs)
+                if resp.choices:
+                    return (resp.choices[0].message.content or "") or ""
+                return ""
+            return _call
+        else:
+            client = self.client
+            temp = self._temperature
+            def _call(prompt: str, model_id: str, json_mode: bool = True, json_object: bool = True, temperature: Optional[float] = None) -> str:
+                config = {"response_mime_type": "application/json"} if json_mode else {}
+                t = temperature if temperature is not None else temp
+                if t is not None:
+                    config["temperature"] = t
+                resp = client.models.generate_content(model=model_id, contents=prompt, config=config)
+                return getattr(resp, "text", None) or ""
+            return _call
 
     # helpers: lowercase + spacing only
     def _lc_space(self, s: str) -> str:
@@ -765,22 +831,16 @@ Text:
                 _safe_print(f"[DIAG] Prompt length: {len(prompt)} characters")
             
             step1_start = time.time()
-            resp = self.client.models.generate_content(
-                model="gemini-2.5-flash",
-                contents=prompt,
-                config={"response_mime_type": "application/json"},
-            )
+            response_text = self._reasoner_call(
+                prompt, self._reasoner_model, json_mode=True, json_object=False, temperature=self._temperature
+            ) or "[]"
             step1_time = time.time() - step1_start
-            
+
             if self.verbose:
-                _safe_print(f"[DIAG] Step 1: generate_content returned in {step1_time:.2f}s")
-            
-            # DIAGNOSTIC: Check resp.text access
-            if self.verbose:
-                _safe_print("[DIAG] Step 2: About to access resp.text...")
-            
+                _safe_print(f"[DIAG] Step 1: reasoner returned in {step1_time:.2f}s")
+
             step2_start = time.time()
-            response_text = resp.text or "[]"
+            response_text = (response_text or "").strip() or "[]"
             step2_time = time.time() - step2_start
             
             if self.verbose:
@@ -1094,8 +1154,12 @@ def parse_args(argv: Optional[List[str]] = None) -> argparse.Namespace:
 
     # Gemini / models
     p.add_argument("--api-key", type=str, default=None, help="Gemini API key (or set GEMINI_API_KEY).")
-    p.add_argument("--llm-model", type=str, default="gemini-2.5-flash", help="LLM for disambiguation/generation.")
-    p.add_argument("--embed-model", type=str, default="gemini-embedding-001", help="Embedding model name.")
+    p.add_argument("--llm-model", type=str, default="gemini-2.5-flash", help="LLM for disambiguation/generation (Gemini model name when reasoner=gemini).")
+    p.add_argument("--reasoner", choices=["gemini", "openrouter"], default="gemini", help="Reasoning backend: gemini (default) or openrouter.")
+    p.add_argument("--reasoner-model", type=str, default="openai/gpt-4o-mini", help="Model id for reasoning (e.g. openai/gpt-4o-mini for OpenRouter). Ignored when reasoner=gemini.")
+    p.add_argument("--openrouter-api-key", type=str, default=None, help="OpenRouter API key (or set OPENROUTER_API_KEY). Required when --reasoner=openrouter.")
+    p.add_argument("--temperature", type=float, default=0, help="Sampling temperature for extraction and disambiguation (default 0).")
+    p.add_argument("--embed-model", type=str, default="gemini-embedding-001", help="Embedding model name (always Gemini for now).")
     p.add_argument("--predicate-threshold", type=float, default=0.5, help="Similarity threshold to accept a predicate.")
     p.add_argument("--new-predicate-namespace", type=str, default="http://nef.local/rel/",
                    help="Namespace for generated predicates.")
@@ -1158,6 +1222,17 @@ def main(argv: Optional[List[str]] = None) -> int:
         sys.stderr.write(f"ERROR: {e}\n")
         return 2
 
+    openrouter_client = None
+    if args.reasoner == "openrouter":
+        try:
+            openrouter_client = _bootstrap_openrouter_client(args.openrouter_api_key)
+        except Exception as e:
+            sys.stderr.write(f"ERROR: {e}\n")
+            return 2
+        reasoner_model = args.reasoner_model
+    else:
+        reasoner_model = args.llm_model
+
     # Build pipeline
     try:
         pipe = EnhancedNEFPipeline(
@@ -1171,8 +1246,11 @@ def main(argv: Optional[List[str]] = None) -> int:
             redis_port=args.redis_port,
             redis_password=args.redis_password,
             verbose=args.verbose,
+            reasoner=args.reasoner,
+            reasoner_model=reasoner_model,
+            openrouter_client=openrouter_client,
+            temperature=args.temperature,
         )
-        # ensure retriever uses requested embed model
         pipe.pred.embed_model = args.embed_model
     except Exception as e:
         sys.stderr.write(f"ERROR initializing pipeline: {e}\n")
@@ -1216,6 +1294,11 @@ if __name__ == "__main__":
               python nef_cli.py -s "Marie Curie discovered radium" \\
                 --redis-host 127.0.0.1 --redis-port 6379 --redis-password secret \\
                 --llm-model gemini-2.5-flash --predicate-threshold 0.6 \\
+                --embeddings embeddings.npy --predicates predicates.csv
+
+              # Use OpenRouter (e.g. GPT-4o mini) for reasoning; Gemini still used for embeddings
+              export OPENROUTER_API_KEY=your_key
+              python nef_cli.py -s "Steve Jobs founded Apple" --reasoner openrouter --reasoner-model openai/gpt-4o-mini \\
                 --embeddings embeddings.npy --predicates predicates.csv
         """))
     sys.exit(main())

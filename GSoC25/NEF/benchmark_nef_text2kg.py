@@ -21,11 +21,11 @@ from datetime import datetime
 
 # Import NEF components
 try:
-    from NEF import EnhancedNEFPipeline, _bootstrap_gemini_client
+    from NEF import EnhancedNEFPipeline, _bootstrap_gemini_client, _bootstrap_openrouter_client
 except ImportError:
     # Fallback if running from different directory
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-    from NEF import EnhancedNEFPipeline, _bootstrap_gemini_client
+    from NEF import EnhancedNEFPipeline, _bootstrap_gemini_client, _bootstrap_openrouter_client
 
 # Data paths: use NEF/Dataset (test + ontologies)
 SCRIPT_DIR = Path(__file__).parent
@@ -619,6 +619,9 @@ Examples:
 
   # Run quietly (minimal output)
   python benchmark_nef_text2kg.py --quiet
+
+  # Use OpenRouter (e.g. GPT-4o mini) for extraction/disambiguation; Gemini still used for embeddings
+  python benchmark_nef_text2kg.py --output-dir ExpRes/OpenAI --reasoner openrouter --reasoner-model openai/gpt-4o-mini
         """
     )
     parser.add_argument(
@@ -670,6 +673,36 @@ Examples:
         help="Gemini API key (default: GEMINI_API_KEY env var or prompt)"
     )
     parser.add_argument(
+        "--reasoner",
+        choices=["gemini", "openrouter"],
+        default="gemini",
+        help="Reasoning backend: gemini (default) or openrouter. Embeddings always use Gemini.",
+    )
+    parser.add_argument(
+        "--reasoner-model",
+        type=str,
+        default="openai/gpt-4o-mini",
+        help="Model for reasoning when --reasoner=openrouter (e.g. openai/gpt-4o-mini). Ignored when reasoner=gemini.",
+    )
+    parser.add_argument(
+        "--openrouter-api-key",
+        type=str,
+        default=None,
+        help="OpenRouter API key (or set OPENROUTER_API_KEY). Required when --reasoner=openrouter.",
+    )
+    parser.add_argument(
+        "--llm-model",
+        type=str,
+        default="gemini-2.5-flash",
+        help="Gemini model for reasoning when --reasoner=gemini (default: gemini-2.5-flash).",
+    )
+    parser.add_argument(
+        "--temperature",
+        type=float,
+        default=0,
+        help="Sampling temperature for extraction and disambiguation (default 0).",
+    )
+    parser.add_argument(
         "--show-triples",
         action="store_true",
         help="Show detailed triple information for each sentence"
@@ -681,7 +714,18 @@ Examples:
     )
     
     args = parser.parse_args()
-    
+
+    # OpenRouter: bootstrap only when reasoner=openrouter
+    openrouter_client = None
+    reasoner_model = args.llm_model
+    if args.reasoner == "openrouter":
+        try:
+            openrouter_client = _bootstrap_openrouter_client(args.openrouter_api_key)
+            reasoner_model = args.reasoner_model
+        except Exception as e:
+            print(f"❌ ERROR: {e}")
+            return 1
+
     # Initialize NEF pipeline
     print("="*80)
     print("🚀 Initializing NEF Pipeline")
@@ -692,10 +736,15 @@ Examples:
             client=client,
             embeddings_path=args.embeddings,
             predicates_path=args.predicates,
+            llm_model=args.llm_model,
             redis_host=args.redis_host,
             redis_port=args.redis_port,
             redis_password=args.redis_password if args.redis_password else None,
             verbose=not args.quiet,
+            reasoner=args.reasoner,
+            reasoner_model=reasoner_model,
+            openrouter_client=openrouter_client,
+            temperature=args.temperature,
         )
         print("✅ NEF Pipeline initialized successfully\n")
     except Exception as e:
