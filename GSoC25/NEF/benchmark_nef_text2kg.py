@@ -620,8 +620,8 @@ Examples:
   # Run quietly (minimal output)
   python benchmark_nef_text2kg.py --quiet
 
-  # Use OpenRouter (e.g. GPT-4o mini) for extraction/disambiguation; Gemini still used for embeddings
-  python benchmark_nef_text2kg.py --output-dir ExpRes/OpenAI --reasoner openrouter --reasoner-model openai/gpt-4o-mini
+  # Use OpenRouter (e.g. Qwen 2.5 72B Instruct) for extraction/disambiguation; Gemini still used for embeddings
+  python benchmark_nef_text2kg.py --output-dir ExpRes/Qwen --reasoner openrouter --reasoner-model qwen/qwen-2.5-72b-instruct
         """
     )
     parser.add_argument(
@@ -681,8 +681,8 @@ Examples:
     parser.add_argument(
         "--reasoner-model",
         type=str,
-        default="openai/gpt-4o-mini",
-        help="Model for reasoning when --reasoner=openrouter (e.g. openai/gpt-4o-mini). Ignored when reasoner=gemini.",
+        default="qwen/qwen-2.5-72b-instruct",
+        help="Model for reasoning when --reasoner=openrouter (e.g. qwen/qwen-2.5-72b-instruct). Ignored when reasoner=gemini.",
     )
     parser.add_argument(
         "--openrouter-api-key",

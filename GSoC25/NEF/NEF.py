@@ -1156,7 +1156,7 @@ def parse_args(argv: Optional[List[str]] = None) -> argparse.Namespace:
     p.add_argument("--api-key", type=str, default=None, help="Gemini API key (or set GEMINI_API_KEY).")
     p.add_argument("--llm-model", type=str, default="gemini-2.5-flash", help="LLM for disambiguation/generation (Gemini model name when reasoner=gemini).")
     p.add_argument("--reasoner", choices=["gemini", "openrouter"], default="gemini", help="Reasoning backend: gemini (default) or openrouter.")
-    p.add_argument("--reasoner-model", type=str, default="openai/gpt-4o-mini", help="Model id for reasoning (e.g. openai/gpt-4o-mini for OpenRouter). Ignored when reasoner=gemini.")
+    p.add_argument("--reasoner-model", type=str, default="qwen/qwen-2.5-72b-instruct", help="Model id for reasoning (e.g. qwen/qwen-2.5-72b-instruct for OpenRouter). Ignored when reasoner=gemini.")
     p.add_argument("--openrouter-api-key", type=str, default=None, help="OpenRouter API key (or set OPENROUTER_API_KEY). Required when --reasoner=openrouter.")
     p.add_argument("--temperature", type=float, default=0, help="Sampling temperature for extraction and disambiguation (default 0).")
     p.add_argument("--embed-model", type=str, default="gemini-embedding-001", help="Embedding model name (always Gemini for now).")
@@ -1298,7 +1298,7 @@ if __name__ == "__main__":
 
               # Use OpenRouter (e.g. GPT-4o mini) for reasoning; Gemini still used for embeddings
               export OPENROUTER_API_KEY=your_key
-              python nef_cli.py -s "Steve Jobs founded Apple" --reasoner openrouter --reasoner-model openai/gpt-4o-mini \\
+              python nef_cli.py -s "Steve Jobs founded Apple" --reasoner openrouter --reasoner-model qwen/qwen-2.5-72b-instruct \\
                 --embeddings embeddings.npy --predicates predicates.csv
         """))
     sys.exit(main())
