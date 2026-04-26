@@ -6,8 +6,16 @@ and stores all results under ExpRes/<name>/ (e.g. ExpRes/ExpOne).
 Uses GSoC25/NEF/Dataset for test, ground_truth, and ontologies.
 
 Usage:
+  # Default (Gemini reasoner)
   python run_experiment.py --name ExpOne
-  python run_experiment.py -n MyRun
+
+  # OpenRouter (e.g. Qwen 2.5 72B Instruct)
+  export OPENROUTER_API_KEY=your_key
+  python run_experiment.py -n Qwen --reasoner openrouter --reasoner-model qwen/qwen-2.5-72b-instruct
+
+  # OpenAI direct (e.g. GPT-4o-mini)
+  export OPENAI_API_KEY=your_key
+  python run_experiment.py -n OpenAI_4omini --reasoner openai --reasoner-model gpt-4o-mini
 """
 
 import argparse
@@ -52,6 +60,45 @@ def main():
         action="store_true",
         help="Enable semantic matching when generating comparison tables (slower; needs google-genai, numpy, scikit-learn)",
     )
+
+    # Forwarded to benchmark_nef_text2kg.py
+    parser.add_argument(
+        "--reasoner",
+        choices=["gemini", "openrouter", "openai"],
+        default=None,
+        help="Reasoning backend to forward to the benchmark step (gemini default, openrouter, or openai).",
+    )
+    parser.add_argument(
+        "--reasoner-model",
+        type=str,
+        default=None,
+        help="Model id for --reasoner=openrouter or --reasoner=openai (e.g. qwen/qwen-2.5-72b-instruct, gpt-4o-mini).",
+    )
+    parser.add_argument(
+        "--openrouter-api-key",
+        type=str,
+        default=None,
+        help="OpenRouter API key (or set OPENROUTER_API_KEY). Required when --reasoner=openrouter.",
+    )
+    parser.add_argument(
+        "--openai-api-key",
+        type=str,
+        default=None,
+        help="OpenAI API key (or set OPENAI_API_KEY). Required when --reasoner=openai.",
+    )
+    parser.add_argument(
+        "--llm-model",
+        type=str,
+        default=None,
+        help="Gemini model used when --reasoner=gemini (e.g. gemini-2.5-flash).",
+    )
+    parser.add_argument(
+        "--temperature",
+        type=float,
+        default=None,
+        help="Sampling temperature forwarded to the benchmark.",
+    )
+
     args = parser.parse_args()
 
     exp_dir = EXPRES_DIR / args.name
@@ -63,12 +110,25 @@ def main():
     # 1) Benchmark
     if not args.skip_benchmark:
         print("\n[1/3] Running benchmark_nef_text2kg.py ...")
+        bench_cmd = [
+            sys.executable,
+            str(SCRIPT_DIR / "benchmark_nef_text2kg.py"),
+            "--output-dir", str(exp_dir),
+        ]
+        if args.reasoner:
+            bench_cmd += ["--reasoner", args.reasoner]
+        if args.reasoner_model:
+            bench_cmd += ["--reasoner-model", args.reasoner_model]
+        if args.openrouter_api_key:
+            bench_cmd += ["--openrouter-api-key", args.openrouter_api_key]
+        if args.openai_api_key:
+            bench_cmd += ["--openai-api-key", args.openai_api_key]
+        if args.llm_model:
+            bench_cmd += ["--llm-model", args.llm_model]
+        if args.temperature is not None:
+            bench_cmd += ["--temperature", str(args.temperature)]
         ret = subprocess.run(
-            [
-                sys.executable,
-                str(SCRIPT_DIR / "benchmark_nef_text2kg.py"),
-                "--output-dir", str(exp_dir),
-            ],
+            bench_cmd,
             cwd=str(SCRIPT_DIR),
         )
         if ret.returncode != 0:

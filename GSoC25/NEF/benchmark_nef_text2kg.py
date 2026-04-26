@@ -21,11 +21,11 @@ from datetime import datetime
 
 # Import NEF components
 try:
-    from NEF import EnhancedNEFPipeline, _bootstrap_gemini_client, _bootstrap_openrouter_client
+    from NEF import EnhancedNEFPipeline, _bootstrap_gemini_client, _bootstrap_openrouter_client, _bootstrap_openai_client
 except ImportError:
     # Fallback if running from different directory
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-    from NEF import EnhancedNEFPipeline, _bootstrap_gemini_client, _bootstrap_openrouter_client
+    from NEF import EnhancedNEFPipeline, _bootstrap_gemini_client, _bootstrap_openrouter_client, _bootstrap_openai_client
 
 # Data paths: use NEF/Dataset (test + ontologies)
 SCRIPT_DIR = Path(__file__).parent
@@ -622,6 +622,9 @@ Examples:
 
   # Use OpenRouter (e.g. Qwen 2.5 72B Instruct) for extraction/disambiguation; Gemini still used for embeddings
   python benchmark_nef_text2kg.py --output-dir ExpRes/Qwen --reasoner openrouter --reasoner-model qwen/qwen-2.5-72b-instruct
+
+  # Use OpenAI directly (e.g. GPT-4o mini) for extraction/disambiguation; Gemini still used for embeddings
+  python benchmark_nef_text2kg.py --output-dir ExpRes/OpenAI_4omini --reasoner openai --reasoner-model gpt-4o-mini
         """
     )
     parser.add_argument(
@@ -674,21 +677,27 @@ Examples:
     )
     parser.add_argument(
         "--reasoner",
-        choices=["gemini", "openrouter"],
+        choices=["gemini", "openrouter", "openai"],
         default="gemini",
-        help="Reasoning backend: gemini (default) or openrouter. Embeddings always use Gemini.",
+        help="Reasoning backend: gemini (default), openrouter, or openai (direct). Embeddings always use Gemini.",
     )
     parser.add_argument(
         "--reasoner-model",
         type=str,
         default="qwen/qwen-2.5-72b-instruct",
-        help="Model for reasoning when --reasoner=openrouter (e.g. qwen/qwen-2.5-72b-instruct). Ignored when reasoner=gemini.",
+        help="Model for reasoning when --reasoner=openrouter or openai (e.g. qwen/qwen-2.5-72b-instruct, gpt-4o-mini). Ignored when reasoner=gemini.",
     )
     parser.add_argument(
         "--openrouter-api-key",
         type=str,
         default=None,
         help="OpenRouter API key (or set OPENROUTER_API_KEY). Required when --reasoner=openrouter.",
+    )
+    parser.add_argument(
+        "--openai-api-key",
+        type=str,
+        default=None,
+        help="OpenAI API key (or set OPENAI_API_KEY). Required when --reasoner=openai.",
     )
     parser.add_argument(
         "--llm-model",
@@ -715,12 +724,20 @@ Examples:
     
     args = parser.parse_args()
 
-    # OpenRouter: bootstrap only when reasoner=openrouter
+    # Reasoner clients: bootstrap only the one we'll use
     openrouter_client = None
+    openai_client = None
     reasoner_model = args.llm_model
     if args.reasoner == "openrouter":
         try:
             openrouter_client = _bootstrap_openrouter_client(args.openrouter_api_key)
+            reasoner_model = args.reasoner_model
+        except Exception as e:
+            print(f"❌ ERROR: {e}")
+            return 1
+    elif args.reasoner == "openai":
+        try:
+            openai_client = _bootstrap_openai_client(args.openai_api_key)
             reasoner_model = args.reasoner_model
         except Exception as e:
             print(f"❌ ERROR: {e}")
@@ -744,6 +761,7 @@ Examples:
             reasoner=args.reasoner,
             reasoner_model=reasoner_model,
             openrouter_client=openrouter_client,
+            openai_client=openai_client,
             temperature=args.temperature,
         )
         print("✅ NEF Pipeline initialized successfully\n")

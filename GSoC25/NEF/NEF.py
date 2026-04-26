@@ -38,6 +38,18 @@ def _bootstrap_openrouter_client(api_key: Optional[str] = None):
         raise RuntimeError("OpenRouter requires: pip install openai")
     return OpenAI(base_url="https://openrouter.ai/api/v1", api_key=key)
 
+# =============== OpenAI (direct) for reasoning ===============
+def _bootstrap_openai_client(api_key: Optional[str] = None):
+    """Return OpenAI client pointed at OpenAI's own endpoint. Requires: pip install openai"""
+    key = api_key or os.getenv("OPENAI_API_KEY")
+    if not key:
+        raise RuntimeError("No OpenAI API key. Set OPENAI_API_KEY or pass --openai-api-key.")
+    try:
+        from openai import OpenAI
+    except ImportError:
+        raise RuntimeError("OpenAI requires: pip install openai")
+    return OpenAI(api_key=key)
+
 # =============== Utils ===============
 
 _YEAR = re.compile(r"^\d{4}$")
@@ -612,6 +624,7 @@ class EnhancedNEFPipeline:
         reasoner: str = "gemini",
         reasoner_model: Optional[str] = None,
         openrouter_client: Optional[Any] = None,
+        openai_client: Optional[Any] = None,
         temperature: Optional[float] = 0,
     ):
         self.redis_host = redis_host or os.getenv("NEF_REDIS_HOST")
@@ -630,10 +643,12 @@ class EnhancedNEFPipeline:
         self.require_redis_grounding = True  # strict
         self._temperature = temperature
 
-        # Reasoner: "gemini" uses client.models.generate_content; "openrouter" uses openrouter_client
+        # Reasoner: "gemini" uses client.models.generate_content; "openrouter" uses openrouter_client;
+        # "openai" uses openai_client (direct OpenAI endpoint, OpenAI SDK).
         self._reasoner = (reasoner or "gemini").lower()
         self._reasoner_model = reasoner_model or llm_model
         self._openrouter_client = openrouter_client
+        self._openai_client = openai_client
         self._reasoner_call = self._make_reasoner_call()
 
         self.allowed_predicates: Optional[set] = None
@@ -667,6 +682,8 @@ class EnhancedNEFPipeline:
             _safe_print("✓ Enhanced NEF Pipeline initialized")
             if self._reasoner == "openrouter":
                 _safe_print(f"   Reasoner: OpenRouter ({self._reasoner_model})")
+            elif self._reasoner == "openai":
+                _safe_print(f"   Reasoner: OpenAI ({self._reasoner_model})")
             else:
                 _safe_print(f"   Reasoner: Gemini ({self._reasoner_model})")
 
@@ -685,6 +702,22 @@ class EnhancedNEFPipeline:
                 if t is not None:
                     kwargs["temperature"] = t
                 resp = oc.chat.completions.create(**kwargs)
+                if resp.choices:
+                    return (resp.choices[0].message.content or "") or ""
+                return ""
+            return _call
+        elif self._reasoner == "openai":
+            oai = self._openai_client
+            if oai is None:
+                raise RuntimeError("OpenAI reasoner requires openai_client.")
+            def _call(prompt: str, model_id: str, json_mode: bool = True, json_object: bool = True, temperature: Optional[float] = None) -> str:
+                kwargs = {"model": model_id, "messages": [{"role": "user", "content": prompt}]}
+                if json_mode and json_object:
+                    kwargs["response_format"] = {"type": "json_object"}
+                t = temperature if temperature is not None else self._temperature
+                if t is not None:
+                    kwargs["temperature"] = t
+                resp = oai.chat.completions.create(**kwargs)
                 if resp.choices:
                     return (resp.choices[0].message.content or "") or ""
                 return ""
@@ -1155,9 +1188,10 @@ def parse_args(argv: Optional[List[str]] = None) -> argparse.Namespace:
     # Gemini / models
     p.add_argument("--api-key", type=str, default=None, help="Gemini API key (or set GEMINI_API_KEY).")
     p.add_argument("--llm-model", type=str, default="gemini-2.5-flash", help="LLM for disambiguation/generation (Gemini model name when reasoner=gemini).")
-    p.add_argument("--reasoner", choices=["gemini", "openrouter"], default="gemini", help="Reasoning backend: gemini (default) or openrouter.")
-    p.add_argument("--reasoner-model", type=str, default="qwen/qwen-2.5-72b-instruct", help="Model id for reasoning (e.g. qwen/qwen-2.5-72b-instruct for OpenRouter). Ignored when reasoner=gemini.")
+    p.add_argument("--reasoner", choices=["gemini", "openrouter", "openai"], default="gemini", help="Reasoning backend: gemini (default), openrouter, or openai (direct).")
+    p.add_argument("--reasoner-model", type=str, default="qwen/qwen-2.5-72b-instruct", help="Model id for reasoning (e.g. qwen/qwen-2.5-72b-instruct for OpenRouter, gpt-4o-mini for OpenAI). Ignored when reasoner=gemini.")
     p.add_argument("--openrouter-api-key", type=str, default=None, help="OpenRouter API key (or set OPENROUTER_API_KEY). Required when --reasoner=openrouter.")
+    p.add_argument("--openai-api-key", type=str, default=None, help="OpenAI API key (or set OPENAI_API_KEY). Required when --reasoner=openai.")
     p.add_argument("--temperature", type=float, default=0, help="Sampling temperature for extraction and disambiguation (default 0).")
     p.add_argument("--embed-model", type=str, default="gemini-embedding-001", help="Embedding model name (always Gemini for now).")
     p.add_argument("--predicate-threshold", type=float, default=0.5, help="Similarity threshold to accept a predicate.")
@@ -1223,9 +1257,17 @@ def main(argv: Optional[List[str]] = None) -> int:
         return 2
 
     openrouter_client = None
+    openai_client = None
     if args.reasoner == "openrouter":
         try:
             openrouter_client = _bootstrap_openrouter_client(args.openrouter_api_key)
+        except Exception as e:
+            sys.stderr.write(f"ERROR: {e}\n")
+            return 2
+        reasoner_model = args.reasoner_model
+    elif args.reasoner == "openai":
+        try:
+            openai_client = _bootstrap_openai_client(args.openai_api_key)
         except Exception as e:
             sys.stderr.write(f"ERROR: {e}\n")
             return 2
@@ -1249,6 +1291,7 @@ def main(argv: Optional[List[str]] = None) -> int:
             reasoner=args.reasoner,
             reasoner_model=reasoner_model,
             openrouter_client=openrouter_client,
+            openai_client=openai_client,
             temperature=args.temperature,
         )
         pipe.pred.embed_model = args.embed_model
@@ -1299,6 +1342,11 @@ if __name__ == "__main__":
               # Use OpenRouter (e.g. GPT-4o mini) for reasoning; Gemini still used for embeddings
               export OPENROUTER_API_KEY=your_key
               python nef_cli.py -s "Steve Jobs founded Apple" --reasoner openrouter --reasoner-model qwen/qwen-2.5-72b-instruct \\
+                --embeddings embeddings.npy --predicates predicates.csv
+
+              # Use OpenAI directly (e.g. GPT-4o mini) for reasoning; Gemini still used for embeddings
+              export OPENAI_API_KEY=your_key
+              python nef_cli.py -s "Steve Jobs founded Apple" --reasoner openai --reasoner-model gpt-4o-mini \\
                 --embeddings embeddings.npy --predicates predicates.csv
         """))
     sys.exit(main())
