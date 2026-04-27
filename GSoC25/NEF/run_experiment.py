@@ -20,6 +20,12 @@ Usage:
   # 6-shot ICL with GPT-4o
   export OPENAI_API_KEY=your_key
   python run_experiment.py -n OpenAI_4o_6shot --reasoner openai --reasoner-model gpt-4o --shots 6 --semantic
+
+  # 6-shot + surface-form fallback (Lever 5: sentence-verbatim output when
+  # Redis grounding picks a zero-overlap URI; pairs well with the AWH-style
+  # redirect bug fix in NEF.RedisEntityLinking.lookup)
+  python run_experiment.py -n OpenAI_4o_6shot_sf --reasoner openai --reasoner-model gpt-4o \\
+      --shots 6 --surface-fallback --semantic
 """
 
 import argparse
@@ -121,6 +127,12 @@ def main():
         default=None,
         help="Override directory holding <id>_test_train_similarity.json files (forwarded).",
     )
+    parser.add_argument(
+        "--surface-fallback",
+        action="store_true",
+        help="Lever 5: emit the original LLM mention text when the resolved "
+             "URI shares zero tokens with the mention (forwarded to benchmark).",
+    )
 
     args = parser.parse_args()
 
@@ -156,6 +168,8 @@ def main():
             bench_cmd += ["--train-dir", args.train_dir]
         if args.similars_dir:
             bench_cmd += ["--similars-dir", args.similars_dir]
+        if args.surface_fallback:
+            bench_cmd += ["--surface-fallback"]
         ret = subprocess.run(
             bench_cmd,
             cwd=str(SCRIPT_DIR),

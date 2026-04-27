@@ -21,12 +21,24 @@ from datetime import datetime
 
 # Import NEF components
 try:
-    from NEF import EnhancedNEFPipeline, _bootstrap_gemini_client, _bootstrap_openrouter_client, _bootstrap_openai_client
+    from NEF import (
+        EnhancedNEFPipeline,
+        _bootstrap_gemini_client,
+        _bootstrap_openrouter_client,
+        _bootstrap_openai_client,
+        _mention_token_overlap,
+    )
     from few_shot_retriever import FewShotRetriever
 except ImportError:
     # Fallback if running from different directory
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-    from NEF import EnhancedNEFPipeline, _bootstrap_gemini_client, _bootstrap_openrouter_client, _bootstrap_openai_client
+    from NEF import (
+        EnhancedNEFPipeline,
+        _bootstrap_gemini_client,
+        _bootstrap_openrouter_client,
+        _bootstrap_openai_client,
+        _mention_token_overlap,
+    )
     from few_shot_retriever import FewShotRetriever
 
 # Data paths: use NEF/Dataset (test + ontologies)
@@ -201,6 +213,35 @@ def uri_to_entity_text(uri: str) -> str:
     return last.strip()
 
 
+def entity_text_with_fallback(
+    uri: str,
+    mention: str,
+    surface_fallback: bool,
+    is_literal: bool = False,
+) -> str:
+    """
+    Convert a grounded entity URI to its text label, with an optional
+    surface-form fallback (Lever 5).
+
+    When `surface_fallback` is True and the URI's local-name tokens have
+    zero overlap with the original LLM mention text, we emit the mention
+    text (with spaces -> underscores) instead of the canonical URI label.
+    This keeps the output sentence-verbatim for the eval substring metric
+    in cases where Redis/redirects still picked a wrong-but-confident URI
+    (e.g. an unfixed parent-topic redirect or a rare miss). The canonical
+    URI is still preserved in the pipeline meta for analysis.
+
+    Literals (numbers/dates) always pass through unchanged.
+    """
+    canonical = uri_to_entity_text(uri)
+    if not surface_fallback or is_literal or not mention:
+        return canonical
+    overlap = _mention_token_overlap(canonical, mention)
+    if overlap == 0.0:
+        return mention.strip().replace(" ", "_")
+    return canonical
+
+
 def uri_to_predicate_text(uri: str) -> str:
     """
     Convert predicate URI to text, preserving camelCase.
@@ -339,7 +380,8 @@ def run_nef_on_text2kg(
     output_file: Path,
     ontology_path: Optional[Path] = None,
     verbose: bool = True,
-    show_triples: bool = False
+    show_triples: bool = False,
+    surface_fallback: bool = False,
 ) -> Dict[str, Any]:
     """
     Run NEF on Text2KGBench test sentences and save results.
@@ -350,6 +392,10 @@ def run_nef_on_text2kg(
         output_file: Path to save NEF output (JSONL format)
         verbose: Show detailed progress
         show_triples: Show all triple details (verbose mode)
+        surface_fallback: When True, emit the original LLM mention text
+            (Lever 5) instead of the URI label whenever the resolved URI
+            has zero token overlap with the mention. Default False (keeps
+            output identical to legacy runs).
     
     Returns:
         Dictionary with statistics
@@ -501,12 +547,23 @@ def run_nef_on_text2kg(
                     s_uri = str(s_uri) if s_uri is not None else ""
                     p_uri = str(p_uri) if p_uri is not None else ""
                     o_uri = str(o_uri) if o_uri is not None else ""
-                    
-                    # Convert URIs to text, preserving format
-                    sub_text = uri_to_entity_text(s_uri)
+
+                    # Lever-5: pull the original LLM mention text (threaded
+                    # through pipeline meta) so the surface fallback can use
+                    # it. meta may legitimately be None on edge paths.
+                    meta = meta or {}
+                    sub_mention = meta.get("_mention_subject", "") or ""
+                    obj_mention = meta.get("_mention_object", "") or ""
+                    is_obj_literal = bool(meta.get("_is_literal", False))
+
+                    sub_text = entity_text_with_fallback(
+                        s_uri, sub_mention, surface_fallback, is_literal=False
+                    )
                     pred_text = uri_to_predicate_text(p_uri) if p_uri else ""
-                    obj_text = uri_to_entity_text(o_uri)  # Works for literals too
-                    
+                    obj_text = entity_text_with_fallback(
+                        o_uri, obj_mention, surface_fallback, is_literal=is_obj_literal
+                    )
+
                     if sub_text and pred_text and obj_text:
                         triples.append(format_triple_for_text2kg(sub_text, pred_text, obj_text))
                 
@@ -747,6 +804,16 @@ Examples:
         help="Show detailed triple information for each sentence"
     )
     parser.add_argument(
+        "--surface-fallback",
+        action="store_true",
+        help=(
+            "Lever 5: when the resolved URI has zero token overlap with the "
+            "LLM mention, emit the original mention text (sentence-verbatim) "
+            "instead of the URI label. Reduces metric-level hallucination "
+            "from edge-case grounding misses. Off by default."
+        ),
+    )
+    parser.add_argument(
         "--quiet",
         action="store_true",
         help="Minimal output (only summaries)"
@@ -857,7 +924,8 @@ Examples:
             output_file=output_file,
             ontology_path=ontology_file if ontology_file.exists() else None,
             verbose=not args.quiet,
-            show_triples=args.show_triples
+            show_triples=args.show_triples,
+            surface_fallback=args.surface_fallback,
         )
         
         stats["ontology"] = onto_id

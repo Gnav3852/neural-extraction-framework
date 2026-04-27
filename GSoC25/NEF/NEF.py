@@ -77,6 +77,35 @@ def _safe_print(*args, **kwargs):
     except Exception:
         sys.stdout.write((" ".join(map(str, args)) + "\n").encode("utf-8", "ignore").decode("utf-8"))
 
+# Token-overlap helpers used by Redis re-ranking (Lever 1) and the
+# surface-form fallback (Lever 5). Kept module-level so they're trivially
+# importable from benchmark_nef_text2kg.py.
+_TOKEN_RE = re.compile(r"[A-Za-z0-9]+")
+
+def _entity_name_tokens(uri_or_name: str) -> Set[str]:
+    """
+    Tokenize a URI's local name into a set of >=2-char lowercase tokens.
+    Splits on '_', '/', '#', drops disambiguation parens, and breaks
+    CamelCase (e.g. 'AWHEngineeringCollege' -> {'awh','engineering','college'}).
+    """
+    name = (uri_or_name or "").split("/")[-1].split("#")[-1]
+    name = name.split("(")[0]
+    name = name.replace("_", " ").replace(",", " ")
+    name = re.sub(r"([a-z])([A-Z])", r"\1 \2", name)
+    return {t.lower() for t in _TOKEN_RE.findall(name) if len(t) >= 2}
+
+def _mention_token_overlap(uri_or_name: str, mention: str) -> float:
+    """
+    Fraction of mention tokens that also appear in the URI's local name.
+    Returns 0.0 when the mention has no usable tokens (so we never crash
+    on empty / pure-punctuation mentions).
+    """
+    m = {t.lower() for t in _TOKEN_RE.findall(mention or "") if len(t) >= 2}
+    if not m:
+        return 0.0
+    u = _entity_name_tokens(uri_or_name)
+    return len(m & u) / len(m)
+
 # =============== Redis Entity Linking ===============
 
 class RedisEntityLinking:
@@ -231,11 +260,23 @@ class RedisEntityLinking:
                     found_any = True
                     for uri, v in raw.items():
                         try:
-                            canon = self._redirect(uri)  # db1 redirect if any
-                            counts[canon] = counts.get(canon, 0) + int(v)
+                            cnt = int(v)
                         except Exception:
-                            # If redirect fails, use original URI
-                            counts[uri] = counts.get(uri, 0) + int(v)
+                            continue
+                        # Lever-1 fix: keep the *pre-redirect* URI in the candidate
+                        # pool. DBpedia merges sub-articles into parent topics via
+                        # redirects (e.g. AWH_Engineering_College -> APJ_Abdul_
+                        # Kalam_Technological_University), and the old behaviour
+                        # destroyed the more specific URI before the disambiguator
+                        # ever saw it. Token-overlap re-ranking below picks the
+                        # right one without losing redirect-as-alias behaviour.
+                        counts[uri] = counts.get(uri, 0) + cnt
+                        try:
+                            canon = self._redirect(uri)
+                            if canon and canon != uri:
+                                counts[canon] = counts.get(canon, 0) + cnt
+                        except Exception:
+                            pass
                     
                     # Early exit: if we found results and have enough support, stop trying variants
                     if counts:
@@ -251,9 +292,21 @@ class RedisEntityLinking:
             result = []
         else:
             max_support = max(counts.values()) or 1
-            items = [(uri, c / max_support) for uri, c in counts.items() if (c / max_support) >= thr]
-            items.sort(key=lambda x: x[1], reverse=True)
-            result = items[:top_k]
+            # Lever-1 re-rank: primary key is mention token-overlap, secondary
+            # key is normalized support count. Mentions like "AWH Engineering
+            # College" beat parent-topic redirect targets (overlap=0) even when
+            # the parent has higher aggregated count, while no-overlap
+            # mention/URI pairs (typo redirects, anchor aliases) still fall back
+            # to count-based ordering.
+            scored = []
+            for uri, c in counts.items():
+                support = c / max_support
+                if support < thr:
+                    continue
+                overlap = _mention_token_overlap(uri, surface_form)
+                scored.append((overlap, support, uri))
+            scored.sort(key=lambda x: (x[0], x[1]), reverse=True)
+            result = [(uri, support) for (_, support, uri) in scored[:top_k]]
 
         # Store in cache (with LRU eviction if needed)
         if len(self._lookup_cache) >= self.cache_size:
@@ -1204,7 +1257,16 @@ Text:
                 sentence, subject_candidates, predicate_candidates, object_candidates,
                 predicate_metadata=self.predicate_metadata
             )
-            results.append((s_final, p_final, o_final, meta or {}))
+            # Lever-5 plumbing: preserve the original mention strings (and a
+            # is-literal flag for the object) so downstream serializers can
+            # implement a surface-form fallback when the canonical URI ends up
+            # zero-overlap with the sentence (e.g. an unfixed redirect or a
+            # genuine miss). Existing meta fields are never overwritten.
+            final_meta = dict(meta or {})
+            final_meta.setdefault("_mention_subject", s_text)
+            final_meta.setdefault("_mention_object", o_text)
+            final_meta.setdefault("_is_literal", bool(is_literal))
+            results.append((s_final, p_final, o_final, final_meta))
 
             label = (meta or {}).get("label", "candidate")
             tag_str = "[GENERATED]" if label == "generated" else "[CANDIDATE]"
