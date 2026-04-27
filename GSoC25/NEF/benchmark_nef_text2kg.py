@@ -22,15 +22,21 @@ from datetime import datetime
 # Import NEF components
 try:
     from NEF import EnhancedNEFPipeline, _bootstrap_gemini_client, _bootstrap_openrouter_client, _bootstrap_openai_client
+    from few_shot_retriever import FewShotRetriever
 except ImportError:
     # Fallback if running from different directory
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
     from NEF import EnhancedNEFPipeline, _bootstrap_gemini_client, _bootstrap_openrouter_client, _bootstrap_openai_client
+    from few_shot_retriever import FewShotRetriever
 
 # Data paths: use NEF/Dataset (test + ontologies)
 SCRIPT_DIR = Path(__file__).parent
 TEXT2KG_ROOT = SCRIPT_DIR / "Text2KGBench" / "Text2KGBench-main"
 DBPEDIA_DATA = SCRIPT_DIR / "Dataset"
+
+# Defaults for few-shot retrieval (Text2KGBench DBpedia-WebNLG splits)
+DEFAULT_TRAIN_DIR = TEXT2KG_ROOT / "data" / "dbpedia_webnlg" / "train"
+DEFAULT_SIMILARS_DIR = TEXT2KG_ROOT / "data" / "dbpedia_webnlg" / "baselines" / "test_train_sent_similarity"
 
 # DBpedia ontology list
 DBPEDIA_ONTOLOGIES = [
@@ -483,7 +489,7 @@ def run_nef_on_text2kg(
             # Run NEF pipeline with timing
             start_time = time.perf_counter()
             try:
-                nef_triples = pipeline.run_pipeline(sentence, debug=False)
+                nef_triples = pipeline.run_pipeline(sentence, debug=False, test_id=sent_id)
                 elapsed_ms = (time.perf_counter() - start_time) * 1000.0
                 stats["total_time_ms"] += elapsed_ms
                 stats["latencies_ms"].append(elapsed_ms)  # Collect latency
@@ -625,6 +631,9 @@ Examples:
 
   # Use OpenAI directly (e.g. GPT-4o mini) for extraction/disambiguation; Gemini still used for embeddings
   python benchmark_nef_text2kg.py --output-dir ExpRes/OpenAI_4omini --reasoner openai --reasoner-model gpt-4o-mini
+
+  # 6-shot ICL run with GPT-4o (uses Text2KGBench-shipped similars + train splits)
+  python benchmark_nef_text2kg.py --output-dir ExpRes/OpenAI_4o_6shot --reasoner openai --reasoner-model gpt-4o --shots 6
         """
     )
     parser.add_argument(
@@ -712,6 +721,27 @@ Examples:
         help="Sampling temperature for extraction and disambiguation (default 0).",
     )
     parser.add_argument(
+        "--shots",
+        type=int,
+        default=0,
+        help="Number of in-context exemplars to inject into the extraction prompt "
+             "(0 = zero-shot, default). Exemplars are retrieved per test sentence "
+             "from the matching ontology's train split using Text2KGBench's "
+             "pre-computed similarity ranking.",
+    )
+    parser.add_argument(
+        "--train-dir",
+        type=str,
+        default=str(DEFAULT_TRAIN_DIR),
+        help="Directory holding ont_<id>_train.jsonl files (default: Text2KGBench dbpedia_webnlg/train).",
+    )
+    parser.add_argument(
+        "--similars-dir",
+        type=str,
+        default=str(DEFAULT_SIMILARS_DIR),
+        help="Directory holding <id>_test_train_similarity.json files (default: Text2KGBench baselines/test_train_sent_similarity).",
+    )
+    parser.add_argument(
         "--show-triples",
         action="store_true",
         help="Show detailed triple information for each sentence"
@@ -763,6 +793,7 @@ Examples:
             openrouter_client=openrouter_client,
             openai_client=openai_client,
             temperature=args.temperature,
+            k_shot=args.shots,
         )
         print("✅ NEF Pipeline initialized successfully\n")
     except Exception as e:
@@ -785,7 +816,17 @@ Examples:
     # Process each ontology
     all_stats = []
     start_time = time.time()
-    
+
+    train_dir = Path(args.train_dir)
+    similars_dir = Path(args.similars_dir)
+    if args.shots > 0:
+        if not train_dir.exists():
+            print(f"⚠️  Few-shot enabled (--shots {args.shots}) but train dir not found: {train_dir}")
+            print(f"   Falling back to zero-shot for ontologies missing train data.")
+        if not similars_dir.exists():
+            print(f"⚠️  Few-shot enabled (--shots {args.shots}) but similars dir not found: {similars_dir}")
+            print(f"   Falling back to zero-shot for ontologies missing similarity data.")
+
     for onto_id in args.ontologies:
         test_file = DBPEDIA_DATA / "test" / f"ont_{onto_id}_test.jsonl"
         ontology_file = DBPEDIA_DATA / "ontologies" / f"{onto_id}_ontology.json"
@@ -795,7 +836,21 @@ Examples:
             print(f"⚠️  Warning: Test file not found: {test_file}")
             print(f"   Skipping ontology: {onto_id}\n")
             continue
-        
+
+        # Bootstrap (or clear) the per-ontology few-shot retriever
+        pipeline.few_shot_retriever = None
+        if args.shots > 0:
+            try:
+                pipeline.few_shot_retriever = FewShotRetriever.for_ontology(
+                    onto_id=onto_id,
+                    train_dir=train_dir,
+                    similars_dir=similars_dir,
+                    verbose=not args.quiet,
+                )
+            except FileNotFoundError as e:
+                print(f"⚠️  Few-shot disabled for {onto_id}: {e}")
+                pipeline.few_shot_retriever = None
+
         stats = run_nef_on_text2kg(
             pipeline=pipeline,
             test_file=test_file,

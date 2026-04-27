@@ -626,6 +626,8 @@ class EnhancedNEFPipeline:
         openrouter_client: Optional[Any] = None,
         openai_client: Optional[Any] = None,
         temperature: Optional[float] = 0,
+        few_shot_retriever: Optional[Any] = None,
+        k_shot: int = 0,
     ):
         self.redis_host = redis_host or os.getenv("NEF_REDIS_HOST")
         self.redis_port = (
@@ -660,6 +662,9 @@ class EnhancedNEFPipeline:
         self.predicate_metadata: Optional[Dict[str, Dict[str, str]]] = None
         self.ontology_context: Optional[str] = None
 
+        self.few_shot_retriever = few_shot_retriever
+        self.k_shot = max(0, int(k_shot or 0))
+
         self.redis_el = RedisEntityLinking(
             host=redis_host, port=int(redis_port), password=redis_password, verbose=verbose
         )
@@ -686,6 +691,10 @@ class EnhancedNEFPipeline:
                 _safe_print(f"   Reasoner: OpenAI ({self._reasoner_model})")
             else:
                 _safe_print(f"   Reasoner: Gemini ({self._reasoner_model})")
+            if self.few_shot_retriever is not None and self.k_shot > 0:
+                _safe_print(f"   Few-shot: {self.k_shot}-shot ICL enabled")
+            else:
+                _safe_print("   Few-shot: zero-shot")
 
     def _make_reasoner_call(self):
         """Return a callable (prompt, model_id, json_mode=True, json_object=True, temperature=None) -> str.
@@ -817,7 +826,13 @@ class EnhancedNEFPipeline:
         
         return False
 
-    def _extract_triples(self, text: str, ontology_context: Optional[str] = None, debug: bool = False) -> list[dict]:
+    def _extract_triples(
+        self,
+        text: str,
+        ontology_context: Optional[str] = None,
+        examples: Optional[List[Dict[str, Any]]] = None,
+        debug: bool = False,
+    ) -> list[dict]:
         """
         Strict extractor:
         - preserves subject/object casing as in the text (for entity linking)
@@ -826,16 +841,36 @@ class EnhancedNEFPipeline:
         - REQUIRES Redis grounding for subject
         - Object can be entity (Redis grounding) or literal (numbers/dates)
         - Optionally uses ontology context to guide extraction
+        - Optionally injects in-context exemplars (few-shot ICL); each exemplar
+          is a dict {"sent": str, "triples_json": list[dict in NEF schema]}.
         """
         # Build prompt with optional ontology context
         ontology_section = ""
         if ontology_context:
             ontology_section = f"\n{ontology_context}\n"
-        
+
+        # Build optional few-shot examples block. The examples use the same
+        # JSON schema the model is asked to produce, so they double as a format
+        # demonstration as well as a content/style cue.
+        examples_section = ""
+        if examples:
+            ex_blocks: List[str] = []
+            for ex in examples:
+                ex_sent = (ex.get("sent") or "").strip()
+                ex_triples = ex.get("triples_json") or []
+                if not (ex_sent and ex_triples):
+                    continue
+                ex_blocks.append(
+                    "Example Text:\n" + ex_sent + "\n"
+                    "Example Output:\n" + json.dumps(ex_triples, ensure_ascii=False)
+                )
+            if ex_blocks:
+                examples_section = "\nExamples (follow this style and output schema):\n\n" + "\n\n".join(ex_blocks) + "\n"
+
         prompt = f"""
 SYSTEM: Return ONLY a valid JSON array (no prose, no markdown fences).
 
-Task: Read the text and extract up to 5 RDF triples with confidence.{ontology_section}
+Task: Read the text and extract up to 5 RDF triples with confidence.{ontology_section}{examples_section}
 You MUST:
 - Write subject, predicate, and object exactly as they appear in the text (preserve capitalization; do not lowercase).
 - Use the most complete, consistent entity names.
@@ -1051,18 +1086,45 @@ Text:
                     traceback.print_exc()
             return []
 
-    def run_pipeline(self, sentence: str, debug: bool = False) -> list[tuple[str, str, str, Dict[str, Any]]]:
+    def run_pipeline(
+        self,
+        sentence: str,
+        debug: bool = False,
+        test_id: Optional[str] = None,
+    ) -> list[tuple[str, str, str, Dict[str, Any]]]:
         """
         End-to-end for one sentence.
         - Subject: Redis grounding (required)
         - Object: Redis grounding for entities, literal detection for numbers/dates
         - Predicate: Embedding-based retrieval with LLM disambiguation
+        - Optional few-shot ICL: when self.few_shot_retriever and self.k_shot>0,
+          and test_id is provided, exemplars are retrieved and injected into
+          the extraction prompt.
         Returns list of (subjectURI, predicateURI, objectURI_or_literal, meta)
         """
         if self.verbose:
             _safe_print(f"\n📝 {sentence!r}")
 
-        raw_triples = self._extract_triples(sentence, ontology_context=self.ontology_context, debug=debug)
+        # Few-shot exemplar retrieval (best-effort; never blocks the pipeline)
+        examples: Optional[List[Dict[str, Any]]] = None
+        if self.few_shot_retriever is not None and self.k_shot > 0 and test_id:
+            try:
+                examples = self.few_shot_retriever.retrieve(test_id, k=self.k_shot) or None
+                if self.verbose and examples:
+                    _safe_print(f"   🎯 Few-shot: {len(examples)} exemplar(s) injected for {test_id}")
+                elif self.verbose:
+                    _safe_print(f"   ⚠ Few-shot: no exemplars found for {test_id} (zero-shot fallback)")
+            except Exception as _e:
+                if self.verbose:
+                    _safe_print(f"   ⚠ Few-shot retrieval failed: {_e} (zero-shot fallback)")
+                examples = None
+
+        raw_triples = self._extract_triples(
+            sentence,
+            ontology_context=self.ontology_context,
+            examples=examples,
+            debug=debug,
+        )
         if not raw_triples:
             if self.verbose:
                 _safe_print("   ⚠ No triples extracted.")

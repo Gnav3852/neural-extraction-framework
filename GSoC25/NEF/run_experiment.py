@@ -16,6 +16,10 @@ Usage:
   # OpenAI direct (e.g. GPT-4o-mini)
   export OPENAI_API_KEY=your_key
   python run_experiment.py -n OpenAI_4omini --reasoner openai --reasoner-model gpt-4o-mini
+
+  # 6-shot ICL with GPT-4o
+  export OPENAI_API_KEY=your_key
+  python run_experiment.py -n OpenAI_4o_6shot --reasoner openai --reasoner-model gpt-4o --shots 6 --semantic
 """
 
 import argparse
@@ -98,6 +102,25 @@ def main():
         default=None,
         help="Sampling temperature forwarded to the benchmark.",
     )
+    parser.add_argument(
+        "--shots",
+        type=int,
+        default=None,
+        help="Number of in-context exemplars to inject during extraction "
+             "(0 = zero-shot). Forwarded to benchmark_nef_text2kg.py.",
+    )
+    parser.add_argument(
+        "--train-dir",
+        type=str,
+        default=None,
+        help="Override directory holding ont_<id>_train.jsonl files (forwarded).",
+    )
+    parser.add_argument(
+        "--similars-dir",
+        type=str,
+        default=None,
+        help="Override directory holding <id>_test_train_similarity.json files (forwarded).",
+    )
 
     args = parser.parse_args()
 
@@ -127,6 +150,12 @@ def main():
             bench_cmd += ["--llm-model", args.llm_model]
         if args.temperature is not None:
             bench_cmd += ["--temperature", str(args.temperature)]
+        if args.shots is not None:
+            bench_cmd += ["--shots", str(args.shots)]
+        if args.train_dir:
+            bench_cmd += ["--train-dir", args.train_dir]
+        if args.similars_dir:
+            bench_cmd += ["--similars-dir", args.similars_dir]
         ret = subprocess.run(
             bench_cmd,
             cwd=str(SCRIPT_DIR),
