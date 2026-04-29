@@ -27,6 +27,7 @@ try:
         _bootstrap_openrouter_client,
         _bootstrap_openai_client,
         _mention_token_overlap,
+        _redis_variant_weight,
     )
     from few_shot_retriever import FewShotRetriever
 except ImportError:
@@ -38,6 +39,7 @@ except ImportError:
         _bootstrap_openrouter_client,
         _bootstrap_openai_client,
         _mention_token_overlap,
+        _redis_variant_weight,
     )
     from few_shot_retriever import FewShotRetriever
 
@@ -736,6 +738,18 @@ Examples:
         help="Redis password (default: NEF_REDIS_PASSWORD env var or empty)"
     )
     parser.add_argument(
+        "--redis-variant-exact-weight",
+        type=float,
+        default=None,
+        help="Weight for Redis anchor mass from exact surface/base-form keys (default: 1.0 or NEF_REDIS_VARIANT_EXACT_WEIGHT)."
+    )
+    parser.add_argument(
+        "--redis-variant-other-weight",
+        type=float,
+        default=None,
+        help="Weight for counts from spelling/case/underscore variants (default: 1.0 or NEF_REDIS_VARIANT_OTHER_WEIGHT; try 0.35–0.5 vs merged-variant noise)."
+    )
+    parser.add_argument(
         "--api-key",
         type=str,
         default=None,
@@ -846,6 +860,16 @@ Examples:
     print("="*80)
     try:
         client = _bootstrap_gemini_client(args.api_key)
+        rv_exact = _redis_variant_weight(
+            args.redis_variant_exact_weight,
+            "NEF_REDIS_VARIANT_EXACT_WEIGHT",
+            1.0,
+        )
+        rv_other = _redis_variant_weight(
+            args.redis_variant_other_weight,
+            "NEF_REDIS_VARIANT_OTHER_WEIGHT",
+            1.0,
+        )
         pipeline = EnhancedNEFPipeline(
             client=client,
             embeddings_path=args.embeddings,
@@ -854,6 +878,8 @@ Examples:
             redis_host=args.redis_host,
             redis_port=args.redis_port,
             redis_password=args.redis_password if args.redis_password else None,
+            redis_variant_exact_weight=rv_exact,
+            redis_variant_other_weight=rv_other,
             verbose=not args.quiet,
             reasoner=args.reasoner,
             reasoner_model=reasoner_model,

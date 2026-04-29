@@ -94,6 +94,30 @@ def _entity_name_tokens(uri_or_name: str) -> Set[str]:
     name = re.sub(r"([a-z])([A-Z])", r"\1 \2", name)
     return {t.lower() for t in _TOKEN_RE.findall(name) if len(t) >= 2}
 
+def _remove_leading_articles(text: str) -> str:
+    """Same article stripping logic as RedisEntityLinking.lookup (shared for tier weights)."""
+    text = text.strip()
+    articles = ["the ", "a ", "an "]
+    for article in articles:
+        if text.lower().startswith(article):
+            return text[len(article):].strip()
+    return text
+
+
+def _variant_weight_for_lookup(
+    surface_form: str, base_form: str, key: str, w_exact: float, w_other: float
+) -> float:
+    """
+    Prefer anchor mass from buckets keyed exactly as extractor output (stripped surface
+    or article-stripped base) vs spelling/case/spacing variants.
+    """
+    ks = key.strip()
+    sf = surface_form.strip()
+    if ks == sf or ks == base_form.strip():
+        return float(w_exact)
+    return float(w_other)
+
+
 def _mention_token_overlap(uri_or_name: str, mention: str) -> float:
     """
     Fraction of mention tokens that also appear in the URI's local name.
@@ -118,12 +142,16 @@ class RedisEntityLinking:
         connect_timeout: float = 2.0,
         verbose: bool = True,
         cache_size: int = 10000,  # Max cache entries
+        variant_exact_weight: float = 1.0,
+        variant_other_weight: float = 1.0,
     ):
         self.available = False
         self.redis_forms = None
         self.redis_redir = None
         self.verbose = verbose
         self.cache_size = cache_size
+        self.variant_exact_weight = float(variant_exact_weight)
+        self.variant_other_weight = float(variant_other_weight)
         # In-memory cache: {cache_key: List[Tuple[str, float]]}
         # Using OrderedDict for LRU eviction
         self._lookup_cache: OrderedDict[str, List[Tuple[str, float]]] = OrderedDict()
@@ -156,6 +184,14 @@ class RedisEntityLinking:
             
             if self.verbose:
                 _safe_print("✓ Connected to Redis" if self.available else "✗ Redis ping failed")
+                if self.available and (
+                    self.variant_exact_weight != 1.0 or self.variant_other_weight != 1.0
+                ):
+                    _safe_print(
+                        f"   Redis variant weights (anchor mass): "
+                        f"exact={self.variant_exact_weight}  "
+                        f"non-exact-variant={self.variant_other_weight}"
+                    )
         except Exception as e:
             self.available = False
             _safe_print(f"✗ Redis connection error (pipeline will drop ungrounded triples): {e}")
@@ -191,7 +227,9 @@ class RedisEntityLinking:
             return []
 
         # Check cache first (fast path)
-        cache_key = f"{surface_form}|{top_k}|{thr}"
+        cache_key = (
+            f"{surface_form}|{top_k}|{thr}|{self.variant_exact_weight}|{self.variant_other_weight}"
+        )
         if cache_key in self._lookup_cache:
             # Move to end (most recently used) for LRU
             result = self._lookup_cache.pop(cache_key)
@@ -204,17 +242,7 @@ class RedisEntityLinking:
         if self.verbose:
             _safe_print(f"[CACHE MISS] '{surface_form}' - querying Redis...")
 
-        # Remove leading articles (the, a, an) for better matching
-        def remove_articles(text: str) -> str:
-            text = text.strip()
-            articles = ["the ", "a ", "an "]
-            for article in articles:
-                if text.lower().startswith(article):
-                    text = text[len(article):].strip()
-                    break
-            return text
-
-        base_form = remove_articles(surface_form)
+        base_form = _remove_leading_articles(surface_form)
         
         # Generate more comprehensive case variants (with and without articles)
         variants = [
@@ -243,7 +271,7 @@ class RedisEntityLinking:
                 seen_variants.add(v)
                 unique_variants.append(v)
 
-        counts: Dict[str, int] = {}
+        counts: Dict[str, float] = {}
         seen_keys = set()
         found_any = False
         
@@ -258,11 +286,19 @@ class RedisEntityLinking:
                 
                 if raw:
                     found_any = True
+                    vw = _variant_weight_for_lookup(
+                        surface_form,
+                        base_form,
+                        key,
+                        self.variant_exact_weight,
+                        self.variant_other_weight,
+                    )
                     for uri, v in raw.items():
                         try:
                             cnt = int(v)
                         except Exception:
                             continue
+                        add = float(cnt) * vw
                         # Lever-1 fix: keep the *pre-redirect* URI in the candidate
                         # pool. DBpedia merges sub-articles into parent topics via
                         # redirects (e.g. AWH_Engineering_College -> APJ_Abdul_
@@ -270,17 +306,18 @@ class RedisEntityLinking:
                         # destroyed the more specific URI before the disambiguator
                         # ever saw it. Token-overlap re-ranking below picks the
                         # right one without losing redirect-as-alias behaviour.
-                        counts[uri] = counts.get(uri, 0) + cnt
+                        counts[uri] = counts.get(uri, 0.0) + add
                         try:
                             canon = self._redirect(uri)
                             if canon and canon != uri:
-                                counts[canon] = counts.get(canon, 0) + cnt
+                                counts[canon] = counts.get(canon, 0.0) + add
                         except Exception:
                             pass
                     
                     # Early exit: if we found results and have enough support, stop trying variants
                     if counts:
                         max_count = max(counts.values())
+                        # Weighted sums: same threshold heuristic as before (>=10 raw was typical)
                         if max_count >= 10:  # High confidence threshold for early exit
                             break
             except Exception as e:
@@ -672,6 +709,8 @@ class EnhancedNEFPipeline:
         redis_host: Optional[str] = None,
         redis_port: Optional[int] = None,
         redis_password: Optional[str] = None,
+        redis_variant_exact_weight: float = 1.0,
+        redis_variant_other_weight: float = 1.0,
         allowed_predicates: Optional[List[str]] = None,
         verbose: bool = True,
         reasoner: str = "gemini",
@@ -719,7 +758,12 @@ class EnhancedNEFPipeline:
         self.k_shot = max(0, int(k_shot or 0))
 
         self.redis_el = RedisEntityLinking(
-            host=redis_host, port=int(redis_port), password=redis_password, verbose=verbose
+            host=redis_host,
+            port=int(redis_port),
+            password=redis_password,
+            verbose=verbose,
+            variant_exact_weight=redis_variant_exact_weight,
+            variant_other_weight=redis_variant_other_weight,
         )
         self.pred = PredicateEmbeddingRetriever(
             client=self.client,
@@ -1285,6 +1329,15 @@ Text:
 
 # =============== CLI ===============
 
+def _redis_variant_weight(cli_val: Optional[float], env_name: str, default: float = 1.0) -> float:
+    if cli_val is not None:
+        return float(cli_val)
+    raw = os.getenv(env_name)
+    if raw is None or str(raw).strip() == "":
+        return default
+    return float(raw)
+
+
 def parse_args(argv: Optional[List[str]] = None) -> argparse.Namespace:
     p = argparse.ArgumentParser(
         prog="nef_cli.py",
@@ -1330,6 +1383,20 @@ def parse_args(argv: Optional[List[str]] = None) -> argparse.Namespace:
     p.add_argument("--redis-host", type=str, default=os.getenv("NEF_REDIS_HOST", ""))
     p.add_argument("--redis-port", type=int, default=int(os.getenv("NEF_REDIS_PORT", "")))
     p.add_argument("--redis-password", type=str, default=os.getenv("NEF_REDIS_PASSWORD", ""))
+    p.add_argument(
+        "--redis-variant-exact-weight",
+        type=float,
+        default=None,
+        help="Weight for Redis anchor mass from buckets keyed exactly as surface/article-stripped "
+        "(default: 1.0; env NEF_REDIS_VARIANT_EXACT_WEIGHT).",
+    )
+    p.add_argument(
+        "--redis-variant-other-weight",
+        type=float,
+        default=None,
+        help="Weight for mass from case/underscore/title/etc. variant keys vs exact surface/base "
+        "(default: 1.0 unchanged behavior; env NEF_REDIS_VARIANT_OTHER_WEIGHT; try ~0.35–0.5 vs merged-noise slates).",
+    )
 
     return p.parse_args(argv)
 
@@ -1401,6 +1468,16 @@ def main(argv: Optional[List[str]] = None) -> int:
 
     # Build pipeline
     try:
+        rv_exact = _redis_variant_weight(
+            args.redis_variant_exact_weight,
+            "NEF_REDIS_VARIANT_EXACT_WEIGHT",
+            1.0,
+        )
+        rv_other = _redis_variant_weight(
+            args.redis_variant_other_weight,
+            "NEF_REDIS_VARIANT_OTHER_WEIGHT",
+            1.0,
+        )
         pipe = EnhancedNEFPipeline(
             client=client,
             embeddings_path=args.embeddings,
@@ -1411,6 +1488,8 @@ def main(argv: Optional[List[str]] = None) -> int:
             redis_host=args.redis_host,
             redis_port=args.redis_port,
             redis_password=args.redis_password,
+            redis_variant_exact_weight=rv_exact,
+            redis_variant_other_weight=rv_other,
             verbose=args.verbose,
             reasoner=args.reasoner,
             reasoner_model=reasoner_model,
