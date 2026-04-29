@@ -184,14 +184,15 @@ class RedisEntityLinking:
             
             if self.verbose:
                 _safe_print("✓ Connected to Redis" if self.available else "✗ Redis ping failed")
-                if self.available and (
-                    self.variant_exact_weight != 1.0 or self.variant_other_weight != 1.0
-                ):
-                    _safe_print(
-                        f"   Redis variant weights (anchor mass): "
-                        f"exact={self.variant_exact_weight}  "
-                        f"non-exact-variant={self.variant_other_weight}"
-                    )
+            # Always emit when non-default so --quiet benchmarks still record that weighting is on.
+            if self.available and (
+                self.variant_exact_weight != 1.0 or self.variant_other_weight != 1.0
+            ):
+                _safe_print(
+                    "Redis variant weights (anchor mass): "
+                    f"exact={self.variant_exact_weight}  "
+                    f"non-exact-variant={self.variant_other_weight}"
+                )
         except Exception as e:
             self.available = False
             _safe_print(f"✗ Redis connection error (pipeline will drop ungrounded triples): {e}")
