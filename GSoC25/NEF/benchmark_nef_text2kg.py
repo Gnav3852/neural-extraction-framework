@@ -220,7 +220,7 @@ def entity_text_with_fallback(
     mention: str,
     surface_fallback: bool,
     is_literal: bool = False,
-    overlap_threshold: float = 0.5,
+    overlap_threshold: float = 0.48,
 ) -> str:
     """
     Convert a grounded entity URI to its text label, with an optional
@@ -260,6 +260,17 @@ def uri_to_predicate_text(uri: str) -> str:
     last = parts[-1] if parts else ""
     # Preserve camelCase for predicates (no conversion)
     return last.strip()
+
+
+def predicate_label_for_text2kg(
+    uri: str, predicate_metadata: Optional[Dict[str, Dict[str, str]]]
+) -> str:
+    """Use ontology relation label when the chosen URI matches the ontology table (Text2KGBench gold rels)."""
+    if predicate_metadata and uri in predicate_metadata:
+        lab = (predicate_metadata[uri].get("label") or "").strip()
+        if lab:
+            return lab
+    return uri_to_predicate_text(uri)
 
 
 def format_object_text(obj_text: str) -> str:
@@ -564,7 +575,7 @@ def run_nef_on_text2kg(
                     sub_text = entity_text_with_fallback(
                         s_uri, sub_mention, surface_fallback, is_literal=False
                     )
-                    pred_text = uri_to_predicate_text(p_uri) if p_uri else ""
+                    pred_text = predicate_label_for_text2kg(p_uri, predicate_metadata) if p_uri else ""
                     obj_text = entity_text_with_fallback(
                         o_uri, obj_mention, surface_fallback, is_literal=is_obj_literal
                     )
@@ -833,8 +844,8 @@ Examples:
     parser.add_argument(
         "--max-triples",
         type=int,
-        default=5,
-        help="Maximum triples to extract per sentence (default: 5; try 7–8 for higher recall).",
+        default=8,
+        help="Maximum triples to extract per sentence (default: 8; lower for speed).",
     )
     parser.add_argument(
         "--quiet",

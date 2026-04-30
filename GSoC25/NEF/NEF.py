@@ -368,7 +368,9 @@ class RedisEntityLinking:
                     continue
                 overlap = _mention_token_overlap(uri, surface_form)
                 ctx_boost = _sentence_context_boost(uri, sentence) if sentence else 0.0
-                scored.append((overlap, ctx_boost, support, uri))
+                # Slightly up-weight full-sentence token overlap vs raw Redis mass
+                # so homonyms (e.g. two Auburn cities) follow the sentence context.
+                scored.append((overlap, ctx_boost * 1.12, support, uri))
             scored.sort(key=lambda x: (x[0], x[1], x[2]), reverse=True)
             result = [(uri, support) for (_, _, support, uri) in scored[:top_k]]
 
@@ -658,6 +660,8 @@ Rules:
   * "club" = current team; "formerTeam" / "youthclub" = past teams.
   * "birthPlace" = city/region of birth; "nationality" = country of citizenship.
   * "precededBy" = what came before; "followedBy" = what came after (do not confuse direction).
+  * Airports / transport hubs: prefer "cityServed" (municipality the hub primarily serves) over generic "city" when both appear; prefer "operatingOrganisation" over "owner" for who runs the facility when the sentence describes operations.
+  * Monuments / places: "district" is the containing administrative area; use it over broad "location" when the sentence names that area and both predicates are listed.
 - Do not invent or modify URIs. Do not swap subject/object roles.
 """
 
@@ -747,7 +751,7 @@ class EnhancedNEFPipeline:
         temperature: Optional[float] = 0,
         few_shot_retriever: Optional[Any] = None,
         k_shot: int = 0,
-        max_triples: int = 5,
+        max_triples: int = 8,
     ):
         self.redis_host = redis_host or os.getenv("NEF_REDIS_HOST")
         self.redis_port = (
@@ -821,7 +825,7 @@ class EnhancedNEFPipeline:
                 _safe_print(f"   Few-shot: {self.k_shot}-shot ICL enabled")
             else:
                 _safe_print("   Few-shot: zero-shot")
-            if self.max_triples != 5:
+            if self.max_triples != 8:
                 _safe_print(f"   Max triples per sentence: {self.max_triples}")
 
     def _make_reasoner_call(self):
@@ -1448,8 +1452,8 @@ def parse_args(argv: Optional[List[str]] = None) -> argparse.Namespace:
     p.add_argument("--redis-host", type=str, default=os.getenv("NEF_REDIS_HOST", ""))
     p.add_argument("--redis-port", type=int, default=int(os.getenv("NEF_REDIS_PORT", "")))
     p.add_argument("--redis-password", type=str, default=os.getenv("NEF_REDIS_PASSWORD", ""))
-    p.add_argument("--max-triples", type=int, default=5,
-                   help="Maximum triples to extract per sentence (default: 5; try 7–8 for high-recall runs).")
+    p.add_argument("--max-triples", type=int, default=8,
+                   help="Maximum triples to extract per sentence (default: 8).")
 
     p.add_argument(
         "--redis-variant-exact-weight",

@@ -137,7 +137,7 @@ def main():
         "--max-triples",
         type=int,
         default=None,
-        help="Maximum triples per sentence (default 5; forwarded to benchmark).",
+        help="Maximum triples per sentence (benchmark default 8 if omitted; forwarded when set).",
     )
 
     args = parser.parse_args()

@@ -3,8 +3,10 @@
 Add semantic F1 (and P/R) to avg_eval_results.jsonl using existing comparison table CSVs.
 
 Reads Tables/triple_comparison_*.csv, counts EXACT/SEMANTIC/MISSING/EXTRA per ontology,
-computes semantic_precision, semantic_recall, semantic_f1, then updates avg_eval_results.jsonl
-in place for each ontology line and adds macro-averaged global semantic P/R/F1 to the global line.
+computes semantic_precision, semantic_recall, semantic_f1 per ontology, then updates
+avg_eval_results.jsonl. The primary ``global`` row gets *pooled* semantic P/R/F1 (counts
+summed across all Tables). A ``global_macro_legacy`` row, if present, gets macro-averaged
+semantic metrics (mean of per-ontology semantic F1), matching older reporting style.
 
 Usage:
   python add_semantic_f1.py                          # use script dir for Tables/ and avg_eval_results.jsonl
@@ -132,14 +134,26 @@ def main():
         entry["extra"] = m["extra"]
         updated += 1
 
-    # Macro-averaged global semantic P/R/F1 (match existing global avg_f1 style)
+    # Pooled global semantic P/R/F1 (sum EXACT/SEMANTIC/MISSING/EXTRA across all ontologies, one PRF)
+    pooled_counts = {"EXACT": 0, "SEMANTIC": 0, "MISSING": 0, "EXTRA": 0}
+    for csv_path in sorted(TABLES_DIR.glob("triple_comparison_*.csv")):
+        stem = csv_path.stem
+        if not stem.startswith("triple_comparison_"):
+            continue
+        c = count_match_types(csv_path)
+        for k in pooled_counts:
+            pooled_counts[k] += c[k]
+    global_p, global_r, global_f1 = semantic_f1_from_counts(pooled_counts)
+
+    # Macro-averaged semantic per ontology (optional reference on legacy row only)
     n_onto = len(semantic_by_onto)
-    global_p = sum(m["semantic_precision"] for m in semantic_by_onto.values()) / n_onto
-    global_r = sum(m["semantic_recall"] for m in semantic_by_onto.values()) / n_onto
-    global_f1 = sum(m["semantic_f1"] for m in semantic_by_onto.values()) / n_onto
+    macro_sem_p = sum(m["semantic_precision"] for m in semantic_by_onto.values()) / n_onto
+    macro_sem_r = sum(m["semantic_recall"] for m in semantic_by_onto.values()) / n_onto
+    macro_sem_f1 = sum(m["semantic_f1"] for m in semantic_by_onto.values()) / n_onto
+
     global_updated = False
     for entry in entries:
-        if entry.get("id") == "global" or entry.get("type") == "global":
+        if entry.get("id") == "global" and entry.get("type") == "global":
             entry["semantic_precision"] = f"{global_p:.2f}"
             entry["semantic_recall"] = f"{global_r:.2f}"
             entry["semantic_f1"] = f"{global_f1:.2f}"
@@ -154,6 +168,14 @@ def main():
             "semantic_recall": f"{global_r:.2f}",
             "semantic_f1": f"{global_f1:.2f}",
         })
+
+    # Attach macro-averaged semantic fields to legacy global row for apples-to-apples with old reports
+    for entry in entries:
+        if entry.get("id") == "global_macro_legacy":
+            entry["semantic_precision"] = f"{macro_sem_p:.2f}"
+            entry["semantic_recall"] = f"{macro_sem_r:.2f}"
+            entry["semantic_f1"] = f"{macro_sem_f1:.2f}"
+            break
 
     # Write back
     with open(AVG_FILE, "w", encoding="utf-8") as f:

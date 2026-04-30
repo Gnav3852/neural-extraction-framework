@@ -8,6 +8,27 @@ from nltk.tokenize import word_tokenize
 from nltk.stem import PorterStemmer
 
 
+def micro_precision_recall_f1(total_tp: int, total_pred: int, total_gold: int) -> Tuple[float, float, float]:
+    """
+    Pooled (micro) precision, recall, F1 over all triple instances.
+    Precision = sum_tp / sum_pred (0 if sum_pred == 0).
+    Recall = sum_tp / sum_gold (0 if sum_gold == 0).
+    """
+    if total_pred <= 0:
+        p = 0.0
+    else:
+        p = total_tp / total_pred
+    if total_gold <= 0:
+        r = 0.0
+    else:
+        r = total_tp / total_gold
+    if p + r > 0:
+        f1 = 2 * ((p * r) / (p + r))
+    else:
+        f1 = 0.0
+    return p, r, f1
+
+
 def calculate_precision_recall_f1(gold: Set, pred: Set) -> (float, float, float):
     """
     Method to calculate precision, recall and f1:
@@ -252,6 +273,16 @@ def main():
         print(f"Evaluation config file is not found in path: {eval_config_path}")
     eval_inputs = load_config(eval_config_path)
 
+    avg_out_path = eval_inputs["avg_out_file"]
+    if os.path.isfile(avg_out_path):
+        try:
+            os.remove(avg_out_path)
+        except OSError:
+            pass
+
+    # Pooled triple counts across all ontologies and all sentences (micro / full-benchmark aggregation)
+    pooled_tp, pooled_pred, pooled_gold = 0, 0, 0
+
     # initialize the global variables for the total evaluation metrics
     global_p, global_r, global_f1, global_onto_conf, global_rel_halluc, global_sub_halluc, global_obj_halluc = 0, 0, 0, 0, 0, 0, 0
     # evaluate the output of each of the ontologies
@@ -275,58 +306,65 @@ def main():
             # collect the ground truth triples
             gt_triples = [[tr['sub'], tr['rel'], tr['obj']] for tr in ground_truth[sent_id]['triples']]
             sentence = ground_truth[sent_id]["sent"]
+            normalized_gt_triples = {normalize_triple(tr[0], tr[1], tr[2]) for tr in gt_triples}
 
             # check if system output as an entry for this sentence
-            if sent_id in system_output:
-                system_triples = system_output[sent_id]['triples']
+            if sent_id not in system_output:
+                pooled_gold += len(normalized_gt_triples)
+                continue
 
-                # collect the set of relations in ground truth triples, spaces are converted to "_" to make them
-                # comparable with system triples
-                gt_relations = {tr[1].replace(" ", "_") for tr in gt_triples}
+            system_triples = system_output[sent_id]['triples']
 
-                # filter out any triples in system output that does not match with ground truth relations
-                filtered_system_triples = [tr for tr in system_triples if tr[1] in gt_relations]
+            # collect the set of relations in ground truth triples, spaces are converted to "_" to make them
+            # comparable with system triples
+            gt_relations = {tr[1].replace(" ", "_") for tr in gt_triples}
 
-                # create a normalized string from subject, relation, object of each triple for comparison
-                normalized_system_triples = {normalize_triple(tr[0], tr[1], tr[2]) for tr in filtered_system_triples}
-                normalized_gt_triples = {normalize_triple(tr[0], tr[1], tr[2]) for tr in gt_triples}
+            # filter out any triples in system output that does not match with ground truth relations
+            filtered_system_triples = [tr for tr in system_triples if tr[1] in gt_relations]
 
-                # compare the system output triples with ground truth triples and calculate precision, recall, f1
-                precision, recall, f1 = calculate_precision_recall_f1(normalized_gt_triples, normalized_system_triples)
+            # create a normalized string from subject, relation, object of each triple for comparison
+            normalized_system_triples = {normalize_triple(tr[0], tr[1], tr[2]) for tr in filtered_system_triples}
 
-                # calculate ontology conformance and relation hallucination
-                ont_conformance, rel_hallucination = get_ontology_conformance(ontology, system_triples)
+            pooled_tp += len(normalized_gt_triples & normalized_system_triples)
+            pooled_pred += len(normalized_system_triples)
+            pooled_gold += len(normalized_gt_triples)
 
-                # calculate subject and object hallucination
-                subj_hallucination, obj_hallucination = get_subject_object_hallucinations(ps, ontology, sentence, system_triples)
-                if  f1 < 1  and len(filtered_system_triples) > 0 and subj_hallucination == 0 and obj_hallucination == 0:
-                    print(f"sent: {sentence}\nf1: {f1}\nsys:{filtered_system_triples}\nground:{gt_triples}\n\n")
+            # compare the system output triples with ground truth triples and calculate precision, recall, f1
+            precision, recall, f1 = calculate_precision_recall_f1(normalized_gt_triples, normalized_system_triples)
 
-                eval_metrics = {"id": sent_id, "precision": f"{precision:.2f}" , "recall": f"{recall:.2f}", "f1": f"{f1:.2f}",
-                                "onto_conf": f"{ont_conformance:.2f}", "rel_halluc": f"{rel_hallucination:.2f}",
-                                "sub_halluc": f"{subj_hallucination:.2f}", "obj_halluc": f"{obj_hallucination:.2f}",
-                                "llm_triples": system_triples, "filtered_llm_triples": filtered_system_triples,
-                                "gt_triples": gt_triples, "sent": sentence}
-                eval_metrics_list.append(eval_metrics)
+            # calculate ontology conformance and relation hallucination
+            ont_conformance, rel_hallucination = get_ontology_conformance(ontology, system_triples)
 
-                # aggregate precision, recall, f1 for later averaging
-                t_p += precision
-                t_r += recall
-                t_f1 += f1
-                t_onto_conf += ont_conformance
-                t_rel_halluc += rel_hallucination
-                t_sub_halluc += subj_hallucination
-                t_obj_halluc += obj_hallucination
+            # calculate subject and object hallucination
+            subj_hallucination, obj_hallucination = get_subject_object_hallucinations(ps, ontology, sentence, system_triples)
+            if f1 < 1 and len(filtered_system_triples) > 0 and subj_hallucination == 0 and obj_hallucination == 0:
+                print(f"sent: {sentence}\nf1: {f1}\nsys:{filtered_system_triples}\nground:{gt_triples}\n\n")
 
-                # aggregate precision, recall, f1 for later averaging for selected ids
-                if sent_id in selected_ids:
-                    sel_t_p += precision
-                    sel_t_r += recall
-                    sel_t_f1 += f1
-                    sel_t_onto_conf += ont_conformance
-                    sel_t_rel_halluc += rel_hallucination
-                    sel_t_sub_halluc += subj_hallucination
-                    sel_t_obj_halluc += obj_hallucination
+            eval_metrics = {"id": sent_id, "precision": f"{precision:.2f}", "recall": f"{recall:.2f}", "f1": f"{f1:.2f}",
+                            "onto_conf": f"{ont_conformance:.2f}", "rel_halluc": f"{rel_hallucination:.2f}",
+                            "sub_halluc": f"{subj_hallucination:.2f}", "obj_halluc": f"{obj_hallucination:.2f}",
+                            "llm_triples": system_triples, "filtered_llm_triples": filtered_system_triples,
+                            "gt_triples": gt_triples, "sent": sentence}
+            eval_metrics_list.append(eval_metrics)
+
+            # aggregate precision, recall, f1 for later averaging
+            t_p += precision
+            t_r += recall
+            t_f1 += f1
+            t_onto_conf += ont_conformance
+            t_rel_halluc += rel_hallucination
+            t_sub_halluc += subj_hallucination
+            t_obj_halluc += obj_hallucination
+
+            # aggregate precision, recall, f1 for later averaging for selected ids
+            if sent_id in selected_ids:
+                sel_t_p += precision
+                sel_t_r += recall
+                sel_t_f1 += f1
+                sel_t_onto_conf += ont_conformance
+                sel_t_rel_halluc += rel_hallucination
+                sel_t_sub_halluc += subj_hallucination
+                sel_t_obj_halluc += obj_hallucination
 
         save_jsonl(eval_metrics_list, onto['output'])
         total_test_cases = len(ground_truth)
@@ -341,7 +379,7 @@ def main():
                            "avg_rel_halluc": f"{t_rel_halluc / total_test_cases:.2f}",
                            "avg_obj_halluc": f"{t_obj_halluc/total_test_cases:.2f}"
                            }
-        append_jsonl(average_metrics, eval_inputs['avg_out_file'])
+        append_jsonl(average_metrics, avg_out_path)
         global_p += (t_p/total_test_cases)
         global_r += (t_r/total_test_cases)
         global_f1 += (t_f1/total_test_cases)
@@ -359,19 +397,37 @@ def main():
                                         "avg_sub_halluc": f"{sel_t_sub_halluc / total_selected_test_cases:.2f}",
                                         "avg_rel_halluc": f"{sel_t_rel_halluc / total_selected_test_cases:.2f}",
                                         "avg_obj_halluc": f"{sel_t_obj_halluc / total_selected_test_cases:.2f}"}
-            append_jsonl(selected_average_metrics, eval_inputs['avg_out_file'])
+            append_jsonl(selected_average_metrics, avg_out_path)
 
-    # global metrics calculate the average total metrics for all ontologies that are part of the evaluation
+    # global metrics: primary row = pooled (micro) P/R/F1 over all sentences and ontologies;
+    # legacy row = macro mean of per-ontology mean P/R/F1 (historical Text2KGBench headline).
     num_ontologies = len(eval_inputs['onto_list'])
-    global_metrics = {"id": "global", "type": "global",
-                      "avg_precision": f"{global_p / num_ontologies:.2f}",
-                      "avg_recall": f"{global_r / num_ontologies:.2f}",
-                      "avg_f1": f"{global_f1 / num_ontologies:.2f}",
-                      "avg_onto_conf": f"{global_onto_conf / num_ontologies:.2f}",
-                      "avg_sub_halluc": f"{global_sub_halluc / num_ontologies:.2f}",
-                      "avg_rel_halluc": f"{global_rel_halluc / num_ontologies:.2f}",
-                      "avg_obj_halluc": f"{global_obj_halluc / num_ontologies:.2f}"}
-    append_jsonl(global_metrics, eval_inputs['avg_out_file'])
+    micro_p, micro_r, micro_f1 = micro_precision_recall_f1(pooled_tp, pooled_pred, pooled_gold)
+    global_metrics = {
+        "id": "global",
+        "type": "global",
+        "avg_precision": f"{micro_p:.2f}",
+        "avg_recall": f"{micro_r:.2f}",
+        "avg_f1": f"{micro_f1:.2f}",
+        "avg_onto_conf": f"{global_onto_conf / num_ontologies:.2f}",
+        "avg_sub_halluc": f"{global_sub_halluc / num_ontologies:.2f}",
+        "avg_rel_halluc": f"{global_rel_halluc / num_ontologies:.2f}",
+        "avg_obj_halluc": f"{global_obj_halluc / num_ontologies:.2f}",
+    }
+    append_jsonl(global_metrics, avg_out_path)
+
+    global_macro_legacy = {
+        "id": "global_macro_legacy",
+        "type": "global_macro_legacy",
+        "avg_precision": f"{global_p / num_ontologies:.2f}",
+        "avg_recall": f"{global_r / num_ontologies:.2f}",
+        "avg_f1": f"{global_f1 / num_ontologies:.2f}",
+        "avg_onto_conf": f"{global_onto_conf / num_ontologies:.2f}",
+        "avg_sub_halluc": f"{global_sub_halluc / num_ontologies:.2f}",
+        "avg_rel_halluc": f"{global_rel_halluc / num_ontologies:.2f}",
+        "avg_obj_halluc": f"{global_obj_halluc / num_ontologies:.2f}",
+    }
+    append_jsonl(global_macro_legacy, avg_out_path)
 
 
 if __name__ == "__main__":
