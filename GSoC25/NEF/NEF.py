@@ -747,7 +747,6 @@ class EnhancedNEFPipeline:
         temperature: Optional[float] = 0,
         few_shot_retriever: Optional[Any] = None,
         k_shot: int = 0,
-        soft_ground: bool = False,
         max_triples: int = 5,
     ):
         self.redis_host = redis_host or os.getenv("NEF_REDIS_HOST")
@@ -763,8 +762,7 @@ class EnhancedNEFPipeline:
         )
         self.verbose = verbose
         self.client = client  # always Gemini for embeddings
-        self.require_redis_grounding = not soft_ground
-        self.soft_ground = bool(soft_ground)
+        self.require_redis_grounding = True
         self.max_triples = max(1, int(max_triples))
         self._temperature = temperature
 
@@ -823,8 +821,6 @@ class EnhancedNEFPipeline:
                 _safe_print(f"   Few-shot: {self.k_shot}-shot ICL enabled")
             else:
                 _safe_print("   Few-shot: zero-shot")
-            if self.soft_ground:
-                _safe_print("   Soft-ground: ON (ungrounded mentions kept as synthetic URIs)")
             if self.max_triples != 5:
                 _safe_print(f"   Max triples per sentence: {self.max_triples}")
 
@@ -1164,19 +1160,6 @@ Text:
                         if step4_obj_time > 5.0:
                             _safe_print(f"[DIAG] ⚠️ WARNING: Object resolution took {step4_obj_time:.2f}s (>5s threshold)")
                 
-                # Soft-ground: synthesize a candidate from the raw mention when
-                # Redis has nothing, instead of dropping the triple entirely.
-                if not sub_cands and self.soft_ground:
-                    synth_uri = "http://dbpedia.org/resource/" + s_raw.strip().replace(" ", "_")
-                    sub_cands = [(synth_uri, 1.0)]
-                    if self.verbose:
-                        _safe_print(f"[DIAG] Step 4.{idx}.1: soft-ground → {synth_uri}")
-                if not is_literal and not obj_cands and self.soft_ground:
-                    synth_uri = "http://dbpedia.org/resource/" + o_raw.strip().replace(" ", "_")
-                    obj_cands = [(synth_uri, 1.0)]
-                    if self.verbose:
-                        _safe_print(f"[DIAG] Step 4.{idx}.2: soft-ground → {synth_uri}")
-
                 if not sub_cands:
                     reasons.append("no Redis grounding for subject (required)")
                 if not is_literal and not obj_cands:
@@ -1316,19 +1299,6 @@ Text:
                 if not is_literal:
                     _safe_print("   [Redis:object]",  object_candidates[:5]  if object_candidates  else "NO CANDIDATES")
 
-            # Soft-ground fallback at run_pipeline level (in case _extract_triples
-            # ran with a different soft_ground setting or candidates were re-resolved).
-            if not subject_candidates and self.soft_ground:
-                synth = "http://dbpedia.org/resource/" + s_text.strip().replace(" ", "_")
-                subject_candidates = [(synth, 1.0)]
-                if self.verbose:
-                    _safe_print(f"   [soft-ground:subject] → {synth}")
-            if not object_candidates and not is_literal and self.soft_ground:
-                synth = "http://dbpedia.org/resource/" + o_text.strip().replace(" ", "_")
-                object_candidates = [(synth, 1.0)]
-                if self.verbose:
-                    _safe_print(f"   [soft-ground:object] → {synth}")
-
             if not subject_candidates:
                 if self.verbose:
                     _safe_print("   ⚠ Abandoning triple (no Redis candidates for subject).")
@@ -1443,8 +1413,6 @@ def parse_args(argv: Optional[List[str]] = None) -> argparse.Namespace:
     p.add_argument("--redis-host", type=str, default=os.getenv("NEF_REDIS_HOST", ""))
     p.add_argument("--redis-port", type=int, default=int(os.getenv("NEF_REDIS_PORT", "")))
     p.add_argument("--redis-password", type=str, default=os.getenv("NEF_REDIS_PASSWORD", ""))
-    p.add_argument("--soft-ground", action="store_true",
-                   help="When Redis returns no candidates, synthesize a URI from the raw mention text instead of dropping the triple.")
     p.add_argument("--max-triples", type=int, default=5,
                    help="Maximum triples to extract per sentence (default: 5; try 7–8 for high-recall runs).")
 
@@ -1561,7 +1529,6 @@ def main(argv: Optional[List[str]] = None) -> int:
             openrouter_client=openrouter_client,
             openai_client=openai_client,
             temperature=args.temperature,
-            soft_ground=args.soft_ground,
             max_triples=args.max_triples,
         )
         pipe.pred.embed_model = args.embed_model

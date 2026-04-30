@@ -831,15 +831,6 @@ Examples:
         ),
     )
     parser.add_argument(
-        "--soft-ground",
-        action="store_true",
-        help=(
-            "When Redis returns no candidates for a subject/object, synthesize "
-            "a URI from the raw mention text instead of dropping the triple. "
-            "Recovers triples for entities missing from Redis."
-        ),
-    )
-    parser.add_argument(
         "--max-triples",
         type=int,
         default=5,
@@ -905,7 +896,6 @@ Examples:
             openai_client=openai_client,
             temperature=args.temperature,
             k_shot=args.shots,
-            soft_ground=args.soft_ground,
             max_triples=args.max_triples,
         )
         print("✅ NEF Pipeline initialized successfully\n")

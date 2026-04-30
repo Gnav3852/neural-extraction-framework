@@ -134,12 +134,6 @@ def main():
              "URI shares zero tokens with the mention (forwarded to benchmark).",
     )
     parser.add_argument(
-        "--soft-ground",
-        action="store_true",
-        help="Synthesize URIs from raw mention text when Redis returns no candidates "
-             "(forwarded to benchmark).",
-    )
-    parser.add_argument(
         "--max-triples",
         type=int,
         default=None,
@@ -182,8 +176,6 @@ def main():
             bench_cmd += ["--similars-dir", args.similars_dir]
         if args.surface_fallback:
             bench_cmd += ["--surface-fallback"]
-        if args.soft_ground:
-            bench_cmd += ["--soft-ground"]
         if args.max_triples is not None:
             bench_cmd += ["--max-triples", str(args.max_triples)]
         ret = subprocess.run(
