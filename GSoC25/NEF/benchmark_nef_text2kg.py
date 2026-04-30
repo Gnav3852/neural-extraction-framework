@@ -220,18 +220,21 @@ def entity_text_with_fallback(
     mention: str,
     surface_fallback: bool,
     is_literal: bool = False,
+    overlap_threshold: float = 0.5,
 ) -> str:
     """
     Convert a grounded entity URI to its text label, with an optional
     surface-form fallback (Lever 5).
 
-    When `surface_fallback` is True and the URI's local-name tokens have
-    zero overlap with the original LLM mention text, we emit the mention
-    text (with spaces -> underscores) instead of the canonical URI label.
-    This keeps the output sentence-verbatim for the eval substring metric
-    in cases where Redis/redirects still picked a wrong-but-confident URI
-    (e.g. an unfixed parent-topic redirect or a rare miss). The canonical
-    URI is still preserved in the pipeline meta for analysis.
+    When ``surface_fallback`` is True and the URI's local-name tokens share
+    less than ``overlap_threshold`` (default 50 %) of the mention tokens, we
+    emit the mention text (spaces → underscores) instead of the canonical URI
+    label.  This keeps the output sentence-verbatim for the eval's stemmed-
+    substring metric in cases where Redis/redirects still picked a wrong-but-
+    confident URI (e.g. a redirect to a parent topic, or a disambiguation
+    variant like ``Auburn,_Alabama`` when the sentence says ``Auburn,
+    Washington``).  The canonical URI is still preserved in pipeline meta for
+    analysis.
 
     Literals (numbers/dates) always pass through unchanged.
     """
@@ -239,7 +242,7 @@ def entity_text_with_fallback(
     if not surface_fallback or is_literal or not mention:
         return canonical
     overlap = _mention_token_overlap(canonical, mention)
-    if overlap == 0.0:
+    if overlap < overlap_threshold:
         return mention.strip().replace(" ", "_")
     return canonical
 
@@ -828,6 +831,21 @@ Examples:
         ),
     )
     parser.add_argument(
+        "--soft-ground",
+        action="store_true",
+        help=(
+            "When Redis returns no candidates for a subject/object, synthesize "
+            "a URI from the raw mention text instead of dropping the triple. "
+            "Recovers triples for entities missing from Redis."
+        ),
+    )
+    parser.add_argument(
+        "--max-triples",
+        type=int,
+        default=5,
+        help="Maximum triples to extract per sentence (default: 5; try 7–8 for higher recall).",
+    )
+    parser.add_argument(
         "--quiet",
         action="store_true",
         help="Minimal output (only summaries)"
@@ -887,6 +905,8 @@ Examples:
             openai_client=openai_client,
             temperature=args.temperature,
             k_shot=args.shots,
+            soft_ground=args.soft_ground,
+            max_triples=args.max_triples,
         )
         print("✅ NEF Pipeline initialized successfully\n")
     except Exception as e:

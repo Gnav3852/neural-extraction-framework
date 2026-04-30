@@ -130,6 +130,21 @@ def _mention_token_overlap(uri_or_name: str, mention: str) -> float:
     u = _entity_name_tokens(uri_or_name)
     return len(m & u) / len(m)
 
+
+def _sentence_context_boost(uri_or_name: str, sentence: str) -> float:
+    """
+    Fraction of URI-local-name tokens that appear in the *full sentence*.
+    Used as a tie-breaker when two URIs have the same mention overlap
+    (e.g. Auburn,_Alabama vs Auburn,_Washington when mention is just 'Auburn'
+    but the sentence contains 'Washington').
+    Returns 0.0 when the URI has no usable tokens.
+    """
+    u = _entity_name_tokens(uri_or_name)
+    if not u:
+        return 0.0
+    s = {t.lower() for t in _TOKEN_RE.findall(sentence or "") if len(t) >= 2}
+    return len(u & s) / len(u)
+
 # =============== Redis Entity Linking ===============
 
 class RedisEntityLinking:
@@ -217,12 +232,22 @@ class RedisEntityLinking:
                 return cur
         return cur
 
-    def lookup(self, surface_form: str, top_k: int = 5, thr: float = 0.01) -> List[Tuple[str, float]]:
+    def lookup(
+        self,
+        surface_form: str,
+        top_k: int = 5,
+        thr: float = 0.01,
+        sentence: str = "",
+    ) -> List[Tuple[str, float]]:
         """
         Strict Redis grounding (no synonyms). Tries simple, non-semantic variants:
         exact, lower, Title Case, capitalize, underscores, etc.
         Aggregates counts across variants and follows redirects in db1.
         Optimized with early exit, timeout protection, and in-memory caching.
+
+        ``sentence`` (optional): the full input sentence; used as a tie-breaker
+        when two URIs have identical mention-overlap (resolves homonym confusion
+        like Auburn,_Alabama vs Auburn,_Washington).
         """
         if not self.available or not surface_form.strip():
             return []
@@ -342,9 +367,10 @@ class RedisEntityLinking:
                 if support < thr:
                     continue
                 overlap = _mention_token_overlap(uri, surface_form)
-                scored.append((overlap, support, uri))
-            scored.sort(key=lambda x: (x[0], x[1]), reverse=True)
-            result = [(uri, support) for (_, support, uri) in scored[:top_k]]
+                ctx_boost = _sentence_context_boost(uri, sentence) if sentence else 0.0
+                scored.append((overlap, ctx_boost, support, uri))
+            scored.sort(key=lambda x: (x[0], x[1], x[2]), reverse=True)
+            result = [(uri, support) for (_, _, support, uri) in scored[:top_k]]
 
         # Store in cache (with LRU eviction if needed)
         if len(self._lookup_cache) >= self.cache_size:
@@ -585,24 +611,21 @@ class LLMDisambiguator:
         # Prepare prompt pieces
         allowed = [u for (u, _s) in above]
         
-        # Build predicate list with metadata if available
+        # Build predicate list with metadata if available.
+        # Format: URI  [Domain → Range]  "label"
+        # The arrow notation makes type constraints visually prominent so the
+        # LLM can distinguish e.g. isPartOf(City→Country) from countySeat(City→County).
         if predicate_metadata:
             pred_lines = []
             for uri in allowed:
-                meta = predicate_metadata.get(uri, {})
-                label = meta.get("label", uri.split("/")[-1] if "/" in uri else uri)
-                domain = meta.get("domain", "")
-                range_type = meta.get("range", "")
-                
-                # Build description line
-                desc_parts = [f'label: {label}']
-                if domain:
-                    desc_parts.append(f'domain: {domain}')
-                if range_type:
-                    desc_parts.append(f'range: {range_type}')
-                
-                desc = f" ({', '.join(desc_parts)})" if desc_parts else ""
-                pred_lines.append(f'- "{uri}"{desc}')
+                meta_d = predicate_metadata.get(uri, {})
+                label = meta_d.get("label", uri.split("/")[-1] if "/" in uri else uri)
+                domain = meta_d.get("domain", "")
+                range_type = meta_d.get("range", "")
+                constraint = ""
+                if domain or range_type:
+                    constraint = f"  [{domain or '?'} → {range_type or '?'}]"
+                pred_lines.append(f'- "{uri}"{constraint}  "{label}"')
             pred_list_text = "\n".join(pred_lines)
         else:
             pred_list_text = "\n".join([f'- "{u}"' for u in allowed])
@@ -612,7 +635,7 @@ class LLMDisambiguator:
 
         prompt = f"""Pick the best RDF triple using ONLY these options.
 
-Allowed predicate URIs (with semantic information):
+Allowed predicate URIs (with type constraints [Domain → Range]):
 {pred_list_text}
 
 Subject candidates (choose by INDEX):
@@ -621,18 +644,21 @@ Subject candidates (choose by INDEX):
 Object candidates (choose by INDEX):
 {obj_list_text}
 
-Context (helps decide, but does NOT add new options):
+Context sentence:
 {context}
 
 Return ONLY strict JSON on one line (no prose):
 {{"subject_index": 0, "predicate": "URI", "object_index": 0}}
 Rules:
-- "predicate" MUST be exactly one URI from Allowed predicate URIs.
-- "subject_index" MUST be an integer index from Subject candidates.
-- "object_index" MUST be an integer index from Object candidates.
-- Choose the predicate that best matches the semantic meaning in the context.
-- Consider the domain and range constraints when selecting.
-- Do not invent or modify URIs. Do not swap roles.
+- "predicate" MUST be exactly one URI from the allowed list above.
+- "subject_index" / "object_index" MUST be integer indices from the candidate lists.
+- Pick the predicate whose label AND type constraints best fit the context:
+  * Match [Domain → Range] to the entity types of the chosen subject/object.
+  * "isPartOf" means geographic/organizational containment; "countySeat" means the city is the administrative seat of a county.
+  * "club" = current team; "formerTeam" / "youthclub" = past teams.
+  * "birthPlace" = city/region of birth; "nationality" = country of citizenship.
+  * "precededBy" = what came before; "followedBy" = what came after (do not confuse direction).
+- Do not invent or modify URIs. Do not swap subject/object roles.
 """
 
         # Call the model (via reasoner abstraction or Gemini)
@@ -721,6 +747,8 @@ class EnhancedNEFPipeline:
         temperature: Optional[float] = 0,
         few_shot_retriever: Optional[Any] = None,
         k_shot: int = 0,
+        soft_ground: bool = False,
+        max_triples: int = 5,
     ):
         self.redis_host = redis_host or os.getenv("NEF_REDIS_HOST")
         self.redis_port = (
@@ -735,7 +763,9 @@ class EnhancedNEFPipeline:
         )
         self.verbose = verbose
         self.client = client  # always Gemini for embeddings
-        self.require_redis_grounding = True  # strict
+        self.require_redis_grounding = not soft_ground
+        self.soft_ground = bool(soft_ground)
+        self.max_triples = max(1, int(max_triples))
         self._temperature = temperature
 
         # Reasoner: "gemini" uses client.models.generate_content; "openrouter" uses openrouter_client;
@@ -793,6 +823,10 @@ class EnhancedNEFPipeline:
                 _safe_print(f"   Few-shot: {self.k_shot}-shot ICL enabled")
             else:
                 _safe_print("   Few-shot: zero-shot")
+            if self.soft_ground:
+                _safe_print("   Soft-ground: ON (ungrounded mentions kept as synthetic URIs)")
+            if self.max_triples != 5:
+                _safe_print(f"   Max triples per sentence: {self.max_triples}")
 
     def _make_reasoner_call(self):
         """Return a callable (prompt, model_id, json_mode=True, json_object=True, temperature=None) -> str.
@@ -849,16 +883,18 @@ class EnhancedNEFPipeline:
         w = re.sub(r"\s+", " ", (p or "").strip()).split()
         return 1 <= len(w) <= 3
 
-    def _resolve_entities(self, mention: str, k: int = 5) -> List[Tuple[str, float]]:
+    def _resolve_entities(self, mention: str, k: int = 5, sentence: str = "") -> List[Tuple[str, float]]:
         """
         Strict grounding via Redis, except:
           - If mention is a 4-digit year, mint a DBpedia year URI immediately.
+
+        ``sentence`` is forwarded to ``lookup()`` for context-based tie-breaking.
         """
         m = (mention or "").strip()
         if _YEAR.fullmatch(m):
-            return [(_year_uri(m), 1.0)]  # treat year as an entity, no Redis hit
+            return [(_year_uri(m), 1.0)]
 
-        cands = self.redis_el.lookup(m, top_k=k)
+        cands = self.redis_el.lookup(m, top_k=k, sentence=sentence)
         fixed: List[Tuple[str, float]] = []
         for uri, score in cands:
             if not (uri.startswith("http://") or uri.startswith("https://")):
@@ -968,7 +1004,7 @@ class EnhancedNEFPipeline:
         prompt = f"""
 SYSTEM: Return ONLY a valid JSON array (no prose, no markdown fences).
 
-Task: Read the text and extract up to 5 RDF triples with confidence.{ontology_section}{examples_section}
+Task: Read the text and extract up to {self.max_triples} RDF triples with confidence.{ontology_section}{examples_section}
 You MUST:
 - Write subject, predicate, and object exactly as they appear in the text (preserve capitalization; do not lowercase).
 - Use the most complete, consistent entity names.
@@ -1088,7 +1124,7 @@ Text:
                     _safe_print(f"[DIAG] Step 4.{idx}.1: About to resolve entities for subject: '{s_raw}'")
                 step4_sub_start = time.time()
                 try:
-                    sub_cands = self._resolve_entities(s_raw, k=5)
+                    sub_cands = self._resolve_entities(s_raw, k=5, sentence=text)
                 except Exception as e:
                     if self.verbose:
                         _safe_print(f"[DIAG] Step 4.{idx}.1: Subject resolution ERROR: {e}")
@@ -1117,7 +1153,7 @@ Text:
                         _safe_print(f"[DIAG] Step 4.{idx}.2: About to resolve entities for object: '{o_raw}'")
                     step4_obj_start = time.time()
                     try:
-                        obj_cands = self._resolve_entities(o_raw, k=5)
+                        obj_cands = self._resolve_entities(o_raw, k=5, sentence=text)
                     except Exception as e:
                         if self.verbose:
                             _safe_print(f"[DIAG] Step 4.{idx}.2: Object resolution ERROR: {e}")
@@ -1128,7 +1164,19 @@ Text:
                         if step4_obj_time > 5.0:
                             _safe_print(f"[DIAG] ⚠️ WARNING: Object resolution took {step4_obj_time:.2f}s (>5s threshold)")
                 
-                # Only require Redis grounding for subject and non-literal objects
+                # Soft-ground: synthesize a candidate from the raw mention when
+                # Redis has nothing, instead of dropping the triple entirely.
+                if not sub_cands and self.soft_ground:
+                    synth_uri = "http://dbpedia.org/resource/" + s_raw.strip().replace(" ", "_")
+                    sub_cands = [(synth_uri, 1.0)]
+                    if self.verbose:
+                        _safe_print(f"[DIAG] Step 4.{idx}.1: soft-ground → {synth_uri}")
+                if not is_literal and not obj_cands and self.soft_ground:
+                    synth_uri = "http://dbpedia.org/resource/" + o_raw.strip().replace(" ", "_")
+                    obj_cands = [(synth_uri, 1.0)]
+                    if self.verbose:
+                        _safe_print(f"[DIAG] Step 4.{idx}.2: soft-ground → {synth_uri}")
+
                 if not sub_cands:
                     reasons.append("no Redis grounding for subject (required)")
                 if not is_literal and not obj_cands:
@@ -1161,7 +1209,7 @@ Text:
                                 {"subject": s, "predicate": p, "object": o,
                                  "sub_cands": sub_cands[:2], "obj_cands": obj_cands[:2], "confidence": conf_f})
 
-                if len(out) >= 5:
+                if len(out) >= self.max_triples:
                     break
 
             if debug and not out:
@@ -1241,7 +1289,7 @@ Text:
                 _safe_print(f"\n🔍 Triple: {s_text} — {p_text} — {o_text}")
                 _safe_print("   📍 Using entity candidates collected during extraction...")
 
-            subject_candidates = t.get("_sub_cands") or self._resolve_entities(s_text, k=5)
+            subject_candidates = t.get("_sub_cands") or self._resolve_entities(s_text, k=5, sentence=sentence)
             
             # Check if object is a literal (use stored flag from extraction, or detect)
             is_literal = t.get("_is_literal", False)
@@ -1261,20 +1309,31 @@ Text:
                     _safe_print(f"   [Object:literal] {o_text} (type: {obj_type_str})")
             else:
                 # Normal Redis grounding for entities
-                object_candidates = t.get("_obj_cands") or self._resolve_entities(o_text, k=5)
+                object_candidates = t.get("_obj_cands") or self._resolve_entities(o_text, k=5, sentence=sentence)
 
             if self.verbose:
                 _safe_print("   [Redis:subject]", subject_candidates[:5] if subject_candidates else "NO CANDIDATES")
                 if not is_literal:
                     _safe_print("   [Redis:object]",  object_candidates[:5]  if object_candidates  else "NO CANDIDATES")
 
-            # Only check subject grounding - object can be literal or entity
+            # Soft-ground fallback at run_pipeline level (in case _extract_triples
+            # ran with a different soft_ground setting or candidates were re-resolved).
+            if not subject_candidates and self.soft_ground:
+                synth = "http://dbpedia.org/resource/" + s_text.strip().replace(" ", "_")
+                subject_candidates = [(synth, 1.0)]
+                if self.verbose:
+                    _safe_print(f"   [soft-ground:subject] → {synth}")
+            if not object_candidates and not is_literal and self.soft_ground:
+                synth = "http://dbpedia.org/resource/" + o_text.strip().replace(" ", "_")
+                object_candidates = [(synth, 1.0)]
+                if self.verbose:
+                    _safe_print(f"   [soft-ground:object] → {synth}")
+
             if not subject_candidates:
                 if self.verbose:
                     _safe_print("   ⚠ Abandoning triple (no Redis candidates for subject).")
                 continue
 
-            # Object can be empty only if it's not a literal
             if not object_candidates and not is_literal:
                 if self.verbose:
                     _safe_print("   ⚠ Abandoning triple (no Redis candidates for object).")
@@ -1384,6 +1443,11 @@ def parse_args(argv: Optional[List[str]] = None) -> argparse.Namespace:
     p.add_argument("--redis-host", type=str, default=os.getenv("NEF_REDIS_HOST", ""))
     p.add_argument("--redis-port", type=int, default=int(os.getenv("NEF_REDIS_PORT", "")))
     p.add_argument("--redis-password", type=str, default=os.getenv("NEF_REDIS_PASSWORD", ""))
+    p.add_argument("--soft-ground", action="store_true",
+                   help="When Redis returns no candidates, synthesize a URI from the raw mention text instead of dropping the triple.")
+    p.add_argument("--max-triples", type=int, default=5,
+                   help="Maximum triples to extract per sentence (default: 5; try 7–8 for high-recall runs).")
+
     p.add_argument(
         "--redis-variant-exact-weight",
         type=float,
@@ -1497,6 +1561,8 @@ def main(argv: Optional[List[str]] = None) -> int:
             openrouter_client=openrouter_client,
             openai_client=openai_client,
             temperature=args.temperature,
+            soft_ground=args.soft_ground,
+            max_triples=args.max_triples,
         )
         pipe.pred.embed_model = args.embed_model
     except Exception as e:
