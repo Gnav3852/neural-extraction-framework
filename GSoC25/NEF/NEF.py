@@ -898,62 +898,97 @@ class EnhancedNEFPipeline:
             fixed.append((uri, score))
         return fixed
 
+    def _normalize_literal_candidate(self, text: str) -> str:
+        """Strip a few layers of matching outer ASCII double/single quotes."""
+        if not text:
+            return ""
+        s = text.strip()
+        qc = "\"'"
+        for _ in range(4):
+            if len(s) >= 2 and s[0] in qc and s[-1] == s[0]:
+                s = s[1:-1].strip()
+                continue
+            break
+        return s
+
     def _is_likely_literal(self, text: str) -> bool:
         """
-        Check if text looks like a number or date literal.
-        Returns True if it should skip Redis grounding.
+        Return True when the surface string should be treated as a literal (skip Redis grounding).
+
+        Covers integers/decimals/dates/month-form dates, plus Text2KGBench GT styles like
+        ``140.8 (square kilometres)``, ``110 million (dollars)``, ``0269-9370`` (ISSN),
+        and runway-style ``05L/23R``.
         """
-        if not text:
+        if not text or not str(text).strip():
             return False
-        
-        text = text.strip().lower()  # Normalize to lowercase for date detection
-        
-        # Remove all spaces for number checking
-        text_no_spaces = text.replace(' ', '')
-        
-        # Check for numbers (integers, decimals, with commas)
-        # Remove commas and check if it's a number
-        text_no_commas = text_no_spaces.replace(',', '')
-        # Check if it's all digits (possibly with one decimal point)
-        if text_no_commas.replace('.', '', 1).isdigit():
+
+        raw = str(text).strip()
+
+        # --- Pure numeric (optional leading +/-, commas, single decimal separator) ---
+        collapsed = "".join(raw.split()).replace(",", "")
+        if collapsed[:1] in "+-":
+            collapsed = collapsed[1:]
+        if collapsed and collapsed.count(".") <= 1 and collapsed.replace(".", "").isdigit():
             return True
-        
-        # Check for structured date patterns (YYYY-MM-DD, YYYY/MM/DD, etc.)
+
+        stripped = self._normalize_literal_candidate(raw)
+
+        # Quantity + scaled amount + trailing unit/description in parentheses
+        if re.match(
+            r"^[+\-]?[\d,]+(?:\.\d+)?[\"']?\s*"
+            r"(?:million|billion|trillion|thousand|thousands)?\s*\(",
+            stripped,
+            re.I,
+        ):
+            return True
+        # ``140.8 (square kilometres)``, ``1.2 (litres)``, ``0.0068 (kilometrePerSeconds)``
+        if re.match(r"^[+\-]?[\d,]+(?:\.\d+)?[\"']?\s*\(", stripped):
+            return True
+        # ``"13017.0"(minutes)``-style (quote immediately before opening paren)
+        if re.match(r"^[\"']?[\d,]+(?:\.\d+)?[\"']\s*\(", raw.strip()):
+            return True
+
+        # ISSN / ISBN-style hyphen blocks (digits + hyphens only, long enough to be codes)
+        flat_code = re.sub(r"\s+", "", raw)
+        if re.fullmatch(r"[\d\-]+", flat_code) and "-" in flat_code:
+            digits_only = flat_code.replace("-", "")
+            if digits_only.isdigit() and 8 <= len(digits_only) <= 13:
+                return True
+
+        # Runway / similar short codes: 05L/23R, 15/33
+        if len(raw) <= 16 and re.match(r"^\d{1,2}[A-Za-z]?/\d{1,3}[A-Za-z]?\s*$", raw.strip()):
+            return True
+
+        # --- Dates & month names (lowercased) ---
+        text_l = raw.lower()
+
         date_patterns = [
-            r'^\d{4}-\d{2}-\d{2}$',      # 1920-08-16
-            r'^\d{4}/\d{2}/\d{2}$',      # 1920/08/16
-            r'^\d{4}\.\d{2}\.\d{2}$',    # 1920.08.16
-            r'^\d{2}-\d{2}-\d{4}$',      # 08-16-1920
-            r'^\d{2}/\d{2}/\d{4}$',      # 08/16/1920
+            r"^\d{4}-\d{2}-\d{2}$",
+            r"^\d{4}/\d{2}/\d{2}$",
+            r"^\d{4}\.\d{2}\.\d{2}$",
+            r"^\d{2}-\d{2}-\d{4}$",
+            r"^\d{2}/\d{2}/\d{4}$",
         ]
         for pattern in date_patterns:
-            if re.match(pattern, text):
+            if re.match(pattern, text_l):
                 return True
-        
-        # Check for natural language dates (e.g., "august 16th, 1920", "january 1, 2000")
-        # Look for month names followed by optional day and year
+
         month_names = [
-            'january', 'february', 'march', 'april', 'may', 'june',
-            'july', 'august', 'september', 'october', 'november', 'december',
-            'jan', 'feb', 'mar', 'apr', 'may', 'jun',
-            'jul', 'aug', 'sep', 'sept', 'oct', 'nov', 'dec'
+            "january", "february", "march", "april", "may", "june",
+            "july", "august", "september", "october", "november", "december",
+            "jan", "feb", "mar", "apr", "jun",
+            "jul", "aug", "sep", "sept", "oct", "nov", "dec",
         ]
-        
-        # Check if text starts with a month name
         for month in month_names:
-            if text.startswith(month):
-                # Check if it contains a 4-digit year
-                if re.search(r'\b\d{4}\b', text):
-                    return True
-        
-        # Check for patterns like "YYYY-MM-DD" with spaces: "1920 - 08 - 16"
-        if re.match(r'^\d{4}\s*[-/\.]\s*\d{1,2}\s*[-/\.]\s*\d{1,2}$', text):
+            if text_l.startswith(month) and re.search(r"\b\d{4}\b", text_l):
+                return True
+
+        if re.match(r"^\d{4}\s*[-/\.]\s*\d{1,2}\s*[-/\.]\s*\d{1,2}$", text_l):
             return True
-        
-        # Check if text is just a 4-digit year
-        if re.match(r'^\d{4}$', text):
+
+        if re.match(r"^\d{4}$", text_l):
             return True
-        
+
         return False
 
     def _extract_triples(
