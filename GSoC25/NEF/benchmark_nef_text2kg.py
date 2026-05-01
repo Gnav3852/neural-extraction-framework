@@ -273,26 +273,48 @@ def predicate_label_for_text2kg(
     return uri_to_predicate_text(uri)
 
 
-def format_object_text(obj_text: str) -> str:
+def _normalize_numeric_for_gt(text: str) -> str:
+    """Align numeric literal formatting with Text2KGBench gold conventions.
+
+    Gold objects often carry a trailing ``.0`` for integers represented as
+    floats (e.g. ``98.0``, ``2000000.0``).  When the pipeline emits
+    ``98`` or ``2000000`` we lose the exact match.  This helper re-adds
+    ``.0`` to bare integers so the normalised key matches gold.
+    It also preserves already-decimal strings unchanged.
+    """
+    import re
+    s = text.strip()
+    if not s:
+        return s
+    # Already has a decimal component → keep as-is
+    if re.fullmatch(r'[+\-]?[\d,]+\.\d+', s):
+        return s
+    # Bare integer (optional sign, optional commas) → append .0
+    if re.fullmatch(r'[+\-]?[\d,]+', s):
+        return s + ".0"
+    return s
+
+
+def format_object_text(obj_text: str, is_literal: bool = False) -> str:
     """
     Format object text for Text2KGBench output.
-    Returns the text as-is (no quotes added - evaluation script expects plain strings).
-    The evaluation script normalizes triples by removing spaces/underscores and lowercasing,
-    so the exact format doesn't matter as long as it's a plain string.
+    For numeric literals, aligns formatting with gold conventions (trailing .0).
     """
-    return obj_text.strip()
+    s = obj_text.strip()
+    if is_literal:
+        s = _normalize_numeric_for_gt(s)
+    return s
 
 
-def format_triple_for_text2kg(sub_text: str, pred_text: str, obj_text: str) -> List[str]:
+def format_triple_for_text2kg(sub_text: str, pred_text: str, obj_text: str, is_literal: bool = False) -> List[str]:
     """
     Format triple as list [subject, predicate, object] for Text2KGBench.
     Preserves format: underscores for entities, camelCase for predicates.
     Objects are plain strings (no quotes) as expected by the evaluation script.
     """
-    # Clean up the texts
     sub_text = sub_text.strip()
     pred_text = pred_text.strip()
-    obj_text = format_object_text(obj_text)
+    obj_text = format_object_text(obj_text, is_literal=is_literal)
     
     return [sub_text, pred_text, obj_text]
 
@@ -581,7 +603,7 @@ def run_nef_on_text2kg(
                     )
 
                     if sub_text and pred_text and obj_text:
-                        triples.append(format_triple_for_text2kg(sub_text, pred_text, obj_text))
+                        triples.append(format_triple_for_text2kg(sub_text, pred_text, obj_text, is_literal=is_obj_literal))
                 
                 stats["total_triples"] += len(triples)
                 stats["successful"] += 1

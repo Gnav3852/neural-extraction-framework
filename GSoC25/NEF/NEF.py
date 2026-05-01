@@ -656,12 +656,20 @@ Rules:
 - "subject_index" / "object_index" MUST be integer indices from the candidate lists.
 - Pick the predicate whose label AND type constraints best fit the context:
   * Match [Domain → Range] to the entity types of the chosen subject/object.
-  * "isPartOf" means geographic/organizational containment; "countySeat" means the city is the administrative seat of a county.
-  * "club" = current team; "formerTeam" / "youthclub" = past teams.
-  * "birthPlace" = city/region of birth; "nationality" = country of citizenship.
-  * "precededBy" = what came before; "followedBy" = what came after (do not confuse direction).
-  * Airports / transport hubs: prefer "cityServed" (municipality the hub primarily serves) over generic "city" when both appear; prefer "operatingOrganisation" over "owner" for who runs the facility when the sentence describes operations.
-  * Monuments / places: "district" is the containing administrative area; use it over broad "location" when the sentence names that area and both predicates are listed.
+  * Match [Domain → Range] to the entity types of the chosen subject/object.
+  * "isPartOf" = geographic/organizational containment (city in a state, band in a genre, team in a league). Do NOT use "countySeat" or "state" when the sentence says "is part of" / "is in" / "is located in" — use "isPartOf". Use "countySeat" ONLY when the sentence explicitly says a city is the county seat / administrative seat.
+  * "club" = current team; "formerTeam" = previously played for; "youthclub" = youth/academy team. If the sentence says "formerly played for" or "used to play for", use "formerTeam". If it says "plays for" (present tense), use "club".
+  * "birthPlace" = city/region of birth; "nationality" = country of citizenship / national identity. Do NOT confuse these.
+  * "precededBy" = what came before (the predecessor); "followedBy" = what came after (the successor). Pay attention to temporal direction.
+  * "professionalField" = the academic/professional discipline a person works in; "knownFor" = a specific achievement or work they are famous for. Use "professionalField" when the sentence describes someone's field/discipline.
+  * "dishVariation" = a variant/subtype of a dish; "course" = which meal course it belongs to; "ingredient" / "mainIngredient" = what it contains. Use "dishVariation" when one dish is described as a variation of another.
+  * "champions" = the team that won a league/tournament; "league" = which league a team competes in. Use "champions" when the sentence says a team won/championed.
+  * "leaderTitle" = the title of a leader (e.g. "Mayor", "President"); "leader" = the person holding that role. Match to whether the object is a title-string or a person.
+  * "location" = broad geographic location; "country" = the country specifically; "foundationPlace" = where something was founded. Prefer the most specific applicable predicate.
+  * Airports / transport hubs: prefer "cityServed" over generic "city" when the sentence says which city the airport serves; prefer "operatingOrganisation" over "owner" for who operates the facility; prefer "regionServed" only for broader regions.
+  * Monuments / places: "district" is the containing administrative area; use it over broad "language" when the sentence names that area.
+  * Music: "associatedBand/associatedMusicalArtist" = a person associated with a band or vice versa; do NOT use "isPartOf" for band membership.
+  * "origin" = where something/someone originates from; "birthPlace" = specifically where a person was born. Prefer "origin" for non-person entities.
 - Do not invent or modify URIs. Do not swap subject/object roles.
 """
 
@@ -1041,12 +1049,13 @@ SYSTEM: Return ONLY a valid JSON array (no prose, no markdown fences).
 
 Task: Read the text and extract up to {self.max_triples} RDF triples with confidence.{ontology_section}{examples_section}
 You MUST:
+- Extract ALL factual relationships stated in the sentence — do not stop early. If 6 facts are stated, emit 6 triples.
 - Write subject, predicate, and object exactly as they appear in the text (preserve capitalization; do not lowercase).
-- Use the most complete, consistent entity names.
+- Use the most complete, consistent entity names (full names, not abbreviations).
 - Resolve clear pronouns (he, she, it, they, this/that, here/there) to the correct entity; if unclear, do not guess.
 - Keep predicates extremely concise: 1–3 words max (e.g., "founded", "born in", "wrote").
 - Include only items with confidence ≥ 0.5.
-- If ontology context is provided, extract triples according to the ontology relations and concepts.
+- If ontology context is provided, extract triples for EVERY ontology relation that applies to the sentence. Do not omit triples just because they seem obvious or redundant.
 - For DATE objects: Normalize to YYYY-MM-DD format (e.g., "Aug. 16, 1920" → "1920-08-16", "January 1, 2000" → "2000-01-01").
 - For NUMBER objects: Remove commas and use digits only (e.g., "15,100,000,000" → "15100000000", "5,594" → "5594").
 - Optionally include "object_type" field: "entity", "literal", "number", or "date" to help processing.
